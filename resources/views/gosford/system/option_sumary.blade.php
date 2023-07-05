@@ -149,7 +149,7 @@
           var totals = document.getElementById("totals");
           const myArray = selectedValue.split(",");
           var doubleValue = parseFloat(myArray[0]);
-          var total = (doubleValue + {{$car->unit_price}});
+          var total = (doubleValue);
           totals.value=total;
           var formattedValue = total.toLocaleString("en-MY", { style: "currency", currency: "MYR" });
           document.getElementById("total").innerHTML = formattedValue;
