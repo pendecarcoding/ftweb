@@ -56,7 +56,7 @@
                                                 <i class="fa-solid fa-eye" id="eye"></i>
                                             </div>
                                             <div style="text-align: center;color:#747474 ;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                                <span><img src="/public/aceweb/assets/img/check-circle.png" alt=""></span><span> &nbsp; I’ve read and agree to</span> <span><a href="#">Terms & Conditions</a></span>
+                                                <span><img src="/public/aceweb/assets/img/check-circle.png" alt=""></span><span> &nbsp; I’ve read and agree to</span> <span><a class="login-link" href="#">Terms & Conditions</a></span>
                                             </div>
 
                                             <center>

@@ -5904,7 +5904,7 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple {
     box-sizing: border-box;
     max-width: 100%;
     margin: 0;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .mdl-textfield .mdl-button {
@@ -5985,7 +5985,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input {
     right: 0;
     pointer-events: none;
     position: absolute;
-    top: 24px;
+    top: 36px;
     overflow: hidden;
     white-space: nowrap
 }
@@ -10058,4 +10058,8 @@ form.form--basic .mdl-textfield__label {
         padding: 0 0px;
         line-height: 64px;
     }
+}
+
+.login-link:hover{
+    color: #01579b;
 }
