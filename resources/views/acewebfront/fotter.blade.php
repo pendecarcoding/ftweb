@@ -47,9 +47,9 @@
                             Investor Relations
                         </h6>
                     </a>
-                    <a href="{{ url('investor_relations') }}">
+                    <a href="{{ url('product_project') }}">
                         <h6 class="text-uppercase fw-bold mb-4 h6-footer">
-                             Product & Project
+                            Product & Project
                         </h6>
                     </a>
 
@@ -61,12 +61,12 @@
                     <!-- Links -->
                     <a href="{{ url('our_products') }}">
                         <h6 class="text-uppercase fw-bold mb-4 h6-footer">
-                        Research & Development
+                            Research & Development
                         </h6>
                     </a>
                     <a href="{{ url('newsroom') }}">
                         <h6 class="text-uppercase fw-bold mb-4 h6-footer">
-                        Newsroom
+                            Newsroom
                         </h6>
                     </a>
                     <a href="{{ url('contact') }}">
