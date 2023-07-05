@@ -103,9 +103,8 @@
                             <div style="display: flex;flex-direction: column;">
                                 <h6 class="title-right-product">Material:</h6>
                                 <select onchange="getValueMaterial()" style="font-weight: bold;color: #dc3545;" class="select-order mdl-textfield__input" type="text" name="material" id="material">
-                                    <option value="">--Choose Material--</option>
-                                    @foreach($material as $i => $vmaterial)
-                                    <option value="{{$price[$i].','.$vmaterial}}"><span style="color:black">{{$vmaterial}} |</span> {{single_price($price[$i]+$car->unit_price)}}</option>
+                                   @foreach($material as $i => $vmaterial)
+                                    <option value="{{$price[$i].','.$vmaterial}}"><span style="color:black">{{$vmaterial}} |</span> {{single_price($price[$i])}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -115,7 +114,7 @@
 
 
                             <input type="hidden" name="id_product" value="{{$car->id}}">
-                            <input required type="hidden" name="total" id="totals">
+                            <input required type="hidden" value="{{$car->unit_price}}" name="total" id="totals">
                             <div style="display: flex;flex-direction: column;">
                                 <div style="display: flex;justify-content: space-between;">
                                     <h4 style="font-weight: bold;">Total</h4>

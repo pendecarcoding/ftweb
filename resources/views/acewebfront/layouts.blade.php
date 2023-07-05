@@ -131,12 +131,12 @@
                     padding: 50px;
                 ">
                         <div class="mb-5 text-center">
-                            <img src="{{ uploaded_asset(get_setting('site_icon')) }}" class="mw-100 mb-4"
+                            <img src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="mw-100 mb-4"
                                 height="100">
-                            <h1 style="color: #6d6d6d;font-size: 20px;" class="h3  mb-0">Staff Login</h1>
+                            <h1 style="color: #6d6d6d;font-size: 20px;" class="h3  mb-0">User Login</h1>
 
                         </div>
-                        <form class="pad-hor" method="POST" role="form" action="{{ route('staff.login') }}">
+                        <form class="pad-hor" method="POST" role="form" action="{{ route('gosford.front.actlogin') }}">
                             {{ csrf_field() }}
                             <div style="margin-left: 20px;margin-right: 20px;">
                                 <div class="input-group mb-3">
@@ -147,7 +147,7 @@
                                             class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                                     </div>
                                     <input required name="username" type="text" class="form-control"
-                                        placeholder="Staff ID" aria-label="Username" aria-describedby="basic-addon1">
+                                        placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
 
                                 <div class="input-group mb-3">
@@ -166,7 +166,9 @@
 
                             </div>
                             <div class="form-group">
-                                <button style="width:100%;background-color: #264e77;border: #264e77;" type="submit"
+                                <button style="width: 100%;
+                                background-color: #dc3545;
+                                border: #dc3545;" type="submit"
                                     class="btn btn-primary btn-lg btn-block">
                                     LOGIN
                                 </button>
@@ -174,11 +176,11 @@
                                 <center>
                                     <p style="margin-top: 5px;color:#959595">Don't have an account? <span><a
                                                 style="color:#959595;text-decoration: none;"
-                                                href="{{ url('registerstaff') }}">Create
+                                                href="{{ route('gosford.front.register') }}">Create
                                                 account</a></span></p>
 
-                                    <p><span><a style="color:#959595;text-decoration: none;"
-                                                href="{{ url('forgotpass') }}">Forgot Password</a></span></p>
+                                    <!-- <p><span><a style="color:#959595;text-decoration: none;"
+                                                href="{{ url('forgotpass') }}">Forgot Password</a></span></p> -->
                                 </center>
 
                             </div>

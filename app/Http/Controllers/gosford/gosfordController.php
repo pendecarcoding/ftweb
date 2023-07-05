@@ -39,6 +39,11 @@ class gosfordController extends Controller
     Session::flush();
     return redirect()->route('gosford.login');
    }
+
+   public function logouts(){
+    Session::flush();
+    return redirect('/product_project');
+   }
    public function register(){
     return view('gosford.register');
    }
@@ -111,7 +116,13 @@ class gosfordController extends Controller
             if (Hash::check($r->password, $data->password)) {
                 Session::put('id_account',$data->id);
                 Session::put('gystem_login',true);
-                return redirect('product_project');
+                if(Session::get('optionlast') != null){
+                    $car  = Car::where('slug',Session::get('optionlast'))->join('products','products.car_id','cars.id')->first();
+                    return view('gosford.frontend.option_sumary',compact('car'));
+                }else{
+                    return redirect('product_project');
+                }
+                
             } else {
                 // The hashed value does not match the plain text
                 return back()->with('danger','Your password is wrong. make sure you enter the correct password');
@@ -122,6 +133,41 @@ class gosfordController extends Controller
 
     } catch (\Throwable $th) {
         print $th->getMessage();
+    }
+   }
+
+   public function addacountfront(Request $r){
+
+    $r->validate([
+        'username'=>'required',
+        'contact_number' => 'required|unique:gsystem_accounts,contact_number',
+        'password_confirmation'=>'required',
+        'password' => 'required|confirmed',
+        'email' => 'required|email|unique:gsystem_accounts,email',
+    ]);
+    $kode = Str::uuid()->toString();
+    try {
+        GsystemAccount::insert(
+            [
+                'username'=>$r->username,
+                'contact_number'=>$r->contact_number,
+                'password'=>Hash::make($r->password),
+                'email'=>$r->email,
+                'ip'=>$_SERVER['REMOTE_ADDR'],
+                'verify_code'=>$kode,
+                'status'=>'U'
+            ]
+            );
+            $array['subject'] = translate('registration confirmation');
+            $array['from'] = env('MAIL_FROM_ADDRESS');
+            $array['content']="congratulations your registration is almost complete then you need to verify your email address. for verification click the link below";
+            $array['link'] = env('URL_WEB').'/g_system/gosford/comfirregister/'.base64_encode($kode);
+            Mail::to($r->email)->queue(new SecondEmailVerifyMailManager($array));
+            $success = 'Please check your email and click on the verification link to complete your registration.';
+            $email   = $r->email;
+            return view('gosford.frontend.verify',compact('email','success'));
+    } catch (\Throwable $th) {
+       return redirect()->route('gosford.register')->with('danger',$th->getMessage());
     }
    }
    public function addacount(Request $r){
@@ -197,40 +243,48 @@ class gosfordController extends Controller
    }
 
    function optionsummary($slug){
+    Session::put('optionlast',$slug);
     $car  = Car::where('slug',$slug)->join('products','products.car_id','cars.id')->first();
+    
     return view('gosford.system.option_sumary',compact('car'));
    }
 
    function optionsummaryfront($slug){
+    Session::put('optionlast',$slug);
     $car  = Car::where('slug',$slug)->join('products','products.car_id','cars.id')->first();
     return view('gosford.frontend.option_sumary',compact('car'));
    }
    function ordercomfirmedfront(Request $r){
-    try {
-        // $decorator = __NAMESPACE__ . '\\Payment\\' . str_replace(' ', '', ucwords(str_replace('_', ' ', $request->payment_option))) . "Controller";
-        // if (class_exists($decorator)) {
-        //             // print "okw";
-        //             return (new $decorator)->pay($r);
-        // }
-        $prefix = "INV";
-        $date = date("YmdHis"); // Get the current date and time in "YmdHis" format
-        $randomNumber = mt_rand(1000, 9999); // Generate a random 4-digit number // Generate a unique identifier
-        $invoiceNumber = $prefix . $date . $randomNumber;
-        $material = explode(',',$r->material);
-        $data=[
-            'order_code'=>$invoiceNumber,
-            'user_id'=>Session::get('id_account'),
-            'product_id'=>$r->id_product,
-            'material'=>$material[1],
-            'total'=>$r->total,
-            'payment_status'=>'paid',
-            'order_status'=>'Pending'
-        ];
-        GsystemOrder::insert($data);
-        return view('gosford.frontend.comfirm_order');
-    } catch (\Throwable $th) {
-        print $th->getMessage();
+    if(Session::get('gystem_login')){
+        try {
+            // $decorator = __NAMESPACE__ . '\\Payment\\' . str_replace(' ', '', ucwords(str_replace('_', ' ', $request->payment_option))) . "Controller";
+            // if (class_exists($decorator)) {
+            //             // print "okw";
+            //             return (new $decorator)->pay($r);
+            // }
+            $prefix = "INV";
+            $date = date("YmdHis"); // Get the current date and time in "YmdHis" format
+            $randomNumber = mt_rand(1000, 9999); // Generate a random 4-digit number // Generate a unique identifier
+            $invoiceNumber = $prefix . $date . $randomNumber;
+            $material = explode(',',$r->material);
+            $data=[
+                'order_code'=>$invoiceNumber,
+                'user_id'=>Session::get('id_account'),
+                'product_id'=>$r->id_product,
+                'material'=>$material[1],
+                'total'=>$r->total,
+                'payment_status'=>'paid',
+                'order_status'=>'Pending'
+            ];
+            GsystemOrder::insert($data);
+            return view('gosford.frontend.comfirm_order');
+        } catch (\Throwable $th) {
+            print $th->getMessage();
+        }
+    }else{
+        print "test";
     }
+   
 
    }
    function ordercomfirmed(Request $r){

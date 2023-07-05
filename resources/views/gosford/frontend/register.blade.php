@@ -31,29 +31,26 @@
                                             </span>
                                         </div>
                                         @include('gosford.layouts.alert')
-                                        <form action="{{route('gosford.addacount')}}" method="post">@csrf
+                                        <form action="{{route('gosford.addacount.front')}}" method="post">@csrf
                                         <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                                <input name="username" class="mdl-textfield__input" type="text" required>
-                                                <label  class="mdl-textfield__label" for="username">Username</label>
+                                                <input placeholder="username" name="username" class="mdl-textfield__input" type="text" required>
+                                                
                                             </div>
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                                <input name="contact_number" class="mdl-textfield__input" type="text" required>
-                                                <label class="mdl-textfield__label" for="e-mail">Contact Number  (Please enter a valid contact number)</label>
+                                                <input placeholder="Contact Number  (Please enter a valid contact number)" name="contact_number" class="mdl-textfield__input" type="text" required>
+                                               
                                             </div>
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                                <input name="email" class="mdl-textfield__input" type="text" required>
-                                                <label class="mdl-textfield__label" for="e-mail">Email Address (Please enter a valid email address)</label>
+                                                <input placeholder="Email Address (Please enter a valid email address)" name="email" class="mdl-textfield__input" type="text" required>
+                                                
                                             </div>
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                                <input name="password" class="mdl-textfield__input" type="password" id="password" required>
-                                                <label class="mdl-textfield__label" for="password">Password</label>
-                                                <i class="fa-solid fa-eye" id="eye"></i>
+                                                <input placeholder="Password" name="password" class="mdl-textfield__input" type="password" id="password" required>
+                                               
                                             </div>
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                                <input name="password_confirmation" class="mdl-textfield__input" type="password" id="password_confirmation" required>
-                                                <label class="mdl-textfield__label" for="password">Confirm Password</label>
-                                                <i class="fa-solid fa-eye" id="eye"></i>
+                                                <input placeholder="Confirm Password" name="password_confirmation" class="mdl-textfield__input" type="password" id="password_confirmation" required>
                                             </div>
                                             <div style="text-align: center;color:#747474 ;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                 <span><img src="/public/aceweb/assets/img/check-circle.png" alt=""></span><span> &nbsp; I’ve read and agree to</span> <span><a class="login-link" href="#">Terms & Conditions</a></span>
@@ -72,7 +69,7 @@
                                                     class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone submit-cell">
                                                     <a class="login-link hover-a">Already have an account?</a>
                                                     <div style="flex-grow: 0.05;" class="mdl-layout-spacer"></div>
-                                                    <a style="color: #00bcd4;" href="{{url('product_project')}}" class="login-link">Login here</a>
+                                                    <a style="color: #00bcd4;" data-bs-toggle="modal" data-bs-target="#exampleModal" class="login-link">Login here</a>
 
                                                 </div>
                                             </center>

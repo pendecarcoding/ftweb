@@ -54,9 +54,11 @@
                                             <div class="card-body d-flex flex-column">
                                               <p class="category-product">{{getcar($vcar->car_id)->name}}</p>
                                               <p class="name-product">{{$vcar->name}}</p>
+                                              <br>
+                                              <p class="name-product">Full Leather</p>
                                               <h6 class="price-product">{{ single_price($vcar->unit_price) }}</h6>
                                             </div>
-                                            <a href="{{route('gosford.front.optionsummary',$vcar->slug)}}"><div class="choice-design"><center>Choose this design</center></div></a>
+                                            <a href="{{route('gosford.front.optionsummary',$vcar->slug)}}"><div class="choice-design"><center>Choose this material</center></div></a>
                                           </div>
                                         </div>
                                         @endforeach

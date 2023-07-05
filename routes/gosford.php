@@ -10,10 +10,13 @@ Route::prefix('g_system')->group(function (){
         Route::post('/gosford/f/actlogin', 'actloginfront')->name('gosford.front.actlogin');
         Route::get('/gosford/f/register', 'registerfront')->name('gosford.front.register');
         Route::post('/gosford/addacount', 'addacount')->name('gosford.addacount');
+        Route::post('/gosford/addacountfront', 'addacountfront')->name('gosford.addacount.front');
         Route::get('/gosford/comfirregister/{id}', 'comfirregister')->name('gosford.confirregister');
 
-
+        Route::any('/gosford/f/choice_design', 'choiceDesignFront')->name('gosford.front.choice_design');
+        Route::get('/gosford/f/option_sumary/{slug}', 'optionsummaryfront')->name('gosford.front.optionsummary');
         // Route::get('/gosford/afterregister', 'afterregister')->name('gosford.afterregister');
+        Route::post('/gosford/f/order_comfirmed', 'ordercomfirmedfront')->name('gosford.front.order_comfirmed');
 
 
 
@@ -29,10 +32,10 @@ Route::middleware(['GsystemMildware'])->group(function () {
             Route::post('/gosford/order_comfirmed', 'ordercomfirmed')->name('gosford.order_comfirmed');
             Route::get('/gosford/listorder', 'listorder')->name('gosford.listorder');
             Route::get('/gosford/logout', 'logout')->name('gosford.logout');
+            Route::get('/gosford/logouts', 'logouts')->name('gosford.logouts');
 
-            Route::any('/gosford/f/choice_design', 'choiceDesignFront')->name('gosford.front.choice_design');
-            Route::get('/gosford/f/option_sumary/{slug}', 'optionsummaryfront')->name('gosford.front.optionsummary');
-            Route::post('/gosford/f/order_comfirmed', 'ordercomfirmedfront')->name('gosford.front.order_comfirmed');
+
+            
 
 
         });
