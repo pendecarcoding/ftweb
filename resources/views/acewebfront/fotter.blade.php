@@ -17,13 +17,15 @@
                     </h6>
                     <p>
                         <b style="font-weight:bold;color:black">Address</b><br>
-                        No. 19-1, Jalan USJ 10/1D, 47620, Subang Jaya, Selangor, Malaysia
+                        Lot 8246, Jalan 22 46100 Petaling Jaya, Selangor , Malaysia
 
                         <br><b style="font-weight:bold;color:black">Tel</b><br>
-                        +603 – 8081 7198
+                        6012-2578885<br>
+                        603-79603927<br>
+                        603-79603937
 
                         <br><b style="font-weight:bold;color:black">Email</b><br>
-                        enquiry@ace2u.com
+                        joey@gosfordseat.com
 
                     </p>
                 </div>
