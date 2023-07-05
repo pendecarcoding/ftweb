@@ -1,0 +1,151 @@
+/* styles for screens smaller than 576px */
+@media (max-width: 575px) {
+    /* styles for small screens */
+  }
+
+  /* styles for screens between 576px and 768px */
+  @media (min-width: 576px) and (max-width: 767px) {
+    /* styles for medium screens */
+  }
+
+  /* styles for screens between 768px and 992px */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* styles for large screens */
+  }
+
+  /* styles for screens between 992px and 1200px */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .wrap-content {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+
+    #acecapital{
+        left: 2%;
+    }
+    #acecapital p{
+        font-size: 10px;;
+    }
+    #aceikhlas{
+        left: 4%;
+    }
+    #aceikhlas p{
+        font-size: 10px;;
+    }
+    #aceassay{
+        left: 6%;
+    }
+    #aceassay p{
+        font-size: 10px;;
+    }
+    #aceihsan{
+        left: 6%;
+    }
+    #aceihsan p{
+        font-size: 10px;;
+    }
+  }
+
+  /* styles for screens larger than 1200px */
+  @media (min-width: 1200px) and (max-width: 1366px) {
+    #acecapital{
+        left: 26%;
+    }
+    #aceikhlas{
+        left: 27%;
+    }
+    #aceassay{
+        left: 28%;
+    }
+    #aceihsan{
+        left: 30%;
+    }
+  }
+
+  @media (min-width: 1366px) and (max-width: 1535px) {
+    #imggpt1 {
+        width: 65%;
+    }
+    #acecapital{
+        left: 30%;
+    }
+    #aceikhlas{
+        left: 35%;
+    }
+    #aceassay{
+        left: 40%;
+    }
+    #aceihsan{
+        left: 45%;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    #acecapital {
+        left: 28%;
+    }
+}
+
+  @media (min-width: 1535px) and (max-width: 1600px) {
+    #acecapital{
+        left: 26%;
+    }
+    #aceikhlas{
+        left: 29%;
+    }
+    #aceassay{
+        left: 31%;
+    }
+    #aceihsan{
+        left: 33%;
+    }
+  }
+
+  @media (min-width: 1600px){
+    #acecapital{
+        left: 27%;
+    }
+    #aceikhlas{
+        left: 30%;
+    }
+    #aceassay{
+        left: 33%;
+    }
+    #aceihsan{
+        left: 36%;
+    }
+  }
+
+  @media (min-width: 1680px){
+    #acecapital {
+        left: -7%;
+    }
+    #aceikhlas {
+        left: -1%;
+    }
+    #aceassay {
+        left: 6%;
+    }
+    #aceihsan {
+        left: 12%;
+    }
+
+  }
+
+  @media (min-width: 1920px){
+    #acecapital {
+        left: -7%;
+    }
+    #aceikhlas {
+        left: 3%;
+    }
+    #aceassay {
+        left: 13%;
+    }
+    #aceihsan {
+        left: 22%;
+    }
+
+  }
+
+
