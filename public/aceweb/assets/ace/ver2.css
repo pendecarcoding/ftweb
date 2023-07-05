@@ -2477,7 +2477,7 @@
         margin-left: 9px;
         margin-right: 9px;
         text-decoration: none;
-        font-size: 1.5vw;
+        font-size: 1.2vw;
     }
 
     .carousel-caption {
@@ -2775,7 +2775,9 @@
         height: 75vh;
     }
     .company-ace {
-        height: 69vh;
+        padding: 60px 0px;
+        height: auto;
+        position: relative;
     }
     #imggpt1 {
         width: 88%;

@@ -216,9 +216,9 @@
 
 
 
-              <div id="structur-ipad" class="row img-strc">
+              <!-- <div id="structur-ipad" class="row img-strc">
                 <img style="width:100%" src="{{ static_asset('aceweb') }}/assets/img/structure.png" alt="">
-              </div>
+              </div> -->
 
               <div style="margin:20px 0px" class="row img-structure-mobile">
                 <div class="col-sm-12">
