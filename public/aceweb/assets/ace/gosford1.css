@@ -1998,7 +1998,7 @@ footer img {
 }
 
 .img-responsive-news {
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
     height: 300px;
     vertical-align: middle;
