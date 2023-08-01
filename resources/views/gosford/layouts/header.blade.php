@@ -19,6 +19,9 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--

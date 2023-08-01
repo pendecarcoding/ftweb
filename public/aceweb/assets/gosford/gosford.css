@@ -1,4 +1,46 @@
 
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+input[type=file] {
+    height: 44px;
+    width: 350px;
+    max-width: 100%;
+    color: #444;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #555;
+  }
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    background: transparent;
+    border: groove;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: red;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+
+
+.card
+.card-text{
+    color: black;
+}
+.card-coloroption{
+    width: 100%;
+    margin: 5px;
+    height: 50px;
+}
+.wrap-quantity{
+    border: groove;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .container-go{
     padding: 0px 28%;
 }
@@ -3356,7 +3398,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
 
 .mdl-layout__drawer,
 .mdl-layout__header {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) */
 }
 
 .mdl-dialog__title {
@@ -4325,7 +4367,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
 }
 
 .mdl-layout-spacer {
-    flex-grow: 1
+    flex-grow: 0;
 }
 
 .mdl-layout__drawer {
@@ -4392,7 +4434,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
 .mdl-layout__drawer-button {
     display: block;
     position: absolute;
-    height: 48px;
+    height: 64px;
     width: 250px;
     border: 0;
     flex-shrink: 0;
@@ -4402,11 +4444,11 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
     font-size: 26px;
     line-height: 56px;
     font-family: Helvetica, Arial, sans-serif;
-    margin: 8px 12px;
+    /* margin: 8px 12px; */
     top: 0;
     left: 0;
     color: #00bcd4;
-    z-index: 4
+    z-index: 4;
 }
 
 .mdl-snackbar,
@@ -4437,7 +4479,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
         width: 156px;
     }
     .mdl-layout__header .mdl-layout__drawer-button img {
-        width: 100%;
+        /* width: 100%; */
     }
 
     .mdl-layout__drawer-button {
@@ -4475,7 +4517,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
     min-height: 64px;
     max-height: 1000px;
     z-index: 3;
-    background-color: #333;
+    background-color: transparent;
     color: #00bcd4;
     transition-property: max-height, box-shadow
 }
@@ -4513,8 +4555,22 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
 .mdl-layout__header.is-compact.has-tabs {
     height: 112px
 }
-
+@media screen and (max-width:1024px) {
+    .mdl-layout__header-row .classurl {
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+    .acetopbar {
+        left: 10px;
+        top: 10px;
+        z-index: 998;
+        position: absolute;
+        width: 66px;
+        height: 39px;
+    }
+}
 @media screen and (max-width:1440px) {
+
     .mdl-layout__header {
         min-height: 56px;
         /* display: none */
@@ -4560,8 +4616,18 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
 .mdl-layout__header--waterfall.mdl-layout__header--waterfall-hide-top {
     justify-content: flex-end
 }
+.class_menu_black{
+    background-color: #333;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px 0 10px;
 
+}
 .mdl-layout__header-row {
+    justify-content: end;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -4570,8 +4636,12 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
     align-self: stretch;
     align-items: center;
     height: 64px;
+
+    background: transparent;
     margin: 0;
-    padding: 0 20px 0 80px
+    /* position: absolute; */
+    left: 19%;
+    /* padding: 0 20px 0 10px; */
 }
 
 .mdl-layout--no-drawer-button .mdl-layout__header-row {
@@ -4587,7 +4657,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
 @media screen and (max-width:1440px) {
     .mdl-layout__header-row {
         height: 56px;
-        padding: 0 8px 0 72px
+        /* padding: 0 8px 0 72px */
     }
 
     .mdl-layout--no-drawer-button .mdl-layout__header-row {
@@ -5759,6 +5829,19 @@ _:-ms-input-placeholder {
     background-color: rgba(0, 188, 212, .26)
 }
 
+.towncard{
+    margin:20px 0px;
+}
+
+.title-menu-style{
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: bold;
+}
+
 .mdl-switch__label {
     position: relative;
     cursor: pointer;
@@ -5928,6 +6011,7 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple {
 
 .mdl-textfield__input,
 .mdl-textfield__label {
+    height: 44px;
     font-size: 16px;
     width: 100%;
     text-align: left;
@@ -5943,7 +6027,7 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple {
     border-color: #614e4e;
     font-family: Helvetica, Arial, sans-serif;
     margin: 10px 0px;
-    padding: 17px 14px;
+    padding: 8px 19px;
     background: 0 0;
     color: inherit;
 }
@@ -7084,7 +7168,7 @@ a:hover{
     padding: 10px 15%;
 }
 .slider-product{
-    height: 409px;
+    height: auto;
     position: relative;
 }
 .wrap-carousel-indicators{
@@ -7103,11 +7187,12 @@ a:hover{
     color: #4a4949bd;
 }
 .title-right-product{
+    margin: 10px 0px;
     line-height: 2px;
     font-weight: bold;
 }
 .hr-product-detail{
-    border: 1px solid #dee2e6;
+    border: 1px solid #c3c3c3;
     border-radius: 5px;
     box-sizing: inherit;
 }
@@ -7254,7 +7339,7 @@ a:hover{
 }
 
 .mdl-layout__header-row .avatar-dropdown>span {
-    color: rgba(255, 255, 255, .5);
+    color: white;
     padding-right: 16px
 }
 
@@ -8983,7 +9068,6 @@ a:hover{
 .account-dropdown>.mdl-list__item:first-child .mdl-list__item-primary-content .mdl-list__item-avatar {
     height: 48px;
     width: 48px;
-    background: url(../images/Icon.png);
     background-size: cover
 }
 
@@ -10028,6 +10112,37 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:500px){
+    #hello{
+        display: none;
+    }
+    .rounded-circle {
+        height: 100px;
+        width: 100px;
+    }
+    .acetopbar {
+        left: 10px;
+        top: 20px;
+        z-index: 998;
+        position: absolute;
+        width: 37px;
+        height: 25px;
+    }
+    .mdl-layout__header-row .classurl {
+        display: none;
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+    .about h1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .ace-sliders {
+        max-height: 184px;
+    }
+    .mdl-layout__header-row {
+        height: 64px;
+        background: #333333;
+    }
     .container-go {
         padding: 0px;
     }

@@ -4,77 +4,82 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-investor">
-
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
-                        alt="ACE-BANNER-PRODUCT" />
-                </div>
-            </div>
+        <section style="height: 550px;">
+            <img class="img-responsive" style="height: auto;position: absolute;top: 0;width:100%" src="{{ getimage($car->image) }}"
+            alt="ACE-BANNER-PRODUCT" />
         </section>
 
-        <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
-            <div class="content-ace">
-                <div class="wrap-content">
-
-                    <div style="padding-top: 0px" class="ace-isi">
-
-
-
-                            <div class="step-order">
-                                <div class="title-step-order active-step">
-                                    <button  class="btn-step mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-red" data-upgraded=",MaterialButton,MaterialRipple">
-                                    <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 262.161px; height: 262.161px; transform: translate(-50%, -50%) translate(78px, 4px);"></span></span>
-                                    </button>
-                                    <p>Select vehicle</p>
-                                 </div>
-                                 <div class="title-step-order active-step">
-                                    <button  class="btn-step mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-red" data-upgraded=",MaterialButton,MaterialRipple">
-                                        <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 262.161px; height: 262.161px; transform: translate(-50%, -50%) translate(78px, 4px);"></span></span>
-                                        </button><p>Choose design</p>
-                                 </div>
-
-                                 <div class="title-step-order">
-                                    <button class="btn-step mdl-button mdl-js-button mdl-button--raised button--colored-light-blue" disabled="" data-upgraded=",MaterialButton"></button>
-                                    <p>Options Summary</p>
-                                 </div>
-                                </div>
-                                <div class="title-order">
-                                    <h3>Vehicles: {{$year}} {{make_car($carmake)->name}} {{type_car($model)->type}} <span><a href="{{url('product_project')}}" class="btn" style="background-color: #474747;color:white;border-radius: 20px;"><div style="display: flex;"><i style="margin-top: 4px;" class="fa fa-refresh"></i>&nbsp; Change</div></a></span></h3>
-
-                                </div>
-
-                                <div class="container">
-                                    <div class="row">
-                                        @foreach($car as $i => $vcar)
-                                        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-                                          <div class="card w-100 my-2 shadow-2-strong">
-                                            <img src="{{getimage($vcar->thumbnail_img)}}" class="card-img-top">
-                                            <div class="card-body d-flex flex-column">
-                                              <p class="category-product">{{getcar($vcar->car_id)->name}}</p>
-                                              <p class="name-product">{{$vcar->name}}</p>
-                                              <br>
-                                              <p class="name-product">Full Leather</p>
-                                              <h6 class="price-product">{{ single_price($vcar->unit_price) }}</h6>
-                                            </div>
-                                            <a href="{{route('gosford.front.optionsummary',$vcar->slug)}}"><div class="choice-design"><center>Choose this material</center></div></a>
-                                          </div>
-                                        </div>
-                                        @endforeach
-                                      </div>
-                                  </div>
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="text-align: justify;margin:10px 50px;">We are delighted to present our latest masterpiece to you – high-quality automotive leather. This copy will showcase the true charm of this exquisite creation.
+    Designed exclusively for car owners, our top-tier leather embodies our unwavering commitment to perfection. Each piece of leather material undergoes rigorous selection, ensuring that only the finest, handpicked leather finds its way into our car interiors. Your distinguished status deserves nothing less than the most elegant indulgence.
+    The high-quality leather boasts an astonishingly soft touch, providing a luxurious sensation that soothes both body and mind. Selected from the finest raw materials, the leather's durability surpasses ordinary standards, maintaining its shine and color as if new for a prolonged period. Whether your journey is long or short, this elegance and refinement will accompany you all the way.
+    Our leather represents more than just beauty; it exemplifies practicality and functionality. Robust leather fibers and impeccable craftsmanship ensure outstanding abrasion resistance, making it capable of withstanding daily wear while retaining a fresh appearance.
+    Excellence in quality goes hand in hand with our commitment to protecting the Earth. We are dedicated to promoting environmental consciousness by adopting sustainable production methods, ensuring that the leather manufacturing process is as eco-friendly as possible, without unnecessary resource wastage. By choosing our leather, you are also contributing to a greener future for our planet.
+                            </div>
 
 
                     </div>
                 </div>
             </div>
-
-
         </section>
-        <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-            <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-        </div> -->
+        <section class="pt-5 pb-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="position: relative;">
+                            <img class="img-responsive" src="/public/go_system/images/type.png" alt="">
+                        </div>
+
+
+                    </div>
+                </div>
+        </section>
+        <section class="pt-5 pb-5">
+                <div style="text-align: center;font-weight: bold;padding: 20px;"><h2>Styling Customisation</h2></div>
+              <div class="row d-flex" style="justify-content: center;">
+
+                  <div class="col-sm-6 col-md-2  d-flex ">
+
+                        <a href="{{route('gosford.twotowncolor')}}" class="card  card-body border-light  justify-content-between text-white shadow">
+                            <!-- <a >  -->
+                                <img src="/public/go_system/images/menu/menu_1.png" alt="">
+                            <!-- </a> -->
+                            <div class="title-menu-style">Two Tone Color</div>
+                        </a>
+
+                  </div>
+                  <div class="col-sm-6 col-md-2  d-flex ">
+                    <a href="{{route('gosford.embrodery')}}" class="card  card-body border-light  justify-content-between  text-white shadow">
+                        <img src="/public/go_system/images/menu/menu_2.png" alt="">
+                        <div class="title-menu-style">Embrodery</div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 col-md-2  d-flex ">
+                    <a href="{{route('gosford.patterndesign')}}" class="card  card-body border-light  justify-content-between  text-white shadow">
+                        <img src="/public/go_system/images/menu/menu_3.png" alt="">
+                        <div class="title-menu-style">Pattern Design</div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 col-md-2  d-flex ">
+                    <a href="{{route('gosford.piping')}}" class="card  card-body border-light  justify-content-between  text-white shadow">
+                        <img src="/public/go_system/images/menu/menu_4.png" alt="">
+                        <div class="title-menu-style">Piping</div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-2  d-flex ">
+                    <a href="{{route('gosford.emblem')}}" class="card  card-body border-light  justify-content-between  text-white shadow">
+                        <img src="/public/go_system/images/menu/menu_5.png" alt="">
+                        <div class="title-menu-style">Logo / Emblem</div>
+                    </a>
+                </div>
+
+              </div>
+
+
+          </div>
+          </section>
 
     </main>
 

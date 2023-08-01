@@ -61,7 +61,7 @@
 
 .nav-pills i,a{
     text-decoration: none;
-    color: #1D5189;
+    color: #ffffff;
 }
 
 
@@ -2767,7 +2767,7 @@
     }
     .ace-sliders {
         height: 75vh;
-        position: relative;
+        /* position: relative; */
         overflow: hidden;
     }
     .slider-banner {

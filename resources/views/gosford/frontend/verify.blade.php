@@ -35,9 +35,9 @@
                                                 <center><img style="width:80px" src="/public/aceweb/assets/img/envelope.png"
                                                         alt=""></center>
                                                 <div style="text-align: center;padding: 25px 0px">
-                                                    <p style="color: #727272;line-height: 1%;">You’re almost there! We have
+                                                    <p style="color: #727272;line-height: 1%;">You’re almost {{$email}} there! We have
                                                         sent an email to</p>
-                                                    <b style="color:black">@php(!empty($email)) ? print $email:''
+                                                    <b style="color:black">@php(!empty($email)) ? {{$email}}:''
                                                         @endphp</b>
                                                     <br>
                                                     <br>

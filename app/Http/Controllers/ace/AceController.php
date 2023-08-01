@@ -127,12 +127,10 @@ class AceController extends Controller
             case 'product_project':
                 if(Session::get('id_account') == null){
                     $brand   = Brand::all();
-                    $typecar = TypeCar::all();
-                    return view('gosford.frontend.search',compact('brand','typecar'));
+                    return view('gosford.frontend.search',compact('brand'));
                 }else{
                     $brand   = Brand::all();
-                    $typecar = TypeCar::all();
-                    return view('gosford.frontend.search',compact('brand','typecar'));
+                    return view('gosford.frontend.search',compact('brand'));
                 }
                 break;
             case 'recoverypassword':

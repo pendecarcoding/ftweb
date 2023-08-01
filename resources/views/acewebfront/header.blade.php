@@ -1,63 +1,127 @@
-<header>
-    <nav id="myTopnav" class="topnav">
+<header class="mdl-layout__header is-casting-shadow">
+    <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button">
+        <a href="{{ route('home') }}"><img id="acetopbar" class="acetopbar"
+            src="{{ uploaded_asset(get_setting('system_logo_white')) }}" /></a>
+    </div>
+    <div class="mdl-layout__header-row">
+        <div class="class_menu_black">
+
+
+        <div class="mdl-layout-spacer"></div>
         @foreach (getnav() as $v)
-            <a href="{{ url($v['link']) }}"
-                @if (Request::is($v['link'] . '*')) class="active" @endif>{{ $v['name'] }}</a>
+        <a  href="{{ url($v['link']) }}"
+        class="classurl @if (Request::is($v['link'] . '*')) classurl-active @endif">{{ $v['name'] }}</a>
         @endforeach
-        @if (Session::get('id_account') != null)
-            <a href="{{route('gosford.logouts')}}"  class="active">Logout</a>
-        @else
-            <a target="_blank" href="{{ route('gosford.login') }}" class="ace-button" >
-                Login GSAP
+
+        <!-- <div class="material-icons mdl-badge mdl-badge--overlap mdl-button--icon notification" id="notification"
+            data-badge="23">
+            notifications_none
+        </div> -->
+        <!-- Notifications dropdown-->
+
+        <!-- <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right mdl-shadow--2dp notifications-dropdown"
+            for="notification">
+
+            <li class="mdl-list__item">
+                You have 23 new notifications!
+            </li>
+            <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                <span class="mdl-list__item-primary-content">
+                    <span class="mdl-list__item-avatar background-color--primary">
+                        <i class="material-icons">plus_one</i>
+                    </span>
+                    <span>You have 3 new orders.</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                    <span class="label">just now</span>
+                </span>
+            </li>
+            <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                <span class="mdl-list__item-primary-content">
+                    <span class="mdl-list__item-avatar background-color--secondary">
+                        <i class="material-icons">error_outline</i>
+                    </span>
+                    <span>Database error</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                    <span class="label">1 min</span>
+                </span>
+            </li>
+            <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                <span class="mdl-list__item-primary-content">
+                    <span class="mdl-list__item-avatar background-color--primary">
+                        <i class="material-icons">new_releases</i>
+                    </span>
+                    <span>The Death Star is built!</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                    <span class="label">2 hours</span>
+                </span>
+            </li>
+            <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                <span class="mdl-list__item-primary-content">
+                    <span class="mdl-list__item-avatar background-color--primary">
+                        <i class="material-icons">mail_outline</i>
+                    </span>
+                    <span>You have 4 new mails.</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                    <span class="label">5 days</span>
+                </span>
+            </li>
+            <li class="mdl-list__item list__item--border-top">
+                <button href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">ALL NOTIFICATIONS</button>
+            </li>
+        </ul> -->
+        @if(Session::get('gystem_login'))
+        <div class="avatar-dropdown" id="icon">
+
+            <img src="https://cdn.iconscout.com/icon/free/png-512/avatar-370-456322.png">
+            <span id="hello"> &nbsp; HI {{ getinfoaccount()->username }}</span>
+        </div>
+        <ul class="mdl-menu mdl-list mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp account-dropdown"
+            for="icon">
+            <li class="mdl-list__item mdl-list__item--two-line">
+                <span class="mdl-list__item-primary-content">
+                    <span class="material-icons mdl-list__item-avatar" style="background-image:url('https://cdn.iconscout.com/icon/free/png-512/avatar-370-456322.png');"></span>
+                    <span>{{ getinfoaccount()->username }}</span>
+                    <span class="mdl-list__item-sub-title">{{ getinfoaccount()->email }}</span>
+                </span>
+            </li>
+            <li class="list__item--border-top"></li>
+            <a href="{{ route('gosford.frontend.profil') }}">
+                <li class="mdl-menu__item mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">account_circle</i>
+                        My account
+                    </span>
+                </li>
             </a>
-        @endif
+            <a href="{{ route('gosford.listorder') }}">
+                <li class="mdl-menu__item mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">receipt</i>
+                        My Order
+                </li>
+            </a>
 
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+            <li class="list__item--border-top"></li>
+
+            <a href="{{ route('gosford.logouts') }}">
+                <li class="mdl-menu__item mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
+                        Log out
+                    </span>
+                </li>
+            </a>
+        </ul>
+        @else
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="ace-button">
+            Login GSAP
         </a>
-    </nav>
+        @endif
+    </div>
+
+    </div>
 </header>
-<div style="overflow: hidden;padding-right: 20px;" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a style="color:black;" class="dropdown-item" href="https://gtp.ace2u.com/"
-        target="_blank">GTP Login</a>
-    <a style="color:black;" class="dropdown-item" href="#" style="width:100%;"
-        data-bs-toggle="modal" data-bs-target="#exampleModal"> Staff Login</a>
-
-</div>
-
-<script>
-    function logoutFunction() {
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-                confirmButton: 'btn btn-success',
-                cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false
-        })
-
-        swalWithBootstrapButtons.fire({
-            title: 'Are you sure?',
-            text: "you want to leave this page?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Yes',
-            cancelButtonText: 'No, cancel!',
-            reverseButtons: true
-        }).then((result) => {
-            if (result.isConfirmed) {
-
-                window.location.href = "{{ route('staff.logoutstuff') }}";
-            } else if (
-                /* Read more about handling dismissals below */
-                result.dismiss === Swal.DismissReason.cancel
-            ) {
-                // swalWithBootstrapButtons.fire(
-                //     'Cancelled',
-                //     'Your imaginary file is safe :)',
-                //     'error'
-                // )
-            }
-        })
-
-    }
-</script>

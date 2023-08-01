@@ -122,7 +122,7 @@ class gosfordController extends Controller
                 }else{
                     return redirect('product_project');
                 }
-                
+
             } else {
                 // The hashed value does not match the plain text
                 return back()->with('danger','Your password is wrong. make sure you enter the correct password');
@@ -137,7 +137,6 @@ class gosfordController extends Controller
    }
 
    public function addacountfront(Request $r){
-
     $r->validate([
         'username'=>'required',
         'contact_number' => 'required|unique:gsystem_accounts,contact_number',
@@ -216,6 +215,11 @@ class gosfordController extends Controller
     return view('gosford.system.profil');
    }
 
+   function profilfrontend(){
+    $profil = GsystemAccount::where('id',Session::get('id_account'))->first();
+    return view('gosford.frontend.profil',compact('profil'));
+   }
+
    function choiceDesign(Request $r){
     $r->validate([
         'carmake'=>'required',
@@ -238,14 +242,67 @@ class gosfordController extends Controller
     $year   = $r->year;
     $model  = $r->model;
     $carmake= $r->carmake;
-    $car  = Car::where('make',$r->carmake)->where('type',$r->model)->where('year',$r->year)->join('products','products.car_id','cars.id')->get();
-    return view('gosford.frontend.choice_design',compact('car','year','model','carmake'));
+    $car  = Car::where('make',$r->carmake)->where('id',$r->model)->where('year',$r->year)->first();
+    if(!empty($car)){
+        return view('gosford.frontend.choice_design',compact('car','year','model','carmake'));
+    }
+    else{
+        print "kosong";
+    }
+
    }
+
+   //Two TownColor
+   function twotowncolor(Request $r){
+        return view('gosford.frontend.twotowncolor.index');
+   }
+
+   function twotowncolordetail(Request $r){
+    return view('gosford.frontend.twotowncolor.detail');
+
+   }
+
+   function embrodery(Request $r){
+    return view('gosford.frontend.embrodery.index');
+   }
+
+   function piping(Request $r){
+    return view('gosford.frontend.piping.index');
+   }
+
+   //Pattern Design
+   function patterndesign(Request $r){
+    return view('gosford.frontend.pattern.index');
+   }
+
+   function detailpattern(Request $r){
+    return view('gosford.frontend.pattern.detail');
+   }
+
+   //emblem
+   function emblem(Request $r){
+    return view('gosford.frontend.emblem.index');
+   }
+   function emblemdetail(Request $r){
+    return view('gosford.frontend.emblem.detail');
+   }
+
+   function getmodelfrommake($make=null){
+    $carModels = array();
+    $carModels = Car::where('make', $make)->get(['id', 'name']);
+    return response()->json($carModels);
+   }
+   function getyearfrommodel($model=null){
+    $carModels = array();
+    $carModels = Car::where('id', $model)->groupBy('year')->get(['year']);
+    return response()->json($carModels);
+   }
+
 
    function optionsummary($slug){
     Session::put('optionlast',$slug);
     $car  = Car::where('slug',$slug)->join('products','products.car_id','cars.id')->first();
-    
+
     return view('gosford.system.option_sumary',compact('car'));
    }
 
@@ -284,7 +341,7 @@ class gosfordController extends Controller
     }else{
         print "test";
     }
-   
+
 
    }
    function ordercomfirmed(Request $r){

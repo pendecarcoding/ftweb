@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,20 +18,13 @@
         @endif
     </title>
     @yield('meta')
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="{{ static_asset('aceweb') }}/assets/vendor/aos/aos.css" rel="stylesheet" />
     <link href="{{ static_asset('aceweb') }}/assets/ace/mansoryscroll.css" rel="stylesheet" />
     <link href="{{ static_asset('aceweb') }}/assets/ace/company.css" rel="stylesheet" />
     <script src="{{ static_asset('aceweb') }}/assets/mansory/mansory.js"></script>
-
-
-
     <link href="{{ static_asset('aceweb') }}/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-
     <!-- Custom styles for this template -->
     <link href="{{ static_asset('aceweb') }}/assets/carousel/carousel.css" rel="stylesheet" />
 
@@ -43,23 +35,15 @@
     <link href="{{ static_asset('aceweb') }}/assets/slick/slick-theme.css" rel="stylesheet" />
     <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />-->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
-
     <!--TEST-->
-
     <!--TEST-->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Flip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <link href="{{ static_asset('aceweb') }}/assets/ace/ipadace1.css" rel="stylesheet" />
     <link href="{{ static_asset('aceweb') }}/assets/gosford/gosford.css" rel="stylesheet" />
-
-
-
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         #pdfviewer {
             border: 1px #333 solid;
@@ -76,7 +60,7 @@
             font-size: 18px;
             border: none;
             outline: none;
-            background-color: #1d5189;
+            background-color: #bf1e2d;
             color: white;
             cursor: pointer;
             /* padding: 15px; */
@@ -111,8 +95,7 @@
 </div>-->
     <!--div id="divbody" data-aos="fade-up" class="divbody">-->
 
-    <a href="{{ route('home') }}"><img id="acetopbar" class="acetopbar"
-            src="{{ uploaded_asset(get_setting('system_logo_white')) }}" /></a>
+
 
 
     @include('acewebfront.header')
@@ -132,11 +115,12 @@
                 ">
                         <div class="mb-5 text-center">
                             <img src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="mw-100 mb-4"
-                                height="100">
-                            <h1 style="color: #6d6d6d;font-size: 20px;" class="h3  mb-0">User Login</h1>
+                                height="50">
+
 
                         </div>
-                        <form class="pad-hor" method="POST" role="form" action="{{ route('gosford.front.actlogin') }}">
+                        <form class="pad-hor" method="POST" role="form"
+                            action="{{ route('gosford.front.actlogin') }}">
                             {{ csrf_field() }}
                             <div style="margin-left: 20px;margin-right: 20px;">
                                 <div class="input-group mb-3">
@@ -155,7 +139,8 @@
                                         <span
                                             style="height: 40px;
                                       border-radius: 0px;"
-                                            class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                                            class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-lock"></i></span>
                                     </div>
                                     <input id="password" type="password" class="form-control" name="password"
                                         required="" placeholder="Password">
@@ -166,10 +151,11 @@
 
                             </div>
                             <div class="form-group">
-                                <button style="width: 100%;
+                                <button
+                                    style="width: 100%;
                                 background-color: #dc3545;
-                                border: #dc3545;" type="submit"
-                                    class="btn btn-primary btn-lg btn-block">
+                                border: #dc3545;"
+                                    type="submit" class="btn btn-primary btn-lg btn-block">
                                     LOGIN
                                 </button>
                                 <br>
@@ -550,6 +536,7 @@
     @php
         $datapatner = getPatner();
     @endphp
+    <script src="{{ asset('public/go_system') }}/js/material.min.js"></script>
     <script>
         var images = [
             @foreach ($datapatner as $i => $p)

@@ -5,14 +5,12 @@
 @section('content')
     <main>
         <section class="ace-investor">
-            <div data-aos="fade-up">
-                <div class="col-md-12">
+            
                     <div class="banner-static">
                         <img class="img-responsive-banner newsroom-banner" src="/public/aceweb/assets/img/newsroom-banner.png"
                             alt="ACE-BANNER-NEWSROOM" />
                     </div>
-                </div>
-            </div>
+             
         </section>
 
         <section class="gtp-anouncements">

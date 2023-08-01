@@ -14,7 +14,23 @@ Route::prefix('g_system')->group(function (){
         Route::get('/gosford/comfirregister/{id}', 'comfirregister')->name('gosford.confirregister');
 
         Route::any('/gosford/f/choice_design', 'choiceDesignFront')->name('gosford.front.choice_design');
+        Route::any('/gosford/f/getmodelbymake/{make}', 'getmodelfrommake')->name('gosford.front.getmodelfrommake');
+        Route::any('/gosford/f/getyearbymodel/{model}', 'getyearfrommodel')->name('gosford.front.getyearfrommodel');
         Route::get('/gosford/f/option_sumary/{slug}', 'optionsummaryfront')->name('gosford.front.optionsummary');
+        //Two Town Color
+        Route::get('/gosford/f/twotowncolor/', 'twotowncolor')->name('gosford.twotowncolor');
+        Route::get('/gosford/f/twotowncolor/detail', 'twotowncolordetail')->name('gosford.twotowncolor.detail');
+        //paterndesign
+        Route::get('/gosford/f/patterndesign/', 'patterndesign')->name('gosford.patterndesign');
+        Route::get('/gosford/f/patterndesign/detail', 'detailpattern')->name('gosford.patterndesign.detail');
+        //embordery
+        Route::get('/gosford/f/embrodery/', 'embrodery')->name('gosford.embrodery');
+        //Piping
+        Route::get('/gosford/f/piping/', 'piping')->name('gosford.piping');
+        //emblem
+        Route::get('/gosford/f/emblem/', 'emblem')->name('gosford.emblem');
+        Route::get('/gosford/f/emblem/detail', 'emblemdetail')->name('gosford.emblem.detail');
+
         // Route::get('/gosford/afterregister', 'afterregister')->name('gosford.afterregister');
         Route::post('/gosford/f/order_comfirmed', 'ordercomfirmedfront')->name('gosford.front.order_comfirmed');
 
@@ -27,6 +43,7 @@ Route::middleware(['GsystemMildware'])->group(function () {
         Route::controller(gosfordController::class)->group(function () {
             Route::get('/gosford/system_search', 'search')->name('gosford.search');
             Route::get('/gosford/profil', 'profil')->name('gosford.profil');
+            Route::get('/gosford/f/profil', 'profilfrontend')->name('gosford.frontend.profil');
             Route::any('/gosford/choice_design', 'choiceDesign')->name('gosford.choice_design');
             Route::get('/gosford/option_sumary/{slug}', 'optionsummary')->name('gosford.optionsummary');
             Route::post('/gosford/order_comfirmed', 'ordercomfirmed')->name('gosford.order_comfirmed');
@@ -35,7 +52,7 @@ Route::middleware(['GsystemMildware'])->group(function () {
             Route::get('/gosford/logouts', 'logouts')->name('gosford.logouts');
 
 
-            
+
 
 
         });

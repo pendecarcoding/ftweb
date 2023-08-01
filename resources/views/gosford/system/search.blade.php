@@ -28,21 +28,23 @@
             <form action="{{route('gosford.choice_design')}}" method="post">@csrf
                 <div class="body-order">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                        <select class="select-order mdl-textfield__input" type="text" name="carmake">
+                        <select class="select2 mdl-textfield__input" type="text" name="carmake">
                             <option value="">Car Make</option>
                             @foreach($brand as $i => $b)
                              <option value="{{$b->id}}">{{$b->name}}</option>
                             @endforeach
                         </select>
                         <br>
-                        <select class="select-order mdl-textfield__input" type="text" name="model">
+                        <br>
+                        <select class="select2 mdl-textfield__input" type="text" name="model">
                             <option value="">Car Model</option>
                             @foreach($typecar as $i => $t)
                              <option value="{{$t->id}}">{{$t->type}}</option>
                             @endforeach
                         </select>
                         <br>
-                        <select class="select-order mdl-textfield__input" type="text" name="year">
+                        <br>
+                        <select class="select2 mdl-textfield__input" type="text" name="year">
                             <option value="">Year</option>
                             @for ($i = 1994; $i <= date('Y'); $i++)
                             <option value="{{ $i }}">{{ $i }}</option>
