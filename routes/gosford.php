@@ -25,8 +25,10 @@ Route::prefix('g_system')->group(function (){
         Route::get('/gosford/f/patterndesign/detail', 'detailpattern')->name('gosford.patterndesign.detail');
         //embordery
         Route::get('/gosford/f/embrodery/', 'embrodery')->name('gosford.embrodery');
+        Route::get('/gosford/f/embrodery/detail', 'embroderydetail')->name('gosford.embrodery.detail');
         //Piping
         Route::get('/gosford/f/piping/', 'piping')->name('gosford.piping');
+        Route::get('/gosford/f/piping/detail', 'pipingdetail')->name('gosford.piping.detail');
         //emblem
         Route::get('/gosford/f/emblem/', 'emblem')->name('gosford.emblem');
         Route::get('/gosford/f/emblem/detail', 'emblemdetail')->name('gosford.emblem.detail');

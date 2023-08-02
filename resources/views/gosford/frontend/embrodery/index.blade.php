@@ -5,7 +5,6 @@
 @section('content')
     <main>
         <section class="ace-investor">
-
             <div class="col-md-12">
                 <div class="banner-static">
                     <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
@@ -13,123 +12,119 @@
                 </div>
             </div>
         </section>
-
         <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
             <div class="content-ace">
                 <div class="wrap-content">
-
                     <div style="padding-top: 0px" class="ace-isi">
-
-
                         <div class="container">
                             <div class="row">
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro1.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro2.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro3.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro4.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro5.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro6.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
 
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro7.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro8.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro9.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro10.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro11.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
                                <div class="col-md-2">
                                 <div class="card towncard">
-                                    <div class="card-body">
+                                    <a href="{{route('gosford.embrodery.detail')}}" class="card-body">
                                       <!-- Card content goes here -->
                                       <img style="width:100%" src="/public/go_system/images/embro12.png" alt="">
                                       <p class="card-text center" style="margin-top:2px">A011 <br>Catana Leather</p>
-                                    </div>
+                                    </a>
                                   </div>
                                </div>
 

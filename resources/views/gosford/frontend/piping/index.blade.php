@@ -34,7 +34,7 @@
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
                                                 </div>
-                                                <a href="#"><div class="choice-design"><center>Choose this design</center></div></a>
+                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
                                                 </div>
-                                                <a href="#"><div class="choice-design"><center>Choose this design</center></div></a>
+                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
                                                 </div>
-                                                <a href="#"><div class="choice-design"><center>Choose this design</center></div></a>
+                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +79,7 @@
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
                                                 </div>
-                                                <a href="#"><div class="choice-design"><center>Choose this design</center></div></a>
+                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
                                                 </div>
-                                                <a href="#"><div class="choice-design"><center>Choose this design</center></div></a>
+                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
                                                 </div>
-                                                <a href="#"><div class="choice-design"><center>Choose this design</center></div></a>
+                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
                                         </div>
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
                                                 </div>
-                                                <a href="#"><div class="choice-design"><center>Choose this design</center></div></a>
+                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +139,7 @@
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
                                                 </div>
-                                                <a href="#"><div class="choice-design"><center>Choose this design</center></div></a>
+                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
                                         </div>
                                     </div>
                                 </div>

@@ -266,8 +266,16 @@ class gosfordController extends Controller
     return view('gosford.frontend.embrodery.index');
    }
 
+   function embroderydetail(Request $r){
+    return view('gosford.frontend.embrodery.detail');
+   }
+
    function piping(Request $r){
     return view('gosford.frontend.piping.index');
+   }
+
+   function pipingdetail(Request $r){
+    return view('gosford.frontend.piping.detail');
    }
 
    //Pattern Design
