@@ -36,6 +36,8 @@ Route::prefix('g_system')->group(function (){
         // Route::get('/gosford/afterregister', 'afterregister')->name('gosford.afterregister');
         Route::post('/gosford/f/order_comfirmed', 'ordercomfirmedfront')->name('gosford.front.order_comfirmed');
 
+        Route::any('/gosford/f/finish', 'finishdesign')->name('gosford.finish.design');
+
 
 
     });

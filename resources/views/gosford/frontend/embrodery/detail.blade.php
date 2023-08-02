@@ -122,12 +122,14 @@
                                                     <h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM XXXX</h4>
                                                 </div>
                                                 <div style="display: flex;justify-content: space-between;">
-                                                    <a href="{{route('gosford.search')}}" style="padding: 0px 30px;" type="submit" class="mdl-button mdl-js-button mdl-button--raised btn-back" data-upgraded=",MaterialButton">
+                                                    <a href="{{route('gosford.embrodery')}}" style="padding: 0px 30px;" type="submit" class="mdl-button mdl-js-button mdl-button--raised btn-back" data-upgraded=",MaterialButton">
                                                         Back
                                                     </a>
-                                                    <button type="submit" style="padding: 0px 30px;" type="submit" class="mdl-button mdl-js-button mdl-button--raised color--gray" data-upgraded=",MaterialButton">
-                                                        Submit
-                                                    </button>
+                                                    <a href="{{ route('gosford.finish.design') }}" style="padding: 0px 30px;" type="submit"
+                                                    class="mdl-button mdl-js-button mdl-button--raised color--gray"
+                                                    data-upgraded=",MaterialButton">
+                                                    Submit
+                                                </a>
                                                 </div>
                                             </div>
                                             </form>

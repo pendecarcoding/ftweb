@@ -117,18 +117,14 @@
                                                                 XXXX</h4>
                                                         </div>
                                                         <div style="display: flex;justify-content: space-between;">
-                                                            <a href="{{ route('gosford.search') }}"
-                                                                style="padding: 0px 30px;" type="submit"
-                                                                class="mdl-button mdl-js-button mdl-button--raised btn-back"
-                                                                data-upgraded=",MaterialButton">
+                                                            <a href="{{route('gosford.emblem')}}" style="padding: 0px 30px;" type="submit" class="mdl-button mdl-js-button mdl-button--raised btn-back" data-upgraded=",MaterialButton">
                                                                 Back
                                                             </a>
-                                                            <button type="submit" style="padding: 0px 30px;"
-                                                                type="submit"
-                                                                class="mdl-button mdl-js-button mdl-button--raised color--gray"
-                                                                data-upgraded=",MaterialButton">
-                                                                Submit
-                                                            </button>
+                                                            <a href="{{ route('gosford.finish.design') }}" style="padding: 0px 30px;" type="submit"
+                                                            class="mdl-button mdl-js-button mdl-button--raised color--gray"
+                                                            data-upgraded=",MaterialButton">
+                                                            Submit
+                                                        </a>
                                                         </div>
                                                     </div>
                                                 </form>

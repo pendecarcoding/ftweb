@@ -34,7 +34,8 @@
                                                 <div style="display: flex;flex-direction: column; padding: 20px;">
                                                     <p>BMW 2 SERIES STANDARD BLACK</p>
                                                     <img style="height: 400px;" class="img-responsive"
-                                                        src="/public/go_system/images/twotowncolordetail.png" alt="">
+                                                        src="/public/go_system/images/twotowncolordetail.png"
+                                                        alt="">
 
 
                                                 </div>
@@ -71,17 +72,16 @@
                                                     SEAM SELECTION
                                                     <div style="display: flex;flex-direction: column;">
 
-                                                        <select
-                                                            style="font-weight: bold;color: #7C7979;"
+                                                        <select style="font-weight: bold;color: #7C7979;"
                                                             class="select-order mdl-textfield__input" type="text"
                                                             name="material" id="material" required>
-                                                                <option value="">SINGLE LINE</option>
-                                                                <option value="">DOUBLE LINE</option>
+                                                            <option value="">SINGLE LINE</option>
+                                                            <option value="">DOUBLE LINE</option>
                                                         </select>
                                                     </div>
 
 
-                                                     Color Option
+                                                    Color Option
                                                     <!--COLOR OPTION-->
                                                     <div style="display: flex;flex-direction: row;">
                                                         <div class="card-coloroption" style="background-color: #452E34;">
@@ -118,17 +118,18 @@
                                                                 XXXX</h4>
                                                         </div>
                                                         <div style="display: flex;justify-content: space-between;">
-                                                            <a href="{{ route('gosford.search') }}"
+                                                            <a href="{{ route('gosford.piping') }}"
                                                                 style="padding: 0px 30px;" type="submit"
                                                                 class="mdl-button mdl-js-button mdl-button--raised btn-back"
                                                                 data-upgraded=",MaterialButton">
                                                                 Back
                                                             </a>
-                                                            <button type="submit" style="padding: 0px 30px;" type="submit"
+                                                            <a href="{{ route('gosford.finish.design') }}"
+                                                                style="padding: 0px 30px;" type="submit"
                                                                 class="mdl-button mdl-js-button mdl-button--raised color--gray"
                                                                 data-upgraded=",MaterialButton">
                                                                 Submit
-                                                            </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -150,8 +151,8 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-            </div> -->
+                        <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                    </div> -->
 
     </main>
 
@@ -178,12 +179,12 @@
             // Make a request to the server using AJAX
             fetch('{{ route('gosford.front.getmodelfrommake', ['make' => '__carMake__']) }}'.replace('__carMake__',
                     carMake), {
-                        headers: {
-                            'X-CSRF-TOKEN': csrfToken,
-                            'Content-Type': 'application/json'
-                        },
-                        method: 'GET',
-                    })
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken,
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'GET',
+                })
                 .then(response => response.json())
                 .then(data => {
                     // Add car model options to the dropdown

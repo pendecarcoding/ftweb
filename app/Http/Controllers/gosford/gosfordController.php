@@ -385,4 +385,12 @@ class gosfordController extends Controller
     $data = GsystemOrder::join('products','products.id','gsystem_orders.product_id')->where('gsystem_orders.user_id',Session::get('id_account'))->get();
     return view('gosford.system.orderlist',compact('data'));
    }
+
+   function finishdesign(Request $r){
+
+            return view('gosford.frontend.finishdesign');
+
+
+
+   }
 }
