@@ -22,6 +22,10 @@
 
 
                         <div class="container">
+                            <center>
+                                <h5 style="color: black;font-weight: bold;">Piping</h5>
+                            </center>
+                            <br>
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="card towncard">
@@ -29,12 +33,16 @@
                                             <!-- Card content goes here -->
                                             <img style="width:100%" src="/public/go_system/images/piping.png"
                                                 alt="">
-                                                <div class="card-body d-flex flex-column">
+                                            <div class="card-body d-flex flex-column">
                                                 <p class="category-product">ALL CAR</p>
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
+                                            </div>
+                                            <a href="{{ route('gosford.piping.detail') }}">
+                                                <div class="choice-design">
+                                                    <center>Choose this design</center>
                                                 </div>
-                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -44,12 +52,16 @@
                                             <!-- Card content goes here -->
                                             <img style="width:100%" src="/public/go_system/images/piping.png"
                                                 alt="">
-                                                <div class="card-body d-flex flex-column">
+                                            <div class="card-body d-flex flex-column">
                                                 <p class="category-product">ALL CAR</p>
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
+                                            </div>
+                                            <a href="{{ route('gosford.piping.detail') }}">
+                                                <div class="choice-design">
+                                                    <center>Choose this design</center>
                                                 </div>
-                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -59,12 +71,16 @@
                                             <!-- Card content goes here -->
                                             <img style="width:100%" src="/public/go_system/images/piping.png"
                                                 alt="">
-                                                <div class="card-body d-flex flex-column">
+                                            <div class="card-body d-flex flex-column">
                                                 <p class="category-product">ALL CAR</p>
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
+                                            </div>
+                                            <a href="{{ route('gosford.piping.detail') }}">
+                                                <div class="choice-design">
+                                                    <center>Choose this design</center>
                                                 </div>
-                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -74,12 +90,16 @@
                                             <!-- Card content goes here -->
                                             <img style="width:100%" src="/public/go_system/images/piping.png"
                                                 alt="">
-                                                <div class="card-body d-flex flex-column">
+                                            <div class="card-body d-flex flex-column">
                                                 <p class="category-product">ALL CAR</p>
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
+                                            </div>
+                                            <a href="{{ route('gosford.piping.detail') }}">
+                                                <div class="choice-design">
+                                                    <center>Choose this design</center>
                                                 </div>
-                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -89,12 +109,16 @@
                                             <!-- Card content goes here -->
                                             <img style="width:100%" src="/public/go_system/images/piping.png"
                                                 alt="">
-                                                <div class="card-body d-flex flex-column">
+                                            <div class="card-body d-flex flex-column">
                                                 <p class="category-product">ALL CAR</p>
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
+                                            </div>
+                                            <a href="{{ route('gosford.piping.detail') }}">
+                                                <div class="choice-design">
+                                                    <center>Choose this design</center>
                                                 </div>
-                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -104,12 +128,16 @@
                                             <!-- Card content goes here -->
                                             <img style="width:100%" src="/public/go_system/images/piping.png"
                                                 alt="">
-                                                <div class="card-body d-flex flex-column">
+                                            <div class="card-body d-flex flex-column">
                                                 <p class="category-product">ALL CAR</p>
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
+                                            </div>
+                                            <a href="{{ route('gosford.piping.detail') }}">
+                                                <div class="choice-design">
+                                                    <center>Choose this design</center>
                                                 </div>
-                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -119,12 +147,16 @@
                                             <!-- Card content goes here -->
                                             <img style="width:100%" src="/public/go_system/images/piping.png"
                                                 alt="">
-                                                <div class="card-body d-flex flex-column">
+                                            <div class="card-body d-flex flex-column">
                                                 <p class="category-product">ALL CAR</p>
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
+                                            </div>
+                                            <a href="{{ route('gosford.piping.detail') }}">
+                                                <div class="choice-design">
+                                                    <center>Choose this design</center>
                                                 </div>
-                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -134,12 +166,16 @@
                                             <!-- Card content goes here -->
                                             <img style="width:100%" src="/public/go_system/images/piping.png"
                                                 alt="">
-                                                <div class="card-body d-flex flex-column">
+                                            <div class="card-body d-flex flex-column">
                                                 <p class="category-product">ALL CAR</p>
                                                 <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
                                                 <h6 class="price-product">RM3,250.00</h6>
+                                            </div>
+                                            <a href="{{ route('gosford.piping.detail') }}">
+                                                <div class="choice-design">
+                                                    <center>Choose this design</center>
                                                 </div>
-                                                <a href="{{route('gosford.piping.detail')}}"><div class="choice-design"><center>Choose this design</center></div></a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -154,8 +190,8 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-            </div> -->
+                        <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                    </div> -->
 
     </main>
 @endsection
