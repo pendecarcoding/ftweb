@@ -30,12 +30,11 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12">
                                         <div class="card">
-                                            <div class="slider-product">
-                                                <div style="display: flex;flex-direction: column; padding: 20px;">
-                                                    <p>A012-Nappa Leather</p>
-                                                    <img style="height: 400px;" class="img-responsive"
-                                                        src="/public/go_system/images/chair.png"
-                                                        alt="">
+                                            <div class="slider-product"
+                                                style="height: 550px;overflow: hidden;position: relative;">
+                                                <div style="display: flex;flex-direction: column;padding: 73px;align-items: center;">
+                                                    <img style="height: 400px;width: 400px;" class="img-responsive"
+                                                        src="/public/go_system/images/chair.png" alt="">
 
 
                                                 </div>
@@ -45,9 +44,9 @@
                                     </div>
                                     <div class="col-md-4 col-sm-12">
                                         <div class="card">
-                                            <div style="padding:20px;">
+                                            <div style="padding:20px;height: 550px;">
                                                 <div
-                                                    style="display: flex;flex-direction: row;justify-content: space-between;">
+                                                    style="display: flex;flex-direction: row;justify-content: space-between;margin: 0px 10%;">
                                                     <div style="display: flex;flex-direction: column;">
                                                         <h6 class="title-right-product">Make:</h6>
                                                         <p class="content-right-product"> BMW</p>
@@ -73,9 +72,12 @@
 
                                                     Step-1 | Choose Logo Position
                                                     <!--COLOR OPTION-->
-                                                    <div style="justify-content: space-between; display: flex;flex-direction: row;">
-                                                        <button type="button" class="btn btn-outline-secondary btn-sm">Upper Panel</button>
-                                                        <button type="button" class="btn btn-outline-danger btn-sm">Head Rest</button>
+                                                    <div
+                                                        style="justify-content: space-between; display: flex;flex-direction: row;">
+                                                        <button type="button"
+                                                            class="btn btn-outline-secondary btn-sm">Upper Panel</button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm">Head
+                                                            Rest</button>
                                                     </div>
 
                                                     <!--END COLOR OPTION-->
@@ -84,17 +86,16 @@
                                                     Step-2 | Upload Your Logo
 
                                                     <div style="display: flex;flex-direction: row;">
-                                                      <input type="file" class="from-control">
+                                                        <input type="file" class="from-control">
                                                     </div>
 
                                                     <!--END COLOR 2 OPTION-->
                                                     <br>
                                                     Step-3 | Seat Details
                                                     <p>Please select how many seats you want it adding to?</p>
-                                                    <select
-                                                    style="font-weight: bold;color: #7C7979;"
-                                                    class="select-order mdl-textfield__input" type="text"
-                                                    name="material" id="material" required>
+                                                    <select style="font-weight: bold;color: #7C7979;"
+                                                        class="select-order mdl-textfield__input" type="text"
+                                                        name="material" id="material" required>
 
                                                         <option value="">1</option>
                                                         <option value="">2</option>
@@ -105,7 +106,7 @@
                                                         <option value="">7</option>
                                                         <option value="">8</option>
 
-                                                </select>
+                                                    </select>
                                                     <div style="display: flex;flex-direction: column;">
                                                         <hr class="hr-product-detail">
                                                     </div>
@@ -117,14 +118,18 @@
                                                                 XXXX</h4>
                                                         </div>
                                                         <div style="display: flex;justify-content: space-between;">
-                                                            <a href="{{route('gosford.emblem')}}" style="padding: 0px 30px;" type="submit" class="mdl-button mdl-js-button mdl-button--raised btn-back" data-upgraded=",MaterialButton">
+                                                            <a href="{{ route('gosford.emblem') }}"
+                                                                style="padding: 0px 30px;" type="submit"
+                                                                class="mdl-button mdl-js-button mdl-button--raised btn-back"
+                                                                data-upgraded=",MaterialButton">
                                                                 Back
                                                             </a>
-                                                            <a href="{{ route('gosford.finish.design') }}" style="padding: 0px 30px;" type="submit"
-                                                            class="mdl-button mdl-js-button mdl-button--raised color--gray"
-                                                            data-upgraded=",MaterialButton">
-                                                            Submit
-                                                        </a>
+                                                            <a href="{{ route('gosford.finish.design') }}"
+                                                                style="padding: 0px 30px;" type="submit"
+                                                                class="mdl-button mdl-js-button mdl-button--raised color--gray"
+                                                                data-upgraded=",MaterialButton">
+                                                                Submit
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -146,8 +151,8 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                    <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-                </div> -->
+                                    <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                                </div> -->
 
     </main>
 

@@ -27,7 +27,7 @@
                                     <h5 style="color: black;font-weight: bold;">Two Tone Color</h5>
                                 </center>
                                 <br>
-                                <div class="row">
+                                <div class="row" style="height: 600px;">
                                     <div class="col-md-8 col-sm-12">
                                         <div class="card">
                                             <div class="slider-product">
@@ -46,7 +46,7 @@
                                         <div class="card">
                                             <div style="padding:20px;">
                                                 <div
-                                                    style="display: flex;flex-direction: row;justify-content: space-between;">
+                                                    style="display: flex;flex-direction: row;justify-content: space-between;margin: 10px 10%;">
                                                     <div style="display: flex;flex-direction: column;">
                                                         <h6 class="title-right-product">Make:</h6>
                                                         <p class="content-right-product"> BMW</p>
@@ -98,6 +98,7 @@
                                                     </div>
                                                     <!--END COLOR OPTION-->
                                                     <!--COLOR 2 Option-->
+                                                    <br>
                                                     Step-2 | Color Option
 
                                                     <div style="display: flex;flex-direction: row;">
@@ -138,6 +139,7 @@
                                                             <h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM
                                                                 XXXX</h4>
                                                         </div>
+                                                        <br>
                                                         <div style="display: flex;justify-content: space-between;">
                                                             <a href="{{ route('gosford.twotowncolor') }}"
                                                                 style="padding: 0px 30px;" type="submit"
