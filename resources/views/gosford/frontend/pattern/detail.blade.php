@@ -31,10 +31,11 @@
                                             <div class="slider-product">
                                                 <div style="display: flex;flex-direction: column; padding: 20px;">
                                                     <p>A012-Nappa Leather</p>
-                                                    <img style="height: 400px;" class="img-responsive" src="/public/go_system/images/pattern-design.png" alt="">
-
-
-                                                  </div>
+                                                    <div class="img-wraping">
+                                                        <img style="height: 400px;"src="/public/go_system/images/pattern-design.png" alt="">
+                                                        <img style="height: 400px;" class="leather-pattern" src="/public/go_system/images/patter1-noimage.png" alt="">
+                                                    </div>
+                                                    </div>
                                             </div>
 
                                         </div>
@@ -150,4 +151,5 @@
 
         </section>
     </main>
+    <script src="/public/go_system/js/pattern-design.js"></script>
 @endsection
