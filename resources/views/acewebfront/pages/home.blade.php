@@ -191,11 +191,11 @@
                         </div>
                         <div class="card-circle" data-aos="zoom-in-down"
                         data-aos-delay="800">
-                            <img  src="{{ static_asset('aceweb') }}/assets/img/circle2.png" alt="" />
+                            <img  src="{{ static_asset('aceweb') }}/assets/img/circle-g2.png" alt="" />
                         </div>
                         <div class="card-circle" data-aos="zoom-in-down"
                         data-aos-delay="900">
-                            <img  src="{{ static_asset('aceweb') }}/assets/img/circle3.png" alt="" />
+                            <img  src="{{ static_asset('aceweb') }}/assets/img/circle-g3.png" alt="" />
                         </div>
                         <div class="card-circle" data-aos="zoom-in-down"
                         data-aos-delay="1000">
@@ -232,7 +232,7 @@
                   <center>
                     <div class="col-sm-12" style="padding: 5px 0px;">
                     <center>
-                        <img  src="{{ static_asset('aceweb') }}/assets/img/circle2.png" alt="" />
+                        <img  src="{{ static_asset('aceweb') }}/assets/img/circle-g2.png" alt="" />
                     </center>
                     </div>
                   </center>
@@ -240,7 +240,7 @@
                   <center>
                     <div class="col-sm-12" style="padding: 5px 0px;">
                     <center>
-                        <img  src="{{ static_asset('aceweb') }}/assets/img/circle3.png" alt="" />
+                        <img  src="{{ static_asset('aceweb') }}/assets/img/circle-g3.png" alt="" />
                     </center>
                     </div>
                   </center>
