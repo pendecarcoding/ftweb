@@ -178,7 +178,7 @@
                 data-aos-delay="300" class="col-md-4">
                   <img
                       class="img-responsive circle-img-ace"
-                      src="{{ static_asset('aceweb') }}/assets/img/circle.png"
+                      src="{{ static_asset('aceweb') }}/assets/img/circle-main.png"
                       alt=""
                     />
 
