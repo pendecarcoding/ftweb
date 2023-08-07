@@ -31,7 +31,7 @@
                                             <div class="slider-product">
                                                 <div style="display: flex;flex-direction: column; padding: 20px;">
                                                     <p>A012-Nappa Leather</p>
-                                                    <div class="img-wraping">
+                                                    <div class="img-wraping-town">
                                                         <img style="height: 400px;"src="/public/go_system/images/twotowncolordetail.png" alt="">
                                                         <img style="height: 180px;" class="twon-color1" src="/public/go_system/images/twoncolor1.png" alt="">
                                                         <img style="height: 112px;" class="twon-color2" src="/public/go_system/images/twoncolor2.png" alt="">
