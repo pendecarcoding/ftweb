@@ -34,6 +34,27 @@ input[type=file]::file-selector-button {
     margin: 5px;
     height: 50px;
 }
+
+.card-coloroption:hover {
+    cursor: pointer;
+}
+
+.card-coloroption-one {
+    width: 100%;
+    margin: 5px;
+    height: 50px;
+}
+.card-coloroption-one:hover {
+    cursor: pointer;
+}
+.card-coloroption-two {
+    width: 100%;
+    margin: 5px;
+    height: 50px;
+}
+.card-coloroption-two:hover {
+    cursor: pointer;
+}
 .wrap-quantity{
     border: groove;
     border-radius: 11px;

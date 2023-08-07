@@ -7,6 +7,7 @@ html {
 }
 
 .img-wraping{
+    position: relative;
     margin: 35px 0px;
     width: 100%;
     height: 400px;
@@ -22,6 +23,14 @@ html {
     vertical-align: middle;
 }
 .leather-pattern{
+    mix-blend-mode: color;
+    /* background-color: #0088cc; */
+}
+.twon-color1{
+    mix-blend-mode: color;
+    /* background-color: #0088cc; */
+}
+.twon-color2{
     mix-blend-mode: color;
     /* background-color: #0088cc; */
 }
@@ -9286,6 +9295,21 @@ footer img {
         font-size: 26px;
         line-height: 30px;
     }
+}
+
+.twon-color1{
+    left: 0px;
+    top: 30px;
+    width: 100%;
+    height: 151px;
+    position: absolute;
+}
+.twon-color2 {
+    left: 0px;
+    bottom: 39px;
+    width: 100%;
+    height: 151px;
+    position: absolute;
 }
 
 
