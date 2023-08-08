@@ -38,7 +38,7 @@
                             <h2 class="company_h2">{{$v->name}}</h2>
                             {!! $v->content !!}
                         </div>
-                        <a style="margin:50px 0px;" class="btn gsf-button">Learn More</a>
+                        <!-- <a style="margin:50px 0px;" class="btn gsf-button">Learn More</a> -->
                     </div>
                   </div>
                   @endforeach
