@@ -31,7 +31,7 @@
                 @foreach($data as $i =>$v)
                 <div class="row" style=" @if($i == 0) background-color: rgba(242, 245, 249, 1); @endif padding: 50px;">
                     <div class="col-md-6">
-                        <img class="img-responsive" src="{{getimage($v->foto)}}" alt="">
+                        <img style="width: 100%;" class="img-responsive" src="{{getimage($v->foto)}}" alt="">
                     </div>
                     <div class="col-md-6 content_company">
                         <div style="">
