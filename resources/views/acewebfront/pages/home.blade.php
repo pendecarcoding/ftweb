@@ -299,7 +299,11 @@
                     class="content-about"
                   >
                     <p style="text-align: justify;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        We are the Malaysia’s number one manufacturer and installer of automotive
+leather and has been trusted by the automotive industry for over 20 years
+and are the official leather provider & fitter for Proton, Mazda, Perodua,Ford, Hyundai, Subaru and Kia. We pride ourselves in our extensive high quality products
+produced through our outstanding teamwork, creative passion, detailed hand craftsmanship
+and build pride into every product and appreciate our customers.
                     </p>
                   </div>
                 </div>
@@ -340,7 +344,16 @@
                   <h1>GSAP System
                     The All-in-One Platform</h1>
                 </div>
-                <div class="col-md-6 col-sm-6"></div>
+                <div class="col-md-6 col-sm-6">
+                    <p style="color:white;text-align: justify;">Our seat covers are made of top-notch materials, and our leather is
+                        imported from Southern America and Europe for the best leather quality.
+                        Leather type such as Catania Leather, Barracuda Leather and Nappa
+                        Leather. In addition to the tanneries' own specifications and inspection, we
+                        also conduct internal laboratory test when the leather reaches our facility.
+                        Stringent checks are conducted during all phases to make sure our customer
+                        receive the best quality from us. For ordering please enter our ordering system GSAP</p>
+
+                </div>
               </div>
               <div class="sticky-content">
                 <div id="gpt0"></div>
@@ -410,7 +423,7 @@
           </div>
         </div>
       </section>
-      <section id="gtp-patner-focused" class="gtp-patner" style="padding: 0px 0px;">
+      <section data-aos="fade-up" id="gtp-patner-focused" class="gtp-patner" style="padding: 0px 0px;">
         <div class="content-ace" >
           <div class="wrap-content">
             <div style="padding-top: 0px" class="about">

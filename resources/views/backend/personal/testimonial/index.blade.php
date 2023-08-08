@@ -50,7 +50,7 @@
                             <td>{{ $i + 1 }}</td>
                             <td><img style="width:30%" src="{{ asset('public/' . $v->file_name) }}"></td>
                             <td>{{ $v->person }}</td>
-                            <td>{!! $v->content !!}</td>
+                            <td>{{ strip_tags($v->content) }}</td>
                             <td>
                                 @can('edit_personaltestimonial')
                                     <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
