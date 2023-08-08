@@ -71,7 +71,7 @@ class AceController extends Controller
         $newest_products = Cache::remember('newest_products', 3600, function () {
             return filter_products(Product::latest())->limit(12)->get();
         });
-        $leadership  = Leadership::all();
+        $leadership  = Leadership::limit(4)->get();
         $achievement = Blog::select('blogs.id as id','blogs.title as title','blogs.slug as slug','blogs.short_description as short_description','blogs.description as description','blogs.banner as banner','uploads.file_name as file_name')->join('uploads','uploads.id','blogs.banner')->join('blog_categories','blog_categories.id','blogs.category_id')->where('status','1')->where('category_name','CORPORATE')->orderby('blogs.created_at','DESC')->get();
         $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','CORPORATE')->get();
         $testimonial =  Testimonial::select('testimonials.id as id','testimonials.person as person','testimonials.position as position','testimonials.content as content','uploads.file_name as file_name','testimonials.type as type')->join('uploads','uploads.id','testimonials.image')->where('testimonials.type','CO')->get();
