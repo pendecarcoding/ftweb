@@ -298,12 +298,12 @@
                     data-aos-delay="300"
                     class="content-about"
                   >
-                    <p style="text-align: justify;">
+                    <p style="text-align: justify;font-size:16px">
                         We are the Malaysia’s number one manufacturer and installer of automotive
-leather and has been trusted by the automotive industry for over 20 years
-and are the official leather provider & fitter for Proton, Mazda, Perodua,Ford, Hyundai, Subaru and Kia. We pride ourselves in our extensive high quality products
-produced through our outstanding teamwork, creative passion, detailed hand craftsmanship
-and build pride into every product and appreciate our customers.
+                        leather and has been trusted by the automotive industry for over 20 years
+                        and are the official leather provider & fitter for Proton, Mazda, Perodua,Ford, Hyundai, Subaru and Kia. We pride ourselves in our extensive high quality products
+                        produced through our outstanding teamwork, creative passion, detailed hand craftsmanship
+                        and build pride into every product and appreciate our customers.
                     </p>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ and build pride into every product and appreciate our customers.
                     The All-in-One Platform</h1>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300" class="col-md-6 col-sm-6">
-                    <p style="color:white;text-align: justify;">Our seat covers are made of top-notch materials, and our leather is
+                    <p style="color:white;text-align: justify;font-size:16px">Our seat covers are made of top-notch materials, and our leather is
                         imported from Southern America and Europe for the best leather quality.
                         Leather type such as Catania Leather, Barracuda Leather and Nappa
                         Leather. In addition to the tanneries' own specifications and inspection, we
@@ -374,7 +374,7 @@ and build pride into every product and appreciate our customers.
                             Supports both B2B &amp; B2C integration
                           </div>
 
-                          <div id="content-progress" style="color: white">
+                          <div id="content-progress" style="color: white;font-size:16px">
                             Our potential partners can create their own product
                             branding and launch their own digital gold program
                             with the help of our ready-made templates and API.
@@ -491,7 +491,7 @@ and build pride into every product and appreciate our customers.
                   <h1>Our best accomplishments</h1>
                 </div>
                 <div data-aos="fade-up" class="col-md-6 col-sm-6">
-                  <p style="text-align: justify;">
+                  <p style="text-align: justify;font-size:16px">
                     We proudly present the various recognitions for our digital
                     gold platform. Our outstanding achievements are based on
                     every team member's hard work and passion in providing
@@ -538,7 +538,7 @@ and build pride into every product and appreciate our customers.
                                                         <div class="hover-overlay"></div>
                                                         <div class="hover-1-content px-3 py-1">
                                                             <h3 class="hover-1-title font-weight-bold mb-0 py-3"> <span class="font-weight-light">{{ $v['title'] }}</span></h3>
-                                                            <p style="font-size: 1em;" class="hover-1-description font-weight-light mb-0">{{substr($description, 0, 70) . '...' }}<span><br><button onclick="window.location.href='{{url('news'.$v['slug'])}}';" class="btn-readnow-white">Read More</button></span></p>
+                                                            <p style="font-size:16px" class="hover-1-description font-weight-light mb-0">{{substr($description, 0, 70) . '...' }}<span><br><button onclick="window.location.href='{{url('news'.$v['slug'])}}';" class="btn-readnow-white">Read More</button></span></p>
 
                                                         </div>
                                                     </div>
@@ -792,7 +792,7 @@ and build pride into every product and appreciate our customers.
                 </div>
                 <div data-aos="fade-up" class="col-md-6 col-sm-12">
                   <h1>Partner with us and let's get started!</h1>
-                  <p>
+                  <p style="font-size:16px">
                     We take pride in helping our partners to achieve their goals by offering support and guidance. Be our partner today to gain a life-changing experience.
                   </p>
                   <div id="alertpatner" class="alert alert-warning alert-dismissible fade show" role="alert">
