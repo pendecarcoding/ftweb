@@ -184,12 +184,6 @@
     @include('acewebfront.fotter')
     <!--</div>-->
 
-    It seems like you are using a server-side template (possibly Laravel) to integrate the SweetAlert library into your application. However, there's a small correction needed in your code. When you're outputting dynamic content within a JavaScript string, make sure to properly escape and format it.
-
-    Here's the corrected version of your code:
-
-    html
-    Copy code
     @if (Session::has('wrongpassword'))
         <script>
             // Define a function to be executed when the page finishes loading
