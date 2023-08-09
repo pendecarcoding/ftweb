@@ -23,7 +23,9 @@ input[type=file]::file-selector-button {
     cursor: pointer;
     transition: background .2s ease-in-out;
   }
-
+  .mdl-menu__container .is-upgraded .is-visible{
+    top: 64px;
+  }
 
 .card
 .card-text{
@@ -7228,7 +7230,7 @@ a:hover{
 }
 .name-product{
     margin-bottom: 0px;
-    line-height: 0px;
+    line-height: 16px;
 }
 .category-product{
     color: #80808087;
