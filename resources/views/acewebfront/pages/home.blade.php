@@ -344,7 +344,7 @@ and build pride into every product and appreciate our customers.
                   <h1>GSAP System
                     The All-in-One Platform</h1>
                 </div>
-                <div class="col-md-6 col-sm-6">
+                <div data-aos="fade-up" data-aos-delay="300" class="col-md-6 col-sm-6">
                     <p style="color:white;text-align: justify;">Our seat covers are made of top-notch materials, and our leather is
                         imported from Southern America and Europe for the best leather quality.
                         Leather type such as Catania Leather, Barracuda Leather and Nappa
@@ -434,7 +434,7 @@ and build pride into every product and appreciate our customers.
                     <span class="h-dash" style="font-weight: bold">—</span>
                   </div>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="200" class="col-md-6 col-sm-6">
+                <div data-aos="fade-up" data-aos-delay="500" class="col-md-6 col-sm-6">
                   <h1>A trusted partner for over 300 businesses</h1>
                 </div>
                 <div id="mansory" class="col-md-6 col-sm-6 sticky-mansory">
