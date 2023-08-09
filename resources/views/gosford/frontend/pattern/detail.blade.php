@@ -107,9 +107,9 @@
                                             Step-3 | Quantity
                                             <!--end Quantity-->
                                             <div class="wrap-quantity">
-                                               <a class="btn" style="width:30%;border: groove;border-radius: 10px;">-</a>
-                                               <p style="margin:10px;font-weight: bold;">1</p>
-                                               <a class="btn" style="width:30%;border: groove;border-radius: 10px;">+</a>
+                                               <a class="btn decrease" style="width:30%;border: groove;border-radius: 10px;">-</a>
+                                               <p class="counter" style="margin:10px;font-weight: bold;">1</p>
+                                               <a class="btn increase" style="width:30%;border: groove;border-radius: 10px;">+</a>
                                             </div>
 
                                             <div style="display: flex;flex-direction: column;">
@@ -151,5 +151,26 @@
 
         </section>
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const decreaseButton = document.querySelector(".decrease");
+            const increaseButton = document.querySelector(".increase");
+            const counterElement = document.querySelector(".counter");
+
+            let counterValue = 1;
+
+            decreaseButton.addEventListener("click", function() {
+                if (counterValue > 1) {
+                    counterValue--;
+                    counterElement.textContent = counterValue;
+                }
+            });
+
+            increaseButton.addEventListener("click", function() {
+                counterValue++;
+                counterElement.textContent = counterValue;
+            });
+        });
+        </script>
     <script src="/public/go_system/js/pattern-design.js"></script>
 @endsection
