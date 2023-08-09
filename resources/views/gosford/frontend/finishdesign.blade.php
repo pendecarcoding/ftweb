@@ -66,7 +66,7 @@
 
                 <div class="col-sm-6 col-md-2  d-flex ">
 
-                    <a href="https://gli.test/g_system/gosford/f/twotowncolor" class="card  card-body border-light  justify-content-between text-white shadow">
+                    <a href="{{url('g_system/gosford/f/twotowncolor')}}" class="card  card-body border-light  justify-content-between text-white shadow">
                         <!-- <a >  -->
                         <img src="/public/go_system/images/menu/menu_1.png" alt="">
                         <!-- </a> -->
@@ -75,25 +75,25 @@
 
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="https://gli.test/g_system/gosford/f/embrodery" class="card  card-body border-light  justify-content-between  text-white shadow">
+                    <a href="{{url('g_system/gosford/f/embrodery')}}" class="card  card-body border-light  justify-content-between  text-white shadow">
                         <img src="/public/go_system/images/menu/menu_2.png" alt="">
                         <div class="title-menu-style">Embrodery</div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="https://gli.test/g_system/gosford/f/patterndesign" class="card  card-body border-light  justify-content-between  text-white shadow">
+                    <a href="{{url('g_system/gosford/f/patterndesign')}}" class="card  card-body border-light  justify-content-between  text-white shadow">
                         <img src="/public/go_system/images/menu/menu_3.png" alt="">
                         <div class="title-menu-style">Pattern Design</div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="https://gli.test/g_system/gosford/f/piping" class="card  card-body border-light  justify-content-between  text-white shadow">
+                    <a href="{{url('g_system/gosford/f/piping')}}" class="card  card-body border-light  justify-content-between  text-white shadow">
                         <img src="/public/go_system/images/menu/menu_4.png" alt="">
                         <div class="title-menu-style">Piping</div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="https://gli.test/g_system/gosford/f/emblem" class="card  card-body border-light  justify-content-between  text-white shadow">
+                    <a href="{{url('g_system/gosford/f/emblem')}}" class="card  card-body border-light  justify-content-between  text-white shadow">
                         <img src="/public/go_system/images/menu/menu_5.png" alt="">
                         <div class="title-menu-style">Logo / Emblem</div>
                     </a>
@@ -104,7 +104,7 @@
             <br>
             <center>
 
-                <a href="{{route('gosford.front.choice_design')}}" style="padding: 0px 30px;" type="submit" class="mdl-button mdl-js-button mdl-button--raised color--gray" data-upgraded=",MaterialButton">
+                <a href="{{url('product_project')}}" style="padding: 0px 30px;" type="submit" class="mdl-button mdl-js-button mdl-button--raised color--gray" data-upgraded=",MaterialButton">
                     Done
                 </a>
 
