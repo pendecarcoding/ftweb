@@ -184,6 +184,30 @@
     @include('acewebfront.fotter')
     <!--</div>-->
 
+    It seems like you are using a server-side template (possibly Laravel) to integrate the SweetAlert library into your application. However, there's a small correction needed in your code. When you're outputting dynamic content within a JavaScript string, make sure to properly escape and format it.
+
+    Here's the corrected version of your code:
+
+    html
+    Copy code
+    @if (Session::has('wrongpassword'))
+        <script>
+            // Define a function to be executed when the page finishes loading
+            function pageLoaded() {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Info Login',
+                    text: '{{ Session::get('wrongpassword') }}', // Corrected line
+                });
+
+                // You can add your code here that should run after the page loads
+            }
+
+            // Attach the 'pageLoaded' function to the onload event of the 'window' object
+            window.onload = pageLoaded;
+        </script>
+    @endif
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         const canvas = document.getElementById("hero-lightpass");

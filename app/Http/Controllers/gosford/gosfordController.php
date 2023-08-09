@@ -125,10 +125,10 @@ class gosfordController extends Controller
 
             } else {
                 // The hashed value does not match the plain text
-                return back()->with('danger','Your password is wrong. make sure you enter the correct password');
+                return back()->with('wrongpassword','Your password is wrong. make sure you enter the correct password');
             }
         }else{
-            return back()->with('danger','Account not found !');
+            return back()->with('wrongpassword','Account not found !');
         }
 
     } catch (\Throwable $th) {
