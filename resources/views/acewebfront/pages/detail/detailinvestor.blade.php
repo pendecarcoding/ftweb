@@ -3,14 +3,12 @@
 @section('title', $data->title)
 <main>
     <section class="ace-investor">
-        <div data-aos="fade-up" class="aos-init aos-animate">
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner"
-                        src="/public/aceweb/assets/img/newsroom-banner.jpg" alt="">
-                </div>
-            </div>
+
+        <div class="banner-static">
+            <img class="img-responsive-banner newsroom-banner" src="/public/aceweb/assets/img/newsroom-banner.png"
+                alt="ACE-BANNER-NEWSROOM" />
         </div>
+
     </section>
     <section style="margin-top: 2vh;" class="gtp-anouncements">
         <div class="content-ace">

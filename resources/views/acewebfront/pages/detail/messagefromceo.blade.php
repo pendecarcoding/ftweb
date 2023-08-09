@@ -6,13 +6,12 @@
 @section('title', $data->title)
 <main>
     <section class="ace-investor">
-        <div data-aos="fade-up" class="aos-init aos-animate">
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/ceo-banner.png" alt="">
-                </div>
-            </div>
+
+        <div class="banner-static">
+            <img class="img-responsive-banner newsroom-banner" src="/public/aceweb/assets/img/ceo-banner.png"
+                alt="ACE-BANNER-NEWSROOM" />
         </div>
+
     </section>
     <section style="margin-top: 2vh;" class="gtp-anouncements">
         <div class="content-ace">
@@ -23,8 +22,8 @@
                             <div class="col-md-12 col-sm-12 col-lg-12">
                                 <div class="title-ace">
                                     ABOUT &gt; COMPANIES
-                                      <span class="h-dash" style="font-weight: bold">—</span>
-                                    </div>
+                                    <span class="h-dash" style="font-weight: bold">—</span>
+                                </div>
                                 <h1>{{ $data->title }}</h1>
 
 
