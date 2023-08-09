@@ -21,7 +21,7 @@
             <div class="col-md-3 col-sm-12 col-lg-3">
               <div class="investor-number">
 
-                <table data-aos="fade-up" data-aos-delay="300" class="stock-price-investor">
+                <table  class="stock-price-investor">
                   <thead>
                     <tr>
                       <th class="text-center"><div class="title-price-investor">Stock Price (Real Time)</div></center></th>
@@ -39,7 +39,7 @@
                   </tbody>
                 </table>
 
-                <table data-aos="fade-up" data-aos-delay="400" class="stock-change-investor">
+                <table  class="stock-change-investor">
                   <tbody>
                      <tr>
                         <td class="text-center" valign="top" style="padding-top: 20px;padding-left: 20px;padding-right: 20px;">
@@ -186,7 +186,7 @@
                   <h1 data-aos="fade-up" class="aos-init aos-animate">Investing in Feytech</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                  <p style="text-align: justify;font-size: 16px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
               </div>
               <div style="margin-top: 50px">
@@ -200,7 +200,7 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p style="text-align: justify;font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
                 </div>
@@ -216,7 +216,7 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p style="text-align: justify;font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
                 </div>
@@ -232,7 +232,7 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p style="text-align: justify;font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
                 </div>
@@ -256,7 +256,7 @@
                   <h1 data-aos="fade-up" class="aos-init aos-animate">2023 key performance stats</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                  <p style="text-align: justify;font-size: 16px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
               </div>
               <div style="margin: 100px 0px;">
@@ -326,7 +326,7 @@
 
                       </div>
                       <!-- <div style="margin-right: 50px">{{ $datean[0] }}</div> -->
-                      <div>
+                      <div style="text-align: justify;font-size: 16px;">
                         {{ $v->title }}
                       </div>
                     </div>
@@ -412,7 +412,7 @@
                             @endphp
 
 
-                            <a href="{{ asset('public/download').'/'.$v['file'] }}" target="_blank" class="ace-button-blue"
+                            <a  href="{{ asset('public/download').'/'.$v['file'] }}" target="_blank" class="ace-button-blue"
                               ><i class="fa fa-download"></i> {{ $v['namefile'] }}</a
                             >
                             @php

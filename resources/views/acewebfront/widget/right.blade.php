@@ -30,7 +30,7 @@
                           </div>
                           <div class="dlab-post-header">
                             <h6 class="post-title">
-                              <a
+                              <a style="color:black"
                                 href="{{ url('newsroom/'.$v->slug) }}"
                                 >{{ $v->title }}</a
                               >
