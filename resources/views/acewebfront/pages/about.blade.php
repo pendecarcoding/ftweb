@@ -29,14 +29,14 @@
 
               <div style="margin:30px 0px;">
                 @foreach($data as $i =>$v)
-                <div class="row" style=" @if($i == 0) background-color: rgba(242, 245, 249, 1); @endif padding: 50px;">
+                <div data-aos="fade-up" class="row" style=" @if($i == 0) background-color: rgba(242, 245, 249, 1); @endif padding: 50px;">
                     <div class="col-md-6">
                         <img style="width: 100%;" class="img-responsive" src="{{getimage($v->foto)}}" alt="">
                     </div>
                     <div class="col-md-6 content_company">
                         <div style="">
                             <h2 class="company_h2">{{$v->name}}</h2>
-                            {!! $v->content !!}
+                            <p style="text-align: justify;font-size: 16px;">{!! $v->content !!}</p>
                         </div>
                         <!-- <a style="margin:50px 0px;" class="btn gsf-button">Learn More</a> -->
                     </div>
