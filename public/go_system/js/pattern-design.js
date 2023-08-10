@@ -1,10 +1,11 @@
-let leather = document.querySelector('.leather-pattern');
-let color   =  document.querySelectorAll('.card-coloroption');
+let leatherPatterns = document.querySelectorAll('.leather-pattern');
+let colorOptions = document.querySelectorAll('.card-coloroption');
 
-        for (let i = 0; i < color.length; i++) {
-            color[i].addEventListener('click',()=>{
-                let coloroption = window.getComputedStyle(color[i]).backgroundColor;
-                leather.style.background = coloroption;
-            })
-
-        }
+for (let i = 0; i < colorOptions.length; i++) {
+    colorOptions[i].addEventListener('click', () => {
+        let colorOption = window.getComputedStyle(colorOptions[i]).backgroundColor;
+        leatherPatterns.forEach((leather) => {
+            leather.style.background = colorOption;
+        });
+    });
+}
