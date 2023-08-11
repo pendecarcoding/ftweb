@@ -223,14 +223,16 @@
               <div  class="row img-structure-mobile">
                 <div class="col-sm-12">
                   <center>
-                    <div class="col-sm-12" style="padding: 5px 0px;">
+                    <div data-aos="fade-up"
+                    data-aos-delay="400" class="col-sm-12" style="padding: 5px 0px;">
                     <center>
                         <img  src="{{ static_asset('aceweb') }}/assets/img/circle1.png" alt="" />
                     </center>
                     </div>
                   </center>
                   <center>
-                    <div class="col-sm-12" style="padding: 5px 0px;">
+                    <div data-aos="fade-up"
+                    data-aos-delay="500" class="col-sm-12" style="padding: 5px 0px;">
                     <center>
                         <img  src="{{ static_asset('aceweb') }}/assets/img/circle-g2.png" alt="" />
                     </center>
@@ -238,7 +240,8 @@
                   </center>
 
                   <center>
-                    <div class="col-sm-12" style="padding: 5px 0px;">
+                    <div data-aos="fade-up"
+                    data-aos-delay="600" class="col-sm-12" style="padding: 5px 0px;">
                     <center>
                         <img  src="{{ static_asset('aceweb') }}/assets/img/trimex.svg" alt="" />
                     </center>
@@ -246,14 +249,16 @@
                   </center>
 
                   <center>
-                    <div class="col-sm-12" style="padding: 5px 0px;">
+                    <div data-aos="fade-up"
+                    data-aos-delay="700" class="col-sm-12" style="padding: 5px 0px;">
                     <center>
                         <img  src="{{ static_asset('aceweb') }}/assets/img/circle4.png" alt="" />
                     </center>
                     </div>
                   </center>
                   <center>
-                    <div class="col-sm-12" style="padding: 5px 0px;">
+                    <div data-aos="fade-up"
+                    data-aos-delay="800" class="col-sm-12" style="padding: 5px 0px;">
                     <center>
                         <img  src="{{ static_asset('aceweb') }}/assets/img/circle5.png" alt="" />
                     </center>
@@ -267,7 +272,8 @@
 
 
               </div>
-              <div class="col-md-12">
+              <div data-aos="fade-up"
+              data-aos-delay="900" class="col-md-12">
                 <center><a href="{{url('about')}}" class="btn ace-button" style="padding: 10px 20px;color:rgba(41, 49, 136, 1);border-color: rgba(41, 49, 136, 1);">About Us</a></center>
               </div>
             </div>

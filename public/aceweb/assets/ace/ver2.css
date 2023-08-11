@@ -2877,12 +2877,13 @@
         font-size: 0.9em;
     }
     .acetopbar {
-        height: 150px;
+        height: 51px;
     }
-    .ace-sliders {
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
+    .ace-sliders .carousel {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        margin-bottom: 4rem;
     }
     .slider-banner {
         width: 100%;
