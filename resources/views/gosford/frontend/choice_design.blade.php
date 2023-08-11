@@ -4,8 +4,8 @@
 @endsection
 @section('content')
     <main>
-        <section style="height: 550px;">
-            <img class="img-responsive" style="height: 550px;position: absolute;top: 0;width:100%"
+        <section class="banner-car">
+            <img class="img-responsive"
                 src="{{ getimage($car->image) }}" alt="ACE-BANNER-PRODUCT" />
         </section>
 
@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div style="text-align: justify;margin:10px 50px;">We are delighted to present our latest
+                        <div class="description-service">We are delighted to present our latest
                             masterpiece to you – high-quality automotive leather. This copy will showcase the true charm of
                             this exquisite creation.
                             Designed exclusively for car owners, our top-tier leather embodies our unwavering commitment to

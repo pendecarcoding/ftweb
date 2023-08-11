@@ -10,7 +10,7 @@
                     alt=""
                 />
   </section>
-      <section style="padding: 50px 0px;" class="gtp-anouncements">
+      <section class="gtp-anouncements about-company">
         <div class="content-ace">
           <div class="wrap-content">
             <div style="padding-top: 0px" class="ace-isi about">
@@ -29,7 +29,7 @@
 
               <div style="margin:30px 0px;">
                 @foreach($data as $i =>$v)
-                <div data-aos="fade-up" class="row" style=" @if($i == 0) background-color: rgba(242, 245, 249, 1); @endif padding: 50px;">
+                <div data-aos="fade-up" class="row about-company" style=" @if($i == 0) background-color: rgba(242, 245, 249, 1); @endif">
                     <div class="col-md-6">
                         <img style="width: 100%;" class="img-responsive" src="{{getimage($v->foto)}}" alt="">
                     </div>

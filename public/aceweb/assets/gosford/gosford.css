@@ -405,6 +405,9 @@ ul {
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased
 }
+.about-company{
+    padding: 50px 0px;
+}
 
 .mdl-badge[data-badge]:after,
 .mdl-button,
@@ -4539,7 +4542,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
     border: none;
     min-height: 64px;
     max-height: 1000px;
-    z-index: 3;
+    z-index: 999;
     background-color: transparent;
     color: #00bcd4;
     transition-property: max-height, box-shadow
@@ -10173,8 +10176,44 @@ form.form--basic .mdl-textfield__label {
     font-weight: bold;
     font-size: 35px;
 }
-
+.banner-car{
+    height: 550px;
+}
+.banner-car img{
+    height: 550px;
+    position: absolute;
+    top: 0;width:100%
+}
+.description-service{
+    text-align: justify;
+    margin: 10px 50px;
+}
 @media screen and (max-width:500px){
+    .description-service{
+        text-align: justify;
+        margin: 10px 1px;
+        height: 200px;
+        overflow: auto;
+    }
+    .banner-car{
+        height: 200px;
+    }
+    .banner-car img{
+        height: 200px;
+    }
+    .ace-investor {
+        height: 200px;
+    }
+    .banner-static {
+        height: 200px;
+        position: relative;
+    }
+    .img-responsive-banner {
+        height: 200px;
+    }
+    .about-company{
+        padding: 24px 0px;
+    }
     #title-progress{
         font-size: 19px;
     }
