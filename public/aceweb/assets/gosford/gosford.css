@@ -10175,6 +10175,12 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:500px){
+    #title-progress{
+        font-size: 19px;
+    }
+    #to-progress{
+        font-size: 19px;
+    }
     .slider-testimonials {
         display: flex;
         flex-wrap: wrap;
@@ -10290,7 +10296,7 @@ form.form--basic .mdl-textfield__label {
         font-size: 1.5rem;
     }
     .ace-sliders {
-        max-height: 210px;
+        max-height: 270px;
     }
     .mdl-layout__header-row {
         height: 40px;
