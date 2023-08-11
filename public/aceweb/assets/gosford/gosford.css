@@ -10252,6 +10252,15 @@ form.form--basic .mdl-textfield__label {
     #row-desktop-structure img{
         width:100%;
     }
+    #row-desktop-structure {
+        padding: 13px 0px;
+    }
+    .about h1 {
+        text-align: center;
+    }
+    .title-ace {
+        text-align: center;
+    }
     #hello{
         display: none;
     }
@@ -10294,6 +10303,12 @@ form.form--basic .mdl-textfield__label {
     .about h1 {
         font-weight: bold;
         font-size: 1.5rem;
+    }
+    .form-group {
+        margin: 20px 0px;
+    }
+    .ace-button-black {
+        width: 100%;
     }
     .ace-sliders {
         max-height: 270px;
