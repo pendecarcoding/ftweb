@@ -10175,6 +10175,12 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:500px){
+    .ace-achievements{
+        display: none;
+    }
+    header{
+        position: fixed;
+    }
     .notifications-dropdown.mdl-list {
         width: 100%;
     }
