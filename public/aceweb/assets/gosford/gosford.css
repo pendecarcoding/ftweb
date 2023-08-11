@@ -10175,6 +10175,36 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:500px){
+    #desktop-counter h1 {
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+    .about-ace {
+        padding: 29px 0px;
+        position: relative;
+        background-color: white;
+    }
+    .ace-sliders .carousel {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0rem;
+    }
+    section.ace-sliders img {
+        height: 267px;
+    }
+    .company-ace {
+        padding: 29px 0px;
+        height: auto;
+    }
+    .about-provider {
+        padding: 29px 0px;
+        position: relative;
+        height: auto;
+    }
+    #row-desktop-structure{
+        display: none;
+    }
     #hello{
         display: none;
     }
@@ -10218,7 +10248,7 @@ form.form--basic .mdl-textfield__label {
         font-size: 1.5rem;
     }
     .ace-sliders {
-        max-height: 184px;
+        max-height: 210px;
     }
     .mdl-layout__header-row {
         height: 40px;

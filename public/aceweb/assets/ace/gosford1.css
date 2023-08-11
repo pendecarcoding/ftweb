@@ -3021,9 +3021,7 @@ footer img {
     body{
         overflow-x: hidden;
     }
-    #row-desktop-structure{
-        display: none;
-    }
+
     .gtp-solution {
         padding: 29px 0px;
         background-color: #306390;
@@ -4467,9 +4465,7 @@ footer img {
         font-size: 5vw;
     }
 
-    .about-provider {
-        height: 396px;
-    }
+
 
     .about-provider .carousel {
         position: absolute;
