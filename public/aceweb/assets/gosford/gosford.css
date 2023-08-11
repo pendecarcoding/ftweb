@@ -4455,7 +4455,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
 }
 
 .mdl-layout__drawer-button {
-    display: block;
+    display: none;
     position: absolute;
     height: 64px;
     width: 250px;
@@ -4469,7 +4469,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
     font-family: Helvetica, Arial, sans-serif;
     /* margin: 8px 12px; */
     top: 0;
-    left: 0;
+    /* left: 0; */
     color: #00bcd4;
     z-index: 4;
 }
@@ -10178,12 +10178,27 @@ form.form--basic .mdl-textfield__label {
     #hello{
         display: none;
     }
+    #loginweb {
+        display: none;
+    }
+    .mdl-layout__drawer-button {
+        display: block;
+        top: -6px;
+        right: 0;
+        height: 40px;
+
+    }
+    .mdl-layout__header .mdl-layout__drawer-button {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
     .rounded-circle {
         height: 100px;
         width: 100px;
     }
     .acetopbar {
-        left: 0px;
+        left: 9px;
         top: 8px;
         z-index: 998;
         position: absolute;

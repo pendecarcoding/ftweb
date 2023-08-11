@@ -1,5 +1,5 @@
 <header class="mdl-layout__header is-casting-shadow">
-    <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button">
+    <div aria-expanded="false" role="button" tabindex="0" class="">
         <a href="{{ route('home') }}"><img id="acetopbar" class="acetopbar"
             src="{{ uploaded_asset(get_setting('system_logo_white')) }}" /></a>
     </div>
@@ -77,10 +77,11 @@
             </a>
         </ul>
         @else
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="ace-button">
+        <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="ace-button">
             Login GSAP
         </a>
         @endif
+        <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>
     </div>
 
     </div>
