@@ -7232,6 +7232,46 @@ a:hover{
     margin-bottom: 0px;
     line-height: 16px;
 }
+
+
+/*
+Credits:
+https://github.com/marcaube/bootstrap-magnify
+*/
+
+.mag {
+    width:200px;
+    margin: 0 auto;
+    float: none;
+}
+
+.mag img {
+    max-width: 100%;
+}
+
+
+
+.magnify {
+    position: relative;
+    cursor: none
+}
+
+.magnify-large {
+    position: absolute;
+    display: none;
+    width: 175px;
+    height: 175px;
+
+    -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+       -moz-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+
+    -webkit-border-radius: 100%;
+       -moz-border-radius: 100%;
+             border-radius: 100%
+}
+
+
 .category-product{
     color: #80808087;
     font-weight: bold;
@@ -10143,12 +10183,15 @@ form.form--basic .mdl-textfield__label {
         width: 100px;
     }
     .acetopbar {
-        left: 10px;
-        top: 20px;
+        left: 0px;
+        top: 8px;
         z-index: 998;
         position: absolute;
-        width: 37px;
+        width: 76px;
         height: 25px;
+    }
+    .class_menu_black {
+        height: 40px;
     }
     .mdl-layout__header-row .classurl {
         display: none;
@@ -10163,7 +10206,7 @@ form.form--basic .mdl-textfield__label {
         max-height: 184px;
     }
     .mdl-layout__header-row {
-        height: 64px;
+        height: 40px;
         background: #333333;
     }
     .container-go {
