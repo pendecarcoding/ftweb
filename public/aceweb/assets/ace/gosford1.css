@@ -2780,6 +2780,7 @@ footer img {
     left: 20px;
     top: 8px;
     z-index: 998;
+    background-color: white;
     position: absolute;
     width: 150px;
     height: 170px;
