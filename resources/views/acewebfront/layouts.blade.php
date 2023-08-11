@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="description" content="" />
-    <meta name="theme-color" content="#264e77" />
+    <meta name="theme-color" content="#333333" />
 
     <meta name="generator" content="Hugo 0.104.2" />
     <link rel="icon" href="{{ uploaded_asset(get_setting('system_logo_white')) }}">
@@ -87,6 +87,8 @@
             gtag('config', '{{ env('TRACKING_ID') }}');
         </script>
     @endif
+
+
 </head>
 
 <body>
