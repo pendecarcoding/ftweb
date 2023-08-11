@@ -10175,6 +10175,15 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:500px){
+    .notifications-dropdown.mdl-list {
+        width: 100%;
+    }
+    .mdl-menu {
+        min-width: 0;
+    }
+    .mdl-list__item{
+        padding: 0px;
+    }
     #desktop-counter h1 {
         font-weight: bold;
         font-size: 2.5rem;
