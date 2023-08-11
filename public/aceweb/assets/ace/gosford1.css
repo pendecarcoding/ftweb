@@ -3946,9 +3946,7 @@ footer img {
 
 
 @media screen and (min-width: 400px) and (max-width: 500px) {
-    .gtp-solution {
-        background-color: #306390;
-    }
+
     .mb-4 {
         margin-bottom: 0.5rem !important;
     }
@@ -4109,9 +4107,7 @@ footer img {
         height: 17vh;
     }
 
-    #ace-testimonials-mobile {
-        display: block;
-    }
+
 
     #ace-testimonials-desktop {
         display: none;
@@ -4142,13 +4138,7 @@ footer img {
         padding-bottom: 0rem;
     }
 
-    .gtp-po-button {
-        position: absolute;
-        right: 0;
-        bottom: 2%;
-        left: 0;
-        margin-top: 2px;
-    }
+
 
     .title-banner-personal {
         width: 65%;

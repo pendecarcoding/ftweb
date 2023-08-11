@@ -7,7 +7,7 @@
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
  <main>
 
-      <section class="ace-sliders">
+      <section  class="ace-sliders">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             @php
@@ -220,7 +220,7 @@
                 <img style="width:100%" src="{{ static_asset('aceweb') }}/assets/img/structure.png" alt="">
               </div> -->
 
-              <div style="margin:20px 0px" class="row img-structure-mobile">
+              <div  class="row img-structure-mobile">
                 <div class="col-sm-12">
                   <center>
                     <div class="col-sm-12" style="padding: 5px 0px;">
@@ -641,12 +641,12 @@
                     data-bs-ride="carousel"
                   >
                 <div class="carousel-inner">
-                    <div style="margin-left:10%;margin-right:15%">
+                    <div>
                     @foreach($testimonial as $i => $v)
                       <div class="carousel-item @if($i==0) active @endif">
                         <div class="row slider-testimonials">
-                          <div class="col-md-7 col-sm-7">
-                            <p>
+                          <div class="col-md-7 col-sm-12">
+                            <p style="margin-top:20px">
                               {!! $v->content !!}
                             </p>
                             <hr
@@ -659,7 +659,7 @@
                             <h5>{{ $v->person }}</h5>
                             <p>{{ $v->position }}</p>
                           </div>
-                          <div class="col-md-5 col-sm-5">
+                          <div class="col-md-5 col-sm-12">
                             <div class="card">
                               <img
                                 style="float:right;width:100%"

@@ -10175,6 +10175,29 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:500px){
+    .slider-testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        border: none;
+        width: 100%;
+        background-color: white;
+    }
+    .ace-conected {
+        padding: 29px 0px;
+        height: auto;
+        position: relative;
+        background-color: #f6fdff;
+    }
+    .gtp-solution {
+        padding: 29px 0px;
+        background-color: #306390;
+    }
+    #ace-testimonials-mobile {
+        /* padding: 20px 0px; */
+        display: block;
+        padding: 29px 0px;
+    }
     .ace-achievements{
         display: none;
     }
@@ -10217,8 +10240,11 @@ form.form--basic .mdl-textfield__label {
         position: relative;
         height: auto;
     }
-    #row-desktop-structure{
+    .circle-row{
         display: none;
+    }
+    #row-desktop-structure img{
+        width:100%;
     }
     #hello{
         display: none;
@@ -10243,8 +10269,9 @@ form.form--basic .mdl-textfield__label {
         width: 100px;
     }
     .acetopbar {
+        background: white;
         left: 9px;
-        top: 8px;
+        top: 6px;
         z-index: 998;
         position: absolute;
         width: 76px;
