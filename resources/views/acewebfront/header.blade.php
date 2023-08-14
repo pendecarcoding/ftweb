@@ -28,7 +28,7 @@
         </ul>
         @else
         <a  href="{{ url($v['link']) }}"
-        class="classurl @if (Request::is($v['link'] . '*')) classurl-active @endif">{{ $v['name'] }}</a>
+        class="classurl @if($v['name']=='Product & Project') @if (Request::is('g_system/*')) classurl-active @endif"   @endif @if (Request::is($v['link'] . '*')) classurl-active @endif">{{ $v['name'] }}</a>
 
         @endif
         @endforeach
