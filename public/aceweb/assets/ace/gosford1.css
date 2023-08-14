@@ -4570,6 +4570,9 @@ footer img {
     #ace-investor-banner-mobile {
         display: block;
     }
+    .row-personal {
+        position: relative;
+    }
 
     #ace-investor-banner-desktop {
         display: none;
