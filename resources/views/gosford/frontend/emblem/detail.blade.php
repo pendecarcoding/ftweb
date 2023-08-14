@@ -29,18 +29,36 @@
                                 <br>
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12">
+                                        <div style="position: relative;">
                                         <div class="card">
                                             <div class="slider-product"
                                                 style="height: 550px;overflow: hidden;position: relative;">
                                                 <div style="display: flex;flex-direction: column;padding: 73px;align-items: center;">
-                                                    <img style="height: 400px;width: 400px;" class="img-responsive"
-                                                        src="/public/go_system/images/chair.png" alt="">
+                                                    <img id="uploadedImage" style="height: 400px;width: 400px;" class="img-responsive"
+                                                        src="" alt="">
 
+
+
+                                                        <div class="control top-left"></div>
+        <div class="control top-right"></div>
+        <div class="control bottom-left"></div>
+        <div class="control bottom-right"></div>
 
                                                 </div>
+
                                             </div>
 
                                         </div>
+                                        <div style="top: 20px;
+                                            right: 20px;display: flex;flex-direction: column;width:50px;position: absolute;">
+                                            <button class="btn btn-danger" id="zoomButton" style="margin-top: 10px;"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                            <button  class="btn btn-danger" id="zoomoutButton" style="margin-top: 10px;"><i class="fa fa-search-minus" aria-hidden="true"></i></button>
+                                            <button class="btn btn-danger" id="moveUpButton" style="margin-top: 10px;"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+                                            <button class="btn btn-danger" id="moveDownButton" style="margin-top: 10px;"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                                            <button class="btn btn-danger" id="moveLeftButton" style="margin-top: 10px;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                                            <button class="btn btn-danger" id="moveRightButton" style="margin-top: 10px;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
                                     </div>
                                     <div class="col-md-4 col-sm-12">
                                         <div class="card">
@@ -86,7 +104,7 @@
                                                     Step-2 | Upload Your Logo
 
                                                     <div style="display: flex;flex-direction: row;">
-                                                        <input type="file" class="from-control">
+                                                        <input id="stickerUpload" type="file" class="from-control">
                                                     </div>
 
                                                     <!--END COLOR 2 OPTION-->
@@ -157,102 +175,242 @@
     </main>
 
     <script>
-        function updateCarModels() {
-            // Get selected car make
-            const carMakeSelect = document.getElementById('carMakeSelect');
-            const selectedCarMake = carMakeSelect.value;
+        const uploadedImage = document.getElementById('uploadedImage');
+        const zoomButton = document.getElementById('zoomButton');
+        const zoomoutButton = document.getElementById('zoomoutButton');
+        const moveUpButton = document.getElementById('moveUpButton');
+        const moveDownButton = document.getElementById('moveDownButton');
+        const moveLeftButton = document.getElementById('moveLeftButton');
+        const moveRightButton = document.getElementById('moveRightButton');
+        const stickerUpload = document.getElementById('stickerUpload');
 
-            // Get the car model dropdown element
-            const carModelSelect = document.getElementById('carModelSelect');
+        let zoomLevel = 1;
+        let isDraggingImage = false;
+        let startXImage;
+        let startYImage;
+        let translateXImage = 0;
+        let translateYImage = 0;
 
-            // Clear existing car model options
-            carModelSelect.innerHTML = '<option value="select">Select Car Model</option>';
+        let isDraggingSticker = false;
+        let startXSticker;
+        let startYSticker;
 
-            // Fetch car models from the database using PHP
-            if (selectedCarMake !== '') {
-                fetchCarModels(selectedCarMake);
+        // Load saved image from session, if available
+        const savedImageData = sessionStorage.getItem('uploadedImageData');
+        if (savedImageData) {
+            uploadedImage.setAttribute('src', savedImageData);
+        }
+
+        zoomButton.addEventListener('click', function() {
+            zoomLevel += 0.1;
+            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+        });
+
+        zoomoutButton.addEventListener('click', function() {
+            zoomLevel -= 0.1;
+            if (zoomLevel < 0.1) {
+                zoomLevel = 0.1;
             }
-        }
+            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+        });
 
-        function fetchCarModels(carMake) {
-            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-            // Make a request to the server using AJAX
-            fetch('{{ route('gosford.front.getmodelfrommake', ['make' => '__carMake__']) }}'.replace('__carMake__',
-                    carMake), {
-                    headers: {
-                        'X-CSRF-TOKEN': csrfToken,
-                        'Content-Type': 'application/json'
-                    },
-                    method: 'GET',
-                })
-                .then(response => response.json())
-                .then(data => {
-                    // Add car model options to the dropdown
-                    data.forEach(car => {
-                        addCarModelOption(car.id, car.name, carModelSelect);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching car models:', error);
-                });
-        }
+        moveUpButton.addEventListener('click', function() {
+            translateYImage -= 10;
+            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+        });
 
+        moveDownButton.addEventListener('click', function() {
+            translateYImage += 10;
+            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+        });
 
-        function addCarModelOption(carId, carName, selectElement) {
-            const option = document.createElement('option');
-            option.text = carName;
-            option.value = carId; // Use the car's ID as the option value
-            selectElement.add(option);
-        }
+        moveLeftButton.addEventListener('click', function() {
+            translateXImage -= 10;
+            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+        });
 
+        moveRightButton.addEventListener('click', function() {
+            translateXImage += 10;
+            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+        });
 
-        function searchYear() {
-            // Get selected car make
-            const carModelSelect = document.getElementById('carModelSelect');
-            const selectedCarmodel = carModelSelect.value;
+        uploadedImage.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            isDraggingImage = true;
+            startXImage = e.clientX - translateXImage;
+            startYImage = e.clientY - translateYImage;
+        });
 
-            // Get the car model dropdown element
-            const carYearSelect = document.getElementById('carYearSelect');
+        window.addEventListener('mousemove', (e) => {
+            if (!isDraggingImage) return;
+            translateXImage = e.clientX - startXImage;
+            translateYImage = e.clientY - startYImage;
+            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+        });
 
-            // Clear existing car model options
-            carYearSelect.innerHTML = '<option value="">Year</option>';
+        window.addEventListener('mouseup', () => {
+            isDraggingImage = false;
+        });
 
-            // Fetch car models from the database using PHP
-            if (selectedCarmodel !== '') {
-                fetchYear(selectedCarmodel);
+        stickerUpload.addEventListener('change', function() {
+            if (stickerUpload.files && stickerUpload.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    const sticker = document.createElement('img');
+                    sticker.classList.add('sticker');
+                    sticker.setAttribute('src', e.target.result);
+                    sticker.style.left = '50px';
+                    sticker.style.top = '50px';
+                    sticker.addEventListener('mousedown', startStickerDrag);
+
+                    uploadedImage.parentElement.appendChild(sticker);
+                };
+
+                reader.readAsDataURL(stickerUpload.files[0]);
+                stickerUpload.value = '';
             }
+        });
+
+        function startStickerDrag(e) {
+            e.preventDefault();
+            isDraggingSticker = true;
+            startXSticker = e.clientX - parseInt(e.target.style.left);
+            startYSticker = e.clientY - parseInt(e.target.style.top);
+
+            e.target.addEventListener('mousemove', moveSticker);
+            e.target.addEventListener('mouseup', endStickerDrag);
         }
 
-
-        function fetchYear(caryear) {
-            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-            // Make a request to the server using AJAX
-            fetch('{{ route('gosford.front.getyearfrommodel', ['model' => '__caryear__']) }}'.replace('__caryear__',
-                    caryear), {
-                    headers: {
-                        'X-CSRF-TOKEN': csrfToken,
-                        'Content-Type': 'application/json'
-                    },
-                    method: 'GET',
-                })
-                .then(response => response.json())
-                .then(data => {
-                    // Add car model options to the dropdown
-                    data.forEach(car => {
-                        addCarYearOption(car.year, carYearSelect);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching car Year:', error);
-                });
+        function moveSticker(e) {
+            if (!isDraggingSticker) return;
+            e.target.style.left = e.clientX - startXSticker + 'px';
+            e.target.style.top = e.clientY - startYSticker + 'px';
         }
 
-
-        function addCarYearOption(yearName, selectElement) {
-            const option = document.createElement('option');
-            option.text = yearName;
-            option.value = yearName; // Use the car's ID as the option value
-            selectElement.add(option);
+        function endStickerDrag(e) {
+            isDraggingSticker = false;
+            e.target.removeEventListener('mousemove', moveSticker);
+            e.target.removeEventListener('mouseup', endStickerDrag);
         }
+
     </script>
+
+    <script>
+const resizableImage = document.querySelectorAll('.sticker');
+const controls = document.querySelectorAll('.control');
+// const imageContainer = document.querySelector('.image-container');
+
+let isResizing = false;
+let originalX;
+let originalY;
+let originalWidth;
+let originalHeight;
+let selectedControl;
+
+controls.forEach(control => {
+  control.addEventListener('mousedown', (e) => startResize(e, control.classList[1]));
+});
+
+resizableImage.addEventListener('click', () => {
+  controls.forEach(control => {
+    control.style.display = 'block'; // Show controls when image container is clicked
+  });
+
+  // Remove the isResizing flag to reset the resizing state
+  isResizing = false;
+  selectedControl = null;
+});
+
+function startResize(e, control) {
+  e.preventDefault();
+  isResizing = true;
+  selectedControl = control;
+  originalX = e.clientX;
+  originalY = e.clientY;
+  originalWidth = parseFloat(getComputedStyle(resizableImage).width);
+  originalHeight = parseFloat(getComputedStyle(resizableImage).height);
+
+  document.addEventListener('mousemove', resizeImage);
+  document.addEventListener('mouseup', stopResizing);
+}
+
+function resizeImage(e) {
+  if (!isResizing) return;
+
+  const deltaX = e.clientX - originalX;
+  const deltaY = e.clientY - originalY;
+
+  let newWidth = originalWidth;
+  let newHeight = originalHeight;
+
+  switch (selectedControl) {
+    case 'top-left':
+      newWidth -= deltaX;
+      newHeight -= deltaY;
+      break;
+    case 'top-right':
+      newWidth += deltaX;
+      newHeight -= deltaY;
+      break;
+    case 'bottom-left':
+      newWidth -= deltaX;
+      newHeight += deltaY;
+      break;
+    case 'bottom-right':
+      newWidth += deltaX;
+      newHeight += deltaY;
+      break;
+  }
+
+  resizableImage.style.width = newWidth + 'px';
+  resizableImage.style.height = newHeight + 'px';
+
+  updateControlPositions();
+}
+
+function updateControlPositions() {
+    const imageRect = resizableImage.getBoundingClientRect();
+    const containerRect = imageContainer.getBoundingClientRect();
+
+    controls.forEach(control => {
+      const controlClass = control.classList[1];
+
+      switch (controlClass) {
+        case 'top-left':
+          control.style.left = imageRect.left - containerRect.left + 'px';
+          control.style.top = imageRect.top - containerRect.top + 'px';
+          break;
+        case 'top-right':
+          control.style.left = imageRect.left + imageRect.width - containerRect.left + 'px';
+          control.style.top = imageRect.top - containerRect.top + 'px';
+          break;
+        case 'bottom-left':
+          control.style.left = imageRect.left - containerRect.left + 'px';
+          control.style.top = imageRect.top + imageRect.height - containerRect.top + 'px';
+          break;
+        case 'bottom-right':
+          control.style.left = imageRect.left + imageRect.width - containerRect.left + 'px';
+          control.style.top = imageRect.top + imageRect.height - containerRect.top + 'px';
+          break;
+      }
+    });
+  }
+
+function stopResizing() {
+  isResizing = false;
+  selectedControl = null;
+  document.removeEventListener('mousemove', resizeImage);
+  document.removeEventListener('mouseup', stopResizing);
+}
+
+    </script>
+
+
+
+
+
+
+
+
 @endsection

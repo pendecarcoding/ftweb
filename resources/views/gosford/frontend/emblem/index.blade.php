@@ -40,6 +40,7 @@
                                         <div style="width: 200px;">
                                             <img id="uploadedImage" style="width: 100%"
                                                 src="/public/go_system/images/uploads.png" alt="">
+
                                         </div>
                                     </label>
                                     <p>Upload your <span style="color: red">car seat</span> photo...</p>
@@ -74,14 +75,15 @@
                                         </div> -->
 
     </main>
-
     <script>
         const imageUpload = document.getElementById('imageUpload');
         const uploadedImage = document.getElementById('uploadedImage');
 
-        uploadedImage.addEventListener('click', function() {
-            imageUpload.click();
-        });
+        // Load saved image from session, if available
+        const savedImageData = sessionStorage.getItem('uploadedImageData');
+        if (savedImageData) {
+            uploadedImage.setAttribute('src', savedImageData);
+        }
 
         imageUpload.addEventListener('change', function() {
             if (imageUpload.files && imageUpload.files[0]) {
@@ -89,6 +91,9 @@
 
                 reader.onload = function(e) {
                     uploadedImage.setAttribute('src', e.target.result);
+
+                    // Save the image data in the session
+                    sessionStorage.setItem('uploadedImageData', e.target.result);
                 };
 
                 reader.readAsDataURL(imageUpload.files[0]);
