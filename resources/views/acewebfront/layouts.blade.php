@@ -239,8 +239,8 @@
                                                 href="{{ route('gosford.front.register') }}">Create
                                                 account</a></span></p>
 
-                                    <!-- <p><span><a style="color:#959595;text-decoration: none;"
-                                                href="{{ url('forgotpass') }}">Forgot Password</a></span></p> -->
+                                    <p><span><a style="color:#959595;text-decoration: none;"
+                                                href="{{ url('g_system/forgotpass') }}">Forgot Password</a></span></p>
                                 </center>
 
                             </div>

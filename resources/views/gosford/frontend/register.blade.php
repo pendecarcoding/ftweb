@@ -35,27 +35,28 @@
                                         <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                 <input placeholder="username" name="username" class="mdl-textfield__input" type="text" required>
-                                                
+
                                             </div>
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                 <input placeholder="Contact Number  (Please enter a valid contact number)" name="contact_number" class="mdl-textfield__input" type="text" required>
-                                               
+
                                             </div>
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                 <input placeholder="Email Address (Please enter a valid email address)" name="email" class="mdl-textfield__input" type="text" required>
-                                                
+
                                             </div>
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                 <input placeholder="Password" name="password" class="mdl-textfield__input" type="password" id="password" required>
-                                               
+
                                             </div>
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                 <input placeholder="Confirm Password" name="password_confirmation" class="mdl-textfield__input" type="password" id="password_confirmation" required>
                                             </div>
                                             <div style="text-align: center;color:#747474 ;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                                <span><img src="/public/aceweb/assets/img/check-circle.png" alt=""></span><span> &nbsp; I’ve read and agree to</span> <span><a class="login-link" href="#">Terms & Conditions</a></span>
+                                                <span><input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="btn-check-outlined"><img src="/public/aceweb/assets/img/check-circle.png" alt=""></label></span><span> &nbsp; I’ve read and agree to</span> <span><a class="login-link" href="#">Terms & Conditions</a></span>
                                             </div>
-
+                                            <br>
                                             <center>
 
                                                     <button type="submit" class="mdl-button mdl-js-button mdl-button--raised color--gray">

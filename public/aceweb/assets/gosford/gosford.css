@@ -2725,6 +2725,12 @@ ul {
     right: -5px
 }
 
+.login-link{
+    color: #0083be;
+}
+.login-link:hover{
+    cursor: pointer;
+}
 .mdl-badge.mdl-badge--no-background[data-badge]:after {
     color: #ff4081;
     background: rgba(255, 255, 255, .2);
@@ -2746,21 +2752,22 @@ ul {
     right: -10px
 }
 .sticker {
+    height: 50px;
     position: absolute;
     cursor: pointer;
 }
 
-.control {
+/* .control {
     position: absolute;
     width: 15px;
     height: 15px;
     background-color: #007bff;
     cursor: nwse-resize;
     transform: translate(-50%, -50%);
-    display: none; /* Hide controls initially */
-  }
+    display: none;
+  } */
 
-  .top-left {
+  /* .top-left {
     top: 0;
     left: 0;
   }
@@ -2778,7 +2785,7 @@ ul {
   .bottom-right {
     bottom: 0;
     right: 0;
-  }
+  } */
 
 .mdl-button {
     background: 0 0;
