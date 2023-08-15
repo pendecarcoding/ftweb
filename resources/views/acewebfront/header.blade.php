@@ -54,7 +54,7 @@
                     </span>
                 </li>
             </a>
-            <a href="{{ route('gosford.listorder') }}">
+            <a href="#">
                 <li class="mdl-menu__item mdl-list__item">
                     <span class="mdl-list__item-primary-content">
                         <i class="material-icons mdl-list__item-icon">receipt</i>
@@ -68,7 +68,7 @@
                         <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
                         Log out
                     </span>
-                </li>jj
+                </li>
             </a>
         </ul>
 
