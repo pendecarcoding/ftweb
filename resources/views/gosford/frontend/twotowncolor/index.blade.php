@@ -142,6 +142,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div style="text-align: center;padding: 20px 0px;">
+                            <h2>Other Product Option</h2>
+                            <br>
+                            <div style="display: flex;flex-direction: row;justify-content: space-between;gap:10px">
+                                <div class="card" style="padding: 10px;width:100%"><a href="{{route('gosford.embrodery')}}" class="menu-href">Embrodery</a></div>
+                                <div class="card" style="padding: 10px;width:100%"><a href="{{route('gosford.piping')}}" class="menu-href">Piping</a></div>
+                                <div class="card" style="padding: 10px;width:100%"><a href="{{route('gosford.emblem')}}" class="menu-href">Logo/Emblem</a></div>
+                                <div class="card" style="padding: 10px;width:100%"><a href="{{route('gosford.patterndesign')}}" class="menu-href">Pattern Design</a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

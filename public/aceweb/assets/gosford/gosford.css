@@ -2735,6 +2735,13 @@ ul {
     margin-right: 10px
 }
 
+.menu-href{
+    color: black;
+}
+.menu-href:hover{
+    color: black;
+}
+
 .mdl-badge.mdl-badge--overlap:after {
     right: -10px
 }
