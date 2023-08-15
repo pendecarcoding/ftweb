@@ -69,7 +69,7 @@
 
                 <div class="col-sm-6 col-md-2  d-flex ">
 
-                    <a href="{{ url('g_system/gosford/f/twotowncolor') }}"
+                    <a href="{{ url('mypage/gosford/f/twotowncolor') }}"
                         class="card  card-body border-light  justify-content-between text-white shadow">
                         <!-- <a >  -->
                         <img src="/public/go_system/images/menu/menu_1.png" alt="">
@@ -79,28 +79,28 @@
 
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="{{ url('g_system/gosford/f/embrodery') }}"
+                    <a href="{{ url('mypage/gosford/f/embrodery') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
                         <img src="/public/go_system/images/menu/menu_2.png" alt="">
                         <div class="title-menu-style">Embrodery</div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="{{ url('g_system/gosford/f/patterndesign') }}"
+                    <a href="{{ url('mypage/gosford/f/patterndesign') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
                         <img src="/public/go_system/images/menu/menu_3.png" alt="">
                         <div class="title-menu-style">Pattern Design</div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="{{ url('g_system/gosford/f/piping') }}"
+                    <a href="{{ url('mypage/gosford/f/piping') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
                         <img src="/public/go_system/images/menu/menu_4.png" alt="">
                         <div class="title-menu-style">Piping</div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="{{ url('g_system/gosford/f/emblem') }}"
+                    <a href="{{ url('mypage/gosford/f/emblem') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
                         <img src="/public/go_system/images/menu/menu_5.png" alt="">
                         <div class="title-menu-style">Logo / Emblem</div>
