@@ -24,16 +24,26 @@
                         <div class="container container-go">
                             <div class="step-order">
                                 <div class="title-step-order active-step">
-
-                                 </div>
-                                 <div class="title-step-order">
-
-                                 </div>
-
-                                 <div class="title-step-order">
-
-                                 </div>
+                                    <button
+                                        class="btn-step mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-red"
+                                        data-upgraded=",MaterialButton,MaterialRipple">
+                                        <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"
+                                                style="width: 262.161px; height: 262.161px; transform: translate(-50%, -50%) translate(78px, 4px);"></span></span>
+                                    </button>
+                                    <p>Select vehicle</p>
                                 </div>
+                                <div class="title-step-order active-step">
+                                    <button class="btn-step mdl-button mdl-js-button mdl-button--raised button--colored-light-blue"
+                                    disabled="" data-upgraded=",MaterialButton"></button>
+                                    <p>Choose design</p>
+                                </div>
+
+                                <div class="title-step-order">
+                                    <button class="btn-step mdl-button mdl-js-button mdl-button--raised button--colored-light-blue"
+                                        disabled="" data-upgraded=",MaterialButton"></button>
+                                    <p>Options Summary</p>
+                                </div>
+                            </div>
                                 <div class="title-order">
                                     <h3>Select Vehicle</h3>
 

@@ -622,7 +622,11 @@ function getnav(){
         'name'=>'Contact',
         'link'=>'contact',
         'is_active'=>'contact'
-        ]
+         ],[
+            'name'=>'My Page',
+            'link'=>'mypage',
+            'is_active'=>'mypage'
+            ]
     );
     return $data;
 }

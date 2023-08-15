@@ -39,10 +39,6 @@
 
 
 
-                                                        <div class="control top-left"></div>
-        <div class="control top-right"></div>
-        <div class="control bottom-left"></div>
-        <div class="control bottom-right"></div>
 
                                                 </div>
 
@@ -253,24 +249,79 @@
         });
 
         stickerUpload.addEventListener('change', function() {
-            if (stickerUpload.files && stickerUpload.files[0]) {
-                const reader = new FileReader();
+  if (stickerUpload.files && stickerUpload.files[0]) {
+    const reader = new FileReader();
 
-                reader.onload = function(e) {
-                    const sticker = document.createElement('img');
-                    sticker.classList.add('sticker');
-                    sticker.setAttribute('src', e.target.result);
-                    sticker.style.left = '50px';
-                    sticker.style.top = '50px';
-                    sticker.addEventListener('mousedown', startStickerDrag);
+    reader.onload = function(e) {
+      const sticker = document.createElement('img');
+      sticker.classList.add('sticker');
+      sticker.setAttribute('src', e.target.result);
+      sticker.style.left = '50px';
+      sticker.style.top = '50px';
+      sticker.addEventListener('mousedown', startStickerDrag);
 
-                    uploadedImage.parentElement.appendChild(sticker);
-                };
+      const stickerContainer = document.createElement('div');
+      stickerContainer.classList.add('sticker-container');
+      stickerContainer.appendChild(sticker);
 
-                reader.readAsDataURL(stickerUpload.files[0]);
-                stickerUpload.value = '';
-            }
+      const controlTL = document.createElement('div');
+      controlTL.classList.add('control', 'top-left');
+      stickerContainer.appendChild(controlTL);
+
+      const controlTR = document.createElement('div');
+      controlTR.classList.add('control', 'top-right');
+      stickerContainer.appendChild(controlTR);
+
+      const controlBL = document.createElement('div');
+      controlBL.classList.add('control', 'bottom-left');
+      stickerContainer.appendChild(controlBL);
+
+      const controlBR = document.createElement('div');
+      controlBR.classList.add('control', 'bottom-right');
+      stickerContainer.appendChild(controlBR);
+
+      uploadedImage.parentElement.appendChild(stickerContainer);
+
+      // New code to handle the click event for the sticker
+      sticker.addEventListener('click', function(e) {
+        const selectedSticker = e.target;
+        const controls = stickerContainer.querySelectorAll('.control');
+
+        controls.forEach(control => {
+          control.style.display = 'none';
         });
+
+        controls.forEach(control => {
+          const controlClass = control.classList[1];
+          switch (controlClass) {
+            case 'top-left':
+              control.style.left = selectedSticker.offsetLeft + 'px';
+              control.style.top = selectedSticker.offsetTop + 'px';
+              break;
+            case 'top-right':
+              control.style.left = selectedSticker.offsetLeft + selectedSticker.offsetWidth + 'px';
+              control.style.top = selectedSticker.offsetTop + 'px';
+              break;
+            case 'bottom-left':
+              control.style.left = selectedSticker.offsetLeft + 'px';
+              control.style.top = selectedSticker.offsetTop + selectedSticker.offsetHeight + 'px';
+              break;
+            case 'bottom-right':
+              control.style.left = selectedSticker.offsetLeft + selectedSticker.offsetWidth + 'px';
+              control.style.top = selectedSticker.offsetTop + selectedSticker.offsetHeight + 'px';
+              break;
+          }
+          control.style.display = 'block';
+        });
+      });
+    };
+
+    reader.readAsDataURL(stickerUpload.files[0]);
+    stickerUpload.value = '';
+  }
+});
+
+
 
         function startStickerDrag(e) {
             e.preventDefault();
@@ -296,115 +347,7 @@
 
     </script>
 
-    <script>
-const resizableImage = document.querySelectorAll('.sticker');
-const controls = document.querySelectorAll('.control');
-// const imageContainer = document.querySelector('.image-container');
 
-let isResizing = false;
-let originalX;
-let originalY;
-let originalWidth;
-let originalHeight;
-let selectedControl;
-
-controls.forEach(control => {
-  control.addEventListener('mousedown', (e) => startResize(e, control.classList[1]));
-});
-
-resizableImage.addEventListener('click', () => {
-  controls.forEach(control => {
-    control.style.display = 'block'; // Show controls when image container is clicked
-  });
-
-  // Remove the isResizing flag to reset the resizing state
-  isResizing = false;
-  selectedControl = null;
-});
-
-function startResize(e, control) {
-  e.preventDefault();
-  isResizing = true;
-  selectedControl = control;
-  originalX = e.clientX;
-  originalY = e.clientY;
-  originalWidth = parseFloat(getComputedStyle(resizableImage).width);
-  originalHeight = parseFloat(getComputedStyle(resizableImage).height);
-
-  document.addEventListener('mousemove', resizeImage);
-  document.addEventListener('mouseup', stopResizing);
-}
-
-function resizeImage(e) {
-  if (!isResizing) return;
-
-  const deltaX = e.clientX - originalX;
-  const deltaY = e.clientY - originalY;
-
-  let newWidth = originalWidth;
-  let newHeight = originalHeight;
-
-  switch (selectedControl) {
-    case 'top-left':
-      newWidth -= deltaX;
-      newHeight -= deltaY;
-      break;
-    case 'top-right':
-      newWidth += deltaX;
-      newHeight -= deltaY;
-      break;
-    case 'bottom-left':
-      newWidth -= deltaX;
-      newHeight += deltaY;
-      break;
-    case 'bottom-right':
-      newWidth += deltaX;
-      newHeight += deltaY;
-      break;
-  }
-
-  resizableImage.style.width = newWidth + 'px';
-  resizableImage.style.height = newHeight + 'px';
-
-  updateControlPositions();
-}
-
-function updateControlPositions() {
-    const imageRect = resizableImage.getBoundingClientRect();
-    const containerRect = imageContainer.getBoundingClientRect();
-
-    controls.forEach(control => {
-      const controlClass = control.classList[1];
-
-      switch (controlClass) {
-        case 'top-left':
-          control.style.left = imageRect.left - containerRect.left + 'px';
-          control.style.top = imageRect.top - containerRect.top + 'px';
-          break;
-        case 'top-right':
-          control.style.left = imageRect.left + imageRect.width - containerRect.left + 'px';
-          control.style.top = imageRect.top - containerRect.top + 'px';
-          break;
-        case 'bottom-left':
-          control.style.left = imageRect.left - containerRect.left + 'px';
-          control.style.top = imageRect.top + imageRect.height - containerRect.top + 'px';
-          break;
-        case 'bottom-right':
-          control.style.left = imageRect.left + imageRect.width - containerRect.left + 'px';
-          control.style.top = imageRect.top + imageRect.height - containerRect.top + 'px';
-          break;
-      }
-    });
-  }
-
-function stopResizing() {
-  isResizing = false;
-  selectedControl = null;
-  document.removeEventListener('mousemove', resizeImage);
-  document.removeEventListener('mouseup', stopResizing);
-}
-
-    </script>
 
 
 

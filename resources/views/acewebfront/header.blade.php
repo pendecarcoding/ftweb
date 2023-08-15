@@ -28,8 +28,7 @@
         </ul>
         @else
         <a  href="{{ url($v['link']) }}"
-        class="classurl @if($v['name']=='Product & Project') @if (Request::is('g_system/*')) classurl-active @endif"   @endif @if (Request::is($v['link'] . '*')) classurl-active @endif">{{ $v['name'] }}</a>
-
+        class="classurl @if($v['name']=='Product & Project') @if (Request::is('g_system/*')) classurl-active     @elseif (Request::is($v['link'] . '*')) classurl-active @endif  @elseif (Request::is($v['link'] . '*')) classurl-active @endif">{{ $v['name'] }}</a>
         @endif
         @endforeach
 
@@ -78,7 +77,7 @@
         </ul>
         @else
         <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="ace-button">
-            Login GSAP
+            Login
         </a>
         @endif
         <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>

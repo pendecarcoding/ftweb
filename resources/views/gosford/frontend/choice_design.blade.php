@@ -4,9 +4,44 @@
 @endsection
 @section('content')
     <main>
-        <section class="banner-car">
-            <img class="img-responsive"
-                src="{{ getimage($car->image) }}" alt="ACE-BANNER-PRODUCT" />
+        <section class="ace-sliders">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    @php
+                        $noslide = 0;
+                    @endphp
+                    @foreach ($slider as $is => $v)
+                        @if (count($slider) > 1)
+                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="{{ $is }}"
+                                class="btn-slide @if ($is == 0) active @endif"
+                                @if ($is == 0) aria-current="true" @endif
+                                aria-label="Slide {{ $is }}"></button>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="carousel-inner">
+                    @foreach ($slider as $is => $v)
+                        <div class="carousel-item @if ($is == 0) active @endif">
+                            <img class="slider-banner" src="{{ asset('public/' . $v->file_name) }}" />
+                            <div class="col-md-6">
+                                <div class="container">
+
+                                    <div data-aos="fade-up" class="carousel-caption text-start">
+                                        <h1>
+                                            {{ $v->caption }}
+                                        </h1>
+                                        <p class="ace-banner-p">{{ $v->sub_caption }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
         </section>
 
         <section class="pt-5 pb-5">

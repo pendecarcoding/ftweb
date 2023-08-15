@@ -56,68 +56,119 @@
 
                         </div>
 
+
+
+
+                        <!-- <div class="slider-product" style="height: 500px;">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+
+                                <div class="carousel-inner">
+                                    <div class="title-product-detail">{{ $car->name }}</div>
+                                    @php
+
+                                        $photos = explode(',', $car->photos);
+                                        $index = -1;
+                                    @endphp
+                                    @foreach ($photos as $vp)
+                                        @php
+                                            $index++;
+                                        @endphp
+                                        <div
+                                            class="carousel-item @if ($index == 0) active @endif">
+                                            <img class="d-block center-image" src="{{ getimage($vp) }}">
+                                        </div>
+                                    @endforeach
+
+                                </div>
+                                <a class="carousel-control-prev icon-arrow"
+                                    href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <i class="fa fa-chevron-left"></i>
+                                </a>
+                                <a class="carousel-control-next icon-arrow"
+                                    href="#carouselExampleIndicators" role="button" data-slide="next">
+
+                                    <i class="fa fa-chevron-right"></i>
+                                </a>
+                                <div class="wrap-carousel-indicators">
+                                    <div class="carousel-indicators">
+                                        @php
+
+                                            $photos = explode(',', $car->photos);
+                                            $index = -1;
+                                        @endphp
+                                        @foreach ($photos as $vp)
+                                            @php
+                                                $index++;
+                                            @endphp
+                                            <div class="img-ref-slide"
+                                                data-target="#carouselExampleIndicators"
+                                                data-slide-to="{{ $index }}"
+                                                @if ($index == 0) class="active" @endif><img
+                                                    src="{{ getimage($vp) }}" alt="Third slide"></div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-8 col-sm-12">
                                     <div class="card">
-                                        <div class="slider-product">
-                                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                        <div class="slider-product" style="height: 500px;position: relative;overflow: hidden;">
+                                            <div style="height: 450px" id="myCarousel" class="carousel slide"  data-bs-ride="carousel">
+                                                <div class="carousel-indicators" style="bottom: -43px;">
+                                                                              @php
 
-
+                                                  $photos = explode(',', $car->photos);
+                                                  $index = -1;
+                                              @endphp
+                                              @foreach ($photos as $vp)
+                                                  @php
+                                                      $index++;
+                                                  @endphp
+                                                    <img data-bs-target="#myCarousel" data-bs-slide-to="{{ $index }}" @if ($index == 0) class="active" @endif
+                                                    style="width:100px;height:100px" src="{{ getimage($vp) }}" alt="Third slide">
+                                              @endforeach
+                                                </div>
                                                 <div class="carousel-inner">
                                                     <div class="title-product-detail">{{ $car->name }}</div>
                                                     @php
 
-                                                        $photos = explode(',', $car->photos);
-                                                        $index = -1;
+                                                    $photos = explode(',', $car->photos);
+                                                    $index = -1;
+                                                @endphp
+                                                @foreach ($photos as $vp)
+                                                    @php
+                                                        $index++;
                                                     @endphp
-                                                    @foreach ($photos as $vp)
-                                                        @php
-                                                            $index++;
-                                                        @endphp
-                                                        <div
-                                                            class="carousel-item @if ($index == 0) active @endif">
-                                                            <img class="d-block center-image" src="{{ getimage($vp) }}">
-                                                        </div>
-                                                    @endforeach
-
-                                                </div>
-                                                <a class="carousel-control-prev icon-arrow"
-                                                    href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                                    <i class="fa fa-chevron-left"></i>
-                                                </a>
-                                                <a class="carousel-control-next icon-arrow"
-                                                    href="#carouselExampleIndicators" role="button" data-slide="next">
-
-                                                    <i class="fa fa-chevron-right"></i>
-                                                </a>
-                                                <div class="wrap-carousel-indicators">
-                                                    <div class="carousel-indicators">
-                                                        @php
-
-                                                            $photos = explode(',', $car->photos);
-                                                            $index = -1;
-                                                        @endphp
-                                                        @foreach ($photos as $vp)
-                                                            @php
-                                                                $index++;
-                                                            @endphp
-                                                            <div class="img-ref-slide"
-                                                                data-target="#carouselExampleIndicators"
-                                                                data-slide-to="{{ $index }}"
-                                                                @if ($index == 0) class="active" @endif><img
-                                                                    src="{{ getimage($vp) }}" alt="Third slide"></div>
-                                                        @endforeach
+                                                    <div
+                                                        class="carousel-item @if ($index == 0) active @endif">
+                                                        <img class="d-block center-image" src="{{ getimage($vp) }}">
                                                     </div>
+                                                @endforeach
+
+
                                                 </div>
-                                            </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                  <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                  <span class="visually-hidden">Next</span>
+                                                </button>
+                                              </div>
                                         </div>
+
 
                                     </div>
                                 </div>
                                 <br>
                                 <div class="col-md-4 col-sm-12">
-                                    <div class="card go-right-order" style="height: 409px;">
+                                    <div class="card go-right-order" style="height: 500px;">
                                         <div style="padding: 27px;">
                                             <div style="display: flex;flex-direction: column;">
                                                 <h6 class="title-right-product">Make:</h6>
@@ -125,7 +176,7 @@
                                             </div>
                                             <div style="display: flex;flex-direction: column;">
                                                 <h6 class="title-right-product">Model:</h6>
-                                                <p class="content-right-product">{{ type_car($car->type)->type }}</p>
+                                                <p class="content-right-product">{{ car_typebyCarId($car->car_id)->name }}</p>
                                             </div>
                                             <div style="display: flex;flex-direction: column;">
                                                 <h6 class="title-right-product">Year:</h6>

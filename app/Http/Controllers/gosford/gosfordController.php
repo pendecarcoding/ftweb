@@ -242,13 +242,8 @@ class gosfordController extends Controller
     $year   = $r->year;
     $model  = $r->model;
     $carmake= $r->carmake;
-    $car  = Car::where('make',$r->carmake)->where('id',$r->model)->where('year',$r->year)->first();
-    if(!empty($car)){
-        return view('gosford.frontend.choice_design',compact('car','year','model','carmake'));
-    }
-    else{
-        print "kosong";
-    }
+    $car  = Car::where('make',$r->carmake)->where('cars.id',$r->model)->where('year',$r->year)->join('products','products.car_id','cars.id')->get();
+    return view('gosford.frontend.product.choice_design',compact('car','year','model','carmake'));
 
    }
 
