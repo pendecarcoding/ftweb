@@ -31,10 +31,8 @@
         class="classurl @if($v['name']=='Product & Project') @if (Request::is('g_system/*')) classurl-active     @elseif (Request::is($v['link'] . '*')) classurl-active @endif  @elseif (Request::is($v['link'] . '*')) classurl-active @endif">{{ $v['name'] }}</a>
         @endif
         @endforeach
-
         @if(Session::get('gystem_login'))
         <div class="avatar-dropdown" id="icon">
-
             <img src="https://cdn.iconscout.com/icon/free/png-512/avatar-370-456322.png">
             <span id="hello"> &nbsp; HI {{ getinfoaccount()->username }}</span>
         </div>
@@ -63,25 +61,80 @@
                         My Order
                 </li>
             </a>
-
             <li class="list__item--border-top"></li>
-
             <a href="{{ route('gosford.logouts') }}">
                 <li class="mdl-menu__item mdl-list__item">
                     <span class="mdl-list__item-primary-content">
                         <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
                         Log out
                     </span>
-                </li>
+                </li>jj
             </a>
         </ul>
+
+        @elseif(Session::get('loginstaff')==true)
+        @if(Session::get('loginstaff')==true)
+        <a href="{{ url('staff/back/announcements') }}"
+        class="@if (Request::is('staff/back/announcements')) classurl-active  @endif">Staff</a>
+        @endif
+        <a class="classurl" onclick="logoutFunction()" style="font-size:28px;color:white"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
         @else
-        <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="ace-button">
+        <!-- <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="ace-button">
             Login
-        </a>
+        </a> -->
+        <div class="dropdown">
+            <a class="ace-button dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+            </a>
+
+            <!-- Dropdown menu -->
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">GSAP SYSTEM</a>
+                <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-item" href="#">User Login</a>
+                <a data-bs-toggle="modal" data-bs-target="#staffModal" class="dropdown-item" href="#">Staff Login</a>
+                <!-- Add more dropdown items as needed -->
+            </div>
+        </div>
         @endif
         <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>
     </div>
 
     </div>
 </header>
+
+<script>
+    function logoutFunction() {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "you want to leave this page?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                window.location.href = "{{route('staff.logoutstuff')}}";
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                // swalWithBootstrapButtons.fire(
+                //     'Cancelled',
+                //     'Your imaginary file is safe :)',
+                //     'error'
+                // )
+            }
+        })
+
+    }
+</script>
