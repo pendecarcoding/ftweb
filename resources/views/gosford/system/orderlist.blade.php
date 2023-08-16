@@ -40,7 +40,7 @@
                                                         <th>Amount</th>
                                                         <th>Payment Status</th>
                                                         <th>Status Order</th>
-                                                        <th>action</th>
+                                                        <!-- <th>action</th> -->
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -61,10 +61,11 @@
                                                             </div>
                                                         </td>
                                                         <td>{{single_price($v->total)}}</td>
-                                                        <td>@if($v->payment_status=='paid')<span class="label label--mini color--green">{{$v->payment_status}}</span>@endif</td>
+                                                        <!-- <td>@if($v->payment_status=='paid'){{$v->payment_status}}@endif</td> -->
+                                                        <td>UNPAID</td>
                                                         <td>{{$v->order_status}}</td>
-                                                        <td>
-                                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal"><i class="material-icons">visibility</i></button></td>
+                                                        <!-- <td>
+                                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal"><i class="material-icons">visibility</i></button></td> -->
                                                     </tr>
                                                     @endforeach
                                                 </tbody>
@@ -77,7 +78,7 @@
                                                         <th>Amount</th>
                                                         <th>Payment Status</th>
                                                         <th>Status Order</th>
-                                                        <th>action</th>
+                                                        <!-- <th>action</th> -->
                                                     </tr>
                                                 </tfoot>
                                             </table>
