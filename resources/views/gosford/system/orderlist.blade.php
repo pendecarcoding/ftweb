@@ -1,9 +1,19 @@
-@extends('gosford.layouts.template')
+@extends('acewebfront.layouts')
 @section('content')
-<div class="mdl-layout mdl-js-layout color--gray is-small-screen login">
-    @include('gosford.system.header')
-    <main class="mdl-layout__content" style="background: rgb(247, 246, 246);">
-        <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+<main>
+    <section class="ace-investor">
+
+        <div class="col-md-12">
+            <div class="banner-static">
+                <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
+                    alt="ACE-BANNER-PRODUCT" />
+            </div>
+        </div>
+    </section>
+
+    <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
+        <div class="content-ace">
+            <div class="wrap-content">
             <div class="mdl-card mdl-shadow--2dp">
                 <div class="mdl-card__title">
                     <i class="material-icons mdl-list__item-icon">receipt</i> &nbsp;<h1 class="mdl-card__title-text">List Order</h1>
@@ -20,7 +30,7 @@
                                 <th class="mdl-data-table__cell--non-numeric">Amount</th>
                                 <th class="mdl-data-table__cell--non-numeric">Payment Status</th>
                                 <th class="mdl-data-table__cell--non-numeric">Status Order</th>
-                                <th class="mdl-data-table__cell--non-numeric">action</th>
+                                <!-- <th class="mdl-data-table__cell--non-numeric">action</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -42,10 +52,10 @@
                                     </div>
                                 </td>
                                 <td class="mdl-data-table__cell--non-numeric">{{single_price($v->total)}}</td>
-                                <td class="mdl-data-table__cell--non-numeric">@if($v->payment_status=='paid')<span class="label label--mini color--green">{{$v->payment_status}}</span>@endif</td>
+                                <td class="mdl-data-table__cell--non-numeric">@if($v->payment_status=='paid')<span class="label label--mini color--green">Pending</span>@endif</td>
                                 <td class="mdl-data-table__cell--non-numeric">{{$v->order_status}}</td>
-                                <td class="mdl-data-table__cell--non-numeric">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal"><i class="material-icons">visibility</i></button></td>
+                                <!-- <td class="mdl-data-table__cell--non-numeric">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal"><i class="material-icons">visibility</i></button></td> -->
                             </tr>
                             @endforeach
 
@@ -54,6 +64,5 @@
                 </div>
             </div>
         </div>
-    </main>
-</div>
+    </section>
 @endsection

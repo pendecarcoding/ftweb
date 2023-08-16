@@ -36,7 +36,9 @@ input[type=file]::file-selector-button {
     margin: 5px;
     height: 50px;
 }
-
+.menu-panel-profil:hover{
+    cursor: pointer;
+}
 .card-circle:hover{
     cursor: pointer;
 }
