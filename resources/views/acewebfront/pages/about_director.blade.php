@@ -48,7 +48,8 @@
         overflow: hidden;" class="card text-center board-director">
             <div style="    position: relative;
             height: 280px;
-            overflow: hidden;"> <img src="{{getimage($v->foto)}}" width="100%"> </div>
+            border-radius: 9px;
+            overflow: hidden;"> <img src="{{getimage($v->foto)}}" width="100%" > </div>
             <br>
             <h5 class="mb-0">{{$v->name}}</h5> <small>{{$v->position}}</small>
         </div>
