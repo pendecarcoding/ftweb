@@ -185,7 +185,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="circle-row">
-                        <div data-aos="zoom-in-down"
+                        <div onclick="window.open('https://www.gosfordseat.com/gosfordseat/', '_blank');" data-aos="zoom-in-down"
                         data-aos-delay="700" class="card-circle">
                             <img  src="{{ static_asset('aceweb') }}/assets/img/circle1.png" alt="" />
                         </div>

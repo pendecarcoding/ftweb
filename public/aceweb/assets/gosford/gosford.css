@@ -37,6 +37,10 @@ input[type=file]::file-selector-button {
     height: 50px;
 }
 
+.card-circle:hover{
+    cursor: pointer;
+}
+
 .card-coloroption:hover {
     cursor: pointer;
 }
