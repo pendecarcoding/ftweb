@@ -44,8 +44,11 @@
      <div class="row g-2">
      @foreach($data as $i => $v)
     <div data-bs-toggle="modal" data-bs-target="#readboard{{$v->id}}" data-aos="fade-up" data-aos-delay="{{$i+1}}00" class="col-md-4 aos-init aos-animate">
-        <div style="height: 400px;" class="card p-2 py-3 text-center board-director">
-            <div class="img mb-2"> <img src="{{getimage($v->foto)}}" width="300px" class="rounded-circle"> </div>
+        <div style="height: 400px;" class="card text-center board-director">
+            <div style="    position: relative;
+            height: 280px;
+            overflow: hidden;"> <img src="{{getimage($v->foto)}}" width="100%"> </div>
+            <br>
             <h5 class="mb-0">{{$v->name}}</h5> <small>{{$v->position}}</small>
         </div>
     </div>
