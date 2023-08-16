@@ -220,6 +220,79 @@ class gosfordController extends Controller
     return view('gosford.frontend.profil',compact('profil'));
    }
 
+   function profilupdate(Request $r){
+    $r->validate([
+        'full_name'=>'required',
+        'email' => 'required',
+        'contact_number'=>'required',
+        'address'=>'required',
+    ]);
+    try {
+        $data=[
+            'contact_number'=>$r->contact_number,
+            'email'=>$r->email,
+            'full_name'=>$r->full_name,
+            'address'=>$r->address,
+        ];
+        GsystemAccount::where('id',Session::get('id_account'))->update($data);
+        return back()->with('success','Profile updated successfully');
+    } catch (\Throwable $th) {
+        return back()->with('danger',$th->getMessage());
+    }
+   }
+
+   function updatepass(Request $r){
+    $r->validate([
+        'oldpassword'=>'required',
+        'newpassword' => 'required',
+        'confirmpassword'=>'required|same:newpassword',
+    ]);
+    try {
+        $acc = GsystemAccount::where('id',Session::get('id_account'))->first();
+        if (Hash::check($r->oldpassword, $acc->password)) {
+            $data=[
+                'password'=>Hash::make($r->newpassword),
+            ];
+            GsystemAccount::where('id',Session::get('id_account'))->update($data);
+            return back()->with('success','Password updated successfully');
+       }else{
+            return back()->with('danger','old password does not match');
+       }
+    } catch (\Throwable $th) {
+        return back()->with('danger',$th->getMessage());
+    }
+   }
+
+   function uploadimage(Request $request){
+    $request->validate([
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust max size as needed
+    ]);
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $account = GsystemAccount::where('id',Session::get('id_account'))->first();
+        if ($account->image) {
+            $oldImagePath = public_path('users') . '/' . $account->image;
+            if (file_exists($oldImagePath)) {
+                unlink($oldImagePath);
+            }
+        }
+
+        $data=[
+            'image'=>$imageName
+        ];
+        try {
+            GsystemAccount::where('id',Session::get('id_account'))->update($data);
+            $image->move(public_path('users'), $imageName);
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+        return response()->json(['message' => 'Image uploaded successfully']);
+    }
+    return response()->json(['message' => 'No image provided'], 400);
+}
+
+
    function choiceDesign(Request $r){
     $r->validate([
         'carmake'=>'required',

@@ -31,6 +31,7 @@ Route::prefix('g_system')->group(function (){
         Route::get('/gosford/f/register', 'registerfront')->name('gosford.front.register');
         Route::post('/gosford/addacount', 'addacount')->name('gosford.addacount');
         Route::post('/gosford/addacountfront', 'addacountfront')->name('gosford.addacount.front');
+        Route::post('/gosford/uploadimage', 'uploadimage')->name('gosford.upload.image');
         Route::get('/gosford/comfirregister/{id}', 'comfirregister')->name('gosford.confirregister');
 
         Route::any('/gosford/f/choice_design', 'choiceDesignFront')->name('gosford.front.choice_design');
@@ -54,6 +55,8 @@ Route::middleware(['GsystemMildware'])->group(function () {
             Route::get('/gosford/system_search', 'search')->name('gosford.search');
             Route::get('/gosford/profil', 'profil')->name('gosford.profil');
             Route::get('/gosford/f/profil', 'profilfrontend')->name('gosford.frontend.profil');
+            Route::post('/gosford/f/profilupdate', 'profilupdate')->name('gosford.profil.update');
+            Route::post('/gosford/f/updatepass', 'updatepass')->name('gosford.profil.updatepass');
             Route::any('/gosford/choice_design', 'choiceDesign')->name('gosford.choice_design');
             Route::get('/gosford/option_sumary/{slug}', 'optionsummary')->name('gosford.optionsummary');
             Route::post('/gosford/order_comfirmed', 'ordercomfirmed')->name('gosford.order_comfirmed');

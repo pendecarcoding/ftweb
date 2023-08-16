@@ -19,45 +19,12 @@
                 <div class="wrap-content">
 
                     <div style="padding-top: 0px" class="ace-isi">
+                        @include('gosford.layouts.alert')
                 <div class="main-body">
-
-
                       <div class="row gutters-sm">
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
-                            <div class="card-body">
-                              <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://www.ohio.edu/medicine/sites/ohio.edu.medicine/files/styles/max_650x650/public/default_images/portrait-missing.png?itok=ZIakRUEV" alt="Admin" class="rounded-circle" width="150">
-                                <div class="mt-3">
-                                  <h6>{{$profil->username}}</h6>
-                                  <p class="text-secondary mb-1">Name :</p>
-                                  <p class="text-muted font-size-sm">Contact Number : {{$profil->contact_number}}</p>
-                                  <button id="toggleProfil" onclick="editprofil()" class="btn btn-outline-danger">Edit Profil</button>
-                                  <button class="btn btn-outline-warning">Change Password</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card mt-3">
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0">My Order</h6>
-                                <span class="text-secondary">></span>
-                              </li>
-                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0">Notification</h6>
-                                <span class="text-secondary">></span>
-                              </li>
-                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0">Address</h6>
-                                <span class="text-secondary">></span>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </div>
+                        @include('gosford.frontend.panel-profil')
                         <div style="display:none" id="formeditProfil" class="col-md-8">
-                          <form action="" method="post">{{csrf_field()}}
+                          <form action="{{route('gosford.profil.update')}}" method="post">{{csrf_field()}}
                           <div class="card mb-3">
                             <div class="card-body">
                               <div class="row">
@@ -78,8 +45,6 @@
                                 </div>
                               </div>
                               <hr>
-
-
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Contact Number</h6>
@@ -94,7 +59,7 @@
                                   <h6 class="mb-0">Address</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="text" class="form-control">
+                                   <textarea name="address"  class="form-control" required></textarea>
                                 </div>
                               </div>
                               <hr>
@@ -106,10 +71,6 @@
                             </div>
                           </div>
                         </form>
-
-
-
-
                         </div>
                         <div id="beforeedit" class="col-md-8">
                           <div class="card mb-3">
@@ -147,7 +108,7 @@
                                   <h6 class="mb-0">Address</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                  Bay Area, San Francisco, CA
+                                    {{$profil->address}}
                                 </div>
                               </div>
                               <hr>

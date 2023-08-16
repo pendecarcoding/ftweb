@@ -32,15 +32,17 @@
         @endif
         @endforeach
         @if(Session::get('gystem_login'))
+        <a  href="{{ url('mypage') }}"
+        class="classurl @if (Request::is('mypage*')) classurl-active @endif  ">My Page</a>
         <div class="avatar-dropdown" id="icon">
-            <img src="https://cdn.iconscout.com/icon/free/png-512/avatar-370-456322.png">
+            <img  class="rounded-circle user-image" src="@if(getinfoaccount()->image != null) /public/users/{{getinfoaccount()->image}} @else /public/go_system/images/portrait-missing.png @endif">
             <span id="hello"> &nbsp; HI {{ getinfoaccount()->username }}</span>
         </div>
         <ul class="mdl-menu mdl-list mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp account-dropdown"
             for="icon">
             <li class="mdl-list__item mdl-list__item--two-line">
                 <span class="mdl-list__item-primary-content">
-                    <span class="material-icons mdl-list__item-avatar" style="background-image:url('https://cdn.iconscout.com/icon/free/png-512/avatar-370-456322.png');"></span>
+                    <span class="user-avatar material-icons mdl-list__item-avatar" style="background-image:url('@if(getinfoaccount()->image != null) /public/users/{{getinfoaccount()->image}} @else /public/go_system/images/portrait-missing.png @endif');"></span>
                     <span>{{ getinfoaccount()->username }}</span>
                     <span class="mdl-list__item-sub-title">{{ getinfoaccount()->email }}</span>
                 </span>
@@ -89,7 +91,7 @@
 
             <!-- Dropdown menu -->
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">GSAP SYSTEM</a>
+                <a class="dropdown-item" target="_blank" href="https://www.gosfordseat.com/gsap.php">GSAP SYSTEM</a>
                 <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-item" href="#">User Login</a>
                 <a data-bs-toggle="modal" data-bs-target="#staffModal" class="dropdown-item" href="#">Staff Login</a>
                 <!-- Add more dropdown items as needed -->

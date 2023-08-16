@@ -196,8 +196,7 @@
                                                         name="material" id="material" required>
                                                         @foreach ($material as $i => $vmaterial)
                                                             <option value="{{ $price[$i] . ',' . $vmaterial }}"><span
-                                                                    style="color:black">{{ $vmaterial }} |</span>
-                                                                {{ single_price($price[$i]) }}</option>
+                                                                    style="color:black">{{ $vmaterial }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
