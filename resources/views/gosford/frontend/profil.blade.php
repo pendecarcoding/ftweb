@@ -59,7 +59,7 @@
                                   <h6 class="mb-0">Address</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                   <textarea name="address"  class="form-control" required></textarea>
+                                   <textarea name="address"  class="form-control" required>{{$profil->address}}</textarea>
                                 </div>
                               </div>
                               <hr>
