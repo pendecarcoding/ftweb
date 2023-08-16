@@ -450,8 +450,9 @@ class gosfordController extends Controller
    }
 
    function listorder(){
+    $profil = GsystemAccount::where('id',Session::get('id_account'))->first();
     $data = GsystemOrder::join('products','products.id','gsystem_orders.product_id')->where('gsystem_orders.user_id',Session::get('id_account'))->get();
-    return view('gosford.system.orderlist',compact('data'));
+    return view('gosford.system.orderlist',compact('data','profil'));
    }
 
    function finishdesign(Request $r){

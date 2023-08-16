@@ -13,7 +13,7 @@
                     <h6>{{ $profil->full_name }}</h6>
                     <p class="text-secondary mb-1">{{ $profil->email }}:</p>
                     <p class="text-muted font-size-sm">Contact Number : {{ $profil->contact_number }}</p>
-                    <button id="toggleProfil" onclick="editprofil()" class="btn btn-outline-danger">Edit Profil</button>
+                    <button id="toggleProfil" @if (Request::is('g_system_order/gosford/listorder')) onclick="window.location.href = '{{url('g_system_order/gosford/f/profil')}}';" @else onclick="editprofil()" @endif class="btn btn-outline-danger">@if (Request::is('g_system_order/gosford/listorder')) Profil Page @else Edit Profil @endif</button>
                     <button data-bs-toggle="modal" data-bs-target="#changepass" class="btn btn-outline-warning">Change Password</button>
                 </div>
             </div>
