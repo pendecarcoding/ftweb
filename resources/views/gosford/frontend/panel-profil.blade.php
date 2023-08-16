@@ -3,7 +3,8 @@
         <div class="card-body">
             <div class="d-flex flex-column align-items-center text-center">
                 <div class="image-container" style="position: relative;">
-                    <img src="@if($profil->image != null) /public/users/{{$profil->image}} @else /public/go_system/images/portrait-missing.png @endif" alt="Admin" class="rounded-circle user-image" width="150">
+                    <img style="height: 130px;
+                    width: 130px;" src="@if($profil->image != null) /public/users/{{$profil->image}} @else /public/go_system/images/portrait-missing.png @endif" alt="Admin" class="rounded-circle user-image" width="150">
                     <button style="position: absolute;
                     bottom: 0;
                     right: 20px;" class="btn btn-danger btn-sm rounded-circle" id="image-picker"><i class="fa fa-image"></i></button>

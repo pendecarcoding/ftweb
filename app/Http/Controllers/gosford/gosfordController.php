@@ -265,7 +265,7 @@ class gosfordController extends Controller
 
    function uploadimage(Request $request){
     $request->validate([
-        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust max size as needed
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif', // Adjust max size as needed
     ]);
     if ($request->hasFile('image')) {
         $image = $request->file('image');
