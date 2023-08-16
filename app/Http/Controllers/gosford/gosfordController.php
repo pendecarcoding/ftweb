@@ -91,7 +91,7 @@ class gosfordController extends Controller
             if (Hash::check($r->password, $data->password)) {
                 Session::put('id_account',$data->id);
                 Session::put('gystem_login',true);
-                return redirect()->route('gosford.search');
+                return redirect()->url('mypage');
             } else {
                 // The hashed value does not match the plain text
                 return back()->with('danger','Your password is wrong. make sure you enter the correct password');
@@ -120,7 +120,7 @@ class gosfordController extends Controller
                     $car  = Car::where('slug',Session::get('optionlast'))->join('products','products.car_id','cars.id')->first();
                     return view('gosford.frontend.option_sumary',compact('car'));
                 }else{
-                    return redirect('product_project');
+                    return redirect('mypage');
                 }
 
             } else {
