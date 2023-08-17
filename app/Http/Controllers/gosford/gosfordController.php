@@ -372,7 +372,7 @@ class gosfordController extends Controller
    }
    function getyearfrommodel($model=null){
     $carModels = array();
-    $carModels = Car::where('name', $model)->groupBy('year')->get(['year']);
+    $carModels = Car::where('name', $model)->groupBy('year')->orderBy('year','desc')->get(['year']);
     return response()->json($carModels);
    }
 
