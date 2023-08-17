@@ -3,6 +3,10 @@
         <i class="material-icons menu-icon"></i>
         <i class="material-icons times-icon" style="display: none;">✕</i>
     </div>
+    <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button-login" id="navbarToggle">
+        <i style="font-size: 25px;" class="fa fa-user-circle" aria-hidden="true"></i>
+
+    </div>
     <div aria-expanded="false" role="button" tabindex="0" class="">
         <a href="{{ route('home') }}"><img id="acetopbar" class="acetopbar"
             src="{{ uploaded_asset(get_setting('system_logo_white')) }}" /></a>
