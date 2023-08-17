@@ -9,65 +9,56 @@
                     <div class="col text-center text-md-left">
                         <h5 class="mb-md-0 h6">{{ translate('Cars') }}</h5>
                     </div>
-                    <div class="col-md-4">
-                        <form class="" id="sort_brands" action="" method="GET">
-                            <div class="input-group input-group-sm">
-                                <input type="text" class="form-control" id="search"
-                                    name="search"@isset($sort_search) value="{{ $sort_search }}" @endisset
-                                    placeholder="{{ translate('Type name & Enter') }}">
-                            </div>
-                        </form>
-                    </div>
                 </div>
 
                 <div class="card-body">
-                    <table class="table aiz-table mb-0">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th></th>
-                                <th>{{ translate('Name') }}</th>
-                                <th>{{ translate('Year of make') }}</th>
-                                <th>{{ translate('Make') }}</th>
-                                <th>{{ translate('Type') }}</th>
-                                <th class="text-center">{{ translate('Options') }}</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($data as $i => $v)
+                    <div class="table-responsive">
+                        <table id="example" class="table table-striped table-bordered dataTable no-footer">
+                            <thead>
                                 <tr>
-                                    <td>{{ $i + 1 }}</td>
-                                    <td><img style="width:200;height:100px" src="{{ getimage($v->image) }}"
-                                            alt="{{ $v->name }}"></td>
-                                    <td>{{ $v->name }}</td>
-                                    <td>{{ $v->year }}</td>
-                                    <td>{{ make_car($v->make)->name }}</td>
-                                    <td>{{ type_car($v->type)->type }}</td>
-                                    <td class="text-center">
-                                        @can('edit_car')
-                                            <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
-                                                href="{{ route('cars.edit', ['id' => $v->id, 'lang' => env('DEFAULT_LANGUAGE')]) }}"
-                                                title="{{ translate('Edit') }}">
-                                                <i class="las la-edit"></i>
-                                            </a>
-                                        @endcan
-                                        @can('delete_car')
-                                            <a href="#"
-                                                class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
-                                                data-href="{{ route('cars.destroy', $v->id) }}"
-                                                title="{{ translate('Delete') }}">
-                                                <i class="las la-trash"></i>
-                                            </a>
-                                        @endcan
-                                    </td>
+                                    <th>#</th>
+                                    <th></th>
+                                    <th>{{ translate('Name') }}</th>
+                                    <th>{{ translate('Year of make') }}</th>
+                                    <th>{{ translate('Make') }}</th>
+                                    <th>{{ translate('Type') }}</th>
+                                    <th class="text-center">{{ translate('Options') }}</th>
                                 </tr>
-                            @endforeach
+                            </thead>
+                            <tbody>
+                                @foreach ($data as $i => $v)
+                                    <tr>
+                                        <td>{{ $i + 1 }}</td>
+                                        <td><img style="width:200;height:100px" src="{{ getimage($v->image) }}"
+                                                alt="{{ $v->name }}"></td>
+                                        <td>{{ $v->name }}</td>
+                                        <td>{{ $v->year }}</td>
+                                        <td>{{ make_car($v->make)->name }}</td>
+                                        <td>{{ type_car($v->type)->type }}</td>
+                                        <td class="text-center">
+                                            @can('edit_car')
+                                                <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
+                                                    href="{{ route('cars.edit', ['id' => $v->id, 'lang' => env('DEFAULT_LANGUAGE')]) }}"
+                                                    title="{{ translate('Edit') }}">
+                                                    <i class="las la-edit"></i>
+                                                </a>
+                                            @endcan
+                                            @can('delete_car')
+                                                <a href="#"
+                                                    class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
+                                                    data-href="{{ route('cars.destroy', $v->id) }}"
+                                                    title="{{ translate('Delete') }}">
+                                                    <i class="las la-trash"></i>
+                                                </a>
+                                            @endcan
+                                        </td>
+                                    </tr>
+                                @endforeach
 
-                        </tbody>
-                    </table>
-                    <div class="aiz-pagination">
-
+                            </tbody>
+                        </table>
                     </div>
+
                 </div>
             </div>
         </div>
