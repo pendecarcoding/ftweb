@@ -113,7 +113,27 @@
     <div class="navbar-mobile" id="mobileMenu">
         <ul>
             @foreach (getnav() as $v)
-                <li><a href="{{ url($v['link']) }}">{{$v['name']}}</a></li>
+            @if ($v['name'] === 'About')
+            <!-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle">{{$v['name']}}</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Board of Directors</a></li>
+                </ul>
+            </li> -->
+
+            <li class="nav-item dropdown">
+                <a style="color: white;" class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About
+                </a>
+                <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a style="padding-left: 27px;" href="{{url('about')}}">Company</a></li>
+                    <li><a style="padding-left: 27px;" href="{{url('about_director')}}">Board of Directors</a></li>
+                </ul>
+            </li>
+        @else
+            <li><a href="{{ url($v['link']) }}">{{$v['name']}}</a></li>
+        @endif
             @endforeach
         </ul>
     </div>
@@ -150,7 +170,26 @@ $(document).ready(function() {
 </script>
 
 
+<script>
+    const aboutToggle = document.querySelector('#navbarDarkDropdownMenuLink');
+    const aboutDropdown = document.querySelector('.dropdown-menus');
 
+    aboutToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (aboutDropdown.style.display === 'none' || aboutDropdown.style.display === '') {
+            aboutDropdown.style.display = 'block';
+        } else {
+            aboutDropdown.style.display = 'none';
+        }
+    });
+
+    // Close the dropdown when clicking outside
+    window.addEventListener('click', function (e) {
+        if (!aboutToggle.contains(e.target) && !aboutDropdown.contains(e.target)) {
+            aboutDropdown.style.display = 'none';
+        }
+    });
+</script>
 
 <script>
     function logoutFunction() {
