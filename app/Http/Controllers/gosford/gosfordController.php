@@ -315,9 +315,11 @@ class gosfordController extends Controller
     $year   = $r->year;
     $model  = $r->model;
     $carmake= $r->carmake;
-    $car  = Car::where('make',$r->carmake)->where('cars.id',$r->model)->where('year',$r->year)->join('products','products.car_id','cars.id')->get();
+    $car   = Car::where('make',$r->carmake)->where('cars.name',$model)->where('year',$r->year)->join('products','products.car_id','cars.id')->get();
+    $model = Car::where('name',$model)->first();
     return view('gosford.frontend.product.choice_design',compact('car','year','model','carmake'));
-
+    // print $model.'<br>'.$carmake.'<br>'.$year;
+    // print json_encode($car);
    }
 
    //Two TownColor
