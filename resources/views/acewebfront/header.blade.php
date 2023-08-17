@@ -109,7 +109,7 @@
     <div class="navbar-mobile" id="mobileMenu">
         <ul>
             @foreach (getnav() as $v)
-                <li><a href="{{$v['link']}}">{{$v['name']}}</a></li>
+                <li><a href="{{ url($v['link']) }}">{{$v['name']}}</a></li>
             @endforeach
         </ul>
     </div>
