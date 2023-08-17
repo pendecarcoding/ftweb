@@ -28,7 +28,7 @@
                     <div class="carousel-inner">
                         @foreach ($slider as $is => $v)
                             <div class="carousel-item @if ($is == 0) active @endif">
-                                <img class="slider-banner" src="{{ asset('public/' . $v->file_name) }}" />
+                                <img class="slider-banner" style="width: 100%;height: 380px;object-fit: cover;" src="{{ asset('public/' . $v->file_name) }}" />
                                 <div class="col-md-6">
                                     <div class="container">
 
