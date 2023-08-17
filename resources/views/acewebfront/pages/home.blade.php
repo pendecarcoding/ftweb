@@ -317,7 +317,7 @@
               <div class="row" style="padding: 50px 0px;">
                 @foreach($leadership as $i => $v)
                 <div data-aos="fade-up" data-aos-delay="{{$i+1}}00"  class="col-md-3">
-                    <img class="img-responsive" src="{{getimage($v->foto)}}" alt="">
+                    <img style="border-radius: 10px;" class="img-responsive" src="{{getimage($v->foto)}}" alt="">
                     <div class="caption_leadership">
                         <div class="leadership_name">{{$v->name}}</div>
                         <div class="leadership_position">{{$v->position}}</div>
