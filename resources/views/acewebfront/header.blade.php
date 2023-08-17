@@ -1,4 +1,8 @@
 <header class="mdl-layout__header is-casting-shadow">
+    <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button" id="navbarToggle">
+        <i class="material-icons menu-icon"></i>
+        <i class="material-icons times-icon" style="display: none;">✕</i>
+    </div>
     <div aria-expanded="false" role="button" tabindex="0" class="">
         <a href="{{ route('home') }}"><img id="acetopbar" class="acetopbar"
             src="{{ uploaded_asset(get_setting('system_logo_white')) }}" /></a>
@@ -98,11 +102,51 @@
             </div>
         </div>
         @endif
-        <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>
+
     </div>
 
     </div>
+    <div class="navbar-mobile" id="mobileMenu">
+        <ul>
+            @foreach (getnav() as $v)
+                <li><a href="{{$v['link']}}">{{$v['name']}}</a></li>
+            @endforeach
+        </ul>
+    </div>
 </header>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Get references to the icon and navbar-mobile elements
+    var $navbarToggle = $('#navbarToggle');
+    var $mobileMenu = $('#mobileMenu');
+    var $menuIcon = $('.menu-icon');
+    var $timesIcon = $('.times-icon');
+
+    // Add a click event handler to the icon
+    $navbarToggle.click(function() {
+        // Toggle the 'active' class on navbar-mobile
+        $mobileMenu.toggleClass('active');
+
+        // Toggle the icons
+        $menuIcon.toggle();
+        $timesIcon.toggle();
+
+        // Check if the 'active' class is present
+        if ($mobileMenu.hasClass('active')) {
+            // If it's active, show the navbar with animation
+            $mobileMenu.slideDown();
+        } else {
+            // If it's not active, hide the navbar with animation
+            $mobileMenu.slideUp();
+        }
+    });
+});
+</script>
+
+
+
 
 <script>
     function logoutFunction() {

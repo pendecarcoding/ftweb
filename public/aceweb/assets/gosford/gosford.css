@@ -10252,7 +10252,7 @@ form.form--basic .mdl-textfield__label {
 @media screen and (max-width:500px){
     .navbar-mobile{
         background-color: #bf1e2d;
-        display: block;
+        display: none;
     }
     .navbar-mobile ul{
         list-style-type: none;
@@ -10273,6 +10273,24 @@ form.form--basic .mdl-textfield__label {
         background-color: #555;
         color: white;
       }
+      /* Hide the mobile menu by default */
+
+/* Apply animation when showing/hiding */
+.navbar-mobile.active {
+    display: block;
+    animation: slideAnimation 0.3s ease-in-out;
+}
+
+@keyframes slideAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     .btn-nav-login{
         display: none;
     }
@@ -10396,7 +10414,7 @@ form.form--basic .mdl-textfield__label {
     .mdl-layout__drawer-button {
         display: block;
         top: -6px;
-        right: 0;
+        left: 0;
         height: 40px;
 
     }
@@ -10411,7 +10429,7 @@ form.form--basic .mdl-textfield__label {
     }
     .acetopbar {
         background: white;
-        left: 9px;
+        left: 59px;
         top: 6px;
         z-index: 998;
         position: absolute;
