@@ -10246,7 +10246,33 @@ form.form--basic .mdl-textfield__label {
     text-align: justify;
     margin: 10px 50px;
 }
+.navbar-mobile{
+    display: none;
+}
 @media screen and (max-width:500px){
+    .navbar-mobile{
+        background-color: #bf1e2d;
+        display: block;
+    }
+    .navbar-mobile ul{
+        list-style-type: none;
+        padding-left: 0;
+
+    }
+    .navbar-mobile li a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    .navbar-mobile li a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+    .navbar-mobile li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
     .btn-nav-login{
         display: none;
     }

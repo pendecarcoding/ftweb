@@ -135,7 +135,7 @@
             function addCarModelOption(carId, carName, selectElement) {
             const option = document.createElement('option');
             option.text = carName;
-            option.value = carId; // Use the car's ID as the option value
+            option.value = carName; // Use the car's ID as the option value
             selectElement.add(option);
             }
 
