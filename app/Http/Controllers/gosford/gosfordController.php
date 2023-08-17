@@ -365,7 +365,7 @@ class gosfordController extends Controller
 
    function getmodelfrommake($make=null){
     $carModels = array();
-    $carModels = Car::where('make', $make)->get(['id', 'name']);
+    $carModels = Car::where('make', $make)->groupBy('name')->get(['id', 'name']);
     return response()->json($carModels);
    }
    function getyearfrommodel($model=null){
