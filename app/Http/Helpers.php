@@ -306,7 +306,7 @@ function getimage($id){
         $data = Upload::findorfail($id);
         return '/public/'.$data->file_name;
     } catch (\Throwable $th) {
-        return null;
+        return '/public/assets/img/placeholder.jpg';
     }
 
 
