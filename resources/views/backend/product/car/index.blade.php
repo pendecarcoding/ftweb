@@ -29,7 +29,8 @@
                                 @foreach ($data as $i => $v)
                                     <tr>
                                         <td>{{ $i + 1 }}</td>
-                                        <td><img style="width:200;height:100px" src="{{ getimage($v->image) }}"
+                                        <td><img style="width: 50px;
+                                            height: 50px;" src="{{ getimage($v->image) }}"
                                                 alt="{{ $v->name }}"></td>
                                         <td>{{ $v->name }}</td>
                                         <td>{{ $v->year }}</td>
