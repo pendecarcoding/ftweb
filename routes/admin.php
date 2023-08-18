@@ -63,6 +63,7 @@ use App\Http\Controllers\LeadershipController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\TypeCarsController;
 use App\Http\Controllers\CarsController;
+use App\Http\Controllers\ResearchController;
 
 
 /*
@@ -544,6 +545,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
          Route::get('/persentation/destroy/{id}', 'destroy')->name('persentation.destroy');
          Route::post('/persentation/change-status', 'change_status')->name('persentation.change-status');
     });
+
+    //Research And Development
+    Route::resource('research',ResearchController::class);
+    Route::controller(ResearchController::class)->group(function () {
+        Route::get('/persentation/destroy/{id}', 'destroy')->name('persentation.destroy');
+        Route::post('/persentation/change-status', 'change_status')->name('persentation.change-status');
+   });
 
     //Coupons
     Route::resource('coupon', CouponController::class);
