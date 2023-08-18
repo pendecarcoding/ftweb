@@ -5,13 +5,12 @@
     color: #5c7a9f;" href="{{ route('admin.dashboard') }}"
                 class="d-block text-left">
                 @if (get_setting('system_logo_white') != null)
-                    <img class="mw-100" src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="brand-icon"
+                    <img style="    background-color: white;" class="mw-100" src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="brand-icon"
                         alt="{{ get_setting('site_name') }}">
                 @else
-                    <img class="mw-100" src="{{ uploaded_asset(get_setting('site_icon')) }}" class="brand-icon"
+                    <img style="    background-color: white;" class="mw-100" src="{{ uploaded_asset(get_setting('site_icon')) }}" class="brand-icon"
                         alt="{{ get_setting('site_name') }}">
                 @endif
-                ADMIN PANEL
             </a>
         </div>
         <div class="aiz-side-nav-wrap">
@@ -33,15 +32,15 @@
                         </a>
                     </li>
                 @endcan
-                <!-- @can('admin_announcement')
+                @can('admin_announcement')
                                                         <li class="aiz-side-nav-item">
                                                             <a href="{{ route('announcements.staff') }}" class="aiz-side-nav-link">
                                                                 <i class="las la-bullhorn aiz-side-nav-icon"></i>
                                                                 <span class="aiz-side-nav-text">{{ translate('Announcement For Staff') }}</span>
                                                             </a>
                                                         </li>
-                @endcan -->
-                <!-- @can('admin_announcement')
+                @endcan
+                @can('admin_announcement')
                                                         <li class="aiz-side-nav-item">
                                                             <a href="{{ route('handbook.staff') }}"
                                                                 class="aiz-side-nav-link {{ areActiveRoutes(['handbook.staff', 'handbook.create']) }}">
@@ -49,7 +48,7 @@
                                                                 <span class="aiz-side-nav-text">{{ translate('Handbook Staff') }}</span>
                                                             </a>
                                                         </li>
-                @endcan -->
+                @endcan
 
                 <!-- POS Addon-->
                 @if (addon_is_activated('pos_system') &&
@@ -907,6 +906,16 @@
                         </ul>
                     </li>
                 @endcanany
+
+                @can('admin_announcement')
+                <li class="aiz-side-nav-item">
+                    <a href="{{ route('research.index') }}"
+                        class="aiz-side-nav-link {{ areActiveRoutes(['handbook.staff', 'handbook.create']) }}">
+                        <i class="las la-book aiz-side-nav-icon"></i>
+                        <span class="aiz-side-nav-text">{{ translate('Research & Development') }}</span>
+                    </a>
+                </li>
+                @endcan
 
                 <!-- marketing -->
                 {{-- @canany(['view_all_flash_deals', 'send_newsletter', 'send_bulk_sms', 'view_all_subscribers', 'view_all_coupons'])
