@@ -10,43 +10,7 @@
         width: 100%;">
             <div style="width:100%;    height: 376px;position: relative;overflow: hidden;display: flex;
             flex-direction: column;">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        @php
-                            $noslide = 0;
-                        @endphp
-                        @foreach ($slider as $is => $v)
-                            @if (count($slider) > 1)
-                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="{{ $is }}"
-                                    class="btn-slide @if ($is == 0) active @endif"
-                                    @if ($is == 0) aria-current="true" @endif
-                                    aria-label="Slide {{ $is }}"></button>
-                            @endif
-                        @endforeach
-                    </div>
-                    <div class="carousel-inner">
-                        @foreach ($slider as $is => $v)
-                            <div class="carousel-item @if ($is == 0) active @endif">
-                                <img class="slider-banner" style="width: 100%;height: 380px;object-fit: cover;" src="{{ asset('public/' . $v->file_name) }}" />
-                                <div class="col-md-6">
-                                    <div class="container">
-
-                                        <div data-aos="fade-up" class="carousel-caption text-start">
-                                            <h1>
-                                                {{ $v->caption }}
-                                            </h1>
-                                            <p class="ace-banner-p">{{ $v->sub_caption }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </div>
-                </div>
+                <iframe style="width:100%" height="523" src="https://www.youtube.com/embed/qVcqi1GuEiw" title="HOW TO CUT &amp; ENGRAVE LEATHER | WATTSAN CNC MACHINE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
         </section>
@@ -102,7 +66,7 @@
 
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-12" style="position: relative;overflow: hidden;">
-                            <iframe width="930" height="523" src="https://www.youtube.com/embed/qVcqi1GuEiw" title="HOW TO CUT &amp; ENGRAVE LEATHER | WATTSAN CNC MACHINE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <img style="width: 100%;" src="/public/go_system/images/research/cut_img_3.svg" alt="">
                         </div>
 
 
