@@ -5,10 +5,10 @@
     color: #5c7a9f;" href="{{ route('admin.dashboard') }}"
                 class="d-block text-left">
                 @if (get_setting('system_logo_white') != null)
-                    <img style="    background-color: white;" class="mw-100" src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="brand-icon"
+                    <img class="mw-100" src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="brand-icon"
                         alt="{{ get_setting('site_name') }}">
                 @else
-                    <img style="    background-color: white;" class="mw-100" src="{{ uploaded_asset(get_setting('site_icon')) }}" class="brand-icon"
+                    <img class="mw-100" src="{{ uploaded_asset(get_setting('site_icon')) }}" class="brand-icon"
                         alt="{{ get_setting('site_name') }}">
                 @endif
             </a>
