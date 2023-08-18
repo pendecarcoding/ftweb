@@ -147,7 +147,7 @@ var observer = new MutationObserver(function(mutations) {
     if(mutation.target.textContent=="5/5"){
            //imggpt.classList.remove("fadeIn");
 
-           //$("#imggpt1").attr("src", "https://aceweb.kanalapps.web.id/public//aceweb/assets/img/gtp5.png");
+           $("#imggpt1").attr("src", "/public/aceweb/assets/img/gtp5.png");
     }
   });
 });
