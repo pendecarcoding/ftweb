@@ -124,6 +124,10 @@ class AceController extends Controller
 
     public function page($page){
         switch ($page) {
+            case 'Research & Development':
+            $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','RESEARCH')->get();
+            return view('gosford.frontend.research',compact('slider'));
+            break;
             case 'mypage';
             $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','PERSONAL')->get();
             return view('gosford.frontend.choice_design',compact('slider'));
