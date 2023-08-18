@@ -193,7 +193,7 @@
                         data-aos-delay="800">
                             <img  src="{{ static_asset('aceweb') }}/assets/img/circle-g2.png" alt="" />
                         </div>
-                        <div class="card-circle" data-aos="zoom-in-down"
+                        <div onclick="window.open('https://gosfordseat.com/trimex/', '_blank');"  class="card-circle" data-aos="zoom-in-down"
                         data-aos-delay="900">
                             <img  src="{{ static_asset('aceweb') }}/assets/img/trimex.svg" alt="" />
                         </div>

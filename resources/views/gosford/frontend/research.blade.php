@@ -4,13 +4,14 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-sliders" style="    height: 311px;">
+        <section class="ace-sliders" style="height: 536px;">
         <div style="top: 0;
+            height: 600px;
         position: absolute;
         width: 100%;">
-            <div style="width:100%;    height: 376px;position: relative;overflow: hidden;display: flex;
+            <div style="width:100%;height: 600px;position: relative;overflow: hidden;display: flex;
             flex-direction: column;">
-                <iframe style="width:100%" height="523" src="https://www.youtube.com/embed/qVcqi1GuEiw" title="HOW TO CUT &amp; ENGRAVE LEATHER | WATTSAN CNC MACHINE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe style="width:100%;height: 600px;" src="https://www.youtube.com/embed/qVcqi1GuEiw" title="HOW TO CUT &amp; ENGRAVE LEATHER | WATTSAN CNC MACHINE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
         </section>
