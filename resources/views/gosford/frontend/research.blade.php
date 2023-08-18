@@ -51,7 +51,7 @@
         </div>
         </section>
 
-        <section class="pt-5 pb-5">
+        <section class="pt-5 pb-5" style="padding-top: 0rem !important;">
             <div style="display: flex;flex-direction: column;">
                 <div style="position: relative;">
                     <div class="row" style="padding-left: 0px;padding-right: 0px;--bs-gutter-x: 0;">
