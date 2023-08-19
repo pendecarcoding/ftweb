@@ -11,7 +11,11 @@
         width: 100%;">
             <div style="width:100%;height: 600px;position: relative;overflow: hidden;display: flex;
             flex-direction: column;">
-                <iframe style="width:100%;height: 600px;" src="https://www.youtube.com/embed/qVcqi1GuEiw" title="HOW TO CUT &amp; ENGRAVE LEATHER | WATTSAN CNC MACHINE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <video style="height: 600px;background-color: #333333;" controls>
+                <source style="width: 100%;"  src="/public/go_system/video/howto.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             </div>
         </div>
         </section>
@@ -137,4 +141,22 @@
 
 
     </main>
+    <script>
+        // Wait for the iframe to load
+        document.getElementById('youtube-iframe').onload = function() {
+          // Access the iframe content window
+          var iframe = document.getElementById('youtube-iframe');
+          var iframeContent = iframe.contentWindow.document;
+
+          // Apply styles to the iframe content
+          var styles = `
+            .ytp-impression-link {
+              display: none !important;
+            }
+          `;
+          var styleElement = iframeContent.createElement('style');
+          styleElement.innerHTML = styles;
+          iframeContent.head.appendChild(styleElement);
+        };
+        </script>
 @endsection

@@ -4,6 +4,9 @@ footer{
     bottom: 0;
     width: 100%;
 }
+.ytp-impression-link {
+    display: none !important;
+  }
 input[type=file] {
     height: 44px;
     width: 350px;
