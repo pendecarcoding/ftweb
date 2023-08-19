@@ -47,6 +47,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">
+                                {{translate('Link Youtube')}}
+                                <span class="text-danger">*</span>
+                            </label>
+                            <div class="col-md-9">
+                                <input value="{{$data->yt_link}}" type="text" placeholder="{{translate('Link Youtube')}}"  id="name" name="yt_link" class="form-control">
+                            </div>
+                        </div>
 
 
 

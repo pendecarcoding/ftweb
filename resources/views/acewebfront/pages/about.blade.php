@@ -31,7 +31,15 @@
                 @foreach($data as $i =>$v)
                 <div data-aos="fade-up" class="row about-company" style=" @if($i == 0) background-color: rgba(242, 245, 249, 1); @endif">
                     <div class="col-md-6">
-                        <img style="width: 100%;" class="img-responsive" src="{{getimage($v->foto)}}" alt="">
+                    <div style="position: relative;"> <img style="width: 100%;" class="img-responsive" src="{{getimage($v->foto)}}" alt="">
+                        @if($v->yt_link != null)
+                        <div class="video-play-icon">
+                          <a  data-bs-toggle="modal" data-bs-target="#ytvd{{$v->id}}" href="#" class="video bg-danger"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+
+                        @endif
+                    </div>
+
                     </div>
                     <div class="col-md-6 content_company">
                         <div style="">
@@ -41,6 +49,28 @@
                         <!-- <a style="margin:50px 0px;" class="btn gsf-button">Learn More</a> -->
                     </div>
                   </div>
+                  @if($v->yt_link != null)
+                  <div class="modal fade" id="ytvd{{$v->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div  class="modal-header">
+
+                          <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div style="position: relative;overflow: hidden;">
+                                {!! $v->yt_link !!}
+                            </div>
+
+                        </div>
+                        <div style="background-color: brown;" class="modal-footer">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  @endif
+
                   @endforeach
 
               </div>

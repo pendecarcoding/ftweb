@@ -43,11 +43,14 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
+        $originalHtml = $request->yt_link;
+        $modifiedHtml = preg_replace('/<iframe\s+width="(\d+)"\s+height="(\d+)"\s+/', '<iframe style="width:100%" height="$2" ', $originalHtml);
 
                 $d = new Company;
                 $d->name     = $request->name;
                 $d->foto = $request->foto;
                 $d->content = $request->content;
+                $d->yt_link = $modifiedHtml;
                 $d->save();
                 flash(translate('Company has been inserted successfully'))->success();
                 return redirect()->route('company.index');
@@ -88,10 +91,13 @@ class CompanyController extends Controller
 
     public function update(Request $request, $id)
     {
+        $originalHtml = $request->yt_link;
+        $modifiedHtml = preg_replace('/<iframe\s+width="(\d+)"\s+height="(\d+)"\s+/', '<iframe style="width:100%" height="$2" ', $originalHtml);
         $d = Company::find(base64_decode($id));
         $d->name     = $request->name;
         $d->foto = $request->foto;
         $d->content = $request->content;
+        $d->yt_link = $modifiedHtml;
         $d->save();
         flash(translate('Company has been updated successfully'))->success();
         return redirect()->route('company.index');

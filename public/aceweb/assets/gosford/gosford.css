@@ -4,9 +4,37 @@ footer{
     bottom: 0;
     width: 100%;
 }
-.ytp-impression-link {
+  .ytp-impression-link {
     display: none !important;
   }
+  .video-play-icon {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    -moz-transform: translate(-50% ,-50%);
+    -webkit-transform: translate(-50% ,-50%);
+    -ms-transform: translate(-50% ,-50%);
+    -o-transform: translate(-50% ,-50%);
+}
+.video-play-icon a {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    box-shadow: 0 0 0 10px rgb(255 255 255 / 20%);
+    display: block;
+    font-size: 28px;
+    margin: auto;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
 input[type=file] {
     height: 44px;
     width: 350px;
