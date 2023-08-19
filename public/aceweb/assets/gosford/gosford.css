@@ -4,6 +4,24 @@ footer{
     bottom: 0;
     width: 100%;
 }
+
+.padding-research{
+    padding: 15%;
+}
+.img-research{
+    padding: 5px 0px;
+}
+
+.banner-video{
+    height: 536px;
+}
+.banner-video-div{
+    height: 600px;
+}
+.video-style-banner{
+    height: 600px;
+    background-color: #333333;
+}
   .ytp-impression-link {
     display: none !important;
   }
@@ -10284,6 +10302,23 @@ form.form--basic .mdl-textfield__label {
    display: none;
 }
 @media screen and (max-width:500px){
+    .padding-research{
+        padding: 4%;
+    }
+    .banner-video{
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+    .banner-video-div{
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+    .video-style-banner{
+        height: 270px;
+        background-color: #333333;
+    }
     .mdl-layout__header .mdl-layout__drawer-button-login {
         position: absolute;
         color: #ffffff;
