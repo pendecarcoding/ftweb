@@ -10324,6 +10324,11 @@ form.form--basic .mdl-textfield__label {
     color: brown;
 }
 @media screen and (max-width:500px){
+    .wrap-content {
+        position: relative;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
     .mdl-menu__container{
         right: -14px;
     top: 39px;
