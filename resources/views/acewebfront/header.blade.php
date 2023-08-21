@@ -3,7 +3,7 @@
         <i class="material-icons menu-icon"></i>
         <i class="material-icons times-icon" style="display: none;">✕</i>
     </div>
-    <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button-login" id="navbarToggle">
+    <div data-bs-toggle="modal" data-bs-target="#myLogin" aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button-login" id="navbarToggle">
         <i style="font-size: 25px;" class="fa fa-user-circle" aria-hidden="true"></i>
 
     </div>
@@ -138,6 +138,36 @@
         </ul>
     </div>
 </header>
+<div>
+    <div style="    margin-top: 60vh;" class="modal" id="myLogin">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <center><img style="width:100%" src="{{ uploaded_asset(get_setting('system_logo_white')) }}"
+                    height="50"></center>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <center>Select Login Accounts</center>
+              <div style="display: flex;gap:5px;margin-top: 20px;">
+                <a style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> STAFF</a>
+                <a style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> USER</a>
+                <a href="https://www.gosfordseat.com/gsap.php" target="_blank" style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> GSAP</a>
+              </div>
+            </div>
+
+            <!-- Modal footer -->
+
+
+          </div>
+        </div>
+      </div>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>

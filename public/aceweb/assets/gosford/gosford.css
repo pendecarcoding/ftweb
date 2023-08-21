@@ -5,6 +5,19 @@ footer{
     width: 100%;
 }
 
+.fixed-bottom-modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; /* Menentukan z-index sesuai kebutuhan */
+    display: none; /* Sembunyikan modal secara default */
+}
+
+.fixed-bottom-modal.show {
+    display: block; /* Tampilkan modal jika memiliki kelas "show" */
+}
+
 .padding-research{
     padding: 15%;
 }
