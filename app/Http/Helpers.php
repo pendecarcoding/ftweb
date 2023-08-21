@@ -313,6 +313,15 @@ function getimage($id){
 
 }
 
+function getContactByDevision($id){
+    try {
+        $data = DB::table('contacts')->where('devision',$id)->get();
+        return $data;
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+}
+
 function updatecronjob(){
     $gpLiveBuyPrices = array();
     $client = new WebSocket\Client("wss://snappy.ace2u.com/socket.io/?EIO=3socket.io/?EIO=3&transport=websocket");

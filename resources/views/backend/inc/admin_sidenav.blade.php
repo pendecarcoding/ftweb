@@ -910,9 +910,18 @@
                 @can('admin_announcement')
                 <li class="aiz-side-nav-item">
                     <a href="{{ route('research.index') }}"
-                        class="aiz-side-nav-link {{ areActiveRoutes(['handbook.staff', 'handbook.create']) }}">
+                        class="aiz-side-nav-link {{ areActiveRoutes(['research.edit', 'research.create']) }}">
                         <i class="las la-book aiz-side-nav-icon"></i>
                         <span class="aiz-side-nav-text">{{ translate('Research & Development') }}</span>
+                    </a>
+                </li>
+                @endcan
+                @can('admin_contact')
+                <li class="aiz-side-nav-item">
+                    <a href="{{ route('contact.index') }}"
+                        class="aiz-side-nav-link {{ areActiveRoutes(['contact.edit', 'contact.create']) }}">
+                        <i class="las la-building aiz-side-nav-icon"></i>
+                        <span class="aiz-side-nav-text">{{ translate('Contact') }}</span>
                     </a>
                 </li>
                 @endcan

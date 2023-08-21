@@ -64,6 +64,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\TypeCarsController;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\ResearchController;
+use App\Http\Controllers\ContactController;
 
 
 /*
@@ -552,8 +553,15 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/research/create', 'create')->name('research.create');
         Route::get('/research/edit/{id}', 'edit')->name('researcg.edit');
         Route::get('/research/destroy/{id}', 'destroy')->name('research.destroy');
-        Route::post('/persentation/change-status', 'change_status')->name('persentation.change-status');
    });
+
+   //Contact
+   Route::resource('contact',ContactController::class);
+   Route::controller(ContactController::class)->group(function () {
+       Route::get('/contact/create', 'create')->name('contact.create');
+       Route::get('/contact/edit/{id}', 'edit')->name('contact.edit');
+       Route::get('/contact/destroy/{id}', 'destroy')->name('contact.destroy');
+  });
 
     //Coupons
     Route::resource('coupon', CouponController::class);

@@ -660,7 +660,8 @@ class AceController extends Controller
                 return view('acewebfront.pages.newsroom',compact('data','page'));
                 break;
             case 'contact':
-                return view('acewebfront.pages.contact',compact('page'));
+                $devision = DB::table('devisions')->orderby('short','ASC')->get();
+                return view('acewebfront.pages.contact',compact('page','devision'));
                 break;
             default:
                 return redirect()->route('home');
