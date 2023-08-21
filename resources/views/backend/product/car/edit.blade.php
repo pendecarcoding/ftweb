@@ -96,7 +96,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Year') }}</label>
-                                <select name="year" id="" class="form-control">
+                                <select name="year" id="" class="form-control" required>
                                     <option value="">--Select Year--</option>
                                     @for ($i = 1986; $i <= date('Y'); $i++)
                                         <option value="{{ $i }}" @if ($edit->year == $i) selected @endif>
@@ -106,7 +106,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Make') }}</label>
-                                <select name="make" id="" class="form-control">
+                                <select name="make" id="" class="form-control" required>
                                     <option value="">--Make--</option>
                                     @foreach ($brand as $i => $v)
                                         <option value="{{ $v->id }}" @if ($edit->make == $v->id) selected @endif>
@@ -116,7 +116,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Type') }}</label>
-                                <select name="type" id="" class="form-control">
+                                <select name="type" id="" class="form-control" required>
                                     <option value="">--type--</option>
                                     @foreach ($type as $i => $v)
                                         <option value="{{ $v->id }}" @if ($edit->type == $v->id) selected @endif>
