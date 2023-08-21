@@ -139,7 +139,7 @@
     </div>
 </header>
 <div>
-    <div style="margin-top: 75vh;" class="modal" id="myLogin">
+    <div style="margin-top: 55vh;" class="modal" id="myLogin">
         <div class="modal-dialog">
           <div class="modal-content">
 
