@@ -94,7 +94,7 @@
                                 <div style="display: flex;gap:2px">
                                     <select name="year" id="" class="form-control" required>
                                         <option value="">--Start Year--</option>
-                                        @for ($i = 1986; $i <= date('Y'); $i++)
+                                        @for ($i = 1970; $i <= date('Y'); $i++)
                                             <option value="{{ $i }}">{{ $i }}</option>
                                         @endfor
                                     </select>
