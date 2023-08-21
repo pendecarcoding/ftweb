@@ -139,7 +139,7 @@
     </div>
 </header>
 <div>
-    <div style="    margin-top: 60vh;" class="modal" id="myLogin">
+    <div style="margin-top: 75vh;" class="modal" id="myLogin">
         <div class="modal-dialog">
           <div class="modal-content">
 
@@ -154,7 +154,7 @@
             <div class="modal-body">
                 <center>Select Login Accounts</center>
               <div style="display: flex;gap:5px;margin-top: 20px;">
-                <a style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> STAFF</a>
+                <a href="{{route('mobile.login.staff')}}" style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> STAFF</a>
                 <a style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> USER</a>
                 <a href="https://www.gosfordseat.com/gsap.php" target="_blank" style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> GSAP</a>
               </div>

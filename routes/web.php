@@ -112,6 +112,7 @@ Route::controller(AceController::class)->group(function(){
     Route::get('/{page}/{slug}','pageslug')->name('pageslug');
     Route::post('forcorporate/addrequest/submit','addrequest')->name('forcorporate.addrequest');
     Route::get('/view/track-your-order/code', 'trackOrder')->name('orders.track');
+    Route::get('/view/mobile/loginstaff', 'loginstaffview')->name('mobile.login.staff');
 
 });
 
@@ -164,7 +165,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/terms', 'terms')->name('terms');
     Route::get('/privacy-policy', 'privacypolicy')->name('privacypolicy');
 
-    
+
 });
 
 // Language Switch
