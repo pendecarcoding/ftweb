@@ -113,6 +113,8 @@ Route::controller(AceController::class)->group(function(){
     Route::post('forcorporate/addrequest/submit','addrequest')->name('forcorporate.addrequest');
     Route::get('/view/track-your-order/code', 'trackOrder')->name('orders.track');
     Route::get('/view/mobile/loginstaff', 'loginstaffview')->name('mobile.login.staff');
+    Route::get('/view/mobile/loginuserviewmobile', 'loginuserviewmobile')->name('mobile.login.user');
+
 
 });
 

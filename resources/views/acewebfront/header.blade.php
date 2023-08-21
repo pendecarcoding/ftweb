@@ -133,8 +133,14 @@
             </li>
         @else
             <li><a href="{{ url($v['link']) }}">{{$v['name']}}</a></li>
+
+
         @endif
             @endforeach
+            @if(Session::get('gystem_login'))
+            <li> <a  href="{{ url('mypage') }}"
+            >My Page</a></li>
+            @endif
         </ul>
     </div>
 </header>
@@ -155,7 +161,7 @@
                 <center>Select Login Accounts</center>
               <div style="display: flex;gap:5px;margin-top: 20px;">
                 <a href="{{route('mobile.login.staff')}}" style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> STAFF</a>
-                <a style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> USER</a>
+                <a href="{{route('mobile.login.user')}}" style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> USER</a>
                 <a href="https://www.gosfordseat.com/gsap.php" target="_blank" style="width:100%" class="btn btn-danger"><i class="fa fa-user"></i> GSAP</a>
               </div>
             </div>

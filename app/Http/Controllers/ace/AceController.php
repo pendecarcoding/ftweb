@@ -127,6 +127,10 @@ class AceController extends Controller
         return view('mobile.login.staff');
     }
 
+    public function loginuserviewmobile(Request $r){
+        return view('mobile.login.user');
+    }
+
     public function page($page){
         switch ($page) {
             case 'Research & Development':
