@@ -27,7 +27,8 @@
                                 {{ translate('Content') }}
                             </label>
                             <div class="col-md-9">
-                                <textarea class="aiz-text-editor" name="content">{!! $data->content !!}</textarea>
+
+                                <textarea id="editor" name="content">{!! $data->content !!}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">

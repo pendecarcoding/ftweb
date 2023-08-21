@@ -34,7 +34,7 @@
     <script src="{{ static_asset('assets/Datatables/datatables.min.js') }}"></script> --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
-
+    <script src="https://cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
     <style>
         body {
             font-size: 12px;
@@ -160,6 +160,9 @@
                 pagingType: 'full_numbers',
             });
         });
+    </script>
+    <script>
+       CKEDITOR.replace( 'editor' );
     </script>
 
 </body>
