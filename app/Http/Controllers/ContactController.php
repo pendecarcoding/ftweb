@@ -25,7 +25,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $data = Contact::join('devisions','devisions.id','contacts.devision')->orderby('short','ASC')->get();
+        $data = Contact::select('contacts.id as id','contacts.title as title','contacts.img as img','contacts.content as content','contacts.devision as devision')->join('devisions','devisions.id','contacts.devision')->orderby('short','ASC')->get();
         return view('backend.contact.index', compact('data'));
     }
 
