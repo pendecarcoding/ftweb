@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Persentation;
+use App\Models\Research;
 use File;
 
 class ResearchController extends Controller
@@ -23,7 +24,7 @@ class ResearchController extends Controller
      */
     public function index()
     {
-        $data = Persentation::all();
+        $data = Research::orderby('id','desc')->get();
         return view('backend.research.index', compact('data'));
     }
 
@@ -45,35 +46,17 @@ class ResearchController extends Controller
      */
     public function store(Request $request)
     {
-               $request->validate([
-                 'file' => 'required|mimes:doc,docx,xls,xlsx,pdf'
-                ]);
-                if($request->hasFile('file')) {
-                    $uploadPath = public_path('download/persentation');
-                      if(!File::isDirectory($uploadPath)) {
-                         File::makeDirectory($uploadPath, 0755, true, true);
-                      }
-                      $file = $request->file('file');
-                      $explode = explode('.', $file->getClientOriginalName());
-                      $originalName = $explode[0];
-                      $extension = $file->getClientOriginalExtension();
-                      $rename = 'file_' . date('YmdHis') . '.' . $extension;
-                      $mime = $file->getClientMimeType();
-                      $filesize = $file->getSize();
-                      if($file->move($uploadPath, $rename)) {
-                            $media = new Persentation;
-                            $media->persentation = $request->name;
-                            $media->date = $request->date;
-                            $media->file = $rename;
-                            $media->download = 0;
-                            $media->save();
-                            flash(translate('Downloads has been save successfully'))->success();
-                            return redirect()->route('persentation.index');
-                        }
-                }else{
+        $originalHtml = $request->yt_link;
+        $modifiedHtml = preg_replace('/<iframe\s+width="(\d+)"\s+height="(\d+)"\s+/', '<iframe style="width:100%" height="$2" ', $originalHtml);
 
-                }
-
+                $d = new Research;
+                $d->title     = $request->title;
+                $d->img = $request->foto;
+                $d->content = $request->content;
+                $d->yt_link = $modifiedHtml;
+                $d->save();
+                flash(translate('Research has been inserted successfully'))->success();
+                return redirect()->route('research.index');
 
     }
 
@@ -97,7 +80,7 @@ class ResearchController extends Controller
     public function edit($id)
     {
 
-        $data = Persentation::find(base64_decode($id));
+        $data = Research::find(base64_decode($id));
         return view('backend.research.edit', compact('data'));
 
     }
@@ -113,43 +96,16 @@ class ResearchController extends Controller
     public function update(Request $request, $id)
     {
 
-                if($request->hasFile('file')) {
-                    $request->validate([
-                        'file' => 'required|mimes:doc,docx,xls,xlsx,pdf'
-                        ]);
-                    $uploadPath = public_path('download');
-                      if(!File::isDirectory($uploadPath)) {
-                         File::makeDirectory($uploadPath, 0755, true, true);
-                      }
-                      $file = $request->file('file');
-                      $explode = explode('.', $file->getClientOriginalName());
-                      $originalName = $explode[0];
-                      $extension = $file->getClientOriginalExtension();
-                      $rename = 'file_' . date('YmdHis') . '.' . $extension;
-                      $mime = $file->getClientMimeType();
-                      $filesize = $file->getSize();
-
-                      if($file->move($uploadPath, $rename)) {
-                            if(File::exists(public_path('download/persentation/' . $request->fileold))) {
-                                File::delete(public_path('download/persentation/' . $request->fileold));
-                            }
-                            $media = Persentation::find(base64_decode($id));
-                            $media->persentation = $request->name;
-                            $media->date = $request->date;
-                            $media->file = $rename;
-                            $media->save();
-                            flash(translate('Persentations has been update successfully'))->success();
-                            return redirect()->route('persentation.index');
-                        }
-                        }else{
-                            $media = Persentation::find(base64_decode($id));
-                            $media->persentation = $request->name;
-                            $media->date = $request->date;
-
-                            $media->save();
-                            flash(translate('Persentations has been update successfully'))->success();
-                            return redirect()->route('persentation.index');
-                        }
+        $originalHtml = $request->yt_link;
+        $modifiedHtml = preg_replace('/<iframe\s+width="(\d+)"\s+height="(\d+)"\s+/', '<iframe style="width:100%" height="$2" ', $originalHtml);
+        $d = Research::find(base64_decode($id));
+        $d->title     = $request->title;
+        $d->img = $request->foto;
+        $d->content = $request->content;
+        $d->yt_link = $modifiedHtml;
+        $d->save();
+        flash(translate('Research has been updated successfully'))->success();
+        return redirect()->route('research.index');
 
     }
 
@@ -159,18 +115,16 @@ class ResearchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        $slider = Persentation::findOrFail(base64_decode($id));
-        if(Persentation::destroy(base64_decode($id))){
-            if(File::exists(public_path('download/persentation/' . $slider->file))) {
-                File::delete(public_path('download/persentation/' . $slider->file));
-            }
-            flash(translate('Persentations has been deleted successfully'))->success();
-        }
-        else{
-            flash(translate('Persentations went wrong'))->error();
-        }
-        return redirect()->route('persentation.index');
-    }
+
+     public function destroy($id)
+     {
+         if(Research::destroy(base64_decode($id))){
+             //unlink($slider->photo);
+             flash(translate('Research has been deleted successfully'))->success();
+         }
+         else{
+             flash(translate('Something went wrong'))->error();
+         }
+         return redirect()->route('research.index');
+     }
 }

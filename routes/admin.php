@@ -549,7 +549,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
     //Research And Development
     Route::resource('research',ResearchController::class);
     Route::controller(ResearchController::class)->group(function () {
-        Route::get('/persentation/destroy/{id}', 'destroy')->name('persentation.destroy');
+        Route::get('/research/create', 'create')->name('research.create');
+        Route::get('/research/edit/{id}', 'edit')->name('researcg.edit');
+        Route::get('/research/destroy/{id}', 'destroy')->name('research.destroy');
         Route::post('/persentation/change-status', 'change_status')->name('persentation.change-status');
    });
 

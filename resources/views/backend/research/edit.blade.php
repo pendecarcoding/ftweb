@@ -1,70 +1,85 @@
 @extends('backend.layouts.app')
 
 @section('content')
-
-<div class="row">
-    <div class="col-lg-8 mx-auto">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0 h6">{{translate('Persentation Information')}}</h5>
-                <a style="float:right" href="{{ route('persentation.index') }}" class="btn btn-danger">X</a>
-            </div>
-            <div class="card-body">
-                <form id="add_form" class="form-horizontal" action="{{ route('persentation.update',base64_encode($data->id)) }}" enctype="multipart/form-data" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <div class="form-group row">
-                        <label class="col-md-3 col-form-label">
-                            {{translate('Name Persentation')}}
-                            <span class="text-danger">*</span>
-                        </label>
-                        <div class="col-md-9">
-                            <input type="text" value="{{ $data->persentation }}" placeholder="{{translate('Name Persentation')}}" onkeyup="makeSlug(this.value)" id="name" name="name" class="form-control" required>
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0 h6">{{ translate('Research') }}</h5>
+                </div>
+                <div class="card-body">
+                    <form id="add_form" class="form-horizontal"
+                        action="{{ route('research.update', base64_encode($data->id)) }}" method="POST">
+                        @csrf
+                        <input name="_method" type="hidden" value="PATCH">
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">
+                                {{ translate('Name') }}
+                                <span class="text-danger">*</span>
+                            </label>
+                            <div class="col-md-9">
+                                <input value="{{ $data->title }}" type="text" placeholder="{{ translate('Name') }}"
+                                    id="name" name="title" class="form-control" required>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label class="col-md-3 col-from-label">
-                            {{translate('Date')}}
-                        </label>
-                        <div class="col-md-9">
-
-                            <input type="date" name="date" value="{{ $data->date }}" class="form-control" required>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-from-label">
+                                {{ translate('Content') }}
+                            </label>
+                            <div class="col-md-9">
+                                <textarea class="aiz-text-editor" name="content">{!! $data->content !!}</textarea>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label class="col-md-3 col-from-label">
-                            {{translate('File')}}
-                        </label>
-                        <div class="col-md-9">
-                             <a href="{{ asset('public/download/persentation').'/'.$data->file }}">{{ $data->file }}</a>
-                            <input type="file" name="file" class="form-control">
-                            <input type="hidden" name="fileold" value="{{ $data->file }}">
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="signinSrEmail">
+                                {{ translate('Foto') }}
+                            </label>
+                            <div class="col-md-9">
+                                <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-soft-secondary font-weight-medium">
+                                            {{ translate('Browse') }}
+                                        </div>
+                                    </div>
+                                    <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                                    <input type="hidden" value="{{ $data->img }}" name="foto" class="selected-files">
+                                </div>
+                                <div class="file-preview box sm">
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">
+                                {{ translate('Link Youtube') }}
+                                <span class="text-danger">*</span>
+                            </label>
+                            <div class="col-md-9">
+                                <input value="{{ $data->yt_link }}" type="text"
+                                    placeholder="{{ translate('Link Youtube') }}" id="name" name="yt_link"
+                                    class="form-control">
+                            </div>
+                        </div>
 
 
 
-
-                    <div class="form-group mb-0 text-right">
-                        <button type="submit" class="btn btn-primary">
-                            {{translate('Save')}}
-                        </button>
-                    </div>
-                </form>
+                        <div class="form-group mb-0 text-right">
+                            <button type="submit" class="btn btn-primary">
+                                {{ translate('Save') }}
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
 
 @section('script')
-<script>
-    function makeSlug(val) {
-        let str = val;
-        let output = str.replace(/\s+/g, '-').toLowerCase();
-        $('#slug').val(output);
-    }
-</script>
+    <script>
+        function makeSlug(val) {
+            let str = val;
+            let output = str.replace(/\s+/g, '-').toLowerCase();
+            $('#slug').val(output);
+        }
+    </script>
 @endsection
