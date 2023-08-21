@@ -91,12 +91,21 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Year') }}</label>
-                                <select name="year" id="" class="form-control" required>
-                                    <option value="">--Select Year--</option>
-                                    @for ($i = 1986; $i <= date('Y'); $i++)
-                                        <option value="{{ $i }}">{{ $i }}</option>
-                                    @endfor
-                                </select>
+                                <div style="display: flex;gap:2px">
+                                    <select name="year" id="" class="form-control" required>
+                                        <option value="">--Start Year--</option>
+                                        @for ($i = 1986; $i <= date('Y'); $i++)
+                                            <option value="{{ $i }}">{{ $i }}</option>
+                                        @endfor
+                                    </select>
+                                    <select name="yearsecond" id="" class="form-control" required>
+                                        <option value="">--End Year--</option>
+                                        @for ($i = 1986; $i <= date('Y'); $i++)
+                                            <option value="{{ $i }}">{{ $i }}</option>
+                                        @endfor
+                                    </select>
+                                </div>
+
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Make') }}</label>

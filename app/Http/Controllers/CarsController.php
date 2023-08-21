@@ -49,13 +49,17 @@ class CarsController extends Controller
      */
     public function store(Request $request)
     {
-        $car = new Car;
-        $car->name = $request->name;
-        $car->make = $request->make;
-        $car->year = $request->year;
-        $car->type = $request->type;
-        $car->image = $request->image;
-        $car->save();
+
+        for ($i=$request->year; $i <= $request->yearsecond ; $i++) {
+            $car = new Car;
+            $car->name = $request->name;
+            $car->make = $request->make;
+            $car->year = $i;
+            $car->type = $request->type;
+            $car->image = $request->image;
+            $car->save();
+        }
+
         flash(translate('Car has been inserted successfully'))->success();
         return back();
 
