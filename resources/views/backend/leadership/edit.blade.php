@@ -8,7 +8,8 @@
                     <h5 class="mb-0 h6">{{ translate('Leadership') }}</h5>
                 </div>
                 <div class="card-body">
-                    <form id="add_form" class="form-horizontal" action="{{ route('leadership.update',base64_encode($data->id)) }}" method="POST">
+                    <form id="add_form" class="form-horizontal"
+                        action="{{ route('leadership.update', base64_encode($data->id)) }}" method="POST">
                         @csrf
                         <input name="_method" type="hidden" value="PATCH">
                         <div class="form-group row">
@@ -17,8 +18,8 @@
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="col-md-9">
-                                <input value="{{$data->name}}" type="text" placeholder="{{ translate('Name') }}" id="name" name="name"
-                                    class="form-control" required>
+                                <input value="{{ $data->name }}" type="text" placeholder="{{ translate('Name') }}"
+                                    id="name" name="name" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -27,16 +28,17 @@
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="col-md-9">
-                                <input value="{{$data->position}}" type="text" placeholder="{{ translate('Position') }}" id="position"
-                                    name="position" class="form-control" required>
+                                <input value="{{ $data->position }}" type="text"
+                                    placeholder="{{ translate('Position') }}" id="position" name="position"
+                                    class="form-control" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-md-3 col-from-label">
-                                {{translate('Content')}}
+                                {{ translate('Content') }}
                             </label>
                             <div class="col-md-9">
-                                <textarea class="aiz-text-editor" name="content">{!! $data->content !!}</textarea>
+                                <textarea id="editor" name="content">{!! $data->content !!}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -51,7 +53,8 @@
                                         </div>
                                     </div>
                                     <div class="form-control file-amount">{{ translate('Choose File') }}</div>
-                                    <input type="hidden" value="{{$data->foto}}" name="foto" class="selected-files">
+                                    <input type="hidden" value="{{ $data->foto }}" name="foto"
+                                        class="selected-files">
                                 </div>
                                 <div class="file-preview box sm">
                                 </div>
