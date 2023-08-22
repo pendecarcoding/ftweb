@@ -10323,6 +10323,59 @@ form.form--basic .mdl-textfield__label {
 .breadcrumb-item a {
     color: brown;
 }
+#register-user{
+    padding: 0px 28%;
+}
+@media screen and (min-width:1600px) {
+    .mdl-layout__header-row .classurl {
+        margin: 0px 20px;
+    }
+}
+@media screen and (min-width:1680px) {
+    .mdl-layout__header-row .classurl {
+        margin: 0px 21px;
+    }
+    .circle-row {
+        gap: 23px;
+        padding: 119px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #line-sturcture{
+        width: 100%;
+        margin: 0px 22px;
+    }
+    #imggpt1 {
+        width: 49%;
+    }
+}
+@media screen and (min-width:1920px) {
+    .mdl-layout__header-row .classurl {
+        margin: 0px 31px;
+    }
+    #imggpt1 {
+        width: 51%;
+    }
+    #line-sturcture{
+        width: 100%;
+        margin-left: 10px;
+        top: -40px;
+        position: absolute;
+    }
+    .circle-row {
+        gap: 57px;
+        padding: 123px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #slider .selfie-img {
+        width: 300px;
+        height: 300px;
+    }
+    #register-user{
+        padding: 5px 23%;
+    }
+}
 @media screen and (max-width:500px){
     .wrap-content {
         position: relative;
@@ -10553,8 +10606,8 @@ form.form--basic .mdl-textfield__label {
     }
 
     .rounded-circle {
-        height: 100px;
-        width: 100px;
+        height: 40px;
+        width: 40px;
     }
     .acetopbar {
         background: white;

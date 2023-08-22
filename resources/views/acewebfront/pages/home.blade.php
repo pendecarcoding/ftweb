@@ -208,7 +208,7 @@
 
                   </div>
 
-                  <div  data-aos="zoom-in-down" class="line-structure"> <img class="img-responsive" src="/public/aceweb/assets/img/line.png" alt=""></div>
+                  <div data-aos="zoom-in-down" class="line-structure"> <img id="line-sturcture"   class="img-responsive" src="/public/aceweb/assets/img/line.png" alt=""></div>
 
                 </div>
 
