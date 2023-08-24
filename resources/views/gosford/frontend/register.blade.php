@@ -81,8 +81,8 @@
                                                 <br>
                                                 <center>
 
-                                                    <button type="submit"
-                                                        class="mdl-button mdl-js-button mdl-button--raised color--gray">
+                                                    <button style="background-color:red" type="submit"
+                                                        class="mdl-button mdl-js-button mdl-button--raised">
                                                         REGISTER
                                                     </button>
 
