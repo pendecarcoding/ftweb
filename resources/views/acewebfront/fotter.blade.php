@@ -10,7 +10,7 @@
             <!-- Grid row -->
             <div class="row mt-4">
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
                         <img src="{{ uploaded_asset(get_setting('system_logo_white')) }}" alt="">
@@ -32,7 +32,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                     <!-- Links -->
                     <a href="{{ url('home') }}">
                         <h6 class="text-uppercase fw-bold mb-4 h6-footer">
@@ -59,7 +59,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                     <!-- Links -->
                     <a href="{{ url('our_products') }}">
                         <h6 class="text-uppercase fw-bold mb-4 h6-footer">
@@ -81,7 +81,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3 footer-medsos">
+                <!-- <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3 footer-medsos"> -->
 <!--
                     <a target="_blank" href="https://twitter.com/acesocialgroup">
                         <h6 class="text-uppercase fw-bold mb-4"><img style="width: 20px; height: 20px"
@@ -100,7 +100,7 @@
                         <h6 class="text-uppercase fw-bold mb-4"><img style="width: 20px; height: 20px"
                                 src="{{ static_asset('aceweb') }}/assets/img/yt.png" alt=""></h6>
                     </a> -->
-                </div>
+                <!-- </div> -->
                 <!-- Grid column -->
             </div>
             <!-- Grid row -->
