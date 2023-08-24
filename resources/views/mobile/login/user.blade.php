@@ -1,7 +1,7 @@
 @extends('acewebfront.layouts-mobile')
 @section('content')
-<div style="height:100vh;" class="card text-left">
-    <div class="card-body" style="
+    <div style="height:100vh;" class="card text-left">
+        <div class="card-body" style="
 
                 margin-top: 50%;
             ">
@@ -51,7 +51,7 @@
                                     account</a></span></p>
 
                         <p><span><a style="color:#959595;text-decoration: none;"
-                                    href="{{ url('g_system/forgotpass') }}">Forgot Password</a></span></p>
+                                    href="{{ route('gosford.front.forgotpass') }}">Forgot Password</a></span></p>
                     </center>
 
                 </div>
