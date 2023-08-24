@@ -1883,6 +1883,7 @@ footer img {
 }
 
 .content-ace {
+    margin: 0px 10px;
     position: relative;
 }
 
@@ -9921,7 +9922,7 @@ footer img {
     }
 
     #imggpt1 {
-        width: 65%;
+        width: 50%;
     }
 
     #title-progress {
