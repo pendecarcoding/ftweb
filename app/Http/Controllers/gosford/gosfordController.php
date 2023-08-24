@@ -68,7 +68,7 @@ class gosfordController extends Controller
      $array['subject'] = translate('Forgot Password');
      $array['from'] = env('MAIL_FROM_ADDRESS');
      $array['content']="for update password click the link below";
-     $array['link'] = env('URL_WEB').'/g_system/ft_account/recoverypassword?kode='.base64_encode($kode);
+     $array['link'] = env('URL_WEB').'g_system/ft_account/recoverypassword?kode='.base64_encode($kode);
 
 
      Mail::to($r->email)->queue(new SecondEmailVerifyMailManager($array));
