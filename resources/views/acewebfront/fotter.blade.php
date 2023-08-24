@@ -25,7 +25,7 @@
                         603-79603937
 
                         <br><b style="font-weight:bold;color:black">Email</b><br>
-                        joey@gosfordseat.com
+                        enquiry@gosford.com
 
                     </p>
                 </div>
@@ -82,7 +82,7 @@
 
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3 footer-medsos">
-                    <!-- Links -->
+<!--
                     <a target="_blank" href="https://twitter.com/acesocialgroup">
                         <h6 class="text-uppercase fw-bold mb-4"><img style="width: 20px; height: 20px"
                                 src="{{ static_asset('aceweb') }}/assets/img/Vector.png" alt=""></h6>
@@ -99,7 +99,7 @@
                         href="https://www.youtube.com/channel/UCBoSXibkrvZo78yyc8pVj5A?view_as=subscriber">
                         <h6 class="text-uppercase fw-bold mb-4"><img style="width: 20px; height: 20px"
                                 src="{{ static_asset('aceweb') }}/assets/img/yt.png" alt=""></h6>
-                    </a>
+                    </a> -->
                 </div>
                 <!-- Grid column -->
             </div>

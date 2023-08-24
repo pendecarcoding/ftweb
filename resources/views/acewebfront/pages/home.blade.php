@@ -498,10 +498,7 @@
                 </div>
                 <div data-aos="fade-up" class="col-md-6 col-sm-6">
                   <p style="text-align: justify;font-size:16px">
-                    We proudly present the various recognitions for our digital
-                    gold platform. Our outstanding achievements are based on
-                    every team member's hard work and passion in providing
-                    effective solutions to make one's life easier to trade gold.
+                    Gosford Malaysia secured its first order from the OEM market segment, when it first began to manufacture and supply automotive covers to APM, a Tier 1 automotive seat and/or interior part manufacturer in 2012. The order entailed manufacturing automotive covers for Mazda 3 car models. Gosford Malaysia’s first order from the OEM market segment paved the way for Gosford Malaysia to fulfil other orders from the OEM market segment. Gosford Malaysia subsequently manufactured and supplied automotive covers for Proton Perdana R 2.0 car models in 2015.
                   </p>
 
                   <!--END MANSORY-->
