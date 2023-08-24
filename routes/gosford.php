@@ -24,6 +24,7 @@ Route::prefix('g_system')->group(function (){
         // Route::get('/gosford/afterregister', 'afterregister')->name('gosford.afterregister');
         Route::post('/gosford/f/order_comfirmed', 'ordercomfirmedfront')->name('gosford.front.order_comfirmed');
 
+        Route::get('/ft/forgotpass','forgotpass')->name('gosford.front.forgotpass');
 
 
 

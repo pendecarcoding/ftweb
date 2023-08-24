@@ -241,7 +241,7 @@
                                                 account</a></span></p>
 
                                     <p><span><a style="color:#959595;text-decoration: none;"
-                                                href="{{ url('g_system/forgotpass') }}">Forgot Password</a></span></p>
+                                                href="{{ route('gosford.front.forgotpass') }}">Forgot Password</a></span></p>
                                 </center>
 
                             </div>

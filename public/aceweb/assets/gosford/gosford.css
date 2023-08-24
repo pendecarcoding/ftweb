@@ -5,6 +5,10 @@ footer{
     width: 100%;
 }
 
+#gosford-forgot{
+    margin-top: 4%;
+}
+
 .fixed-bottom-modal {
     position: fixed;
     bottom: 0;
@@ -10377,6 +10381,9 @@ form.form--basic .mdl-textfield__label {
     }
 }
 @media screen and (max-width:500px){
+    #gosford-forgot{
+        margin-top: 15%;
+    }
     .wrap-content {
         position: relative;
         margin-left: 2%;

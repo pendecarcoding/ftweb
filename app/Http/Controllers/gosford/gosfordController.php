@@ -51,6 +51,9 @@ class gosfordController extends Controller
    public function registerfront(){
     return view('gosford.frontend.register');
    }
+   public function forgotpass(){
+    return view('gosford.frontend.forgotpass');
+   }
 
    public function comfirregister($kode){
         try {
