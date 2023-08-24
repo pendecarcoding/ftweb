@@ -535,9 +535,9 @@
 
 
                     to.innerHTML = "1/5";
-                    titleprogress.innerHTML = "Supports both B2B & B2C integration";
+                    titleprogress.innerHTML = "Online ordering system";
                     contentprogress.innerHTML =
-                        "Our potential partners can create their own product branding and launch their own digital gold program with the help of our ready-made templates and API.";
+                        "Through our GSAP system which provides a comprehensive options for our business partners when placing orders with us.";
 
                     $(".gptimg-responsive").addClass("is-visible");
 
@@ -556,9 +556,9 @@
                     //document.getElementById("imggpt1").src="{{ static_asset('aceweb') }}/assets/img/gtp2.png";
                     $(".gptimg-responsive").addClass("is-visible");
                     to.innerHTML = "2/5";
-                    titleprogress.innerHTML = "Streamlined customer onboarding process";
+                    titleprogress.innerHTML = "Wide range of vehicle models";
                     contentprogress.innerHTML =
-                        "Existing or new customers will go through an onboarding process for every partner is platform while meeting the regulatory requirements such as e-KYC, AML & Pep checking.";
+                        "A broad range of vehicle model make, model & year model to choose from which enable our business partners to serve their end customers better.";
 
 
                 }
@@ -577,9 +577,9 @@
                     $(".gptimg-responsive").addClass("is-visible");
                     to.innerHTML = "3/5";
                     titleprogress.innerHTML =
-                        "Buy & sell transactions including future orders";
+                        "No room of failure.";
                     contentprogress.innerHTML =
-                        "Customers have the ability to buy, sell, convert, transfer, and perform future orders at their own convenience on the gold trading platform.";
+                        "With the comprehensive options available supported with a schematic diagram that goes almost instantly to our production line to meet short delivery period.";
 
                 }
                 if (
@@ -598,9 +598,9 @@
                     $(".gptimg-responsive").addClass("is-visible");
                     to.innerHTML = "4/5";
                     titleprogress.innerHTML =
-                        "Seamless integration with payment gateways & e-wallets";
+                        "Seamless integration";
                     contentprogress.innerHTML =
-                        "Partners are able to enjoy smooth payment transactions with the ability of connecting to the preferred payment gateways and e-wallets.";
+                        "Design pattern selected are being connected to our design pattern high tech equipment with less human intervention.";
 
                 }
                 if (
@@ -620,9 +620,9 @@
                     var height = $("#gpt4").outerHeight() - window.innerHeight + "vh";
                     to.innerHTML = "5/5";
                     titleprogress.innerHTML =
-                        "Fulfill conversion requests anytime, anywhere";
+                        "Order fulfillment";
                     contentprogress.innerHTML =
-                        "Account holders are able to make conversion requests anytime of the day while we provide the necessary delivery and insurance coverage.";
+                        "Orders received are fully monitored and tracked of its status ensuring delivery dates requested by our business partners vis vis to end client are met.";
 
                 }
                 if ($(window).scrollTop() >=
