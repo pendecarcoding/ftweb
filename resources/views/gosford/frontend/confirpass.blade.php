@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAFF|FORGOT PASSWORD</title>
+    <title>Confirmation CODE</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <div class="container" id="gosford-forgot" ">
+    <div class="container" id="gosford-forgot">
         <div class="row">
             <div class="col-lg-6 col-xl-6 mx-auto">
                 <div class="text-left">
@@ -46,19 +46,30 @@
                         <div class="mb-5 text-center">
                             <img src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="mw-100 mb-4"
                                 height="50">
-                            <h1 class="h3 mb-0" style="color:#dc3545;font-weight: bold;">Forgot Password</h1>
+                            <h1 class="h3 mb-0" style="color:#dc3545;font-weight: bold;">Update Password</h1>
                             @include('acewebfront.pages.alert')
                         </div>
-                        <form class="pad-hor" method="POST" role="form" action="{{ route('staff.resetpass') }}">
+                        <form class="pad-hor" method="POST" role="form"
+                            action="{{ route('gosford.front.confirpassword') }}">
                             {{ csrf_field() }}
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope-o"
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"
                                             aria-hidden="true"></i></span>
                                 </div>
-                                <input id="password" type="text" class="form-control" name="email" required=""
-                                    placeholder="EMAIL">
+                                <input type="hidden" value="{{$shsxgsd}}" name="shsxgsd">
+                                <input id="password" type="password" class="form-control" name="password" required=""
+                                    placeholder="New Password">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"
+                                            aria-hidden="true"></i></span>
+                                </div>
+
+                                <input id="password" type="password" class="form-control" name="password_confirmation" required=""
+                                    placeholder="Confirmation Password">
                             </div>
 
                             <button style="background-color: #dc3545;

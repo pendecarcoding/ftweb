@@ -55,6 +55,52 @@ class gosfordController extends Controller
     return view('gosford.frontend.forgotpass');
    }
 
+   public function resetpass(Request $r){
+    $c = GsystemAccount::where('email',$r->email)->count();
+    if($c == 0){
+     return back()->with('danger','Email Account not available');
+    }else{
+     $kode = Str::uuid()->toString();
+     $data = [
+         'reset_code'=>$kode
+     ];
+     $act = GsystemAccount::where('email',$r->email)->update($data);
+     $array['subject'] = translate('Forgot Password');
+     $array['from'] = env('MAIL_FROM_ADDRESS');
+     $array['content']="for update password click the link below";
+     $array['link'] = env('URL_WEB').'/g_system/ft_account/recoverypassword?kode='.base64_encode($kode);
+
+
+     Mail::to($r->email)->queue(new SecondEmailVerifyMailManager($array));
+     return back()->with('success','Password recovery link sent to email. please check your email');
+    }
+   }
+
+   function confircoderecovery(Request $r){
+    $shsxgsd = base64_decode($r->kode);
+    $check= GsystemAccount::where('reset_code',$shsxgsd)->where('reset_code','!=','')->where('reset_code','!=',null)->count();
+    if($check > 0){
+        return view('gosford.frontend.confirpass',compact('shsxgsd'));
+    }else{
+        return redirect('/')->with('wrongrecovery','Code Recovery is not found !');
+    }
+
+   }
+
+   public function confirpassword(Request $r){
+    $r->validate([
+        'shsxgsd'=>'required',
+        'password_confirmation'=>'required',
+        'password' => 'required|confirmed',
+    ]);
+    try {
+        GsystemAccount::where('reset_code',$r->shsxgsd)->update(['password'=>Hash::make($r->password),'reset_code'=>'']);
+        return redirect('/')->with('changepassdone','Your password has been changed. please log back in');
+    } catch (\Throwable $th) {
+        return back()->with('danger',$th->getmessage());
+    }
+   }
+
    public function comfirregister($kode){
         try {
             $data = GsystemAccount::where('verify_code',base64_decode($kode))->first();

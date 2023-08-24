@@ -25,6 +25,9 @@ Route::prefix('g_system')->group(function (){
         Route::post('/gosford/f/order_comfirmed', 'ordercomfirmedfront')->name('gosford.front.order_comfirmed');
 
         Route::get('/ft/forgotpass','forgotpass')->name('gosford.front.forgotpass');
+        Route::post('/ft/forgotpass/submit','resetpass')->name('gosford.front.resetpassword');
+        Route::get('/ft_account/recoverypassword','confircoderecovery')->name('gosford.front.confircoderecovery');
+        Route::post('/ft_account/confirpassword','confirpassword')->name('gosford.front.confirpassword');
 
 
 

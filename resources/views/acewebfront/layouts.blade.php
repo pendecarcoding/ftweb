@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,7 +119,7 @@
                 ">
                         <div class="mb-5 text-center">
                             <img src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="mw-100 mb-4"
-                            height="50">
+                                height="50">
                             <h1 style="color: #6d6d6d;font-size: 20px;" class="h3  mb-0">Staff Login</h1>
 
                         </div>
@@ -152,9 +153,10 @@
 
                             </div>
                             <div class="form-group">
-                                <button style="width:100%;background-color: #dc3545;
-                                border: #dc3545;" type="submit"
-                                    class="btn btn-primary btn-lg btn-block">
+                                <button
+                                    style="width:100%;background-color: #dc3545;
+                                border: #dc3545;"
+                                    type="submit" class="btn btn-primary btn-lg btn-block">
                                     LOGIN
                                 </button>
                                 <br>
@@ -203,7 +205,8 @@
                                         <span
                                             style="height: 40px;
                                       border-radius: 0px;"
-                                            class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                            class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-user"></i></span>
                                     </div>
                                     <input required name="username" type="text" class="form-control"
                                         placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
@@ -241,7 +244,8 @@
                                                 account</a></span></p>
 
                                     <p><span><a style="color:#959595;text-decoration: none;"
-                                                href="{{ route('gosford.front.forgotpass') }}">Forgot Password</a></span></p>
+                                                href="{{ route('gosford.front.forgotpass') }}">Forgot
+                                                Password</a></span></p>
                                 </center>
 
                             </div>
@@ -267,6 +271,41 @@
                     icon: 'warning',
                     title: 'Info Login',
                     text: '{{ Session::get('wrongpassword') }}', // Corrected line
+                });
+
+                // You can add your code here that should run after the page loads
+            }
+
+            // Attach the 'pageLoaded' function to the onload event of the 'window' object
+            window.onload = pageLoaded;
+        </script>
+    @endif
+
+    @if (Session::has('wrongrecovery'))
+        <script>
+            // Define a function to be executed when the page finishes loading
+            function pageLoaded() {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Recovery Code',
+                    text: '{{ Session::get('wrongrecovery') }}', // Corrected line
+                });
+
+                // You can add your code here that should run after the page loads
+            }
+
+            // Attach the 'pageLoaded' function to the onload event of the 'window' object
+            window.onload = pageLoaded;
+        </script>
+    @endif
+    @if (Session::has('changepassdone'))
+        <script>
+            // Define a function to be executed when the page finishes loading
+            function pageLoaded() {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Information',
+                    text: '{{ Session::get('changepassdone') }}', // Corrected line
                 });
 
                 // You can add your code here that should run after the page loads

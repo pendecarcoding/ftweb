@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAFF|FORGOT PASSWORD</title>
+    <title>USER |FORGOT PASSWORD</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
@@ -49,7 +49,8 @@
                             <h1 class="h3 mb-0" style="color:#dc3545;font-weight: bold;">Forgot Password</h1>
                             @include('acewebfront.pages.alert')
                         </div>
-                        <form class="pad-hor" method="POST" role="form" action="{{ route('staff.resetpass') }}">
+                        <form class="pad-hor" method="POST" role="form"
+                            action="{{ route('gosford.front.resetpassword') }}">
                             {{ csrf_field() }}
 
                             <div class="input-group mb-3">
