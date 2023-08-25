@@ -9,6 +9,14 @@ footer{
     margin-top: 4%;
 }
 
+#content-readmore {
+    display: none; /* Initially hidden */
+}
+
+.expanded #content-readmore {
+    display: block; /* Display when content is expanded */
+}
+
 .fixed-bottom-modal {
     position: fixed;
     bottom: 0;

@@ -44,7 +44,15 @@
                     <div class="col-md-6 content_company">
                         <div style="">
                             <h2 class="company_h2">{{$v->name}}</h2>
-                            <p style="text-align: justify;font-size: 16px;">{!! $v->content !!}</p>
+                            <div class="toggle-content">
+                                <p style="text-align: justify;font-size: 16px;">{!! str_word_count(strip_tags($v->content)) > 54 ? implode(' ', array_slice(explode(' ', strip_tags($v->content)), 0, 54)) . '' : strip_tags($v->content) !!}
+                                <span id="content-readmore">{!! str_word_count(strip_tags($v->content)) > 54 ? implode(' ', array_slice(explode(' ', strip_tags($v->content)),54)) . '' : strip_tags($v->content) !!}</span>
+                                </p>
+
+                            </div>
+                            @if(str_word_count(strip_tags($v->content)) > 54)
+                                <div class="toggle-button">Read more</div>
+                            @endif
                         </div>
                         <!-- <a style="margin:50px 0px;" class="btn gsf-button">Learn More</a> -->
                     </div>
@@ -82,4 +90,20 @@
       </section>
 
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function() {
+    $(".toggle-button").click(function() {
+        var contentContainer = $(this).prev(".toggle-content");
+        contentContainer.toggleClass("expanded");
+
+        if (contentContainer.hasClass("expanded")) {
+            $(this).text("Read less");
+        } else {
+            $(this).text("Read more");
+        }
+    });
+});
+
+    </script>
 @endsection
