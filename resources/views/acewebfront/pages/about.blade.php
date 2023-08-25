@@ -45,12 +45,12 @@
                         <div style="">
                             <h2 class="company_h2">{{$v->name}}</h2>
                             <div class="toggle-content">
-                                <p style="text-align: justify;font-size: 16px;">{!! str_word_count(strip_tags($v->content)) > 54 ? implode(' ', array_slice(explode(' ', strip_tags($v->content)), 0, 54)) . '' : strip_tags($v->content) !!}
-                                <span id="content-readmore">{!! str_word_count(strip_tags($v->content)) > 54 ? implode(' ', array_slice(explode(' ', strip_tags($v->content)),54)) . '' : strip_tags($v->content) !!}</span>
+                                <p style="text-align: justify;font-size: 16px;">{!! str_word_count(strip_tags($v->content)) > 80 ? implode(' ', array_slice(explode(' ', strip_tags($v->content)), 0, 80)) . '' : strip_tags($v->content) !!}
+                                <span id="content-readmore">{!! str_word_count(strip_tags($v->content)) > 80 ? implode(' ', array_slice(explode(' ', strip_tags($v->content)),80)) . '' : strip_tags($v->content) !!}</span>
                                 </p>
 
                             </div>
-                            @if(str_word_count(strip_tags($v->content)) > 54)
+                            @if(str_word_count(strip_tags($v->content)) > 80)
                                 <div class="toggle-button">Read more</div>
                             @endif
                         </div>
