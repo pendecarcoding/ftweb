@@ -50,7 +50,7 @@
                                 </p>
 
                             </div>
-                            @if(str_word_count(strip_tags($v->content)) > 80)
+                            @if(str_word_count(strip_tags($v->content)) > 100)
                                 <div class="toggle-button">Read more</div>
                             @endif
                         </div>
