@@ -36,6 +36,9 @@
                         <li class="mdl-menu__item mdl-list__item list__item--border-top">
                             <a href="{{ url('about_director') }}">Board of directors</a>
                         </li>
+                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                            <a href="{{ url('company_background') }}">Companies Background</a>
+                        </li>
                     </ul>
                 @else
                     <a href="{{ url($v['link']) }}"
@@ -148,6 +151,8 @@ classurl-active @endif">{{ $v['name'] }}</a>
                             <li><a style="padding-left: 27px;" href="{{ url('about') }}">Company</a></li>
                             <li><a style="padding-left: 27px;" href="{{ url('about_director') }}">Board of
                                     Directors</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url('company_background') }}">Companies Background</a></li>
+
                         </ul>
                     </li>
                 @else

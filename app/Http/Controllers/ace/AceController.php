@@ -133,6 +133,9 @@ class AceController extends Controller
 
     public function page($page){
         switch ($page) {
+            case 'company_background':
+                return view('acewebfront.pages.background');
+            break;
             case 'Research & Development':
             $data        = Research::all();
             $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','RESEARCH')->get();

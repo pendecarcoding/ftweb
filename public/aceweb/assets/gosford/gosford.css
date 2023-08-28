@@ -5,6 +5,115 @@ footer{
     width: 100%;
 }
 
+.angka {
+    font-size: 12px; /* Ukuran angka pangkat */
+    vertical-align: super; /* Menggeser angka ke atas sebagai pangkat */
+}
+
+.clip-top {
+    position: relative;
+    width: 150px;
+    overflow: hidden;
+    padding: 30px;
+    height: auto;
+    clip-path: polygon(52% 43%, 100% 0, 100% 100%, 0 100%, 0 0);
+    background-image: url('/public/go_system/images/2002-bg.png');
+    background-size: cover; /* Object-fit seperti aslinya */
+    mask-image: url('/public/go_system/images/2002-bg.png'); /* Menambahkan mask image sesuai gambar background */
+    mask-composite: subtract; /* Mengurangkan area yang tercakup oleh clip-path */
+}
+
+.clip-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(52% 43%, 100% 0, 100% 100%, 0 100%, 0 0);
+    background-color: #ff0018a3; /* Nilai RGBA untuk warna brown dengan opacity */
+}
+
+.clip-content {
+    position: relative;
+    width: 150px;
+    overflow: hidden;
+    padding: 30px;
+    height: auto;
+    background-size: cover;
+
+}
+
+.clip-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  #ff0018a3;;
+}
+.clip-down{
+    width: 150px;
+    height: 200px;
+    padding: 69px 0px;
+    background-color: brown;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(100% 0, 100% 54%, 49% 100%, 0 54%, 0 0);
+}
+
+.clip-down::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  #ff0018a3;;
+}
+
+.content-timeline h5{
+    font-weight: bold;
+    -webkit-text-stroke: 0.2px;
+}
+
+.row-time-line{
+    display: flex;flex-direction: row;justify-content: space-between;
+}
+
+.content-timeline{
+    padding-top: 40px;
+    width: 400px;
+}
+
+.content-timeline img{
+    width: 400px;
+}
+
+
+sup {
+    top: -0.8em;
+}
+sub, sup {
+    position: relative;
+    font-size: 10px;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+
+.p-aarow-timeline{
+    font-size: 25px;
+    color:white;
+    font-weight:bold;
+    position: absolute;
+    left: 49%; /* Posisi horizontal di tengah */
+    top: 49%; /* Posisi vertikal di tengah */
+    transform: translate(-50%, -50%); /* Menyesuaikan posisi tepat ke tengah */
+    text-align: center;
+}
+
 #gosford-forgot{
     margin-top: 4%;
 }
@@ -10389,6 +10498,38 @@ form.form--basic .mdl-textfield__label {
     }
 }
 @media screen and (max-width:500px){
+    .content-timeline li{
+        list-style-type: none;
+    }
+    .clip-down {
+        width: 121px;
+    }
+    .clip-top {
+        position: relative;
+        width: 29px;
+        overflow: hidden;
+        padding: 22px;
+    }
+    .clip-content {
+        position: relative;
+        width: 29px;
+        overflow: hidden;
+        padding: 22px;
+    }
+    .row-time-line {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .content-timeline h5 {
+        font-weight: bold;
+        -webkit-text-stroke: 0px;
+        font-size: 11px;
+    }
+    .content-timeline img {
+        width: 100%;
+    }
     #register-user {
         padding: 0px 0%;
     }
