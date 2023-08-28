@@ -10507,9 +10507,11 @@ form.form--basic .mdl-textfield__label {
     .clip-top {
         position: relative;
         width: 29px;
+        height: 180px;
         overflow: hidden;
         padding: 22px;
     }
+
     .clip-content {
         position: relative;
         width: 29px;

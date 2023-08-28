@@ -31,7 +31,7 @@
 
                                 </div>
                                 <div class="clip-top">
-                                    <p class="p-aarow-timeline" style="color:white;padding-top: 100px;">  <  2002 </p>
+                                    <p class="p-aarow-timeline" style="color:white;padding-top: 50px;">  <  2002 </p>
                                 </div>
                                 <div class="content-timeline">
 
