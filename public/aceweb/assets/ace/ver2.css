@@ -2240,7 +2240,7 @@
         margin-right: 30px;
         margin-left: 30px;
         margin-bottom: 20px;
-        height: 40vh;
+        height: auto;
 
     }
 
@@ -3250,7 +3250,7 @@
         height: 44vh;
     }
     .ace-testimonials {
-        height: 40vh;
+        height: auto;
     }
     .ace-personal img {
         height: 40vh;

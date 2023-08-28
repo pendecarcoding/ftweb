@@ -2090,9 +2090,11 @@ footer img {
 }
 
 .company-ace {
+    padding: 50px 0px;
     background-color: #f2f5f9;
-    height: 100vh;
+    height: auto;
 }
+
 
 .gtp-solution {
     padding: 60px 0px;

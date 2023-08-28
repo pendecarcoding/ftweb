@@ -10498,6 +10498,9 @@ form.form--basic .mdl-textfield__label {
     }
 }
 @media screen and (max-width:500px){
+    .i-icon-login{
+        font-size: 25px;
+    }
     .content-timeline li{
         list-style-type: none;
     }
@@ -10835,6 +10838,1062 @@ form.form--basic .mdl-textfield__label {
         line-height: 29px;
     }
 }
+
+@media screen and (max-width:600px){
+    .i-icon-login{
+        font-size: 25px;
+    }
+    .content-timeline li{
+        list-style-type: none;
+    }
+    .clip-down {
+        width: 121px;
+    }
+    .clip-top {
+        position: relative;
+        width: 29px;
+        height: 180px;
+        overflow: hidden;
+        padding: 22px;
+    }
+
+    .clip-content {
+        position: relative;
+        width: 29px;
+        overflow: hidden;
+        padding: 22px;
+    }
+    .row-time-line {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .content-timeline h5 {
+        font-weight: bold;
+        -webkit-text-stroke: 0px;
+        font-size: 11px;
+    }
+    .content-timeline img {
+        width: 100%;
+    }
+    #register-user {
+        padding: 0px 0%;
+    }
+    #gosford-forgot{
+        margin-top: 15%;
+    }
+    .wrap-content {
+        position: relative;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .mdl-menu__container{
+        right: -14px;
+    top: 39px;
+    width: 325px;
+    height: 257.6px;
+    }
+    .padding-research{
+        padding: 4%;
+    }
+    .banner-video{
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+    .banner-video-div{
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+    .video-style-banner{
+        height: 270px;
+        background-color: #333333;
+    }
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        position: absolute;
+        color: #ffffff;
+        display: block;
+        line-height: 56px;
+        background-color: inherit;
+    }
+    .title-step-order p {
+        color: #0000005e;
+        font-weight: 600;
+        font-size: 11px;
+        text-align: center;
+    }
+    .navbar-mobile{
+        background-color: #bf1e2d;
+        display: none;
+    }
+    .navbar-mobile ul{
+        list-style-type: none;
+        padding-left: 0;
+
+    }
+    .navbar-mobile li a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    .navbar-mobile li a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+    .navbar-mobile li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+      /* Hide the mobile menu by default */
+
+/* Apply animation when showing/hiding */
+.navbar-mobile.active {
+    display: block;
+    animation: slideAnimation 0.3s ease-in-out;
+}
+
+@keyframes slideAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+    .btn-nav-login{
+        display: none;
+    }
+    .description-service{
+        text-align: justify;
+        margin: 10px 1px;
+        height: 200px;
+        overflow: auto;
+    }
+    .banner-car{
+        height: 200px;
+    }
+    .banner-car img{
+        height: 200px;
+    }
+    .ace-investor {
+        height: 200px;
+    }
+    .banner-static {
+        height: 200px;
+        position: relative;
+    }
+    .img-responsive-banner {
+        height: 200px;
+    }
+    .about-company{
+        padding: 24px 0px;
+    }
+    #title-progress{
+        font-size: 19px;
+    }
+    #to-progress{
+        font-size: 19px;
+    }
+    .slider-testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        border: none;
+        width: 100%;
+        background-color: white;
+    }
+    .ace-conected {
+        padding: 29px 0px;
+        height: auto;
+        position: relative;
+        background-color: #f6fdff;
+    }
+    .gtp-solution {
+        padding: 29px 0px;
+        background-color: #306390;
+    }
+    #ace-testimonials-mobile {
+        /* padding: 20px 0px; */
+        display: block;
+        padding: 29px 0px;
+    }
+    .ace-achievements{
+        display: none;
+    }
+    header{
+        position: fixed;
+    }
+    .notifications-dropdown.mdl-list {
+        width: 100%;
+    }
+    .mdl-menu {
+        min-width: 0;
+    }
+    .mdl-list__item{
+        padding: 0px;
+    }
+    #desktop-counter h1 {
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+    .about-ace {
+        padding: 29px 0px;
+        position: relative;
+        background-color: white;
+    }
+    .ace-sliders .carousel {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0rem;
+    }
+    section.ace-sliders img {
+        height: 350px;
+    }
+    .company-ace {
+        padding: 29px 0px;
+        height: auto;
+    }
+    .about-provider {
+        padding: 29px 0px;
+        position: relative;
+        height: auto;
+    }
+    .circle-row{
+        display: none;
+    }
+    #row-desktop-structure img{
+        width:100%;
+    }
+    #row-desktop-structure {
+        padding: 13px 0px;
+    }
+    .about h1 {
+        text-align: center;
+    }
+    .title-ace {
+        text-align: center;
+    }
+    #hello{
+        display: none;
+    }
+    #loginweb {
+        display: none;
+    }
+    .mdl-layout__drawer-button {
+        display: block;
+        top: -6px;
+        left: 0;
+        height: 40px;
+
+    }
+    .mdl-layout__drawer-button-login {
+        display: block;
+        top: -6px;
+        right: 0;
+        height: 40px;
+
+    }
+    .mdl-layout__header .mdl-layout__drawer-button {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .rounded-circle {
+        height: 40px;
+        width: 40px;
+    }
+    .acetopbar {
+        background: white;
+        left: 59px;
+        top: 6px;
+        z-index: 998;
+        position: absolute;
+        width: 76px;
+        height: 25px;
+    }
+    .class_menu_black {
+        height: 40px;
+    }
+    .mdl-layout__header-row .classurl {
+        display: none;
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+    .about h1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .form-group {
+        margin: 20px 0px;
+    }
+    .ace-button-black {
+        width: 100%;
+    }
+    .ace-sliders {
+        max-height: 350px;
+    }
+    .mdl-layout__header-row {
+        height: 40px;
+        background: #333333;
+    }
+    .container-go {
+        padding: 0px;
+    }
+    .container-co{
+        padding: 0px;
+     }
+    .go-right-order{
+        margin-top: 20px;
+    }
+    .step-order {
+        margin: 0px auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .btn-step {
+        width: 109px;
+    }
+    .body-order {
+        margin: 20px 3%;
+    }
+    .title-order {
+        margin: 19px 20px;
+    }
+    .mdl-layout__header-row .avatar-dropdown {
+        cursor: pointer;
+        margin: 0 0px;
+        padding: 0 0px;
+        line-height: 29px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .i-icon-login{
+        font-size: 25px;
+    }
+    .content-timeline li{
+        list-style-type: none;
+    }
+    .clip-down {
+        width: 121px;
+    }
+    .clip-top {
+        position: relative;
+        width: 29px;
+        height: 180px;
+        overflow: hidden;
+        padding: 22px;
+    }
+
+    .clip-content {
+        position: relative;
+        width: 29px;
+        overflow: hidden;
+        padding: 22px;
+    }
+    .row-time-line {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .content-timeline h5 {
+        font-weight: bold;
+        -webkit-text-stroke: 0px;
+        font-size: 11px;
+    }
+    .content-timeline img {
+        width: 100%;
+    }
+    #register-user {
+        padding: 0px 0%;
+    }
+    #gosford-forgot{
+        margin-top: 15%;
+    }
+    .wrap-content {
+        position: relative;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .mdl-menu__container{
+        right: -14px;
+    top: 39px;
+    width: 325px;
+    height: 257.6px;
+    }
+    .padding-research{
+        padding: 4%;
+    }
+    .banner-video{
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+    .banner-video-div{
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+    .video-style-banner{
+        height: 270px;
+        background-color: #333333;
+    }
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        position: absolute;
+        color: #ffffff;
+        display: block;
+        line-height: 56px;
+        background-color: inherit;
+    }
+    .title-step-order p {
+        color: #0000005e;
+        font-weight: 600;
+        font-size: 11px;
+        text-align: center;
+    }
+    .navbar-mobile{
+        background-color: #bf1e2d;
+        display: none;
+    }
+    .navbar-mobile ul{
+        list-style-type: none;
+        padding-left: 0;
+
+    }
+    .navbar-mobile li a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    .navbar-mobile li a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+    .navbar-mobile li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+      /* Hide the mobile menu by default */
+
+/* Apply animation when showing/hiding */
+.navbar-mobile.active {
+    display: block;
+    animation: slideAnimation 0.3s ease-in-out;
+}
+
+@keyframes slideAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+    .btn-nav-login{
+        display: none;
+    }
+    .description-service{
+        text-align: justify;
+        margin: 10px 1px;
+        height: 200px;
+        overflow: auto;
+    }
+    .banner-car{
+        height: 200px;
+    }
+    .banner-car img{
+        height: 200px;
+    }
+    .ace-investor {
+        height: 200px;
+    }
+    .banner-static {
+        height: 200px;
+        position: relative;
+    }
+    .img-responsive-banner {
+        height: 200px;
+    }
+    .about-company{
+        padding: 24px 0px;
+    }
+    #title-progress{
+        font-size: 19px;
+    }
+    #to-progress{
+        font-size: 19px;
+    }
+    .slider-testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        border: none;
+        width: 100%;
+        background-color: white;
+    }
+    .ace-conected {
+        padding: 29px 0px;
+        height: auto;
+        position: relative;
+        background-color: #f6fdff;
+    }
+    .gtp-solution {
+        padding: 29px 0px;
+        background-color: #306390;
+    }
+    #ace-testimonials-mobile {
+        /* padding: 20px 0px; */
+        display: block;
+        padding: 29px 0px;
+    }
+    .ace-achievements{
+        display: none;
+    }
+    header{
+        position: fixed;
+    }
+    .notifications-dropdown.mdl-list {
+        width: 100%;
+    }
+    .mdl-menu {
+        min-width: 0;
+    }
+    .mdl-list__item{
+        padding: 0px;
+    }
+    #desktop-counter h1 {
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+    .about-ace {
+        padding: 29px 0px;
+        position: relative;
+        background-color: white;
+    }
+    .ace-sliders .carousel {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0rem;
+    }
+    section.ace-sliders img {
+        height: 350px;
+    }
+    .company-ace {
+        padding: 29px 0px;
+        height: auto;
+    }
+    .about-provider {
+        padding: 29px 0px;
+        position: relative;
+        height: auto;
+    }
+    .circle-row{
+        display: none;
+    }
+    #row-desktop-structure img{
+        width:100%;
+    }
+    #row-desktop-structure {
+        padding: 13px 0px;
+    }
+    .about h1 {
+        text-align: center;
+    }
+    .title-ace {
+        text-align: center;
+    }
+    #hello{
+        display: none;
+    }
+    #loginweb {
+        display: none;
+    }
+    .mdl-layout__drawer-button {
+        display: block;
+        top: -6px;
+        left: 0;
+        height: 40px;
+
+    }
+    .mdl-layout__drawer-button-login {
+        display: block;
+        top: -6px;
+        right: 0;
+        height: 40px;
+
+    }
+    .mdl-layout__header .mdl-layout__drawer-button {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .rounded-circle {
+        height: 40px;
+        width: 40px;
+    }
+    .acetopbar {
+        background: white;
+        left: 59px;
+        top: 6px;
+        z-index: 998;
+        position: absolute;
+        width: 76px;
+        height: 25px;
+    }
+    .class_menu_black {
+        height: 40px;
+    }
+    .mdl-layout__header-row .classurl {
+        display: none;
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+    .about h1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .form-group {
+        margin: 20px 0px;
+    }
+    .ace-button-black {
+        width: 100%;
+    }
+    .ace-sliders {
+        max-height: 350px;
+    }
+    .mdl-layout__header-row {
+        height: 40px;
+        background: #333333;
+    }
+    .container-go {
+        padding: 0px;
+    }
+    .container-co{
+        padding: 0px;
+     }
+    .go-right-order{
+        margin-top: 20px;
+    }
+    .step-order {
+        margin: 0px auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .btn-step {
+        width: 109px;
+    }
+    .body-order {
+        margin: 20px 3%;
+    }
+    .title-order {
+        margin: 19px 20px;
+    }
+    .mdl-layout__header-row .avatar-dropdown {
+        cursor: pointer;
+        margin: 0 0px;
+        padding: 0 0px;
+        line-height: 29px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content-timeline li{
+        list-style-type: none;
+    }
+    .clip-down {
+        width: 121px;
+    }
+    .clip-top {
+        position: relative;
+        width: 29px;
+        height: 180px;
+        overflow: hidden;
+        padding: 22px;
+    }
+
+    .clip-content {
+        position: relative;
+        width: 29px;
+        overflow: hidden;
+        padding: 22px;
+    }
+    .row-time-line {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .content-timeline h5 {
+        font-weight: bold;
+        -webkit-text-stroke: 0px;
+        font-size: 11px;
+    }
+    .content-timeline img {
+        width: 100%;
+    }
+    #register-user {
+        padding: 0px 0%;
+    }
+    #gosford-forgot{
+        margin-top: 15%;
+    }
+    .wrap-content {
+        position: relative;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .mdl-menu__container{
+        right: -14px;
+    top: 39px;
+    width: 325px;
+    height: 257.6px;
+    }
+    .padding-research{
+        padding: 4%;
+    }
+    .banner-video{
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+    .banner-video-div{
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+    .video-style-banner{
+        height: 270px;
+        background-color: #333333;
+    }
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        position: absolute;
+        color: #ffffff;
+        display: block;
+        line-height: 56px;
+        background-color: inherit;
+    }
+    .title-step-order p {
+        color: #0000005e;
+        font-weight: 600;
+        font-size: 11px;
+        text-align: center;
+    }
+    .navbar-mobile{
+        background-color: #bf1e2d;
+        display: none;
+    }
+    .navbar-mobile ul{
+        list-style-type: none;
+        padding-left: 0;
+
+    }
+    .navbar-mobile li a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    .navbar-mobile li a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+    .navbar-mobile li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+      /* Hide the mobile menu by default */
+
+/* Apply animation when showing/hiding */
+.navbar-mobile.active {
+    display: block;
+    animation: slideAnimation 0.3s ease-in-out;
+}
+
+@keyframes slideAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+    .btn-nav-login{
+        display: none;
+    }
+    .description-service{
+        text-align: justify;
+        margin: 10px 1px;
+        height: 200px;
+        overflow: auto;
+    }
+    .banner-car{
+        height: 200px;
+    }
+    .banner-car img{
+        height: 200px;
+    }
+    .ace-investor {
+        height: 200px;
+    }
+    .banner-static {
+        height: 200px;
+        position: relative;
+    }
+    .img-responsive-banner {
+        height: 200px;
+    }
+    .about-company{
+        padding: 24px 0px;
+    }
+    #title-progress{
+        font-size: 19px;
+    }
+    #to-progress{
+        font-size: 19px;
+    }
+    .gtp-po-button {
+        position: relative;
+    }
+    .slider-testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border: none;
+        width: 100%;
+        background-color: white;
+    }
+    .ace-conected {
+        padding: 29px 0px;
+        height: auto;
+        position: relative;
+        background-color: #f6fdff;
+    }
+    .gtp-solution {
+        padding: 29px 0px;
+        background-color: #306390;
+    }
+    #ace-testimonials-mobile {
+        /* padding: 20px 0px; */
+        display: none;
+        padding: 29px 0px;
+    }
+    .ace-achievements{
+        display: none;
+    }
+    header{
+        position: fixed;
+    }
+    .notifications-dropdown.mdl-list {
+        width: 100%;
+    }
+    .mdl-menu {
+        min-width: 0;
+    }
+    .mdl-list__item{
+        padding: 0px;
+    }
+    #desktop-counter h1 {
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+    .about-ace {
+        padding: 29px 0px;
+        position: relative;
+        background-color: white;
+    }
+    .ace-sliders .carousel {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0rem;
+    }
+    section.ace-sliders img {
+        height: 650px;
+    }
+    .img-structure-mobile {
+        display: block;
+    }
+    .line-structure {
+        display: none;
+    }
+    .circle-img-ace {
+        width: 100%;
+    }
+    .about h1 {
+        overflow-wrap: break-word;
+        font-weight: bold;
+        font-size: 5rem;
+        -webkit-text-stroke: 0px;
+    }
+    footer img {
+        width: 150px;
+        height: auto;
+    }
+    .company-ace {
+        padding: 29px 0px;
+        height: auto;
+    }
+    .about-provider {
+        padding: 29px 0px;
+        position: relative;
+        height: auto;
+    }
+    .circle-row{
+        display: none;
+    }
+    #row-desktop-structure img{
+        width:100%;
+    }
+    #row-desktop-structure {
+        padding: 13px 0px;
+    }
+    .about h1 {
+        text-align: center;
+    }
+    .title-ace {
+        text-align: center;
+    }
+    #hello{
+        display: none;
+    }
+    #loginweb {
+        display: none;
+    }
+    .mdl-layout__drawer-button {
+        display: block;
+        top: -6px;
+        left: 0;
+        height: 40px;
+
+    }
+    .mdl-layout__drawer-button-login {
+        display: block;
+        top: 6px;
+        right: 0;
+        height: 40px;
+
+    }
+    .mdl-layout__header .mdl-layout__drawer-button {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .rounded-circle {
+        height: 40px;
+        width: 40px;
+    }
+    .acetopbar {
+        background: white;
+        left: 59px;
+        top: 14px;
+        z-index: 998;
+        position: absolute;
+        width: 89px;
+        height: 31px;
+    }
+    .i-icon-login{
+        font-size: 34px;
+    }
+    .class_menu_black {
+        height: 40px;
+    }
+    .mdl-layout__header-row .classurl {
+        display: none;
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+    .about h1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .form-group {
+        margin: 20px 0px;
+    }
+    .ace-button-black {
+        width: 100%;
+    }
+    .ace-sliders {
+        max-height: 650px;
+    }
+    .mdl-layout__header-row {
+        height: 60px;
+        background: #333333;
+    }
+    .mdl-layout__header .mdl-layout__drawer-button {
+        margin: 0px 10px;
+        width: 45px;
+    }
+    .mdl-layout__drawer-button {
+        display: block;
+        top: 2px;
+    }
+    .container-go {
+        padding: 0px;
+    }
+    .container-co{
+        padding: 0px;
+     }
+    .go-right-order{
+        margin-top: 20px;
+    }
+    .step-order {
+        margin: 0px auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .btn-step {
+        width: 109px;
+    }
+    .body-order {
+        margin: 20px 3%;
+    }
+    .title-order {
+        margin: 19px 20px;
+    }
+    .mdl-layout__header-row .avatar-dropdown {
+        cursor: pointer;
+        margin: 0 0px;
+        padding: 0 0px;
+        line-height: 29px;
+    }
+  }
 
 .login-link:hover{
     color: #01579b;

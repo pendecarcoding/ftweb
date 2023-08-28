@@ -7,7 +7,7 @@
     @else
         <div data-bs-toggle="modal" data-bs-target="#myLogin" aria-expanded="false" role="button" tabindex="0"
             class="mdl-layout__drawer-button-login" id="navbarToggle">
-            <i style="font-size: 25px;" class="fa fa-user-circle" aria-hidden="true"></i>
+            <i  class="fa fa-user-circle i-icon-login" aria-hidden="true"></i>
 
         </div>
     @endif
@@ -96,7 +96,7 @@ classurl-active @endif">{{ $v['name'] }}</a>
                 <a href="{{ url('staff/back/announcements') }}">
                         <div aria-expanded="false" role="button" tabindex="0"
                         class="mdl-layout__drawer-button-login" id="navbarToggle">
-                        <i style="font-size: 25px;" class="fa fa-user-circle" aria-hidden="true"></i>
+                        <i  class="fa fa-user-circle i-icon-login" aria-hidden="true"></i>
 
                     </div>
                 </a>
