@@ -3,7 +3,7 @@
         <i class="material-icons menu-icon"></i>
         <i class="material-icons times-icon" style="display: none;">✕</i>
     </div>
-    @if (Session::get('gystem_login'))
+    @if (Session::get('gystem_login') || Session::get('loginstaff') == true)
     @else
         <div data-bs-toggle="modal" data-bs-target="#myLogin" aria-expanded="false" role="button" tabindex="0"
             class="mdl-layout__drawer-button-login" id="navbarToggle">
@@ -90,8 +90,13 @@ classurl-active @endif">{{ $v['name'] }}</a>
                 </ul>
             @elseif(Session::get('loginstaff') == true)
                 @if (Session::get('loginstaff') == true)
-                    <a href="{{ url('staff/back/announcements') }}"
-                        class="@if (Request::is('staff/back/announcements')) classurl-active @endif">Staff</a>
+                <a href="{{ url('staff/back/announcements') }}">
+                        <div aria-expanded="false" role="button" tabindex="0"
+                        class="mdl-layout__drawer-button-login" id="navbarToggle">
+                        <i style="font-size: 25px;" class="fa fa-user-circle" aria-hidden="true"></i>
+
+                    </div>
+                </a>
                 @endif
                 <a class="classurl" onclick="logoutFunction()" style="font-size:28px;color:white"><i
                         class="fa fa-sign-out" aria-hidden="true"></i></a>

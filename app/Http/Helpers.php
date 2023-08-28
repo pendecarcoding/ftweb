@@ -52,6 +52,22 @@ function getcar($id){
         return null;
     }
 }
+function truncateText($text, $maxWords, $moreText = "read more") {
+    // Hapus tag HTML dari teks
+    $textWithoutHtml = strip_tags($text);
+
+    // Pecah teks menjadi kata-kata
+    $words = explode(' ', $textWithoutHtml);
+
+    if (count($words) > $maxWords) {
+        $truncatedWords = array_slice($words, 0, $maxWords);
+        $truncatedText = implode(' ', $truncatedWords) . " $moreText";
+    } else {
+        $truncatedText = implode(' ', $words);
+    }
+
+    return $truncatedText;
+}
 function createSlug($string) {
     // Convert the string to lowercase
     $string = strtolower($string);

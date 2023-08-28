@@ -300,7 +300,7 @@ class StuffController extends Controller
                             ->count();
                 if($blokir > 0){
 
-                    return view('backstaff.block');
+                    return view('backstaff.block')->with('wrongpassword','your account is blocked');
 
                 }else{
                     $c = Stuff::where('username',str_replace(' ', '',$r->username))->where('password',md5($r->password))->first();
@@ -311,7 +311,7 @@ class StuffController extends Controller
                 }
 
             }else{
-                return back()->with('dangger','Account not found');
+                return back()->with('wrongpassword','Account not found');
             }
         } catch (\Throwable $th) {
             print $th->getmessage();

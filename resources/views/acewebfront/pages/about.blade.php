@@ -17,7 +17,7 @@
               <div class="row">
                 <div data-aos="fade-up" class="col-md-12">
                     <div class="title-ace">
-                    ABOUT > COMPANIES
+                        Feytech Holdings Berhad - About -> Companies
                       <span class="h-dash" style="font-weight: bold">—</span>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="200" class="col-md-12 col-sm-12 aos-init aos-animate">
