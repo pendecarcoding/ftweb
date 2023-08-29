@@ -179,12 +179,12 @@ classurl-active @endif">{{ $v['name'] }}</a>
 
                     <li class="nav-item dropdown">
                         <a style="color: white;" class="nav-link dropdown-toggle" href="#"
-                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            id="navbarDarkDropdownMenuLinks" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             {{$v['name']}}
                         </a>
-                        <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a style="padding-left: 27px;" href="#">Corporate Governance</a></li>
+                        <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLinks">
+                            <li><a style="padding-left: 27px;" href="{{ url($v['link']) }}">Corporate Governance</a></li>
                         </ul>
                     </li>
                 @else
@@ -281,6 +281,7 @@ classurl-active @endif">{{ $v['name'] }}</a>
             aboutDropdown.style.display = 'none';
         }
     });
+
 </script>
 
 <script>
