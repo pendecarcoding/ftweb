@@ -49,7 +49,7 @@
                     <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect  notifications-dropdown"
                         for="{{ $v['name'] }}">
                         <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="#">Corporate Governance</a>
+                            <a href="{{$v['link']}}">Corporate Governance</a>
                         </li>
                     </ul>
                 @else
