@@ -10,6 +10,13 @@ footer{
     vertical-align: super; /* Menggeser angka ke atas sebagai pangkat */
 }
 
+.img-wrap-contact{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
 .clip-top {
     position: relative;
     width: 150px;
@@ -12242,6 +12249,7 @@ form.form--basic .mdl-textfield__label {
         line-height: 29px;
     }
   }
+
 
 .login-link:hover{
     color: #01579b;
