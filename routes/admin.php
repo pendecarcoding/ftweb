@@ -65,6 +65,7 @@ use App\Http\Controllers\TypeCarsController;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\BanerController;
 
 
 /*
@@ -436,6 +437,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
     Route::controller(SliderController::class)->group(function () {
          Route::get('/slider/destroy/{id}', 'destroy')->name('slider.destroy');
         Route::post('/slider/change-status', 'change_status')->name('slider.change-status');
+    });
+
+    Route::resource('banner',BanerController::class);
+    Route::controller(BanerController::class)->group(function () {
+         Route::get('/banner/destroy/{id}', 'destroy')->name('banner.destroy');
+        Route::post('/banner/change-status', 'change_status')->name('banner.change-status');
     });
 
     Route::resource('personalpageset', PersonalPageset::class);

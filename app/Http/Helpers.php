@@ -317,6 +317,24 @@ function overWriteEnvFile($type, $val)
         //}
 }
 
+
+function getallbanner(){
+    $data = DB::table('banners')->get();
+    $result = array();
+    foreach($data as $i => $v){
+        if (Request::is($v->page_link)){
+            $result = explode(',',$v->image);
+
+        }else{
+
+
+        }
+    }
+
+    return $result;
+
+}
+
 function getimage($id){
     try {
         $data = Upload::findorfail($id);

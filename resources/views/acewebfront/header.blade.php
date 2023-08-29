@@ -37,7 +37,19 @@
                             <a href="{{ url('about_director') }}">Board of directors</a>
                         </li>
                         <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{ url('company_background') }}">Companies Background</a>
+                            <a href="{{ url('company_background') }}">Company Background</a>
+                        </li>
+                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                            <a href="#">Vision & Mission</a>
+                        </li>
+                    </ul>
+                @elseif ($v['name'] === 'Investor Relations')
+                <a href="#" class="classurl @if (Request::is($v['link'] . '*')) classurl-active @endif"
+                        id="{{ $v['name'] }}">{{ $v['name'] }}</a>
+                    <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect  notifications-dropdown"
+                        for="{{ $v['name'] }}">
+                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                            <a href="#">Corporate Governance</a>
                         </li>
                     </ul>
                 @else
@@ -149,10 +161,30 @@ classurl-active @endif">{{ $v['name'] }}</a>
                         </a>
                         <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a style="padding-left: 27px;" href="{{ url('about') }}">Company</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('about_director') }}">Board of
-                                    Directors</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('company_background') }}">Companies Background</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url('about_director') }}">Board of Directors</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url('company_background') }}">Company Background</a></li>
+                            <li><a style="padding-left: 27px;" href="#">Vision And Mission</a></li>
 
+                        </ul>
+                    </li>
+
+                @elseif ($v['name'] === 'Investor Relations')
+                    <!-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle">{{ $v['name'] }}</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Board of Directors</a></li>
+                </ul>
+            </li> -->
+
+                    <li class="nav-item dropdown">
+                        <a style="color: white;" class="nav-link dropdown-toggle" href="#"
+                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{$v['name']}}
+                        </a>
+                        <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a style="padding-left: 27px;" href="#">Corporate Governance</a></li>
                         </ul>
                     </li>
                 @else

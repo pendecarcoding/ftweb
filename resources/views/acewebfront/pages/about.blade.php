@@ -1,15 +1,7 @@
 @extends('acewebfront.layouts')
 @section('content')
-<main>
-  <section class="bg-banner">
-    <img
-                    title="about-banner"
-                    style="width: 100%;"
-                    class="img-responsive"
-                    src="{{ static_asset('aceweb') }}/assets/img/banner_about.png"
-                    alt=""
-                />
-  </section>
+
+    @include('acewebfront.widget.allbaner')
       <section class="gtp-anouncements about-company">
         <div class="content-ace">
           <div class="wrap-content">

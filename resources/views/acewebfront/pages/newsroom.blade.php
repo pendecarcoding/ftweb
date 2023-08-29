@@ -4,15 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-investor">
-            
-                    <div class="banner-static">
-                        <img class="img-responsive-banner newsroom-banner" src="/public/aceweb/assets/img/newsroom-banner.png"
-                            alt="ACE-BANNER-NEWSROOM" />
-                    </div>
-             
-        </section>
-
+        @include('acewebfront.widget.allbaner')
         <section class="gtp-anouncements">
             <div class="content-ace">
                 <div class="wrap-content">

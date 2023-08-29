@@ -5,10 +5,12 @@
     color: #5c7a9f;" href="{{ route('admin.dashboard') }}"
                 class="d-block text-left">
                 @if (get_setting('system_logo_white') != null)
-                    <img style="    background-color: white;" class="mw-100" src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="brand-icon"
+                    <img style="    background-color: white;" class="mw-100"
+                        src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="brand-icon"
                         alt="{{ get_setting('site_name') }}">
                 @else
-                    <img style="    background-color: white;" class="mw-100" src="{{ uploaded_asset(get_setting('site_icon')) }}" class="brand-icon"
+                    <img style="    background-color: white;" class="mw-100"
+                        src="{{ uploaded_asset(get_setting('site_icon')) }}" class="brand-icon"
                         alt="{{ get_setting('site_name') }}">
                 @endif
             </a>
@@ -33,21 +35,21 @@
                     </li>
                 @endcan
                 @can('admin_announcement')
-                                                        <li class="aiz-side-nav-item">
-                                                            <a href="{{ route('announcements.staff') }}" class="aiz-side-nav-link">
-                                                                <i class="las la-bullhorn aiz-side-nav-icon"></i>
-                                                                <span class="aiz-side-nav-text">{{ translate('Announcement For Staff') }}</span>
-                                                            </a>
-                                                        </li>
+                    <li class="aiz-side-nav-item">
+                        <a href="{{ route('announcements.staff') }}" class="aiz-side-nav-link">
+                            <i class="las la-bullhorn aiz-side-nav-icon"></i>
+                            <span class="aiz-side-nav-text">{{ translate('Announcement For Staff') }}</span>
+                        </a>
+                    </li>
                 @endcan
                 @can('admin_announcement')
-                                                        <li class="aiz-side-nav-item">
-                                                            <a href="{{ route('handbook.staff') }}"
-                                                                class="aiz-side-nav-link {{ areActiveRoutes(['handbook.staff', 'handbook.create']) }}">
-                                                                <i class="las la-book aiz-side-nav-icon"></i>
-                                                                <span class="aiz-side-nav-text">{{ translate('Handbook Staff') }}</span>
-                                                            </a>
-                                                        </li>
+                    <li class="aiz-side-nav-item">
+                        <a href="{{ route('handbook.staff') }}"
+                            class="aiz-side-nav-link {{ areActiveRoutes(['handbook.staff', 'handbook.create']) }}">
+                            <i class="las la-book aiz-side-nav-icon"></i>
+                            <span class="aiz-side-nav-text">{{ translate('Handbook Staff') }}</span>
+                        </a>
+                    </li>
                 @endcan
 
                 <!-- POS Addon-->
@@ -148,70 +150,70 @@
 
 
                             <!--@can('show_in_house_products')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('products.admin') }}" class="aiz-side-nav-link {{ areActiveRoutes(['products.admin', 'products.create', 'products.admin.edit']) }}" >
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('In House Products') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @if (get_setting('vendor_system_activation') == 1)
-                                                                                    @can('show_seller_products')
-                                                                                                                                            <li class="aiz-side-nav-item">
-                                                                                                                                                <a href="{{ route('products.seller') }}" class="aiz-side-nav-link {{ areActiveRoutes(['products.seller', 'products.seller.edit']) }}">
-                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Seller Products') }}</span>
-                                                                                                                                                </a>
-                                                                                                                                            </li>
-                                                                                    @endcan
-                                                                                @endif
-                                                                                @can('show_digital_products')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('digitalproducts.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['digitalproducts.index', 'digitalproducts.create', 'digitalproducts.edit']) }}">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Digital Products') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @can('product_bulk_import')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('product_bulk_upload.index') }}" class="aiz-side-nav-link" >
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Bulk Import') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @can('product_bulk_export')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('product_bulk_export.index') }}" class="aiz-side-nav-link">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Bulk Export') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('products.admin') }}" class="aiz-side-nav-link {{ areActiveRoutes(['products.admin', 'products.create', 'products.admin.edit']) }}" >
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('In House Products') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @if (get_setting('vendor_system_activation') == 1)
+                                                                                            @can('show_seller_products')
+                                                                                                                                                            <li class="aiz-side-nav-item">
+                                                                                                                                                                <a href="{{ route('products.seller') }}" class="aiz-side-nav-link {{ areActiveRoutes(['products.seller', 'products.seller.edit']) }}">
+                                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Seller Products') }}</span>
+                                                                                                                                                                </a>
+                                                                                                                                                            </li>
+                                                                                            @endcan
+                                                                                        @endif
+                                                                                        @can('show_digital_products')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('digitalproducts.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['digitalproducts.index', 'digitalproducts.create', 'digitalproducts.edit']) }}">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Digital Products') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @can('product_bulk_import')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('product_bulk_upload.index') }}" class="aiz-side-nav-link" >
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Bulk Import') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @can('product_bulk_export')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('product_bulk_export.index') }}" class="aiz-side-nav-link">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Bulk Export') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
 
-                                                                                @can('view_all_brands')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('brands.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['brands.index', 'brands.create', 'brands.edit']) }}" >
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Brand') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @can('view_product_attributes')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('attributes.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['attributes.index', 'attributes.create', 'attributes.edit', 'attributes.show', 'edit-attribute-value' . '']) }}">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Attribute') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @can('view_colors')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('colors') }}" class="aiz-side-nav-link {{ areActiveRoutes(['colors', 'colors.edit']) }}">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Colors') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @can('view_product_reviews')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ url('admin/reviews') }}" class="aiz-side-nav-link">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Product Reviews') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>-->
+                                                                                        @can('view_all_brands')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('brands.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['brands.index', 'brands.create', 'brands.edit']) }}" >
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Brand') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @can('view_product_attributes')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('attributes.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['attributes.index', 'attributes.create', 'attributes.edit', 'attributes.show', 'edit-attribute-value' . '']) }}">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Attribute') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @can('view_colors')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('colors') }}" class="aiz-side-nav-link {{ areActiveRoutes(['colors', 'colors.edit']) }}">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Colors') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @can('view_product_reviews')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ url('admin/reviews') }}" class="aiz-side-nav-link">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Product Reviews') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>-->
                             @endcan
                         </ul>
                     </li>
@@ -331,30 +333,30 @@
                 @canany(['view_all_orders', 'view_all_ccemail', 'view_inhouse_orders', 'view_seller_orders',
                     'view_pickup_point_orders'])
                     <li class="aiz-side-nav-item">
-                                                            <a href="#" class="aiz-side-nav-link">
-                                                                <i class="las la-money-bill aiz-side-nav-icon"></i>
-                                                                <span class="aiz-side-nav-text">{{ translate('Sales') }}</span>
-                                                                <span class="aiz-side-nav-arrow"></span>
-                                                            </a>
-                    <!--Submenu-->
-                    <ul class="aiz-side-nav-list level-2">
-                                                                @can('view_all_orders')
-                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                            <a href="{{ route('all_orders.index') }}"
-                                                                                                                class="aiz-side-nav-link {{ areActiveRoutes(['all_orders.index', 'all_orders.show']) }}">
-                                                                                                                <span class="aiz-side-nav-text">{{ translate('All Orders') }}</span>
-                                                                                                            </a>
-                                                                                                        </li>
-                                                                @endcan
-                                                                @can('view_all_ccemail')
-                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                            <a href="{{ route('all_ccemail.index') }}"
-                                                                                                                class="aiz-side-nav-link {{ areActiveRoutes(['all_ccemail.index']) }}">
-                                                                                                                <span class="aiz-side-nav-text">{{ translate('CC Email') }}</span>
-                                                                                                            </a>
-                                                                                                        </li>
-                                                                @endcan
-                                                                {{-- @can('view_inhouse_orders')
+                        <a href="#" class="aiz-side-nav-link">
+                            <i class="las la-money-bill aiz-side-nav-icon"></i>
+                            <span class="aiz-side-nav-text">{{ translate('Sales') }}</span>
+                            <span class="aiz-side-nav-arrow"></span>
+                        </a>
+                        <!--Submenu-->
+                        <ul class="aiz-side-nav-list level-2">
+                            @can('view_all_orders')
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{ route('all_orders.index') }}"
+                                        class="aiz-side-nav-link {{ areActiveRoutes(['all_orders.index', 'all_orders.show']) }}">
+                                        <span class="aiz-side-nav-text">{{ translate('All Orders') }}</span>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('view_all_ccemail')
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{ route('all_ccemail.index') }}"
+                                        class="aiz-side-nav-link {{ areActiveRoutes(['all_ccemail.index']) }}">
+                                        <span class="aiz-side-nav-text">{{ translate('CC Email') }}</span>
+                                    </a>
+                                </li>
+                            @endcan
+                            {{-- @can('view_inhouse_orders')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('inhouse_orders.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['inhouse_orders.index', 'inhouse_orders.show'])}}" >
                                         <span class="aiz-side-nav-text">{{translate('Inhouse orders')}}</span>
@@ -370,15 +372,15 @@
                                 </li>
                             @endcan --}}
 
-                                                                {{-- @can('view_pickup_point_orders')
+                            {{-- @can('view_pickup_point_orders')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('pick_up_point.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['pick_up_point.index','pick_up_point.order_show'])}}">
                                         <span class="aiz-side-nav-text">{{translate('Pick-up Point Order')}}</span>
                                     </a>
                                 </li>
                             @endcan --}}
-                                                            </ul>
-                                                        </li>
+                        </ul>
+                    </li>
                 @endcanany
 
                 <!-- Deliver Boy Addon-->
@@ -494,104 +496,104 @@
 
                 <!-- Customers -->
                 <!--@canany(['view_all_customers', 'view_classified_products', 'view_classified_packages'])
-                                                                        <li class="aiz-side-nav-item">
-                                                                            <a href="#" class="aiz-side-nav-link">
-                                                                                <i class="las la-user-friends aiz-side-nav-icon"></i>
-                                                                                <span class="aiz-side-nav-text">{{ translate('Customers') }}</span>
-                                                                                <span class="aiz-side-nav-arrow"></span>
-                                                                            </a>
-                                                                            <ul class="aiz-side-nav-list level-2">
-                                                                                @can('view_all_customers')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('customers.index') }}" class="aiz-side-nav-link">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Customer list') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @if (get_setting('classified_product') == 1)
-                                                                                    @can('view_classified_products')
-                                                                                                                                            <li class="aiz-side-nav-item">
-                                                                                                                                                <a href="{{ route('classified_products') }}" class="aiz-side-nav-link">
-                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Classified Products') }}</span>
-                                                                                                                                                </a>
-                                                                                                                                            </li>
-                                                                                    @endcan
-                                                                                    @can('view_classified_packages')
-                                                                                                                                            <li class="aiz-side-nav-item">
-                                                                                                                                                <a href="{{ route('customer_packages.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['customer_packages.index', 'customer_packages.create', 'customer_packages.edit']) }}">
-                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Classified Packages') }}</span>
-                                                                                                                                                </a>
-                                                                                                                                            </li>
-                                                                                    @endcan
-                                                                                @endif
-                                                                            </ul>
-                                                                        </li>
+                                                                                <li class="aiz-side-nav-item">
+                                                                                    <a href="#" class="aiz-side-nav-link">
+                                                                                        <i class="las la-user-friends aiz-side-nav-icon"></i>
+                                                                                        <span class="aiz-side-nav-text">{{ translate('Customers') }}</span>
+                                                                                        <span class="aiz-side-nav-arrow"></span>
+                                                                                    </a>
+                                                                                    <ul class="aiz-side-nav-list level-2">
+                                                                                        @can('view_all_customers')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('customers.index') }}" class="aiz-side-nav-link">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Customer list') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @if (get_setting('classified_product') == 1)
+                                                                                            @can('view_classified_products')
+                                                                                                                                                            <li class="aiz-side-nav-item">
+                                                                                                                                                                <a href="{{ route('classified_products') }}" class="aiz-side-nav-link">
+                                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Classified Products') }}</span>
+                                                                                                                                                                </a>
+                                                                                                                                                            </li>
+                                                                                            @endcan
+                                                                                            @can('view_classified_packages')
+                                                                                                                                                            <li class="aiz-side-nav-item">
+                                                                                                                                                                <a href="{{ route('customer_packages.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['customer_packages.index', 'customer_packages.create', 'customer_packages.edit']) }}">
+                                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Classified Packages') }}</span>
+                                                                                                                                                                </a>
+                                                                                                                                                            </li>
+                                                                                            @endcan
+                                                                                        @endif
+                                                                                    </ul>
+                                                                                </li>
                 @endcanany-->
 
                 <!-- Sellers -->
                 <!--@canany(['view_all_seller', 'seller_payment_history', 'view_seller_payout_requests', 'seller_commission_configuration', 'view_all_seller_packages', 'seller_verification_form_configuration'])
-                                                                        <li class="aiz-side-nav-item">
-                                                                            <a href="#" class="aiz-side-nav-link">
-                                                                                <i class="las la-user aiz-side-nav-icon"></i>
-                                                                                <span class="aiz-side-nav-text">{{ translate('Sellers') }}</span>
-                                                                                <span class="aiz-side-nav-arrow"></span>
-                                                                            </a>
-                                                                            <ul class="aiz-side-nav-list level-2">
-                                                                                @can('view_all_seller')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            @php
-                                                                                                                                                $sellers = \App\Models\Shop::where('verification_status', 0)
-                                                                                                                                                    ->where('verification_info', '!=', null)
-                                                                                                                                                    ->count();
-                                                                                                                                            @endphp
-                                                                                                                                            <a href="{{ route('sellers.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['sellers.index', 'sellers.create', 'sellers.edit', 'sellers.payment_history', 'sellers.approved', 'sellers.profile_modal', 'sellers.show_verification_request']) }}">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('All Seller') }}</span>
-                                                                                                                                                @if ($sellers > 0)<span class="badge badge-info">{{ $sellers }}</span> @endif
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @can('seller_payment_history')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('sellers.payment_histories') }}" class="aiz-side-nav-link">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Payouts') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @can('view_seller_payout_requests')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('withdraw_requests_all') }}" class="aiz-side-nav-link">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Payout Requests') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @can('seller_commission_configuration')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('business_settings.vendor_commission') }}" class="aiz-side-nav-link">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Seller Commission') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                                @if (addon_is_activated('seller_subscription'))
-                                                                                    @can('view_all_seller_packages')
-                                                                                                                                            <li class="aiz-side-nav-item">
-                                                                                                                                                <a href="{{ route('seller_packages.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['seller_packages.index', 'seller_packages.create', 'seller_packages.edit']) }}">
-                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Seller Packages') }}</span>
-                                                                                                                                                    @if (env('DEMO_MODE') == 'On')
-                                                                                                                                                        <span class="badge badge-inline badge-danger">Addon</span>
-                                                                                                                                                    @endif
-                                                                                                                                                </a>
-                                                                                                                                            </li>
-                                                                                    @endcan
-                                                                                @endif
-                                                                                @can('seller_verification_form_configuration')
-                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                            <a href="{{ route('seller_verification_form.index') }}" class="aiz-side-nav-link">
-                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Seller Verification Form') }}</span>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                @endcan
-                                                                            </ul>
-                                                                        </li>
+                                                                                <li class="aiz-side-nav-item">
+                                                                                    <a href="#" class="aiz-side-nav-link">
+                                                                                        <i class="las la-user aiz-side-nav-icon"></i>
+                                                                                        <span class="aiz-side-nav-text">{{ translate('Sellers') }}</span>
+                                                                                        <span class="aiz-side-nav-arrow"></span>
+                                                                                    </a>
+                                                                                    <ul class="aiz-side-nav-list level-2">
+                                                                                        @can('view_all_seller')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            @php
+                                                                                                                                                                $sellers = \App\Models\Shop::where('verification_status', 0)
+                                                                                                                                                                    ->where('verification_info', '!=', null)
+                                                                                                                                                                    ->count();
+                                                                                                                                                            @endphp
+                                                                                                                                                            <a href="{{ route('sellers.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['sellers.index', 'sellers.create', 'sellers.edit', 'sellers.payment_history', 'sellers.approved', 'sellers.profile_modal', 'sellers.show_verification_request']) }}">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('All Seller') }}</span>
+                                                                                                                                                                @if ($sellers > 0)<span class="badge badge-info">{{ $sellers }}</span> @endif
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @can('seller_payment_history')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('sellers.payment_histories') }}" class="aiz-side-nav-link">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Payouts') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @can('view_seller_payout_requests')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('withdraw_requests_all') }}" class="aiz-side-nav-link">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Payout Requests') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @can('seller_commission_configuration')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('business_settings.vendor_commission') }}" class="aiz-side-nav-link">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Seller Commission') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                        @if (addon_is_activated('seller_subscription'))
+                                                                                            @can('view_all_seller_packages')
+                                                                                                                                                            <li class="aiz-side-nav-item">
+                                                                                                                                                                <a href="{{ route('seller_packages.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['seller_packages.index', 'seller_packages.create', 'seller_packages.edit']) }}">
+                                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Seller Packages') }}</span>
+                                                                                                                                                                    @if (env('DEMO_MODE') == 'On')
+                                                                                                                                                                        <span class="badge badge-inline badge-danger">Addon</span>
+                                                                                                                                                                    @endif
+                                                                                                                                                                </a>
+                                                                                                                                                            </li>
+                                                                                            @endcan
+                                                                                        @endif
+                                                                                        @can('seller_verification_form_configuration')
+                                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                                            <a href="{{ route('seller_verification_form.index') }}" class="aiz-side-nav-link">
+                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Seller Verification Form') }}</span>
+                                                                                                                                                            </a>
+                                                                                                                                                        </li>
+                                                                                        @endcan
+                                                                                    </ul>
+                                                                                </li>
                 @endcanany-->
 
                 {{-- Uploads Files --}}
@@ -608,36 +610,36 @@
                     'product_wishlist_report', 'user_search_report', 'commission_history_report',
                     'wallet_transaction_report'])
                     <!-- <li class="aiz-side-nav-item">
-                                                            <a href="#" class="aiz-side-nav-link">
-                                                                <i class="las la-file-alt aiz-side-nav-icon"></i>
-                                                                <span class="aiz-side-nav-text">{{ translate('Reports') }}</span>
-                                                                <span class="aiz-side-nav-arrow"></span>
-                                                            </a>
-                                                            <ul class="aiz-side-nav-list level-2">
-                                                                @can('in_house_product_sale_report')
-                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                            <a href="{{ route('in_house_sale_report.index') }}"
-                                                                                                                class="aiz-side-nav-link {{ areActiveRoutes(['in_house_sale_report.index']) }}">
-                                                                                                                <span class="aiz-side-nav-text">{{ translate('ACE Product Sale') }}</span>
-                                                                                                            </a>
-                                                                                                        </li>
-                                                                @endcan
-                                                                {{-- @can('seller_products_sale_report')
+                                                                    <a href="#" class="aiz-side-nav-link">
+                                                                        <i class="las la-file-alt aiz-side-nav-icon"></i>
+                                                                        <span class="aiz-side-nav-text">{{ translate('Reports') }}</span>
+                                                                        <span class="aiz-side-nav-arrow"></span>
+                                                                    </a>
+                                                                    <ul class="aiz-side-nav-list level-2">
+                                                                        @can('in_house_product_sale_report')
+                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                            <a href="{{ route('in_house_sale_report.index') }}"
+                                                                                                                                class="aiz-side-nav-link {{ areActiveRoutes(['in_house_sale_report.index']) }}">
+                                                                                                                                <span class="aiz-side-nav-text">{{ translate('ACE Product Sale') }}</span>
+                                                                                                                            </a>
+                                                                                                                        </li>
+                                                                        @endcan
+                                                                        {{-- @can('seller_products_sale_report')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('seller_sale_report.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['seller_sale_report.index'])}}">
                                         <span class="aiz-side-nav-text">{{ translate('Seller Products Sale') }}</span>
                                     </a>
                                 </li>
                             @endcan --}}
-                                                                @can('products_stock_report')
-                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                            <a href="{{ route('stock_report.index') }}"
-                                                                                                                class="aiz-side-nav-link {{ areActiveRoutes(['stock_report.index']) }}">
-                                                                                                                <span class="aiz-side-nav-text">{{ translate('Products Stock') }}</span>
-                                                                                                            </a>
-                                                                                                        </li>
-                                                                @endcan
-                                                                {{-- @can('product_wishlist_report')
+                                                                        @can('products_stock_report')
+                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                            <a href="{{ route('stock_report.index') }}"
+                                                                                                                                class="aiz-side-nav-link {{ areActiveRoutes(['stock_report.index']) }}">
+                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Products Stock') }}</span>
+                                                                                                                            </a>
+                                                                                                                        </li>
+                                                                        @endcan
+                                                                        {{-- @can('product_wishlist_report')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('wish_report.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['wish_report.index'])}}">
                                         <span class="aiz-side-nav-text">{{ translate('Products wishlist') }}</span>
@@ -651,7 +653,7 @@
                                     </a>
                                 </li>
                             @endcan --}}
-                                                                {{-- @can('commission_history_report')
+                                                                        {{-- @can('commission_history_report')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('commission-log.index') }}" class="aiz-side-nav-link">
                                         <span class="aiz-side-nav-text">{{ translate('Commission History') }}</span>
@@ -665,8 +667,8 @@
                                     </a>
                                 </li>
                             @endcan --}}
-                                                            </ul>
-                                                        </li> -->
+                                                                    </ul>
+                                                                </li> -->
                 @endcanany
 
                 <!--Blog System-->
@@ -713,6 +715,14 @@
                                     <a href="{{ route('slider.index') }}"
                                         class="aiz-side-nav-link {{ areActiveRoutes(['slider.create', 'slider.edit']) }}">
                                         <span class="aiz-side-nav-text">{{ translate('SLIDER') }}</span>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('view_banner')
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{ route('banner.index') }}"
+                                        class="aiz-side-nav-link {{ areActiveRoutes(['banner.create', 'banner.edit']) }}">
+                                        <span class="aiz-side-nav-text">{{ translate('BANNER') }}</span>
                                     </a>
                                 </li>
                             @endcan
@@ -773,21 +783,21 @@
                                 </li>
                             @endcan
                             <!-- @can('view_blogs')
-                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                    <a href="{{ route('blog.index') }}"
-                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['blog.create', 'blog.edit']) }}">
-                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('All Posts') }}</span>
-                                                                                                                                    </a>
-                                                                                                                                </li>
-                                                                            @endcan -->
+                                                                                                                                                <li class="aiz-side-nav-item">
+                                                                                                                                                    <a href="{{ route('blog.index') }}"
+                                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['blog.create', 'blog.edit']) }}">
+                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('All Posts') }}</span>
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                    @endcan -->
                             <!-- @can('view_blog_categories')
-                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                    <a href="{{ route('blog-category.index') }}"
-                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['blog-category.create', 'blog-category.edit']) }}">
-                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Categories') }}</span>
-                                                                                                                                    </a>
-                                                                                                                                </li>
-                                                                            @endcan -->
+                                                                                                                                                <li class="aiz-side-nav-item">
+                                                                                                                                                    <a href="{{ route('blog-category.index') }}"
+                                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['blog-category.create', 'blog-category.edit']) }}">
+                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Categories') }}</span>
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                    @endcan -->
                         </ul>
                     </li>
                 @endcanany
@@ -802,13 +812,13 @@
                         </a>
                         <ul class="aiz-side-nav-list level-2">
                             <!-- @can('view_personalpageset')
-                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                    <a href="{{ route('personalpageset.index') }}"
-                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['perseonalpageset.edit']) }}">
-                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Personal Page Setting') }}</span>
-                                                                                                                    </a>
-                                                                                                                </li>
-                                                                    @endcan -->
+                                                                                                                                <li class="aiz-side-nav-item">
+                                                                                                                                    <a href="{{ route('personalpageset.index') }}"
+                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['perseonalpageset.edit']) }}">
+                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Personal Page Setting') }}</span>
+                                                                                                                                    </a>
+                                                                                                                                </li>
+                                                                            @endcan -->
                             @can('view_personaltestimonial')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('personaltestimonial.index') }}"
@@ -885,14 +895,14 @@
                                     </a>
                                 </li>
                             <!-- @endcan
-                                                                        @can('view_ir_events_persentation')
-                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                            <a href="{{ route('patners.index') }}"
-                                                                                                                                class="aiz-side-nav-link {{ areActiveRoutes(['patners.create', 'patners.edit']) }}">
-                                                                                                                                <span class="aiz-side-nav-text">{{ translate('IR Events & Persentation') }}</span>
-                                                                                                                            </a>
-                                                                                                                        </li>
-                                                                        @endcan -->
+                                                                                @can('view_ir_events_persentation')
+                                                                                                                                        <li class="aiz-side-nav-item">
+                                                                                                                                            <a href="{{ route('patners.index') }}"
+                                                                                                                                                class="aiz-side-nav-link {{ areActiveRoutes(['patners.create', 'patners.edit']) }}">
+                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('IR Events & Persentation') }}</span>
+                                                                                                                                            </a>
+                                                                                                                                        </li>
+                                                                                @endcan -->
                             @can('view_ir_persentation')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('persentation.index') }}"
@@ -908,22 +918,22 @@
                 @endcanany
 
                 @can('admin_announcement')
-                <li class="aiz-side-nav-item">
-                    <a href="{{ route('research.index') }}"
-                        class="aiz-side-nav-link {{ areActiveRoutes(['research.edit', 'research.create']) }}">
-                        <i class="las la-book aiz-side-nav-icon"></i>
-                        <span class="aiz-side-nav-text">{{ translate('Research & Development') }}</span>
-                    </a>
-                </li>
+                    <li class="aiz-side-nav-item">
+                        <a href="{{ route('research.index') }}"
+                            class="aiz-side-nav-link {{ areActiveRoutes(['research.edit', 'research.create']) }}">
+                            <i class="las la-book aiz-side-nav-icon"></i>
+                            <span class="aiz-side-nav-text">{{ translate('Research & Development') }}</span>
+                        </a>
+                    </li>
                 @endcan
                 @can('admin_contact')
-                <li class="aiz-side-nav-item">
-                    <a href="{{ route('contact.index') }}"
-                        class="aiz-side-nav-link {{ areActiveRoutes(['contact.edit', 'contact.create']) }}">
-                        <i class="las la-building aiz-side-nav-icon"></i>
-                        <span class="aiz-side-nav-text">{{ translate('Contact') }}</span>
-                    </a>
-                </li>
+                    <li class="aiz-side-nav-item">
+                        <a href="{{ route('contact.index') }}"
+                            class="aiz-side-nav-link {{ areActiveRoutes(['contact.edit', 'contact.create']) }}">
+                            <i class="las la-building aiz-side-nav-icon"></i>
+                            <span class="aiz-side-nav-text">{{ translate('Contact') }}</span>
+                        </a>
+                    </li>
                 @endcan
 
                 <!-- marketing -->
@@ -1288,46 +1298,46 @@
 
                 <!-- Website Setup
                 @canany(['header_setup', 'footer_setup', 'view_all_website_pages', 'website_appearance'])
-                                                                    <li class="aiz-side-nav-item">
-                                                                        <a href="#"
-                                                                            class="aiz-side-nav-link {{ areActiveRoutes(['website.footer', 'website.header']) }}">
-                                                                            <i class="las la-desktop aiz-side-nav-icon"></i>
-                                                                            <span class="aiz-side-nav-text">{{ translate('Website Setup') }}</span>
-                                                                            <span class="aiz-side-nav-arrow"></span>
-                                                                        </a>
-                                                                        <ul class="aiz-side-nav-list level-2">
-                                                                            @can('header_setup')
-                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                    <a href="{{ route('website.header') }}" class="aiz-side-nav-link">
-                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Header') }}</span>
-                                                                                                                                    </a>
-                                                                                                                                </li>
-                                                                            @endcan
-                                                                            @can('footer_setup')
-                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                    <a href="{{ route('website.footer', ['lang' => App::getLocale()]) }}"
-                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['website.footer']) }}">
-                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Footer') }}</span>
-                                                                                                                                    </a>
-                                                                                                                                </li>
-                                                                            @endcan
-                                                                            @can('view_all_website_pages')
-                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                    <a href="{{ route('website.pages') }}"
-                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['website.pages', 'custom-pages.create', 'custom-pages.edit']) }}">
-                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Pages') }}</span>
-                                                                                                                                    </a>
-                                                                                                                                </li>
-                                                                            @endcan
-                                                                            @can('website_appearance')
-                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                    <a href="{{ route('website.appearance') }}" class="aiz-side-nav-link">
-                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Appearance') }}</span>
-                                                                                                                                    </a>
-                                                                                                                                </li>
-                                                                            @endcan
-                                                                        </ul>
-                                                                    </li>
+                                                                            <li class="aiz-side-nav-item">
+                                                                                <a href="#"
+                                                                                    class="aiz-side-nav-link {{ areActiveRoutes(['website.footer', 'website.header']) }}">
+                                                                                    <i class="las la-desktop aiz-side-nav-icon"></i>
+                                                                                    <span class="aiz-side-nav-text">{{ translate('Website Setup') }}</span>
+                                                                                    <span class="aiz-side-nav-arrow"></span>
+                                                                                </a>
+                                                                                <ul class="aiz-side-nav-list level-2">
+                                                                                    @can('header_setup')
+                                                                                                                                                <li class="aiz-side-nav-item">
+                                                                                                                                                    <a href="{{ route('website.header') }}" class="aiz-side-nav-link">
+                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Header') }}</span>
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                    @endcan
+                                                                                    @can('footer_setup')
+                                                                                                                                                <li class="aiz-side-nav-item">
+                                                                                                                                                    <a href="{{ route('website.footer', ['lang' => App::getLocale()]) }}"
+                                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['website.footer']) }}">
+                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Footer') }}</span>
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                    @endcan
+                                                                                    @can('view_all_website_pages')
+                                                                                                                                                <li class="aiz-side-nav-item">
+                                                                                                                                                    <a href="{{ route('website.pages') }}"
+                                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['website.pages', 'custom-pages.create', 'custom-pages.edit']) }}">
+                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Pages') }}</span>
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                    @endcan
+                                                                                    @can('website_appearance')
+                                                                                                                                                <li class="aiz-side-nav-item">
+                                                                                                                                                    <a href="{{ route('website.appearance') }}" class="aiz-side-nav-link">
+                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Appearance') }}</span>
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                    @endcan
+                                                                                </ul>
+                                                                            </li>
                 @endcanany -->
 
                 <!-- Setup & Configurations -->
@@ -1382,13 +1392,13 @@
                                 </li>
                             @endcan
                             <!-- @can('pickup_point_setup')
-                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                    <a href="{{ route('pick_up_points.index') }}"
-                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['pick_up_points.index', 'pick_up_points.create', 'pick_up_points.edit']) }}">
-                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Pickup point') }}</span>
-                                                                                                                    </a>
-                                                                                                                </li>
-                                                                    @endcan -->
+                                                                                                                                <li class="aiz-side-nav-item">
+                                                                                                                                    <a href="{{ route('pick_up_points.index') }}"
+                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['pick_up_points.index', 'pick_up_points.create', 'pick_up_points.edit']) }}">
+                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Pickup point') }}</span>
+                                                                                                                                    </a>
+                                                                                                                                </li>
+                                                                            @endcan -->
                             @can('smtp_settings')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('smtp_settings.index') }}" class="aiz-side-nav-link">
@@ -1465,26 +1475,26 @@
                                             </li>
                                         @endcan
                                         <!-- @can('google_recaptcha_configuration')
-                                                                                                                                                                    <li class="aiz-side-nav-item">
-                                                                                                                                                                        <a href="{{ route('google_recaptcha.index') }}" class="aiz-side-nav-link">
-                                                                                                                                                                            <span class="aiz-side-nav-text">{{ translate('Google reCAPTCHA') }}</span>
-                                                                                                                                                                        </a>
-                                                                                                                                                                    </li>
-                                                                                                                        @endcan
-                                                                                                                        @can('google_map_setting')
-                                                                                                                                                                    <li class="aiz-side-nav-item">
-                                                                                                                                                                        <a href="{{ route('google-map.index') }}" class="aiz-side-nav-link">
-                                                                                                                                                                            <span class="aiz-side-nav-text">{{ translate('Google Map') }}</span>
-                                                                                                                                                                        </a>
-                                                                                                                                                                    </li>
-                                                                                                                        @endcan
-                                                                                                                        @can('google_firebase_setting')
-                                                                                                                                                                    <li class="aiz-side-nav-item">
-                                                                                                                                                                        <a href="{{ route('google-firebase.index') }}" class="aiz-side-nav-link">
-                                                                                                                                                                            <span class="aiz-side-nav-text">{{ translate('Google Firebase') }}</span>
-                                                                                                                                                                        </a>
-                                                                                                                                                                    </li>
-                                                                                                                        @endcan -->
+                                                                                                                                                                                            <li class="aiz-side-nav-item">
+                                                                                                                                                                                                <a href="{{ route('google_recaptcha.index') }}" class="aiz-side-nav-link">
+                                                                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Google reCAPTCHA') }}</span>
+                                                                                                                                                                                                </a>
+                                                                                                                                                                                            </li>
+                                                                                                                                        @endcan
+                                                                                                                                        @can('google_map_setting')
+                                                                                                                                                                                            <li class="aiz-side-nav-item">
+                                                                                                                                                                                                <a href="{{ route('google-map.index') }}" class="aiz-side-nav-link">
+                                                                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Google Map') }}</span>
+                                                                                                                                                                                                </a>
+                                                                                                                                                                                            </li>
+                                                                                                                                        @endcan
+                                                                                                                                        @can('google_firebase_setting')
+                                                                                                                                                                                            <li class="aiz-side-nav-item">
+                                                                                                                                                                                                <a href="{{ route('google-firebase.index') }}" class="aiz-side-nav-link">
+                                                                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Google Firebase') }}</span>
+                                                                                                                                                                                                </a>
+                                                                                                                                                                                            </li>
+                                                                                                                                        @endcan -->
                                     </ul>
                                 </li>
                             @endcanany
@@ -1538,13 +1548,13 @@
                                             </li>
                                         @endcan
                                         <!-- @can('manage_carriers')
-                                                                                                                                                                    <li class="aiz-side-nav-item">
-                                                                                                                                                                        <a href="{{ route('carriers.index') }}"
-                                                                                                                                                                            class="aiz-side-nav-link {{ areActiveRoutes(['carriers.index', 'carriers.create', 'carriers.edit']) }}">
-                                                                                                                                                                            <span class="aiz-side-nav-text">{{ translate('Shipping Carrier') }}</span>
-                                                                                                                                                                        </a>
-                                                                                                                                                                    </li>
-                                                                                                                        @endcan -->
+                                                                                                                                                                                            <li class="aiz-side-nav-item">
+                                                                                                                                                                                                <a href="{{ route('carriers.index') }}"
+                                                                                                                                                                                                    class="aiz-side-nav-link {{ areActiveRoutes(['carriers.index', 'carriers.create', 'carriers.edit']) }}">
+                                                                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Shipping Carrier') }}</span>
+                                                                                                                                                                                                </a>
+                                                                                                                                                                                            </li>
+                                                                                                                                        @endcan -->
                                     </ul>
                                 </li>
                                 @endif
