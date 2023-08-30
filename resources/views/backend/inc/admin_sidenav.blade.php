@@ -726,6 +726,14 @@
                                     </a>
                                 </li>
                             @endcan
+                            @can('view_policy')
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{ route('data-policy.index') }}"
+                                        class="aiz-side-nav-link {{ areActiveRoutes(['data-policy.create', 'data-policy.edit']) }}">
+                                        <span class="aiz-side-nav-text">{{ translate('Data Policy') }}</span>
+                                    </a>
+                                </li>
+                            @endcan
                             @can('view_about')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('about.index') }}"

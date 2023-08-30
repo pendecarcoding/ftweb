@@ -48,6 +48,7 @@ use DB;
 use App\Models\Currency;
 use App\Models\Language;
 use App\Models\Leadership;
+use App\Models\Policy;
 use Config;
 
 
@@ -133,6 +134,10 @@ class AceController extends Controller
 
     public function page($page){
         switch ($page) {
+            case 'corporate_governance':
+                $data = Policy::all();
+                return view('acewebfront.pages.governance',compact('data'));
+                break;
             case 'vision_mission':
                 return view('acewebfront.pages.mission');
             case 'company_milestone':

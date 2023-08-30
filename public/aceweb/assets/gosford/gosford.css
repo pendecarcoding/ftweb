@@ -4,6 +4,34 @@ footer{
     bottom: 0;
     width: 100%;
 }
+.gov-card {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    height: 250px;
+
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border: 0px;
+    box-shadow: 0 2px 15px -3px rgba(0,0,0,0.07), 0 10px 20px -2px rgba(0,0,0,0.04);
+}
+.gov-card h4 {
+    color: #000;
+    font-size: 1.1rem;
+}
+.gov-card:hover{
+    background-color: #f6960d;
+    color: white;
+}
+.gov-card:hover h4 {
+    color: white;
+}
+
+
+
 .card-vmm {
     text-align: center;
     border: 5px solid #f90915; /* Red border */

@@ -6,6 +6,7 @@ use App\Http\Controllers\AizUploadController;
 use App\Http\Controllers\AttributeController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PolicyController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\BusinessSettingsController;
 use App\Http\Controllers\CarrierController;
@@ -521,6 +522,19 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/handbook/edit/{id}', 'handbookedit')->name('handbook.edit');
         Route::post('/handbook/update', 'updatehandbook')->name('handbook.update');
    });
+
+      //announcements
+      Route::resource('corporate-gov-data',PolicyController::class);
+      Route::controller(PolicyController::class)->group(function () {
+          Route::get('/data-policy', 'index')->name('data-policy.index');
+          Route::post('/data-policy/published', 'change_status')->name('data-policy.published');
+          Route::get('/data-policy/create', 'create')->name('data-policy.create');
+          Route::post('/data-policy/store', 'store')->name('data-policy.store');
+          Route::get('/data-policy/destroy/{id}', 'destroy')->name('data-policy.destroy');
+          Route::get('/data-policy/edit/{id}', 'edit')->name('data-policy.edit');
+          Route::patch('/data-policy/update/{id}', 'update')->name('data-policy.update');
+     });
+
 
 
     //Banner Investor

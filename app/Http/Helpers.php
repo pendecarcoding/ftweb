@@ -347,6 +347,18 @@ function getimage($id){
 
 }
 
+function getpdf($id){
+    try {
+        $data = Upload::findorfail($id);
+        return '/public/'.$data->file_name;
+    } catch (\Throwable $th) {
+        return '/public/assets/img/placeholder.jpg';
+    }
+
+
+
+}
+
 function getContactByDevision($id){
     try {
         $data = DB::table('contacts')->where('devision',$id)->get();

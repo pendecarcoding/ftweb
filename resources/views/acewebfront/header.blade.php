@@ -49,7 +49,10 @@
                     <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect  notifications-dropdown"
                         for="{{ $v['name'] }}">
                         <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{$v['link']}}">Corporate Governance</a>
+                            <a href="{{$v['link']}}">Investor</a>
+                        </li>
+                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                            <a href="{{url('corporate_governance')}}">Corporate Governance</a>
                         </li>
                     </ul>
                 @else
@@ -184,7 +187,8 @@ classurl-active @endif">{{ $v['name'] }}</a>
                             {{$v['name']}}
                         </a>
                         <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLinks">
-                            <li><a style="padding-left: 27px;" href="{{ url($v['link']) }}">Corporate Governance</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url($v['link']) }}">Investor</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url('corporate_governance') }}">Corporate Governance</a></li>
                         </ul>
                     </li>
                 @else

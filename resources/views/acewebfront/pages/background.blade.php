@@ -127,7 +127,7 @@
                                 <div data-aos="zoom-out-down" class="content-timeline">
                                     <h5>
                                         <li>GU: ISO 9001 Certification</li>
-                                        <li>Establishment Trimex Malsysia</li>
+                                        <li>Establishment Trimex Malaysia</li>
                                         <li> 1<span class="angka"></span><sup>ST</sup> Hyundai PDI Project</li>
                                     </h5>
                                     <img src="/public/go_system/images/2009-timeline.png" alt="">
@@ -311,7 +311,7 @@
                             <div class="row-time-line">
                                 <div data-aos="zoom-out-down" class="content-timeline">
                                     <h5>
-                                        Feytech Plan in Kulim
+                                        Feytech Plant in Kulim
                                     </h5>
                                     <img src="/public/go_system/images/2021-timeline.png" alt="">
                                 </div>

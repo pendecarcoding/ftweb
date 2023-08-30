@@ -4,7 +4,8 @@
 @endsection
 @section('content')
 <main>
-      <section id="ace-investor-banner-desktop"  class="ace-investor-banner">
+    @include('acewebfront.widget.allbaner')
+      <!-- <section id="ace-investor-banner-desktop"  class="ace-investor-banner">
         <div class="row-personal">
             <div id="desktop-banner" class="col-md-9 col-sm-12 col-lg-9">
               <img class="img-responsive-investor" src="{{ getimage(env('INVESTOR_BANNER')) }}" alt="">
@@ -12,13 +13,13 @@
                 <div class="carousel-caption text-start">
                   <h1 class="h1-investor-banner">Half Yearly Results
                     <!-- @php $created = explode(' ',$announcementnew->created_at); print $created[0] @endphp  -->
-                </h1>
+                <!-- </h1>
                   <a href="{{url('announcements/'.$announcementnew->slug)}}" class="btn btn-lg btn-read-now-banner-investor">Read Now</a>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <div class="col-md-3 col-sm-12 col-lg-3">
+            <!-- <div class="col-md-3 col-sm-12 col-lg-3">
               <div class="investor-number">
 
                 <table  class="stock-price-investor">
@@ -58,9 +59,9 @@
 
             </div>
           </div>
-      </section>
+      </section> -->
 
-      <section id="ace-investor-banner-mobile">
+      <!-- <section id="ace-investor-banner-mobile">
         <div class="row-personal">
           <div  class="col-md-12 col-sm-12 col-lg-9">
             <img class="img-responsive-investor" src="{{ getimage(env('INVESTOR_BANNER')) }}" alt="">
@@ -112,7 +113,7 @@
 
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section id="ace-testimonials-desktop" class="ace-testimonials">
         <div class="content-ace">
@@ -186,7 +187,11 @@
                   <h1 data-aos="fade-up" class="aos-init aos-animate">Quality Commitment</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
-                  <p style="text-align: justify;font-size: 16px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                  <p style="text-align: justify;font-size: 16px;"> To assure our products quality, Feytech is strictly implements international quality management system.
+                    Feytech is also learns from outstanding OEM customers, and integrate the management methods of
+                    European, US, Japanese and Korean OEM customers into our quality management system.
+                    Our Quality Policies are Fulfilling requirements from customers, standards, and systems; Excellent
+                    services provide to customer; and Continuous Improvement on products, processes and services.</p>
                 </div>
               </div>
               <div style="margin-top: 50px">
