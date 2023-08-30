@@ -6,7 +6,7 @@
     <main>
 
         @include('acewebfront.widget.allbaner')
-        <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
+        <!-- <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
             <div class="content-ace">
                 <div class="wrap-content">
 
@@ -76,7 +76,7 @@
             </div>
 
 
-        </section>
+        </section> -->
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
             <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
         </div> -->
