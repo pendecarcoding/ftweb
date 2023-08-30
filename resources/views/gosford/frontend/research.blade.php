@@ -4,23 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-sliders banner-video" style="height: 536px;">
-            <div style="top: 0;
-            height: 600px;
-        position: absolute;
-        width: 100%;">
-                <div class="banner-video-div"
-                    style="width:100%;position: relative;overflow: hidden;display: flex;
-            flex-direction: column;">
-
-                    <video class="video-style-banner" controls>
-                        <source style="width: 100%;" src="/public/go_system/video/howto.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </section>
-
+        @include('acewebfront.widget.allbaner')
         <section class="pt-5 pb-5" style="padding-top: 0rem !important;">
             <div style="display: flex;flex-direction: column;">
                 @foreach ($data as $i => $v)
