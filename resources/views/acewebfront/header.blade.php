@@ -63,8 +63,8 @@ classurl-active @endif">{{ $v['name'] }}</a>
                 @endif
             @endforeach
             @if (Session::get('gystem_login'))
-                <a href="{{ url('mypage') }}"
-                    class="classurl @if (Request::is('mypage*')) classurl-active @endif  ">My Page</a>
+                <!-- <a href="{{ url('mypage') }}"
+                    class="classurl @if (Request::is('mypage*')) classurl-active @endif  ">My Page</a> -->
                 <div class="avatar-dropdown" id="icon">
                     <img class="rounded-circle user-image"
                         src="@if (getinfoaccount()->image != null) /public/users/{{ getinfoaccount()->image }} @else /public/go_system/images/portrait-missing.png @endif">
@@ -196,7 +196,7 @@ classurl-active @endif">{{ $v['name'] }}</a>
                 @endif
             @endforeach
             @if (Session::get('gystem_login'))
-                <li> <a href="{{ url('mypage') }}">My Page</a></li>
+                <!-- <li> <a href="{{ url('mypage') }}">My Page</a></li> -->
             @endif
         </ul>
     </div>
