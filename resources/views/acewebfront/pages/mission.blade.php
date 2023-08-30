@@ -27,7 +27,7 @@
                             <br>
                             <br>
                             <div>
-                                <h1>Vision</h1>
+                                <h1>Mission</h1>
                                 <p>By leverage our capabilities create value added solution to customers.</p>
                             </div>
                         </div>
