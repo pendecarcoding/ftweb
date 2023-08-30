@@ -133,7 +133,9 @@ class AceController extends Controller
 
     public function page($page){
         switch ($page) {
-            case 'company_background':
+            case 'vision_mission':
+                return view('acewebfront.pages.mission');
+            case 'company_milestone':
                 return view('acewebfront.pages.background');
             break;
             case 'Research & Development':

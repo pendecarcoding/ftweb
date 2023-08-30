@@ -37,10 +37,10 @@
                             <a href="{{ url('about_director') }}">Board of directors</a>
                         </li>
                         <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{ url('company_background') }}">Company Background</a>
+                            <a href="{{ url('company_milestone') }}">Group Milestone</a>
                         </li>
                         <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="#">Vision & Mission</a>
+                            <a href="{{ url('vision_mission') }}">Vision & Mission</a>
                         </li>
                     </ul>
                 @elseif ($v['name'] === 'Investor Relations')
@@ -162,8 +162,8 @@ classurl-active @endif">{{ $v['name'] }}</a>
                         <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a style="padding-left: 27px;" href="{{ url('about') }}">Company</a></li>
                             <li><a style="padding-left: 27px;" href="{{ url('about_director') }}">Board of Directors</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('company_background') }}">Company Background</a></li>
-                            <li><a style="padding-left: 27px;" href="#">Vision And Mission</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url('company_milestone') }}">Group Milestone</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url('vision_mission') }}">Vision And Mission</a></li>
 
                         </ul>
                     </li>
