@@ -183,7 +183,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                  <h1 data-aos="fade-up" class="aos-init aos-animate">Investing in Feytech</h1>
+                  <h1 data-aos="fade-up" class="aos-init aos-animate">Quality Commitment</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
                   <p style="text-align: justify;font-size: 16px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -228,6 +228,22 @@
                       <img style="width: 50px; height: 50px" src="/public/aceweb/assets/img/img_03.png" alt="">
                       <h6>FINANCIAL </h6>
                       <h6>PERFORMANCE</h6>
+                    </div>
+                  </div>
+                  <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
+                    <div class="fyt_list_investor">
+                      <p style="text-align: justify;font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 50px">
+                <div class="row">
+                  <div data-aos="fade-up" class="col-md-4 aos-init aos-animate">
+                    <div class="discover">
+                      <img style="width: 50px; height: 50px" src="/public/aceweb/assets/img/img_03.png" alt="">
+                      <h6>IATF</h6>
+                      <h6>CERTIFICATION</h6>
                     </div>
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
