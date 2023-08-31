@@ -59,7 +59,7 @@
                             @foreach ($data as $i => $v)
 
 
-                            <div class="col-md-4 aos-init aos-animate" style="position: relative;">
+                            <div class="col-md-4 aos-init aos-animate" style="position: relative;margin-top: 10px;">
                                 <div style="height: 400px;position: relative;
 overflow: hidden;" class="card text-center board-director">
                                     <div style="    position: relative;
@@ -69,7 +69,7 @@ overflow: hidden;" class="card text-center board-director">
                                         <img src="{{getimage($v->banner)}}" width="100%">
                                     </div>
                                     <br>
-                                    <a href="{{ url('newsroom/' . $v->slug) }}"><p style="margin-top:5px;margin-bottom: 18px;">{{ $v->title }}</p> </a>
+                                    <a href="{{ url('newsroom/' . $v->slug) }}"><p style="margin-top:5px;margin-bottom: 18px;    padding: 20px">{{ $v->title }}</p> </a>
                                 </div>
                                 @if($v->photos != null)
                                 <div class="video-play-icon">
@@ -89,7 +89,7 @@ $dynamicGallery{{$v->id}}.addEventListener("lgInit", (event) => {
   setVimeoThumbnails(pluginInstance);
 });
 
-dynamicGallery = window.lightGallery($dynamicGallery{{$v->id}}, {
+dynamicGallery{{$v->id}} = window.lightGallery($dynamicGallery{{$v->id}}, {
   dynamic: true,
   plugins: [lgZoom, lgVideo, lgThumbnail],
   dynamicEl: [
@@ -112,9 +112,9 @@ dynamicGallery = window.lightGallery($dynamicGallery{{$v->id}}, {
 });
 
 // Fetch vimeo thumbnails and update gallery
-async function setVimeoThumbnails(dynamicGallery) {
-  for (let i = 0; i < dynamicGallery.galleryItems.length; i++) {
-    const item = dynamicGallery.galleryItems[i];
+async function setVimeoThumbnails(dynamicGallery{{$v->id}}) {
+  for (let i = 0; i < dynamicGallery{{$v->id}}.galleryItems.length; i++) {
+    const item = dynamicGallery{{$v->id}}.galleryItems[i];
     const slideVideoInfo = item.__slideVideoInfo || {};
     if (slideVideoInfo.vimeo) {
       const response = await fetch(
@@ -122,7 +122,7 @@ async function setVimeoThumbnails(dynamicGallery) {
         encodeURIComponent(item.src),
       );
       const vimeoInfo = await response.json();
-      dynamicGallery.$container
+      dynamicGallery{{$v->id}}.$container
         .find('.lg-thumb-item')
         .eq(i)
         .find('img')
@@ -133,7 +133,7 @@ async function setVimeoThumbnails(dynamicGallery) {
 
 // Open gallery
 $dynamicGallery{{$v->id}}.addEventListener("click", () => {
-  dynamicGallery.openGallery(0);
+  dynamicGallery{{$v->id}}.openGallery(0);
 });
 
                             </script>
