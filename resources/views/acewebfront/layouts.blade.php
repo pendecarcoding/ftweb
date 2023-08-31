@@ -46,6 +46,13 @@
     <link href="{{ static_asset('aceweb') }}/assets/ace/ipadace1.css" rel="stylesheet" />
     <link href="{{ static_asset('aceweb') }}/assets/gosford/gosford.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/video/lg-video.umd.js"></script>
+
+
+<link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.css" rel="stylesheet">
     <style>
         #pdfviewer {
             border: 1px #333 solid;
@@ -705,6 +712,8 @@
     <!--END MAnsory-->
     <script src="{{ static_asset('aceweb') }}/assets/ace/gtpscroll.js" type="text/javascript"></script>
     <script src="{{ static_asset('aceweb') }}/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ static_asset('aceweb') }}/assets/dist/js/light-galery-all.js"></script>
+
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script>
         if (!window.Cypress) AOS.init();

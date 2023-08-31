@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div data-aos="fade-up" style="margin-top: 40px" class="row aos-init aos-animate">
-                            @foreach ($data as $i => $v)
+                            <!-- @foreach ($data as $i => $v)
                                 <div class="col-md-4">
                                     <a href="{{ url('newsroom/' . $v->slug) }}">
                                         <img class="img-responsive-news rounded" src="{{ getimage($v->banner) }}"
@@ -54,6 +54,89 @@
                                         <p style="margin-top:18px;margin-bottom: 18px;">{{ $v->title }}</p>
                                     </a>
                                 </div>
+                            @endforeach -->
+
+                            @foreach ($data as $i => $v)
+
+
+                            <div class="col-md-4 aos-init aos-animate" style="position: relative;">
+                                <div style="height: 400px;position: relative;
+overflow: hidden;" class="card text-center board-director">
+                                    <div style="    position: relative;
+    height: 280px;
+    border-radius: 9px;
+    overflow: hidden;">
+                                        <img src="/public/uploads/all/r4ypXDbcy6QYDECdjDkhurbVuxA49A3XnQiAdqgE.png" width="100%">
+                                    </div>
+                                    <br>
+                                    <a href="{{ url('newsroom/' . $v->slug) }}"><p style="margin-top:5px;margin-bottom: 18px;">{{ $v->title }}</p> </a>
+                                </div>
+                                <div class="video-play-icon">
+                                    <a @if($v->photos != null) id="dynamic-gallery-demo{{$v->id}}" @endif href="#" class="video bg-danger"><i class="fa fa-camera"></i></a>
+                                </div>
+                            </div>
+
+
+
+                            @if($v->photos != null)
+                            <script>
+                                const $dynamicGallery{{$v->id}} = document.getElementById("dynamic-gallery-demo{{$v->id}}");
+
+$dynamicGallery{{$v->id}}.addEventListener("lgInit", (event) => {
+  const pluginInstance = event.detail.instance;
+  setVimeoThumbnails(pluginInstance);
+});
+
+dynamicGallery = window.lightGallery($dynamicGallery{{$v->id}}, {
+  dynamic: true,
+  plugins: [lgZoom, lgVideo, lgThumbnail],
+  dynamicEl: [
+    @foreach(explode(',',$v->photos) as $img)
+    {
+      src:
+        "{{getimage($img)}}",
+      responsive:
+        "{{getimage($img)}}",
+      thumb:
+        "{{getimage($img)}}",
+      subHtml: `<div class="lightGallery-captions">
+                <h4>{{ $v->title }}</h4>
+
+            </div>`
+    },
+@endforeach
+
+  ]
+});
+
+// Fetch vimeo thumbnails and update gallery
+async function setVimeoThumbnails(dynamicGallery) {
+  for (let i = 0; i < dynamicGallery.galleryItems.length; i++) {
+    const item = dynamicGallery.galleryItems[i];
+    const slideVideoInfo = item.__slideVideoInfo || {};
+    if (slideVideoInfo.vimeo) {
+      const response = await fetch(
+        'https://vimeo.com/api/oembed.json?url=' +
+        encodeURIComponent(item.src),
+      );
+      const vimeoInfo = await response.json();
+      dynamicGallery.$container
+        .find('.lg-thumb-item')
+        .eq(i)
+        .find('img')
+        .attr('src', vimeoInfo.thumbnail_url);
+    }
+  }
+}
+
+// Open gallery
+$dynamicGallery{{$v->id}}.addEventListener("click", () => {
+  dynamicGallery.openGallery(0);
+});
+
+                            </script>
+                            @endif
+
                             @endforeach
 
                         </div>
