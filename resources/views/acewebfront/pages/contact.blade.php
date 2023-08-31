@@ -150,7 +150,7 @@
                         </div>
                         <div class="form-group">
                             <div id="alertpatner" class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <div style="font-size: 40px;" id="message_back"></div>
+                                <div style="font-size: 13px;" id="message_back"></div>
                             </div>
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="ace-button-black" style="width: 100%;">Send
