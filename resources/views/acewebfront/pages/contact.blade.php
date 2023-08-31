@@ -150,10 +150,7 @@
                         </div>
                         <div class="form-group">
                             <div id="alertpatner" class="alert alert-warning alert-dismissible fade show" role="alert">
-
-                                <strong>Thanks for your Message</strong> we will reply soon
-
-
+                                <div style="font-size: 40px;" id="message_back"></div>
                             </div>
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="ace-button-black" style="width: 100%;">Send
@@ -184,10 +181,14 @@
                     data: formData,
                     success: function (response) {
                         if (response == "success") {
-
                             $("#alertpatner").show();
+                            $("#message_back").html("Thank you for your message, we will reply soon");
                             $("#contact-form")[0].reset();
-                            }
+                        }else if (response == "chapta_no_match") {
+                            $("#alertpatner").show();
+                            $("#message_back").html("Captcha verification is required");
+                            $("#contact-form")[0].reset();
+                        }
                     },
                     error: function (error) {
                         // Handle the error response (if needed)

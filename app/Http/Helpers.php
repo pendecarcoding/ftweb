@@ -335,6 +335,41 @@ function getallbanner(){
 
 }
 
+function checkrechapta($response){
+    $recaptchaSecretKey = env('APP_RECHAPTA_SECRET_KEY');
+    $recaptchaResponse = $response;
+    $userIp = $_SERVER['REMOTE_ADDR'];
+    // If behind a proxy or load balancer, check for forwarded IP
+    if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)) {
+        $forwardedIps = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+        $userIp = trim($forwardedIps[0]);
+    }
+    $recaptchaVerificationUrl = "https://www.google.com/recaptcha/api/siteverify";
+        $verificationData = http_build_query([
+            'secret' => $recaptchaSecretKey,
+            'response' => $recaptchaResponse,
+            'remoteip' => $userIp,
+        ]);
+
+        $contextOptions = [
+            'http' => [
+                'method' => 'POST',
+                'header' => 'Content-Type: application/x-www-form-urlencoded',
+                'content' => $verificationData,
+            ],
+        ];
+
+        $context = stream_context_create($contextOptions);
+        $verificationResult = file_get_contents($recaptchaVerificationUrl, false, $context);
+        $verificationData = json_decode($verificationResult);
+        if (!$verificationData->success) {
+            return false;
+        }else{
+            return true;
+        }
+
+}
+
 function namedate($date){
 $tanggal_objek = new DateTime($date);
 $nama_bulan = $tanggal_objek->format("F");

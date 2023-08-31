@@ -830,19 +830,25 @@ class AceController extends Controller
     }
 
     public function messageusers(Request $r){
-        $data = [
-            'name'=>$r->name,
-            'phone'=>$r->phone,
-            'email'=>$r->email,
-            'comment'=>$r->comment,
-        ];
-        try {
-            DB::table('message_user')->insert($data);
-            $msg = "success";
+        if(checkrechapta($r->input('g-recaptcha-response'))){
+            $data = [
+                'name'=>$r->name,
+                'phone'=>$r->phone,
+                'email'=>$r->email,
+                'comment'=>$r->comment,
+            ];
+            try {
+                DB::table('message_user')->insert($data);
+                $msg = "success";
+                return $msg;
+            } catch (\Throwable $th) {
+                return $th->getmessage;
+            }
+        }else{
+            $msg = "chapta_no_match";
             return $msg;
-        } catch (\Throwable $th) {
-            return $th->getmessage;
         }
+
     }
 
 
