@@ -829,6 +829,22 @@ class AceController extends Controller
         }
     }
 
+    public function messageusers(Request $r){
+        $data = [
+            'name'=>$r->name,
+            'phone'=>$r->phone,
+            'email'=>$r->email,
+            'comment'=>$r->comment,
+        ];
+        try {
+            DB::table('message_user')->insert($data);
+            $msg = "success";
+            return $msg;
+        } catch (\Throwable $th) {
+            return $th->getmessage;
+        }
+    }
+
 
         public function Product($request, $slug)
     {

@@ -76,76 +76,131 @@
                  </div>
              </div>
          </section>
-         <section class="ace-conected">
-            <div class="container contact">
+         <section class="ace-conected" style="position: relative;overflow: hidden;">
+            <div id="loading">
+                <img  src="{{ static_asset('aceweb') }}/assets/img/loading-gif.gif" alt="Loading">
+            </div>
+            <div class="content-ace">
 
-                <div class="row">
-                <div class="col-md-5">
-                <div class="contact-info about">
-                <div class="title-ace">
-                    STAY CONNECTED
-                    <span class="h-dash" style="font-weight: bold">—</span>
-                  </div>
-                <h1>Leave us a message</h1>
-                <h4>Your message is valuable to us, we will get back to you as soon as we can</h4>
-                </div>
-                </div>
-                <div class="col-md-7">
-                <div class="contact-form">
-                <div class="form-group">
-                <label class="control-label col-sm-12" for="fname">Select an Option:</label>
-                <div class="col-sm-10">
-                <select name="type" id="" class="form-control">
-                    <option value="Complain">Complain</option>
-                    <option value="Feedback">Feedback</option>
-                    <option value="General Enquery">General Enquiry</option>
-                    <option value="Other">Others</option>
-                </select>
-                </div>
+                <div class="wrap-content">
 
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-12" for="comment">Your Message:</label>
-                    <div class="col-sm-10">
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                    </div>
-                    </div>
-                <div class="form-group">
-                <label class="control-label col-sm-2" for="lname">Your Name:</label>
-                <div class="col-sm-10">
-                <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
-                </div>
-                </div>
-                <div class="form-group">
-                    <h5>Thank you. How would you like us to get in touch <br>with you ?</h5>
-                </div>
-                <div class="form-group">
-                <label class="control-label col-sm-2" for="email">Email me:</label>
-                <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                </div>
-                </div>
+                    <div class="ace-isi about"></div>
+                    <div class="container contact">
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Call me:</label>
-                    <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" placeholder="Enter phone number" name="email">
-                    </div>
-                    </div>
-                <div class="form-group">
-                    <div class="g-recaptcha" data-sitekey="6LdcFusnAAAAAO345wsQQNNeO7NTP8-dITus2JwJ"></div>
-                </div>
-                <div class="form-group">
+                        <div class="row">
+                        <div class="col-md-5">
+                        <div class="contact-info">
+                        <div class="title-ace">
+                            STAY CONNECTED
+                            <span class="h-dash" style="font-weight: bold">—</span>
+                          </div>
+                        <h1>Leave us a message</h1>
+                        <h4>Your message is valuable to us, we will get back to you as soon as we can</h4>
 
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="ace-button-black" style="width: 100%;">Send
-                    </button>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
+                        </div>
 
+                        </div>
+                        <div class="col-md-7">
+                        <div class="contact-form">
+
+                    <form id="contact-form" method="post">
+                                @csrf
+                        <div class="form-group">
+                        <label class="control-label col-sm-12" for="fname">Select an Option:</label>
+                        <div class="col-sm-10">
+                        <select name="type" id="" class="form-control">
+                            <option value="Complain">Complain</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="General Enquery">General Enquiry</option>
+                            <option value="Other">Others</option>
+                        </select>
+                        </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" for="comment">Your Message:</label>
+                            <div class="col-sm-10">
+                            <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+                            </div>
+                            </div>
+                        <div class="form-group">
+                        <label class="control-label col-sm-2" for="lname">Your Name:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="name">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <h5>Thank you. How would you like us to get in touch <br>with you ?</h5>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email me:</label>
+                        <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Call me:</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone">
+                            </div>
+                            </div>
+                        <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="6LdcFusnAAAAAO345wsQQNNeO7NTP8-dITus2JwJ"></div>
+                        </div>
+                        <div class="form-group">
+                            <div id="alertpatner" class="alert alert-warning alert-dismissible fade show" role="alert">
+
+                                <strong>Thanks for your Message</strong> we will reply soon
+
+
+                            </div>
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="ace-button-black" style="width: 100%;">Send
+                            </button>
+                        </div>
+                        </div>
+                    </form>
+                        </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
          </section>
      </main>
+     <script>
+
+        $(document).ready(function () {
+            $('#contact-form').submit(function (event) {
+                event.preventDefault(); // Prevent the default form submission
+                $('#loading').show();
+                // Get the form data
+                var formData = $(this).serialize();
+
+                // Make the AJAX request
+                $.ajax({
+                    url: '{{route('message.users')}}', // Change this to your Laravel route
+                    method: 'POST',
+                    data: formData,
+                    success: function (response) {
+                        if (response == "success") {
+
+                            $("#alertpatner").show();
+                            $("#contact-form")[0].reset();
+                            }
+                    },
+                    error: function (error) {
+                        // Handle the error response (if needed)
+                        console.error('Error submitting form:', error);
+                    },
+                    complete: function () {
+                        // Hide the loading spinner when the request is complete
+                        $('#loading').hide();
+                    }
+                });
+            });
+        });
+
+
+         </script>
  @endsection
