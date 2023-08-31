@@ -76,6 +76,7 @@ class BlogController extends Controller
         $blog->title = $request->title;
         $blog->banner = $request->banner;
         $blog->photos = $request->photos;
+        $blog->date = $request->date;
         $blog->slug = preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $request->slug));
         $blog->short_description = $request->short_description;
         $blog->description = $request->description;
@@ -136,6 +137,7 @@ class BlogController extends Controller
         $blog->title = $request->title;
         $blog->banner = $request->banner;
         $blog->photos = $request->photos;
+        $blog->date = $request->date;
         $blog->slug = preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $request->slug));
         $blog->short_description = $request->short_description;
         $blog->description = $request->description;

@@ -105,6 +105,13 @@
                     </div>
 
                     <div class="form-group row">
+                        <label class="col-md-3 col-form-label">{{translate('Date')}}</label>
+                        <div class="col-md-9">
+                            <input type="date" class="form-control" name="date" placeholder="{{translate('Date')}}">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
                         <label class="col-md-3 col-form-label">{{translate('Meta Title')}}</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="meta_title" placeholder="{{translate('Meta Title')}}">

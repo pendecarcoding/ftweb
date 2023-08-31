@@ -664,9 +664,9 @@ class AceController extends Controller
             case 'newsroom':
                 $category = (isset($_GET['category'])) ? $_GET['category']:'ALL';
                 if($category=='ALL'){
-                    $data = Blog::select('blogs.photos as photos','blogs.id as id','blogs.title as title','blogs.banner as banner','blogs.slug as slug')->join('blog_categories','blog_categories.id','blogs.category_id')->orderby('blogs.created_at','DESC')->WHERE('category_name','PERSONAL')->paginate(9);
+                    $data = Blog::select('blogs.photos as photos','blogs.id as id','blogs.title as title','blogs.banner as banner','blogs.slug as slug')->join('blog_categories','blog_categories.id','blogs.category_id')->orderby('blogs.date','DESC')->WHERE('category_name','PERSONAL')->paginate(9);
                 }else{
-                    $data = Blog::select('blogs.photos as photos','blogs.id as id','blogs.title as title','blogs.title as title','blogs.banner as banner','blogs.slug as slug')->join('blog_categories','blog_categories.id','blogs.category_id')->orderby('blogs.created_at','DESC')->where('status','1')->where('category_name',$_GET['category'])->paginate(9);
+                    $data = Blog::select('blogs.photos as photos','blogs.id as id','blogs.title as title','blogs.title as title','blogs.banner as banner','blogs.slug as slug')->join('blog_categories','blog_categories.id','blogs.category_id')->orderby('blogs.date','DESC')->where('status','1')->where('category_name',$_GET['category'])->paginate(9);
                 }
                 // $data = Blog::select('blogs.title as title','blogs.banner as banner','blogs.slug as slug')->join('blog_categories','blog_categories.id','blogs.category_id')->orderby('blogs.created_at','DESC')->where('category_name','CORPORATE')->OrWHERE('category_name','PERSONAL')->OrWhere('category_name','AIAB')->paginate(6);
                 return view('acewebfront.pages.newsroom',compact('data','page'));
