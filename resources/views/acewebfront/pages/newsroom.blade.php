@@ -64,12 +64,19 @@
 overflow: hidden;" class="card text-center board-director">
                                     <div style="position: relative;
     height: 280px;
-    border-radius: 9px;
+    border-radius: 0px;
     overflow: hidden;">
                                         <img style="height: 100%;object-fit: cover;"  @if($v->photos != null) id="dynamic-gallery-demo{{$v->id}}" @endif  src="{{getimage($v->banner)}}" width="100%">
                                     </div>
-                                    <br>
-                                    <a href="{{ url('newsroom/' . $v->slug) }}"><p style="font-size: 17px;margin-bottom: 18px;    padding: 0px 20px">{{ $v->title }}</p> </a>
+                                    <div style="margin-top: 20px;"></div>
+                                    <div style="text-align: left;padding: 0px 20px;font-size: 13px;color: #7f7f7f;margin-bottom: 10px;"><i class="fa fa-calendar"></i>   {{namedate($v->date)}}</div>
+                                    <a href="{{ url('newsroom/' . $v->slug) }}">
+                                        <p style="    font-size: 14px;
+                                        margin-bottom: 18px;
+                                        color: black;
+                                        font-weight: bold;
+                                        padding: 0px 20px;
+                                        text-align: left;">{{ $v->title }} </p> </a>
                                 </div>
                                 <!--
                                 <div class="video-play-icon">
