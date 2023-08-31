@@ -335,6 +335,15 @@ function getallbanner(){
 
 }
 
+function namedate($date){
+$tanggal_objek = new DateTime($date);
+$nama_bulan = $tanggal_objek->format("F");
+$tanggal_angka = $tanggal_objek->format("d");
+$tahun = $tanggal_objek->format("Y");
+$format_tanggal = $tanggal_angka . " " . $nama_bulan . " " . $tahun;
+echo $format_tanggal;
+}
+
 function getimage($id){
     try {
         $data = Upload::findorfail($id);

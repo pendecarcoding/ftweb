@@ -132,8 +132,8 @@ classurl-active @endif">{{ $v['name'] }}</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <a class="dropdown-item" target="_blank" href="https://www.gosfordseat.com/gsap.php">GSAP
                             SYSTEM</a>
-                        <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-item"
-                            href="#">User Login</a>
+                        <!-- <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-item"
+                            href="#">User Login</a> -->
                         <a data-bs-toggle="modal" data-bs-target="#staffModal" class="dropdown-item"
                             href="#">Staff Login</a>
                         <!-- Add more dropdown items as needed -->
@@ -219,8 +219,8 @@ classurl-active @endif">{{ $v['name'] }}</a>
                     <div style="display: flex;gap:5px;margin-top: 20px;">
                         <a href="{{ route('mobile.login.staff') }}" style="width:100%" class="btn btn-danger"><i
                                 class="fa fa-user"></i> STAFF</a>
-                        <a href="{{ route('mobile.login.user') }}" style="width:100%" class="btn btn-danger"><i
-                                class="fa fa-user"></i> USER</a>
+                        <!-- <a href="{{ route('mobile.login.user') }}" style="width:100%" class="btn btn-danger"><i
+                                class="fa fa-user"></i> USER</a> -->
                         <a href="https://www.gosfordseat.com/gsap.php" target="_blank" style="width:100%"
                             class="btn btn-danger"><i class="fa fa-user"></i> GSAP</a>
                     </div>
