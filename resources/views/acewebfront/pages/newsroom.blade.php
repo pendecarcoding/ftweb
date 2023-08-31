@@ -66,14 +66,16 @@ overflow: hidden;" class="card text-center board-director">
     height: 280px;
     border-radius: 9px;
     overflow: hidden;">
-                                        <img src="/public/uploads/all/r4ypXDbcy6QYDECdjDkhurbVuxA49A3XnQiAdqgE.png" width="100%">
+                                        <img src="{{getimage($v->banner)}}" width="100%">
                                     </div>
                                     <br>
                                     <a href="{{ url('newsroom/' . $v->slug) }}"><p style="margin-top:5px;margin-bottom: 18px;">{{ $v->title }}</p> </a>
                                 </div>
+                                @if($v->photos != null)
                                 <div class="video-play-icon">
                                     <a @if($v->photos != null) id="dynamic-gallery-demo{{$v->id}}" @endif href="#" class="video bg-danger"><i class="fa fa-camera"></i></a>
                                 </div>
+                                @endif
                             </div>
 
 
