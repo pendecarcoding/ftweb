@@ -187,7 +187,6 @@
                         }else if (response == "chapta_no_match") {
                             $("#alertpatner").show();
                             $("#message_back").html("Captcha verification is required");
-                            $("#contact-form")[0].reset();
                         }
                     },
                     error: function (error) {
