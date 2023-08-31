@@ -108,7 +108,7 @@
                         <div class="form-group">
                         <label class="control-label col-sm-12" for="fname">Select an Option:</label>
                         <div class="col-sm-10">
-                        <select name="type" id="" class="form-control">
+                        <select name="type" id="" class="form-control" required>
                             <option value="Complain">Complain</option>
                             <option value="Feedback">Feedback</option>
                             <option value="General Enquery">General Enquiry</option>
@@ -120,13 +120,13 @@
                         <div class="form-group">
                             <label class="control-label col-sm-12" for="comment">Your Message:</label>
                             <div class="col-sm-10">
-                            <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" name="comment" required></textarea>
                             </div>
                             </div>
                         <div class="form-group">
                         <label class="control-label col-sm-2" for="lname">Your Name:</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="name">
+                        <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="name" required>
                         </div>
                         </div>
                         <div class="form-group">
@@ -135,14 +135,14 @@
                         <div class="form-group">
                         <label class="control-label col-sm-2" for="email">Email me:</label>
                         <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
                         </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="email">Call me:</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone">
+                            <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone" required>
                             </div>
                             </div>
                         <div class="form-group">
