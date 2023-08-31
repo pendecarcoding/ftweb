@@ -69,7 +69,7 @@ overflow: hidden;" class="card text-center board-director">
                                         <img style="height: 100%;object-fit: cover;"  @if($v->photos != null) id="dynamic-gallery-demo{{$v->id}}" @endif  src="{{getimage($v->banner)}}" width="100%">
                                     </div>
                                     <br>
-                                    <a href="{{ url('newsroom/' . $v->slug) }}"><p style="font-size: 17px;margin-bottom: 18px;    padding: 0px 20px">{{ $v->title }} {{namedate($v->date)}}</p> </a>
+                                    <a href="{{ url('newsroom/' . $v->slug) }}"><p style="font-size: 17px;margin-bottom: 18px;    padding: 0px 20px">{{ $v->title }}</p> </a>
                                 </div>
                                 <!--
                                 <div class="video-play-icon">
