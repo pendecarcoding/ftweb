@@ -157,7 +157,7 @@
                                 </div>
                                 <div data-aos="zoom-out-down" class="content-timeline">
                                     <h5>
-                                        GLI and Trimex move to PJ PMO Office</h5>
+                                        GLI and Trimex move to PJ Office</h5>
                                     <img src="/public/go_system/images/2010-b-timeline.png" alt="">
                                 </div>
 
