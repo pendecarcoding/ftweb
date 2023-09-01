@@ -126,7 +126,7 @@
                         <div class="form-group">
                         <label class="control-label col-sm-2" for="lname">Your Name:</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="name" required>
+                        <input type="text" class="form-control" id="lname" placeholder="Enter full name" name="name" required>
                         </div>
                         </div>
                         <div class="form-group">
