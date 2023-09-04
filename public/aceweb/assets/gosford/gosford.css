@@ -4,6 +4,12 @@ footer{
     bottom: 0;
     width: 100%;
 }
+sub, sup {
+    font-size: 8px;
+}
+.p-about-font{
+    font-size: 16px;
+}
 .inline-gallery-container {
     width: 100%;
     height: 0;
@@ -12320,6 +12326,84 @@ form.form--basic .mdl-textfield__label {
     }
   }
 
+@media (min-width: 2560px) and (max-width: 9600px) {
+    .acetopbar {
+        height: 56px;
+    }
+    .ace-sliders {
+        height: 100vh;
+    }
+    .slider-banner {
+        height: 100vh;
+    }
+    .mdl-layout__header-row .classurl {
+        font-size: 29px;
+    }
+    .class_menu_black {
+        background-color: #333;
+        height: 118px;
+    }
+    .about h1 {
+        /* font-size: 4.6rem; */
+        font-size: 8.5rem;
+    }
+    .p-about-font{
+        font-size: 29px;
+    }
+    .img-director{
+        height: 500px;
+        width: 100%;
+    }
+
+    .circle-row {
+        gap: 28px;
+        padding: 129px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-circle img {
+        width: 233px;
+    }
+    .gtp-patner{
+        height: 100vh;
+    }
+    .second {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    .content-timeline {
+        padding-top: 40px;
+        width: 100%;
+    }
+    .content-timeline img {
+        width: 100%;
+    }
+    .row-time-line {
+        gap: 20px;
+    }
+    .clip-top {
+        position: relative;
+        width: 294px;
+    }
+    .clip-content {
+        width: 294px;
+    }
+    .clip-down {
+        width: 365px;
+    }
+    .h5-milestone{
+        font-size: 45px;
+    }
+    sub, sup {
+        position: relative;
+        font-size: 21px;
+    }
+    .notifications-dropdown.mdl-list .mdl-list__item {
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-size: 22px;
+    }
+}
 
 .login-link:hover{
     color: #01579b;

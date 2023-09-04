@@ -72,7 +72,7 @@
 
                       src="{{ getimage(env('ABOUT_IMG')) }}"
                     />
-                    <p style="padding-top: 5%;font-size: 16px;" data-aos="fade-up" data-aos-delay="400">
+                    <p style="padding-top: 5%;" class="p-about-font" data-aos="fade-up" data-aos-delay="400">
                       {{ env('ABOUT_DESCRIPTION') }}
                     </p>
                   </div>
@@ -304,7 +304,7 @@
                     data-aos-delay="300"
                     class="content-about"
                   >
-                    <p style="text-align: justify;font-size:16px">
+                    <p style="text-align: justify;" class="p-about-font">
                         We are the Malaysia’s number one manufacturer and installer of automotive
                         leather and has been trusted by the automotive industry for over 20 years
                         and are the official leather provider & fitter for Proton, Mazda, Perodua,Ford, Hyundai, Subaru and Kia. We pride ourselves in our extensive high quality products
@@ -317,7 +317,7 @@
               <div class="row" style="padding: 50px 0px;">
                 @foreach($leadership as $i => $v)
                 <div style="padding: 5px;" data-aos="fade-up" data-aos-delay="{{$i+1}}00"  class="col-md-3">
-                    <img style="border-radius: 10px; height: 330px;width:100%" class="img-responsive" src="{{getimage($v->foto)}}" alt="">
+                    <img style="border-radius: 10px;" class="img-director img-responsive" src="{{getimage($v->foto)}}" alt="">
                     <div class="caption_leadership">
                         <div class="leadership_name">{{$v->name}}</div>
                         <div class="leadership_position">{{$v->position}}</div>
@@ -351,7 +351,7 @@
                     The All-in-One Platform</h1>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300" class="col-md-6 col-sm-6">
-                    <p style="color:white;text-align: justify;font-size:16px">Our seat covers are made of top-notch materials, and our leather is
+                    <p class="img-director" style="color:white;text-align: justify;">Our seat covers are made of top-notch materials, and our leather is
                         imported from Southern America and Europe for the best leather quality.
                         Leather type such as Catania Leather, Barracuda Leather and Nappa
                         Leather. In addition to the tanneries' own specifications and inspection, we
@@ -380,7 +380,7 @@
                             Supports both B2B &amp; B2C integration
                           </div>
 
-                          <div id="content-progress" style="color: white;font-size:16px">
+                          <div class="img-director" id="content-progress" style="color: white;">
                             Our potential partners can create their own product
                             branding and launch their own digital gold program
                             with the help of our ready-made templates and API.
@@ -497,7 +497,7 @@
                   <h1>Companies History and Background</h1>
                 </div>
                 <div data-aos="fade-up" class="col-md-12 col-sm-12" style="height: 60vh;position: relative;overflow: auto;">
-                  <p style="text-align: justify;font-size:16px;color:white">
+                  <p class="p-about-font" style="text-align: justify;color:white">
                     We started with Gosford Malaysia manufactured and sold automotive covers to the REM market segment, where
 automotive covers are replaced and/or repaired for used automotive vehicles for car owners, used car dealers,
 importers, automotive dealers, car accessory retailers and automotive cover installers. It operated out of a
@@ -865,7 +865,7 @@ industry reputation.
                 </div>
                 <div data-aos="fade-up" class="col-md-6 col-sm-12">
                   <h1>Partner with us and let's get started!</h1>
-                  <p style="font-size:16px">
+                  <p class="p-about-font">
                     We take pride in helping our partners to achieve their goals by offering support and guidance. Be our partner today to gain a life-changing experience.
                   </p>
                   <div id="alertpatner" class="alert alert-warning alert-dismissible fade show" role="alert">

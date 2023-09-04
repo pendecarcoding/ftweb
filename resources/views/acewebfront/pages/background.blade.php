@@ -23,7 +23,7 @@
                         <div style="margin-top:30px">
                             <div class="row-time-line">
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>Gosford Leather Industries(GLI) JB Established</h5>
+                                    <h5 class="h5-milestone">Gosford Leather Industries(GLI) JB Established</h5>
                                     <img src="/public/go_system/images/logo.png" alt="">
 
                                 </div>
@@ -49,7 +49,7 @@
                                     <p class="p-aarow-timeline" style="color:white"> 2004 > </p>
                                 </div>
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>Open GLI Kuchai Lama office</h5>
+                                    <h5 class="h5-milestone">Open GLI Kuchai Lama office</h5>
                                 </div>
 
                             </div>
@@ -57,7 +57,7 @@
                         <div>
                             <div class="row-time-line">
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>Open GLI Massi Plant</h5>
+                                    <h5 class="h5-milestone">Open GLI Massi Plant</h5>
                                     <img src="/public/go_system/images/2006-timeline.png" alt="">
                                 </div>
                                 <div class="clip-content"
@@ -86,7 +86,7 @@
                                     <p class="p-aarow-timeline" style="color:white"> 2007 > </p>
                                 </div>
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>Introduce GL Trim(S) Pte Ltd</h5>
+                                    <h5 class="h5-milestone">Introduce GL Trim(S) Pte Ltd</h5>
                                     <img src="/public/go_system/images/2007-timeline.png" alt="">
                                 </div>
 
@@ -96,7 +96,7 @@
                         <div>
                             <div class="row-time-line">
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>Trimex Automotive (Aus) Pte Ltd Established</h5>
+                                    <h5 class="h5-milestone">Trimex Automotive (Aus) Pte Ltd Established</h5>
                                     <img src="/public/go_system/images/2008-timeline.png" alt="">
                                 </div>
                                 <div class="clip-content"
@@ -125,7 +125,7 @@
                                     <p class="p-aarow-timeline" style="color:white"> 2009 > </p>
                                 </div>
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
+                                    <h5 class="h5-milestone">
                                         <li>GU: ISO 9001 Certification</li>
                                         <li>Establishment Trimex Malaysia</li>
                                         <li> 1<span class="angka"></span><sup>ST</sup> Hyundai PDI Project</li>
@@ -138,11 +138,11 @@
                         <div>
                             <div class="row-time-line">
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
+                                    <h5 class="h5-milestone">
                                         <li>ISO/TS 10949:2009</li>
-                                        <li>1<span class="angka"></span><sup style="font-size: 8px;">ST</sup> Mazda PDI
+                                        <li>1<span class="angka"></span><sup>ST</sup> Mazda PDI
                                             Project</li>
-                                        <li>1<span class="angka"></span><sup style="font-size: 8px;">ST</sup> Hyundai OEM
+                                        <li>1<span class="angka"></span><sup>ST</sup> Hyundai OEM
                                             Project - Inspira</li>
                                     </h5>
                                     <img src="/public/go_system/images/2010-a-timeline.png" alt="">
@@ -156,7 +156,7 @@
                                     </p>
                                 </div>
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
+                                    <h5 class="h5-milestone">
                                         GLI and Trimex move to PJ Office</h5>
                                     <img src="/public/go_system/images/2010-b-timeline.png" alt="">
                                 </div>
@@ -167,11 +167,11 @@
                         <div>
                             <div class="row-time-line">
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
-                                        <li>1<span class="angka"></span><sup style="font-size: 8px;">ST</sup> Mazda OEM
+                                    <h5 class="h5-milestone">
+                                        <li>1<span class="angka"></span><sup>ST</sup> Mazda OEM
                                             Project
                                         </li>
-                                        <li>1<span class="angka"></span><sup style="font-size: 8px;">ST</sup> Hyundai OEM
+                                        <li>1<span class="angka"></span><sup>ST</sup> Hyundai OEM
                                             Project</li>
 
                                     </h5>
@@ -207,8 +207,8 @@
                                     <p class="p-aarow-timeline" style="color:white"> 2014 > </p>
                                 </div>
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
-                                        1<span class="angka"></span><sup style="font-size: 8px;">ST</sup> Subaru Project
+                                    <h5 class="h5-milestone">
+                                        1<span class="angka"></span><sup>ST</sup> Subaru Project
                                     </h5>
                                     <img src="/public/go_system/images/2014-timeline.png" alt="">
                                 </div>
@@ -219,8 +219,8 @@
                         <div>
                             <div class="row-time-line">
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
-                                        1<span class="angka"></span><sup style="font-size: 8px;">ST</sup> Perodua Project
+                                    <h5 class="h5-milestone">
+                                        1<span class="angka"></span><sup>ST</sup> Perodua Project
                                     </h5>
                                     <img src="/public/go_system/images/2015-timeline.png" alt="">
                                 </div>
@@ -250,9 +250,9 @@
                                     <p class="p-aarow-timeline" style="color:white"> 2016 > </p>
                                 </div>
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
+                                    <h5 class="h5-milestone">
 
-                                        1<span class="angka"></span><sup style="font-size: 8px;">ST</sup> Kia Project
+                                        1<span class="angka"></span><sup>ST</sup> Kia Project
 
                                     </h5>
                                     <img src="/public/go_system/images/2016-timeline.png" alt="">
@@ -265,8 +265,8 @@
                         <div>
                             <div class="row-time-line">
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
-                                        <li>1<span class="angka"></span><sup style="font-size: 8px;">ST</sup> Ford
+                                    <h5 class="h5-milestone">
+                                        <li>1<span class="angka"></span><sup>ST</sup> Ford
                                             Project</li>
                                         <li>IATF 16949：2016 Cert</li>
                                     </h5>
@@ -298,7 +298,7 @@
                                     <p class="p-aarow-timeline" style="color:white"> > 2020 </p>
                                 </div>
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
+                                    <h5 class="h5-milestone">
                                         GLI Expansion JB Plant
                                     </h5>
                                     <img src="/public/go_system/images/2020-timeline.png" alt="">
@@ -310,7 +310,7 @@
                         <div>
                             <div class="row-time-line">
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
+                                    <h5 class="h5-milestone">
                                         Feytech Plant in Kulim
                                     </h5>
                                     <img src="/public/go_system/images/2021-timeline.png" alt="">
@@ -342,7 +342,7 @@
                                     </p>
                                 </div>
                                 <div data-aos="zoom-out-down" class="content-timeline">
-                                    <h5>
+                                    <h5 class="h5-milestone">
                                         Seat Assembly for KIA carnival KIA Sorento & Mazda CX30
                                     </h5>
                                 </div>
