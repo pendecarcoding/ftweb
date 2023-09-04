@@ -12403,6 +12403,16 @@ form.form--basic .mdl-textfield__label {
         font-family: Roboto, Helvetica, Arial, sans-serif;
         font-size: 22px;
     }
+    p {
+        font-size: 27px;
+        letter-spacing: 0;
+    }
+    .h6-footer {
+        font-size: 27px;
+    }
+    .ace-button{
+        font-size: 29px;
+    }
 }
 
 .login-link:hover{
