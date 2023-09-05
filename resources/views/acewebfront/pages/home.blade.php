@@ -185,7 +185,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="circle-row">
-                        <div onclick="window.open('https://www.gosfordseat.com/gosfordseat/', '_blank');" data-aos="zoom-in-down"
+                        <div  data-aos="zoom-in-down"
                         data-aos-delay="700" class="card-circle">
                             <img  src="{{ static_asset('aceweb') }}/assets/img/circle1.png" alt="" />
                         </div>
@@ -193,7 +193,7 @@
                         data-aos-delay="800">
                             <img  src="{{ static_asset('aceweb') }}/assets/img/circle-g2.png" alt="" />
                         </div>
-                        <div onclick="window.open('https://gosfordseat.com/trimex/', '_blank');"  class="card-circle" data-aos="zoom-in-down"
+                        <div   class="card-circle" data-aos="zoom-in-down"
                         data-aos-delay="900">
                             <img  src="{{ static_asset('aceweb') }}/assets/img/trimex.svg" alt="" />
                         </div>
@@ -441,7 +441,7 @@
                   </div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="500" class="col-md-6 col-sm-6">
-                  <h1>A trusted partner for over 300 businesses</h1>
+                  <h1>A trusted partner for over 22 businesses</h1>
                 </div>
                 <div id="mansory" class="col-md-6 col-sm-6 sticky-mansory">
                     <!--mansory-->
@@ -718,7 +718,10 @@ industry reputation.
                     @foreach($testimonial as $i => $v)
                       <div class="carousel-item @if($i==0) active @endif">
                         <div class="row slider-testimonials">
-                          <div class="col-md-7 col-sm-12">
+                        @if($v->video != null)
+
+                        @else
+                        <div class="col-md-7 col-sm-12">
                             <p style="margin-top:20px">
                               {!! $v->content !!}
                             </p>
@@ -742,6 +745,7 @@ industry reputation.
                               />
                             </div>
                           </div>
+                        @endif
                         </div>
                       </div>
                     @endforeach
@@ -794,9 +798,14 @@ industry reputation.
                     data-bs-ride="carousel"
                   >
                 <div class="carousel-inner">
-                    <div style="margin-left:10%;margin-right:15%">
+                    <div style="margin-left:10%;margin-right:10%">
                     @foreach($testimonial as $i => $v)
                       <div class="carousel-item @if($i==0) active @endif">
+                        @if($v->video != null)
+                        <video style="width:100%;height: 100%" controls>
+                            <source style="width: 100%;" src="{{$v->video}}" type="video/mp4">
+                        </video>
+                        @else
                         <div class="row slider-testimonials">
                           <div class="col-md-7 col-sm-7">
                             <p>
@@ -823,6 +832,7 @@ industry reputation.
                             </div>
                           </div>
                         </div>
+                        @endif
                       </div>
                     @endforeach
                     </div>

@@ -114,7 +114,26 @@
 
 
     @yield('content')
-
+    <div id="chat" class="wa-floating-button" onclick="toggleChat()">
+        <span class="whatsapp-icon"><img id="chat-icon" src="/public/assets/img/chat.png"></span>
+    </div>
+    <div id="pop-up-chat" class="body-chat" style="display: none;">
+        <div class="card">
+            <div class="card-header" style="color:white;background-color: #F80814;"><img style="height: 30px;" src="/public/assets/img/chat.png"> Message</div>
+            <div class="card-body">
+                <input type="text" class="form-control" placeholder="Name *">
+                <br>
+                <input type="text" class="form-control" placeholder="Contact Number *">
+                <br>
+                <input type="text" class="form-control" placeholder="Email *">
+                <br>
+                <textarea style="height:150px" name="message" class="form-control"></textarea>
+            </div>
+            <div class="card-footer" >
+                <button style="width:100%;background-color: #F80814;color:white" class="btn">Submit</button>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="staffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         style="display: none;" aria-hidden="true">
         <div class="modal-dialog">
@@ -807,7 +826,41 @@
                 event.preventDefault();
             }
         });
+
+
+
+
     </script>
+
+<script>
+    var chatIconClicked = false;
+
+    function toggleChat() {
+        var popUpChat = document.getElementById("pop-up-chat");
+        var chatIcon = document.getElementById("chat-icon");
+        var whatsappIcon = document.querySelector(".wa-floating-button");
+
+        if (!chatIconClicked) {
+            // Change the image to times.png
+            chatIcon.src = "/public/assets/img/times.png";
+            chatIcon.classList.add("times-icon");
+            whatsappIcon.classList.add("active");
+            chatIconClicked = true;
+        } else {
+            // Change the image back to chat.png
+            chatIcon.src = "/public/assets/img/chat.png";
+            chatIcon.classList.remove("times-icon");
+            whatsappIcon.classList.remove("active");
+            chatIconClicked = false;
+        }
+
+        if (popUpChat.style.display === "none" || popUpChat.style.display === "") {
+            popUpChat.style.display = "block";
+        } else {
+            popUpChat.style.display = "none";
+        }
+    }
+</script>
 
 
 

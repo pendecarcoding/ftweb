@@ -4,6 +4,15 @@ footer{
     bottom: 0;
     width: 100%;
 }
+
+.body-chat{
+    position: fixed;
+    z-index: 80;
+    width: 350px;
+    position: fixed;
+    bottom: 88px;
+    right: 91px;
+}
 sub, sup {
     font-size: 8px;
 }
@@ -4855,6 +4864,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
 }
 
 .mdl-layout__header {
+    position: fixed;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -10581,7 +10591,12 @@ form.form--basic .mdl-textfield__label {
     }
 }
 @media screen and (max-width:500px){
-
+    .body-chat{
+        right: 6%;
+    }
+    .wa-floating-button {
+        right: 15px;
+    }
     #navbarToggle{
         right: 0px;
     }

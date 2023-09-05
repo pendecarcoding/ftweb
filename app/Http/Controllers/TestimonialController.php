@@ -55,15 +55,27 @@ class TestimonialController extends Controller
      */
     public function store(Request $request)
     {
+                if($request->has('video')){
+                    $d = new Testimonial;
+                    $d->image = 'noimage.png';
+                    $d->person = $request->person;
+                    $d->content = $request->content;
+                    $d->position = $request->position;
+                    $d->video = $request->video;
+                    $d->save();
+                    flash(translate('Slider has been inserted successfully'))->success();
+                    return redirect('admin/testimonial');
+                }else{
+                    $d = new Testimonial;
+                    $d->image = $request->image;
+                    $d->person = $request->person;
+                    $d->content = $request->content;
+                    $d->position = $request->position;
+                    $d->save();
+                    flash(translate('Slider has been inserted successfully'))->success();
+                    return redirect('admin/testimonial');
+                }
 
-                $d = new Testimonial;
-                $d->image = $request->image;
-                $d->person = $request->person;
-                $d->content = $request->content;
-                $d->position = $request->position;
-                $d->save();
-                flash(translate('Slider has been inserted successfully'))->success();
-                return redirect('admin/testimonial');
     }
 
     /**
@@ -106,6 +118,7 @@ class TestimonialController extends Controller
         $d->person = $request->person;
         $d->content = $request->content;
         $d->position = $request->position;
+        $d->video = $request->video;
         $d->save();
 
         flash(translate('Testimonial has been updated successfully'))->success();

@@ -76,7 +76,7 @@ class AceController extends Controller
         $leadership  = Leadership::limit(4)->get();
         $achievement = Blog::select('blogs.id as id','blogs.title as title','blogs.slug as slug','blogs.short_description as short_description','blogs.description as description','blogs.banner as banner','uploads.file_name as file_name')->join('uploads','uploads.id','blogs.banner')->join('blog_categories','blog_categories.id','blogs.category_id')->where('status','1')->where('category_name','CORPORATE')->orderby('blogs.created_at','DESC')->get();
         $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','CORPORATE')->get();
-        $testimonial =  Testimonial::select('testimonials.id as id','testimonials.person as person','testimonials.position as position','testimonials.content as content','uploads.file_name as file_name','testimonials.type as type')->join('uploads','uploads.id','testimonials.image')->where('testimonials.type','CO')->get();
+        $testimonial =  Testimonial::select('testimonials.video as video','testimonials.id as id','testimonials.person as person','testimonials.position as position','testimonials.content as content','uploads.file_name as file_name','testimonials.type as type')->join('uploads','uploads.id','testimonials.image')->where('testimonials.type','CO')->get();
         $patner      =  Patner::select('patners.id as id','patners.company as company','uploads.file_name as file_name')->join('uploads','uploads.id','patners.image')->groupby('id')->get();
         return view('acewebfront.pages.home', compact('leadership','achievement','featured_categories', 'newest_products','slider','testimonial','patner','page'));
 
@@ -143,7 +143,7 @@ class AceController extends Controller
             case 'company_milestone':
                 return view('acewebfront.pages.background');
             break;
-            case 'Research & Development':
+            case 'Technical & Development':
             $data        = Research::all();
             $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','RESEARCH')->get();
             return view('gosford.frontend.research',compact('slider','data'));
@@ -152,9 +152,9 @@ class AceController extends Controller
             $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','PERSONAL')->get();
             return view('gosford.frontend.choice_design',compact('slider'));
             break;
-            case 'product_project':
-                $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','PERSONAL')->get();
-                return view('gosford.frontend.choice_design',compact('slider'));
+            // case 'product_project':
+            //     $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','PERSONAL')->get();
+            //     return view('gosford.frontend.choice_design',compact('slider'));
                 // if(Session::get('id_account') == null){
                 //     $brand   = Brand::all();
                 //     return view('gosford.frontend.search',compact('brand'));

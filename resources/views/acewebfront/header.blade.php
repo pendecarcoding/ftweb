@@ -22,7 +22,7 @@
             <div class="mdl-layout-spacer"></div>
             @foreach (getnav() as $v)
                 @if ($v['link'] == 'about')
-                    <a href="#" class="classurl @if (Request::is($v['link'] . '*')) classurl-active @endif"
+                    <a href="#" class="classurl @if (Request::is('vision_mission')) classurl-active @endif @if (Request::is($v['link'] . '*')) classurl-active @endif  @if (Request::is('company_milestone')) classurl-active @endif"
                         id="notification">{{ $v['name'] }}</a>
                     <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect  notifications-dropdown"
                         for="notification">
@@ -43,8 +43,8 @@
                             <a href="{{ url('vision_mission') }}">Vision & Mission</a>
                         </li>
                     </ul>
-                @elseif ($v['name'] === 'Investor Relations')
-                <a href="#" class="classurl @if (Request::is($v['link'] . '*')) classurl-active @endif"
+                @elseif ($v['name'] === 'Corporate Governance')
+                <a href="#" class="classurl @if (Request::is($v['link'] . '*')) classurl-active @endif  @if (Request::is('corporate_governance*')) classurl-active @endif"
                         id="{{ $v['name'] }}">{{ $v['name'] }}</a>
                     <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect  notifications-dropdown"
                         for="{{ $v['name'] }}">
@@ -171,7 +171,7 @@ classurl-active @endif">{{ $v['name'] }}</a>
                         </ul>
                     </li>
 
-                @elseif ($v['name'] === 'Investor Relations')
+                @elseif ($v['name'] === 'Corporate Governance')
                     <!-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle">{{ $v['name'] }}</a>
                 <ul class="dropdown-menu">

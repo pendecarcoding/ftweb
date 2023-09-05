@@ -699,7 +699,7 @@ function getnav(){
         'is_active'=>'about'
          ],
          [
-        'name'=>'Investor Relations',
+        'name'=>'Corporate Governance',
         'link'=>'investor_relations',
         'is_active'=>'investor_relations'
          ],[
@@ -708,9 +708,9 @@ function getnav(){
         'is_active'=>'product_project'
          ],
          [
-            'name'=>'Research & Development',
-            'link'=>'Research & Development',
-            'is_active'=>'Research & Development'
+            'name'=>'Technical & Development',
+            'link'=>'Technical & Development',
+            'is_active'=>'Technical & Development'
          ],
 
          [

@@ -58,6 +58,15 @@
                         </div>
                     </div>
 
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">{{ translate('Link Video') }}
+                        </label>
+                        <div class="col-md-9">
+                            <input type="text" placeholder="{{ translate('Video') }}" name="video"
+                                class="form-control">
+                        </div>
+                    </div>
+
 
 
 
