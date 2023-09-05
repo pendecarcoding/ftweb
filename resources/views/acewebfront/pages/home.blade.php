@@ -719,7 +719,9 @@ industry reputation.
                       <div class="carousel-item @if($i==0) active @endif">
                         <div class="row slider-testimonials">
                         @if($v->video != null)
-
+                        <video style="width:100%;height: 100%" controls>
+                            <source style="width: 100%;" src="{{$v->video}}" type="video/mp4">
+                        </video>
                         @else
                         <div class="col-md-7 col-sm-12">
                             <p style="margin-top:20px">
@@ -740,7 +742,7 @@ industry reputation.
                               <img
                                 style="float:right;width:100%"
                                 class="img-responsive"
-                                src="{{ asset('public/'.$v->file_name) }}"
+                                src="{{ getimage($v->image) }}"
                                 alt=""
                               />
                             </div>
@@ -826,7 +828,7 @@ industry reputation.
                               <img
                                 style="float:right;width:100%"
                                 class="img-responsive"
-                                src="{{ asset('public/'.$v->file_name) }}"
+                                src="{{ getimage($v->image) }}"
                                 alt=""
                               />
                             </div>
