@@ -23,10 +23,7 @@ class TestimonialController extends Controller
      */
     public function index()
     {
-        $data = Testimonial::select('testimonials.id as id','testimonials.person as person','testimonials.position as position','testimonials.content as content','uploads.file_name as file_name')
-        ->join('uploads','uploads.id','testimonials.image')
-        ->where('testimonials.type','CO')
-        ->get();
+        $data = Testimonial::where('type','CO')->get();
         return view('backend.blog_system.testimonial.index',compact('data'));
     }
 
@@ -61,9 +58,10 @@ class TestimonialController extends Controller
                     $d->person = $request->person;
                     $d->content = $request->content;
                     $d->position = $request->position;
+                    $d->type  = 'CO';
                     $d->video = $request->video;
                     $d->save();
-                    flash(translate('Slider has been inserted successfully'))->success();
+                    flash(translate('Testimonial has been inserted successfully'))->success();
                     return redirect('admin/testimonial');
                 }else{
                     $d = new Testimonial;
@@ -71,8 +69,9 @@ class TestimonialController extends Controller
                     $d->person = $request->person;
                     $d->content = $request->content;
                     $d->position = $request->position;
+                    $d->type  = 'CO';
                     $d->save();
-                    flash(translate('Slider has been inserted successfully'))->success();
+                    flash(translate('Testimonial has been inserted successfully'))->success();
                     return redirect('admin/testimonial');
                 }
 
