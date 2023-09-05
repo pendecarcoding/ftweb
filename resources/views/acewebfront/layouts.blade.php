@@ -112,7 +112,7 @@
 
     @include('acewebfront.header')
 
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
     @yield('content')
     <div id="chat" class="wa-floating-button" onclick="toggleChat()">
         <span class="whatsapp-icon"><img id="chat-icon" src="/public/assets/img/chat.png"></span>
@@ -391,6 +391,7 @@
         // Get the button
         let mybutton = document.getElementById("myBtn");
 
+
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
             document.body.scrollTop = 0;
@@ -398,15 +399,33 @@
         }
 
         function progressBarScroll() {
-
+            let navbarspace = document.getElementById("spaceheader");
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
                 height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
                 scrolled = (winScroll / height) * 190;
 
+            // Check if the screen width is less than or equal to a threshold (e.g., 768 pixels) to identify mobile devices
+
+
+            // Rest of your code...
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
+                if (window.innerWidth <= 768) {
+                // Set the background color to white for mobile devices
+                navbarspace.style.backgroundColor = "#333";
+                } else {
+                    // For non-mobile devices, set the background color to transparent
+                    navbarspace.style.backgroundColor = "white";
+                }
             } else {
                 mybutton.style.display = "none";
+                if (window.innerWidth <= 768) {
+                // Set the background color to white for mobile devices
+                navbarspace.style.backgroundColor = "#333";
+                } else {
+                    // For non-mobile devices, set the background color to transparent
+                    navbarspace.style.backgroundColor = "transparent";
+                }
             }
             if (scrolled >= 30 && scrolled <= 100) {
                 scrollnum = 250;

@@ -7,7 +7,7 @@
     @else
         <div data-bs-toggle="modal" data-bs-target="#myLogin" aria-expanded="false" role="button" tabindex="0"
             class="mdl-layout__drawer-button-login" id="navbarToggle">
-            <i  class="fa fa-user-circle i-icon-login" aria-hidden="true"></i>
+            <i class="fa fa-user-circle i-icon-login" aria-hidden="true"></i>
 
         </div>
     @endif
@@ -15,14 +15,15 @@
         <a href="{{ route('home') }}"><img id="acetopbar" class="acetopbar"
                 src="{{ uploaded_asset(get_setting('system_logo_white')) }}" /></a>
     </div>
-    <div class="mdl-layout__header-row">
+    <div id="spaceheader" class="mdl-layout__header-row">
         <div class="class_menu_black">
 
 
             <div class="mdl-layout-spacer"></div>
             @foreach (getnav() as $v)
                 @if ($v['link'] == 'about')
-                    <a href="#" class="classurl @if (Request::is('vision_mission')) classurl-active @endif @if (Request::is($v['link'] . '*')) classurl-active @endif  @if (Request::is('company_milestone')) classurl-active @endif"
+                    <a href="#"
+                        class="classurl @if (Request::is('vision_mission')) classurl-active @endif @if (Request::is($v['link'] . '*')) classurl-active @endif  @if (Request::is('company_milestone')) classurl-active @endif"
                         id="notification">{{ $v['name'] }}</a>
                     <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect  notifications-dropdown"
                         for="notification">
@@ -44,15 +45,16 @@
                         </li>
                     </ul>
                 @elseif ($v['name'] === 'Corporate Governance')
-                <a href="#" class="classurl @if (Request::is($v['link'] . '*')) classurl-active @endif  @if (Request::is('corporate_governance*')) classurl-active @endif"
+                    <a href="#"
+                        class="classurl @if (Request::is($v['link'] . '*')) classurl-active @endif  @if (Request::is('corporate_governance*')) classurl-active @endif"
                         id="{{ $v['name'] }}">{{ $v['name'] }}</a>
                     <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect  notifications-dropdown"
                         for="{{ $v['name'] }}">
                         <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{$v['link']}}">Investor</a>
+                            <a href="{{ $v['link'] }}">Investor</a>
                         </li>
                         <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{url('corporate_governance')}}">Corporate Governance</a>
+                            <a href="{{ url('corporate_governance') }}">Corporate Governance</a>
                         </li>
                     </ul>
                 @else
@@ -108,13 +110,13 @@ classurl-active @endif">{{ $v['name'] }}</a>
                 </ul>
             @elseif(Session::get('loginstaff') == true)
                 @if (Session::get('loginstaff') == true)
-                <a href="{{ url('staff/back/announcements') }}">
-                        <div aria-expanded="false" role="button" tabindex="0"
-                        class="mdl-layout__drawer-button-login" id="navbarToggle">
-                        <i  class="fa fa-user-circle i-icon-login" aria-hidden="true"></i>
+                    <a href="{{ url('staff/back/announcements') }}">
+                        <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button-login"
+                            id="navbarToggle">
+                            <i class="fa fa-user-circle i-icon-login" aria-hidden="true"></i>
 
-                    </div>
-                </a>
+                        </div>
+                    </a>
                 @endif
                 <a class="classurl" onclick="logoutFunction()" style="font-size:28px;color:white"><i
                         class="fa fa-sign-out" aria-hidden="true"></i></a>
@@ -164,13 +166,15 @@ classurl-active @endif">{{ $v['name'] }}</a>
                         </a>
                         <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a style="padding-left: 27px;" href="{{ url('about') }}">Company</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('about_director') }}">Board of Directors</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('company_milestone') }}">Group Milestone</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('vision_mission') }}">Vision And Mission</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url('about_director') }}">Board of
+                                    Directors</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url('company_milestone') }}">Group
+                                    Milestone</a></li>
+                            <li><a style="padding-left: 27px;" href="{{ url('vision_mission') }}">Vision And
+                                    Mission</a></li>
 
                         </ul>
                     </li>
-
                 @elseif ($v['name'] === 'Corporate Governance')
                     <!-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle">{{ $v['name'] }}</a>
@@ -184,11 +188,12 @@ classurl-active @endif">{{ $v['name'] }}</a>
                         <a style="color: white;" class="nav-link dropdown-toggle" href="#"
                             id="navbarDarkDropdownMenuLinks" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            {{$v['name']}}
+                            {{ $v['name'] }}
                         </a>
                         <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLinks">
                             <li><a style="padding-left: 27px;" href="{{ url($v['link']) }}">Investor</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('corporate_governance') }}">Corporate Governance</a></li>
+                            <li><a style="padding-left: 27px;"
+                                    href="{{ url('corporate_governance') }}">Corporate Governance</a></li>
                         </ul>
                     </li>
                 @else
@@ -285,7 +290,6 @@ classurl-active @endif">{{ $v['name'] }}</a>
             aboutDropdown.style.display = 'none';
         }
     });
-
 </script>
 
 <script>
