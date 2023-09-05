@@ -418,7 +418,7 @@
                     // For non-mobile devices, set the background color to transparent
                     navbarspace.style.backgroundColor = "white";
                     navbarspace.classList.add("shadow-navbar");
-                    black_navbar.classList.add("path_shap");
+                    // black_navbar.classList.add("path_shap");
                 }
             } else {
                 mybutton.style.display = "none";
@@ -429,7 +429,7 @@
                     // For non-mobile devices, set the background color to transparent
                     navbarspace.classList.remove("shadow-navbar");
                     navbarspace.style.backgroundColor = "transparent";
-                    black_navbar.classList.remove("path_shap");
+                    // black_navbar.classList.remove("path_shap");
                 }
             }
             if (scrolled >= 30 && scrolled <= 100) {
@@ -455,6 +455,22 @@
 
 
         };
+    </script>
+     <script>
+        // Get all anchor links with the "noScrollLink" class
+        const noScrollLinks = document.querySelectorAll(".noScrollLink");
+
+        // Add a click event listener to each anchor link
+        noScrollLinks.forEach(function(link) {
+            link.addEventListener("click", function (event) {
+                // Prevent the default behavior (scrolling to the top)
+                event.preventDefault();
+
+                // Add your custom behavior here if needed
+                // For example, you can scroll to a specific section of the page
+                // or perform other actions.
+            });
+        });
     </script>
     <script type="text/javascript">
         function fadeingtp(section, classname) {
