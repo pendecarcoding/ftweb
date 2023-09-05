@@ -5,6 +5,21 @@ footer{
     width: 100%;
 }
 
+.section-slider{
+    height: 311px;
+}
+
+.path_shap{
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 3% 100%, 0% 0);
+    clip-path: polygon(100% 0, 100% 100%, 3% 100%, 0% 0);
+
+}
+.shadow-navbar{
+    -webkit-box-shadow: 0 3px 11px -5px rgba(0,0,0,.39);
+    -moz-box-shadow: 0 3px 11px -5px rgba(0,0,0,.39);
+    box-shadow: 0 3px 11px -5px rgba(0,0,0,.39);
+}
+
 .body-chat{
     position: fixed;
     z-index: 80;
@@ -4981,11 +4996,12 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple {
     height: 64px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 20px 0 10px;
+    justify-content: right;
+    padding: 0 20px 0 40px;
 
 }
 .mdl-layout__header-row {
+
     justify-content: end;
     width: 100%;
     display: flex;
@@ -12348,8 +12364,25 @@ form.form--basic .mdl-textfield__label {
   }
 
 @media (min-width: 2560px) and (max-width: 9600px) {
+    .section-slider{
+        height: 551px;
+    }
+    .vl{
+        padding-top: 82px;
+    }
+    #slider .selfie-img {
+        width: 420px;
+        height: 420px;
+    }
+    #content_scroll{
+        height: 418px;
+    }
+    .mdl-layout__header-row {
+        height: 117px;
+    }
     .acetopbar {
-        height: 56px;
+        width: 250px;
+        height: 94px;
     }
     .ace-sliders {
         height: 100vh;
@@ -12366,7 +12399,10 @@ form.form--basic .mdl-textfield__label {
     }
     .about h1 {
         /* font-size: 4.6rem; */
-        font-size: 8.5rem;
+        font-size: 6.5rem;
+    }
+    .about p {
+        font-size: 30px;
     }
     .p-about-font{
         font-size: 29px;

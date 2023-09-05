@@ -16,7 +16,7 @@
                 src="{{ uploaded_asset(get_setting('system_logo_white')) }}" /></a>
     </div>
     <div id="spaceheader" class="mdl-layout__header-row">
-        <div class="class_menu_black">
+        <div id="black_navbar" class="class_menu_black">
 
 
             <div class="mdl-layout-spacer"></div>

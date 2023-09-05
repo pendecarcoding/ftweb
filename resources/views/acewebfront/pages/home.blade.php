@@ -363,7 +363,7 @@
               </div>
               <div class="sticky-content">
                 <div id="gpt0"></div>
-                <div class="row">
+                <div class="row" id="content_scroll">
                   <div class="col-md-6 col-sm-6"></div>
                   <div  class="col-md-6 col-sm-6 text-content-gtp">
                     <div class="vl" style="color: rgba(0, 153, 255, 1)">

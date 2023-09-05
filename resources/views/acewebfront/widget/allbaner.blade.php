@@ -1,15 +1,15 @@
-<section class="ace-sliders" style="    height: 311px;">
+<section class="section-slider">
     <div style="top: 0;
     position: absolute;
     width: 100%;">
-        <div style="width:100%;    height: 376px;position: relative;overflow: hidden;display: flex;
+        <div class="section-slider" style="width:100%;position: relative;overflow: hidden;display: flex;
         flex-direction: column;">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     @php
                         $noslide = 0;
                     @endphp
-                    @foreach (getallbanner() as $is =>$v)
+                    @foreach (getallbanner() as $is => $v)
                         @if (count(getallbanner()) > 1)
                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicators"
                                 data-bs-slide-to="{{ $is }}"
@@ -20,9 +20,10 @@
                     @endforeach
                 </div>
                 <div class="carousel-inner">
-                    @foreach (getallbanner() as $is =>$v)
+                    @foreach (getallbanner() as $is => $v)
                         <div class="carousel-item @if ($is == 0) active @endif">
-                            <img class="slider-banner" style="width: 100%;height: 380px;object-fit: cover;" src="{{ getimage($v)}}" />
+                            <img class="section-slider" style="width: 100%;object-fit: cover;"
+                                src="{{ getimage($v) }}" />
                             <div class="col-md-6">
                             </div>
                         </div>
@@ -32,5 +33,4 @@
             </div>
         </div>
     </div>
-    </section>
-
+</section>

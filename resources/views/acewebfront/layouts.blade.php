@@ -400,9 +400,10 @@
 
         function progressBarScroll() {
             let navbarspace = document.getElementById("spaceheader");
+            var black_navbar = document.getElementById("black_navbar");
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
                 height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
-                scrolled = (winScroll / height) * 190;
+                scrolled = (winScroll / height) * 155;
 
             // Check if the screen width is less than or equal to a threshold (e.g., 768 pixels) to identify mobile devices
 
@@ -410,21 +411,25 @@
             // Rest of your code...
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 1024) {
                 // Set the background color to white for mobile devices
                 navbarspace.style.backgroundColor = "#333";
                 } else {
                     // For non-mobile devices, set the background color to transparent
                     navbarspace.style.backgroundColor = "white";
+                    navbarspace.classList.add("shadow-navbar");
+                    black_navbar.classList.add("path_shap");
                 }
             } else {
                 mybutton.style.display = "none";
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 1024) {
                 // Set the background color to white for mobile devices
                 navbarspace.style.backgroundColor = "#333";
                 } else {
                     // For non-mobile devices, set the background color to transparent
+                    navbarspace.classList.remove("shadow-navbar");
                     navbarspace.style.backgroundColor = "transparent";
+                    black_navbar.classList.remove("path_shap");
                 }
             }
             if (scrolled >= 30 && scrolled <= 100) {
