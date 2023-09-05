@@ -105,7 +105,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3">
                       <div class="number-ace-center">
-                        <h1><span class="number">{{ env('ABOUT_COUNT_OEM_PROJECT') }}</span></h1>
+                        <h1><span class="number">{{ env('ABOUT_COUNT_OEM_PROJECT') }}</span><span class="plus">+</span></h1>
                         <p>OEM PROJECTS</p>
                       </div>
                     </div>
