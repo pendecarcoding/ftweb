@@ -118,20 +118,31 @@
         <span class="whatsapp-icon"><img id="chat-icon" src="/public/assets/img/chat.png"></span>
     </div>
     <div id="pop-up-chat" class="body-chat" style="display: none;">
+
         <div class="card">
+            <form id="contact-form-popup" method="post">
+                @csrf
             <div class="card-header" style="color:white;background-color: #F80814;"><img style="height: 30px;" src="/public/assets/img/chat.png"> Message</div>
             <div class="card-body">
-                <input type="text" class="form-control" placeholder="Name *">
+                <input type="text" class="form-control" placeholder="Name *" required name="name">
                 <br>
-                <input type="text" class="form-control" placeholder="Contact Number *">
+                <input type="text" class="form-control" placeholder="Contact Number *" required name="phone">
                 <br>
-                <input type="text" class="form-control" placeholder="Email *">
+                <input type="email" class="form-control" placeholder="Email *" required name="email">
                 <br>
-                <textarea style="height:150px" name="message" class="form-control"></textarea>
+                <textarea style="height:150px" name="comment" class="form-control" required></textarea>
+
+
+
+
             </div>
             <div class="card-footer" >
-                <button style="width:100%;background-color: #F80814;color:white" class="btn">Submit</button>
+                <button type="submit" style="width:100%;background-color: #F80814;color:white" class="btn">
+                    <span id="btn-text">Submit</span>
+                    <img  id="loading-gif" src="/public/assets/img/loading.gif" style="width: 20px;height:20px;display: none;">
+                </button>
             </div>
+            </form>
         </div>
     </div>
     <div class="modal fade" id="staffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -903,7 +914,50 @@
 </script>
 
 
+<script>
+    $(document).ready(function () {
+        var form = $("#contact-form-popup");
+        var submitBtn = $("#submit-btn");
+        var btnText = $("#btn-text");
+        var loadingGif = $("#loading-gif");
 
+        form.submit(function (event) {
+            event.preventDefault();
+            // Disable the submit button and show the loading GIF
+            submitBtn.prop("disabled", true);
+            btnText.hide();
+            loadingGif.show();
+            var formData = form.serialize();
+            $.ajax({
+                type: "POST",
+                url: "{{route('message.popup')}}",
+                data: formData,
+                success: function (response) {
+                    // Handle the successful response here
+                    console.log(response);
+                    if (response == "success") {
+                        $("#contact-form-popup")[0].reset();
+                    }
+                    // You can display a success message or perform other actions
+
+                    // Re-enable the submit button and hide the loading GIF
+                    submitBtn.prop("disabled", false);
+                    btnText.show();
+                    loadingGif.hide();
+                },
+                error: function (error) {
+                    // Handle errors here
+                    console.error(error);
+
+                    // Re-enable the submit button and hide the loading GIF
+                    submitBtn.prop("disabled", false);
+                    btnText.show();
+                    loadingGif.hide();
+                },
+            });
+        });
+    });
+    </script>
 
 
 

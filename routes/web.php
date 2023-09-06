@@ -115,6 +115,7 @@ Route::controller(AceController::class)->group(function(){
     Route::get('/view/mobile/loginstaff', 'loginstaffview')->name('mobile.login.staff');
     Route::get('/view/mobile/loginuserviewmobile', 'loginuserviewmobile')->name('mobile.login.user');
     Route::post('users/addrequest/submit','messageusers')->name('message.users');
+    Route::post('users/popup/chat/submit','messageuserspopup')->name('message.popup');
 
 
 });

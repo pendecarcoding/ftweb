@@ -834,6 +834,7 @@ class AceController extends Controller
             $data = [
                 'name'=>$r->name,
                 'phone'=>$r->phone,
+                'type'=>$r->type,
                 'email'=>$r->email,
                 'comment'=>$r->comment,
             ];
@@ -848,6 +849,25 @@ class AceController extends Controller
             $msg = "chapta_no_match";
             return $msg;
         }
+
+    }
+
+    public function messageuserspopup(Request $r){
+
+            $data = [
+                'name'=>$r->name,
+                'phone'=>$r->phone,
+                'type'=>'general',
+                'email'=>$r->email,
+                'comment'=>$r->comment,
+            ];
+            try {
+                DB::table('message_user')->insert($data);
+                $msg = "success";
+                return $msg;
+            } catch (\Throwable $th) {
+                return $th->getmessage;
+            }
 
     }
 
