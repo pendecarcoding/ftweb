@@ -44,7 +44,7 @@
                             <a href="{{ url('vision_mission') }}">Vision & Mission</a>
                         </li>
                     </ul>
-                @elseif ($v['name'] === 'Corporate Governance')
+                @elseif ($v['name'] === 'Investor Relations')
                     <a href="#"
                         class="noScrollLink classurl @if (Request::is($v['link'] . '*')) classurl-active @endif  @if (Request::is('corporate_governance*')) classurl-active @endif"
                         id="{{ $v['name'] }}">{{ $v['name'] }}</a>
@@ -175,7 +175,7 @@ classurl-active @endif">{{ $v['name'] }}</a>
 
                         </ul>
                     </li>
-                @elseif ($v['name'] === 'Corporate Governance')
+                @elseif ($v['name'] === 'Investor Relations')
                     <!-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle">{{ $v['name'] }}</a>
                 <ul class="dropdown-menu">

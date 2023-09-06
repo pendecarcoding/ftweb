@@ -422,7 +422,8 @@ class gosfordController extends Controller
    }
 
    function detailproductoptionmake(Request $r){
-    return view('gosford.frontend.product.detail_product');
+    $brand   = Brand::all();
+    return view('gosford.frontend.product.detail_product_selectmake',compact('brand'));
    }
 
    function getmodelfrommake($make=null){
@@ -450,35 +451,35 @@ class gosfordController extends Controller
     return view('gosford.frontend.option_sumary',compact('car'));
    }
    function ordercomfirmedfront(Request $r){
-    if(Session::get('gystem_login')){
-        try {
-            // $decorator = __NAMESPACE__ . '\\Payment\\' . str_replace(' ', '', ucwords(str_replace('_', ' ', $request->payment_option))) . "Controller";
-            // if (class_exists($decorator)) {
-            //             // print "okw";
-            //             return (new $decorator)->pay($r);
-            // }
-            $prefix = "INV";
-            $date = date("YmdHis"); // Get the current date and time in "YmdHis" format
-            $randomNumber = mt_rand(1000, 9999); // Generate a random 4-digit number // Generate a unique identifier
-            $invoiceNumber = $prefix . $date . $randomNumber;
-            $material = explode(',',$r->material);
-            $data=[
-                'order_code'=>$invoiceNumber,
-                'user_id'=>Session::get('id_account'),
-                'product_id'=>$r->id_product,
-                'material'=>$material[1],
-                'total'=>$r->total,
-                'payment_status'=>'paid',
-                'order_status'=>'Pending'
-            ];
-            GsystemOrder::insert($data);
+    // if(Session::get('gystem_login')){
+    //     try {
+    //         // $decorator = __NAMESPACE__ . '\\Payment\\' . str_replace(' ', '', ucwords(str_replace('_', ' ', $request->payment_option))) . "Controller";
+    //         // if (class_exists($decorator)) {
+    //         //             // print "okw";
+    //         //             return (new $decorator)->pay($r);
+    //         // }
+    //         $prefix = "INV";
+    //         $date = date("YmdHis"); // Get the current date and time in "YmdHis" format
+    //         $randomNumber = mt_rand(1000, 9999); // Generate a random 4-digit number // Generate a unique identifier
+    //         $invoiceNumber = $prefix . $date . $randomNumber;
+    //         $material = explode(',',$r->material);
+    //         $data=[
+    //             'order_code'=>$invoiceNumber,
+    //             'user_id'=>Session::get('id_account'),
+    //             'product_id'=>$r->id_product,
+    //             'material'=>$material[1],
+    //             'total'=>$r->total,
+    //             'payment_status'=>'paid',
+    //             'order_status'=>'Pending'
+    //         ];
+            // GsystemOrder::insert($data);
             return view('gosford.frontend.comfirm_order');
-        } catch (\Throwable $th) {
-            print $th->getMessage();
-        }
-    }else{
-        print "test";
-    }
+    //     } catch (\Throwable $th) {
+    //         print $th->getMessage();
+    //     }
+    // }else{
+    //     print "test";
+    // }
 
 
    }

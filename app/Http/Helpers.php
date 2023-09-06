@@ -699,7 +699,7 @@ function getnav(){
         'is_active'=>'about'
          ],
          [
-        'name'=>'Corporate Governance',
+        'name'=>'Investor Relations',
         'link'=>'investor_relations',
         'is_active'=>'investor_relations'
          ],[
