@@ -414,6 +414,17 @@ class gosfordController extends Controller
     return view('gosford.frontend.emblem.detail');
    }
 
+
+   //Detail Product
+
+   function detailproduct(Request $r){
+    return view('gosford.frontend.product.detail_product');
+   }
+
+   function detailproductoptionmake(Request $r){
+    return view('gosford.frontend.product.detail_product');
+   }
+
    function getmodelfrommake($make=null){
     $carModels = array();
     $carModels = Car::where('make', $make)->groupBy('name')->get(['id', 'name']);

@@ -4,14 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-investor">
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
-                        alt="ACE-BANNER-PRODUCT" />
-                </div>
-            </div>
-        </section>
+        @include('acewebfront.widget.allbaner')
         <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
             <div class="content-ace">
                 <div class="wrap-content">
@@ -21,6 +14,9 @@
 
                         <div class="container">
                             <div class="container">
+                                <a href="{{ url('product_project') }}" style="float:right" class="btn btn-danger"><i
+                                        class="fa fa-times"></i></a>
+
                                 <center>
                                     <h5 style="color: black;font-weight: bold;">Two Tone Color</h5>
                                 </center>
@@ -32,11 +28,14 @@
                                                 <div style="display: flex;flex-direction: column; padding: 20px;">
                                                     <p>A012-Nappa Leather</p>
                                                     <div class="img-wraping-town">
-                                                        <img style="height: 400px;"src="/public/go_system/images/twotowncolordetail.png" alt="">
-                                                        <img style="height: 180px;" class="twon-color1" src="/public/go_system/images/twoncolor1.png" alt="">
-                                                        <img style="height: 112px;" class="twon-color2" src="/public/go_system/images/twoncolor2.png" alt="">
+                                                        <img style="height: 400px;"src="/public/go_system/images/twotowncolordetail.png"
+                                                            alt="">
+                                                        <img style="height: 180px;" class="twon-color1"
+                                                            src="/public/go_system/images/twoncolor1.png" alt="">
+                                                        <img style="height: 112px;" class="twon-color2"
+                                                            src="/public/go_system/images/twoncolor2.png" alt="">
                                                     </div>
-                                                    </div>
+                                                </div>
                                             </div>
 
                                         </div>
@@ -72,27 +71,37 @@
                                                     Step-1 | Color Option
                                                     <!--COLOR OPTION-->
                                                     <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption-one" style="background-color: #452E34;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #452E34;">
                                                         </div>
-                                                        <div class="card-coloroption-one" style="background-color: #9FC4CE;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #9FC4CE;">
                                                         </div>
-                                                        <div class="card-coloroption-one" style="background-color: #442452;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #442452;">
                                                         </div>
-                                                        <div class="card-coloroption-one" style="background-color: #8F5153;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #8F5153;">
                                                         </div>
-                                                        <div class="card-coloroption-one" style="background-color: #E35A7E;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #E35A7E;">
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption-one" style="background-color: #7C6F3B;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #7C6F3B;">
                                                         </div>
-                                                        <div class="card-coloroption-one" style="background-color: #D4C0AD;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #D4C0AD;">
                                                         </div>
-                                                        <div class="card-coloroption-one" style="background-color: #484343;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #484343;">
                                                         </div>
-                                                        <div class="card-coloroption-one" style="background-color: #272526;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #272526;">
                                                         </div>
-                                                        <div class="card-coloroption-one" style="background-color: #AAA29C;">
+                                                        <div class="card-coloroption-one"
+                                                            style="background-color: #AAA29C;">
                                                         </div>
                                                     </div>
                                                     <!--END COLOR OPTION-->
@@ -101,27 +110,37 @@
                                                     Step-2 | Color Option
 
                                                     <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption-two" style="background-color: #452E34;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #452E34;">
                                                         </div>
-                                                        <div class="card-coloroption-two" style="background-color: #9FC4CE;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #9FC4CE;">
                                                         </div>
-                                                        <div class="card-coloroption-two" style="background-color: #442452;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #442452;">
                                                         </div>
-                                                        <div class="card-coloroption-two" style="background-color: #8F5153;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #8F5153;">
                                                         </div>
-                                                        <div class="card-coloroption-two" style="background-color: #E35A7E;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #E35A7E;">
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption-two" style="background-color: #7C6F3B;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #7C6F3B;">
                                                         </div>
-                                                        <div class="card-coloroption-two" style="background-color: #D4C0AD;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #D4C0AD;">
                                                         </div>
-                                                        <div class="card-coloroption-two" style="background-color: #484343;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #484343;">
                                                         </div>
-                                                        <div class="card-coloroption-two" style="background-color: #272526;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #272526;">
                                                         </div>
-                                                        <div class="card-coloroption-two" style="background-color: #AAA29C;">
+                                                        <div class="card-coloroption-two"
+                                                            style="background-color: #AAA29C;">
                                                         </div>
                                                     </div>
                                                     <!--END COLOR 2 OPTION-->
@@ -146,7 +165,8 @@
                                                                 data-upgraded=",MaterialButton">
                                                                 Back
                                                             </a>
-                                                            <a href="{{ route('gosford.finish.design') }}" style="padding: 0px 30px;" type="submit"
+                                                            <a href="{{ route('gosford.finish.design') }}"
+                                                                style="padding: 0px 30px;" type="submit"
                                                                 class="mdl-button mdl-js-button mdl-button--raised color--gray"
                                                                 data-upgraded=",MaterialButton">
                                                                 Submit

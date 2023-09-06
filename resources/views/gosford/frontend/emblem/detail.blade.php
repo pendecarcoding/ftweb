@@ -4,15 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-investor">
-
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
-                        alt="ACE-BANNER-PRODUCT" />
-                </div>
-            </div>
-        </section>
+        @include('acewebfront.widget.allbaner')
 
         <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
             <div class="content-ace">
@@ -23,6 +15,9 @@
 
                         <div class="container">
                             <div class="container">
+                                <a href="{{ url('product_project') }}" style="float:right" class="btn btn-danger"><i
+                                        class="fa fa-times"></i></a>
+
                                 <center>
                                     <h5 style="color: black;font-weight: bold;">Logo Design</h5>
                                 </center>
@@ -30,31 +25,44 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12">
                                         <div style="position: relative;">
-                                        <div class="card">
-                                            <div class="slider-product"
-                                                style="height: 550px;overflow: hidden;position: relative;">
-                                                <div style="display: flex;flex-direction: column;padding: 73px;align-items: center;">
-                                                    <img id="uploadedImage" style="height: 400px;width: 400px;" class="img-responsive"
-                                                        src="" alt="">
+                                            <div class="card">
+                                                <div class="slider-product"
+                                                    style="height: 550px;overflow: hidden;position: relative;">
+                                                    <div
+                                                        style="display: flex;flex-direction: column;padding: 73px;align-items: center;">
+                                                        <img id="uploadedImage" style="height: 400px;width: 400px;"
+                                                            class="img-responsive" src="" alt="">
 
 
 
+
+                                                    </div>
 
                                                 </div>
 
                                             </div>
-
-                                        </div>
-                                        <div style="top: 20px;
+                                            <div
+                                                style="top: 20px;
                                             right: 20px;display: flex;flex-direction: column;width:50px;position: absolute;">
-                                            <button class="btn btn-danger" id="zoomButton" style="margin-top: 10px;"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
-                                            <button  class="btn btn-danger" id="zoomoutButton" style="margin-top: 10px;"><i class="fa fa-search-minus" aria-hidden="true"></i></button>
-                                            <button class="btn btn-danger" id="moveUpButton" style="margin-top: 10px;"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-                                            <button class="btn btn-danger" id="moveDownButton" style="margin-top: 10px;"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
-                                            <button class="btn btn-danger" id="moveLeftButton" style="margin-top: 10px;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-                                            <button class="btn btn-danger" id="moveRightButton" style="margin-top: 10px;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                                <button class="btn btn-danger" id="zoomButton" style="margin-top: 10px;"><i
+                                                        class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                                <button class="btn btn-danger" id="zoomoutButton"
+                                                    style="margin-top: 10px;"><i class="fa fa-search-minus"
+                                                        aria-hidden="true"></i></button>
+                                                <button class="btn btn-danger" id="moveUpButton"
+                                                    style="margin-top: 10px;"><i class="fa fa-arrow-up"
+                                                        aria-hidden="true"></i></button>
+                                                <button class="btn btn-danger" id="moveDownButton"
+                                                    style="margin-top: 10px;"><i class="fa fa-arrow-down"
+                                                        aria-hidden="true"></i></button>
+                                                <button class="btn btn-danger" id="moveLeftButton"
+                                                    style="margin-top: 10px;"><i class="fa fa-arrow-left"
+                                                        aria-hidden="true"></i></button>
+                                                <button class="btn btn-danger" id="moveRightButton"
+                                                    style="margin-top: 10px;"><i class="fa fa-arrow-right"
+                                                        aria-hidden="true"></i></button>
+                                            </div>
                                         </div>
-                                    </div>
                                     </div>
                                     <div class="col-md-4 col-sm-12">
                                         <div class="card">
@@ -165,8 +173,8 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                                    <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-                                </div> -->
+                                                <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                                            </div> -->
 
     </main>
 
@@ -199,7 +207,8 @@
 
         zoomButton.addEventListener('click', function() {
             zoomLevel += 0.1;
-            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+            uploadedImage.style.transform =
+                `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
         });
 
         zoomoutButton.addEventListener('click', function() {
@@ -207,27 +216,32 @@
             if (zoomLevel < 0.1) {
                 zoomLevel = 0.1;
             }
-            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+            uploadedImage.style.transform =
+                `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
         });
 
         moveUpButton.addEventListener('click', function() {
             translateYImage -= 10;
-            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+            uploadedImage.style.transform =
+                `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
         });
 
         moveDownButton.addEventListener('click', function() {
             translateYImage += 10;
-            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+            uploadedImage.style.transform =
+                `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
         });
 
         moveLeftButton.addEventListener('click', function() {
             translateXImage -= 10;
-            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+            uploadedImage.style.transform =
+                `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
         });
 
         moveRightButton.addEventListener('click', function() {
             translateXImage += 10;
-            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+            uploadedImage.style.transform =
+                `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
         });
 
         uploadedImage.addEventListener('mousedown', (e) => {
@@ -241,7 +255,8 @@
             if (!isDraggingImage) return;
             translateXImage = e.clientX - startXImage;
             translateYImage = e.clientY - startYImage;
-            uploadedImage.style.transform = `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
+            uploadedImage.style.transform =
+                `scale(${zoomLevel}) translate(${translateXImage}px, ${translateYImage}px)`;
         });
 
         window.addEventListener('mouseup', () => {
@@ -249,77 +264,81 @@
         });
 
         stickerUpload.addEventListener('change', function() {
-  if (stickerUpload.files && stickerUpload.files[0]) {
-    const reader = new FileReader();
+            if (stickerUpload.files && stickerUpload.files[0]) {
+                const reader = new FileReader();
 
-    reader.onload = function(e) {
-      const sticker = document.createElement('img');
-      sticker.classList.add('sticker');
-      sticker.setAttribute('src', e.target.result);
-      sticker.style.left = '50px';
-      sticker.style.top = '50px';
-      sticker.addEventListener('mousedown', startStickerDrag);
+                reader.onload = function(e) {
+                    const sticker = document.createElement('img');
+                    sticker.classList.add('sticker');
+                    sticker.setAttribute('src', e.target.result);
+                    sticker.style.left = '50px';
+                    sticker.style.top = '50px';
+                    sticker.addEventListener('mousedown', startStickerDrag);
 
-      const stickerContainer = document.createElement('div');
-      stickerContainer.classList.add('sticker-container');
-      stickerContainer.appendChild(sticker);
+                    const stickerContainer = document.createElement('div');
+                    stickerContainer.classList.add('sticker-container');
+                    stickerContainer.appendChild(sticker);
 
-      const controlTL = document.createElement('div');
-      controlTL.classList.add('control', 'top-left');
-      stickerContainer.appendChild(controlTL);
+                    const controlTL = document.createElement('div');
+                    controlTL.classList.add('control', 'top-left');
+                    stickerContainer.appendChild(controlTL);
 
-      const controlTR = document.createElement('div');
-      controlTR.classList.add('control', 'top-right');
-      stickerContainer.appendChild(controlTR);
+                    const controlTR = document.createElement('div');
+                    controlTR.classList.add('control', 'top-right');
+                    stickerContainer.appendChild(controlTR);
 
-      const controlBL = document.createElement('div');
-      controlBL.classList.add('control', 'bottom-left');
-      stickerContainer.appendChild(controlBL);
+                    const controlBL = document.createElement('div');
+                    controlBL.classList.add('control', 'bottom-left');
+                    stickerContainer.appendChild(controlBL);
 
-      const controlBR = document.createElement('div');
-      controlBR.classList.add('control', 'bottom-right');
-      stickerContainer.appendChild(controlBR);
+                    const controlBR = document.createElement('div');
+                    controlBR.classList.add('control', 'bottom-right');
+                    stickerContainer.appendChild(controlBR);
 
-      uploadedImage.parentElement.appendChild(stickerContainer);
+                    uploadedImage.parentElement.appendChild(stickerContainer);
 
-      // New code to handle the click event for the sticker
-      sticker.addEventListener('click', function(e) {
-        const selectedSticker = e.target;
-        const controls = stickerContainer.querySelectorAll('.control');
+                    // New code to handle the click event for the sticker
+                    sticker.addEventListener('click', function(e) {
+                        const selectedSticker = e.target;
+                        const controls = stickerContainer.querySelectorAll('.control');
 
-        controls.forEach(control => {
-          control.style.display = 'none';
+                        controls.forEach(control => {
+                            control.style.display = 'none';
+                        });
+
+                        controls.forEach(control => {
+                            const controlClass = control.classList[1];
+                            switch (controlClass) {
+                                case 'top-left':
+                                    control.style.left = selectedSticker.offsetLeft + 'px';
+                                    control.style.top = selectedSticker.offsetTop + 'px';
+                                    break;
+                                case 'top-right':
+                                    control.style.left = selectedSticker.offsetLeft +
+                                        selectedSticker.offsetWidth + 'px';
+                                    control.style.top = selectedSticker.offsetTop + 'px';
+                                    break;
+                                case 'bottom-left':
+                                    control.style.left = selectedSticker.offsetLeft + 'px';
+                                    control.style.top = selectedSticker.offsetTop +
+                                        selectedSticker.offsetHeight + 'px';
+                                    break;
+                                case 'bottom-right':
+                                    control.style.left = selectedSticker.offsetLeft +
+                                        selectedSticker.offsetWidth + 'px';
+                                    control.style.top = selectedSticker.offsetTop +
+                                        selectedSticker.offsetHeight + 'px';
+                                    break;
+                            }
+                            control.style.display = 'block';
+                        });
+                    });
+                };
+
+                reader.readAsDataURL(stickerUpload.files[0]);
+                stickerUpload.value = '';
+            }
         });
-
-        controls.forEach(control => {
-          const controlClass = control.classList[1];
-          switch (controlClass) {
-            case 'top-left':
-              control.style.left = selectedSticker.offsetLeft + 'px';
-              control.style.top = selectedSticker.offsetTop + 'px';
-              break;
-            case 'top-right':
-              control.style.left = selectedSticker.offsetLeft + selectedSticker.offsetWidth + 'px';
-              control.style.top = selectedSticker.offsetTop + 'px';
-              break;
-            case 'bottom-left':
-              control.style.left = selectedSticker.offsetLeft + 'px';
-              control.style.top = selectedSticker.offsetTop + selectedSticker.offsetHeight + 'px';
-              break;
-            case 'bottom-right':
-              control.style.left = selectedSticker.offsetLeft + selectedSticker.offsetWidth + 'px';
-              control.style.top = selectedSticker.offsetTop + selectedSticker.offsetHeight + 'px';
-              break;
-          }
-          control.style.display = 'block';
-        });
-      });
-    };
-
-    reader.readAsDataURL(stickerUpload.files[0]);
-    stickerUpload.value = '';
-  }
-});
 
 
 
@@ -344,16 +363,5 @@
             e.target.removeEventListener('mousemove', moveSticker);
             e.target.removeEventListener('mouseup', endStickerDrag);
         }
-
     </script>
-
-
-
-
-
-
-
-
-
-
 @endsection

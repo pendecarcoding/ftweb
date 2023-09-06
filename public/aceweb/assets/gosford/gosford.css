@@ -7546,6 +7546,7 @@ a:hover{
 .slider-product{
     height: 600px;
     position: relative;
+    overflow: hidden;
 }
 .wrap-carousel-indicators{
     overflow: hidden;

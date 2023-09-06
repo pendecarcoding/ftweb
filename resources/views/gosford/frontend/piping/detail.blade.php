@@ -4,15 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-investor">
-
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
-                        alt="ACE-BANNER-PRODUCT" />
-                </div>
-            </div>
-        </section>
+        @include('acewebfront.widget.allbaner')
 
         <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
             <div class="content-ace">
@@ -23,6 +15,8 @@
 
                         <div class="container">
                             <div class="container">
+                                <a href="{{ url('product_project') }}" style="float:right" class="btn btn-danger"><i
+                                        class="fa fa-times"></i></a>
                                 <center>
                                     <h5 style="color: black;font-weight: bold;">Piping</h5>
                                 </center>
@@ -30,48 +24,74 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12">
                                         <div class="card">
-                                            <div class="slider-product" style="height: 500px;position: relative;overflow: hidden;">
-                                                <div style="height: 450px" id="myCarousel" class="carousel slide"  data-bs-ride="carousel">
+                                            <div class="slider-product"
+                                                style="height: 500px;position: relative;overflow: hidden;">
+                                                <div style="height: 450px" id="myCarousel" class="carousel slide"
+                                                    data-bs-ride="carousel">
                                                     <div class="carousel-indicators" style="bottom: -43px;">
-                                                      <img data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width:100px;height:100px" src="/public/go_system/images/piping-detail.jpg">
-                                                      <img data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="width:100px;height:100px" src="/public/go_system/images/piping-detail2.jpg">
-                                                      <img data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" style="width:100px;height:100px" src="/public/go_system/images/piping-detail3.jpg">
+                                                        <img data-bs-target="#myCarousel" data-bs-slide-to="0"
+                                                            class="active" aria-current="true" aria-label="Slide 1"
+                                                            style="width:100px;height:100px"
+                                                            src="/public/go_system/images/piping-detail.jpg">
+                                                        <img data-bs-target="#myCarousel" data-bs-slide-to="1"
+                                                            aria-label="Slide 2" style="width:100px;height:100px"
+                                                            src="/public/go_system/images/piping-detail2.jpg">
+                                                        <img data-bs-target="#myCarousel" data-bs-slide-to="2"
+                                                            aria-label="Slide 3" style="width:100px;height:100px"
+                                                            src="/public/go_system/images/piping-detail3.jpg">
                                                     </div>
                                                     <div class="carousel-inner">
-                                                      <div class="carousel-item active">
-                                                        <div class="img-wraping">
-                                                            <img style="width:100%;height: auto;" src="/public/go_system/images/piping-detail.jpg" alt="">
-                                                            <img style="width:100%;height: auto;" class="leather-pattern" src="/public/go_system/images/piping-detail.png" alt="">
+                                                        <div class="carousel-item active">
+                                                            <div class="img-wraping">
+                                                                <img style="width:100%;height: auto;"
+                                                                    src="/public/go_system/images/piping-detail.jpg"
+                                                                    alt="">
+                                                                <img style="width:100%;height: auto;"
+                                                                    class="leather-pattern"
+                                                                    src="/public/go_system/images/piping-detail.png"
+                                                                    alt="">
+                                                            </div>
                                                         </div>
-                                                      </div>
 
-                                                      <div class="carousel-item">
-                                                        <div class="img-wraping">
-                                                            <img style="width:100%;height: auto;" src="/public/go_system/images/piping-detail2.jpg" alt="">
-                                                            <img style="width:100%;height: auto;" class="leather-pattern" src="/public/go_system/images/piping-detail2.png" alt="">
+                                                        <div class="carousel-item">
+                                                            <div class="img-wraping">
+                                                                <img style="width:100%;height: auto;"
+                                                                    src="/public/go_system/images/piping-detail2.jpg"
+                                                                    alt="">
+                                                                <img style="width:100%;height: auto;"
+                                                                    class="leather-pattern"
+                                                                    src="/public/go_system/images/piping-detail2.png"
+                                                                    alt="">
+                                                            </div>
                                                         </div>
-                                                      </div>
 
 
-                                                      <div class="carousel-item">
-                                                        <div class="img-wraping">
-                                                            <img style="width:100%;height: auto;" src="/public/go_system/images/piping-detail3.jpg" alt="">
-                                                            <img style="width:100%;height: auto;" class="leather-pattern" src="/public/go_system/images/piping-detail3.png" alt="">
+                                                        <div class="carousel-item">
+                                                            <div class="img-wraping">
+                                                                <img style="width:100%;height: auto;"
+                                                                    src="/public/go_system/images/piping-detail3.jpg"
+                                                                    alt="">
+                                                                <img style="width:100%;height: auto;"
+                                                                    class="leather-pattern"
+                                                                    src="/public/go_system/images/piping-detail3.png"
+                                                                    alt="">
+                                                            </div>
                                                         </div>
-                                                      </div>
 
 
 
                                                     </div>
-                                                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                      <span class="visually-hidden">Previous</span>
+                                                    <button class="carousel-control-prev" type="button"
+                                                        data-bs-target="#myCarousel" data-bs-slide="prev">
+                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                        <span class="visually-hidden">Previous</span>
                                                     </button>
-                                                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                      <span class="visually-hidden">Next</span>
+                                                    <button class="carousel-control-next" type="button"
+                                                        data-bs-target="#myCarousel" data-bs-slide="next">
+                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                        <span class="visually-hidden">Next</span>
                                                     </button>
-                                                  </div>
+                                                </div>
                                             </div>
 
                                         </div>
@@ -79,7 +99,8 @@
                                     <div class="col-md-4 col-sm-12">
                                         <div class="card">
                                             <div style="padding:20px;height: 500px;">
-                                                <div style="display: flex;flex-direction: row;justify-content: space-between;margin: 0px 10%;">
+                                                <div
+                                                    style="display: flex;flex-direction: row;justify-content: space-between;margin: 0px 10%;">
                                                     <div style="display: flex;flex-direction: column;">
                                                         <h6 class="title-right-product">Make:</h6>
                                                         <p class="content-right-product"> BMW</p>
@@ -183,10 +204,9 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                        <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-                    </div> -->
+                                    <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                                </div> -->
 
     </main>
     <script src="/public/go_system/js/pattern-design.js"></script>
-
 @endsection

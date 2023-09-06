@@ -4,15 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-investor">
-
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
-                        alt="ACE-BANNER-PRODUCT" />
-                </div>
-            </div>
-        </section>
+        @include('acewebfront.widget.allbaner')
 
         <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
             <div class="content-ace">
@@ -56,8 +48,8 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-            </div> -->
+                    <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                </div> -->
 
     </main>
 @endsection

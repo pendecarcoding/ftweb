@@ -4,15 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-investor">
-
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
-                        alt="ACE-BANNER-PRODUCT" />
-                </div>
-            </div>
-        </section>
+        @include('acewebfront.widget.allbaner')
 
         <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
             <div class="content-ace">
@@ -23,6 +15,8 @@
 
                         <div class="container">
                             <div class="container">
+                                <a href="{{ url('product_project') }}" style="float:right" class="btn btn-danger"><i
+                                        class="fa fa-times"></i></a>
                                 <center>
                                     <h5 style="color: black;font-weight: bold;">Embrodery</h5>
                                 </center>

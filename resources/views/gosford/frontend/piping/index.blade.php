@@ -4,16 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <section class="ace-investor">
-
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
-                        alt="ACE-BANNER-PRODUCT" />
-                </div>
-            </div>
-        </section>
-
+        @include('acewebfront.widget.allbaner')
         <section class="gtp-anouncements" style="background-color: rgb(247, 246, 246);">
             <div class="content-ace">
                 <div class="wrap-content">
@@ -22,6 +13,8 @@
 
 
                         <div class="container">
+                            <a href="{{ url('product_project') }}" style="float:right" class="btn btn-danger"><i
+                                    class="fa fa-times"></i></a>
                             <center>
                                 <h5 style="color: black;font-weight: bold;">Piping</h5>
                             </center>
@@ -185,10 +178,16 @@
                                 <h2>Other Product Option</h2>
                                 <br>
                                 <div style="display: flex;flex-direction: row;justify-content: space-between;gap:10px">
-                                    <div class="card" style="padding: 10px;width:100%"><a href="{{route('gosford.twotowncolor')}}" class="menu-href">Two Tone Color</a></div>
-                                    <div class="card" style="padding: 10px;width:100%"><a href="{{route('gosford.embrodery')}}" class="menu-href">Embordery</a></div>
-                                    <div class="card" style="padding: 10px;width:100%"><a href="{{route('gosford.emblem')}}" class="menu-href">Logo/Emblem</a></div>
-                                    <div class="card" style="padding: 10px;width:100%"><a href="{{route('gosford.patterndesign')}}" class="menu-href">Pattern Design</a></div>
+                                    <div class="card" style="padding: 10px;width:100%"><a
+                                            href="{{ route('gosford.twotowncolor') }}" class="menu-href">Two Tone
+                                            Color</a></div>
+                                    <div class="card" style="padding: 10px;width:100%"><a
+                                            href="{{ route('gosford.embrodery') }}" class="menu-href">Embordery</a></div>
+                                    <div class="card" style="padding: 10px;width:100%"><a
+                                            href="{{ route('gosford.emblem') }}" class="menu-href">Logo/Emblem</a></div>
+                                    <div class="card" style="padding: 10px;width:100%"><a
+                                            href="{{ route('gosford.patterndesign') }}" class="menu-href">Pattern
+                                            Design</a></div>
                                 </div>
                             </div>
 
@@ -201,8 +200,8 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                        <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-                    </div> -->
+                                    <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                                </div> -->
 
     </main>
 @endsection
