@@ -233,7 +233,7 @@
 
 
                         <div class="container mt-5 mb-5">
-                            <div class="row g-2">
+                            <div class="row g-2" style="justify-content: center;">
                                 @foreach($data as $i => $v)
                                 @php
                                 $part = explode(',',$v->part);
