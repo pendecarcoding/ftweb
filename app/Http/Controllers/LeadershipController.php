@@ -43,12 +43,15 @@ class LeadershipController extends Controller
      */
     public function store(Request $request)
     {
-
+                $part = implode(',',$request->part);
                 $d = new Leadership;
                 $d->name     = $request->name;
                 $d->position = $request->position;
                 $d->foto = $request->foto;
                 $d->content = $request->content;
+                $d->head = $request->top;
+                $d->short = $request->short;
+                $d->part = $part;
                 $d->save();
                 flash(translate('Leadership has been inserted successfully'))->success();
                 return redirect()->route('leadership.index');
@@ -89,11 +92,15 @@ class LeadershipController extends Controller
 
     public function update(Request $request, $id)
     {
+        $part = implode(',',$request->part);
         $d = Leadership::find(base64_decode($id));
         $d->name     = $request->name;
         $d->position = $request->position;
         $d->content = $request->content;
         $d->foto = $request->foto;
+        $d->head = $request->top;
+        $d->short = $request->short;
+        $d->part = $part;
         $d->save();
         flash(translate('Leadership has been updated successfully'))->success();
         return redirect()->route('leadership.index');

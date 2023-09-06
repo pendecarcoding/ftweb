@@ -61,6 +61,41 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label class="col-md-3 col-from-label">
+                                {{ translate('top') }}
+                            </label>
+                            <div class="col-md-9" style="display: flex;gap:10px">
+                                <input @if($data->head=='Y') checked @endif style="width:15px;height:30px" type="radio" name="top" value="Y"> <span style="font-size: 20px;">Y</span>
+                                <input @if($data->head=='N') checked @endif style="width:15px;height:30px" type="radio" name="top" value="N"> <span style="font-size: 20px;">N</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-from-label">
+                                {{ translate('Short By') }}
+                            </label>
+                            <div class="col-md-9">
+                                <input type="text" name="short" class="form-control" value="{{$data->short}}" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-from-label">
+                                {{ translate('Part') }}
+                            </label>
+                            <div class="col-md-9">
+                                @php
+                                    $part = explode(',',$data->part);
+                                @endphp
+                                <select name="part[]"  class="select2 form-control aiz-selectpicker"  data-toggle="select2" data-placeholder="Choose ..."  multiple>
+                                    <option value="">--Select section--</option>
+                                    <option value="BOD" @if(in_array('BOD', $part)) selected @endif>BOD</option>
+                                    <option value="KEY" @if(in_array('KEY', $part)) selected @endif>KEY</option>
+                                </select>
+                                </select>
+                            </div>
+                        </div>
+
 
 
                         <div class="form-group mb-0 text-right">

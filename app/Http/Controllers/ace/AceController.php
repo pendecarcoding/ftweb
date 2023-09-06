@@ -627,7 +627,7 @@ class AceController extends Controller
                 return view('acewebfront.pages.about',compact('data'));
                 break;
             case 'about_director':
-                    $data = Leadership::all();
+                    $data = Leadership::orderby('short','ASC')->get();
                     return view('acewebfront.pages.about_director',compact('data'));
                     break;
             case 'registerstaff':
