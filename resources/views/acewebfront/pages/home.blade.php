@@ -842,6 +842,7 @@ industry reputation.
 
 
                 </div>
+                @if(count($testimonial) > 1)
 
                      <button class="acecarousel-control-prev" type="button" data-bs-target="#myCarouseltesti" data-bs-slide="prev">
                         <span style="color:#1D5189;font-size: 250%;margin-left:20px;font-weight:bold;" aria-hidden="true"><i class="fa fa-angle-left"></i></span>
@@ -851,7 +852,7 @@ industry reputation.
                         <span style="color:#1D5189;font-size: 250%;margin-right:20px;font-weight:bold;" aria-hidden="true"><i class="fa fa-angle-right"></i></span>
                         <span class="visually-hidden">Next</span>
                         </button>
-
+                @endif
                   </div>
                 </div>
 
