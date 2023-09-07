@@ -36,7 +36,7 @@
                 </div>
             </div>
         </section>
-        <section onclick="window.location.href = '{{route('gosford.detailproduct')}}'" style="background-image: url('/public/assets/img/sample-bg.png');background-size: cover;height:500px; cursor: pointer;" class="pt-5 pb-5">
+        <section onclick="window.location.href = '{{route('gosford.detailproduct')}}'" style="background-image: url('/public/assets/img/sample-bg.png');background-size: cover;height:600px; cursor: pointer;" class="pt-5 pb-5">
             <div class="row">
                 <div class="col-md-12">
                     <div style="position: relative;display: flex;justify-content: center;">
