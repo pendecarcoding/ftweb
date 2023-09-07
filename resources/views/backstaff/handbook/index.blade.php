@@ -12,15 +12,7 @@
     </style>
     <main>
 
-        <section class="ace-investor">
-
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
-                        alt="ACE-BANNER-PRODUCT">
-                </div>
-            </div>
-        </section>
+        @include('acewebfront.widget.allbaner')
         <section class="gtp-ann">
             <div class="container-fluid">
                 <div class="row">

@@ -2,15 +2,7 @@
 @section('content')
     <main>
 
-        <section class="ace-investor">
-
-            <div class="col-md-12">
-                <div class="banner-static">
-                    <img class="img-responsive-banner" src="/public/aceweb/assets/img/contact-banner.png"
-                        alt="ACE-BANNER-PRODUCT">
-                </div>
-            </div>
-        </section>
+        @include('acewebfront.widget.allbaner')
         <section class="gtp-ann" style="height:auto;position: relative;">
             <div class="container-fluid">
                 <div class="row">
@@ -43,7 +35,7 @@
                                         <center>
 
                                             <!-- <img class="img-circle" style="width:100px;" src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" alt="">
-                                -->
+                                    -->
                                             <div class="name-login">
                                                 <h4 style="color:#929292">{{ $data->display_name }}</h4>
 
@@ -123,8 +115,7 @@
                                                         placeholder="Old Pass" aria-label="oldpass"
                                                         aria-describedby="basic-addon1">
                                                 </div>
-                                                <input type="hidden" value="{{ $data->id }}" name="id"
-                                                    required>
+                                                <input type="hidden" value="{{ $data->id }}" name="id" required>
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
                                                         <span
