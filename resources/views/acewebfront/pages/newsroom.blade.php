@@ -19,12 +19,12 @@
                             <h1>Stay updated with our journey</h1>
                         </div>
 
-                        <div style="margin-top: 50px" class="row-personals">
+                        <div style="margin-top:0px" class="row-personals">
                             <div class="col-md-9">
 
                             </div>
                             <div class="col-md-3">
-                                <div class="row-personals">
+                                <!-- <div class="row-personals">
                                     <div style="margin: auto">Sort by:</div>
                                     <div style="margin-left: 20px">
                                         <select class="form-control" id="category"
@@ -39,10 +39,10 @@
                                             <option value="{{ url('newsroom?category=PERSONAL') }}"
                                                 @if (isset($_GET['category'])) @if ($_GET['category'] == 'PERSONAL') selected @endif
                                                 @endif>PERSONAL</option>
-                                            <!-- <option value="{{ url('newsroom?category=AIAB') }}" @if (isset($_GET['category'])) @if ($_GET['category'] == 'AIAB') selected @endif @endif>AIAB</option> -->
+                                            <option value="{{ url('newsroom?category=AIAB') }}" @if (isset($_GET['category'])) @if ($_GET['category'] == 'AIAB') selected @endif @endif>AIAB</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <div data-aos="fade-up" style="margin-top: 40px" class="row aos-init aos-animate">
