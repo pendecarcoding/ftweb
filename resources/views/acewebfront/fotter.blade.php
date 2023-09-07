@@ -61,9 +61,9 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                     <!-- Links -->
-                    <a href="{{ url('our_products') }}">
+                    <a href="{{ url('Technical & Development') }}">
                         <h6 class="text-uppercase fw-bold mb-4 h6-footer">
-                            Research & Development
+                            Technical & Development
                         </h6>
                     </a>
                     <a href="{{ url('newsroom') }}">
