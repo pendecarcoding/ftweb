@@ -58,26 +58,48 @@
 
                             @foreach ($data as $i => $v)
 
+                            @php
+                            $text_without_tags = strip_tags($v->description);
+
+                            $kata_kata = explode(" ", $text_without_tags);
+
+                            // Mengambil 12 kata pertama
+                            $duabelas_kata = array_slice($kata_kata, 0, 10);
+
+                            // Menggabungkan 12 kata tersebut kembali menjadi kalimat
+                            $hasil_kalimat = implode(" ", $duabelas_kata);
+                            @endphp
 
                             <div class="col-md-4 aos-init aos-animate" style="position: relative;margin-top: 10px;">
-                                <div style="height: 400px;position: relative;
+
+                                <div style="position: relative;
 overflow: hidden;" class="card text-center board-director">
-                                    <div style="position: relative;
-    height: 280px;
-    border-radius: 0px;
-    overflow: hidden;">
-                                        <img style="height: 100%;object-fit: cover;"  @if($v->photos != null) id="dynamic-gallery-demo{{$v->id}}" @endif  src="{{getimage($v->banner)}}" width="100%">
-                                    </div>
-                                    <div style="margin-top: 20px;"></div>
-                                    <div style="text-align: left;padding: 0px 20px;font-size: 13px;color: #7f7f7f;margin-bottom: 10px;"><i class="fa fa-calendar"></i>   {{namedate($v->date)}}</div>
+
+<div style="width: 100%;
+height: 250px;
+margin-bottom: 15px;
+position: relative;
+overflow: hidden;">
+    <img style="height: 100%;width:100%;object-fit: cover;"  @if($v->photos != null) id="dynamic-gallery-demo{{$v->id}}" @endif  src="{{getimage($v->banner)}}">
+</div>
+
                                     <a href="{{ url('newsroom/' . $v->slug) }}">
                                         <p style="    font-size: 14px;
-                                        margin-bottom: 18px;
+                                        margin-bottom: 2px;
                                         color: black;
+                                        height: 40px;
                                         font-weight: bold;
                                         padding: 0px 20px;
-                                        text-align: left;">{{ $v->title }} </p> </a>
+                                        text-align: left;">{{ $v->title }} </p>
+                                <p style="color:#909090;    padding: 5px 20px 5px 20px;text-align: left;">{{$hasil_kalimat}}</p>
+
+                                <div style="display: flex;flex-direction: row;justify-content: space-between; text-align: left;    padding: 10px 20px;font-size: 13px;color: #7f7f7f;margin-bottom: 10px;">
+                                    <div><i class="fa fa-calendar"></i> {{namedate($v->date)}}</div>
+                                    <div style="color:#333333;font-weight: bold;"> Read more ></div>
                                 </div>
+                            </a>
+                                </div>
+
                                 <!--
                                 <div class="video-play-icon">
                                     <a @if($v->photos != null) id="dynamic-gallery-demo{{$v->id}}" @endif href="#" class="video bg-danger"><i class="fa fa-camera"></i></a>
