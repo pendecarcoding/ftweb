@@ -1,3 +1,4 @@
+@if (count(getallbanner()) > 1)
 <section class="section-slider">
     <div style="top: 0;
     position: absolute;
@@ -34,3 +35,10 @@
         </div>
     </div>
 </section>
+@else
+
+<section style="position: relative;height: 100px;">
+
+</section>
+
+@endif
