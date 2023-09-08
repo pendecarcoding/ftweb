@@ -15,11 +15,11 @@
                         <div class="form-group row">
                             <label class="col-md-3 col-form-label">
                                 {{ translate('Name') }}
-                                <span class="text-danger">*</span>
+
                             </label>
                             <div class="col-md-9">
                                 <input value="{{ $data->title }}" type="text" placeholder="{{ translate('Name') }}"
-                                    id="name" name="title" class="form-control" required>
+                                    id="name" name="title" class="form-control">
                             </div>
                         </div>
                         <div class="form-group row">

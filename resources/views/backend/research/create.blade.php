@@ -14,11 +14,11 @@
                         <div class="form-group row">
                             <label class="col-md-3 col-form-label">
                                 {{ translate('Title') }}
-                                <span class="text-danger">*</span>
+
                             </label>
                             <div class="col-md-9">
                                 <input type="text" placeholder="{{ translate('Title') }}" id="title" name="title"
-                                    class="form-control" required>
+                                    class="form-control">
                             </div>
                         </div>
                         <div class="form-group row">
