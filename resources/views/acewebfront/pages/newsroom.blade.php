@@ -84,18 +84,17 @@ overflow: hidden;">
 </div>
 
                                     <a href="{{ url('newsroom/' . $v->slug) }}">
-                                        <p style="    font-size: 14px;
+                                        <p style="font-size: 16px;
                                         margin-bottom: 2px;
                                         color: black;
                                         height: 40px;
-                                        font-weight: bold;
                                         padding: 0px 20px;
                                         text-align: left;">{{ $v->title }} </p>
-                                <p style="color:#909090;    padding: 5px 20px 5px 20px;text-align: left;">{!! $hasil_kalimat !!}</p>
+                                <p style="color:#909090;    padding: 5px 20px 5px 20px;text-align: left;font-size: 14px;">{!! $hasil_kalimat !!}</p>
 
                                 <div style="display: flex;flex-direction: row;justify-content: space-between; text-align: left;    padding: 10px 20px;font-size: 13px;color: #7f7f7f;margin-bottom: 10px;">
                                     <div><i class="fa fa-calendar"></i> {{namedate($v->date)}}</div>
-                                    <div style="color:#333333;font-weight: bold;"> Read more ></div>
+                                    <div style="color: #a39e9e;font-weight: bold;"> Read more ></div>
                                 </div>
                             </a>
                                 </div>
