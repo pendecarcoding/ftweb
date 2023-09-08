@@ -109,15 +109,8 @@ classurl-active @endif">{{ $v['name'] }}</a>
                     </a>
                 </ul>
             @elseif(Session::get('loginstaff') == true)
-                @if (Session::get('loginstaff') == true)
-                    <a href="{{ url('staff/back/announcements') }}">
-                        <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button-login"
-                            id="navbarToggle">
-                            <i class="fa fa-user-circle i-icon-login" aria-hidden="true"></i>
 
-                        </div>
-                    </a>
-                @endif
+                <a href="{{ url('staff/back/announcements') }}" class="classurl" style="color:white">STAFF</a>
                 <a class="classurl" onclick="logoutFunction()" style="font-size:28px;color:white"><i
                         class="fa fa-sign-out" aria-hidden="true"></i></a>
             @else
