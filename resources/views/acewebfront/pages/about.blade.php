@@ -19,6 +19,8 @@
                   </div>
               </div>
 
+
+
               <div style="margin:30px 0px;">
                 @foreach($data as $i =>$v)
                 <div data-aos="fade-up" class="row about-company" style=" @if($i == 0) background-color: rgba(242, 245, 249, 1); @endif">
@@ -36,15 +38,15 @@
                     <div class="col-md-6 content_company">
                         <div style="">
                             <h2 class="company_h2">{{$v->name}}</h2>
-                            <div class="toggle-content">
-                                <p style="text-align: justify;font-size: 16px;">{!! str_word_count(strip_tags($v->content)) > 80 ? implode(' ', array_slice(explode(' ', strip_tags($v->content)), 0, 80)) . '' : strip_tags($v->content) !!}
-                                <span id="content-readmore">{!! str_word_count(strip_tags($v->content)) > 80 ? implode(' ', array_slice(explode(' ', strip_tags($v->content)),80)) . '' : strip_tags($v->content) !!}</span>
-                                </p>
-
+                            <div id="readmore">
+                            <div class="readmore-container">
+                                <span class="readmore__content">
+                                    {!! $v->content !!}
+                                </span>
+                                <button style="margin-top: 5px;" class="btn btn-primary readmore__toggle" role="switch" aria-checked="true">
+                                    Show more
+                                </button>
                             </div>
-                            @if(str_word_count(strip_tags($v->content)) > 100)
-                                <div class="toggle-button">Read more</div>
-                            @endif
                         </div>
                         <!-- <a style="margin:50px 0px;" class="btn gsf-button">Learn More</a> -->
                     </div>
@@ -84,18 +86,49 @@
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-       $(document).ready(function() {
-    $(".toggle-button").click(function() {
-        var contentContainer = $(this).prev(".toggle-content");
-        contentContainer.toggleClass("expanded");
+        class ReadMore {
+            constructor(container) {
+                this.container = container;
+                this.content = container.querySelector('.readmore__content');
+                this.buttonToggle = container.querySelector('.readmore__toggle');
+                this.stateContent = this.content.innerHTML;
+                this.addEventListeners();
+                this.initializeContent();
+            }
 
-        if (contentContainer.hasClass("expanded")) {
-            $(this).text("Read less");
-        } else {
-            $(this).text("Read more");
+            addEventListeners() {
+                this.buttonToggle.addEventListener('click', this.onClick.bind(this));
+            }
+
+            initializeContent() {
+                if (this.stateContent.length > 500) {
+                    this.content.innerHTML = `${this.stateContent.substring(0, 500)}...`;
+                    this.buttonToggle.style.display = 'block';
+                } else {
+                    this.buttonToggle.style.display = 'none';
+                }
+            }
+
+            onClick(event) {
+                const targetEvent = event.currentTarget;
+
+                if (targetEvent.getAttribute('aria-checked') === 'true') {
+                    targetEvent.setAttribute('aria-checked', 'false');
+                    this.content.innerHTML = this.stateContent;
+                    this.buttonToggle.innerHTML = 'Show less';
+                } else {
+                    targetEvent.setAttribute('aria-checked', 'true');
+                    this.content.innerHTML = `${this.stateContent.substring(0, 500)}...`;
+                    this.buttonToggle.innerHTML = 'Show more';
+                }
+            }
         }
-    });
-});
 
+        document.addEventListener('DOMContentLoaded', () => {
+            const readMoreContainers = document.querySelectorAll('.readmore-container');
+            readMoreContainers.forEach((container) => {
+                new ReadMore(container);
+            });
+        });
     </script>
 @endsection
