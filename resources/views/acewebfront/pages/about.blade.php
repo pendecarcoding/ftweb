@@ -23,9 +23,9 @@
 
               <div style="margin:30px 0px;">
                 @foreach($data as $i =>$v)
-                <div data-aos="fade-up" class="row about-company" style=" @if($i == 0) background-color: rgba(242, 245, 249, 1); @endif">
+                <div data-aos="fade-up" class="row about-company">
                     <div class="col-md-6">
-                    <div style="position: relative;"> <img style="width: 100%;" class="img-responsive" src="{{getimage($v->foto)}}" alt="">
+                    <div style="position: relative;"> <img style="width: 100%;height: 350px;" class="img-responsive" src="{{getimage($v->foto)}}" alt="">
                         @if($v->yt_link != null)
                         <div class="video-play-icon">
                           <a  data-bs-toggle="modal" data-bs-target="#ytvd{{$v->id}}" href="#" class="video bg-danger"><i class="fa fa-youtube-play"></i></a>
@@ -72,7 +72,7 @@
                     </div>
                   </div>
                   @endif
-
+</div>
                   @endforeach
 
               </div>
