@@ -671,6 +671,13 @@
                                                                 </li> -->
                 @endcanany
 
+                <li class="aiz-side-nav-item">
+                    <a href="{{ route('menu.index') }}"
+                        class="aiz-side-nav-link {{ areActiveRoutes(['menu.create','menu.edit']) }}">
+                        <i class="las la-menus aiz-side-nav-icon"></i>
+                        <span class="aiz-side-nav-text">{{ translate('Menu') }}</span>
+                    </a>
+                </li>
                 <!--Blog System-->
                 @canany(['view_blogs', 'view_blog_categories'])
                     <li class="aiz-side-nav-item">

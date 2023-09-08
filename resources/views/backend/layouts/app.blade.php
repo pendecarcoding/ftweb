@@ -35,11 +35,52 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
     <script src="https://cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
+    <link rel="stylesheet" href="/public/assets/css/jquery.nestable.css">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
     <style>
         body {
             font-size: 12px;
         }
+
+        .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
     </style>
+
     <script>
         var AIZ = AIZ || {};
         AIZ.local = {
@@ -164,7 +205,40 @@
     <script>
        CKEDITOR.replace( 'editor' );
     </script>
+ <script>
+    $(document).ready(function(){
 
+    	function updateToDatabase(idString){
+    	   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': '{{csrf_token()}}'}});
+
+    	   $.ajax({
+              url:'{{url('/menu/update-order')}}',
+              method:'POST',
+              data:{ids:idString},
+              success:function(){
+                 alert('Successfully updated')
+               	 //do whatever after success
+              }
+           })
+    	}
+
+        var target = $('.sort_menu');
+        target.sortable({
+            handle: '.handle',
+            placeholder: 'highlight',
+            axis: "y",
+            update: function (e, ui){
+               var sortData = target.sortable('toArray',{ attribute: 'data-id'})
+               updateToDatabase(sortData.join(','))
+            }
+        })
+
+    })
+</script>
+
+<script src="{{ static_asset('assets/js/jquery-3.4.1.min.js')}}"></script>
+<script src="{{ static_asset('assets/js/jquery.nestable.js')}}"></script>
+<script src="{{ static_asset('assets/js/script.js')}}"></script>
 </body>
 
 </html>

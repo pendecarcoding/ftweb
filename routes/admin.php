@@ -67,6 +67,7 @@ use App\Http\Controllers\CarsController;
 use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BanerController;
+use App\Http\Controllers\MenuController;
 
 
 /*
@@ -495,6 +496,15 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/blog/destroy/{id}', 'destroy')->name('blog.destroy');
         Route::post('/blog/change-status', 'change_status')->name('blog.change-status');
     });
+
+
+    Route::resource('menu', MenuController::class);
+    Route::controller(MenuController::class)->group(function () {
+        Route::get('/menu/destroy/{id}', 'destroy')->name('menu.destroy');
+        Route::post('/menu/change-status', 'change_status')->name('menu.change-status');
+    });
+
+
 
     //announcements
      Route::resource('announcements',AnnouncementsController::class);

@@ -670,6 +670,11 @@ $jsonArrayResponse = json_decode($apiResponse);
 return $jsonArrayResponse;
 }
 
+
+function countsentense($sentense){
+    $result = preg_split('/(?<=[.!?])\s+/', $sentense, -1, PREG_SPLIT_NO_EMPTY);
+}
+
 function getnewnews(){
    return $data = Blog::select('blogs.status as status','blogs.title as title','blogs.slug as slug','blogs.created_at as created_at',
    'blogs.short_description as short_description',
@@ -683,6 +688,43 @@ function getnewnews(){
 
 function getPatner(){
     return $data = Patner::all();
+}
+
+function renderMenuItem($id, $label, $url)
+{
+    return '<li class="dd-item dd3-item" data-id="' . $id . '" data-label="' . $label . '" data-url="' . $url . '">' .
+        '<div class="dd-handle dd3-handle" > Drag</div>' .
+        '<div class="dd3-content"><span>' . $label . '</span>' .
+        '<div class="item-edit">Edit</div>' .
+        '</div>' .
+        '<div class="item-settings d-none">' .
+        '<p><label for="">Navigation Label<br><input type="text" name="navigation_label" value="' . $label . '"></label></p>' .
+        '<p><label for="">Navigation Url<br><input type="text" name="navigation_url" value="' . $url . '"></label></p>' .
+        '<p><a class="item-delete" href="javascript:;">Remove</a> |' .
+        '<a class="item-close" href="javascript:;">Close</a></p>' .
+        '</div>';
+
+}
+
+function menuTree($parent_id = 0)
+{
+    $items = '';
+    $query = DB::table('menus')->where('parent_id',$parent_id)->get();
+    if(count($query) > 0){
+        $items .= '<ol class="dd-list">';
+        foreach ($query as $key => $v) {
+            $items .= renderMenuItem($v->id, $v->label_menu, $v->url_menu);
+            $items .= menuTree($v->id);
+            $items .= '</li>';
+        }
+        $items .= '</ol>';
+    }
+    return $items;
+}
+
+function getsubmenu($id){
+    $data = DB::table('menus')->where('parent_id',$id)->get();
+    return $data;
 }
 
 //ACE WEB NAV
