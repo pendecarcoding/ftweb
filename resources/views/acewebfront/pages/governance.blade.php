@@ -26,7 +26,7 @@
                             <div class="col-md-4 col-sm-12">
                                 <div class="card gov-card">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal{{$v->id}}" class="inline2 cboxElement">
-                                    <img id="audithref" src="{{ getimage($v->icon) }}" alt="audit" width="auto" height="100px">
+                                    <img id="audithref" src="{{ getimage($v->icon) }}" alt="audit" width="100px" height="100px">
                                      <h4>{{$v->name}}</h4>
                                     </a>
                                     </div>

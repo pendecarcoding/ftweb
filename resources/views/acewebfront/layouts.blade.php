@@ -20,7 +20,16 @@
     </title>
     @yield('meta')
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="{{ static_asset('car') }}/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ static_asset('car') }}/css/templete.min.css">
+    <link class="skin" rel="stylesheet" type="text/css" href="{{ static_asset('car') }}/css/skin/skin-1.css">
+    <!-- Revolution Slider Css -->
+    <link rel="stylesheet" type="text/css" href="{{ static_asset('car') }}/plugins/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="{{ static_asset('car') }}/plugins/revolution/css/navigation.css">
+
+
+
     <link href="{{ static_asset('aceweb') }}/assets/vendor/aos/aos.css" rel="stylesheet" />
     <link href="{{ static_asset('aceweb') }}/assets/ace/mansoryscroll.css" rel="stylesheet" />
     <link href="{{ static_asset('aceweb') }}/assets/ace/company.css" rel="stylesheet" />
@@ -46,14 +55,14 @@
     <link href="{{ static_asset('aceweb') }}/assets/ace/ipadace1.css" rel="stylesheet" />
     <link href="{{ static_asset('aceweb') }}/assets/gosford/gosford.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/video/lg-video.umd.js"></script>
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
-<link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.css" rel="stylesheet">
     <style>
         #pdfviewer {
             border: 1px #333 solid;
@@ -80,6 +89,10 @@
         #myBtn:hover {
             background-color: #555;
         }
+
+        .bg-primary {
+            background-color: #212529;
+        }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -97,7 +110,10 @@
             gtag('config', '{{ env('TRACKING_ID') }}');
         </script>
     @endif
-
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/video/lg-video.umd.js"></script>
 
 </head>
 
@@ -112,8 +128,11 @@
 
     @include('acewebfront.header')
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-    @yield('content')
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"
+            aria-hidden="true"></i></button>
+    <div class="page-wraper">
+        @yield('content')
+    </div>
     <div id="chat" class="wa-floating-button" onclick="toggleChat()">
         <span class="whatsapp-icon"><img id="chat-icon" src="/public/assets/img/chat.png"></span>
     </div>
@@ -122,26 +141,29 @@
         <div class="card">
             <form id="contact-form-popup" method="post">
                 @csrf
-            <div class="card-header" style="color:white;background-color: #F80814;"><img style="height: 30px;" src="/public/assets/img/chat.png"> Message</div>
-            <div class="card-body">
-                <input type="text" class="form-control" placeholder="Name *" required name="name">
-                <br>
-                <input type="text" class="form-control" placeholder="Contact Number *" required name="phone">
-                <br>
-                <input type="email" class="form-control" placeholder="Email *" required name="email">
-                <br>
-                <textarea style="height:150px" name="comment" class="form-control" required></textarea>
+                <div class="card-header" style="color:white;background-color: #F80814;"><img style="height: 30px;"
+                        src="/public/assets/img/chat.png"> Message</div>
+                <div class="card-body">
+                    <input type="text" class="form-control" placeholder="Name *" required name="name">
+                    <br>
+                    <input type="text" class="form-control" placeholder="Contact Number *" required
+                        name="phone">
+                    <br>
+                    <input type="email" class="form-control" placeholder="Email *" required name="email">
+                    <br>
+                    <textarea style="height:150px" name="comment" class="form-control" required></textarea>
 
 
 
 
-            </div>
-            <div class="card-footer" >
-                <button type="submit" style="width:100%;background-color: #F80814;color:white" class="btn">
-                    <span id="btn-text">Submit</span>
-                    <img  id="loading-gif" src="/public/assets/img/loading.gif" style="width: 20px;height:20px;display: none;">
-                </button>
-            </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" style="width:100%;background-color: #F80814;color:white" class="btn">
+                        <span id="btn-text">Submit</span>
+                        <img id="loading-gif" src="/public/assets/img/loading.gif"
+                            style="width: 20px;height:20px;display: none;">
+                    </button>
+                </div>
             </form>
         </div>
     </div>
@@ -169,7 +191,8 @@
                                         <span
                                             style="height: 40px;
                                       border-radius: 0px;"
-                                            class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                            class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-user"></i></span>
                                     </div>
                                     <input required name="username" type="text" class="form-control"
                                         placeholder="Staff ID" aria-label="Username" aria-describedby="basic-addon1">
@@ -180,7 +203,8 @@
                                         <span
                                             style="height: 40px;
                                       border-radius: 0px;"
-                                            class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                                            class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-lock"></i></span>
                                     </div>
                                     <input id="password" type="password" class="form-control" name="password"
                                         required="" placeholder="Password">
@@ -411,7 +435,7 @@
 
         function progressBarScroll() {
             let navbarspace = document.getElementById("spaceheader");
-            var black_navbar = document.getElementById("black_navbar");
+            const element = document.querySelector('.header-curve .logo-header');
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
                 height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
                 scrolled = (winScroll / height) * 155;
@@ -423,23 +447,36 @@
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
                 if (window.innerWidth <= 1024) {
-                // Set the background color to white for mobile devices
-                navbarspace.style.backgroundColor = "#333";
+                    // Set the background color to white for mobile devices
+                    // navbarspace.style.backgroundColor = "#333";
                 } else {
                     // For non-mobile devices, set the background color to transparent
-                    navbarspace.style.backgroundColor = "white";
+                    // navbarspace.style.backgroundColor = "white";
                     navbarspace.classList.add("shadow-navbar");
+                    if (element) {
+                        // Create a style for the ::before pseudo-element
+                        const beforePseudoElementStyle = document.createElement('style');
+                        beforePseudoElementStyle.textContent = `
+        .header-curve .logo-header::before {
+            background-color: white;
+        }
+    `;
+
+                        // Append the style to the document's head
+                        document.head.appendChild(beforePseudoElementStyle);
+                    }
                     // black_navbar.classList.add("path_shap");
                 }
             } else {
                 mybutton.style.display = "none";
                 if (window.innerWidth <= 1024) {
-                // Set the background color to white for mobile devices
-                navbarspace.style.backgroundColor = "#333";
+                    // Set the background color to white for mobile devices
+                    // navbarspace.style.backgroundColor = "#333";
                 } else {
                     // For non-mobile devices, set the background color to transparent
                     navbarspace.classList.remove("shadow-navbar");
-                    navbarspace.style.backgroundColor = "transparent";
+
+                    // navbarspace.style.backgroundColor = "transparent";
                     // black_navbar.classList.remove("path_shap");
                 }
             }
@@ -467,13 +504,13 @@
 
         };
     </script>
-     <script>
+    <script>
         // Get all anchor links with the "noScrollLink" class
         const noScrollLinks = document.querySelectorAll(".noScrollLink");
 
         // Add a click event listener to each anchor link
         noScrollLinks.forEach(function(link) {
-            link.addEventListener("click", function (event) {
+            link.addEventListener("click", function(event) {
                 // Prevent the default behavior (scrolling to the top)
                 event.preventDefault();
 
@@ -877,93 +914,132 @@
                 event.preventDefault();
             }
         });
-
-
-
-
     </script>
 
-<script>
-    var chatIconClicked = false;
+    <script>
+        var chatIconClicked = false;
 
-    function toggleChat() {
-        var popUpChat = document.getElementById("pop-up-chat");
-        var chatIcon = document.getElementById("chat-icon");
-        var whatsappIcon = document.querySelector(".wa-floating-button");
+        function toggleChat() {
+            var popUpChat = document.getElementById("pop-up-chat");
+            var chatIcon = document.getElementById("chat-icon");
+            var whatsappIcon = document.querySelector(".wa-floating-button");
 
-        if (!chatIconClicked) {
-            // Change the image to times.png
-            chatIcon.src = "/public/assets/img/times.png";
-            chatIcon.classList.add("times-icon");
-            whatsappIcon.classList.add("active");
-            chatIconClicked = true;
-        } else {
-            // Change the image back to chat.png
-            chatIcon.src = "/public/assets/img/chat.png";
-            chatIcon.classList.remove("times-icon");
-            whatsappIcon.classList.remove("active");
-            chatIconClicked = false;
+            if (!chatIconClicked) {
+                // Change the image to times.png
+                chatIcon.src = "/public/assets/img/times.png";
+                chatIcon.classList.add("times-icon");
+                whatsappIcon.classList.add("active");
+                chatIconClicked = true;
+            } else {
+                // Change the image back to chat.png
+                chatIcon.src = "/public/assets/img/chat.png";
+                chatIcon.classList.remove("times-icon");
+                whatsappIcon.classList.remove("active");
+                chatIconClicked = false;
+            }
+
+            if (popUpChat.style.display === "none" || popUpChat.style.display === "") {
+                popUpChat.style.display = "block";
+            } else {
+                popUpChat.style.display = "none";
+            }
         }
-
-        if (popUpChat.style.display === "none" || popUpChat.style.display === "") {
-            popUpChat.style.display = "block";
-        } else {
-            popUpChat.style.display = "none";
-        }
-    }
-</script>
+    </script>
 
 
-<script>
-    $(document).ready(function () {
-        var form = $("#contact-form-popup");
-        var submitBtn = $("#submit-btn");
-        var btnText = $("#btn-text");
-        var loadingGif = $("#loading-gif");
+    <script>
+        $(document).ready(function() {
+            var form = $("#contact-form-popup");
+            var submitBtn = $("#submit-btn");
+            var btnText = $("#btn-text");
+            var loadingGif = $("#loading-gif");
 
-        form.submit(function (event) {
-            event.preventDefault();
-            // Disable the submit button and show the loading GIF
-            submitBtn.prop("disabled", true);
-            btnText.hide();
-            loadingGif.show();
-            var formData = form.serialize();
-            $.ajax({
-                type: "POST",
-                url: "{{route('message.popup')}}",
-                data: formData,
-                success: function (response) {
-                    // Handle the successful response here
-                    console.log(response);
-                    if (response == "success") {
-                        $("#contact-form-popup")[0].reset();
-                    }
-                    // You can display a success message or perform other actions
+            form.submit(function(event) {
+                event.preventDefault();
+                // Disable the submit button and show the loading GIF
+                submitBtn.prop("disabled", true);
+                btnText.hide();
+                loadingGif.show();
+                var formData = form.serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "{{ route('message.popup') }}",
+                    data: formData,
+                    success: function(response) {
+                        // Handle the successful response here
+                        console.log(response);
+                        if (response == "success") {
+                            $("#contact-form-popup")[0].reset();
+                        }
+                        // You can display a success message or perform other actions
 
-                    // Re-enable the submit button and hide the loading GIF
-                    submitBtn.prop("disabled", false);
-                    btnText.show();
-                    loadingGif.hide();
-                },
-                error: function (error) {
-                    // Handle errors here
-                    console.error(error);
+                        // Re-enable the submit button and hide the loading GIF
+                        submitBtn.prop("disabled", false);
+                        btnText.show();
+                        loadingGif.hide();
+                    },
+                    error: function(error) {
+                        // Handle errors here
+                        console.error(error);
 
-                    // Re-enable the submit button and hide the loading GIF
-                    submitBtn.prop("disabled", false);
-                    btnText.show();
-                    loadingGif.hide();
-                },
+                        // Re-enable the submit button and hide the loading GIF
+                        submitBtn.prop("disabled", false);
+                        btnText.show();
+                        loadingGif.hide();
+                    },
+                });
             });
         });
-    });
     </script>
 
 
+    <script src="{{ static_asset('car') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 
 
+    <!-- JavaScript  files ========================================= -->
+    <script src="{{ static_asset('car') }}/js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+    <script src="{{ static_asset('car') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 
 
+    <script src="{{ static_asset('car') }}/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+
+    <script src="{{ static_asset('car') }}/plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+
+
+    <script src="{{ static_asset('car') }}/plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+    <script src="{{ static_asset('car') }}/plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+    <script src="{{ static_asset('car') }}/plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+    <script src="{{ static_asset('car') }}/plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+    <script src="{{ static_asset('car') }}/plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+    <script src="{{ static_asset('car') }}/plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+    <script src="{{ static_asset('car') }}/js/custom.min.js"></script><!-- CUSTOM FUCTIONS  -->
+    <script src="{{ static_asset('car') }}/js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
+    <script src="{{ static_asset('car') }}/js/dz.ajax.js"></script><!-- CONTACT JS -->
+
+    <!-- REVOLUTION JS FILES -->
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js">
+    </script>
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.migration.min.js">
+    </script>
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.navigation.min.js">
+    </script>
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js">
+    </script>
+    <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="{{ static_asset('car') }}/js/rev.slider.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            'use strict';
+            dz_rev_slider_1();
+        }); /*ready*/
+    </script>
 
 </body>
 

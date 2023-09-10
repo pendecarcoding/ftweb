@@ -2001,7 +2001,7 @@ footer img {
 
 .about h1 {
     overflow-wrap: break-word;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 5rem;
     -webkit-text-stroke: 2px;
 }

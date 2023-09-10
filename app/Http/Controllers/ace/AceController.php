@@ -693,6 +693,33 @@ class AceController extends Controller
 
     public function pageslug($page,$slug){
         switch ($page) {
+
+            case 'pages-view':
+                $data = Page::where('slug','pages-view/'.$slug)->first();
+                if($data != null){
+                    if($data->type=='single_sidebar'){
+                        return view('acewebfront.pageweb.single',compact('data'));
+                    }else{
+                        return view('acewebfront.pageweb.custom',compact('data'));
+                    }
+
+                }else{
+                    print $slug;
+                    return redirect('/');
+                }
+            break;
+
+            case 'companyinfo':
+
+                if($slug=='gosford'){
+                    return view('acewebfront.pageweb.gosford');
+                }elseif($slug=='trimex'){
+                    return view('acewebfront.pageweb.trimex');
+                }
+
+
+                break;
+
             case 'tracking':
                 return view('acewebfront.pages.tracking');
                 break;

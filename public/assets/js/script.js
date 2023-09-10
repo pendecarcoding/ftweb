@@ -35,6 +35,8 @@ $(document).ready(function () {
         updateOutput();
     });
 
+
+
     $("body").delegate(".item-delete", "click", function (e) {
         $(this).closest(".dd-item").remove();
         updateOutput();

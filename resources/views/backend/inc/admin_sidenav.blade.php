@@ -671,13 +671,79 @@
                                                                 </li> -->
                 @endcanany
 
-                <li class="aiz-side-nav-item">
-                    <a href="{{ route('menu.index') }}"
-                        class="aiz-side-nav-link {{ areActiveRoutes(['menu.create','menu.edit']) }}">
-                        <i class="las la-menus aiz-side-nav-icon"></i>
-                        <span class="aiz-side-nav-text">{{ translate('Menu') }}</span>
-                    </a>
-                </li>
+                Website Setup
+                @canany(['view_banner','view_slider','menu_setup','header_setup', 'footer_setup', 'view_all_website_pages', 'website_appearance'])
+                    <li class="aiz-side-nav-item">
+                        <a href="#"
+                            class="aiz-side-nav-link {{ areActiveRoutes(['website.footer', 'website.header']) }}">
+                            <i class="las la-desktop aiz-side-nav-icon"></i>
+                            <span class="aiz-side-nav-text">{{ translate('Website Setup') }}</span>
+                            <span class="aiz-side-nav-arrow"></span>
+                        </a>
+                        <ul class="aiz-side-nav-list level-2">
+                            @can('view_slider')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('slider.index') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['slider.create', 'slider.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('SLIDER') }}</span>
+                                </a>
+                            </li>
+                        @endcan
+                        @can('view_banner')
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{ route('banner.index') }}"
+                                        class="aiz-side-nav-link {{ areActiveRoutes(['banner.create', 'banner.edit']) }}">
+                                        <span class="aiz-side-nav-text">{{ translate('BANNER') }}</span>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('view_all_website_pages')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('website.pages') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['website.pages', 'custom-pages.create', 'custom-pages.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Pages') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+                            @can('menu_setup')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('menu.index') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['menu.create','menu.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Menu') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+                            <!-- @can('header_setup')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('website.header') }}" class="aiz-side-nav-link">
+                                    <span class="aiz-side-nav-text">{{ translate('Header') }}</span>
+                                </a>
+                            </li>
+                            @endcan -->
+                            @can('footer_setup')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('website.footer', ['lang' => App::getLocale()]) }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['website.footer']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Footer') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+
+                            @can('website_appearance')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('website.appearance') }}" class="aiz-side-nav-link">
+                                    <span class="aiz-side-nav-text">{{ translate('Appearance') }}</span>
+                                 </a>
+                            </li>
+                            @endcan
+                        </ul>
+                    </li>
+
+
+
+                @endcanany
+
+
                 <!--Blog System-->
                 @canany(['view_blogs', 'view_blog_categories'])
                     <li class="aiz-side-nav-item">
@@ -708,7 +774,7 @@
                         </ul>
                     </li>
                 @endcan
-                @canany(['view_slider', 'view_about'])
+                @canany(['view_about'])
                     <li class="aiz-side-nav-item">
 
                         <a href="#" class="aiz-side-nav-link">
@@ -717,22 +783,8 @@
                             <span class="aiz-side-nav-arrow"></span>
                         </a>
                         <ul class="aiz-side-nav-list level-2">
-                            @can('view_slider')
-                                <li class="aiz-side-nav-item">
-                                    <a href="{{ route('slider.index') }}"
-                                        class="aiz-side-nav-link {{ areActiveRoutes(['slider.create', 'slider.edit']) }}">
-                                        <span class="aiz-side-nav-text">{{ translate('SLIDER') }}</span>
-                                    </a>
-                                </li>
-                            @endcan
-                            @can('view_banner')
-                                <li class="aiz-side-nav-item">
-                                    <a href="{{ route('banner.index') }}"
-                                        class="aiz-side-nav-link {{ areActiveRoutes(['banner.create', 'banner.edit']) }}">
-                                        <span class="aiz-side-nav-text">{{ translate('BANNER') }}</span>
-                                    </a>
-                                </li>
-                            @endcan
+
+
                             @can('view_policy')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('data-policy.index') }}"
@@ -1311,49 +1363,7 @@
                     @endcanany
                 @endif
 
-                <!-- Website Setup
-                @canany(['header_setup', 'footer_setup', 'view_all_website_pages', 'website_appearance'])
-                                                                            <li class="aiz-side-nav-item">
-                                                                                <a href="#"
-                                                                                    class="aiz-side-nav-link {{ areActiveRoutes(['website.footer', 'website.header']) }}">
-                                                                                    <i class="las la-desktop aiz-side-nav-icon"></i>
-                                                                                    <span class="aiz-side-nav-text">{{ translate('Website Setup') }}</span>
-                                                                                    <span class="aiz-side-nav-arrow"></span>
-                                                                                </a>
-                                                                                <ul class="aiz-side-nav-list level-2">
-                                                                                    @can('header_setup')
-                                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                                    <a href="{{ route('website.header') }}" class="aiz-side-nav-link">
-                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Header') }}</span>
-                                                                                                                                                    </a>
-                                                                                                                                                </li>
-                                                                                    @endcan
-                                                                                    @can('footer_setup')
-                                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                                    <a href="{{ route('website.footer', ['lang' => App::getLocale()]) }}"
-                                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['website.footer']) }}">
-                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Footer') }}</span>
-                                                                                                                                                    </a>
-                                                                                                                                                </li>
-                                                                                    @endcan
-                                                                                    @can('view_all_website_pages')
-                                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                                    <a href="{{ route('website.pages') }}"
-                                                                                                                                                        class="aiz-side-nav-link {{ areActiveRoutes(['website.pages', 'custom-pages.create', 'custom-pages.edit']) }}">
-                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Pages') }}</span>
-                                                                                                                                                    </a>
-                                                                                                                                                </li>
-                                                                                    @endcan
-                                                                                    @can('website_appearance')
-                                                                                                                                                <li class="aiz-side-nav-item">
-                                                                                                                                                    <a href="{{ route('website.appearance') }}" class="aiz-side-nav-link">
-                                                                                                                                                        <span class="aiz-side-nav-text">{{ translate('Appearance') }}</span>
-                                                                                                                                                    </a>
-                                                                                                                                                </li>
-                                                                                    @endcan
-                                                                                </ul>
-                                                                            </li>
-                @endcanany -->
+
 
                 <!-- Setup & Configurations -->
                 @canany(['general_settings', 'features_activation', 'language_setup', 'currency_setup',

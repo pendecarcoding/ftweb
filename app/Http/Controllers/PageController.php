@@ -45,15 +45,19 @@ class PageController extends Controller
     public function store(Request $request)
     {
         $page = new Page;
+        $publishValue = $request->input('publish');
+        if ($publishValue === 'Y') {
+           $publish ='Y';
+        } elseif ($publishValue === 'N') {
+            $publish ='N';
+        }
         $page->title = $request->title;
         if (Page::where('slug', preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $request->slug)))->first() == null) {
-            $page->slug             = preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $request->slug));
-            $page->type             = "custom_page";
+            $page->slug             = 'pages-view/'.preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $request->slug));
+            $page->type             = $request->template;
             $page->content          = $request->content;
-            $page->meta_title       = $request->meta_title;
-            $page->meta_description = $request->meta_description;
-            $page->keywords         = $request->keywords;
-            $page->meta_image       = $request->meta_image;
+            $page->image            = $request->image;
+            $page->publish          = $publish;
             $page->save();
 
             $page_translation           = PageTranslation::firstOrNew(['lang' => env('DEFAULT_LANGUAGE'), 'page_id' => $page->id]);
@@ -90,7 +94,7 @@ class PageController extends Controller
    {
         $lang = $request->lang;
         $page_name = $request->page;
-        $page = Page::where('slug', $id)->first();
+        $page = Page::where('id', $id)->first();
         if($page != null){
           if ($page_name == 'home') {
             return view('backend.website_settings.pages.home_page_edit', compact('page','lang'));
@@ -112,31 +116,32 @@ class PageController extends Controller
     public function update(Request $request, $id)
     {
         $page = Page::findOrFail($id);
-        if (Page::where('id','!=', $id)->where('slug', preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $request->slug)))->first() == null) {
-            if($page->type == 'custom_page'){
-              $page->slug           = preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $request->slug));
-            }
-            if($request->lang == env("DEFAULT_LANGUAGE")){
-              $page->title          = $request->title;
-              $page->content        = $request->content;
-            }
-            $page->meta_title       = $request->meta_title;
-            $page->meta_description = $request->meta_description;
-            $page->keywords         = $request->keywords;
-            $page->meta_image       = $request->meta_image;
+        $publishValue = $request->input('publish');
+        if ($publishValue === 'Y') {
+           $publish ='Y';
+        } elseif ($publishValue === 'N') {
+            $publish ='N';
+        }
+        $page->title = $request->title;
+        if (Page::where('slug', preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $request->slug)))->first() == null) {
+            $page->slug             = 'pages-view/'.preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $request->slug));
+            $page->type             = $request->template;
+            $page->content          = $request->content;
+            $page->image            = $request->image;
+            $page->publish          = $publish;
             $page->save();
 
-            $page_translation           = PageTranslation::firstOrNew(['lang' => $request->lang, 'page_id' => $page->id]);
+            $page_translation           = PageTranslation::firstOrNew(['lang' => env('DEFAULT_LANGUAGE'), 'page_id' => $page->id]);
             $page_translation->title    = $request->title;
             $page_translation->content  = $request->content;
             $page_translation->save();
 
-            flash(translate('Page has been updated successfully'))->success();
+            flash(translate('New page has been created successfully'))->success();
             return redirect()->route('website.pages');
         }
 
-      flash(translate('Slug has been used already'))->warning();
-      return back();
+        flash(translate('Slug has been used already'))->warning();
+        return back();
 
     }
 

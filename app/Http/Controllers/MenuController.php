@@ -66,11 +66,13 @@ class MenuController extends Controller
         foreach ($menu as $value) {
             $label = $value['label'];
             $url = empty($value['url']) ? '#' : $value['url'];
+            $target = explode(',',$url);
 
             $menuItem = new Menu([
                 'label_menu' => $label,
-                'url_menu' => $url,
+                'url_menu' => $target[0],
                 'parent_id' => $parent_id,
+                'target' => !empty($target[1])?$target[1]:'_self',
             ]);
 
             $menuItem->save();

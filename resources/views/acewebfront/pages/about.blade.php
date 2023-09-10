@@ -51,28 +51,29 @@
                         <!-- <a style="margin:50px 0px;" class="btn gsf-button">Learn More</a> -->
                     </div>
                   </div>
-                  @if($v->yt_link != null)
-                  <div class="modal fade" id="ytvd{{$v->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                      <div class="modal-content">
-                        <div  class="modal-header">
 
-                          <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div style="position: relative;overflow: hidden;">
-                                {!! $v->yt_link !!}
-                            </div>
-
-                        </div>
-                        <div style="background-color: brown;" class="modal-footer">
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  @endif
 </div>
+@if($v->yt_link != null)
+<div class="modal fade" id="ytvd{{$v->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div  class="modal-header">
+
+        <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div style="position: relative;overflow: hidden;">
+              {!! $v->yt_link !!}
+          </div>
+
+      </div>
+      <div style="background-color: brown;" class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+@endif
                   @endforeach
 
               </div>

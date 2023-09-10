@@ -1,203 +1,111 @@
-<header class="mdl-layout__header is-casting-shadow">
-    <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button" id="navbarToggle">
-        <i class="material-icons menu-icon"></i>
-        <i class="material-icons times-icon" style="display: none;">✕</i>
-    </div>
-    @if (Session::get('gystem_login') || Session::get('loginstaff') == true)
-    @else
-        <div data-bs-toggle="modal" data-bs-target="#myLogin" aria-expanded="false" role="button" tabindex="0"
-            class="mdl-layout__drawer-button-login" id="navbarToggle">
-            <i class="fa fa-user-circle i-icon-login" aria-hidden="true"></i>
-
-        </div>
-    @endif
-    <div aria-expanded="false" role="button" tabindex="0" class="">
-        <a href="{{ route('home') }}"><img id="acetopbar" class="acetopbar"
-                src="{{ uploaded_asset(get_setting('system_logo_white')) }}" /></a>
-    </div>
-    <div id="spaceheader" class="mdl-layout__header-row">
-        <div id="black_navbar" class="class_menu_black">
-
-
-            <div class="mdl-layout-spacer"></div>
-            @foreach (getnav() as $v)
-                @if ($v['link'] == 'about')
-                    <a href="#"
-                        class="noScrollLink classurl @if (Request::is('vision_mission')) classurl-active @endif @if (Request::is($v['link'] . '*')) classurl-active @endif  @if (Request::is('company_milestone')) classurl-active @endif"
-                        id="notification">{{ $v['name'] }}</a>
-                    <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect  notifications-dropdown"
-                        for="notification">
-                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{ url('about') }}">
-                                <span class="mdl-list__item-primary-content">
-                                    <span>Company</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{ url('about_director') }}">Board of directors</a>
-                        </li>
-                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{ url('company_milestone') }}">Group Milestone</a>
-                        </li>
-                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{ url('vision_mission') }}">Vision & Mission</a>
-                        </li>
-                    </ul>
-                @elseif ($v['name'] === 'Investor Relations')
-                    <a href="#"
-                        class="noScrollLink classurl @if (Request::is($v['link'] . '*')) classurl-active @endif  @if (Request::is('corporate_governance*')) classurl-active @endif"
-                        id="{{ $v['name'] }}">{{ $v['name'] }}</a>
-                    <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect  notifications-dropdown"
-                        for="{{ $v['name'] }}">
-                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{ $v['link'] }}">Investor</a>
-                        </li>
-                        <li class="mdl-menu__item mdl-list__item list__item--border-top">
-                            <a href="{{ url('corporate_governance') }}">Corporate Governance</a>
-                        </li>
-                    </ul>
-                @else
-                    <a href="{{ url($v['link']) }}"
-                        class="classurl @if ($v['name'] == 'Product & Project') @if (Request::is('g_system/*')) classurl-active     @elseif (Request::is($v['link'] . '*')) classurl-active @endif
-@elseif (Request::is($v['link'] . '*'))
-classurl-active @endif">{{ $v['name'] }}</a>
-                @endif
-            @endforeach
-            @if (Session::get('gystem_login'))
-                <!-- <a href="{{ url('mypage') }}"
-                    class="classurl @if (Request::is('mypage*')) classurl-active @endif  ">My Page</a> -->
-                <div class="avatar-dropdown" id="icon">
-                    <img class="rounded-circle user-image"
-                        src="@if (getinfoaccount()->image != null) /public/users/{{ getinfoaccount()->image }} @else /public/go_system/images/portrait-missing.png @endif">
-                    <span id="hello"> &nbsp; HI {{ getinfoaccount()->username }}</span>
-                </div>
-                <ul class="mdl-menu mdl-list mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp account-dropdown"
-                    for="icon">
-                    <li class="mdl-list__item mdl-list__item--two-line">
-                        <span class="mdl-list__item-primary-content">
-                            <span class="user-avatar material-icons mdl-list__item-avatar"
-                                style="background-image:url('@if (getinfoaccount()->image != null) /public/users/{{ getinfoaccount()->image }} @else /public/go_system/images/portrait-missing.png @endif');"></span>
-                            <span>{{ getinfoaccount()->username }}</span>
-                            <span class="mdl-list__item-sub-title">{{ getinfoaccount()->email }}</span>
-                        </span>
-                    </li>
-                    <li class="list__item--border-top"></li>
-                    <a href="{{ route('gosford.frontend.profil') }}">
-                        <li class="mdl-menu__item mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-icon">account_circle</i>
-                                My account
-                            </span>
-                        </li>
-                    </a>
-                    <a href="{{ route('gosford.listorder') }}">
-                        <li class="mdl-menu__item mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-icon">receipt</i>
-                                My Order
-                        </li>
-                    </a>
-                    <li class="list__item--border-top"></li>
-                    <a href="{{ route('gosford.logouts') }}">
-                        <li class="mdl-menu__item mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
-                                Log out
-                            </span>
-                        </li>
-                    </a>
-                </ul>
-            @elseif(Session::get('loginstaff') == true)
-
-                <a href="{{ url('staff/back/announcements') }}" class="classurl" style="color:white">STAFF</a>
-                <a class="classurl" onclick="logoutFunction()" style="font-size:28px;color:white"><i
-                        class="fa fa-sign-out" aria-hidden="true"></i></a>
-            @else
-                <!-- <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="ace-button">
-            Login
-        </a> -->
-                <div class="dropdown btn-nav-login">
-                    <a class="ace-button dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Login
-                    </a>
-
-                    <!-- Dropdown menu -->
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" target="_blank" href="https://www.gosfordseat.com/gsap.php">GSAP
-                            SYSTEM</a>
-                        <!-- <a id='loginweb' data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-item"
-                            href="#">User Login</a> -->
-                        <a data-bs-toggle="modal" data-bs-target="#staffModal" class="dropdown-item"
-                            href="#">Staff Login</a>
-                        <!-- Add more dropdown items as needed -->
+<header class="site-header header mo-left header-style-1">
+    <!-- top bar END-->
+    <!-- main header -->
+    <div id="spaceheader" class="sticky-header header-curve main-bar-wraper navbar-expand-lg">
+        <div class="main-bar bg-fytech clearfix ">
+            <div class="container clearfix">
+                <!-- website logo -->
+                <div id="black_navbar" class="logo-header logo-white mostion"><a href="{{url('/')}}"><img src="{{ uploaded_asset(get_setting('system_logo_white')) }}"
+                            width="193" height="89" alt=""></a></div>
+                <!-- nav toggle button -->
+                <button class="navbar-toggler collapsed navicon justify-content-end" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- extra nav -->
+                <!-- <div class="extra-nav">
+                    <div class="extra-cell">
+                        <button id="quik-search-btn" type="button" class="site-button bg-primary-dark"><i
+                                class="fas fa-search"></i></button>
                     </div>
+                </div> -->
+                <!-- Quik search -->
+                <!-- <div class="dlab-quik-search bg-primary">
+                    <form action="#">
+                        <input name="search" value="" type="text" class="form-control"
+                            placeholder="Type to search">
+                        <span id="quik-search-remove"><i class="fas fa-times"></i></span>
+                    </form>
+                </div> -->
+                <!-- main nav -->
+                <div  class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="nav navbar-nav nav-style">
+                       @foreach(getmenudynamicmain() as $i => $v)
+                       @if($v->label_menu=='Login')
+                       <li class="ace-button @if (Request::is($v->url_menu . '*'))active @endif"> <a target="{{$v->target}}" href="@if(count(checkchild($v->id)) > 0)javascript:; @else {{url($v->url_menu)}} @endif">{{$v->label_menu}} @if(count(checkchild($v->id)) > 0)<i class="fas fa-chevron-down"></i>@endif</a>
+
+                       @else
+                        <li class="@if (Request::is($v->url_menu . '*'))active @endif"> <a target="{{$v->target}}" href="@if(count(checkchild($v->id)) > 0)javascript:; @else {{url($v->url_menu)}} @endif">{{$v->label_menu}} @if(count(checkchild($v->id)) > 0)<i class="fas fa-chevron-down"></i>@endif</a>
+                       @endif
+                           @if(count(checkchild($v->id)) > 0)
+                           <ul class="sub-menu">
+                               @foreach(checkchild($v->id) as $isub => $vsub)
+
+                                @if(count(checkchild($vsub->id)) > 0)
+                                 <li> <a target="{{$vsub->target}}" href="javascript:;">{{$vsub->label_menu}}<i class="fas fa-angle-right"></i></a>
+                                   <ul class="sub-menu">
+                                       @foreach(checkchild($vsub->id) as $isubs => $vsubs)
+                                        @if(count(checkchild($vsubs->id)) > 0)
+                                       <li> <a href="javascript:;">{{$vsubs->label_menu}} <i class="fas fa-angle-right"></i></a>
+                                           <ul class="sub-menu">
+                                               <li><a href="header-style-1.html">Header 1</a></li>
+                                               <li><a href="header-style-2.html">Header 2</a></li>
+                                               <li><a href="header-style-3.html">Header 3</a></li>
+                                               <li><a href="header-style-4.html">Header 4</a></li>
+                                               <li><a href="header-style-5.html">Header 5</a></li>
+                                               <li><a href="header-style-6.html">Header 6</a></li>
+                                               <li><a href="header-style-7.html">Header 7</a></li>
+                                           </ul>
+                                       </li>
+                                       @else
+                                       <li> <a target="{{$vsubs->target}}" href="{{url($vsubs->url_menu)}}">{{$vsubs->label_menu}}</a>
+                                       @endif
+                                       @endforeach
+                                   </ul>
+                                </li>
+
+                                @else
+                                <li><a target="{{$vsub->target}}" href="{{url($vsub->url_menu)}}">{{$vsub->label_menu}}</a></li>
+                                @endif
+
+
+                               @endforeach
+                            </ul>
+                           @endif
+
+                        </li>
+                        @endforeach
+                        <!-- <li> <a href="javascript:;">Features<i class="fas fa-chevron-down"></i></a>
+                            <ul class="sub-menu">
+                                <li> <a href="javascript:;">Header <i class="fas fa-angle-right"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="header-style-1.html">Header 1</a></li>
+                                        <li><a href="header-style-2.html">Header 2</a></li>
+                                        <li><a href="header-style-3.html">Header 3</a></li>
+                                        <li><a href="header-style-4.html">Header 4</a></li>
+                                        <li><a href="header-style-5.html">Header 5</a></li>
+                                        <li><a href="header-style-6.html">Header 6</a></li>
+                                        <li><a href="header-style-7.html">Header 7</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a href="javascript:;">Footer <i class="fas fa-angle-right"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="footer-fixed.html">Footer Fixed</a></li>
+                                        <li><a href="footer-white.html">Footer White</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li> -->
+
+                    </ul>
                 </div>
-            @endif
-
+            </div>
         </div>
-
     </div>
-    <div class="navbar-mobile" id="mobileMenu">
-        <ul>
-            @foreach (getnav() as $v)
-                @if ($v['name'] === 'About')
-                    <!-- <li class="dropdown">
-                <a href="#" class="dropdown-toggle">{{ $v['name'] }}</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Board of Directors</a></li>
-                </ul>
-            </li> -->
-
-                    <li class="nav-item dropdown">
-                        <a style="color: white;" class="nav-link dropdown-toggle" href="#"
-                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            About
-                        </a>
-                        <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a style="padding-left: 27px;" href="{{ url('about') }}">Company</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('about_director') }}">Board of
-                                    Directors</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('company_milestone') }}">Group
-                                    Milestone</a></li>
-                            <li><a style="padding-left: 27px;" href="{{ url('vision_mission') }}">Vision And
-                                    Mission</a></li>
-
-                        </ul>
-                    </li>
-                @elseif ($v['name'] === 'Investor Relations')
-                    <!-- <li class="dropdown">
-                <a href="#" class="dropdown-toggle">{{ $v['name'] }}</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Board of Directors</a></li>
-                </ul>
-            </li> -->
-
-                    <li class="nav-item dropdown">
-                        <a style="color: white;" class="nav-link dropdown-toggle" href="#"
-                            id="navbarDarkDropdownMenuLinks" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            {{ $v['name'] }}
-                        </a>
-                        <ul class="dropdown-menus dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLinks">
-                            <li><a style="padding-left: 27px;" href="{{ url($v['link']) }}">Investor</a></li>
-                            <li><a style="padding-left: 27px;"
-                                    href="{{ url('corporate_governance') }}">Corporate Governance</a></li>
-                        </ul>
-                    </li>
-                @else
-                    <li><a href="{{ url($v['link']) }}">{{ $v['name'] }}</a></li>
-                @endif
-            @endforeach
-            @if (Session::get('gystem_login'))
-                <!-- <li> <a href="{{ url('mypage') }}">My Page</a></li> -->
-            @endif
-        </ul>
-    </div>
+    <!-- main header END -->
 </header>
 <div>
     <div style="margin-top: 55vh;" class="modal" id="myLogin">
@@ -218,7 +126,7 @@ classurl-active @endif">{{ $v['name'] }}</a>
                         <a href="{{ route('mobile.login.staff') }}" style="width:100%" class="btn btn-danger"><i
                                 class="fa fa-user"></i> STAFF</a>
                         <!-- <a href="{{ route('mobile.login.user') }}" style="width:100%" class="btn btn-danger"><i
-                                class="fa fa-user"></i> USER</a> -->
+                               class="fa fa-user"></i> USER</a> -->
                         <a href="https://www.gosfordseat.com/gsap.php" target="_blank" style="width:100%"
                             class="btn btn-danger"><i class="fa fa-user"></i> GSAP</a>
                     </div>

@@ -690,6 +690,11 @@ function getPatner(){
     return $data = Patner::all();
 }
 
+function getPages(){
+    $data = DB::table('pages')->where('onmenu','N')->get();
+    return $data;
+}
+
 function renderMenuItem($id, $label, $url)
 {
     return '<li class="dd-item dd3-item" data-id="' . $id . '" data-label="' . $label . '" data-url="' . $url . '">' .
@@ -706,6 +711,21 @@ function renderMenuItem($id, $label, $url)
 
 }
 
+function getmenudynamicmain(){
+    $data = DB::table('menus')->where('parent_id','0')->get();
+    return $data;
+}
+
+function checkchild($id){
+    $data = DB::table('menus')->where('parent_id',$id)->get();
+    return $data;
+}
+
+function slidertrimex(){
+    $data = ['Emboss','Embroidery','installation','Steering Wrap','Console Wrap'];
+    return $data;
+}
+
 function menuTree($parent_id = 0)
 {
     $items = '';
@@ -713,7 +733,7 @@ function menuTree($parent_id = 0)
     if(count($query) > 0){
         $items .= '<ol class="dd-list">';
         foreach ($query as $key => $v) {
-            $items .= renderMenuItem($v->id, $v->label_menu, $v->url_menu);
+            $items .= renderMenuItem($v->id, $v->label_menu, $v->url_menu.','.$v->target);
             $items .= menuTree($v->id);
             $items .= '</li>';
         }

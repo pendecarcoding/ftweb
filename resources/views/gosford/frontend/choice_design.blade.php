@@ -58,7 +58,9 @@
                     <a href="{{ route('gosford.twotowncolor') }}"
                         class="card  card-body border-light  justify-content-between text-white shadow">
                         <!-- <a >  -->
+                        <div class="dlab-media dlab-img-overlay1">
                         <img src="/public/go_system/images/menu/menu_1.png" alt="">
+                        </div>
                         <!-- </a> -->
                         <div class="title-menu-style">Two Tone Color</div>
                     </a>
@@ -67,29 +69,39 @@
                 <div class="col-sm-6 col-md-2  d-flex ">
                     <a href="{{ route('gosford.embrodery') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
+                        <div class="dlab-media dlab-img-overlay1">
                         <img src="/public/go_system/images/menu/menu_2.png" alt="">
+                        </div>
                         <div class="title-menu-style">Embrodery</div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
                     <a href="{{ route('gosford.patterndesign') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
-                        <img src="/public/go_system/images/menu/menu_3.png" alt="">
+                        <div class="dlab-media dlab-img-overlay1">
+                            <img src="/public/go_system/images/menu/menu_3.png" alt="">
+                        </div>
                         <div class="title-menu-style">Pattern Design</div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
+
                     <a href="{{ route('gosford.piping') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
-                        <img src="/public/go_system/images/menu/menu_4.png" alt="">
+                        <div class="dlab-media dlab-img-overlay1">
+                          <img src="/public/go_system/images/menu/menu_4.png" alt="">
+                        </div>
                         <div class="title-menu-style">Piping</div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-2  d-flex ">
                     <a href="{{ route('gosford.emblem') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
+                        <div class="dlab-media dlab-img-overlay1">
                         <img src="/public/go_system/images/menu/menu_5.png" alt="">
-                        <div class="title-menu-style">Logo / Emblem</div>
+                        <div class="title-menu-style" style="z-index: 999;">Logo / Emblem</div>
+                        </div>
+
                     </a>
                 </div>
 

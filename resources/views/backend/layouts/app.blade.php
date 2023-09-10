@@ -26,17 +26,20 @@
     @if (\App\Models\Language::where('code', Session::get('locale', Config::get('app.locale')))->first()->rtl == 1)
         <link rel="stylesheet" href="{{ static_asset('assets/css/bootstrap-rtl.min.css') }}">
     @endif
+    @if(Request::is('admin/menu*'))
+    <link rel="stylesheet" href="/public/assets/css/jquery.nestable.css">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
+    @endif
     <link rel="stylesheet" href="{{ static_asset('assets/css/aiz-core.css') }}">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
-    {{-- <link href="{{ static_asset('assets/Datatables/datatables.min.css') }}" rel="stylesheet"/>
-    <script src="{{ static_asset('assets/Datatables/datatables.min.js') }}"></script> --}}
+    <link href="{{ static_asset('assets/Datatables/datatables.min.css') }}" rel="stylesheet"/>
+    <script src="{{ static_asset('assets/Datatables/datatables.min.js') }}"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
     <script src="https://cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
-    <link rel="stylesheet" href="/public/assets/css/jquery.nestable.css">
-    <link rel="stylesheet" href="/public/assets/css/style.css">
+
     <style>
         body {
             font-size: 12px;
@@ -235,10 +238,11 @@
 
     })
 </script>
-
+@if(Request::is('admin/menu*'))
 <script src="{{ static_asset('assets/js/jquery-3.4.1.min.js')}}"></script>
 <script src="{{ static_asset('assets/js/jquery.nestable.js')}}"></script>
 <script src="{{ static_asset('assets/js/script.js')}}"></script>
+@endif
 </body>
 
 </html>
