@@ -39,7 +39,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header">
-                                      <h4 class="modal-title">{{$v->name}}</h4>
+                                      <h4 class="modal-title" style="color:black">{{$v->name}}</h4>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
 
