@@ -10607,6 +10607,7 @@ ol.commentlist li .star-rating {
     line-height: 50px;
 }
 .theme-btn.bt-support-now{
+    display: none;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1ebbf0+8,39dfaa+100 */
 	background: #cf0000; /* Old browsers */
 	background: -moz-linear-gradient(45deg, #cf0000 8%, #d91a1a 100%); /* FF3.6-15 */
@@ -10616,6 +10617,7 @@ ol.commentlist li .star-rating {
 	bottom: 70px;
 }
 .theme-btn.bt-buy-now{
+    display: none;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1fdf61+0,88BA46+100 */
 	background: #ee3131; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ee3131 0%, #fe4141 100%); /* FF3.6-15 */
