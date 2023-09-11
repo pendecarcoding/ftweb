@@ -23,7 +23,7 @@
                                     </div>
 
                                     <div class="dlab-post-text" style="max-height: 200px; position: relative;">
-                                        @if(file_exists('public/background/go_'.$i.'.png'))<img style="width:100%;max-height: 250px;" src="/public/background/go_{{$i}}.png" alt="">@endif
+                                        @if(file_exists('public/background/go_'.$i.'.png'))<img style="width:100%;max-height: 150px;" src="/public/background/go_{{$i}}.png" alt="">@endif
                                     </div>
                                 </div>
                             </div>
