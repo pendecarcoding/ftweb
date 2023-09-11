@@ -1086,6 +1086,9 @@
 	.header-style-6.mo-left .header-nav .logo-header.mostion {
 		display: none;
 	}
+    .header-style-6.mo-left .header-nav .logo-headers.mostion {
+		display: none;
+	}
 }
 @media only screen and (max-width: 767px) {
     .dlab-book-now-content {
@@ -1567,17 +1570,22 @@
 .dlab-login label input{
 	display: none;
 }
+
 @media only screen and (max-width: 1280px) {
 	.dlab-team-1 {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
 	.header-nav .nav.nav-style > li > a {
-		padding: 12px 10px 10px;
-		font-size: 10px;
+		padding: 7px 10px 10px;
+        font-size: 12px;
 	}
 }
 @media only screen and (max-width: 1024px) {
+    .header-nav .nav.nav-style > li > a {
+		padding: 12px 10px 10px;
+        font-size: 11px;
+	}
 	.download-file .file-name {
 		font-size: 14px;
 		margin: 0;
@@ -1599,6 +1607,9 @@
 	.header-nav .nav.nav-style > li.active:after,
 	.skew-subscribe:before,
 	.header-curve .logo-header:after{
+		content: none;
+	}
+    .header-curve .logo-headers:after{
 		content: none;
 	}
 	.dlab-tilte-inner.skew-title:after{
@@ -1638,6 +1649,9 @@
 		padding: 8px 0;
 	}
 	.mo-left .header-curve .logo-header img {
+		margin-top: 0;
+	}
+    .mo-left .header-curve .logo-headers img {
 		margin-top: 0;
 	}
 }
@@ -2201,6 +2215,12 @@
     padding: 12px 30px 12px 0;
     width: 200px;
 }
+.header-style-7 .logo-headers {
+    border-right: 1px solid rgba(0,0,0,0.1);
+    height: 20px;
+    padding: 12px 30px 12px 0;
+    width: 200px;
+}
 .header-style-7 .extra-nav .extra-cell{
 	display: flex;
 }
@@ -2504,6 +2524,11 @@ footer.footer-white .dlab-social-icon li a {
 		padding: 10px 20px 10px 0;
 		width: 160px;
 	}
+    .header-style-7 .logo-headers ,
+	.header-style-7 .is-fixed .logo-headers {
+		padding: 10px 20px 10px 0;
+		width: 160px;
+	}
 	.header-style-7 .header-nav .nav > li > a {
 		padding: 20px 10px;
 		font-size: 14px;
@@ -2585,6 +2610,10 @@ footer.footer-white .dlab-social-icon li a {
 	.header-style-7 .is-fixed .logo-header{
 		height: 60px;
 	}
+    .header-style-7 .logo-headers,
+	.header-style-7 .is-fixed .logo-headers{
+		height: 60px;
+	}
 }
 @media only screen and (max-width: 591px) {
 	.header-style-7 .extra-nav{
@@ -2646,6 +2675,10 @@ button:focus{
 	width: auto;
 }
 
+.dlab-login .logo-headers img{
+	width: auto;
+}
+
 /* Product item */
 .product-item .sale .site-button{
 	border-radius: 4px 4px 0 4px;
@@ -2703,6 +2736,12 @@ button:focus{
 	.is-fixed.header-curve .logo-header{
 		width: 170px;
 	}
+
+    .logo-headers,
+	.is-fixed .logo-headers,
+	.is-fixed.header-curve .logo-headers{
+		width: 170px;
+	}
 	.about-box .section-head{
 		margin-bottom: 25px;
 	}
@@ -2720,9 +2759,17 @@ button:focus{
 	}
 	.mo-left .header-nav .logo-header{
 		overflow: hidden;
-		background-color: #303338;
+		/* background-color: #303338; */
 	}
 	.mo-left .is-fixed .header-nav .logo-header{
+		width: 100%;
+	}
+
+    .mo-left .header-nav .logo-headers{
+		overflow: hidden;
+		background-color: #303338;
+	}
+	.mo-left .is-fixed .header-nav .logo-headers{
 		width: 100%;
 	}
 	.navicon{
@@ -2737,10 +2784,20 @@ button:focus{
 	.mo-left .is-fixed.header-curve.header-nav .logo-header {
 		height: auto;
 	}
+    .mo-left .is-fixed .header-nav .logo-headers,
+	.mo-left .is-fixed.header-curve.header-nav .logo-headers {
+		height: auto;
+	}
 	.mo-left .is-fixed .logo-header a img,
 	.mo-left .is-fixed.header-curve .logo-header a img{
 		vertical-align: middle;
-	}
+
+    }
+    .mo-left .is-fixed .logo-headers a img,
+	.mo-left .is-fixed.header-curve .logo-headers a img{
+		vertical-align: middle;
+
+    }
 	.site-header.header-style-6.style-1 .navicon span{
 		background-color: #fff;
 	}
@@ -2775,6 +2832,10 @@ button:focus{
 	.is-fixed.header-curve .logo-header {
 		height: 70px;
 	}
+    .is-fixed .logo-headers,
+	.is-fixed.header-curve .logo-headers {
+		height: 70px;
+	}
 	.header-style-6.style-1 .dlab-quik-search .form-control {
 		height: 70px;
 	}
@@ -2793,6 +2854,11 @@ button:focus{
 	.logo-header,
 	.is-fixed .logo-header,
 	.is-fixed.header-curve .logo-header {
+		width: 150px;
+	}
+    .logo-headers,
+	.is-fixed .logo-headers,
+	.is-fixed.header-curve .logo-headers {
 		width: 150px;
 	}
 	.dlab-bnr-inr .dlab-bnr-inr-entry p{
@@ -2849,6 +2915,9 @@ button:focus{
 	padding-right: 100px;
 }
 .header-creative-one .main-bar .logo-header {
+    margin: 5px 0;
+}
+.header-creative-one .main-bar .logo-headers {
     margin: 5px 0;
 }
 .header-creative-one .extra-nav {
@@ -2917,6 +2986,21 @@ button:focus{
 	padding: 30px;
 }
 .header-sidenav.header-nav.full-sidenav .logo-header a{
+	width: 170px;
+	display: block;
+}
+
+.header-sidenav .header-nav.full-sidenav .social-menu,
+.header-sidenav .header-nav.full-sidenav .logo-headers,
+.header-sidenav .header-nav.full-sidenav .nav{
+    float: none;
+    width: 100%;
+}
+.header-sidenav .header-nav.full-sidenav .logo-headers{
+	height: auto;
+	padding: 30px;
+}
+.header-sidenav.header-nav.full-sidenav .logo-headers a{
 	width: 170px;
 	display: block;
 }
@@ -3377,6 +3461,9 @@ content: attr(data-name);
 	.header-creative-one .main-bar .logo-header {
 		height: 70px;
 	}
+    .header-creative-one .main-bar .logo-headers {
+		height: 70px;
+	}
 	.header-creative-one .extra-nav {
 		padding: 28px 100px 27px 0;
 	}
@@ -3501,6 +3588,9 @@ content: attr(data-name);
 	.header-creative-one .main-bar .logo-header {
 		height: 60px;
 	}
+    .header-creative-one .main-bar .logo-headers {
+		height: 60px;
+	}
 	.creative-wraper-one .menu-aside {
 		width: 70px;
 	}
@@ -3608,6 +3698,9 @@ content: attr(data-name);
 }
 
 .header-creative-two .logo-header {
+    width: 70px;
+}
+.header-creative-two .logo-headers {
     width: 70px;
 }
 .header-creative-two .header-nav .nav > li:hover > a{
@@ -4040,6 +4133,14 @@ position: relative;
     width: 120px;
     top: 45px;
 }
+.header-creative-three .logo-headers.mostion {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: auto;
+    width: 120px;
+    top: 45px;
+}
 .header-creative-three .header-nav .navbar-nav > li > a {
     padding: 15px 12px;
     font-family: poppins;
@@ -4343,6 +4444,9 @@ position: relative;
 	.header-creative-two .header-nav .logo-header{
 		background: #22252a;
 	}
+    .header-creative-two .header-nav .logo-headers{
+		background: #22252a;
+	}
 }
 @media only screen and (max-width: 767px) {
 	.vehicle-box.style3 .left-info .top-info .title {
@@ -4398,6 +4502,9 @@ position: relative;
 		padding-top: 10px;
 	}
 	.header-creative-three .logo-header.mostion {
+		top: 15px;
+	}
+    .header-creative-three .logo-headers.mostion {
 		top: 15px;
 	}
 	.creative-banner-three .swiper-button-arrow {

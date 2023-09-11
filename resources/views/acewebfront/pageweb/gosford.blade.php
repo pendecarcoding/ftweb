@@ -79,39 +79,30 @@
         </div>
         <!-- Our Services -->
 
-        <!-- Our Services End -->
-        <!-- About US -->
+
+
+
+
         <div class="section-full about-box content-inner section-bg-gosford-color">
             <div class="container">
                 <div class="row">
-                    <div data-aos="fade-right" data-aos-delay="100" class="col-lg-6 m-b30 p-r50">
+                    <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
                         <div class="section-head text-left" style="    margin: 15% 0px;">
                             <h2 class="text-capitalize" style="color: black;font-family: 'Space Grotesk';font-weight: bold;">MISSION</h2>
-                            <p style="    font-size: 30px;
-                            line-height: 40px;
-                            text-align: justify;color: black;font-family: 'Space Grotesk';">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p>
+                            <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p>
                         </div>
 
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="300" class="col-lg-6 m-b30">
+                    <div class="col-sm-12 col-lg-6 m-b30">
                         <div class="video-box">
-                            <img src="/public/page/gosford/thumbnail.png" alt="">
-                            <div class="video-play">
-                                <!-- <a href="https://www.youtube.com/watch?v=_FRZVScwggM"
-                                    class="popup-youtube gradient-shadow bg-gradient video"><i
-                                        class="fas fa-play"></i></a> -->
-                            </div>
+                            <img style="width:100%" src="/public/page/gosford/thumbnail.png" alt="">
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- About US End -->
-        <!-- Our Project -->
 
-        <!-- Our Project End -->
-
-        <!-- What Clients Says -->
         <div class="section-full content-inner" style="padding-top: 0px;"
         <!-- style="background-image: url(/public/car/images/pattern.png);" -->
         >
@@ -150,7 +141,7 @@
                     <div style="padding: 25% 0px;">
                         <h2 class="text-capitalize" style="font-family: 'Space Grotesk';font-weight: 700;">Project Development</h2>
                         <h3 style="font-family: 'Space Grotesk';">OEM and REM Projects</h3>
-                    <p style="font-family: 'Space Grotesk';font-size: 17px;line-height: 28.9px;text-align: justify;">Original Equipment Manufacturer (OEM):
+                        <p class="font-patner" style="color: black;">Original Equipment Manufacturer (OEM):
                         Leather seat covers are embedded as part of the standard car accessories for selected variants of the car models launched by the car manufacturers and we supplied our car sear covers to their appointed Tier 1 car seat manufacturers for their onward installation onto the bare seat</p>
                     </div>
 
@@ -226,7 +217,7 @@
                         <div  class="col-lg-6 d-lg-flex">
                             <div class="p-a30 m-b30 align-self-stretch" style="font-family: 'Space Grotesk';padding: 25% 0px;">
                                 <h2 class="m-b10" style="font-weight: bold;">KEEP IN TOUCH</h2>
-                                <p style="font-size: 30px;line-height: 40px;text-align: justify;">Have any questions? Reach out to me from this
+                                <p class="font-patner" style="color: black;">Have any questions? Reach out to me from this
                                     contact form and I will get back to you shortly.</p>
 
                             </div>
@@ -281,6 +272,6 @@
                 </div>
             </div>
 
-        </div>
+
     </div>
 @endsection

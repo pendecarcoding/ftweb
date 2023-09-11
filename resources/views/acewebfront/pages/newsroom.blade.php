@@ -75,11 +75,7 @@
                                 <div style="position: relative;
 overflow: hidden;" class="card text-center board-director">
 
-<div style="width: 100%;
-height: 250px;
-margin-bottom: 15px;
-position: relative;
-overflow: hidden;">
+<div class="wrap-image-news">
     <img style="height: 100%;width:100%;object-fit: cover;"  @if($v->photos != null) id="dynamic-gallery-demo{{$v->id}}" @endif  src="{{getimage($v->banner)}}">
 </div>
 

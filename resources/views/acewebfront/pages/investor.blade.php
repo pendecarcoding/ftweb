@@ -187,7 +187,7 @@
                   <h1 data-aos="fade-up" class="aos-init aos-animate">Quality Commitment</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
-                  <p style="text-align: justify;font-size: 16px;"> To assure our products quality, Feytech is strictly implements international quality management system.
+                  <p class="strength-font"> To assure our products quality, Feytech is strictly implements international quality management system.
                     Feytech is also learns from outstanding OEM customers, and integrate the management methods of
                     European, US, Japanese and Korean OEM customers into our quality management system.
                     Our Quality Policies are Fulfilling requirements from customers, standards, and systems; Excellent
@@ -205,7 +205,7 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p style="text-align: justify;font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p class="strength-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
                 </div>
@@ -221,7 +221,7 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p style="text-align: justify;font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p class="strength-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
                 </div>
@@ -237,7 +237,7 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p style="text-align: justify;font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p class="strength-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
                 </div>
@@ -253,7 +253,7 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p style="text-align: justify;font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p class="strength-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                   </div>
                 </div>
@@ -277,7 +277,7 @@
                   <h1 data-aos="fade-up" class="aos-init aos-animate">2023 key performance stats</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
-                  <p style="text-align: justify;font-size: 16px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                  <p class="strength-font"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
               </div>
               <div style="margin: 100px 0px;">
@@ -347,7 +347,7 @@
 
                       </div>
                       <!-- <div style="margin-right: 50px">{{ $datean[0] }}</div> -->
-                      <div style="text-align: justify;font-size: 16px;">
+                      <div class="strength-font" style="text-align: justify;">
                         {{ $v->title }}
                       </div>
                     </div>

@@ -85,7 +85,7 @@
                 <div class="wrap-content">
 
                     <div class="ace-isi about">
-                        <div class="container contact">
+                        <div class="contact">
 
                             <div class="row">
                             <div class="col-md-5">

@@ -249,7 +249,7 @@ a.bg-primary:hover{
 ---------------------------------------------------------------*/
 
 p {
-    line-height: 26px;
+    line-height: inherit;
     margin-bottom: 24px;
 }
 strong {
@@ -1744,7 +1744,7 @@ label {
 .input-group-prepend {
     background: #fff;
     border-color: #e1e1e1;
-    padding: 6px 14px;
+    padding: 0px 0px;
     font-size: 16px;
 }
 .input-group-prepend.font-size-20 {
@@ -2617,7 +2617,7 @@ blockquote:before {
 	transition: all 0.15s linear;
     color: #777777;
     display: block;
-    font-size: 16px;
+    /* font-size: 16px; */
     font-weight: 400;
     padding: 10px 20px;
     text-transform: capitalize;
@@ -2931,12 +2931,12 @@ blockquote:before {
 		float: none;
 		height: auto;
 		max-width: 100%;
-		padding: 25px 20px;
+        padding: 10px 20px;
 		width: 100%;
 	}
 	.mo-left .header-nav .logo-header img{
 		max-width: unset;
-		width: 180px;
+	    width: 122px;
 	}
 	.mo-left .navbar-toggler.open span{
 		background:#fff;
@@ -3215,14 +3215,14 @@ blockquote:before {
     border-bottom-style: solid;
     border-bottom-color: #fff;
     border-bottom-width: 2px;
-    color: white;
+    /* color: white; */
 }
 [class*="bg-"] .header-nav .nav > li > a:hover,
 [class*="bg-"] .header-nav .nav > li:hover > a {
     border-bottom-style: solid;
     border-bottom-color: #fff;
     border-bottom-width: 2px;
-    color: white;
+    /* color: white; */
 }
 
 /* Dark */
@@ -8313,7 +8313,7 @@ a,
 .dlab-media img,
 .dlab-post-media img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
 }
 
 /*---------------------------------------------------------------
@@ -8756,11 +8756,11 @@ button.scroltop {
     margin-bottom: 15px;
 	font-weight: 600;
 }
-.section-head p {
+/* .section-head p {
     padding-top: 10px;
     font-size: 16px;
     color: #848484;
-}
+} */
 .text-center.section-head p {
     margin-left: auto;
     margin-right: auto;
@@ -9969,6 +9969,14 @@ ol.commentlist li .star-rating {
 	.header-nav .nav > li:nth-last-child(3) > .sub-menu li .sub-menu{
 		margin-left:0;
 	}
+
+
+        [class*="bg-"] .header-nav .nav > li.current-menu-item > a {
+            border-bottom-style: solid;
+            border-bottom-color: #fff;
+            border-bottom-width: 2px;
+            color: #555555;
+        }
 }
 /* About */
 .widget_services.style-2 ul li{
@@ -10734,3 +10742,4 @@ a.bg-primary:hover,
     background-color: var(--primary-hover);
     color: #fff;
 }
+

@@ -169,7 +169,7 @@
     </div>
     <div class="modal fade" id="staffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         style="display: none;" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
 
 
@@ -178,7 +178,7 @@
                     padding: 50px;
                 ">
                         <div class="mb-5 text-center">
-                            <img src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="mw-100 mb-4"
+                            <img style="width: 127px;" src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="mw-100 mb-4"
                                 height="50">
                             <h1 style="color: #6d6d6d;font-size: 20px;" class="h3  mb-0">Staff Login</h1>
 
@@ -904,6 +904,44 @@
             }
         }
     </script>
+
+
+<script>
+    function logoutFunction() {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "you want to leave this page?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                window.location.href = "{{url('/staff/back/logoutstuff')}}";
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                // swalWithBootstrapButtons.fire(
+                //     'Cancelled',
+                //     'Your imaginary file is safe :)',
+                //     'error'
+                // )
+            }
+        })
+
+    }
+</script>
 
 
     <script></script>

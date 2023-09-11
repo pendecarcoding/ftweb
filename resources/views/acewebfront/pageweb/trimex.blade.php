@@ -2,21 +2,21 @@
 @section('content')
     <div class="page-content bg-white">
         <!-- Slider -->
-        <div style="position: relative;height: 500px;">
+        <div class="section-trimex-up-card">
             <div class="dlab-bnr-inr overlay-black-middle" style="background-image:url(/public/page/trimex/section.png);">
                 <div class="container">
 
-                    <div class="trimex-top-card dlab-post-info p-lr20 p-b10 p-t20 bg-white" style="    padding: 50px 117px;">
+                    <div class="trimex-top-card dlab-post-info p-lr20 p-b10 p-t20 bg-white">
                         <div class="dlab-post-title " style="font-size: 40px;font-weight: bold;position: relative;height: 133px;">
                           <div class="clearfix">
                             <h2>YOUR TRUSTED
                                 LEATHER SEAT PARTNER</h2>
-                            <img style="width:250px;height:136px" src="/public/page/trimex/image 416.png">
+                            <img class="img-trimex-up" src="/public/page/trimex/image 416.png">
                           </div>
                         </div>
 
                         <div class="dlab-post-text">
-                            <p>TRIMEX is a company that manufactures OEM-styled leather-trimmed interiors and patented technology designed to enhance comfort and safety for the next generation of automobiles. Providing the highest quality products on the market, and maintaining stringent safety standards, TRIMEX is built upon the foundations of honesty, trust, faith, and respect. We still build pride into every product and appreciate your business.</p>
+                            <p style="text-align: justify;">TRIMEX is a company that manufactures OEM-styled leather-trimmed interiors and patented technology designed to enhance comfort and safety for the next generation of automobiles. Providing the highest quality products on the market, and maintaining stringent safety standards, TRIMEX is built upon the foundations of honesty, trust, faith, and respect. We still build pride into every product and appreciate your business.</p>
                         </div>
                         <div class="dlab-post-readmore">
                             <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fas fa-angle-double-right"></i></a>
@@ -43,10 +43,10 @@
                         @for($i=0;$i < 5; $i++)
                         <div class="item" style="padding: 20px;">
                             <div class="dlab-box" >
-								<div class="dlab-media" style="border-radius: 5px;"> <a href="#"><img style="width:100%;height: 300px;object-fit: cover;" src="/public/page/trimex/slide{{$i}}.png" alt=""></a> </div>
+								<div class="dlab-media" style="border-radius: 5px;"> <a href="#"><img class="img-what-we-do" src="/public/page/trimex/slide{{$i}}.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
 
-									<p class="m-b0" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;">{{slidertrimex()[$i]}}</p>
+									<p class="m-b0" class="wwd-text">{{slidertrimex()[$i]}}</p>
 								</div>
 							</div>
                         </div>
@@ -68,24 +68,17 @@
                     <div data-aos="fade-right" data-aos-delay="100" class="col-lg-6 m-b30 p-r50">
                         <div class="section-head text-left" style="    margin: 15% 0px;">
                             <h2 class="text-capitalize"
-                                style="color: rgb(255, 255, 255);font-family: 'Space Grotesk';font-weight: bold;">PARTNER</h2>
+                                style="color: rgb(255, 255, 255);font-family: 'Space Grotesk';font-weight: bold;">PATNER</h2>
                                 <h4 style="color: rgb(255, 255, 255);font-family: 'Space Grotesk';">About our Prodictivity</h4>
-                            <p
-                                style="    font-size: 30px;
-                            line-height: 40px;
-                            text-align: justify;color: rgb(255, 255, 255);font-family: 'Space Grotesk';">
+                            <p class="font-patner">
                                 Leather car seats are a crucial element in modern automobiles for enhancing the driving experience and productivity. These seats provide outstanding comfort and support, allowing drivers to stay focused for longer periods and reducing fatigue.</p>
                         </div>
 
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="300" class="col-lg-6 m-b30">
+                    <div class="col-sm-12 col-lg-6 m-b30">
                         <div class="video-box">
-                            <img src="/public/page/gosford/thumbnail.png" alt="">
-                            <div class="video-play">
-                                <!-- <a href="https://www.youtube.com/watch?v=_FRZVScwggM"
-                                        class="popup-youtube gradient-shadow bg-gradient video"><i
-                                            class="fas fa-play"></i></a> -->
-                            </div>
+                            <img style="width:100%" src="/public/page/gosford/thumbnail.png" alt="">
+
                         </div>
                     </div>
                 </div>
@@ -136,7 +129,7 @@
                         <div class="p-a30 m-b30 align-self-stretch"
                             style="font-family: 'Space Grotesk';padding: 25% 0px;">
                             <h2 class="m-b10" style="font-weight: bold;">KEEP IN TOUCH</h2>
-                            <p style="font-size: 30px;line-height: 40px;text-align: justify;">Have any questions? Reach out
+                            <p class="font-patner" style="color:black">Have any questions? Reach out
                                 to me from this
                                 contact form and I will get back to you shortly.</p>
 

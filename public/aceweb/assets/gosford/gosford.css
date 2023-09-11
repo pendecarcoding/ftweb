@@ -5,7 +5,29 @@ footer {
 
 }
 
+.wwd-text{
+    color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;
+}
+
+.font-patner{
+    font-size: 30px;
+    line-height: 40px;
+    text-align: justify;color: rgb(255, 255, 255);font-family: 'Space Grotesk';
+}
+.wrap-image-news{
+    width: 100%;
+    height: 209px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.strength-font{
+    text-align: justify;
+    font-size: 16px;
+}
+
 .trimex-top-card{
+    padding: 50px 117px;
     border-radius: 10px;
     position: absolute;
     top: 55%;
@@ -51,7 +73,10 @@ footer {
     height: 700px;
 }
 .section-bg-trimex-color {
-    background: linear-gradient(112.31deg, #2949ea 11.29%, rgb(57 94 247) 86.49%);
+    background-image: url('/public/page/trimex/trimax-bg-1.png');
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-size: 100% auto; /* Mengisi seluruh lebar dan menyesuaikan tinggi */
+    /* background: linear-gradient(112.31deg, #2949ea 11.29%, rgb(57 94 247) 86.49%); */
 }
 .section-bg-gosford-color{
     background: linear-gradient(112.31deg, #FDE35A 11.29%, rgba(255, 170, 0, 0.73) 86.49%);
@@ -592,7 +617,7 @@ address {
 ol,
 ul {
     font-size: 14px;
-    line-height: 24px
+    line-height: 12px;
 }
 
 .mdl-typography--display-4,
@@ -6387,7 +6412,7 @@ _:-ms-input-placeholder {
 }
 
 .title-menu-style {
-    z-index: 999;
+    z-index: 99;
     position: absolute;
     bottom: 23px;
     left: 50%;
@@ -9219,6 +9244,11 @@ https://github.com/marcaube/bootstrap-magnify
     color: rgba(255, 255, 255, .8)
 }
 
+.img-trimex-up{
+    width:250px;
+    height:136px
+}
+
 .notifications-dropdown.mdl-list .mdl-list__item .mdl-list__item-avatar {
     padding: 8px;
     text-align: center
@@ -10778,6 +10808,32 @@ form.form--basic .mdl-textfield__label {
 #register-user {
     padding: 0px 28%;
 }
+@media screen and (min-width:1280px) {
+    .section-bg-gosford {
+        height: 622px;
+    }
+    .font-patner {
+        font-size: 17px;
+        line-height: 40px;
+        text-align: justify;
+        color: rgb(255, 255, 255);
+        font-family: 'Space Grotesk';
+    }
+    .ace-sliders {
+        height: 100vh;
+        /* position: relative; */
+        overflow: hidden;
+    }
+    .slider-banner {
+        width: 100%;
+        height: 100vh;
+    }
+}
+@media screen and (min-width:1366px) {
+    .section-bg-gosford {
+        height: 622px;
+    }
+}
 
 @media screen and (min-width:1600px) {
     .mdl-layout__header-row .classurl {
@@ -10808,6 +10864,42 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1920px) {
+    .title-corporate {
+        font-size: 2.22rem;
+        font-weight: bold;
+    }
+    .contact-wrap {
+        font-size: 20px;
+        flex-wrap: wrap;
+        display: flex;
+        padding: 20px;
+    }
+    .gov-card {
+        background-color: white;
+        text-align: center;
+        padding: 92px;
+        margin: 10px;
+        height: 330px;
+    }
+    .wrap-image-news{
+        width: 100%;
+        height: 325px;
+        margin-bottom: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+    .font-patner {
+        font-size: 24px;
+        line-height: 40px;
+        text-align: justify;
+        color: rgb(255, 255, 255);
+        font-family: 'Space Grotesk';
+    }
+        .section-bg-gosford {
+
+            height: 860px;
+        }
+
     .mdl-layout__header-row .classurl {
         margin: 0px 31px;
     }
@@ -10840,7 +10932,170 @@ form.form--basic .mdl-textfield__label {
     }
 }
 
+.section-trimex-up-card{
+    position: relative;height: 500px;
+}
+.img-what-we-do{
+    width:100%;height: 300px;object-fit: cover;
+}
+
+.video-trimex{
+    padding: 50px 0px;
+}
+
+
+@media screen and (min-width:2560px) {
+    .section-bg-gosford {
+        height: 1137px;
+    }
+    .section-trimex-up-card{
+        position: relative;
+        height: 748px;
+    }
+    .img-what-we-do{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    .trimex-top-card {
+        border-radius: 10px;
+        position: absolute;
+        top: 55%;
+        left: 7%;
+        right: 7%;
+        /* height: 400px; */
+        box-shadow: 0px -40px 50px 0px #0A04161A;
+    }
+    .font-patner{
+        font-size: 24px;
+        line-height: 40px;
+        text-align: justify;color: rgb(255, 255, 255);font-family: 'Space Grotesk';
+    }
+    .acecarousel-control-prev {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background-color: transparent;
+        color: #fff;
+        text-align: center;
+        /* background: 0 0; */
+        border: 0;
+        transition: opacity 0.15s ease;
+    }
+    .acecarousel-control-next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        background-color: transparent;
+        border: 0;
+        transition: opacity 0.15s ease;
+    }
+    .img-responsive-news {
+        object-fit: fill;
+        width: 100%;
+        height: 500px;
+        vertical-align: middle;
+    }
+}
+
 @media screen and (max-width:500px) {
+    .section-trimex-up-card {
+        position: relative;
+        height: 535px;
+    }
+    .wwd-text{
+        color: #343F52;
+        font-family: 'Space Grotesk';
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .img-trimex-up{
+        width: 200px;
+        height: 101px;
+    }
+    .img-what-we-do {
+        width: 100%;
+        height: 270px;
+        object-fit: fill;
+    }
+    .section-bg-trimex-color {
+        background-image: url(/public/page/trimex/trimax-bg-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .trimex-top-card {
+        padding: 11px 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        right: 3%;
+        height: 346px;
+        box-shadow: 0px -40px 50px 0px #0A04161A;
+    }
+    .trimex-top-card h2{
+        font-size: 23px;
+    }
+    .font-patner {
+        font-size: 19px;
+        line-height: 31px;
+    }
+    .section-bg-gosford {
+        background-image: url(/public/page/gosford/Section.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height: 200px;
+        margin-top: 64px;
+    }
+    .section-head h2 {
+        color: #666666;
+        font-size: 22px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+    .section-head h5{
+        font-size: 0.9rem;
+    }
+    .h5-milestone{
+        font-size: 10px;
+    }
+    .h5-milestone li{
+        list-style-type: none;
+    }
+    .section-slider {
+        height: 246px;
+    }
+    sub, sup {
+        position: relative;
+        font-size: 6px;
+        line-height: 0;
+        vertical-align: baseline;
+    }
+    .logo-header img, .logo-footer img {
+        max-width: 100%;
+        width: 113px;
+        height: 46px;
+        height: auto;
+    }
+    [class*="bg-"] .header-nav .nav > li.current-menu-item > a {
+        border-bottom-style: solid;
+        border-bottom-color: #fff;
+        border-bottom-width: 2px;
+        color: #555555;
+    }
     .wa-floating-button {
         bottom: 63px;
     }
@@ -11274,10 +11529,30 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:500px) and (max-width: 600px) {
+
+    .font-patner {
+        font-size: 19px;
+        line-height: 31px;
+    }
+    .section-bg-gosford {
+        background-image: url(/public/page/gosford/Section.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height: 200px;
+        margin-top: 64px;
+    }
     .wa-floating-button {
         bottom: 63px;
     }
-
+    .section-slider {
+        height: 246px;
+    }
+    .logo-header img, .logo-footer img {
+        max-width: 100%;
+        width: 113px;
+        height: 46px;
+        height: auto;
+    }
     .i-icon-login {
         font-size: 25px;
     }
@@ -11691,10 +11966,23 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:600px) and (max-width: 767px) {
+    .font-patner {
+        font-size: 19px;
+    }
+    .section-bg-gosford {
+        background-image: url(/public/page/gosford/Section.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height: 200px;
+        margin-top: 64px;
+    }
     .i-icon-login {
         font-size: 25px;
     }
 
+    .section-slider {
+        height: 246px;
+    }
     .content-timeline li {
         list-style-type: none;
     }
@@ -12968,14 +13256,89 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media (min-width: 2560px) and (max-width: 9600px) {
+    .contact-wrap .img-responsive {
+        object-fit: cover;
+        max-width: 100%;
+        width: 900px;
+        height: auto;
+        vertical-align: middle;
+    }
+    .title-corporate {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .contact-wrap {
+        font-size: 24px;
+        flex-wrap: wrap;
+        display: flex;
+        padding: 20px;
+    }
+    .wrap-image-news {
+        width: 100%;
+        height: 405px;
+        margin-bottom: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+    .gov-card {
+        background-color: white;
+        text-align: center;
+        padding: 92px;
+        margin: 10px;
+        height: 330px;
+    }
+    .ace-button-blue {
+        background-color: transparent;
+        color: #dc3545;
+        border: 2px solid #dc3545;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        padding: 10px;
+        margin: 12px 6px;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    .ace-button-blue {
+        font-size: 2.5em;
+    }
     .section-slider {
         height: 551px;
+    }
+    .strength-font {
+        text-align: justify;
+        font-size: 32px;
+    }
+    .slider-testimonials h5 {
+        bottom: 0;
+        font-weight: bold;
+        text-align: left;
+        color: #022c59;
+        font-size: 50px;
+    }
+
+    .slider-testimonials {
+        font-size: 23px;
+    }
+
+    .dlab-bnr-inr {
+        height: 463px;
+        background-size: cover;
+        background-position: center center;
+        display: table;
+        width: 100%;
     }
 
     .vl {
         padding-top: 82px;
     }
-
+    .img-responsive-news {
+        object-fit: fill;
+        width: 100%;
+        height: 500px;
+        vertical-align: middle;
+    }
     #slider .selfie-img {
         width: 420px;
         height: 420px;

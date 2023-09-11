@@ -37,7 +37,7 @@
 </section>
 @else
 
-<section style="position: relative;height: 100px;">
+<section style="position: relative;height: 100px;    background-color: white;">
 
 </section>
 

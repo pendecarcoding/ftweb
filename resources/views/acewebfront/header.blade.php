@@ -5,7 +5,7 @@
         <div class="main-bar bg-fytech clearfix ">
             <div class="container clearfix">
                 <!-- website logo -->
-                <div id="black_navbar" class="logo-header logo-white mostion"><a href="{{url('/')}}"><img src="{{ uploaded_asset(get_setting('system_logo_white')) }}"
+                <div id="black_navbar" class="logo-header"><a href="{{url('/')}}"><img src="{{ uploaded_asset(get_setting('system_logo_white')) }}"
                             width="193" height="89" alt=""></a></div>
                 <!-- nav toggle button -->
                 <button class="navbar-toggler collapsed navicon justify-content-end" type="button"
@@ -35,8 +35,12 @@
                     <ul class="nav navbar-nav nav-style">
                        @foreach(getmenudynamicmain() as $i => $v)
                        @if($v->label_menu=='Login')
-                       <li class="ace-button @if (Request::is($v->url_menu . '*'))active @endif"> <a target="{{$v->target}}" href="@if(count(checkchild($v->id)) > 0)javascript:; @else {{url($v->url_menu)}} @endif">{{$v->label_menu}} @if(count(checkchild($v->id)) > 0)<i class="fas fa-chevron-down"></i>@endif</a>
+                       @if(Session::get('loginstaff')==true)
+                       <li @if(Request::is('staff/back/announcements')) class="active" @endif> <a href="{{url('staff/back/announcements')}}">STAFF</a></li>
 
+                       @else
+                       <li class="ace-button @if (Request::is($v->url_menu . '*'))active @endif"> <a target="{{$v->target}}" href="@if(count(checkchild($v->id)) > 0)javascript:; @else {{url($v->url_menu)}} @endif">{{$v->label_menu}} @if(count(checkchild($v->id)) > 0)<i class="fas fa-chevron-down"></i>@endif</a>
+                        @endif
                        @else
                         <li class="@if (Request::is($v->url_menu . '*'))active @endif"> <a target="{{$v->target}}" href="@if(count(checkchild($v->id)) > 0)javascript:; @else {{url($v->url_menu)}} @endif">{{$v->label_menu}} @if(count(checkchild($v->id)) > 0)<i class="fas fa-chevron-down"></i>@endif</a>
                        @endif
@@ -68,7 +72,18 @@
                                 </li>
 
                                 @else
-                                <li><a target="{{$vsub->target}}" href="{{url($vsub->url_menu)}}">{{$vsub->label_menu}}</a></li>
+                                @if($v->label_menu=='Login' AND Session::get('loginstaff')==true)
+
+                                @else
+                                <li>
+                                    @if($vsub->label_menu=='Staff Login')
+                                    <a data-bs-toggle="modal" data-bs-target="#staffModal" class="dropdown-item" href="#">Staff Login</a>
+                                    @else
+                                    <a target="{{$vsub->target}}" href="{{url($vsub->url_menu)}}">{{$vsub->label_menu}}</a>
+                                    @endif
+                                </li>
+                                @endif
+
                                 @endif
 
 
@@ -101,8 +116,13 @@
                         </li> -->
 
                     </ul>
+
+                    @if(Session::get('loginstaff')==true)
+                    <a class="classurl" onclick="logoutFunction()" style="font-size:28px;color:white"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    @endif
                 </div>
             </div>
+
         </div>
     </div>
     <!-- main header END -->
@@ -141,91 +161,3 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function() {
-        // Get references to the icon and navbar-mobile elements
-        var $navbarToggle = $('#navbarToggle');
-        var $mobileMenu = $('#mobileMenu');
-        var $menuIcon = $('.menu-icon');
-        var $timesIcon = $('.times-icon');
-
-        // Add a click event handler to the icon
-        $navbarToggle.click(function() {
-            // Toggle the 'active' class on navbar-mobile
-            $mobileMenu.toggleClass('active');
-
-            // Toggle the icons
-            $menuIcon.toggle();
-            $timesIcon.toggle();
-
-            // Check if the 'active' class is present
-            if ($mobileMenu.hasClass('active')) {
-                // If it's active, show the navbar with animation
-                $mobileMenu.slideDown();
-            } else {
-                // If it's not active, hide the navbar with animation
-                $mobileMenu.slideUp();
-            }
-        });
-    });
-</script>
-
-
-<script>
-    const aboutToggle = document.querySelector('#navbarDarkDropdownMenuLink');
-    const aboutDropdown = document.querySelector('.dropdown-menus');
-
-    aboutToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (aboutDropdown.style.display === 'none' || aboutDropdown.style.display === '') {
-            aboutDropdown.style.display = 'block';
-        } else {
-            aboutDropdown.style.display = 'none';
-        }
-    });
-
-    // Close the dropdown when clicking outside
-    window.addEventListener('click', function(e) {
-        if (!aboutToggle.contains(e.target) && !aboutDropdown.contains(e.target)) {
-            aboutDropdown.style.display = 'none';
-        }
-    });
-</script>
-
-<script>
-    function logoutFunction() {
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-                confirmButton: 'btn btn-success',
-                cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false
-        })
-
-        swalWithBootstrapButtons.fire({
-            title: 'Are you sure?',
-            text: "you want to leave this page?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Yes',
-            cancelButtonText: 'No, cancel!',
-            reverseButtons: true
-        }).then((result) => {
-            if (result.isConfirmed) {
-
-                window.location.href = "{{ route('staff.logoutstuff') }}";
-            } else if (
-                /* Read more about handling dismissals below */
-                result.dismiss === Swal.DismissReason.cancel
-            ) {
-                // swalWithBootstrapButtons.fire(
-                //     'Cancelled',
-                //     'Your imaginary file is safe :)',
-                //     'error'
-                // )
-            }
-        })
-
-    }
-</script>
