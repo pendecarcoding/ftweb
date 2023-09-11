@@ -16,7 +16,7 @@
 
                             <div class="blog-post latest-blog-1 date-style-3 skew-date">
                                 <!-- <div><h1 class="font-bg-history">2022</h1></div> -->
-                                <div class="dlab-post-media dlab-img-effect zoom-slow"><img src="/public/background/{{$i}}_bg.png" alt=""></div>
+                                <div style="height: 450px;" class="dlab-post-media dlab-img-effect zoom-slow"><img  src="/public/background/{{$i}}_bg.png" alt=""></div>
                                 <div class="dlab-post-info p-t20" style="padding: 20px;">
                                     <div>
                                         {!! name_companyofbg()[$i] !!}
@@ -38,7 +38,7 @@
     <script>
         $(document).ready(function(){
           $(".owl-carousel").owlCarousel({
-            items: 3, // Number of items to show
+            items: 4, // Number of items to show
             loop: true, // Enable loop
             autoplay: true, // Enable autoplay
             autoplayTimeout: 30000,
