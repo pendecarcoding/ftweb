@@ -93,6 +93,12 @@
         .bg-primary {
             background-color: #212529;
         }
+        .theme-btn.bt-support-now {
+            display: none;
+        }
+        .theme-btn.bt-buy-now {
+            display: none;
+        }
     </style>
 
     <!-- Google tag (gtag.js) -->
