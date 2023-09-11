@@ -328,7 +328,7 @@
                           <div class="col-md-4 col-sm-12">
                             <div class="number-ace-center">
                               <h1><span class="decimal">28.68</span></h1>
-                              <p>MILLION  (myR) 2023 - net loss</p>
+                              <p>MILLION  (myR) 2022 - net loss</p>
                             </div>
                           </div>
 
