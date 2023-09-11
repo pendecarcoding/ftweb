@@ -205,7 +205,11 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p class="strength-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p class="strength-font">Over the years, the Group has established its reputation as an automotive cover manufacturer that can
+                        also manufacture automotive seats. Gosford Malaysia has been recognised by Perodua Sales Sdn Bhd for
+                        delivering its products promptly in 2018. Further, Gosford Singapore has also been awarded with the
+                        SME Excellence Business Award Achievers 2022/2023 by Vision Media Group. These recognitions are
+                        testament to the Group’s established industry reputation.</p>
                     </div>
                   </div>
                 </div>
@@ -221,7 +225,12 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p class="strength-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p class="strength-font">We have conducted extensive laboratory testing to make certain that our products meet or exceed all
+                        applicable Federal Motor Vehicle Safety Standards (FMVSS) Side Impact Airbag Deployment Test Series
+                        have been conducted in a certified laboratory, Autoliv Hirotako Safety (Malaysia), to assure passenger
+                        safety. Thanks to our experience and continuous research, we can provide our customers with leathers
+                        tanned according to different recipes, thus continuously improving our environmental and resource
+                        targets. Elevate your ride with our stylish seat covers and showcase your commitment to excellence.</p>
                     </div>
                   </div>
                 </div>
@@ -237,7 +246,13 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p class="strength-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p class="strength-font">The Group’s revenue increased by RM41.7 million or 49.0% from RM85.2 million in FYE 2021 to
+                        RM126.9 million in FYE 2022. The Group’s cost of sales increased by RM26.3 million or 51.7% from
+                        RM50.8 million in FYE 2021 to RM77.1 million in FYE 2022. The Group’s GP margin decreased from
+                        40.4% in FYE 2021 to 39.3% in FYE 2022 mainly due to the commencement of manufacturing of
+                        automotive seats in FYE 2022 which has a lower GP margin of 16.9% as compared to automotive covers
+                        division. The Group’s PBT increased by RM11.3 million or 44.1% from RM25.7 million in FYE 2021 to
+                        RM37.0 million in FYE 2022, which was mainly due to the increase in the Group’s GP for the FYE 2022.</p>
                     </div>
                   </div>
                 </div>
@@ -253,7 +268,14 @@
                   </div>
                   <div data-aos="fade-up" class="col-md-8 aos-init aos-animate">
                     <div class="fyt_list_investor">
-                      <p class="strength-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <p class="strength-font">Gosford has received an IATF 16949:2016 Certification in 2018. IATF 16949 specifies the requirements
+                        of a quality management system for automotive production. Born from the need for a globally
+                        harmonised quality management system requirements document, IATF 16949 was published in October
+                        2016. Feytech has achieve an automotive standard certificate to ensure that we follow all the
+                        automotive, safety and quality requirement.<br>
+                        <b>2009 </b>- ISO 9001 : Quality Management<br>
+                        <b>2010 </b>-ISO/TS 16949:2009 : Quality Management<br>
+                        <b>2018</b> - IATF 16949:2016 : Quality Management</p>
                     </div>
                   </div>
                 </div>
@@ -274,10 +296,13 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                  <h1 data-aos="fade-up" class="aos-init aos-animate">2023 key performance stats</h1>
+                  <h1 data-aos="fade-up" class="aos-init aos-animate">2022 key performance stats</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
-                  <p class="strength-font"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                  <p class="strength-font">The Group’s revenue increased by RM41.7 million or 49.0% from RM85.2 million in FYE 2021 to
+                    RM126.9 million in FYE 2022. The Group’s PBT increased by RM11.3 million or 44.1% from RM25.7
+                    million in FYE 2021 to RM37.0 million in FYE 2022, which was mainly due to the increase in the Group’s
+                    GP for the FYE 2022.</p>
                 </div>
               </div>
               <div style="margin: 100px 0px;">
@@ -287,23 +312,23 @@
                           <div class="col-md-4 col-sm-12">
                             <div class="number-ace-center">
                               <h1>
-                                <span class="decimal">8.6</span>
+                                <span class="decimal">126.9</span>
                               </h1>
-                              <p>BILLION (myR) 2023 - ANNUAL REVENUE</p>
+                              <p>MILLION (myR) 2022 - ANNUAL REVENUE</p>
                             </div>
                           </div>
                           <div class="col-md-4 col-sm-12">
                             <div class="number-ace-center">
                               <h1>
-                                <span class="decimal">2.1</span>
+                                <span class="decimal">38.3</span>
                               </h1>
-                              <p>BILLION (myR) 2023 - adjusted ebitda</p>
+                              <p>MILLION  (myR) 2022 - adjusted ebitda</p>
                             </div>
                           </div>
                           <div class="col-md-4 col-sm-12">
                             <div class="number-ace-center">
-                              <h1><span class="decimal">0.7</span></h1>
-                              <p>BILLION (myR) 2023 - net loss</p>
+                              <h1><span class="decimal">28.68</span></h1>
+                              <p>MILLION  (myR) 2023 - net loss</p>
                             </div>
                           </div>
 
