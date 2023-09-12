@@ -343,7 +343,7 @@
       </section>
 
 
-      <section data-aos="fade-up" data-aos-delay="500" class="anouncements-gpt">
+      <!-- <section data-aos="fade-up" data-aos-delay="500" class="anouncements-gpt">
         <div class="content-ace">
           <div class="wrap-content">
             <div style="padding-top: 0px" class="ace-isi about">
@@ -371,7 +371,7 @@
                       <div class="row">
 
                       </div>
-                      <!-- <div style="margin-right: 50px">{{ $datean[0] }}</div> -->
+
                       <div class="strength-font" style="text-align: justify;">
                         {{ $v->title }}
                       </div>
@@ -389,7 +389,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="gtp-download">
         <div class="content-ace">
           <div class="wrap-content">
