@@ -17,15 +17,15 @@
                     </h6>
                     <p>
                         <b style="font-weight:bold;color:black">Address</b><br>
-                        Lot 8246, Jalan 22 46100 Petaling Jaya, Selangor , Malaysia
+                        No. 1, Jalan Bayu 2/6, Kawasan Perindustrian Tampoi Jaya 81200 Johor Bahru, Johor Darul Ta’zim MALAYSIA
 
                         <br><b style="font-weight:bold;color:black">Tel</b><br>
-                        6012-2578885<br>
-                        603-79603927<br>
-                        603-79603937
+                        Office Tel 1 : +607-217 9067<br>
+                        Office Tel 2 : +607-217 9068<br>
+                        Fax : +607-217 9069
 
                         <br><b style="font-weight:bold;color:black">Email</b><br>
-                        enquiry@gosfordseat.com
+                        enquiry@feytech.com.my
 
                     </p>
                 </div>
