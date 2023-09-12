@@ -507,7 +507,7 @@
           </div>
         </div>
       </section>
-      <section data-aos="fade-up" class="ace-insight">
+      <!-- <section data-aos="fade-up" class="ace-insight">
         <div class="content-ace">
           <div class="wrap-content">
             <div class="ace-isi about">
@@ -593,7 +593,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
 @endsection
