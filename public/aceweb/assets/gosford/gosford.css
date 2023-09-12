@@ -11041,6 +11041,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:500px) {
+    .ace-sliders .carousel-caption {
+        top: 29%;
+    }
     .img-bg-mil-wrap{
         height: auto;
     }
@@ -11562,7 +11565,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:500px) and (max-width: 600px) {
-
+    .ace-sliders .carousel-caption {
+        top: 29%;
+    }
     .font-patner {
         font-size: 19px;
         line-height: 31px;
@@ -12002,6 +12007,9 @@ form.form--basic .mdl-textfield__label {
     .font-patner {
         font-size: 19px;
     }
+    .ace-sliders .carousel-caption {
+        top: 29%;
+    }
     .section-bg-gosford {
         background-image: url(/public/page/gosford/Section.png);
         background-repeat: no-repeat;
@@ -12427,6 +12435,10 @@ form.form--basic .mdl-textfield__label {
 @media screen and (min-width:767px) and (max-width: 768px) {
     .i-icon-login {
         font-size: 25px;
+    }
+
+    .ace-sliders .carousel-caption {
+        top: 29%;
     }
 
     .content-timeline li {
