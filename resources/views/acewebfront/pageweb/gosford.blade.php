@@ -17,8 +17,8 @@
 
                 </div>
                 <div class="section-content ">
-                    <div class="row">
-                        <div data-aos="fade-up" data-aos-delay="100" class="col-lg-4 col-md-6 col-sm-6 m-b30">
+                    <div class="row" style="align-items: center;">
+                        <!-- <div data-aos="fade-up" data-aos-delay="100" class="col-lg-4 col-md-6 col-sm-6 m-b30">
 							<div class="dlab-box">
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/1.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
@@ -26,7 +26,7 @@
 									<p class="m-b0" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;">Leather Seat</p>
 								</div>
 							</div>
-						</div>
+						</div> -->
                         <div data-aos="fade-up" data-aos-delay="200" class="col-lg-4 col-md-6 col-sm-6 m-b30">
 							<div class="dlab-box">
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/2.png" alt=""></a> </div>
@@ -54,6 +54,7 @@
 								</div>
 							</div>
 						</div>
+
                         <div data-aos="fade-up" data-aos-delay="500" class="col-lg-4 col-md-6 col-sm-6 m-b30">
 							<div class="dlab-box">
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/5.png" alt=""></a> </div>
