@@ -114,14 +114,15 @@ html {
     position: absolute;
     bottom: 19px;
     width: 100%;
-    padding: 34px;
+    padding: 11px;
 }
 .caption_leadership .leadership_name{
-    font-size: 23px;
+    font-size: 14px;
     font-weight: bold;
     color: white;
 }
-.caption_leadership .leadership_position{
+.caption_leadership .leadership_position {
+    font-size: 12px;
     color: white;
 }
 .img-line-structure {
