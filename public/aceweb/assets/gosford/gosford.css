@@ -5,6 +5,12 @@ footer {
 
 }
 
+
+
+.img-bg-mil-wrap{
+    height: 450px;
+}
+
 .wwd-text{
     color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;
 }
@@ -10809,6 +10815,9 @@ form.form--basic .mdl-textfield__label {
     padding: 0px 28%;
 }
 @media screen and (min-width:1280px) {
+    .img-bg-mil-wrap{
+        height: 350px;
+    }
     .section-bg-gosford {
         height: 622px;
     }
@@ -10864,6 +10873,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1920px) {
+    .img-bg-mil-wrap{
+        height: 550px;
+    }
     .title-corporate {
         font-size: 2.22rem;
         font-weight: bold;
@@ -10945,6 +10957,9 @@ form.form--basic .mdl-textfield__label {
 
 
 @media screen and (min-width:2560px) {
+    .img-bg-mil-wrap{
+        height: 750px;
+    }
     .section-bg-gosford {
         height: 1137px;
     }
@@ -11011,6 +11026,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:500px) {
+    .img-bg-mil-wrap{
+        height: auto;
+    }
     .section-trimex-up-card {
         position: relative;
         height: 535px;
@@ -12805,6 +12823,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    .img-bg-mil-wrap{
+        height: 350px;
+    }
     .content-timeline li {
         list-style-type: none;
     }
