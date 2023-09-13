@@ -3,17 +3,13 @@
 
     <div class="page-content bg-white">
         <!-- Slider -->
-        <div class="main-slider style-two default-banner" >
-            <div class="tp-banner-container section-bg-gosford">
-
-            </div>
-        </div>
+        @include('acewebfront.widget.allbaner')
         <!-- Slider END -->
 
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">What We do?</h2>
+                    <h2 class="text-capitalize">Our Leather Interiors</h2>
 
                 </div>
                 <div class="section-content ">
@@ -96,7 +92,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6 m-b30">
                         <div class="video-box">
-                            <img style="width:100%" src="/public/page/gosford/thumbnail.png" alt="">
+                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/5SGxcVhGA6Q" title="Trimex, Petaling Jaya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                         </div>
                     </div>
@@ -211,67 +207,6 @@
             </div>
         </div>
 
-            <div class="section-full content-inner bg-white contact-style-1">
-                <div class="container">
-                    <div class="row">
-                        <!-- Left part start -->
-                        <div  class="col-lg-6 d-lg-flex">
-                            <div class="p-a30 m-b30 align-self-stretch" style="font-family: 'Space Grotesk';padding: 25% 0px;">
-                                <h2 class="m-b10" style="font-weight: bold;">KEEP IN TOUCH</h2>
-                                <p class="font-patner" style="color: black;">Have any questions? Reach out to me from this
-                                    contact form and I will get back to you shortly.</p>
-
-                            </div>
-                        </div>
-                        <div  class="col-lg-6">
-
-
-                                <div style="padding: 25% 0px;">
-                                    <form method="post" class="dzForm" action="script/contact.php">
-                                        <input type="hidden" value="Contact" name="dzToDo" >
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                            <input style="    background-color: #bcbcbc24;
-    border: none;" name="dzOther[Phone]" type="text" required class="form-control" placeholder="Name">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                            <input style="    background-color: #bcbcbc24;
-    border: none;" name="dzOther[Subject]" type="text" required class="form-control" placeholder="Email">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                            <textarea style="    background-color: #bcbcbc24;
-    border: none;" name="dzMessage" rows="4" class="form-control" required placeholder="Your Message..."></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-4" style="    padding-left: 34px;">
-                                                    <button style="    border-radius: 50px;" name="submit" type="submit" value="Submit" class="site-button "> <span>Send message</span> </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                </div>
-
-
-                        </div>
-                        <!-- Left part END -->
-                        <!-- right part start -->
-
-                        <!-- right part END -->
-                    </div>
-
-                </div>
-            </div>
 
 
     </div>
