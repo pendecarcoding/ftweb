@@ -26,12 +26,12 @@
                                         <div class="card">
                                             <div class="slider-product">
                                                 <div style="display: flex;flex-direction: column; padding: 20px;">
-                                                    <p>A012-Nappa Leather</p>
+                                                    <p>{{$data->name_pattern}}</p>
                                                     <div class="img-wraping">
-                                                        <img style="height: 400px;"src="/public/go_system/images/pattern-design.png"
+                                                        <img style="height: 400px;"src="{{getimage($data->base_img)}}"
                                                             alt="">
                                                         <img style="height: 400px;" class="leather-pattern"
-                                                            src="/public/go_system/images/patter1-noimage.png"
+                                                            src="{{getimage($data->color_img)}}"
                                                             alt="">
                                                     </div>
                                                 </div>
@@ -42,57 +42,24 @@
                                     <div class="col-md-4 col-sm-12">
                                         <div class="card">
                                             <div style="padding:20px;height: 600px;">
-                                                <div
-                                                    style="display: flex;flex-direction: row;justify-content: space-between;margin: 0px 10%;">
-                                                    <div style="display: flex;flex-direction: column;">
-                                                        <h6 class="title-right-product">Make:</h6>
-                                                        <p class="content-right-product"> BMW</p>
-                                                    </div>
-                                                    <div style="display: flex;flex-direction: column;">
-                                                        <h6 class="title-right-product">Model:</h6>
-                                                        <p class="content-right-product">2-Series</p>
-                                                    </div>
-                                                    <div style="display: flex;flex-direction: column;">
-                                                        <h6 class="title-right-product">Year:</h6>
-                                                        <p class="content-right-product">2017</p>
-                                                    </div>
+                                                <div style="display: flex;flex-direction: column;">
+                                                    <h3>customize your color</h3>
+
                                                 </div>
-
-
                                                 <form action="{{ route('gosford.order_comfirmed') }}" method="post">@csrf
-
                                                     <div style="display: flex;flex-direction: column;">
                                                         <hr class="hr-product-detail">
                                                     </div>
-
-
-
                                                     Step-1 | Color Option
                                                     <!--COLOR OPTION-->
-                                                    <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption" style="background-color: #452E34;">
+                                                    <div style="display: flex; flex-wrap: wrap;">
+                                                        @foreach(explode(',',$data->colors) as $color)
+                                                        <div class="card-coloroption" style="background-color: {{$color}};">
                                                         </div>
-                                                        <div class="card-coloroption" style="background-color: #9FC4CE;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #442452;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #8F5153;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #E35A7E;">
-                                                        </div>
+                                                        @endforeach
+
                                                     </div>
-                                                    <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption" style="background-color: #7C6F3B;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #D4C0AD;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #484343;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #272526;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #AAA29C;">
-                                                        </div>
-                                                    </div>
+
                                                     <!--END COLOR OPTION-->
                                                     <!--Ecstasy Leather-->
                                                     <br>
@@ -118,7 +85,7 @@
                                                     <div class="wrap-quantity">
                                                         <a class="btn decrease"
                                                             style="width:30%;border: groove;border-radius: 10px;">-</a>
-                                                        <p class="counter" style="margin:10px;font-weight: bold;">1</p>
+                                                        <p id="count" class="counter" style="margin:10px;font-weight: bold;">1</p>
                                                         <a class="btn increase"
                                                             style="width:30%;border: groove;border-radius: 10px;">+</a>
                                                     </div>
@@ -131,7 +98,7 @@
                                                         <div style="display: flex;justify-content: space-between;">
                                                             <h4 style="font-weight: bold;">Total</h4>
                                                             <h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM
-                                                                XXXX</h4>
+                                                                {{$data->price}}</h4>
                                                         </div>
                                                         <div style="display: flex;justify-content: space-between;">
                                                             <a href="{{ route('gosford.patterndesign') }}"
@@ -172,20 +139,32 @@
             const decreaseButton = document.querySelector(".decrease");
             const increaseButton = document.querySelector(".increase");
             const counterElement = document.querySelector(".counter");
+            const totalElement = document.getElementById('total');
 
             let counterValue = 1;
+            let price = parseFloat("{{$data->price}}"); // Ambil harga dari data PHP
+
+            updateTotal(); // Memperbarui total saat halaman dimuat
 
             decreaseButton.addEventListener("click", function() {
                 if (counterValue > 1) {
                     counterValue--;
                     counterElement.textContent = counterValue;
+                    updateTotal();
                 }
             });
 
             increaseButton.addEventListener("click", function() {
                 counterValue++;
                 counterElement.textContent = counterValue;
+                updateTotal();
             });
+
+            // Fungsi untuk memperbarui total
+            function updateTotal() {
+                let totalPrice = counterValue * price;
+                totalElement.textContent = "RM " + totalPrice.toFixed(0); // Menampilkan harga dengan 2 desimal
+            }
         });
     </script>
     <script src="/public/go_system/js/pattern-design.js"></script>

@@ -505,7 +505,7 @@ input[type=file]::file-selector-button {
 }
 
 .card-coloroption {
-    width: 100%;
+    width: 21%;
     margin: 5px;
     height: 50px;
 }
@@ -545,7 +545,7 @@ input[type=file]::file-selector-button {
 }
 
 .wrap-quantity {
-    border: groove;
+    /* border: groove; */
     border-radius: 11px;
     display: flex;
     flex-direction: row;

@@ -136,6 +136,14 @@
                                     </a>
                                 </li>
                             @endcan
+                            @can('view_all_patterndesign')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('patterndesignsys.index') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['patterndesignsys.index', 'patterndesignsys.create', 'patterndesignsys.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Pattern Design') }}</span>
+                                </a>
+                            </li>
+                            @endcan
                             @can('view_all_brands')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('cars.index') }}"

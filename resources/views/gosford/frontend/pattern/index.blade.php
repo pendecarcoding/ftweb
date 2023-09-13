@@ -18,139 +18,19 @@
                             </center>
                             <br>
                             <div class="row">
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern1.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern2.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern3.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern4.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern5.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern6.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
 
+                                @foreach($data as $i => $v)
                                 <div class="col-md-2">
                                     <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
+                                        <a href="{{ route('gosford.patterndesign.detail',base64_encode($v->id)) }}" class="card-body">
                                             <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern7.png"
+                                            <img style="width:100%" src="{{getimage($v->img)}}"
                                                 alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
+                                            <p class="card-text center" style="margin-top:2px;color:black">{{$v->name_pattern}}</p>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern8.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern9.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern10.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern11.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/pattern12.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">A011 <br>Catana
-                                                Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
+                                @endforeach
 
 
                             </div>

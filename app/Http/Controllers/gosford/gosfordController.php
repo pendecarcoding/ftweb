@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\gosford;
 use App\Http\Controllers\Controller;
+use App\Models\Patterndesign;
 use Auth;
 use Hash;
 use Mail;
@@ -404,11 +405,13 @@ class gosfordController extends Controller
 
    //Pattern Design
    function patterndesign(Request $r){
-    return view('gosford.frontend.pattern.index');
+    $data = Patterndesign::where('published','Y')->orderby('id','desc')->get();
+    return view('gosford.frontend.pattern.index',compact('data'));
    }
 
-   function detailpattern(Request $r){
-    return view('gosford.frontend.pattern.detail');
+   function detailpattern($id){
+    $data = Patterndesign::where('id',base64_decode($id))->where('published','Y')->first();
+    return view('gosford.frontend.pattern.detail',compact('data'));
    }
 
    //emblem

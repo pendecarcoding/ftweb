@@ -45,7 +45,7 @@ Route::prefix('product_project')->group(function (){
         Route::get('/gosford/f/twotowncolor/detail/{id}', 'twotowncolordetail')->name('gosford.twotowncolor.detail');
         //paterndesign
         Route::get('/gosford/f/patterndesign/', 'patterndesign')->name('gosford.patterndesign');
-        Route::get('/gosford/f/patterndesign/detail', 'detailpattern')->name('gosford.patterndesign.detail');
+        Route::get('/gosford/f/patterndesign/detail/{id}', 'detailpattern')->name('gosford.patterndesign.detail');
         //embordery
         Route::get('/gosford/f/embrodery/', 'embrodery')->name('gosford.embrodery');
         Route::get('/gosford/f/embrodery/detail', 'embroderydetail')->name('gosford.embrodery.detail');

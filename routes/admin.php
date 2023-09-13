@@ -69,6 +69,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BanerController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\towncolor\TwotowncolorController;
+use App\Http\Controllers\patterndesign\PatterndesignController;
+
 
 
 
@@ -178,6 +180,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/twotowncolor/edit/{id}', 'edit')->name('twotowncolor.edit');
         Route::get('/twotowncolor/destroy/{id}', 'destroy')->name('twotowncolor.destroy');
         Route::post('/twotowncolor/published', 'change_status')->name('twotowncolor.published');
+    });
+
+
+    Route::resource('patterndesignsys', PatterndesignController::class);
+    Route::controller(PatterndesignController::class)->group(function () {
+        Route::get('/patterndesignsys/edit/{id}', 'edit')->name('patterndesignsys.edit');
+        Route::get('/patterndesignsys/destroy/{id}', 'destroy')->name('patterndesignsys.destroy');
+        Route::post('/patterndesignsys/published', 'change_status')->name('patterndesignsys.published');
     });
 
 
