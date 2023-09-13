@@ -724,25 +724,24 @@ function name_companyofbg(){
         '<h5 class="h5-milestone">Introduce GL Trim(S) Pte Ltd</h5>',
         '<h5 class="h5-milestone">Trimex Automotive (Aus) Pte Ltd Established</h5>',
         '<h5 class="h5-milestone">
-        <li>GU: ISO 9001 Certification</li>
-        <li>Establishment Trimex Malaysia</li>
-        <li> 1<span class="angka"></span><sup>ST</sup> Hyundai PDI Project</li>
+        GU: ISO 9001 Certification<br>
+        Establishment Trimex Malaysia<br>
+        1<span class="angka"></span><sup>ST</sup> Hyundai PDI Project
     </h5>',
     '<h5 class="h5-milestone">
-    <li>ISO/TS 10949:2009</li>
-    <li>1<span class="angka"></span><sup>ST</sup> Mazda PDI
-        Project</li>
-    <li>1<span class="angka"></span><sup>ST</sup> Hyundai OEM
-        Project - Inspira</li>
+    ISO/TS 10949:2009<br>
+    1<span class="angka"></span><sup>ST</sup> Mazda PDI
+        Project<br>
+    1<span class="angka"></span><sup>ST</sup> Hyundai OEM
+        Project Inspira
 </h5>',
 '<h5 class="h5-milestone">
 GLI and Trimex move to PJ Office</h5>',
 '<h5 class="h5-milestone">
-<li>1<span class="angka"></span><sup>ST</sup> Mazda OEM
+1<span class="angka"></span><sup>ST</sup> Mazda OEM
+    Project<br>
+1<span class="angka"></span><sup>ST</sup> Hyundai OEM
     Project
-</li>
-<li>1<span class="angka"></span><sup>ST</sup> Hyundai OEM
-    Project</li>
 
 </h5>',
 '<h5 class="h5-milestone">
@@ -755,9 +754,9 @@ GLI and Trimex move to PJ Office</h5>',
 1<span class="angka"></span><sup>ST</sup> Kia Project
 
 </h5>','<h5 class="h5-milestone">
-<li>1<span class="angka"></span><sup>ST</sup> Ford
-    Project</li>
-<li>IATF 16949：2016 Cert</li>
+1<span class="angka"></span><sup>ST</sup> Ford
+    Project<br>
+IATF 16949：2016 Cert
 </h5>','<h5 class="h5-milestone">
 GLI Expansion JB Plant
 </h5>','<h5 class="h5-milestone">

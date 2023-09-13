@@ -28,12 +28,12 @@
                                                 <div style="display: flex;flex-direction: column; padding: 20px;">
                                                     <p>A012-Nappa Leather</p>
                                                     <div class="img-wraping-town">
-                                                        <img style="height: 400px;"src="/public/go_system/images/twotowncolordetail.png"
+                                                        <img style="height: 400px;"src="{{getimage($data->base_img)}}"
                                                             alt="">
                                                         <img style="height: 180px;" class="twon-color1"
-                                                            src="/public/go_system/images/twoncolor1.png" alt="">
+                                                            src="{{getimage($data->color_img1)}}" alt="">
                                                         <img style="height: 112px;" class="twon-color2"
-                                                            src="/public/go_system/images/twoncolor2.png" alt="">
+                                                            src="{{getimage($data->color_img2)}}" alt="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -43,26 +43,12 @@
                                     <div class="col-md-4 col-sm-12">
                                         <div class="card">
                                             <div style="padding:20px;">
-                                                <div
-                                                    style="display: flex;flex-direction: row;justify-content: space-between;margin: 10px 10%;">
-                                                    <div style="display: flex;flex-direction: column;">
-                                                        <h6 class="title-right-product">Make:</h6>
-                                                        <p class="content-right-product"> BMW</p>
-                                                    </div>
-                                                    <div style="display: flex;flex-direction: column;">
-                                                        <h6 class="title-right-product">Model:</h6>
-                                                        <p class="content-right-product">2-Series</p>
-                                                    </div>
-                                                    <div style="display: flex;flex-direction: column;">
-                                                        <h6 class="title-right-product">Year:</h6>
-                                                        <p class="content-right-product">2017</p>
-                                                    </div>
-                                                </div>
 
 
                                                 <form action="{{ route('gosford.order_comfirmed') }}" method="post">@csrf
 
                                                     <div style="display: flex;flex-direction: column;">
+                                                        <h3>customize your color</h3>
                                                         <hr class="hr-product-detail">
                                                     </div>
 
@@ -70,79 +56,27 @@
 
                                                     Step-1 | Color Option
                                                     <!--COLOR OPTION-->
-                                                    <div style="display: flex;flex-direction: row;">
+                                                    <div style="display: flex; flex-wrap: wrap;">
+                                                        @foreach($color1 as $c1)
                                                         <div class="card-coloroption-one"
-                                                            style="background-color: #452E34;">
+                                                            style="background-color: {{$c1}}">
                                                         </div>
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: #9FC4CE;">
-                                                        </div>
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: #442452;">
-                                                        </div>
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: #8F5153;">
-                                                        </div>
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: #E35A7E;">
-                                                        </div>
-                                                    </div>
-                                                    <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: #7C6F3B;">
-                                                        </div>
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: #D4C0AD;">
-                                                        </div>
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: #484343;">
-                                                        </div>
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: #272526;">
-                                                        </div>
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: #AAA29C;">
-                                                        </div>
+                                                        @endforeach
+
                                                     </div>
                                                     <!--END COLOR OPTION-->
                                                     <!--COLOR 2 Option-->
                                                     <br>
                                                     Step-2 | Color Option
 
-                                                    <div style="display: flex;flex-direction: row;">
+                                                    <div style="display: flex; flex-wrap: wrap;">
+                                                        @foreach($color2 as $c2)
                                                         <div class="card-coloroption-two"
-                                                            style="background-color: #452E34;">
+                                                            style="background-color: {{$c2}};">
                                                         </div>
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: #9FC4CE;">
-                                                        </div>
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: #442452;">
-                                                        </div>
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: #8F5153;">
-                                                        </div>
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: #E35A7E;">
-                                                        </div>
+                                                        @endforeach
                                                     </div>
-                                                    <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: #7C6F3B;">
-                                                        </div>
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: #D4C0AD;">
-                                                        </div>
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: #484343;">
-                                                        </div>
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: #272526;">
-                                                        </div>
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: #AAA29C;">
-                                                        </div>
-                                                    </div>
+
                                                     <!--END COLOR 2 OPTION-->
 
 
@@ -155,7 +89,7 @@
                                                         <div style="display: flex;justify-content: space-between;">
                                                             <h4 style="font-weight: bold;">Total</h4>
                                                             <h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM
-                                                                XXXX</h4>
+                                                                {{$data->price}}</h4>
                                                         </div>
                                                         <br>
                                                         <div style="display: flex;justify-content: space-between;">

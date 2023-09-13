@@ -68,6 +68,8 @@ use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BanerController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\towncolor\TwotowncolorController;
+
 
 
 /*
@@ -169,6 +171,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
 
 
     });
+
+    //Two Town Color
+    Route::resource('twotowncolor', TwotowncolorController::class);
+    Route::controller(TwotowncolorController::class)->group(function () {
+        Route::get('/twotowncolor/edit/{id}', 'edit')->name('twotowncolor.edit');
+        Route::get('/twotowncolor/destroy/{id}', 'destroy')->name('twotowncolor.destroy');
+        Route::post('/twotowncolor/published', 'change_status')->name('twotowncolor.published');
+    });
+
+
 
     // Digital Product
     Route::resource('digitalproducts', DigitalProductController::class);

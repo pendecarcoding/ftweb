@@ -97,6 +97,13 @@
                         </a>
                         <!--Submenu-->
                         <ul class="aiz-side-nav-list level-2">
+                            @can('view_colors')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('colors') }}" class="aiz-side-nav-link {{ areActiveRoutes(['colors', 'colors.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Colors') }}</span>
+                                </a>
+                            </li>
+                            @endcan
                             @can('view_product_categories')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('categories.index') }}"
@@ -118,6 +125,14 @@
                                     <a href="{{ route('typecars.index') }}"
                                         class="aiz-side-nav-link {{ areActiveRoutes(['typecars.index', 'typecars.create', 'typecars.edit']) }}">
                                         <span class="aiz-side-nav-text">{{ translate('Type Cars') }}</span>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('view_all_twotowncolor')
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{ route('twotowncolor.index') }}"
+                                        class="aiz-side-nav-link {{ areActiveRoutes(['twotowncolor.index', 'twotowncolor.create', 'twotowncolor.edit']) }}">
+                                        <span class="aiz-side-nav-text">{{ translate('Two Town Color') }}</span>
                                     </a>
                                 </li>
                             @endcan
@@ -201,13 +216,7 @@
                                                                                                                                                             </a>
                                                                                                                                                         </li>
                                                                                         @endcan
-                                                                                        @can('view_colors')
-                                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                                            <a href="{{ route('colors') }}" class="aiz-side-nav-link {{ areActiveRoutes(['colors', 'colors.edit']) }}">
-                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Colors') }}</span>
-                                                                                                                                                            </a>
-                                                                                                                                                        </li>
-                                                                                        @endcan
+
                                                                                         @can('view_product_reviews')
                                                                                                                                                         <li class="aiz-side-nav-item">
                                                                                                                                                             <a href="{{ url('admin/reviews') }}" class="aiz-side-nav-link">

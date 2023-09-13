@@ -42,7 +42,7 @@ Route::prefix('product_project')->group(function (){
         Route::get('/gosford/f/twotowncolor/', 'twotowncolor')->name('gosford.twotowncolor');
         Route::get('/gosford/f/detail_product', 'detailproduct')->name('gosford.detailproduct');
         Route::post('/gosford/f/detail_product', 'detailproductoptionmake')->name('gosford.detail.selectmake');
-        Route::get('/gosford/f/twotowncolor/detail', 'twotowncolordetail')->name('gosford.twotowncolor.detail');
+        Route::get('/gosford/f/twotowncolor/detail/{id}', 'twotowncolordetail')->name('gosford.twotowncolor.detail');
         //paterndesign
         Route::get('/gosford/f/patterndesign/', 'patterndesign')->name('gosford.patterndesign');
         Route::get('/gosford/f/patterndesign/detail', 'detailpattern')->name('gosford.patterndesign.detail');

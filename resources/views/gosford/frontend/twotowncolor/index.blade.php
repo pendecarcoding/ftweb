@@ -18,128 +18,19 @@
 
                             <br>
                             <div class="row">
+                                @foreach($data as $i =>$v)
                                 <div class="col-md-2">
                                     <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
+                                        <a href="{{ route('gosford.twotowncolor.detail',base64_encode($v->id)) }}" class="card-body">
                                             <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard.png"
+                                            <img style="width:100%" src="{{getimage($v->img)}}"
                                                 alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
+                                            <p class="card-text center" style="margin-top:10px">{{$v->name_town}}</p>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard2.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard3.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard2.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard3.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard2.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard3.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard2.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather
-                                            </p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.twotowncolor.detail') }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/twotowncard3.png"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:10px">A011 <br>Catana Leather
-                                            </p>
-                                        </a>
-                                    </div>
-                                </div>
+                                @endforeach
+
                             </div>
                             <div style="text-align: center;padding: 20px 0px;">
                                 <h2>Other Product Option</h2>

@@ -525,7 +525,7 @@ input[type=file]::file-selector-button {
 }
 
 .card-coloroption-one {
-    width: 100%;
+    width: 16%;
     margin: 5px;
     height: 50px;
 }
@@ -535,7 +535,7 @@ input[type=file]::file-selector-button {
 }
 
 .card-coloroption-two {
-    width: 100%;
+    width: 16%;
     margin: 5px;
     height: 50px;
 }

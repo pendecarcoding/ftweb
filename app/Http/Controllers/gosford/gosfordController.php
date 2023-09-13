@@ -23,6 +23,7 @@ use Faker\Provider\Uuid;
 use DB;
 use  App\Models\GsystemAccount;
 use App\Models\GsystemOrder;
+use App\Models\Twotown;
 use App\Models\TypeCar;
 
 class gosfordController extends Controller
@@ -373,11 +374,15 @@ class gosfordController extends Controller
 
    //Two TownColor
    function twotowncolor(Request $r){
-        return view('gosford.frontend.twotowncolor.index');
+        $data = Twotown::orderby('id','desc')->get();
+        return view('gosford.frontend.twotowncolor.index',compact('data'));
    }
 
-   function twotowncolordetail(Request $r){
-    return view('gosford.frontend.twotowncolor.detail');
+   function twotowncolordetail($id){
+    $data = Twotown::where('id',base64_decode($id))->first();
+    $color1 =explode(',',$data->color_1);
+    $color2 = explode(',',$data->color_2);
+    return view('gosford.frontend.twotowncolor.detail',compact('data','color1','color2'));
 
    }
 

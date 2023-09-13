@@ -38,7 +38,7 @@
                                 <td><img style="width:30%" src="{{ getimage($v->image) }}"></td>
                                 <td>{{ $v->person }}</td>
                                 <td>{{ $v->position }}</td>
-                                <td>{{ $v->content }}</td>
+                                <td>{!! $v->content !!}</td>
                                 <td>
                                     <center>
                                         @can('edit_testimonial')
