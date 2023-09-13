@@ -1,8 +1,9 @@
 @extends('acewebfront.layouts')
 @section('content')
     <div class="page-content bg-white">
+        @include('acewebfront.widget.allbaner')
         <!-- Slider -->
-        <div class="section-trimex-up-card">
+        <!-- <div class="section-trimex-up-card">
             <div class="dlab-bnr-inr overlay-black-middle" style="background-image:url(/public/page/trimex/section.png);">
                 <div class="container">
 
@@ -26,7 +27,7 @@
 
 
             </div>
-        </div>
+        </div> -->
 
 
         <!-- Slider END -->
@@ -77,7 +78,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-6 m-b30">
                         <div class="video-box">
-                            <img style="width:100%" src="/public/page/gosford/thumbnail.png" alt="">
+                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/ujKY5IC6GsQ" title="Feytech, Kulim" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                         </div>
                     </div>
@@ -91,7 +92,7 @@
 
         <!-- What Clients Says -->
 
-        <div class="section-full bg-img-fix content-inner-1"
+        <!-- <div class="section-full bg-img-fix content-inner-1"
             style="background-image:url(images/background/bg5.jpg); margin-top:-1px">
             <div class="wrap-content">
                 <div class="section-head text-center text-white">
@@ -119,12 +120,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="section-full content-inner bg-white contact-style-1">
+        <!-- <div class="section-full content-inner bg-white contact-style-1">
             <div class="container">
                 <div class="row">
-                    <!-- Left part start -->
+
                     <div class="col-lg-6 d-lg-flex">
                         <div class="p-a30 m-b30 align-self-stretch"
                             style="font-family: 'Space Grotesk';padding: 25% 0px;">
@@ -182,14 +183,11 @@
 
 
                     </div>
-                    <!-- Left part END -->
-                    <!-- right part start -->
 
-                    <!-- right part END -->
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
     </div>
     </div>
