@@ -8735,7 +8735,7 @@ button.scroltop {
     position: relative;
 }
 .section-full:last-child {
-    margin-bottom: -50px;
+    margin-bottom: 0px;
 }
 /*= Section Head Part =*/
 
