@@ -26,14 +26,14 @@
                                         <div class="card">
                                             <div class="slider-product">
                                                 <div style="display: flex;flex-direction: column; padding: 20px;">
-                                                    <p>A012-Nappa Leather</p>
+                                                    <p>{{ $data->name_town }}</p>
                                                     <div class="img-wraping-town">
-                                                        <img style="height: 400px;"src="{{getimage($data->base_img)}}"
+                                                        <img style="height: 400px;"src="{{ getimage($data->base_img) }}"
                                                             alt="">
                                                         <img style="height: 180px;" class="twon-color1"
-                                                            src="{{getimage($data->color_img1)}}" alt="">
+                                                            src="{{ getimage($data->color_img1) }}" alt="">
                                                         <img style="height: 112px;" class="twon-color2"
-                                                            src="{{getimage($data->color_img2)}}" alt="">
+                                                            src="{{ getimage($data->color_img2) }}" alt="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -57,10 +57,10 @@
                                                     Step-1 | Color Option
                                                     <!--COLOR OPTION-->
                                                     <div style="display: flex; flex-wrap: wrap;">
-                                                        @foreach($color1 as $c1)
-                                                        <div class="card-coloroption-one"
-                                                            style="background-color: {{$c1}}">
-                                                        </div>
+                                                        @foreach ($color1 as $c1)
+                                                            <div class="card-coloroption-one"
+                                                                style="background-color: {{ $c1 }}">
+                                                            </div>
                                                         @endforeach
 
                                                     </div>
@@ -70,10 +70,10 @@
                                                     Step-2 | Color Option
 
                                                     <div style="display: flex; flex-wrap: wrap;">
-                                                        @foreach($color2 as $c2)
-                                                        <div class="card-coloroption-two"
-                                                            style="background-color: {{$c2}};">
-                                                        </div>
+                                                        @foreach ($color2 as $c2)
+                                                            <div class="card-coloroption-two"
+                                                                style="background-color: {{ $c2 }};">
+                                                            </div>
                                                         @endforeach
                                                     </div>
 
@@ -89,7 +89,7 @@
                                                         <div style="display: flex;justify-content: space-between;">
                                                             <h4 style="font-weight: bold;">Total</h4>
                                                             <h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM
-                                                                {{$data->price}}</h4>
+                                                                {{ $data->price }}</h4>
                                                         </div>
                                                         <br>
                                                         <div style="display: flex;justify-content: space-between;">
