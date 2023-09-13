@@ -26,6 +26,7 @@ use  App\Models\GsystemAccount;
 use App\Models\GsystemOrder;
 use App\Models\Twotown;
 use App\Models\TypeCar;
+use App\Models\Piping;
 
 class gosfordController extends Controller
 {
@@ -396,11 +397,13 @@ class gosfordController extends Controller
    }
 
    function piping(Request $r){
-    return view('gosford.frontend.piping.index');
+    $data = Piping::where('published','Y')->orderby('id','desc')->get();
+    return view('gosford.frontend.piping.index',compact('data'));
    }
 
-   function pipingdetail(Request $r){
-    return view('gosford.frontend.piping.detail');
+   function pipingdetail($id){
+    $data = Piping::where('published','Y')->where('id',base64_decode($id))->first();
+    return view('gosford.frontend.piping.detail',compact('data'));
    }
 
    //Pattern Design

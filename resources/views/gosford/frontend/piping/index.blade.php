@@ -20,18 +20,20 @@
                             </center>
                             <br>
                             <div class="row">
+
+                                @foreach($data as $i => $v)
                                 <div class="col-md-3">
                                     <div class="card towncard">
                                         <div class="card-body">
                                             <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/piping.png"
+                                            <img style="width:100%" src="{{getimage($v->img)}}"
                                                 alt="">
                                             <div class="card-body d-flex flex-column">
-                                                <p class="category-product">ALL CAR</p>
-                                                <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
-                                                <h6 class="price-product">RM3,250.00</h6>
+                                                <!-- <p class="category-product">ALL CAR</p> -->
+                                                <p class="name-product">{{$v->name_piping}}</p>
+                                                <h6 class="price-product">RM {{$v->price}}</h6>
                                             </div>
-                                            <a href="{{ route('gosford.piping.detail') }}">
+                                            <a href="{{ route('gosford.piping.detail',base64_encode($v->id)) }}">
                                                 <div class="choice-design">
                                                     <center>Choose this design</center>
                                                 </div>
@@ -39,139 +41,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="card towncard">
-                                        <div class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/piping.png"
-                                                alt="">
-                                            <div class="card-body d-flex flex-column">
-                                                <p class="category-product">ALL CAR</p>
-                                                <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
-                                                <h6 class="price-product">RM3,250.00</h6>
-                                            </div>
-                                            <a href="{{ route('gosford.piping.detail') }}">
-                                                <div class="choice-design">
-                                                    <center>Choose this design</center>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card towncard">
-                                        <div class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/piping.png"
-                                                alt="">
-                                            <div class="card-body d-flex flex-column">
-                                                <p class="category-product">ALL CAR</p>
-                                                <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
-                                                <h6 class="price-product">RM3,250.00</h6>
-                                            </div>
-                                            <a href="{{ route('gosford.piping.detail') }}">
-                                                <div class="choice-design">
-                                                    <center>Choose this design</center>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card towncard">
-                                        <div class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/piping.png"
-                                                alt="">
-                                            <div class="card-body d-flex flex-column">
-                                                <p class="category-product">ALL CAR</p>
-                                                <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
-                                                <h6 class="price-product">RM3,250.00</h6>
-                                            </div>
-                                            <a href="{{ route('gosford.piping.detail') }}">
-                                                <div class="choice-design">
-                                                    <center>Choose this design</center>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card towncard">
-                                        <div class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/piping.png"
-                                                alt="">
-                                            <div class="card-body d-flex flex-column">
-                                                <p class="category-product">ALL CAR</p>
-                                                <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
-                                                <h6 class="price-product">RM3,250.00</h6>
-                                            </div>
-                                            <a href="{{ route('gosford.piping.detail') }}">
-                                                <div class="choice-design">
-                                                    <center>Choose this design</center>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card towncard">
-                                        <div class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/piping.png"
-                                                alt="">
-                                            <div class="card-body d-flex flex-column">
-                                                <p class="category-product">ALL CAR</p>
-                                                <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
-                                                <h6 class="price-product">RM3,250.00</h6>
-                                            </div>
-                                            <a href="{{ route('gosford.piping.detail') }}">
-                                                <div class="choice-design">
-                                                    <center>Choose this design</center>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card towncard">
-                                        <div class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/piping.png"
-                                                alt="">
-                                            <div class="card-body d-flex flex-column">
-                                                <p class="category-product">ALL CAR</p>
-                                                <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
-                                                <h6 class="price-product">RM3,250.00</h6>
-                                            </div>
-                                            <a href="{{ route('gosford.piping.detail') }}">
-                                                <div class="choice-design">
-                                                    <center>Choose this design</center>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card towncard">
-                                        <div class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="/public/go_system/images/piping.png"
-                                                alt="">
-                                            <div class="card-body d-flex flex-column">
-                                                <p class="category-product">ALL CAR</p>
-                                                <p class="name-product">BMW 2 SERIES STANDARD BLACK</p>
-                                                <h6 class="price-product">RM3,250.00</h6>
-                                            </div>
-                                            <a href="{{ route('gosford.piping.detail') }}">
-                                                <div class="choice-design">
-                                                    <center>Choose this design</center>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
+
                             </div>
 
                             <div style="text-align: center;padding: 20px 0px;">

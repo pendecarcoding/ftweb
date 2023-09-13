@@ -70,6 +70,7 @@ use App\Http\Controllers\BanerController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\towncolor\TwotowncolorController;
 use App\Http\Controllers\patterndesign\PatterndesignController;
+use App\Http\Controllers\piping\PipingController;
 
 
 
@@ -188,6 +189,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/patterndesignsys/edit/{id}', 'edit')->name('patterndesignsys.edit');
         Route::get('/patterndesignsys/destroy/{id}', 'destroy')->name('patterndesignsys.destroy');
         Route::post('/patterndesignsys/published', 'change_status')->name('patterndesignsys.published');
+    });
+
+
+    Route::resource('pipingsys', PipingController::class);
+    Route::controller(PipingController::class)->group(function () {
+        Route::get('/pipingsys/edit/{id}', 'edit')->name('pipingsys.edit');
+        Route::get('/pipingsys/destroy/{id}', 'destroy')->name('pipingsys.destroy');
+        Route::post('/pipingsys/published', 'change_status')->name('pipingsys.published');
     });
 
 

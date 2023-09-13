@@ -29,55 +29,30 @@
                                                 <div style="height: 450px" id="myCarousel" class="carousel slide"
                                                     data-bs-ride="carousel">
                                                     <div class="carousel-indicators" style="bottom: -43px;">
-                                                        <img data-bs-target="#myCarousel" data-bs-slide-to="0"
-                                                            class="active" aria-current="true" aria-label="Slide 1"
-                                                            style="width:100px;height:100px"
-                                                            src="/public/go_system/images/piping-detail.jpg">
-                                                        <img data-bs-target="#myCarousel" data-bs-slide-to="1"
-                                                            aria-label="Slide 2" style="width:100px;height:100px"
-                                                            src="/public/go_system/images/piping-detail2.jpg">
-                                                        <img data-bs-target="#myCarousel" data-bs-slide-to="2"
-                                                            aria-label="Slide 3" style="width:100px;height:100px"
-                                                            src="/public/go_system/images/piping-detail3.jpg">
+                                                        @foreach(explode(',',$data->base_img)  as $index => $img)
+                                                        <img data-bs-target="#myCarousel" data-bs-slide-to="{{ $index }}" {{ $index == 0 ? 'class=active' : '' }}
+                                                        aria-current="{{ $index == 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"
+                                                        style="width:100px;height:100px"
+                                                        src="{{getimage($img)}}">
+                                                        @endforeach
                                                     </div>
                                                     <div class="carousel-inner">
+                                                        @foreach(explode(',',$data->base_img)  as $index => $img)
+                                                        @php
+                                                        $imgcolor = explode(',',$data->color_img);
+                                                        @endphp
                                                         <div class="carousel-item active">
                                                             <div class="img-wraping">
                                                                 <img style="width:100%;height: auto;"
-                                                                    src="/public/go_system/images/piping-detail.jpg"
+                                                                    src="{{getimage($img)}}"
                                                                     alt="">
                                                                 <img style="width:100%;height: auto;"
                                                                     class="leather-pattern"
-                                                                    src="/public/go_system/images/piping-detail.png"
+                                                                    src="{{getimage($imgcolor[$index])}}"
                                                                     alt="">
                                                             </div>
                                                         </div>
-
-                                                        <div class="carousel-item">
-                                                            <div class="img-wraping">
-                                                                <img style="width:100%;height: auto;"
-                                                                    src="/public/go_system/images/piping-detail2.jpg"
-                                                                    alt="">
-                                                                <img style="width:100%;height: auto;"
-                                                                    class="leather-pattern"
-                                                                    src="/public/go_system/images/piping-detail2.png"
-                                                                    alt="">
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="carousel-item">
-                                                            <div class="img-wraping">
-                                                                <img style="width:100%;height: auto;"
-                                                                    src="/public/go_system/images/piping-detail3.jpg"
-                                                                    alt="">
-                                                                <img style="width:100%;height: auto;"
-                                                                    class="leather-pattern"
-                                                                    src="/public/go_system/images/piping-detail3.png"
-                                                                    alt="">
-                                                            </div>
-                                                        </div>
-
+                                                        @endforeach
 
 
                                                     </div>
@@ -99,20 +74,9 @@
                                     <div class="col-md-4 col-sm-12">
                                         <div class="card">
                                             <div style="padding:20px;height: 500px;">
-                                                <div
-                                                    style="display: flex;flex-direction: row;justify-content: space-between;margin: 0px 10%;">
-                                                    <div style="display: flex;flex-direction: column;">
-                                                        <h6 class="title-right-product">Make:</h6>
-                                                        <p class="content-right-product"> BMW</p>
-                                                    </div>
-                                                    <div style="display: flex;flex-direction: column;">
-                                                        <h6 class="title-right-product">Model:</h6>
-                                                        <p class="content-right-product">2-Series</p>
-                                                    </div>
-                                                    <div style="display: flex;flex-direction: column;">
-                                                        <h6 class="title-right-product">Year:</h6>
-                                                        <p class="content-right-product">2017</p>
-                                                    </div>
+                                                <div style="display: flex;flex-direction: column;">
+                                                    <h3>customize your color</h3>
+
                                                 </div>
 
 
@@ -136,30 +100,14 @@
 
                                                     Color Option
                                                     <!--COLOR OPTION-->
-                                                    <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption" style="background-color: #452E34;">
+                                                    <div style="display: flex; flex-wrap: wrap;">
+                                                        @foreach(explode(',',$data->colors) as $color)
+                                                        <div class="card-coloroption" style="background-color: {{$color}};">
                                                         </div>
-                                                        <div class="card-coloroption" style="background-color: #9FC4CE;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #442452;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #8F5153;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #E35A7E;">
-                                                        </div>
+                                                        @endforeach
+
                                                     </div>
-                                                    <div style="display: flex;flex-direction: row;">
-                                                        <div class="card-coloroption" style="background-color: #7C6F3B;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #D4C0AD;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #484343;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #272526;">
-                                                        </div>
-                                                        <div class="card-coloroption" style="background-color: #AAA29C;">
-                                                        </div>
-                                                    </div>
+
                                                     <!--END COLOR OPTION-->
                                                     <div style="display: flex;flex-direction: column;">
                                                         <hr class="hr-product-detail">
@@ -168,7 +116,7 @@
                                                         <div style="display: flex;justify-content: space-between;">
                                                             <h4 style="font-weight: bold;">Total</h4>
                                                             <h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM
-                                                                XXXX</h4>
+                                                                {{$data->price}}</h4>
                                                         </div>
                                                         <div style="display: flex;justify-content: space-between;">
                                                             <a href="{{ route('gosford.piping') }}"
