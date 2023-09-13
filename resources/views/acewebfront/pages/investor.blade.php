@@ -314,7 +314,7 @@
                               <h1>
                                 <span class="decimal">126.9</span>
                               </h1>
-                              <p>MILLION (myR) 2022 - ANNUAL REVENUE</p>
+                              <p>MILLION (myR) 2022 - Annual Revenue</p>
                             </div>
                           </div>
                           <div class="col-md-4 col-sm-12">
@@ -322,7 +322,7 @@
                               <h1>
                                 <span class="decimal">38.3</span>
                               </h1>
-                              <p>MILLION  (myR) 2022 - adjusted ebitda</p>
+                              <p>MILLION  (myR) 2022 - Adjusted EBITDA</p>
                             </div>
                           </div>
                           <div class="col-md-4 col-sm-12">
