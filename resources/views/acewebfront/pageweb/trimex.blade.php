@@ -41,13 +41,13 @@
             </div>
                 <div class="section-content ">
                     <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
-                        @for($i=0;$i < 5; $i++)
+                        @for($i=0;$i < 15; $i++)
                         <div class="item" style="padding: 20px;">
                             <div class="dlab-box" >
-								<div class="dlab-media" style="border-radius: 5px;"> <a href="#"><img class="img-what-we-do" src="/public/page/trimex/slide{{$i}}.png" alt=""></a> </div>
+								<div class="dlab-media" style="border-radius: 5px;"> <a href="#"><img class="img-what-we-do" src="/public/page/trimex/assembly/{{$i}}.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
 
-									<p class="m-b0" class="wwd-text">{{slidertrimex()[$i]}}</p>
+									<p class="m-b0" class="wwd-text">{{assemblyimg()[$i]}}</p>
 								</div>
 							</div>
                         </div>

@@ -789,6 +789,28 @@ function slidertrimex(){
     return $data;
 }
 
+function assemblyimg(){
+    $data = ['Airbag Installation',
+    'Dimension Measurement with Portable CMM',
+    'Fully Assemble Seat Delivery',
+    'Fully Assemble Seats',
+    'Headrest Force checking',
+    'Installation Plastic Seat Parts',
+    'Installation Seat Cover for Back Seat',
+    'Installation Seat on Jig',
+    'Manikin Setting & Hip Point Measure',
+    'Seat Assembly',
+    'Seat Cover Assembly',
+    'Seat Functional Proffing',
+    'Seat System Functional Profffing',
+    'Steam heat for wrinkle removing',
+    'Torque Security Checking',
+    'Warehouse Management'
+  ];
+    return $data;
+}
+
+
 function menuTree($parent_id = 0)
 {
     $items = '';
