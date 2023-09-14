@@ -422,9 +422,13 @@ sup {
 
 .padding-research {
     padding: 10%;
+    display: flex;
+    align-items: center;
 }
 
 .img-research {
+    height: 350px;
+    object-fit: scale-down;
     padding: 5px 0px;
 }
 
