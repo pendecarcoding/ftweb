@@ -119,7 +119,7 @@
                 <h2 style="font-weight: bold;">Styling Customisation</h2>
             </div>
             <div class="row d-flex" style="justify-content: center;">
-                <div class="col-sm-6 col-md-2  d-flex " id="gallery">
+                <div class="col-sm-6 col-md-3  d-flex " id="gallery">
                     <a href="/public/go_system/images/menu/colors.jpg" class="card card-body border-light justify-content-between text-white shadow">
                         <div class="dlab-media dlab-img-overlay1">
                             <img style="height: 100%;border-radius: 10px;" src="/public/go_system/images/menu/menu-new.jpg" alt="">
@@ -127,7 +127,7 @@
                         <div class="title-menu-style">Color</div>
                     </a>
                 </div>
-                <div class="col-sm-6 col-md-2  d-flex ">
+                <div class="col-sm-6 col-md-3  d-flex ">
 
                     <a href="{{ route('gosford.twotowncolor') }}"
                         class="card  card-body border-light  justify-content-between text-white shadow">
@@ -141,7 +141,7 @@
 
                 </div>
 
-                <div class="col-sm-6 col-md-2  d-flex ">
+                <div class="col-sm-6 col-md-3  d-flex ">
                     <a href="{{ route('gosford.patterndesign') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
                         <div class="dlab-media dlab-img-overlay1">
@@ -150,7 +150,7 @@
                         <div class="title-menu-style">Pattern Design</div>
                     </a>
                 </div>
-                <div class="col-sm-6 col-md-2  d-flex ">
+                <div class="col-sm-6 col-md-3  d-flex ">
 
                     <a href="{{ route('gosford.piping') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
@@ -160,7 +160,7 @@
                         <div class="title-menu-style">Piping</div>
                     </a>
                 </div>
-                <div class="col-sm-6 col-md-2  d-flex ">
+                <!-- <div class="col-sm-6 col-md-2  d-flex ">
                     <a href="{{ route('gosford.emblem') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
                         <div class="dlab-media dlab-img-overlay1">
@@ -168,7 +168,7 @@
                             <div class="title-menu-style">Logo / Emblem</div>
                         </div>
                     </a>
-                </div>
+                </div> -->
             </div>
             </div>
         </section>
