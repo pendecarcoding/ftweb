@@ -146,6 +146,25 @@
                 </div>
             </div>
         </div>
+
+        <div class="section-content ">
+            <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
+                @for($i=0;$i < 5; $i++)
+                <div class="item" style="padding: 20px;">
+                    <div class="dlab-box" >
+                        <div class="dlab-media" style="border-radius: 5px;"> <a href="#"><img class="img-what-we-do" src="/public/page/trimex/slide{{$i}}.png" alt=""></a> </div>
+                        <div class="dlab-info p-a20 text-center bg-gray">
+
+                            <p class="m-b0" class="wwd-text">{{slidertrimex()[$i]}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                @endfor
+
+
+            </div>
+        </div>
         <!-- <div class="section-full bg-img-fix content-inner-1" style="    background-color: #F4F4F2; background-image:url(images/background/bg5.jpg); margin-top:-1px">
             <div class="container">
                 <div class="section-head text-center text-white">
