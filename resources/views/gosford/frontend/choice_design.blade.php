@@ -53,7 +53,7 @@
                                 <form action="{{ route('gosford.detail.selectmake') }}" method="post">@csrf
                                     <div style="display: flex;flex-direction: column;">
                                         <hr class="hr-product-detail">
-                                        <input type="hidden" name="id" id="id_leather">
+                                        <input type="hidden" name="id" id="id_leather" required>
                                         Material: <span style="color: #BF1D2C;" id="name-material">Full leather</span>
 
                                         <div class="list-leather" style="gap: 15px;
@@ -86,7 +86,7 @@
                                                     notice, price display are without customisation.</p>
                                             </div>
                                             <div style="display: flex;gap:20px">
-                                                <a href="{{ url('product_project') }}" style="padding: 0px 30px;" type="submit"
+                                                <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
                                                     class="mdl-button mdl-js-button mdl-button--raised btn-back"
                                                     data-upgraded=",MaterialButton">
                                                     Back

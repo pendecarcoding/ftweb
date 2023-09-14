@@ -453,9 +453,14 @@ class gosfordController extends Controller
    }
 
    function detailproductoptionmake(Request $r){
-    $leather = TypeLeather::where('id',$r->id)->first();
-    $brand   = Brand::all();
-    return view('gosford.frontend.product.detail_product_selectmake',compact('brand','leather'));
+    if(!empty($r->id)){
+        $leather = TypeLeather::where('id',$r->id)->first();
+        $brand   = Brand::all();
+        return view('gosford.frontend.product.detail_product_selectmake',compact('brand','leather'));
+    }else{
+        return back()->with('danger','You must select the leather');
+    }
+
    }
 
    function getmodelfrommake($make=null){
