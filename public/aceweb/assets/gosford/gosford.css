@@ -6,6 +6,10 @@ footer {
 }
 
 
+.material{
+    cursor: pointer;
+}
+
 
 .img-bg-mil-wrap{
     height: 450px;
@@ -425,6 +429,8 @@ sup {
     padding: 25%;
     display: flex;
     align-items: center;
+    color: #999999;
+    font-size: 16px;
 }
 
 .img-research {

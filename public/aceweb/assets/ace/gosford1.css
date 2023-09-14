@@ -113,6 +113,7 @@ html {
 .caption_leadership{
     position: absolute;
     bottom: 19px;
+    text-align: center;
     width: 100%;
     padding: 11px;
 }
