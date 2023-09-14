@@ -146,7 +146,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-full bg-img-fix content-inner-1" style="    background-color: #F4F4F2; background-image:url(images/background/bg5.jpg); margin-top:-1px">
+        <!-- <div class="section-full bg-img-fix content-inner-1" style="    background-color: #F4F4F2; background-image:url(images/background/bg5.jpg); margin-top:-1px">
             <div class="container">
                 <div class="section-head text-center text-white">
                     <h2 class="text-capitalize" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;">PDI Projects </h2>
@@ -205,7 +205,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
