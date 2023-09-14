@@ -30,7 +30,7 @@
                                                 <div class="card-body d-flex flex-column">
                                                     <!-- <p class="category-product">ALL CAR</p> -->
                                                     <p class="name-product">{{ $v->name_piping }}</p>
-                                                    <h6 class="price-product">RM {{ $v->price }}</h6>
+                                                    <!-- <h6 class="price-product">RM {{ $v->price }}</h6> -->
                                                 </div>
                                                 <a href="{{ route('gosford.piping.detail', base64_encode($v->id)) }}">
                                                     <div class="choice-design">
@@ -52,8 +52,8 @@
                                             href="{{ route('gosford.twotowncolor') }}" class="menu-href">Two Tone
                                             Color</a></div>
 
-                                    <div class="card" style="padding: 10px;width:100%"><a
-                                            href="{{ route('gosford.emblem') }}" class="menu-href">Logo/Emblem</a></div>
+                                    <!-- <div class="card" style="padding: 10px;width:100%"><a
+                                            href="{{ route('gosford.emblem') }}" class="menu-href">Logo/Emblem</a></div> -->
                                     <div class="card" style="padding: 10px;width:100%"><a
                                             href="{{ route('gosford.patterndesign') }}" class="menu-href">Pattern
                                             Design</a></div>
