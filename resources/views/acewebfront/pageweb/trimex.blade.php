@@ -35,7 +35,7 @@
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">What We do?</h2>
+                    <h2 class="text-capitalize">Our Line of Precision</h2>
 
                 </div>
             </div>
