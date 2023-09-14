@@ -66,7 +66,7 @@
                                         <div class="clearfix" style="gap:15px;display: flex;flex-direction: row;position: relative;white-space: nowrap;">
                                             @foreach($leather as $i => $vl)
                                             <div id="material{{$vl->id}}" data-id="{{$vl->id}}" class=" material">
-                                                <img style="height: 64px;width:100px;object-fit: cover;" src="{{getimage($vl->img)}}" alt="">
+                                                <img style="height: 64px;width: 100%;object-fit: cover;" src="{{getimage($vl->img)}}" alt="">
                                                 <center>{{$vl->name_leather}}</center>
                                             </div>
                                             @endforeach
@@ -133,8 +133,7 @@
             </div>
             <div class="row d-flex" style="justify-content: center;">
                 <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="#"
-                        class="card  card-body border-light  justify-content-between  text-white shadow">
+                    <a href="#" class="card card-body border-light justify-content-between text-white shadow" id="gallery">
                         <div class="dlab-media dlab-img-overlay1">
                             <img style="height: 100%;border-radius: 10px;" src="/public/go_system/images/menu/menu-new.jpg" alt="">
                         </div>
@@ -239,5 +238,21 @@
             });
         });
     </script>
+
+    <script>
+    // Initialize LightGallery
+    document.addEventListener("DOMContentLoaded", function () {
+        const gallery = document.getElementById("gallery");
+
+        if (gallery) {
+            lightGallery(gallery, {
+                src:'https://media.npr.org/assets/img/2023/09/13/2023-09-13t074213z_2074692122_rc2c73ax5pfm_rtrmadp_3_mexico-ufo_slide-0172fe4f9ee43a6eb7ee12224f3d4fd17643a4a4-s800-c85.webp',
+                mode: 'lg-fade', // Choose your preferred gallery mode
+                download: true, // Set to true if you want to enable download links
+                thumbnail: true, // Set to true if you want to display thumbnails
+            });
+        }
+    });
+</script>
 
 @endsection

@@ -149,7 +149,7 @@
                             <p>{{$ceo->position}}</p>
                             <br>
                             <br>
-                            <a href="{{ url('investor_relations/message_from_ceo') }}" class="btn gsf-button">Read More</a>
+                            <!-- <a href="{{ url('investor_relations/message_from_ceo') }}" class="btn gsf-button">Read More</a> -->
                           </div>
                           <div class="col-md-5 col-sm-5">
                             <div class="card">
@@ -296,7 +296,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                  <h1 data-aos="fade-up" class="aos-init aos-animate">2022 key performance stats</h1>
+                  <h1 data-aos="fade-up" class="aos-init aos-animate">2022 Key Performance Stats</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
                   <p class="strength-font">The Group’s revenue increased by RM41.7 million or 49.0% from RM85.2 million in FYE 2021 to
@@ -404,7 +404,7 @@
                         DOWNLOAD
                         <span class="h-dash" style="font-weight: bold">—</span>
                       </div>
-                      <h1>Investor relations information</h1>
+                      <h1>Investor Relations Information</h1>
                     </div>
                   </div>
 
