@@ -29,7 +29,7 @@ Route::prefix('g_system')->group(function (){
         Route::get('/ft_account/recoverypassword','confircoderecovery')->name('gosford.front.confircoderecovery');
         Route::post('/ft_account/confirpassword','confirpassword')->name('gosford.front.confirpassword');
 
-
+        Route::post('/gosford/order_leather', 'orderleather')->name('gosford.front.order_leather');
 
 
     });
@@ -70,6 +70,9 @@ Route::middleware(['GsystemMildware'])->group(function () {
             Route::any('/gosford/choice_design', 'choiceDesign')->name('gosford.choice_design');
             Route::get('/gosford/option_sumary/{slug}', 'optionsummary')->name('gosford.optionsummary');
             Route::post('/gosford/order_comfirmed', 'ordercomfirmed')->name('gosford.order_comfirmed');
+
+
+
             Route::get('/gosford/listorder', 'listorder')->name('gosford.listorder');
             Route::get('/gosford/logout', 'logout')->name('gosford.logout');
             Route::get('/gosford/logouts', 'logouts')->name('gosford.logouts');

@@ -12,15 +12,13 @@
                         <div class="container">
                             <div class="container">
                                 <div class="card">
-                                    <div class="row" style="height: 700px;">
+                                    <div class="row">
 
                                         <div class="col-md-6 col-sm-12">
 
-                                            <div class="slider-product" style="height: 750px;">
+                                            <div class="slider-product">
                                                 <div style="display: flex;flex-direction: column;">
-                                                    <img style="width: 100%;
-                                                    object-fit: cover;
-                                                    height: 700px;" src="/public/assets/img/seat-detail.png" alt="">
+                                                    <img src="/public/assets/img/seat-detail.png" alt="">
                                                 </div>
                                             </div>
 
@@ -31,20 +29,21 @@
                                             <div style="padding:20px;">
                                                 <h5 style="color: black;font-weight: bold;">Car Seat Leather</h5>
 
-                                                <form action="{{ route('gosford.front.order_comfirmed') }}" method="post">@csrf
+                                                <form action="{{ route('gosford.front.order_leather') }}" method="post">@csrf
 
                                                     <div style="display: flex;flex-direction: column;">
                                                         <hr class="hr-product-detail">
                                                     </div>
 
+                                                    <input type="hidden" name="id_leather" value="{{$leather->id}}">
 
-
-                                                    Material: <span style="color: #BF1D2C;" id="name-material">Full
-                                                        leather</span>
+                                                    Material: <span style="color: #BF1D2C;" id="name-material">
+                                                        {{$leather->name_leather}}
+                                                    </span>
                                                     <!--COLOR OPTION-->
                                                     <div style="display: flex;flex-direction: row;">
                                                         <div id="full-material" class="card card-coloroption-one">
-                                                            <img src="/public/assets/img/full-leather.png" alt="">
+                                                            <img src="{{getimage($leather->img)}}" alt="">
                                                         </div>
                                                         <div  class="card-coloroption-one">
 
@@ -67,24 +66,24 @@
                                                     <div style="display: flex;flex-direction: column;">
 
                                                         <div>
-                                                            <input type="text" class="form-control" placeholder="Name *">
+                                                            <input type="text" class="form-control" placeholder="Name *" name="name" required>
                                                         </div>
                                                         <br>
                                                         <div>
-                                                            <input type="text" class="form-control" placeholder="Contact number *">
+                                                            <input type="text" name="contact" class="form-control" placeholder="Contact number *" required>
                                                         </div>
                                                         <br>
                                                         <div>
-                                                            <input type="email" class="form-control" placeholder="Email *">
+                                                            <input type="email" name="email" class="form-control" placeholder="Email *" required>
                                                         </div>
                                                         <div style="display: flex;gap:20px">
-                                                            <select id="carMakeSelect" onchange="updateCarModels()" class="select-order mdl-textfield__input" type="text" name="carmake">
+                                                            <select id="carMakeSelect" onchange="updateCarModels()" class="select-order mdl-textfield__input" type="text" name="car_make">
                                                                 <option value="">Car Make</option>
                                                                 @foreach($brand as $i => $b)
                                                                  <option value="{{$b->id}}">{{$b->name}}</option>
                                                                 @endforeach
                                                             </select>
-                                                            <select id="carModelSelect" onchange="searchYear()" class="select-order mdl-textfield__input" type="text" name="model">
+                                                            <select id="carModelSelect" onchange="searchYear()" class="select-order mdl-textfield__input" type="text" name="car_model">
                                                                 <option value="">Car Model</option>
                                                             </select>
                                                             <select id="carYearSelect" class="select-order mdl-textfield__input" type="text" name="year">
@@ -92,13 +91,12 @@
                                                             </select>
                                                         </div>
                                                         <div>
-                                                            <textarea style="    height: 164px;" name="requiretment" class="form-control">If you have any requirements or need special attention to details, please leave your information.</textarea>
+                                                            <textarea placeholder="If you have any requirements or need special attention to details, please leave your information." style="height: 164px;" name="requiretment" class="form-control"></textarea>
                                                         </div>
                                                     </div>
                                                     <br>
 
-                                                    <center><h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM
-                                                        3900.00</h4></center>
+                                                    <center><h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM {{$leather->price}}</h4></center>
                                                     <div style="display: flex;gap:20px;justify-content: center;">
                                                         <a href="{{ url('product_project') }}"
                                                             style="padding: 0px 30px;" type="submit"
@@ -130,34 +128,6 @@
             </div>
         </section>
     </main>
-    <script>
-        // Function to update the total based on the selected material
-        function updateTotal(materialPrice, material) {
-            var totalElement = document.getElementById("total");
-            var namematerial = document.getElementById("name-material");
-            var currentTotal = parseFloat(totalElement.textContent.replace("RM", "").trim());
-            var newTotal = materialPrice;
-            totalElement.textContent = "RM " + newTotal.toFixed(2);
-            namematerial.textContent = material;
-        }
-
-        // Add click event listeners to the material options
-        document.getElementById("full-material").addEventListener("click", function() {
-            // Update the total when Full Leather is clicked
-            updateTotal(3900, 'Full Leather'); // Replace 100 with the actual price for Full Leather
-        });
-
-        document.getElementById("semi-material").addEventListener("click", function() {
-            // Update the total when Semi Leather is clicked
-            updateTotal(3200, 'Semi Leather'); // Replace 75 with the actual price for Semi Leather
-        });
-
-        document.getElementById("pvc-material").addEventListener("click", function() {
-            // Update the total when PVC is clicked
-            updateTotal(3000, 'PVC'); // Replace 50 with the actual price for PVC
-        });
-    </script>
-
 <script>
     function updateCarModels() {
       // Get selected car make

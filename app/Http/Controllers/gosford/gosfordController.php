@@ -27,6 +27,7 @@ use App\Models\GsystemOrder;
 use App\Models\Twotown;
 use App\Models\TypeCar;
 use App\Models\Piping;
+use App\Models\TypeLeather;
 
 class gosfordController extends Controller
 {
@@ -426,6 +427,25 @@ class gosfordController extends Controller
    }
 
 
+   function orderleather(Request $r){
+        $data = [
+            'id_leather'=>$r->id_leather,
+            'name'=>$r->name,
+            'contact'=>$r->contact,
+            'email'=>$r->email,
+            'car_make'=>$r->car_make,
+            'car_model'=>$r->car_model,
+            'year'=>$r->year,
+        ];
+        try {
+            DB::table('order_leather')->insert($data);
+            return view('gosford.frontend.comfirm_order');
+        } catch (\Throwable $th) {
+
+        }
+   }
+
+
    //Detail Product
 
    function detailproduct(Request $r){
@@ -433,8 +453,9 @@ class gosfordController extends Controller
    }
 
    function detailproductoptionmake(Request $r){
+    $leather = TypeLeather::where('id',$r->id)->first();
     $brand   = Brand::all();
-    return view('gosford.frontend.product.detail_product_selectmake',compact('brand'));
+    return view('gosford.frontend.product.detail_product_selectmake',compact('brand','leather'));
    }
 
    function getmodelfrommake($make=null){

@@ -40,27 +40,20 @@
             <div class="wrap-content">
                 <div class="card">
                     <div class="row">
-
                         <div class="col-md-6 col-sm-12">
-
                             <div class="slider-product">
                                 <div style="display: flex;flex-direction: column;">
                                     <img src="/public/assets/img/seat-detail.png" alt="">
                                 </div>
                             </div>
-
-
                         </div>
                         <div class="col-md-6 col-sm-12">
-
                             <div style="padding:20px;">
                                 <h5 style="color: black;font-weight: bold;">Car Seat Leather</h5>
-
                                 <form action="{{ route('gosford.detail.selectmake') }}" method="post">@csrf
-
                                     <div style="display: flex;flex-direction: column;">
                                         <hr class="hr-product-detail">
-
+                                        <input type="hidden" name="id" id="id_leather">
                                         Material: <span style="color: #BF1D2C;" id="name-material">Full leather</span>
 
                                         <div class="list-leather" style="gap: 15px;
@@ -75,16 +68,6 @@
                                             </div>
                                             @endforeach
                                         </div>
-                                        <!--END COLOR OPTION-->
-                                        <!--COLOR 2 Option-->
-
-
-                                        <!--END COLOR 2 OPTION-->
-
-
-
-
-
                                         <div style="display: flex;flex-direction: column;padding: 50px 0px;">
                                             <div style="display: flex;gap:20px">
                                                 <h4 style="font-weight: bold;"></h4>
@@ -184,13 +167,9 @@
                             <img src="/public/go_system/images/menu/menu_5.png" alt="">
                             <div class="title-menu-style">Logo / Emblem</div>
                         </div>
-
                     </a>
                 </div>
-
             </div>
-
-
             </div>
         </section>
         <section>
@@ -224,6 +203,7 @@
 
             $('.material').click(function() {
                 var materialId = $(this).data('id');
+                $('#id_leather').val(materialId);
                 $.ajax({
                     type: 'POST', // Ganti ke metode POST
                     url: "{{url('fetch_price/sys/price')}}", // Ganti dengan URL yang sesuai di dalam Laravel
