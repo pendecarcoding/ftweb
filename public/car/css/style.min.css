@@ -3250,7 +3250,7 @@ blockquote:before {
 /*header style 1 (default) */
 /*header style 2 (center content) */
 .header-nav .nav.nav-style > li > a{
-    padding: 5px 10px 10px;
+    padding: 5px 6px 10px
 }
 .header-nav .nav.nav-style > li,
 .is-fixed .header-nav .nav.nav-style > li{
