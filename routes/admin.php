@@ -68,6 +68,7 @@ use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BanerController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\LeatherController;
 use App\Http\Controllers\towncolor\TwotowncolorController;
 use App\Http\Controllers\patterndesign\PatterndesignController;
 use App\Http\Controllers\piping\PipingController;
@@ -197,6 +198,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/pipingsys/edit/{id}', 'edit')->name('pipingsys.edit');
         Route::get('/pipingsys/destroy/{id}', 'destroy')->name('pipingsys.destroy');
         Route::post('/pipingsys/published', 'change_status')->name('pipingsys.published');
+    });
+
+    // Leather
+    Route::resource('leather', LeatherController::class);
+    Route::controller(LeatherController::class)->group(function () {
+        Route::get('/leather/edit/{id}', 'edit')->name('leather.edit');
+        Route::get('/leather/destroy/{id}', 'destroy')->name('leather.destroy');
     });
 
 

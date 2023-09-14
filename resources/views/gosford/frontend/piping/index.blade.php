@@ -21,26 +21,25 @@
                             <br>
                             <div class="row">
 
-                                @foreach($data as $i => $v)
-                                <div class="col-md-3">
-                                    <div class="card towncard">
-                                        <div class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="{{getimage($v->img)}}"
-                                                alt="">
-                                            <div class="card-body d-flex flex-column">
-                                                <!-- <p class="category-product">ALL CAR</p> -->
-                                                <p class="name-product">{{$v->name_piping}}</p>
-                                                <h6 class="price-product">RM {{$v->price}}</h6>
-                                            </div>
-                                            <a href="{{ route('gosford.piping.detail',base64_encode($v->id)) }}">
-                                                <div class="choice-design">
-                                                    <center>Choose this design</center>
+                                @foreach ($data as $i => $v)
+                                    <div class="col-md-3">
+                                        <div class="card towncard">
+                                            <div class="card-body">
+                                                <!-- Card content goes here -->
+                                                <img style="width:100%" src="{{ getimage($v->img) }}" alt="">
+                                                <div class="card-body d-flex flex-column">
+                                                    <!-- <p class="category-product">ALL CAR</p> -->
+                                                    <p class="name-product">{{ $v->name_piping }}</p>
+                                                    <h6 class="price-product">RM {{ $v->price }}</h6>
                                                 </div>
-                                            </a>
+                                                <a href="{{ route('gosford.piping.detail', base64_encode($v->id)) }}">
+                                                    <div class="choice-design">
+                                                        <center>Choose this design</center>
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 @endforeach
 
                             </div>
@@ -52,8 +51,7 @@
                                     <div class="card" style="padding: 10px;width:100%"><a
                                             href="{{ route('gosford.twotowncolor') }}" class="menu-href">Two Tone
                                             Color</a></div>
-                                    <div class="card" style="padding: 10px;width:100%"><a
-                                            href="{{ route('gosford.embrodery') }}" class="menu-href">Embordery</a></div>
+
                                     <div class="card" style="padding: 10px;width:100%"><a
                                             href="{{ route('gosford.emblem') }}" class="menu-href">Logo/Emblem</a></div>
                                     <div class="card" style="padding: 10px;width:100%"><a
@@ -71,8 +69,8 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                                    <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-                                </div> -->
+                                        <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                                    </div> -->
 
     </main>
 @endsection

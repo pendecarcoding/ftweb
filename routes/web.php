@@ -110,6 +110,7 @@ Route::controller(AceController::class)->group(function(){
     Route::post('/stuffb/back/register','registerstuff')->name('stuff.register');
     Route::any('/{page}','page')->name('page');
     Route::get('/{page}/{slug}','pageslug')->name('pageslug');
+    Route::post('fetch_price/sys/price','fetchPrice')->name('fetchPrice');
     Route::post('forcorporate/addrequest/submit','addrequest')->name('forcorporate.addrequest');
     Route::get('/view/track-your-order/code', 'trackOrder')->name('orders.track');
     Route::get('/view/mobile/loginstaff', 'loginstaffview')->name('mobile.login.staff');

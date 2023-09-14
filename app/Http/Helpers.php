@@ -774,6 +774,16 @@ function checkchild($id){
     return $data;
 }
 
+
+function getleatherbyid($id){
+    try {
+        $data = DB::table('type_leather')->where('id',$id)->first();
+        return $data;
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+}
+
 function slidertrimex(){
     $data = ['Emboss','Embroidery','installation','Steering Wrap','Console Wrap'];
     return $data;

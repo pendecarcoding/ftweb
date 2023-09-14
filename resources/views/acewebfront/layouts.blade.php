@@ -1037,6 +1037,9 @@
     </script>
 
 
+
+
+
     <script src="{{ static_asset('car') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 
 

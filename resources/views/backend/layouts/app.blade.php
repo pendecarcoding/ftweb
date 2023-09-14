@@ -26,15 +26,15 @@
     @if (\App\Models\Language::where('code', Session::get('locale', Config::get('app.locale')))->first()->rtl == 1)
         <link rel="stylesheet" href="{{ static_asset('assets/css/bootstrap-rtl.min.css') }}">
     @endif
-    @if(Request::is('admin/menu*'))
-    <link rel="stylesheet" href="/public/assets/css/jquery.nestable.css">
-    <link rel="stylesheet" href="/public/assets/css/style.css">
+    @if (Request::is('admin/menu*'))
+        <link rel="stylesheet" href="/public/assets/css/jquery.nestable.css">
+        <link rel="stylesheet" href="/public/assets/css/style.css">
     @endif
     <link rel="stylesheet" href="{{ static_asset('assets/css/aiz-core.css') }}">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
-    <link href="{{ static_asset('assets/Datatables/datatables.min.css') }}" rel="stylesheet"/>
+    <link href="{{ static_asset('assets/Datatables/datatables.min.css') }}" rel="stylesheet" />
     <script src="{{ static_asset('assets/Datatables/datatables.min.js') }}"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
@@ -46,42 +46,42 @@
         }
 
         .accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
 
-.active, .accordion:hover {
-  background-color: #ccc;
-}
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
 
-.accordion:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
 
-.active:after {
-  content: "\2212";
-}
+        .active:after {
+            content: "\2212";
+        }
 
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
     </style>
 
     <script>
@@ -206,43 +206,69 @@
         });
     </script>
     <script>
-       CKEDITOR.replace( 'editor' );
+        CKEDITOR.replace('editor');
     </script>
- <script>
-    $(document).ready(function(){
+    <script>
+        $(document).ready(function() {
 
-    	function updateToDatabase(idString){
-    	   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': '{{csrf_token()}}'}});
+            function updateToDatabase(idString) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                });
 
-    	   $.ajax({
-              url:'{{url('/menu/update-order')}}',
-              method:'POST',
-              data:{ids:idString},
-              success:function(){
-                 alert('Successfully updated')
-               	 //do whatever after success
-              }
-           })
-    	}
-
-        var target = $('.sort_menu');
-        target.sortable({
-            handle: '.handle',
-            placeholder: 'highlight',
-            axis: "y",
-            update: function (e, ui){
-               var sortData = target.sortable('toArray',{ attribute: 'data-id'})
-               updateToDatabase(sortData.join(','))
+                $.ajax({
+                    url: '{{ url('/menu/update-order') }}',
+                    method: 'POST',
+                    data: {
+                        ids: idString
+                    },
+                    success: function() {
+                        alert('Successfully updated')
+                        //do whatever after success
+                    }
+                })
             }
-        })
 
-    })
+            var target = $('.sort_menu');
+            target.sortable({
+                handle: '.handle',
+                placeholder: 'highlight',
+                axis: "y",
+                update: function(e, ui) {
+                    var sortData = target.sortable('toArray', {
+                        attribute: 'data-id'
+                    })
+                    updateToDatabase(sortData.join(','))
+                }
+            })
+
+        })
+    </script>
+<script>
+    function validateoverride(input) {
+        var inputValue = input.value;
+        inputValue = inputValue.replace(/,/g, ''); // Remove commas
+        inputValue = inputValue.replace(/[^0-9.]/g, ''); // Allow only digits and dots
+
+        // Ensure there is at most one dot, and it's not the first character
+        var dotCount = inputValue.split('.').length - 1;
+        if (dotCount > 1 || inputValue.startsWith('.')) {
+            input.value = inputValue.substring(0, inputValue.lastIndexOf('.'));
+        }
+    }
 </script>
-@if(Request::is('admin/menu*'))
-<script src="{{ static_asset('assets/js/jquery-3.4.1.min.js')}}"></script>
-<script src="{{ static_asset('assets/js/jquery.nestable.js')}}"></script>
-<script src="{{ static_asset('assets/js/script.js')}}"></script>
-@endif
+
+
+
+
+
+    @if (Request::is('admin/menu*'))
+        <script src="{{ static_asset('assets/js/jquery-3.4.1.min.js') }}"></script>
+        <script src="{{ static_asset('assets/js/jquery.nestable.js') }}"></script>
+        <script src="{{ static_asset('assets/js/script.js') }}"></script>
+    @endif
 </body>
 
 </html>

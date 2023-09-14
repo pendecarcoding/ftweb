@@ -63,8 +63,7 @@
                                     <div class="card" style="padding: 10px;width:100%"><a
                                             href="{{ route('gosford.twotowncolor') }}" class="menu-href">Two Tone Color</a>
                                     </div>
-                                    <div class="card" style="padding: 10px;width:100%"><a
-                                            href="{{ route('gosford.embrodery') }}" class="menu-href">Embordery</a></div>
+
                                     <div class="card" style="padding: 10px;width:100%"><a
                                             href="{{ route('gosford.piping') }}" class="menu-href">Piping</a></div>
                                     <div class="card" style="padding: 10px;width:100%"><a
@@ -82,8 +81,8 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                                                            <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-                                                        </div> -->
+                                                                <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                                                            </div> -->
 
     </main>
     <script>

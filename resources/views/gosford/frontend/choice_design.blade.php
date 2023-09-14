@@ -60,70 +60,62 @@
 
                                     <div style="display: flex;flex-direction: column;">
                                         <hr class="hr-product-detail">
-                                    </div>
 
-
-
-                                    Material: <span style="color: #BF1D2C;" id="name-material">Full leather</span>
-                                    <!--COLOR OPTION-->
-                                    <div style="display: flex;flex-direction: row;">
-                                        <div id="full-material" class="card card-coloroption-one">
-                                            <img src="/public/assets/img/full-leather.png" alt="">
-                                            <center>Full Leather</center>
+                                        Material: <span style="color: #BF1D2C;" id="name-material">Full leather</span>
+                                        <!--COLOR OPTION-->
+                                        <div class="clearfix" style="gap:15px;display: flex;flex-direction: row;position: relative;white-space: nowrap;">
+                                            @foreach($leather as $i => $vl)
+                                            <div id="material{{$vl->id}}" data-id="{{$vl->id}}" class=" material">
+                                                <img style="height: 64px;width:100px;object-fit: cover;" src="{{getimage($vl->img)}}" alt="">
+                                                <center>{{$vl->name_leather}}</center>
+                                            </div>
+                                            @endforeach
                                         </div>
-                                        <div id="semi-material" class="card-coloroption-one">
-                                            <img src="/public/assets/img/semi-leather.png" alt="">
-                                            <center>Semi Leather</center>
-                                        </div>
-                                        <div id="pvc-material" class="card-coloroption-one">
-                                            <img src="/public/assets/img/pvc-leather.png" alt="">
-                                            <center>PVC</center>
-                                        </div>
+                                        <!--END COLOR OPTION-->
+                                        <!--COLOR 2 Option-->
 
 
-                                    </div>
-                                    <!--END COLOR OPTION-->
-                                    <!--COLOR 2 Option-->
-                                    <br>
-
-                                    <!--END COLOR 2 OPTION-->
+                                        <!--END COLOR 2 OPTION-->
 
 
 
-                                    <div style="display: flex;flex-direction: column;">
-                                        <hr class="hr-product-detail">
-                                    </div>
 
-                                    <div style="display: flex;flex-direction: column;">
-                                        <div style="display: flex;gap:20px">
-                                            <h4 style="font-weight: bold;">Total</h4>
-                                            <h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM
-                                                3900.00</h4>
-                                        </div>
-                                        <br>
-                                        <div>
-                                            <p>We are delighted to present our latest masterpiece to you high quality
-                                                automotive leather. This copy will showcase the true charm of this exquisite
-                                                creation.</p>
-                                        </div>
-                                        <br>
-                                        <div>
-                                            <p style="color:#BF1D2C;">Prices display are subject to change without prior
-                                                notice, price display are without customisation.</p>
-                                        </div>
-                                        <div style="display: flex;gap:20px">
-                                            <a href="{{ url('product_project') }}" style="padding: 0px 30px;" type="submit"
-                                                class="mdl-button mdl-js-button mdl-button--raised btn-back"
-                                                data-upgraded=",MaterialButton">
-                                                Back
-                                            </a>
-                                            <button type="submit" style="padding: 0px 30px;" type="submit"
-                                                class="mdl-button mdl-js-button mdl-button--raised color--gray"
-                                                data-upgraded=",MaterialButton">
-                                                Submit
-                                            </button>
+
+                                        <div style="display: flex;flex-direction: column;padding: 50px 0px;">
+                                            <div style="display: flex;gap:20px">
+                                                <h4 style="font-weight: bold;">Total</h4>
+                                                <h4 id="total" style="color:#BF1D2C;font-weight:bold;">
+                                                    </h4>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <p>We are delighted to present our latest masterpiece to you high quality
+                                                    automotive leather. This copy will showcase the true charm of this exquisite
+                                                    creation.</p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <p style="color:#BF1D2C;">Prices display are subject to change without prior
+                                                    notice, price display are without customisation.</p>
+                                            </div>
+                                            <div style="display: flex;gap:20px">
+                                                <a href="{{ url('product_project') }}" style="padding: 0px 30px;" type="submit"
+                                                    class="mdl-button mdl-js-button mdl-button--raised btn-back"
+                                                    data-upgraded=",MaterialButton">
+                                                    Back
+                                                </a>
+                                                <button type="submit" style="padding: 0px 30px;" type="submit"
+                                                    class="mdl-button mdl-js-button mdl-button--raised color--gray"
+                                                    data-upgraded=",MaterialButton">
+                                                    Submit
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
+
+
+
+
                                 </form>
 
                             </div>
@@ -221,31 +213,31 @@
         </section>
 
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // Function to update the total based on the selected material
-        function updateTotal(materialPrice, material) {
-            var totalElement = document.getElementById("total");
-            var namematerial = document.getElementById("name-material");
-            var currentTotal = parseFloat(totalElement.textContent.replace("RM", "").trim());
-            var newTotal = materialPrice;
-            totalElement.textContent = "RM " + newTotal.toFixed(2);
-            namematerial.textContent = material;
-        }
+        $(document).ready(function() {
+            // Mengambil token CSRF dari meta tag
+            var csrfToken = $('meta[name="csrf-token"]').attr('content');
 
-        // Add click event listeners to the material options
-        document.getElementById("full-material").addEventListener("click", function() {
-            // Update the total when Full Leather is clicked
-            updateTotal(3900, 'Full Leather'); // Replace 100 with the actual price for Full Leather
-        });
-
-        document.getElementById("semi-material").addEventListener("click", function() {
-            // Update the total when Semi Leather is clicked
-            updateTotal(3200, 'Semi Leather'); // Replace 75 with the actual price for Semi Leather
-        });
-
-        document.getElementById("pvc-material").addEventListener("click", function() {
-            // Update the total when PVC is clicked
-            updateTotal(3000, 'PVC'); // Replace 50 with the actual price for PVC
+            $('.material').click(function() {
+                var materialId = $(this).data('id');
+                $.ajax({
+                    type: 'POST', // Ganti ke metode POST
+                    url: "{{url('fetch_price/sys/price')}}", // Ganti dengan URL yang sesuai di dalam Laravel
+                    data: {
+                        _token: csrfToken, // Menggunakan token CSRF
+                        id: materialId
+                    },
+                    success: function(response) {
+                        // Menampilkan data yang diterima dalam elemen dengan id 'priceContainer'
+                        $('#name-material').html(response.name_leather);
+                        $('#total').html('RM '+response.price);
+                        // Anda dapat menambahkan baris ini untuk menampilkan atribut lainnya
+                        // $('#priceContainer').append('Atribut Lain: ' + response.nama_atribut_lain);
+                    }
+                });
+            });
         });
     </script>
+
 @endsection

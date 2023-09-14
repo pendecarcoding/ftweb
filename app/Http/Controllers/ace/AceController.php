@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\ace;
 use App\Http\Controllers\Controller;
 use App\Models\TypeCar;
+use App\Models\TypeLeather;
 use Auth;
 use Hash;
 use Mail;
@@ -132,6 +133,13 @@ class AceController extends Controller
         return view('mobile.login.user');
     }
 
+    public function fetchPrice(Request $request) {
+        $materialId = $request->input('id');
+        $data = TypeLeather::where('id', $materialId)->first();
+
+        return response()->json($data);
+    }
+
     public function page($page){
         switch ($page) {
             case 'corporate_governance':
@@ -153,8 +161,9 @@ class AceController extends Controller
             return view('gosford.frontend.choice_design',compact('slider'));
             break;
             case 'product_project':
+                $leather     =  TypeLeather::all();
                 $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','PERSONAL')->get();
-                return view('gosford.frontend.choice_design',compact('slider'));
+                return view('gosford.frontend.choice_design',compact('slider','leather'));
                 // if(Session::get('id_account') == null){
                 //     $brand   = Brand::all();
                 //     return view('gosford.frontend.search',compact('brand'));

@@ -19,17 +19,18 @@
                             <br>
                             <div class="row">
 
-                                @foreach($data as $i => $v)
-                                <div class="col-md-2">
-                                    <div class="card towncard">
-                                        <a href="{{ route('gosford.patterndesign.detail',base64_encode($v->id)) }}" class="card-body">
-                                            <!-- Card content goes here -->
-                                            <img style="width:100%" src="{{getimage($v->img)}}"
-                                                alt="">
-                                            <p class="card-text center" style="margin-top:2px;color:black">{{$v->name_pattern}}</p>
-                                        </a>
+                                @foreach ($data as $i => $v)
+                                    <div class="col-md-2">
+                                        <div class="card towncard">
+                                            <a href="{{ route('gosford.patterndesign.detail', base64_encode($v->id)) }}"
+                                                class="card-body">
+                                                <!-- Card content goes here -->
+                                                <img style="width:100%" src="{{ getimage($v->img) }}" alt="">
+                                                <p class="card-text center" style="margin-top:2px;color:black">
+                                                    {{ $v->name_pattern }}</p>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
                                 @endforeach
 
 
@@ -43,8 +44,6 @@
                                             href="{{ route('gosford.twotowncolor') }}" class="menu-href">Two Tone
                                             Color</a>
                                     </div>
-                                    <div class="card" style="padding: 10px;width:100%"><a
-                                            href="{{ route('gosford.embrodery') }}" class="menu-href">Embordery</a></div>
                                     <div class="card" style="padding: 10px;width:100%"><a
                                             href="{{ route('gosford.piping') }}" class="menu-href">Piping</a></div>
                                     <div class="card" style="padding: 10px;width:100%"><a
@@ -63,8 +62,8 @@
 
         </section>
         <!-- <div class="wa-floating-button" onclick="openWhatsApp()">
-                                        <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
-                                    </div> -->
+                                            <span class="whatsapp-icon"><i class="fa fa-phone"></i></span>
+                                        </div> -->
 
     </main>
 

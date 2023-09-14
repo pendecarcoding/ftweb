@@ -104,14 +104,14 @@
                                 </a>
                             </li>
                             @endcan
-                            @can('view_product_categories')
+                            <!-- @can('view_product_categories')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('categories.index') }}"
                                         class="aiz-side-nav-link {{ areActiveRoutes(['categories.index', 'categories.create', 'categories.edit']) }}">
                                         <span class="aiz-side-nav-text">{{ translate('Category') }}</span>
                                     </a>
                                 </li>
-                            @endcan
+                            @endcan -->
                             @can('view_all_brands')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('brands.index') }}"
@@ -127,6 +127,22 @@
                                         <span class="aiz-side-nav-text">{{ translate('Type Cars') }}</span>
                                     </a>
                                 </li>
+                            @endcan
+                            @can('view_all_brands')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('cars.index') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['cars.index', 'cars.create', 'cars.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Cars') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+                            @can('view_all_leather')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('leather.index') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['leather.index', 'leather.create', 'leather.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Leather') }}</span>
+                                </a>
+                            </li>
                             @endcan
                             @can('view_all_twotowncolor')
                                 <li class="aiz-side-nav-item">
@@ -152,14 +168,8 @@
                                 </a>
                             </li>
                             @endcan
-                            @can('view_all_brands')
-                                <li class="aiz-side-nav-item">
-                                    <a href="{{ route('cars.index') }}"
-                                        class="aiz-side-nav-link {{ areActiveRoutes(['cars.index', 'cars.create', 'cars.edit']) }}">
-                                        <span class="aiz-side-nav-text">{{ translate('Cars') }}</span>
-                                    </a>
-                                </li>
-                            @endcan
+
+
 
 
                             {{-- @can('add_new_product')
@@ -170,14 +180,14 @@
                                 </li>
                             @endcan --}}
 
-                            @can('show_all_products')
+                            <!-- @can('show_all_products')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('products.all') }}"
                                         class="aiz-side-nav-link {{ areActiveRoutes(['products.admin', 'products.create', 'products.admin.edit']) }}">
                                         <span class="aiz-side-nav-text">{{ translate('All Products') }}</span>
                                     </a>
                                 </li>
-                            @endcan
+                            @endcan -->
 
 
                             <!--@can('show_in_house_products')
@@ -895,7 +905,7 @@
                 @endcanany
 
                 <!--Management Personal-->
-                @canany(['view_personal', 'view_personalpageset', 'view_personaltestimonial'])
+                <!-- @canany(['view_personal', 'view_personalpageset', 'view_personaltestimonial'])
                     <li class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link">
                             <i class="las la-universal-access aiz-side-nav-icon"></i>
@@ -911,7 +921,7 @@
                                                                                                                                     </a>
                                                                                                                                 </li>
                                                                             @endcan -->
-                            @can('view_personaltestimonial')
+                            <!-- @can('view_personaltestimonial')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('personaltestimonial.index') }}"
                                         class="aiz-side-nav-link {{ areActiveRoutes(['personaltestimonial.create', 'personaltestimonial.edit']) }}">
@@ -924,7 +934,7 @@
 
                         </ul>
                     </li>
-                @endcanany
+                @endcanany -->
                 <!--END PERSONAL-->
 
 
@@ -1014,7 +1024,7 @@
                         <a href="{{ route('research.index') }}"
                             class="aiz-side-nav-link {{ areActiveRoutes(['research.edit', 'research.create']) }}">
                             <i class="las la-book aiz-side-nav-icon"></i>
-                            <span class="aiz-side-nav-text">{{ translate('Research & Development') }}</span>
+                            <span class="aiz-side-nav-text">{{ translate('Technical & Development') }}</span>
                         </a>
                     </li>
                 @endcan
