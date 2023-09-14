@@ -157,7 +157,7 @@
                         <div class="dlab-media dlab-img-overlay1">
                             <img src="/public/go_system/images/menu/menu_4.png" alt="">
                         </div>
-                        <div class="title-menu-style">Piping</div>
+                        <div class="title-menu-style">Stitching</div>
                     </a>
                 </div>
                 <!-- <div class="col-sm-6 col-md-2  d-flex ">
