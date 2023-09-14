@@ -36,10 +36,10 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container">
+        <section class="pt-5 pb-5">
+            <div class="wrap-content">
                 <div class="card">
-                    <div class="row" style="height: 600px;">
+                    <div class="row">
 
                         <div class="col-md-6 col-sm-12">
 
@@ -62,11 +62,11 @@
                                         <hr class="hr-product-detail">
 
                                         Material: <span style="color: #BF1D2C;" id="name-material">Full leather</span>
-                                        <!--COLOR OPTION-->
-                                        <div class="clearfix" style="gap:15px;display: flex;flex-direction: row;position: relative;white-space: nowrap;">
+
+                                        <div class="list-leather">
                                             @foreach($leather as $i => $vl)
                                             <div id="material{{$vl->id}}" data-id="{{$vl->id}}" class=" material">
-                                                <img style="height: 64px;width: 100%;object-fit: cover;" src="{{getimage($vl->img)}}" alt="">
+                                                <center><img src="{{getimage($vl->img)}}" alt=""></center>
                                                 <center>{{$vl->name_leather}}</center>
                                             </div>
                                             @endforeach
@@ -83,18 +83,18 @@
 
                                         <div style="display: flex;flex-direction: column;padding: 50px 0px;">
                                             <div style="display: flex;gap:20px">
-                                                <h4 style="font-weight: bold;">Total</h4>
+                                                <h4 style="font-weight: bold;"></h4>
                                                 <h4 id="total" style="color:#BF1D2C;font-weight:bold;">
                                                     </h4>
                                             </div>
                                             <br>
-                                            <div>
+                                            <div style="    text-align: justify;">
                                                 <p>We are delighted to present our latest masterpiece to you high quality
                                                     automotive leather. This copy will showcase the true charm of this exquisite
                                                     creation.</p>
                                             </div>
                                             <br>
-                                            <div>
+                                            <div  style="    text-align: justify;" >
                                                 <p style="color:#BF1D2C;">Prices display are subject to change without prior
                                                     notice, price display are without customisation.</p>
                                             </div>
@@ -132,8 +132,8 @@
                 <h2 style="font-weight: bold;">Styling Customisation</h2>
             </div>
             <div class="row d-flex" style="justify-content: center;">
-                <div class="col-sm-6 col-md-2  d-flex ">
-                    <a href="#" class="card card-body border-light justify-content-between text-white shadow" id="gallery">
+                <div class="col-sm-6 col-md-2  d-flex " id="gallery">
+                    <a href="/public/go_system/images/menu/colors.jpg" class="card card-body border-light justify-content-between text-white shadow">
                         <div class="dlab-media dlab-img-overlay1">
                             <img style="height: 100%;border-radius: 10px;" src="/public/go_system/images/menu/menu-new.jpg" alt="">
                         </div>
@@ -178,7 +178,7 @@
                         class="card  card-body border-light  justify-content-between  text-white shadow">
                         <div class="dlab-media dlab-img-overlay1">
                             <img src="/public/go_system/images/menu/menu_5.png" alt="">
-                            <div class="title-menu-style" style="z-index: 999;">Logo / Emblem</div>
+                            <div class="title-menu-style">Logo / Emblem</div>
                         </div>
 
                     </a>
@@ -241,18 +241,11 @@
 
     <script>
     // Initialize LightGallery
-    document.addEventListener("DOMContentLoaded", function () {
-        const gallery = document.getElementById("gallery");
+    lightGallery(document.getElementById('gallery'), {
+    thumbnail: true,
+    download:false
+});
 
-        if (gallery) {
-            lightGallery(gallery, {
-                src:'https://media.npr.org/assets/img/2023/09/13/2023-09-13t074213z_2074692122_rc2c73ax5pfm_rtrmadp_3_mexico-ufo_slide-0172fe4f9ee43a6eb7ee12224f3d4fd17643a4a4-s800-c85.webp',
-                mode: 'lg-fade', // Choose your preferred gallery mode
-                download: true, // Set to true if you want to enable download links
-                thumbnail: true, // Set to true if you want to display thumbnails
-            });
-        }
-    });
 </script>
 
 @endsection
