@@ -63,7 +63,11 @@
 
                                         Material: <span style="color: #BF1D2C;" id="name-material">Full leather</span>
 
-                                        <div class="list-leather">
+                                        <div class="list-leather" style="gap: 15px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        position: relative;
+                                        white-space: nowrap;">
                                             @foreach($leather as $i => $vl)
                                             <div id="material{{$vl->id}}" data-id="{{$vl->id}}" class=" material">
                                                 <center><img src="{{getimage($vl->img)}}" alt=""></center>
