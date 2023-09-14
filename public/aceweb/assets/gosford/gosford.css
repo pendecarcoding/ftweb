@@ -5,38 +5,59 @@ footer {
 
 }
 
+.list-leather {
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    white-space: nowrap;
+}
 
-.material{
+.list-leather img{
+    height: 64px;
+    width: 100px;
+    object-fit: cover;
+}
+
+
+.material {
     cursor: pointer;
 }
 
 
-.img-bg-mil-wrap{
+.img-bg-mil-wrap {
     height: 450px;
 }
 
-.wwd-text{
-    color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;
+.wwd-text {
+    color: #343F52;
+    font-family: 'Space Grotesk';
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.font-patner{
+.font-patner {
     font-size: 30px;
     line-height: 40px;
-    text-align: justify;color: rgb(255, 255, 255);font-family: 'Space Grotesk';
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    font-family: 'Space Grotesk';
 }
-.wrap-image-news{
+
+.wrap-image-news {
     width: 100%;
     height: 209px;
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
 }
-.strength-font{
+
+.strength-font {
     text-align: justify;
     font-size: 16px;
 }
 
-.trimex-top-card{
+.trimex-top-card {
     padding: 50px 117px;
     border-radius: 10px;
     position: absolute;
@@ -52,55 +73,65 @@ footer {
     src: url('/public/font/Poppins/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Poppins';
     src: url('/public/font/Poppins/Poppins-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-  }
+}
 
 @font-face {
     font-family: 'Space Grotesk';
     src: url('/public/font/Space_Grotesk/static/SpaceGrotesk-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Space Grotesk';
     src: url('/public/font/Space_Grotesk/static/SpaceGrotesk-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-  }
-.section-bg-gosford{
+}
+
+.section-bg-gosford {
     background-image: url('/public/page/gosford/Section.png');
-    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
-    background-size: 100% auto; /* Mengisi seluruh lebar dan menyesuaikan tinggi */
+    background-repeat: no-repeat;
+    /* Mencegah pengulangan gambar */
+    background-size: 100% auto;
+    /* Mengisi seluruh lebar dan menyesuaikan tinggi */
 
     /* Mengatur tinggi elemen */
     height: 700px;
 }
+
 .section-bg-trimex-color {
     background-image: url('/public/page/trimex/trimax-bg-1.png');
-    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
-    background-size: 100% auto; /* Mengisi seluruh lebar dan menyesuaikan tinggi */
+    background-repeat: no-repeat;
+    /* Mencegah pengulangan gambar */
+    background-size: 100% auto;
+    /* Mengisi seluruh lebar dan menyesuaikan tinggi */
     /* background: linear-gradient(112.31deg, #2949ea 11.29%, rgb(57 94 247) 86.49%); */
 }
-.section-bg-gosford-color{
+
+.section-bg-gosford-color {
     background: linear-gradient(112.31deg, #FDE35A 11.29%, rgba(255, 170, 0, 0.73) 86.49%);
 }
+
 .fadeOut {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Adjust the timing and easing as desired */
-  }
+    transition: opacity 0.5s ease-in-out;
+    /* Adjust the timing and easing as desired */
+}
 
-  /* Define smooth fade-in animation */
-  .fadeIn {
+/* Define smooth fade-in animation */
+.fadeIn {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* Adjust the timing and easing as desired */
-  }
+    transition: opacity 0.5s ease-in-out;
+    /* Adjust the timing and easing as desired */
+}
 
 .font-bg-history {
     position: absolute;
@@ -434,7 +465,7 @@ sup {
 }
 
 .img-research {
-    height: 350px;
+    width: 100%;
     object-fit: contain;
     padding: 2%
 }
@@ -9261,9 +9292,9 @@ https://github.com/marcaube/bootstrap-magnify
     color: rgba(255, 255, 255, .8)
 }
 
-.img-trimex-up{
-    width:250px;
-    height:136px
+.img-trimex-up {
+    width: 250px;
+    height: 136px
 }
 
 .notifications-dropdown.mdl-list .mdl-list__item .mdl-list__item-avatar {
@@ -10825,19 +10856,28 @@ form.form--basic .mdl-textfield__label {
 #register-user {
     padding: 0px 28%;
 }
+
 @media screen and (min-width:1280px) {
-    .h5-milestone{
+    .padding-research {
+        height: 350px;
+        padding: 11%;
+    }
+    .h5-milestone {
         font-size: 0.7rem;
     }
-    .img-bg-mil-wrap{
+
+    .img-bg-mil-wrap {
         height: 339px;
     }
-    .img-bg-mil-wrap img{
+
+    .img-bg-mil-wrap img {
         max-height: 339px;
     }
+
     .section-bg-gosford {
         height: 622px;
     }
+
     .font-patner {
         font-size: 17px;
         line-height: 40px;
@@ -10845,16 +10885,19 @@ form.form--basic .mdl-textfield__label {
         color: rgb(255, 255, 255);
         font-family: 'Space Grotesk';
     }
+
     .ace-sliders {
         height: 100vh;
         /* position: relative; */
         overflow: hidden;
     }
+
     .slider-banner {
         width: 100%;
         height: 100vh;
     }
 }
+
 @media screen and (min-width:1366px) {
     .section-bg-gosford {
         height: 622px;
@@ -10890,25 +10933,30 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1920px) {
-    .img-bg-mil-wrap{
+    .img-bg-mil-wrap {
         height: 513px;
     }
+
     .img-bg-mil-wrap img {
         max-height: 529px;
     }
+
     .h5-milestone {
         font-size: 0.9rem;
     }
+
     .title-corporate {
         font-size: 2.22rem;
         font-weight: bold;
     }
+
     .contact-wrap {
         font-size: 20px;
         flex-wrap: wrap;
         display: flex;
         padding: 20px;
     }
+
     .gov-card {
         background-color: white;
         text-align: center;
@@ -10916,13 +10964,15 @@ form.form--basic .mdl-textfield__label {
         margin: 10px;
         height: 330px;
     }
-    .wrap-image-news{
+
+    .wrap-image-news {
         width: 100%;
         height: 325px;
         margin-bottom: 15px;
         position: relative;
         overflow: hidden;
     }
+
     .font-patner {
         font-size: 24px;
         line-height: 40px;
@@ -10930,10 +10980,11 @@ form.form--basic .mdl-textfield__label {
         color: rgb(255, 255, 255);
         font-family: 'Space Grotesk';
     }
-        .section-bg-gosford {
 
-            height: 860px;
-        }
+    .section-bg-gosford {
+
+        height: 860px;
+    }
 
     .mdl-layout__header-row .classurl {
         margin: 0px 31px;
@@ -10967,37 +11018,46 @@ form.form--basic .mdl-textfield__label {
     }
 }
 
-.section-trimex-up-card{
-    position: relative;height: 500px;
-}
-.img-what-we-do{
-    width:100%;height: 300px;object-fit: cover;
+.section-trimex-up-card {
+    position: relative;
+    height: 500px;
 }
 
-.video-trimex{
+.img-what-we-do {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.video-trimex {
     padding: 50px 0px;
 }
 
 
 @media screen and (min-width:2560px) {
-    .img-bg-mil-wrap{
+    .img-bg-mil-wrap {
         height: 697px;
     }
-    .img-bg-mil-wrap img{
+
+    .img-bg-mil-wrap img {
         max-height: 750px;
     }
+
     .section-bg-gosford {
         height: 1137px;
     }
-    .section-trimex-up-card{
+
+    .section-trimex-up-card {
         position: relative;
         height: 748px;
     }
-    .img-what-we-do{
+
+    .img-what-we-do {
         width: 100%;
         height: 500px;
         object-fit: cover;
     }
+
     .trimex-top-card {
         border-radius: 10px;
         position: absolute;
@@ -11007,11 +11067,15 @@ form.form--basic .mdl-textfield__label {
         /* height: 400px; */
         box-shadow: 0px -40px 50px 0px #0A04161A;
     }
-    .font-patner{
+
+    .font-patner {
         font-size: 24px;
         line-height: 40px;
-        text-align: justify;color: rgb(255, 255, 255);font-family: 'Space Grotesk';
+        text-align: justify;
+        color: rgb(255, 255, 255);
+        font-family: 'Space Grotesk';
     }
+
     .acecarousel-control-prev {
         position: absolute;
         top: 0;
@@ -11028,6 +11092,7 @@ form.form--basic .mdl-textfield__label {
         border: 0;
         transition: opacity 0.15s ease;
     }
+
     .acecarousel-control-next {
         position: absolute;
         top: 0;
@@ -11043,6 +11108,7 @@ form.form--basic .mdl-textfield__label {
         border: 0;
         transition: opacity 0.15s ease;
     }
+
     .img-responsive-news {
         object-fit: fill;
         width: 100%;
@@ -11052,36 +11118,46 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:500px) {
+    .slider-product {
+        height: 474px;
+    }
     .ace-sliders .carousel-caption {
         top: 29%;
     }
-    .img-bg-mil-wrap{
+
+    .img-bg-mil-wrap {
         height: auto;
     }
+
     .section-trimex-up-card {
         position: relative;
         height: 535px;
     }
-    .wwd-text{
+
+    .wwd-text {
         color: #343F52;
         font-family: 'Space Grotesk';
         font-weight: bold;
         font-size: 14px;
     }
-    .img-trimex-up{
+
+    .img-trimex-up {
         width: 200px;
         height: 101px;
     }
+
     .img-what-we-do {
         width: 100%;
         height: 270px;
         object-fit: fill;
     }
+
     .section-bg-trimex-color {
         background-image: url(/public/page/trimex/trimax-bg-1.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     .trimex-top-card {
         padding: 11px 10px;
         border-radius: 10px;
@@ -11092,13 +11168,16 @@ form.form--basic .mdl-textfield__label {
         height: 346px;
         box-shadow: 0px -40px 50px 0px #0A04161A;
     }
-    .trimex-top-card h2{
+
+    .trimex-top-card h2 {
         font-size: 23px;
     }
+
     .font-patner {
         font-size: 19px;
         line-height: 31px;
     }
+
     .section-bg-gosford {
         background-image: url(/public/page/gosford/Section.png);
         background-repeat: no-repeat;
@@ -11106,6 +11185,7 @@ form.form--basic .mdl-textfield__label {
         height: 200px;
         margin-top: 64px;
     }
+
     .section-head h2 {
         color: #666666;
         font-size: 22px;
@@ -11113,36 +11193,46 @@ form.form--basic .mdl-textfield__label {
         margin-bottom: 10px;
         line-height: 30px;
     }
-    .section-head h5{
+
+    .section-head h5 {
         font-size: 0.9rem;
     }
-    .h5-milestone{
+
+    .h5-milestone {
         font-size: 10px;
     }
-    .h5-milestone li{
+
+    .h5-milestone li {
         list-style-type: none;
     }
+
     .section-slider {
         height: 246px;
     }
-    sub, sup {
+
+    sub,
+    sup {
         position: relative;
         font-size: 6px;
         line-height: 0;
         vertical-align: baseline;
     }
-    .logo-header img, .logo-footer img {
+
+    .logo-header img,
+    .logo-footer img {
         max-width: 100%;
         width: 113px;
         height: 46px;
         height: auto;
     }
-    [class*="bg-"] .header-nav .nav > li.current-menu-item > a {
+
+    [class*="bg-"] .header-nav .nav>li.current-menu-item>a {
         border-bottom-style: solid;
         border-bottom-color: #fff;
         border-bottom-width: 2px;
         color: #555555;
     }
+
     .wa-floating-button {
         bottom: 63px;
     }
@@ -11579,10 +11669,12 @@ form.form--basic .mdl-textfield__label {
     .ace-sliders .carousel-caption {
         top: 29%;
     }
+
     .font-patner {
         font-size: 19px;
         line-height: 31px;
     }
+
     .section-bg-gosford {
         background-image: url(/public/page/gosford/Section.png);
         background-repeat: no-repeat;
@@ -11590,18 +11682,23 @@ form.form--basic .mdl-textfield__label {
         height: 200px;
         margin-top: 64px;
     }
+
     .wa-floating-button {
         bottom: 63px;
     }
+
     .section-slider {
         height: 246px;
     }
-    .logo-header img, .logo-footer img {
+
+    .logo-header img,
+    .logo-footer img {
         max-width: 100%;
         width: 113px;
         height: 46px;
         height: auto;
     }
+
     .i-icon-login {
         font-size: 25px;
     }
@@ -12018,9 +12115,11 @@ form.form--basic .mdl-textfield__label {
     .font-patner {
         font-size: 19px;
     }
+
     .ace-sliders .carousel-caption {
         top: 29%;
     }
+
     .section-bg-gosford {
         background-image: url(/public/page/gosford/Section.png);
         background-repeat: no-repeat;
@@ -12028,6 +12127,7 @@ form.form--basic .mdl-textfield__label {
         height: 200px;
         margin-top: 64px;
     }
+
     .i-icon-login {
         font-size: 25px;
     }
@@ -12035,6 +12135,7 @@ form.form--basic .mdl-textfield__label {
     .section-slider {
         height: 246px;
     }
+
     .content-timeline li {
         list-style-type: none;
     }
@@ -12861,15 +12962,18 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .h5-milestone{
+    .h5-milestone {
         font-size: 0.6rem;
     }
+
     .img-bg-mil-wrap {
         height: 260px;
     }
+
     .img-bg-mil-wrap img {
         height: 260px;
     }
+
     .content-timeline li {
         list-style-type: none;
     }
@@ -13328,16 +13432,19 @@ form.form--basic .mdl-textfield__label {
         height: auto;
         vertical-align: middle;
     }
+
     .title-corporate {
         font-size: 3rem;
         font-weight: bold;
     }
+
     .contact-wrap {
         font-size: 24px;
         flex-wrap: wrap;
         display: flex;
         padding: 20px;
     }
+
     .wrap-image-news {
         width: 100%;
         height: 405px;
@@ -13345,6 +13452,7 @@ form.form--basic .mdl-textfield__label {
         position: relative;
         overflow: hidden;
     }
+
     .gov-card {
         background-color: white;
         text-align: center;
@@ -13352,6 +13460,7 @@ form.form--basic .mdl-textfield__label {
         margin: 10px;
         height: 330px;
     }
+
     .ace-button-blue {
         background-color: transparent;
         color: #dc3545;
@@ -13365,16 +13474,20 @@ form.form--basic .mdl-textfield__label {
         cursor: pointer;
         border-radius: 20px;
     }
+
     .ace-button-blue {
         font-size: 2.5em;
     }
+
     .section-slider {
         height: 551px;
     }
+
     .strength-font {
         text-align: justify;
         font-size: 32px;
     }
+
     .slider-testimonials h5 {
         bottom: 0;
         font-weight: bold;
@@ -13398,12 +13511,14 @@ form.form--basic .mdl-textfield__label {
     .vl {
         padding-top: 82px;
     }
+
     .img-responsive-news {
         object-fit: fill;
         width: 100%;
         height: 500px;
         vertical-align: middle;
     }
+
     #slider .selfie-img {
         width: 420px;
         height: 420px;
@@ -13509,7 +13624,8 @@ form.form--basic .mdl-textfield__label {
     }
 
     sub,
-    sub, sup {
+    sub,
+    sup {
         position: relative;
         font-size: 13px;
     }
