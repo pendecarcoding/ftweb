@@ -421,15 +421,16 @@ sup {
 }
 
 .padding-research {
-    padding: 10%;
+    height: 350px;
+    padding: 25%;
     display: flex;
     align-items: center;
 }
 
 .img-research {
     height: 350px;
-    object-fit: scale-down;
-    padding: 5px 0px;
+    object-fit: contain;
+    padding: 2%
 }
 
 .banner-video {
