@@ -735,9 +735,7 @@ industry reputation.
                           </div>
                           <div class="col-md-5 col-sm-12">
                             <div class="card">
-                                <video style="width:50%;height: 100%" controls>
-                                    <source style="width: 100%;" src="{{$v->video}}" type="video/mp4">
-                                </video>
+                                {!! $v->video !!}
                             </div>
                           </div>
 
@@ -827,7 +825,7 @@ industry reputation.
                         @if($v->video != null)
                         <div class="row slider-testimonials">
                         <div class="col-md-7 col-sm-12">
-                            <p style="margin-top:20px">
+                            <p style="margin-top:20px" style="font-family: 'Poppins';">
                               {!! $v->content !!}
                             </p>
                             <hr
@@ -842,9 +840,7 @@ industry reputation.
                           </div>
                           <div class="col-md-5 col-sm-12">
                             <div class="card">
-                                <video style="width:100%;height: 350px;border-radius: 10px;" controls>
-                                    <source style="width: 100%;" src="{{$v->video}}" type="video/mp4">
-                                </video>
+                                {!! $v->video !!}
                             </div>
                           </div>
                         </div>
