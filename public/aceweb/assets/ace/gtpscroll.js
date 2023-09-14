@@ -36,7 +36,7 @@ var observer = new MutationObserver(function(mutations) {
             hasRunempat = false;
               }, 180);
 
-              document.getElementById("imggpt1").src="/public/aceweb/assets/img/gpt1.png";
+              document.getElementById("imggpt1").src="/public/aceweb/assets/img/go1.png";
           }
 
 
@@ -74,7 +74,7 @@ var observer = new MutationObserver(function(mutations) {
           //txtgtp.classList.remove("aos-animate");
           //imggpt.classList.remove("fadeIn")
           //imggpt.classList.add("fadeIn");
-          $("#imggpt1").attr("src", "/public/aceweb/assets/img/gpt2.png");
+          $("#imggpt1").attr("src", "/public/aceweb/assets/img/go2.png");
 
 
 
@@ -112,7 +112,7 @@ var observer = new MutationObserver(function(mutations) {
                 hasRunempat = false;
               }, 500);
           }
-          $("#imggpt1").attr("src", "/public/aceweb/assets/img/gpt3.png");
+          $("#imggpt1").attr("src", "/public/aceweb/assets/img/go3.png");
           //imggpt.classList.remove("fadeIn");
     }
     if(mutation.target.textContent=="4/5"){
@@ -142,12 +142,12 @@ var observer = new MutationObserver(function(mutations) {
         //imgdivgtp.classList.remove("aos-animate");
         //txtgtp.classList.remove("aos-animate");
           //$("#imggpt1").addClass("fadeIn");
-          $("#imggpt1").attr("src", "/public/aceweb/assets/img/gpt4.png");
+          $("#imggpt1").attr("src", "/public/aceweb/assets/img/go4.png");
     }
     if(mutation.target.textContent=="5/5"){
            //imggpt.classList.remove("fadeIn");
 
-           $("#imggpt1").attr("src", "/public/aceweb/assets/img/gtp5.png");
+           $("#imggpt1").attr("src", "/public/aceweb/assets/img/go5.png");
     }
   });
 });
