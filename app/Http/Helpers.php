@@ -785,7 +785,7 @@ function getleatherbyid($id){
 }
 
 function slidertrimex(){
-    $data = ['Emboss','Embroidery','installation','Steering Wrap','Console Wrap'];
+    $data = ['Patterning','Door panel wrapping','Remove seat cover wrinkle','Steering Wrap','Console Wrap'];
     return $data;
 }
 
