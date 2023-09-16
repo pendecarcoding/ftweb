@@ -2730,6 +2730,7 @@ button:focus{
 		left: 20px;
 	}
 }
+
 @media only screen and (max-width: 1024px){
 	.logo-header,
 	.is-fixed .logo-header,
@@ -2772,11 +2773,12 @@ button:focus{
 	.mo-left .is-fixed .header-nav .logo-headers{
 		width: 100%;
 	}
-	.navicon{
+	.navicon {
+        top: -23px;
         position: absolute;
         right: 20px;
-		z-index: 99;
-	}
+        z-index: 99;
+    }
 	.site-header .is-fixed .navbar-nav.nav-style > li > a {
 		padding: 8px 0;
 	}

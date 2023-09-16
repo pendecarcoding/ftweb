@@ -305,11 +305,7 @@
                     class="content-about"
                   >
                     <p style="text-align: justify;" class="p-about-font">
-                        We are the Malaysia’s number one manufacturer and installer of automotive
-                        leather and has been trusted by the automotive industry for over 20 years
-                        and are the official leather provider & fitter for Mazda, Perodua, Ford, Hyundai, Subaru and Kia. We pride ourselves in our extensive high quality products
-                        produced through our outstanding teamwork, creative passion, detailed hand craftsmanship
-                        and build pride into every product and appreciate our customers.
+                        We are the Malaysia’s number one manufacturer and installer of automotive leather and has been trusted by the automotive industry for over 20 years and are the official leather provider & fitter OEM, PDI, REM Market. We pride ourselves in our extensive high quality products produced through our outstanding teamwork, creative passion, detailed hand craftsmanship and build pride into every product and appreciate our customers.
                     </p>
                   </div>
                 </div>
@@ -727,7 +723,7 @@ industry reputation.
                               style="
                                 width: 84px;
                                 height: 3px;
-                                background: #006eb2;
+                                background: #079cff;
                               "
                             />
                             <h5>{{ $v->person }}</h5>
@@ -750,7 +746,7 @@ industry reputation.
                               style="
                                 width: 84px;
                                 height: 3px;
-                                background: #006eb2;
+                                background: #079cff;
                               "
                             />
                             <h5>{{ $v->person }}</h5>

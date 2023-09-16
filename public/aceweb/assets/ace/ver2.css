@@ -2595,8 +2595,7 @@
     .about h1 {
         font-weight: bold;
         font-size: 6rem;
-        -webkit-text-stroke: 2px;
-
+        -webkit-text-stroke: 1px;
     }
 
     .ace-card-company {
