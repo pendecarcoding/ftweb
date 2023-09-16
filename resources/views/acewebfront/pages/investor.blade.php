@@ -116,7 +116,7 @@
       </section> -->
 
       <section id="ace-testimonials-desktop" class="ace-testimonials">
-        <div class="content-ace">
+        <div class="content-ace about">
             <div class="wrap-content">
             <div class="ace-isi about">
               <div class="row">
@@ -139,7 +139,7 @@
                     <div class="carousel-item active">
                         <div class="row slider-testimonials">
                           <div class="col-md-8 col-sm-12">
-                            {!! $trimmed_text !!}
+                            <p>{!! $trimmed_text !!}</p>
                             <hr style="
                                 width: 334px;
                                 height: 3px;
@@ -176,7 +176,7 @@
       </section>
 
       <section id="ace-testimonials-mobile" class="ace-testimonials">
-        <div class="content-ace">
+        <div class="content-ace about">
             <div class="wrap-content">
             <div class="ace-isi about">
               <div class="row">
@@ -200,7 +200,7 @@
                     <div class="carousel-item active">
                         <div class="row slider-testimonials">
                           <div class="col-md-8 col-sm-12">
-                            {!! $trimmed_text !!}
+                            <p>{!! $trimmed_text !!}</p>
                             <hr style="
                                 width: 334px;
                                 height: 3px;

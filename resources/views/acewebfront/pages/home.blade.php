@@ -687,7 +687,7 @@ industry reputation.
 
       </section>
       <section id="ace-testimonials-mobile" class="ace-testimonials-mobile">
-        <div class="content-ace">
+        <div class="content-ace about">
           <div class="wrap-content">
             <div class="ace-isi about">
                <div class="row">
@@ -792,7 +792,7 @@ industry reputation.
         </div>
       </section>
       <section  id="ace-testimonials-desktop" class="ace-testimonials">
-        <div class="content-ace">
+        <div class="content-ace about">
             <div class="wrap-content">
             <div class="ace-isi about">
               <div class="row">
