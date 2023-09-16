@@ -119,8 +119,10 @@
                 <h2 style="font-weight: bold;">Styling Customisation</h2>
             </div>
             <div class="row d-flex" style="justify-content: center;">
-                <div class="col-sm-6 col-md-3  d-flex " id="gallery">
-                    <a href="/public/go_system/images/menu/colors.jpg" class="card card-body border-light justify-content-between text-white shadow">
+                <!-- <div class="col-sm-6 col-md-3  d-flex " id="gallery"> -->
+                    <div class="col-sm-6 col-md-3  d-flex ">
+                    <!-- <a href="/public/go_system/images/menu/colors.jpg" class="card card-body border-light justify-content-between text-white shadow"> -->
+                        <a href="#" class="card card-body border-light justify-content-between text-white shadow">
                         <div class="dlab-media dlab-img-overlay1">
                             <img style="height: 100%;border-radius: 10px;" src="/public/go_system/images/menu/menu-new.jpg" alt="">
                         </div>
@@ -129,7 +131,8 @@
                 </div>
                 <div class="col-sm-6 col-md-3  d-flex ">
 
-                    <a href="{{ route('gosford.twotowncolor') }}"
+                    <!-- <a href="{{ route('gosford.twotowncolor') }}" -->
+                    <a href="#"
                         class="card  card-body border-light  justify-content-between text-white shadow">
                         <!-- <a >  -->
                         <div class="dlab-media dlab-img-overlay1">
@@ -152,7 +155,8 @@
                 </div>
                 <div class="col-sm-6 col-md-3  d-flex ">
 
-                    <a href="{{ route('gosford.piping') }}"
+                    <!-- <a href="{{ route('gosford.piping') }}" -->
+                    <a href="#"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
                         <div class="dlab-media dlab-img-overlay1">
                             <img src="/public/go_system/images/menu/menu_4.png" alt="">
