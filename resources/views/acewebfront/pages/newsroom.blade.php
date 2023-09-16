@@ -80,13 +80,14 @@ overflow: hidden;" class="card text-center board-director">
 </div>
 
                                     <a href="{{ url('newsroom/' . $v->slug) }}">
-                                        <p style="font-size: 16px;
+                                        <p style="font-size: 17px;
                                         margin-bottom: 2px;
                                         color: black;
                                         height: 40px;
                                         padding: 0px 20px;
+                                        font-family: 'Poppins';
                                         text-align: left;">{{ $v->title }} </p>
-                                <p style="color:#909090;    padding: 5px 20px 5px 20px;text-align: left;font-size: 14px;">{!! $hasil_kalimat !!}</p>
+                                <p style="color:#909090;    padding: 5px 20px 5px 20px;text-align: left;font-size: 16px;font-family: 'Poppins';">{!! $hasil_kalimat !!}</p>
 
                                 <div style="display: flex;flex-direction: row;justify-content: space-between; text-align: left;    padding: 10px 20px;font-size: 13px;color: #7f7f7f;margin-bottom: 10px;">
                                     <div><i class="fa fa-calendar"></i> {{namedate($v->date)}}</div>
