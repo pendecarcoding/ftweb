@@ -55,19 +55,39 @@
                                          </div>
                                      </div>
                                      @foreach (getContactByDevision($v->id) as $ic => $vc)
+
+                                         @if($vc->title=='TRIMEX AUTOMATIVE (AUS) PTY LTD')
+                                        <div data-aos="fade-up" class="col-md-6">
+                                            <div class="contact-wrap">
+
+                                                <img class="img-responsive" src="{{ getimage($vc->img) }}"
+                                                    alt="{{ $vc->title }}" />
+                                            </div>
+                                        </div>
+                                        <div data-aos="fade-up" class="col-md-6">
+                                            <div class="contact-wrap">
+                                                <div class="list-contact">
+                                                    <h5 class="title-corporate">{{ $vc->title }}</h5>
+                                                    <br>
+                                                    {!! $vc->content !!}
+                                                </div>
+                                            </div>
+                                        </div>
+                                         @else
                                          <div data-aos="fade-up" class="col-md-6">
-                                             <div class="contact-wrap">
-                                                 <div class="img-wrap-contact">
-                                                     <img style="height: 100%;" class="img-responsive"
-                                                         src="{{ getimage($vc->img) }}" alt="{{ $vc->title }}" />
-                                                 </div>
-                                                 <div class="list-contact">
-                                                     <h5 class="title-corporate">{{ $vc->title }}</h5>
-                                                     <br>
-                                                     {!! $vc->content !!}
-                                                 </div>
-                                             </div>
-                                         </div>
+                                            <div class="contact-wrap">
+                                                <div class="img-wrap-contact">
+                                                    <img style="height: 100%;" class="img-responsive"
+                                                        src="{{ getimage($vc->img) }}" alt="{{ $vc->title }}" />
+                                                </div>
+                                                <div class="list-contact">
+                                                    <h5 class="title-corporate">{{ $vc->title }}</h5>
+                                                    <br>
+                                                    {!! $vc->content !!}
+                                                </div>
+                                            </div>
+                                        </div>
+                                         @endif
                                      @endforeach
                                  </div>
                              @endif

@@ -15,7 +15,7 @@
         @if (!empty($page))
             {{ get_setting('site_name') }} |{{ strtoupper($page) }}
         @else
-            @yield('title')
+        {{ get_setting('site_name') }}
         @endif
     </title>
     @yield('meta')
