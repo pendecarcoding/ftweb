@@ -42,6 +42,9 @@
             <div class="section-content ">
                 <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
                     @for ($i = 0; $i < 15; $i++)
+                        @if($i==3)
+
+                        @else
                         <div class="item" style="padding: 20px;">
                             <div class="dlab-box">
                                 <div class="dlab-media" style="border-radius: 5px;"> <a href="#"><img
@@ -54,6 +57,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                     @endfor
 
 
