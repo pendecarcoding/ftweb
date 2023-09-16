@@ -19,7 +19,7 @@
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/1.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
 
-									<p class="m-b0" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;">Leather Seat</p>
+									<p class="m-b0" style="color: #343F52;font-family: 'Poppins';font-weight: bold;font-size: 20px;">Leather Seat</p>
 								</div>
 							</div>
 						</div> -->
@@ -136,8 +136,8 @@
 
                     <div data-aos="zoom-in" data-aos-delay="200" class="col-lg-6 testimonial-thumb m-b30">
                     <div style="padding: 25% 0px;">
-                        <h2 class="text-capitalize" style="font-family: 'Space Grotesk';font-weight: 700;">Project Development</h2>
-                        <h3 style="font-family: 'Space Grotesk';">OEM and REM Projects</h3>
+                        <h2 class="text-capitalize" style="font-family: 'Poppins';font-weight: 700;">Project Development</h2>
+                        <h3 style="font-family: 'Poppins';">OEM and REM Projects</h3>
                         <p class="font-patner" style="color: black;">Original Equipment Manufacturer (OEM):
                         Leather seat covers are embedded as part of the standard car accessories for selected variants of the car models launched by the car manufacturers and we supplied our car sear covers to their appointed Tier 1 car seat manufacturers for their onward installation onto the bare seat</p>
                     </div>
@@ -168,8 +168,8 @@
         <!-- <div class="section-full bg-img-fix content-inner-1" style="    background-color: #F4F4F2; background-image:url(images/background/bg5.jpg); margin-top:-1px">
             <div class="container">
                 <div class="section-head text-center text-white">
-                    <h2 class="text-capitalize" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;">PDI Projects </h2>
-                    <h6 style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;">Pre-Delivery Inspection (PDI)</h6>
+                    <h2 class="text-capitalize" style="color: #343F52;font-family: 'Poppins';font-weight: bold;">PDI Projects </h2>
+                    <h6 style="color: #343F52;font-family: 'Poppins';font-weight: bold;">Pre-Delivery Inspection (PDI)</h6>
 
                 </div>
                 <div class="section-content">
@@ -181,7 +181,7 @@
                                        <img src="/public/page/gosford/image 414.png" width="100%">
                                 </div>
                                    <br>
-                                  <h5 class="mb-0" style="font-family: 'Space Grotesk';color: #60697B;">Subaru Forester</h5>
+                                  <h5 class="mb-0" style="font-family: 'Poppins';color: #60697B;">Subaru Forester</h5>
                                </div>
                          </div>
                          <div data-aos="fade-up" data-aos-delay="200" class="col-md-4 aos-init aos-animate">
@@ -190,7 +190,7 @@
                                       <img src="/public/page/gosford/image 414.png" width="100%">
                                </div>
                                   <br>
-                                 <h5 class="mb-0" style="font-family: 'Space Grotesk';color: #60697B;">Subaru XV</h5>
+                                 <h5 class="mb-0" style="font-family: 'Poppins';color: #60697B;">Subaru XV</h5>
                               </div>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="200" class="col-md-4 aos-init aos-animate">
@@ -199,7 +199,7 @@
                                       <img src="/public/page/gosford/image 414.png" width="100%">
                                </div>
                                   <br>
-                                 <h5 class="mb-0" style="font-family: 'Space Grotesk';color: #60697B;">Subaru XV STI</h5>
+                                 <h5 class="mb-0" style="font-family: 'Poppins';color: #60697B;">Subaru XV STI</h5>
                               </div>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="200" class="col-md-4 aos-init aos-animate">
@@ -208,7 +208,7 @@
                                       <img src="/public/page/gosford/image 414.png" width="100%">
                                </div>
                                   <br>
-                                 <h5 class="mb-0" style="font-family: 'Space Grotesk';color: #60697B;">Subaru Outback</h5>
+                                 <h5 class="mb-0" style="font-family: 'Poppins';color: #60697B;">Subaru Outback</h5>
                               </div>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="200" class="col-md-4 aos-init aos-animate">
@@ -217,7 +217,7 @@
                                       <img src="/public/page/gosford/image 414.png" width="100%">
                                </div>
                                   <br>
-                                 <h5 class="mb-0" style="font-family: 'Space Grotesk';color: #60697B;">Subaru Outback</h5>
+                                 <h5 class="mb-0" style="font-family: 'Poppins';color: #60697B;">Subaru Outback</h5>
                               </div>
                         </div>
                         </div>
