@@ -155,7 +155,9 @@
           </div>
         </div>
       </section>
-      <section class="company-ace">
+      <section class="company-ace" style="background-color: #ffffff;">
+      </section>
+      <!-- <section class="company-ace">
         <div class="content-ace">
           <div class="wrap-content">
             <div class="ace-isi about">
@@ -219,7 +221,7 @@
               <!-- <div id="structur-ipad" class="row img-strc">
                 <img style="width:100%" src="{{ static_asset('aceweb') }}/assets/img/structure.png" alt="">
               </div> -->
-
+<!--
               <div  class="row img-structure-mobile">
                 <div class="col-sm-12">
                   <center>
@@ -279,7 +281,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section id="nonmansory" class="about-provider">
         <div class="content-ace">
           <div class="wrap-content">
