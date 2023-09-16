@@ -19,6 +19,10 @@ footer {
 }
 
 
+.h5-milestone {
+    font-size: 10px;
+}
+
 h1 .number{
     -webkit-text-stroke: 0px;
 }
@@ -53,9 +57,9 @@ h1 .number{
 }
 
 
-.img-bg-mil-wrap {
-    height: 450px;
-}
+/* .img-bg-mil-wrap {
+    height: 361px;
+} */
 
 .wwd-text {
     color: #343F52;
@@ -170,10 +174,18 @@ h1 .number{
 button.readmore__toggle {
     display: flex;
     margin-top: 1rem;
-    border: none;
-    background: linear-gradient(0deg, rgba(23, 111, 234, 1) 0%, rgba(4, 38, 252, 1) 100%);
-    color: #ffffff;
-    padding: 0.5rem;
+    padding: 10px 20px;
+    color: rgba(41, 49, 136, 1);
+    border-color: rgba(41, 49, 136, 1);
+    cursor: pointer;
+    border-radius: 2rem;
+}
+button.readmore__toggle:hover {
+    display: flex;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    color: rgba(41, 49, 136, 1);
+    border-color: rgba(41, 49, 136, 1);
     cursor: pointer;
     border-radius: 2rem;
 }
@@ -13856,6 +13868,7 @@ form.form--basic .mdl-textfield__label {
         padding:12px 10px 12px;
         font-size: 19.2px;
     }
+
     .header-nav .nav > li .sub-menu li a {
         transition: all 0.15s linear;
         color: #777777;
@@ -13955,13 +13968,13 @@ form.form--basic .mdl-textfield__label {
         height: 46px;
         height: auto;
     }
-    .img-bg-mil-wrap {
+    /* .img-bg-mil-wrap {
         height: 513px;
     }
 
     .img-bg-mil-wrap img {
         max-height: 529px;
-    }
+    } */
 
     .h5-milestone {
         font-size: 0.9rem;
@@ -14041,9 +14054,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:2560px) {
-    .img-bg-mil-wrap {
+    /* .img-bg-mil-wrap {
         height: 697px;
-    }
+    } */
     .header-curve .logo-header:before, .header-curve .logo-header:after {
         height: 129px;
     }
@@ -14067,9 +14080,9 @@ form.form--basic .mdl-textfield__label {
         padding: 14px 20px 14px;
         font-size: 32px;
     }
-    .img-bg-mil-wrap img {
+    /* .img-bg-mil-wrap img {
         max-height: 750px;
-    }
+    } */
 
     .logo-header {
         width: 336px;

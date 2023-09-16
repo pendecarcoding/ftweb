@@ -43,7 +43,7 @@
                                 <span class="readmore__content">
                                     {!! $v->content !!}
                                 </span>
-                                <button style="margin-top: 5px;" class="btn btn-primary readmore__toggle" role="switch" aria-checked="true">
+                                <button style="margin-top: 5px;" class="btn  readmore__toggle" role="switch" aria-checked="true">
                                     Show more
                                 </button>
                             </div>

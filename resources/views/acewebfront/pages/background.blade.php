@@ -4,20 +4,21 @@
         @include('acewebfront.widget.allbaner')
         <div class="section-full bg-white content-inner">
             <div>
-                <div class="section-head text-center ">
-                    <h2 style="color: #EA0B0B;" class="text-uppercase">COMPANIES BACKGROUND</h2>
+                <div class="section-head text-center about ">
+                    <h1>Companies Background</h1>
 
-                    <h5>GROUP MILESTONE 2001-2022</h5>
+                    <h5 class="title-ace">GROUP MILESTONE 2001-2022</h5>
                 </div>
                 <div class="section-content ">
                     <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
                         @for ($i = 0; $i < 16; $i++)
                             <div class="item" style="margin-right: 5px;margin-left:5px ;">
 
-                                <div class="blog-post latest-blog-1 date-style-3 skew-date" style="display: flex;flex-direction: column;">
+                                <div class="blog-post latest-blog-1 date-style-3 skew-date"
+                                    style="display: flex;flex-direction: column;">
                                     <!-- <div><h1 class="font-bg-history">2022</h1></div> -->
-                                    <div class="dlab-post-media img-bg-mil-wrap"><img
-                                          style="border-radius: 12px;"  src="/public/background/{{ $i }}_bg.png" alt=""></div>
+                                    <div class="dlab-post-media img-bg-mil-wrap"><img style="border-radius: 12px;"
+                                            src="/public/background/{{ $i }}_bg.png" alt=""></div>
                                     <div class="dlab-post-info p-t20" style="padding: 20px;">
                                         <div>
                                             {!! name_companyofbg()[$i] !!}
@@ -58,7 +59,9 @@
                     animateOut: 'fadeOut',
                     animateIn: 'fadeIn',
                     nav: true,
-                    navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+                    navText: ['<i class="fas fa-chevron-left"></i>',
+                        '<i class="fas fa-chevron-right"></i>'
+                    ],
                 });
             }
 
@@ -71,5 +74,4 @@
             });
         });
     </script>
-
 @endsection
