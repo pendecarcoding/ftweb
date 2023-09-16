@@ -138,7 +138,7 @@
                     <div style="margin-left:10%;margin-right:15%">
                     <div class="carousel-item active">
                         <div class="row slider-testimonials">
-                          <div class="col-md-7 col-sm-7">
+                          <div class="col-md-8 col-sm-12">
                             {!! $trimmed_text !!}
                             <hr style="
                                 width: 334px;
@@ -151,9 +151,70 @@
                             <br>
                             <!-- <a href="{{ url('investor_relations/message_from_ceo') }}" class="btn gsf-button">Read More</a> -->
                           </div>
-                          <div class="col-md-5 col-sm-5">
+                          <div class="col-md-4 col-sm-12">
                             <div class="card">
                               <img style="float:right;width:100%;border-radius: 20px;" class="img-responsive" src="{{getimage($ceo->image)}}" alt="">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                </div>
+
+
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section id="ace-testimonials-mobile" class="ace-testimonials">
+        <div class="content-ace">
+            <div class="wrap-content">
+            <div class="ace-isi about">
+              <div class="row">
+            <div>
+                <div class="col-md-12">
+                  <div class="title-ace">
+                    VISION
+                    <span class="h-dash" style="font-weight: bold">—</span>
+                  </div>
+                </div>
+                <div  class="col-md-12 col-sm-12">
+                  <h1>Message from the CEO</h1>
+                </div>
+            </div>
+
+                <div  class="col-md-12">
+                  <div style="position:relative;margin-top:50px" id="myCarouseltesti" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div style="margin-left: 3%;
+                    margin-right: -2%;">
+                    <div class="carousel-item active">
+                        <div class="row slider-testimonials">
+                          <div class="col-md-8 col-sm-12">
+                            {!! $trimmed_text !!}
+                            <hr style="
+                                width: 334px;
+                                height: 3px;
+                                background: #006eb2;
+                              ">
+                            <h5>{{$ceo->name}}</h5>
+                            <p>{{$ceo->position}}</p>
+                            <br>
+                            <br>
+                            <!-- <a href="{{ url('investor_relations/message_from_ceo') }}" class="btn gsf-button">Read More</a> -->
+                          </div>
+                          <div class="col-md-4 col-sm-12">
+                            <div>
+                              <img style="width: 100%;max-width: 100%;margin-bottom: 20px;border-radius: 10px;" class="img-responsive" src="{{getimage($ceo->image)}}" alt="">
                             </div>
                           </div>
                         </div>
