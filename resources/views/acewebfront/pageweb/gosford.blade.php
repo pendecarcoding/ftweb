@@ -32,7 +32,7 @@
 								</div>
 							</div>
 						</div>
-                        <div data-aos="fade-up" data-aos-delay="300" class="col-lg-4 col-md-6 col-sm-6 m-b30">
+                        <!-- <div data-aos="fade-up" data-aos-delay="300" class="col-lg-4 col-md-6 col-sm-6 m-b30">
 							<div class="dlab-box">
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/3.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
@@ -40,8 +40,8 @@
 									<p class="m-b0" style="color: #343F52;font-family: 'Poppins';font-weight: bold;font-size: 20px;">Gear Knob</p>
 								</div>
 							</div>
-						</div>
-                        <div data-aos="fade-up" data-aos-delay="400" class="col-lg-4 col-md-6 col-sm-6 m-b30">
+						</div> -->
+                        <!-- <div data-aos="fade-up" data-aos-delay="400" class="col-lg-4 col-md-6 col-sm-6 m-b30">
 							<div class="dlab-box">
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/4.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
@@ -49,7 +49,7 @@
 									<p class="m-b0" style="color: #343F52;font-family: 'Poppins';font-weight: bold;font-size: 20px;">Steering Wheel</p>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
                         <div data-aos="fade-up" data-aos-delay="500" class="col-lg-4 col-md-6 col-sm-6 m-b30">
 							<div class="dlab-box">

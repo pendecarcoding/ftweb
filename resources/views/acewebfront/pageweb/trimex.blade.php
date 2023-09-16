@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="dlab-info p-a20 text-center bg-gray">
 
-                                    <p class="m-b0" class="wwd-text">{{ assemblyimg()[$i] }}</p>
+                                    <p style="text-transform: capitalize;" class="m-b0" class="wwd-text text-capitalize">{{ assemblyimg()[$i] }}</p>
                                 </div>
                             </div>
                         </div>
