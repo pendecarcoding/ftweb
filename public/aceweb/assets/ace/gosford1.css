@@ -111,6 +111,7 @@ html {
     position: relative;
 }
 .caption_leadership{
+    font-family: 'Poppins';
     position: absolute;
     bottom: 7px;
     width: 100%;
@@ -483,6 +484,7 @@ footer a {
     font-family: 'Poppins';
     font-size: medium;
     text-align: left;
+    font-weight: normal;
 }
 
 .carousel-indicators .btn-slide {
@@ -1147,7 +1149,7 @@ header {
 
 .card-home h3 {
     text-shadow: 2px 2px 4px #565656;
-    /*font-family: "Poppins";*/
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;

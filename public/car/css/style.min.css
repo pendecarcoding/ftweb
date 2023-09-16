@@ -116,6 +116,20 @@ font-family: 'Raleway', sans-serif;
 /*--------------------------------------------------------------
 1. GENERAL
 ---------------------------------------------------------------*/
+@font-face {
+    font-family: 'Poppins';
+    src: url('/public/font/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/public/font/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 ::selection {
 	background: var(--primary)!important;
@@ -123,7 +137,7 @@ font-family: 'Raleway', sans-serif;
 
 body {
     background-color: #FFF;
-    font-family: 'Hind', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #444444;
@@ -131,6 +145,16 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+  }
 a {
     color: var(--primary);
     outline: 0 none;
