@@ -2011,10 +2011,12 @@ footer img {
 }
 
 .about p {
+    font-family: 'Poppins',sans-serif;
     margin-top: 0px;
     margin-bottom: 0px;
     color: #999999;
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .wrap-card-company p {
@@ -10000,7 +10002,7 @@ footer img {
     }
 
     .sticky-content {
-        padding-top: 0rem;
+        padding-top: 4rem;
     }
 
     .ace-achievements {

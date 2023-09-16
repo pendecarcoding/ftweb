@@ -2108,7 +2108,8 @@
     }
 
     .ace-button-blue {
-        font-size: 1.2em;
+        font-family: 'Poppins',sans-serif;
+        font-size: 16px;
         margin: 10px;
     }
 
@@ -2583,7 +2584,7 @@
 
     .slider-testimonials p {
         text-align: left;
-        font-size: 2em;
+           /* font-size: 2em;*/
     }
 
     .ace-card-company p {
