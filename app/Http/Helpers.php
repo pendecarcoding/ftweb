@@ -720,7 +720,7 @@ function name_companyofbg(){
     $data=[
         '<h5 class="h5-milestone">Gosford Leather Industries(GLI) JB Established</h5>',
         '<h5 class="h5-milestone">Open GLI Kuchai Lama office</h5>',
-        '<h5 class="h5-milestone">Open GLI Massi Plant</h5>',
+        '<h5 class="h5-milestone">Open GLI Malaysia Plant</h5>',
         '<h5 class="h5-milestone">Introduce GL Trim(S) Pte Ltd</h5>',
         '<h5 class="h5-milestone">Trimex Automotive (Aus) Pte Ltd Established</h5>',
         '<h5 class="h5-milestone">
@@ -754,8 +754,7 @@ GLI and Trimex move to PJ Office</h5>',
 1<span class="angka"></span><sup>ST</sup> Kia Project
 
 </h5>','<h5 class="h5-milestone">
-1<span class="angka"></span><sup>ST</sup> Ford
-    Project<br>
+
 IATF 16949：2016 Cert
 </h5>','<h5 class="h5-milestone">
 GLI Expansion JB Plant

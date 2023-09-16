@@ -7,11 +7,14 @@
                 <div class="section-head text-center about ">
                     <h1>Companies Background</h1>
 
-                    <h5 class="title-ace">GROUP MILESTONE 2001-2022</h5>
+                    <h5 class="title-ace">GROUP MILESTONE 2002-2022</h5>
                 </div>
                 <div class="section-content ">
                     <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
                         @for ($i = 0; $i < 16; $i++)
+                        @if($i==9)
+
+                        @else
                             <div class="item" style="margin-right: 5px;margin-left:5px ;">
 
                                 <div class="blog-post latest-blog-1 date-style-3 skew-date"
@@ -33,6 +36,7 @@
                                     </div>
                                 </div>
                             </div>
+                        @endif
                         @endfor
 
                     </div>
