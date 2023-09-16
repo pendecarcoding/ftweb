@@ -129,9 +129,9 @@
                             <label class="control-label col-sm-12" for="fname">Select an Option:</label>
                             <div class="col-sm-10">
                             <select name="type" id="" class="form-control" required>
-                                <option value="Complain">Complain</option>
-                                <option value="Feedback">Feedback</option>
                                 <option value="General Enquery">General Enquiry</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Complain">Complain</option>
                                 <option value="Other">Others</option>
                             </select>
                             </div>

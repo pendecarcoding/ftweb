@@ -288,7 +288,7 @@
                     <div class="fyt_list_investor">
                       <p class="strength-font">We have conducted extensive laboratory testing to make certain that our products meet or exceed all
                         applicable Federal Motor Vehicle Safety Standards (FMVSS) Side Impact Airbag Deployment Test Series
-                        have been conducted in a certified laboratory, Autoliv Hirotako Safety (Malaysia), to assure passenger
+                        have been conducted in a certified laboratory, to assure passenger
                         safety. Thanks to our experience and continuous research, we can provide our customers with leathers
                         tanned according to different recipes, thus continuously improving our environmental and resource
                         targets. Elevate your ride with our stylish seat covers and showcase your commitment to excellence.</p>
