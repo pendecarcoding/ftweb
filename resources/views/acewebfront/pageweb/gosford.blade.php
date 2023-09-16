@@ -28,7 +28,7 @@
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/2.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
 
-									<p class="m-b0" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;">Door Ornament</p>
+									<p class="m-b0" style="color: #343F52;font-family: 'Poppins';font-weight: bold;font-size: 20px;">Door Ornament</p>
 								</div>
 							</div>
 						</div>
@@ -37,7 +37,7 @@
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/3.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
 
-									<p class="m-b0" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;">Gear Knob</p>
+									<p class="m-b0" style="color: #343F52;font-family: 'Poppins';font-weight: bold;font-size: 20px;">Gear Knob</p>
 								</div>
 							</div>
 						</div>
@@ -46,7 +46,7 @@
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/4.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
 
-									<p class="m-b0" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;">Steering Wheel</p>
+									<p class="m-b0" style="color: #343F52;font-family: 'Poppins';font-weight: bold;font-size: 20px;">Steering Wheel</p>
 								</div>
 							</div>
 						</div>
@@ -56,7 +56,7 @@
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/5.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
 
-									<p class="m-b0" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;">LID Console</p>
+									<p class="m-b0" style="color: #343F52;font-family: 'Poppins';font-weight: bold;font-size: 20px;">LID Console</p>
 								</div>
 							</div>
 						</div>
@@ -65,7 +65,7 @@
 								<div class="dlab-media"> <a href="#"><img src="/public/page/gosford/6.png" alt=""></a> </div>
 								<div class="dlab-info p-a20 text-center bg-gray">
 
-									<p class="m-b0" style="color: #343F52;font-family: 'Space Grotesk';font-weight: bold;font-size: 20px;">Parking Brake Cover</p>
+									<p class="m-b0" style="color: #343F52;font-family: 'Poppins';font-weight: bold;font-size: 20px;">Parking Brake Cover</p>
 								</div>
 							</div>
 						</div>
@@ -85,7 +85,7 @@
                 <div class="row">
                     <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
                         <div class="section-head text-left" style="    margin: 15% 0px;">
-                            <h2 class="text-capitalize" style="color: black;font-family: 'Space Grotesk';font-weight: bold;">MISSION</h2>
+                            <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">MISSION</h2>
                             <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p>
                         </div>
 
