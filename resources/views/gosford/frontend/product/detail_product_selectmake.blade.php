@@ -42,7 +42,7 @@
                                                     </span>
                                                     <!--COLOR OPTION-->
                                                     <div style="display: flex;flex-direction: row;">
-                                                        <div id="full-material" class="card card-coloroption-one">
+                                                        <div id="full-material" class="card-leather-option">
                                                             <img src="{{getimage($leather->img)}}" alt="">
                                                         </div>
                                                         <div  class="card-coloroption-one">

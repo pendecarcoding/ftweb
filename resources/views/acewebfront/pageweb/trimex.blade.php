@@ -73,7 +73,7 @@
         <div class="container">
             <div class="row">
                 <div data-aos="fade-right" data-aos-delay="100" class="col-lg-6 m-b30 p-r50">
-                    <div class="section-head text-left" style="    margin: 15% 0px;">
+                    <div class="section-head text-left space-text-video">
                         <h2 class="text-capitalize"
                             style="color: rgb(255, 255, 255);font-family: 'Poppins';font-weight: bold;">PARTNER</h2>
                         <h4 style="color: rgb(255, 255, 255);font-family: 'Poppins';">About our Prodictivity</h4>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="col-sm-12 col-lg-6 m-b30">
                     <div class="video-box">
-                        <iframe width="100%" height="450px" src="https://www.youtube.com/embed/ujKY5IC6GsQ"
+                        <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/ujKY5IC6GsQ"
                             title="Feytech, Kulim" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>

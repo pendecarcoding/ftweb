@@ -322,7 +322,7 @@
                 <div class="row">
                   <div data-aos="fade-up" class="col-md-4 aos-init aos-animate">
                     <div class="discover">
-                      <img style="width: 50px; height: 50px" src="/public/aceweb/assets/img/img_03.png" alt="">
+                      <img style="width: 50px; height: 50px" src="/public/aceweb/assets/img/img_04.png" alt="">
                       <h6>IATF</h6>
                       <h6>CERTIFICATION</h6>
                     </div>

@@ -42,8 +42,8 @@
                                     <div data-bs-toggle="modal" data-bs-target="#readboard{{ $v->id }}"
                                         data-aos="fade-up" data-aos-delay="{{ $i + 1 }}00"
                                         class="col-md-4 aos-init aos-animate">
-                                        <div style="height: 400px;position: relative;overflow: hidden;"
-                                            class="card text-center board-director">
+                                        <div
+                                            class="card text-center board-director card-bod">
                                             <div
                                                 style="position: relative;height: 280px;border-radius: 9px;overflow: hidden;">
                                                 <img src="{{ getimage($v->foto) }}" width="100%">
@@ -107,8 +107,9 @@
                                         <div data-bs-toggle="modal" data-bs-target="#readboard{{ $v->id }}"
                                             data-aos="fade-up" data-aos-delay="{{ $i + 1 }}00"
                                             class="col-md-4 aos-init aos-animate">
-                                            <div style="height: 400px;position: relative;overflow: hidden;"
-                                                class="card text-center board-director">
+                                            <div
+                                            class="card text-center board-director card-bod">
+
                                                 <div
                                                     style="position: relative;height: 280px;border-radius: 9px;overflow: hidden;">
                                                     <img src="{{ getimage($v->foto) }}" width="100%">
@@ -177,8 +178,8 @@
                                     <div data-bs-toggle="modal" data-bs-target="#readboard{{ $v->id }}"
                                         data-aos="fade-up" data-aos-delay="{{ $i + 1 }}00"
                                         class="col-md-4 aos-init aos-animate">
-                                        <div style="height: 400px;position: relative;overflow: hidden;"
-                                            class="card text-center board-director">
+                                        <div
+                                            class="card text-center board-director card-bod">
                                             <div
                                                 style="position: relative;height: 280px;border-radius: 9px;overflow: hidden;">
                                                 <img src="{{ getimage($v->foto) }}" width="100%">
@@ -245,8 +246,8 @@
                                         <div data-bs-toggle="modal" data-bs-target="#readboard{{ $v->id }}"
                                             data-aos="fade-up" data-aos-delay="{{ $i + 1 }}00"
                                             class="col-md-4 aos-init aos-animate">
-                                            <div style="height: 400px;position: relative;overflow: hidden;"
-                                                class="card text-center board-director">
+                                            <div
+                                            class="card text-center board-director card-bod">
                                                 <div
                                                     style="position: relative;height: 280px;border-radius: 9px;overflow: hidden;">
                                                     <img src="{{ getimage($v->foto) }}" width="100%">

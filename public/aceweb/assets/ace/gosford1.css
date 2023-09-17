@@ -8458,10 +8458,9 @@ footer img {
         top: 0;
         z-index: 10;
         background-repeat: no-repeat, repeat;
-
         background-blend-mode: soft-light;
         /* padding: 5rem 20px; */
-        padding-top: 1rem;
+        padding-top: 4rem;
     }
 
     .slider-testimonials p {
@@ -8471,7 +8470,7 @@ footer img {
 
     .gtp-solution .vl {
         height: auto;
-        padding-left: 36px;
+        padding-left: 0px;
         text-align: justify;
         font-size: 1.3vw;
     }
@@ -9047,7 +9046,7 @@ footer img {
     }
 
     #imggpt1 {
-        width: 58%;
+        width: 54%;
     }
 
     .hover-1-description {
@@ -9506,7 +9505,7 @@ footer img {
 
     .vl {
         height: auto;
-        padding-left: 15px;
+        padding-left: 0px;
         text-align: justify;
         font-size: 1.3vw;
     }
@@ -9956,7 +9955,7 @@ footer img {
 
     #to-progress {
         color: rgba(0, 153, 255, 1);
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
 

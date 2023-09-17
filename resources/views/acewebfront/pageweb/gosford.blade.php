@@ -84,15 +84,15 @@
             <div class="container">
                 <div class="row">
                     <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
-                        <div class="section-head text-left" style="    margin: 15% 0px;">
-                            <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">MISSION</h2>
+                        <div class="section-head text-left space-text-video">
+                            <h2 class="text-uppercase" style="color: black;font-family: 'Poppins';font-weight: bold;">MISSION</h2>
                             <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p>
                         </div>
 
                     </div>
                     <div class="col-sm-12 col-lg-6 m-b30">
                         <div class="video-box">
-                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/5SGxcVhGA6Q" title="Trimex, Petaling Jaya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/5SGxcVhGA6Q" title="Trimex, Petaling Jaya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                         </div>
                     </div>
@@ -135,10 +135,11 @@
                           </div>
 
                     <div data-aos="zoom-in" data-aos-delay="200" class="col-lg-6 testimonial-thumb m-b30">
-                    <div style="padding: 25% 0px;">
-                        <h2 class="text-capitalize" style="font-family: 'Poppins';font-weight: 700;">Project Development</h2>
-                        <h3 style="font-family: 'Poppins';">OEM and REM Projects</h3>
-                        <p class="font-patner" style="color: black;">Original Equipment Manufacturer (OEM):
+                    <div class="space-text-video" style="padding: 25% 0px;">
+                        <h2 class="text-uppercase" style="color: black;font-family: 'Poppins';font-weight: bold;">Project Development</h2>
+                        <h3 style="font-family: 'Poppins';color: grey;">OEM and REM Projects</h3>
+                        <p class="font-patner" style="
+                        color: #979797;">Original Equipment Manufacturer (OEM):
                         Leather seat covers are embedded as part of the standard car accessories for selected variants of the car models launched by the car manufacturers and we supplied our car sear covers to their appointed Tier 1 car seat manufacturers for their onward installation onto the bare seat</p>
                     </div>
 

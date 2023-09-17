@@ -837,7 +837,7 @@ industry reputation.
                             <p>{{ $v->position }}</p>
                           </div>
                           <div class="col-md-5 col-sm-12">
-                            <div class="card">
+                            <div>
                                 {!! $v->video !!}
                             </div>
                           </div>

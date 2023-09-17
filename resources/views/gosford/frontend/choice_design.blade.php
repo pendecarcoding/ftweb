@@ -43,7 +43,7 @@
                         <div class="col-md-6 col-sm-12">
                             <div class="slider-product">
                                 <div style="display: flex;flex-direction: column;">
-                                    <img src="/public/assets/img/seat-detail.png" alt="">
+                                    <img class="img-car-leather" src="/public/assets/img/seat-detail.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                                     <div style="display: flex;flex-direction: column;">
                                         <hr class="hr-product-detail">
                                         <input type="hidden" name="id" id="id_leather" required>
-                                        Material: <span style="color: #BF1D2C;" id="name-material">Full leather</span>
+                                        <p>Material: </p><span style="color: #BF1D2C;" id="name-material">Full leather</span>
 
                                         <div class="list-leather" style="gap: 15px;
                                         display: flex;
@@ -68,7 +68,7 @@
                                             </div>
                                             @endforeach
                                         </div>
-                                        <div style="display: flex;flex-direction: column;padding: 50px 0px;">
+                                        <div class="car-seat-leather-des">
                                             <div style="display: flex;gap:20px">
                                                 <h4 style="font-weight: bold;"></h4>
                                                 <h4 id="total" style="color:#BF1D2C;font-weight:bold;">
@@ -181,7 +181,7 @@
                 <div class="container">
                     <div class="row">
                         <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
-                            <div class="section-head text-left" style="    margin: 15% 0px;">
+                            <div class="section-head text-left space-text-video">
                                 <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">MISSION</h2>
                                 <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p>
                             </div>
@@ -189,7 +189,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-6 m-b30">
                             <div class="video-box" style="padding: 50px 0px;">
-                                <iframe width="100%" height="450px" src="https://www.youtube.com/embed/WEQDCxT6RFY" title="Gosford, Johor Bahru" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/WEQDCxT6RFY" title="Gosford, Johor Bahru" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                             </div>
                         </div>
