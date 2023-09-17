@@ -1,4 +1,7 @@
 @extends('acewebfront.layouts')
+@section('meta')
+    <meta property="og:image" content="{{ uploaded_asset(get_setting('system_logo_white')) }}">
+@endsection
 @section('content')
     <main>
         @include('acewebfront.widget.allbaner')
@@ -13,10 +16,10 @@
                                     <span class="h-dash" style="font-weight: bold">—</span>
                                 </div>
                                 <!-- <div style="text-align: center;" data-aos="fade-up" data-aos-delay="200"
-                                            class="col-md-12 col-sm-12 aos-init aos-animate">
-                                            <h1>Vision & Mission
-                                            </h1>
-                                        </div> -->
+                                                class="col-md-12 col-sm-12 aos-init aos-animate">
+                                                <h1>Vision & Mission
+                                                </h1>
+                                            </div> -->
                             </div>
                         </div>
                         <div data-aos="fade-up" class="card-vmm" style="margin-top: 20px;">

@@ -1,4 +1,7 @@
 @extends('acewebfront.layouts')
+@section('meta')
+    <meta property="og:image" content="{{ uploaded_asset(get_setting('system_logo_white')) }}">
+@endsection
 @section('content')
     <main>
         @include('acewebfront.widget.allbaner')
@@ -12,31 +15,30 @@
                 <div class="section-content ">
                     <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
                         @for ($i = 0; $i < 16; $i++)
-                        @if($i==9)
+                            @if ($i == 9)
+                            @else
+                                <div class="item" style="margin-right: 5px;margin-left:5px ;">
 
-                        @else
-                            <div class="item" style="margin-right: 5px;margin-left:5px ;">
+                                    <div class="blog-post latest-blog-1 date-style-3 skew-date"
+                                        style="display: flex;flex-direction: column;">
+                                        <!-- <div><h1 class="font-bg-history">2022</h1></div> -->
+                                        <div class="dlab-post-media img-bg-mil-wrap"><img style="border-radius: 12px;"
+                                                src="/public/background/{{ $i }}_bg.png" alt=""></div>
+                                        <div class="dlab-post-info p-t20" style="padding: 20px;">
+                                            <div>
+                                                {!! name_companyofbg()[$i] !!}
+                                            </div>
 
-                                <div class="blog-post latest-blog-1 date-style-3 skew-date"
-                                    style="display: flex;flex-direction: column;">
-                                    <!-- <div><h1 class="font-bg-history">2022</h1></div> -->
-                                    <div class="dlab-post-media img-bg-mil-wrap"><img style="border-radius: 12px;"
-                                            src="/public/background/{{ $i }}_bg.png" alt=""></div>
-                                    <div class="dlab-post-info p-t20" style="padding: 20px;">
-                                        <div>
-                                            {!! name_companyofbg()[$i] !!}
-                                        </div>
-
-                                        <div class="dlab-post-text" style="max-height: 100px; position: relative;">
-                                            @if (file_exists('public/background/go_' . $i . '.png'))
-                                                <img style="width:100%;max-height: 100px;object-fit: contain;"
-                                                    src="/public/background/go_{{ $i }}.png" alt="">
-                                            @endif
+                                            <div class="dlab-post-text" style="max-height: 100px; position: relative;">
+                                                @if (file_exists('public/background/go_' . $i . '.png'))
+                                                    <img style="width:100%;max-height: 100px;object-fit: contain;"
+                                                        src="/public/background/go_{{ $i }}.png" alt="">
+                                                @endif
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endif
+                            @endif
                         @endfor
 
                     </div>

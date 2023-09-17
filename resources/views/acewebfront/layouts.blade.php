@@ -11,6 +11,7 @@
 
     <meta name="generator" content="Hugo 0.104.2" />
     <link rel="icon" href="{{ uploaded_asset(get_setting('system_logo_white')) }}">
+
     <title>
         @if (!empty($page))
             {{ get_setting('site_name') }} |{{ strtoupper($page) }}

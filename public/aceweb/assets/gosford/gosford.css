@@ -14273,6 +14273,16 @@ form.form--basic .mdl-textfield__label {
         text-transform: capitalize;
     }
 
+    .img-wrap-contact img{
+            height: 100%;
+            width: 718px;
+    }
+
+    .contact-wrap img{
+        height: 100%;
+        width: 718px;
+}
+
     .about span {
         font-size: 25px;
     }
@@ -14608,9 +14618,21 @@ form.form--basic .mdl-textfield__label {
         height: 500px;
         vertical-align: middle;
     }
+    .about span {
+        font-size: 30px;
+    }
+    .padding-research span {
+        font-size: 30px;
+    }
 }
 
 @media (min-width: 2560px) and (max-width: 9600px) {
+    .about span {
+        font-size: 30px;
+    }
+    .padding-research span {
+        font-size: 30px;
+    }
     .contact-wrap .img-responsive {
         object-fit: cover;
         max-width: 100%;
