@@ -14,7 +14,7 @@
             <div class="wrap-content">
                 <div style="padding-top: 0px" class="ace-isi">
                     <div class="row">
-                        <div class="col-md-8 col-sm-12 col-lg-8">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
                             <div data-aos="fade-up" class="title-ace">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
@@ -104,7 +104,7 @@
 
                         </div>
                         <div class="col-md-4 col-sm-12 col-lg-4">
-                            @include('acewebfront.widget.right')
+                            <!-- @include('acewebfront.widget.right') -->
                         </div>
                     </div>
                 </div>
