@@ -1088,6 +1088,26 @@
             dz_rev_slider_1();
         }); /*ready*/
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  // Check if it's a tablet in portrait mode
+  if (isTabletPortrait()) {
+    // Request landscape orientation
+    requestLandscapeOrientation();
+  }
+});
+
+function isTabletPortrait() {
+  return window.matchMedia("(orientation: portrait) and (max-width: 768px)").matches;
+}
+
+function requestLandscapeOrientation() {
+  if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock('landscape');
+  }
+}
+
+        </script>
 
 </body>
 
