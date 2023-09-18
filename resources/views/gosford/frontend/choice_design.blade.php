@@ -7,6 +7,10 @@
         @include('acewebfront.widget.allbaner')
         <section class="pt-5 pb-5">
             <div class="container">
+                <div class="section-head text-center ">
+                    <h2 class="text-capitalize">Automotive Seat Covers</h2>
+
+                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="description-service">We are delighted to present our latest
