@@ -5,12 +5,40 @@ footer {
 
 }
 
+.itemFullText{
+
+    height: 300px;
+    overflow-y: scroll;
+    position: relative;
+    padding: 0px 10px;
+
+}
+.img-bod-modal{
+    object-fit: cover;
+    height: 300px;width: 100%;margin-bottom: 20px;
+
+}
+
 .space-text-video {
     margin: 7% 45px;
 }
 .card-bod {
     height: 400px;
     position: relative;
+    overflow: hidden;
+}
+
+.row-vicle{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.wrap-img-bod{
+    position: relative;
+    height: 280px;
+    border-radius: 9px;
     overflow: hidden;
 }
 
@@ -14283,9 +14311,20 @@ form.form--basic .mdl-textfield__label {
         width: 718px;
 }
 
-    .about span {
-        font-size: 25px;
-    }
+.about span {
+    font-size: 18px;
+}
+.card-bod {
+    height: 476px;
+    position: relative;
+    overflow: hidden;
+}
+.wrap-img-bod{
+    position: relative;
+    height: 379px;
+    border-radius: 9px;
+    overflow: hidden;
+}
     .ace-button-blue {
         font-size: 25px;
     }
@@ -14476,13 +14515,18 @@ form.form--basic .mdl-textfield__label {
         font-size: 20px;
         letter-spacing: 0;
     }
+    .about p {
+
+            font-size: 18px;
+
+    }
     .description-service {
         font-size: 20px;
         text-align: justify;
         margin: 10px 50px;
     }
     .h5, h5 {
-        font-size: 2.25rem;
+        font-size: 1.25rem;
     }
     #name-material{
         font-size: 20px;
@@ -14518,12 +14562,48 @@ form.form--basic .mdl-textfield__label {
         height: 46px;
         height: auto;
     }
+    .img-bod-modal{
+            object-fit: cover;
+            height: 596px;
+            width: 100%;
+            margin-bottom: 20px;
 
+    }
     .clearfix {
         height: 128px;
         clear: both;
     }
+    .card-bod {
+        height: 576px;
+        position: relative;
+        overflow: hidden;
+    }
+    .wrap-img-bod {
+        position: relative;
+        height: 479px;
+        border-radius: 9px;
+        overflow: hidden;
+    }
+    .h5, h5 {
+        font-size: 1.55rem;
+    }
+    .small, small {
+        font-size: 0.999em;
+    }
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1500px;
+    }
+    .itemFullText{
 
+            height: 600px;
+            overflow-y: scroll;
+            position: relative;
+            padding: 0px 10px;
+
+    }
+    .modal-content {
+        height: 800px;
+    }
     .container,
     .container-lg,
     .container-md,

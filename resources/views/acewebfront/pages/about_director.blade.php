@@ -47,8 +47,7 @@
                                         class="col-md-4 aos-init aos-animate">
                                         <div
                                             class="card text-center board-director card-bod">
-                                            <div
-                                                style="position: relative;height: 280px;border-radius: 9px;overflow: hidden;">
+                                            <div class="wrap-img-bod">
                                                 <img src="{{ getimage($v->foto) }}" width="100%">
                                             </div>
                                             <br>
@@ -70,16 +69,15 @@
                                                                 <!-- Item Image -->
                                                                 <div class="itemImageBlock">
                                                                     <span class="itemImage">
-                                                                        <img style="height: 300px;width: 100%;margin-bottom: 20px;"
+                                                                        <img
                                                                             src="{{ getimage($v->foto) }}"
-                                                                            class="img-responsive">
+                                                                            class="img-bod-modal">
                                                                     </span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-xs-12 col-sm-8">
                                                                 <!-- Item text -->
-                                                                <div class="itemFullText"
-                                                                    style="height:300px;overflow-y:scroll;position:relative;padding: 0px 10px;">
+                                                                <div class="itemFullText">
                                                                     <h2>{{ $v->name }}</h2>
                                                                     <p>{{ $v->position }}</p>
                                                                     {!! $v->content !!}
@@ -113,8 +111,7 @@
                                             <div
                                             class="card text-center board-director card-bod">
 
-                                                <div
-                                                    style="position: relative;height: 280px;border-radius: 9px;overflow: hidden;">
+                                            <div class="wrap-img-bod">
                                                     <img src="{{ getimage($v->foto) }}" width="100%">
                                                 </div>
                                                 <br>
@@ -137,16 +134,15 @@
                                                                     <!-- Item Image -->
                                                                     <div class="itemImageBlock">
                                                                         <span class="itemImage">
-                                                                            <img style="height: 300px;width: 100%;margin-bottom: 20px;"
+                                                                            <img
                                                                                 src="{{ getimage($v->foto) }}"
-                                                                                class="img-responsive">
+                                                                                class="img-bod-modal">
                                                                         </span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-8">
                                                                     <!-- Item text -->
-                                                                    <div class="itemFullText"
-                                                                        style="height:300px;overflow-y:scroll;position:relative;padding: 0px 10px;">
+                                                                    <div class="itemFullText">
                                                                         <h2>{{ $v->name }}</h2>
                                                                         <p>{{ $v->position }}</p>
                                                                         {!! $v->content !!}
@@ -183,8 +179,7 @@
                                         class="col-md-4 aos-init aos-animate">
                                         <div
                                             class="card text-center board-director card-bod">
-                                            <div
-                                                style="position: relative;height: 280px;border-radius: 9px;overflow: hidden;">
+                                            <div class="wrap-img-bod">
                                                 <img src="{{ getimage($v->foto) }}" width="100%">
                                             </div>
                                             <br>
@@ -207,16 +202,15 @@
                                                                 <!-- Item Image -->
                                                                 <div class="itemImageBlock">
                                                                     <span class="itemImage">
-                                                                        <img style="height: 300px;width: 100%;margin-bottom: 20px;"
+                                                                        <img
                                                                             src="{{ getimage($v->foto) }}"
-                                                                            class="img-responsive">
+                                                                            class="img-bod-modal">
                                                                     </span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-xs-12 col-sm-8">
                                                                 <!-- Item text -->
-                                                                <div class="itemFullText"
-                                                                    style="height:300px;overflow-y:scroll;position:relative;padding: 0px 10px;">
+                                                                <div class="itemFullText">
                                                                     <h2>{{ $v->name }}</h2>
                                                                     <p>{{ $v->position }}</p>
                                                                     {!! $v->content !!}
@@ -251,8 +245,7 @@
                                             class="col-md-4 aos-init aos-animate">
                                             <div
                                             class="card text-center board-director card-bod">
-                                                <div
-                                                    style="position: relative;height: 280px;border-radius: 9px;overflow: hidden;">
+                                            <div class="wrap-img-bod">
                                                     <img src="{{ getimage($v->foto) }}" width="100%">
                                                 </div>
                                                 <br>
@@ -275,16 +268,15 @@
                                                                     <!-- Item Image -->
                                                                     <div class="itemImageBlock">
                                                                         <span class="itemImage">
-                                                                            <img style="height: 300px;width: 100%;margin-bottom: 20px;"
+                                                                            <img
                                                                                 src="{{ getimage($v->foto) }}"
-                                                                                class="img-responsive">
+                                                                                class="img-bod-modal">
                                                                         </span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xs-12 col-sm-8">
                                                                     <!-- Item text -->
-                                                                    <div class="itemFullText"
-                                                                        style="height:300px;overflow-y:scroll;position:relative;padding: 0px 10px;">
+                                                                    <div class="itemFullText">
                                                                         <h2>{{ $v->name }}</h2>
                                                                         <p>{{ $v->position }}</p>
                                                                         {!! $v->content !!}
