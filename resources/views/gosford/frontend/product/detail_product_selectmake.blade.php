@@ -36,12 +36,12 @@
                                                     </div>
 
                                                     <input type="hidden" name="id_leather" value="{{$leather->id}}">
-
+<!--
                                                     Material: <span style="color: #BF1D2C;" id="name-material">
                                                         {{$leather->name_leather}}
                                                     </span>
                                                     <!--COLOR OPTION-->
-                                                    <div style="display: flex;flex-direction: row;">
+                                                    <!-- <div style="display: flex;flex-direction: row;">
                                                         <div id="full-material" class="card-leather-option">
                                                             <img src="{{getimage($leather->img)}}" alt="">
                                                         </div>
@@ -52,17 +52,12 @@
 
                                                         </div>
 
-                                                    </div>
+                                                    </div> -->
                                                     <!--END COLOR OPTION-->
                                                     <!--COLOR 2 Option-->
                                                     <br>
 
                                                     <!--END COLOR 2 OPTION-->
-
-
-
-
-
                                                     <div style="display: flex;flex-direction: column;">
 
                                                         <div>
@@ -90,13 +85,56 @@
                                                                 <option value="">Year</option>
                                                             </select>
                                                         </div>
+
+                                                        <hr>
+                                                        <div class="row-vicle">
+
+                                                            <div>
+                                                                <label>Vehicle Type</label>
+
+                                                                <select name="vehicle_type" class="form-control" style="width:100%">
+                                                                    @foreach($vehicle as $iv => $v)
+                                                                      <option value="{{$v->id}}">{{$v->size}}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+
+                                                           <div>
+                                                            <label>Aplication</label>
+                                                            <select name="application" class="form-control">
+                                                                @foreach($aplication as $i => $vl)
+                                                                  <option value="{{$vl->id}}" @if($leather->id==$vl->id) selected @endif >{{$vl->name_leather}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                           </div>
+
+                                                           <div>
+                                                            <label>Leather Type</label>
+                                                            <select name="leather_type" class="form-control">
+                                                                @foreach($typeleather as $i => $le)
+                                                                  <option value="{{$le->id}}">{{$le->leather}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                           </div>
+
+                                                           <div>
+                                                            <label>Row</label>
+                                                            <select name="row" class="form-control">
+                                                                <option value="1">1</option>
+                                                                 <option value="2">2</option>
+                                                                 <option value="3">3</option>
+                                                                 <option value="4">4</option>
+                                                            </select>
+                                                           </div>
+                                                        </div>
+                                                        <br>
                                                         <div>
                                                             <textarea placeholder="If you have any requirements or need special attention to details, please leave your information." style="height: 164px;" name="requiretment" class="form-control"></textarea>
                                                         </div>
                                                     </div>
                                                     <br>
 
-                                                    <center><h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM {{$leather->price}}</h4></center>
+                                                    <center><h4 id="total" style="color:#BF1D2C;font-weight:bold;"></h4></center>
                                                     <div style="display: flex;gap:20px;justify-content: center;">
                                                         <a href="{{ url('product_project') }}"
                                                             style="padding: 0px 30px;" type="submit"
@@ -104,9 +142,9 @@
                                                             data-upgraded=",MaterialButton">
                                                             Back
                                                         </a>
-                                                        <button type="submit" style="padding: 0px 30px;" type="submit"
+                                                        <button id="submit" type="submit" style="padding: 0px 30px;" type="submit"
                                                             class="mdl-button mdl-js-button mdl-button--raised color--gray"
-                                                            data-upgraded=",MaterialButton">
+                                                            data-upgraded=",MaterialButton" disabled>
                                                             Submit
                                                         </button>
                                                     </div>
@@ -225,5 +263,59 @@
         selectElement.add(option);
         }
     </script>
+
+<script>
+    $(document).ready(function() {
+        // Event listener untuk Vehicle Type
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        // Event listener untuk setiap select box
+        $('select[name="vehicle_type"], select[name="application"], select[name="leather_type"], select[name="row"]').change(function() {
+            fetchData();
+        });
+
+
+        function fetchData() {
+            // Ambil nilai dari setiap select box
+            var vehicleType = $('select[name="vehicle_type"]').val();
+            var application = $('select[name="application"]').val();
+            var leatherType = $('select[name="leather_type"]').val();
+            var row = $('select[name="row"]').val();
+
+
+            // Kirim request Ajax untuk mengambil harga
+            $.ajax({
+                url: '{{route('gosford.fetch.price')}}',
+                type: 'POST',
+                data: {
+                    vehicle_type: vehicleType,
+                    application: application,
+                    leather_type: leatherType,
+                    row: row
+                },
+                success: function(response) {
+                    // Tanggapi hasil dari server (harga) di sini
+                    console.log('Harga: ' + response.price);
+                    if(response.price == null){
+                        document.getElementById('submit').disabled = true;
+                        $('#total').html('Price not avaliable');
+                    }else{
+                        document.getElementById('submit').disabled = false;
+                        $('#total').html('RM '+response.price);
+                    }
+
+                },
+                error: function(error) {
+                    console.error('Terjadi kesalahan: ' + error.responseText);
+                }
+            });
+        }
+    });
+</script>
+
 
 @endsection

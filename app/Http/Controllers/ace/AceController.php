@@ -162,8 +162,7 @@ class AceController extends Controller
             break;
             case 'product_project':
                 $leather     =  TypeLeather::orderby('shortby','asc')->get();
-                $slider      =  Slider::select('sliders.id as id','sliders.caption as caption','sliders.sub_caption','uploads.file_name as file_name')->join('uploads','uploads.id','sliders.image')->where('sliders.type','PERSONAL')->get();
-                return view('gosford.frontend.choice_design',compact('slider','leather'));
+                return view('gosford.frontend.choice_design',compact('leather'));
                 // if(Session::get('id_account') == null){
                 //     $brand   = Brand::all();
                 //     return view('gosford.frontend.search',compact('brand'));

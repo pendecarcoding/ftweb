@@ -69,6 +69,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BanerController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\LeatherController;
+use App\Http\Controllers\SeatpriceController;
 use App\Http\Controllers\towncolor\TwotowncolorController;
 use App\Http\Controllers\patterndesign\PatterndesignController;
 use App\Http\Controllers\piping\PipingController;
@@ -205,6 +206,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
     Route::controller(LeatherController::class)->group(function () {
         Route::get('/leather/edit/{id}', 'edit')->name('leather.edit');
         Route::get('/leather/destroy/{id}', 'destroy')->name('leather.destroy');
+    });
+
+    Route::resource('seatprice', SeatpriceController::class);
+    Route::controller(SeatpriceController::class)->group(function () {
+        Route::get('/seatprice/edit/{id}', 'edit')->name('seatprice.edit');
+        Route::get('/seatprice/destroy/{id}', 'destroy')->name('seatprice.destroy');
     });
 
 

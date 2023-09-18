@@ -144,6 +144,14 @@
                                 </a>
                             </li>
                             @endcan
+                            @can('view_all_seatprice')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('seatprice.index') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['seatprice.index', 'seatprice.create', 'seatprice.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Seat Price') }}</span>
+                                </a>
+                            </li>
+                            @endcan
                             @can('view_all_twotowncolor')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('twotowncolor.index') }}"

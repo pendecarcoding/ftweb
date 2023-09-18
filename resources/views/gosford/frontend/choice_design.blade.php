@@ -58,7 +58,9 @@
                                     <div style="display: flex;flex-direction: column;">
                                         <hr class="hr-product-detail">
                                         <input type="hidden" name="id" id="id_leather" required>
-                                        <p>Material: </p><span style="color: #BF1D2C;" id="name-material">Full leather</span>
+                                        <p>Material: </p>
+                                        <p>Select the type of leather you want below</p>
+                                        <span style="color: #BF1D2C;" id="name-material">Full leather</span>
 
                                         <div class="list-leather" style="gap: 15px;
                                         display: flex;
@@ -75,8 +77,8 @@
                                         <div class="car-seat-leather-des">
                                             <div style="display: flex;gap:20px">
                                                 <h4 style="font-weight: bold;"></h4>
-                                                <h4 id="total" style="color:#BF1D2C;font-weight:bold;">
-                                                    </h4>
+                                                <!-- <h4 id="total" style="color:#BF1D2C;font-weight:bold;">
+                                                    </h4> -->
                                             </div>
                                             <br>
                                             <div style="    text-align: justify;">

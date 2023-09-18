@@ -452,11 +452,32 @@ class gosfordController extends Controller
     return view('gosford.frontend.product.detail_product');
    }
 
+   function fetchpriceseat(Request $request){
+    $vehicleType = $request->input('vehicle_type');
+    $application = $request->input('application');
+    $leatherType = $request->input('leather_type');
+    $row = $request->input('row');
+
+    // Lakukan query ke database untuk mendapatkan harga
+    $price = DB::table('price_seat')->where('vehicle_type', $vehicleType)
+        ->where('application', $application)
+        ->where('leather_type', $leatherType)
+        ->where('row', $row)
+        ->value('price'); // Mengambil nilai harga
+
+    // Kirimkan harga sebagai respons
+    return response()->json(['price' => $price]);
+   }
+
    function detailproductoptionmake(Request $r){
     if(!empty($r->id)){
         $leather = TypeLeather::where('id',$r->id)->first();
         $brand   = Brand::all();
-        return view('gosford.frontend.product.detail_product_selectmake',compact('brand','leather'));
+        $aplication     =  TypeLeather::orderBy('shortby','asc')->get();
+        $typeleather    =  DB::table('leather_type')->orderBy('id','asc')->get();
+        $vehicle        =  DB::table('size_seat')->orderBy('id','asc')->get();
+        // $size           =  DB::table('size_seat')->orderBy('id','asc')->get();
+        return view('gosford.frontend.product.detail_product_selectmake',compact('vehicle','brand','leather','aplication','typeleather'));
     }else{
         return back()->with('danger','You must select the leather');
     }

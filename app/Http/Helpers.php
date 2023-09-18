@@ -788,6 +788,33 @@ function slidertrimex(){
     return $data;
 }
 
+function gettypeleather($id){
+    try {
+        $data = DB::table('leather_type')->where('id',$id)->first();
+        return $data;
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+}
+
+function getaplicationleather($id){
+    try {
+        $data = DB::table('type_leather')->where('id',$id)->first();
+        return $data;
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+}
+
+function getvehicle($id){
+    try {
+        $data = DB::table('size_seat')->where('id',$id)->first();
+        return $data;
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+}
+
 function assemblyimg(){
     $data = ['Airbag Installation',
     'Dimension Measurement with Portable CMM',

@@ -56,6 +56,8 @@ Route::prefix('product_project')->group(function (){
         Route::get('/gosford/f/emblem/', 'emblem')->name('gosford.emblem');
         Route::get('/gosford/f/emblem/detail', 'emblemdetail')->name('gosford.emblem.detail');
         Route::any('/gosford/f/finish', 'finishdesign')->name('gosford.finish.design');
+
+        Route::post('/gosford/f/fetchpriceseat', 'fetchpriceseat')->name('gosford.fetch.price');
     });
 });
 
