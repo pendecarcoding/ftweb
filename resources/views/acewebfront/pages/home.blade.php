@@ -427,7 +427,7 @@
           </div>
         </div>
       </section>
-      <section data-aos="fade-up" id="gtp-patner-focused" class="gtp-patner" style="padding: 0px 0px;">
+      <section data-aos="fade-up" id="gtp-patner-focused" class="gtp-patner" style="padding: 0px 0px;display: none;">
         <div class="content-ace" >
           <div class="wrap-content">
             <div style="padding-top: 0px" class="about">

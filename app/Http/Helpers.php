@@ -724,16 +724,14 @@ function name_companyofbg(){
         '<h5 class="h5-milestone">Introduce GL Trim(S) Pte Ltd</h5>',
         '<h5 class="h5-milestone">Trimex Automotive (Aus) Pte Ltd Established</h5>',
         '<h5 class="h5-milestone">
-        GU: ISO 9001 Certification<br>
+        GLI: ISO 9001 Certification<br>
         Establishment Trimex Malaysia<br>
         1<span class="angka"></span><sup>ST</sup> Hyundai PDI Project
     </h5>',
     '<h5 class="h5-milestone">
-    ISO/TS 10949:2009<br>
+    <!--ISO/TS 10949:2009<br>-->
     1<span class="angka"></span><sup>ST</sup> Mazda PDI
         Project<br>
-    1<span class="angka"></span><sup>ST</sup> Hyundai OEM
-        Project Inspira
 </h5>',
 '<h5 class="h5-milestone">
 GLI and Trimex move to PJ Office</h5>',
