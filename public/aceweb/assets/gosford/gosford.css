@@ -135,6 +135,8 @@ h1 .number {
 }
 
 .list-leather p{
+    cursor: pointer;
+    /* mouse: pointer; */
     font-size: 11px;
     color: gray;
 }
