@@ -288,7 +288,7 @@
                                                     @foreach($grain as $i => $vl)
                                                     <div style="padding: 25px;    height: 70px;    background-color: #e3e3e3;" id="materialgrain{{$vl->id}}" data-id="{{$vl->id}}" class=" materialgrain card">
                                                         <!-- <center><img src="{{getimage($vl->img)}}" alt=""></center> -->
-                                                        <center><p>{{$vl->name_leather}}</p></center>
+                                                        <center><p style="font-weight: bold;">{{$vl->name_leather}}</p></center>
                                                     </div>
                                                     @endforeach
                                                 </div>
@@ -335,7 +335,7 @@
                                                     @foreach($pvc as $i => $vl)
                                                     <div style="padding: 25px;    height: 70px;background-color: #e3e3e3;" id="material{{$vl->id}}" data-id="{{$vl->id}}" class=" materialpvc card">
                                                         <!-- <center><img src="{{getimage($vl->img)}}" alt=""></center> -->
-                                                        <center><p>{{$vl->name_leather}}</p></center>
+                                                        <center><p style="font-weight: bold;">{{$vl->name_leather}}</p></center>
                                                     </div>
                                                     @endforeach
                                                 </div>
