@@ -47,6 +47,7 @@ use Faker\Provider\Uuid;
 use PDF;
 use DB;
 use App\Models\Currency;
+use App\Models\GenericLeather;
 use App\Models\Language;
 use App\Models\Leadership;
 use App\Models\Policy;
@@ -135,7 +136,7 @@ class AceController extends Controller
 
     public function fetchPrice(Request $request) {
         $materialId = $request->input('id');
-        $data = TypeLeather::where('id', $materialId)->first();
+        $data = GenericLeather::where('id', $materialId)->first();
 
         return response()->json($data);
     }
@@ -161,8 +162,10 @@ class AceController extends Controller
             return view('gosford.frontend.choice_design',compact('slider'));
             break;
             case 'product_project':
-                $leather     =  TypeLeather::orderby('shortby','asc')->get();
-                return view('gosford.frontend.choice_design',compact('leather'));
+                $normal     =  GenericLeather::where('type','Normal Leather')->orderby('shortby','asc')->get();
+                $grain      =  GenericLeather::where('type','Grain Leather')->orderby('shortby','asc')->get();
+                $pvc        =  GenericLeather::where('type','PVC')->orderby('shortby','asc')->get();
+                return view('gosford.frontend.choice_design',compact('normal','grain','pvc'));
                 // if(Session::get('id_account') == null){
                 //     $brand   = Brand::all();
                 //     return view('gosford.frontend.search',compact('brand'));

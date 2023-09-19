@@ -18,6 +18,7 @@ use Illuminate\Auth\Events\PasswordReset;
 use App\Mail\SecondEmailVerifyMailManager;
 use App\Models\Brand;
 use App\Models\Car;
+use App\Models\GenericLeather;
 use Session;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Faker\Provider\Uuid;
@@ -471,7 +472,7 @@ class gosfordController extends Controller
 
    function detailproductoptionmake(Request $r){
     if(!empty($r->id)){
-        $leather = TypeLeather::where('id',$r->id)->first();
+        $leather = GenericLeather::where('id',$r->id)->first();
         $brand   = Brand::all();
         $aplication     =  TypeLeather::orderBy('shortby','asc')->get();
         $typeleather    =  DB::table('leather_type')->orderBy('id','asc')->get();

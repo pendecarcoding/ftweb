@@ -18,7 +18,71 @@
 
                                             <div class="slider-product">
                                                 <div style="display: flex;flex-direction: column;">
-                                                    <img src="/public/assets/img/seat-detail.png" alt="">
+                                                    @if($leather->type=='Normal Leather')
+                                                    <div id="carouselExampleIndicatorsd" class="carousel slide" data-bs-ride="carousel">
+                                                        <div class="carousel-indicators">
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+
+                                                        </div>
+                                                        <div class="carousel-inner">
+                                                                <div class="carousel-item  active ">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide.png">
+                                                                    <div class="col-md-6">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item ">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide.png">
+                                                                    <div class="col-md-6">
+                                                                    </div>
+                                                                </div>
+
+                                                        </div>
+                                                    </div>
+                                                    @elseif($leather->type=='Grain Leather')
+                                                    <div id="carouselExampleIndicatorsd" class="carousel slide" data-bs-ride="carousel">
+                                                        <div class="carousel-indicators">
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+
+                                                        </div>
+                                                        <div class="carousel-inner">
+                                                                <div class="carousel-item  active ">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/slide.png">
+                                                                    <div class="col-md-6">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item ">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/slide.png">
+                                                                    <div class="col-md-6">
+                                                                    </div>
+                                                                </div>
+
+                                                        </div>
+                                                    </div>
+                                                    @else
+                                                    <div id="carouselExampleIndicatorsd" class="carousel slide" data-bs-ride="carousel">
+                                                        <div class="carousel-indicators">
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+
+                                                        </div>
+                                                        <div class="carousel-inner">
+                                                                <div class="carousel-item  active ">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/pvc.png">
+                                                                    <div class="col-md-6">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item ">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/pvc.png">
+                                                                    <div class="col-md-6">
+                                                                    </div>
+                                                                </div>
+
+                                                        </div>
+                                                    </div>
+                                                    @endif
+
                                                 </div>
                                             </div>
 
@@ -87,7 +151,7 @@
                                                         </div>
 
                                                         <hr>
-                                                        <div class="row-vicle">
+                                                        <!-- <div class="row-vicle">
 
                                                             <div>
                                                                 <label>Vehicle Type</label>
@@ -126,7 +190,7 @@
                                                                  <option value="4">4</option>
                                                             </select>
                                                            </div>
-                                                        </div>
+                                                        </div> -->
                                                         <br>
                                                         <div>
                                                             <textarea placeholder="If you have any requirements or need special attention to details, please leave your information." style="height: 164px;" name="requiretment" class="form-control"></textarea>
@@ -134,7 +198,7 @@
                                                     </div>
                                                     <br>
 
-                                                    <center><h4 id="total" style="color:#BF1D2C;font-weight:bold;"></h4></center>
+                                                    <center><h4 id="total" style="color:#BF1D2C;font-weight:bold;">RM {{$leather->price}}</h4></center>
                                                     <div style="display: flex;gap:20px;justify-content: center;">
                                                         <a href="{{ url('product_project') }}"
                                                             style="padding: 0px 30px;" type="submit"
@@ -144,7 +208,7 @@
                                                         </a>
                                                         <button id="submit" type="submit" style="padding: 0px 30px;" type="submit"
                                                             class="mdl-button mdl-js-button mdl-button--raised color--gray"
-                                                            data-upgraded=",MaterialButton" disabled>
+                                                            data-upgraded=",MaterialButton">
                                                             Submit
                                                         </button>
                                                     </div>
@@ -265,56 +329,56 @@
     </script>
 
 <script>
-    $(document).ready(function() {
-        // Event listener untuk Vehicle Type
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
+    // $(document).ready(function() {
+    //     // Event listener untuk Vehicle Type
+    //     $.ajaxSetup({
+    //         headers: {
+    //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //         }
+    //     });
 
-        // Event listener untuk setiap select box
-        $('select[name="vehicle_type"], select[name="application"], select[name="leather_type"], select[name="row"]').change(function() {
-            fetchData();
-        });
-
-
-        function fetchData() {
-            // Ambil nilai dari setiap select box
-            var vehicleType = $('select[name="vehicle_type"]').val();
-            var application = $('select[name="application"]').val();
-            var leatherType = $('select[name="leather_type"]').val();
-            var row = $('select[name="row"]').val();
+    //     // Event listener untuk setiap select box
+    //     $('select[name="vehicle_type"], select[name="application"], select[name="leather_type"], select[name="row"]').change(function() {
+    //         fetchData();
+    //     });
 
 
-            // Kirim request Ajax untuk mengambil harga
-            $.ajax({
-                url: '{{route('gosford.fetch.price')}}',
-                type: 'POST',
-                data: {
-                    vehicle_type: vehicleType,
-                    application: application,
-                    leather_type: leatherType,
-                    row: row
-                },
-                success: function(response) {
-                    // Tanggapi hasil dari server (harga) di sini
-                    console.log('Harga: ' + response.price);
-                    if(response.price == null){
-                        document.getElementById('submit').disabled = true;
-                        $('#total').html('Price not avaliable');
-                    }else{
-                        document.getElementById('submit').disabled = false;
-                        $('#total').html('RM '+response.price);
-                    }
+    //     function fetchData() {
+    //         // Ambil nilai dari setiap select box
+    //         var vehicleType = $('select[name="vehicle_type"]').val();
+    //         var application = $('select[name="application"]').val();
+    //         var leatherType = $('select[name="leather_type"]').val();
+    //         var row = $('select[name="row"]').val();
 
-                },
-                error: function(error) {
-                    console.error('Terjadi kesalahan: ' + error.responseText);
-                }
-            });
-        }
-    });
+
+    //         // Kirim request Ajax untuk mengambil harga
+    //         $.ajax({
+    //             url: '{{route('gosford.fetch.price')}}',
+    //             type: 'POST',
+    //             data: {
+    //                 vehicle_type: vehicleType,
+    //                 application: application,
+    //                 leather_type: leatherType,
+    //                 row: row
+    //             },
+    //             success: function(response) {
+    //                 // Tanggapi hasil dari server (harga) di sini
+    //                 console.log('Harga: ' + response.price);
+    //                 if(response.price == null){
+    //                     document.getElementById('submit').disabled = true;
+    //                     $('#total').html('Price not avaliable');
+    //                 }else{
+    //                     document.getElementById('submit').disabled = false;
+    //                     $('#total').html('RM '+response.price);
+    //                 }
+
+    //             },
+    //             error: function(error) {
+    //                 console.error('Terjadi kesalahan: ' + error.responseText);
+    //             }
+    //         });
+    //     }
+    // });
 </script>
 
 

@@ -45,7 +45,7 @@
                                             Color</a>
                                     </div>
                                     <div class="card" style="padding: 10px;width:100%"><a
-                                            href="{{ route('gosford.piping') }}" class="menu-href">Piping</a></div>
+                                            href="{{ route('gosford.piping') }}" class="menu-href">Stitching</a></div>
                                     <!-- <div class="card" style="padding: 10px;width:100%"><a
                                             href="{{ route('gosford.emblem') }}" class="menu-href">Logo/Emblem</a>
                                     </div> -->

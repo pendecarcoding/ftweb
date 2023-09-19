@@ -5,6 +5,28 @@ footer {
 
 }
 
+.buttontab{
+    width: 100%;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #dc3545;
+    border: none;
+    background-color: var(--bs-nav-tabs-link-active-bg);
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+.dlab-tabs.border .tab-pane {
+    padding: 20px;
+    border: none;
+    margin-top: -1px;
+}
+.nav-link {
+    color: #000;
+}
+.nav-link:hover {
+    color: #000;
+}
 .itemFullText{
 
     height: 300px;

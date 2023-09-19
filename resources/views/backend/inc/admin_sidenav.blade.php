@@ -136,6 +136,16 @@
                                 </a>
                             </li>
                             @endcan
+
+                            @can('view_all_leather_generic')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('leathergeneric.index') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['leathergeneric.index', 'leathergeneric.create', 'leathergeneric.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Generic Leather') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+
                             @can('view_all_leather')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('leather.index') }}"
