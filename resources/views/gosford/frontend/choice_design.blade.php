@@ -237,7 +237,7 @@
                                             position: relative;
                                             white-space: nowrap;">
                                                 @foreach($normal as $i => $vl)
-                                                <div style="padding: 18px;    height: 70px;    background-color: #e3e3e3;" id="materialnormal{{$vl->id}}" data-id="{{$vl->id}}" class=" materialnormal card">
+                                                <div style="padding: 18px;    height: 60px;    background-color: #e3e3e3;" id="materialnormal{{$vl->id}}" data-id="{{$vl->id}}" class=" materialnormal card">
                                                     <!-- <center><img src="{{getimage($vl->img)}}" alt=""></center> -->
                                                     <center><p style="font-weight: bold;">{{$vl->name_leather}}</p></center>
                                                 </div>
@@ -286,7 +286,7 @@
                                                 position: relative;
                                                 white-space: nowrap;">
                                                     @foreach($grain as $i => $vl)
-                                                    <div style="padding: 18px;    height: 70px;    background-color: #e3e3e3;" id="materialgrain{{$vl->id}}" data-id="{{$vl->id}}" class=" materialgrain card">
+                                                    <div style="padding: 18px;    height: 60px;     background-color: #e3e3e3;" id="materialgrain{{$vl->id}}" data-id="{{$vl->id}}" class=" materialgrain card">
                                                         <!-- <center><img src="{{getimage($vl->img)}}" alt=""></center> -->
                                                         <center><p style="font-weight: bold;">{{$vl->name_leather}}</p></center>
                                                     </div>
@@ -333,7 +333,7 @@
                                                 position: relative;
                                                 white-space: nowrap;">
                                                     @foreach($pvc as $i => $vl)
-                                                    <div style="padding: 18px;    height: 70px;background-color: #e3e3e3;" id="material{{$vl->id}}" data-id="{{$vl->id}}" class=" materialpvc card">
+                                                    <div style="padding: 18px;    height: 60px;  background-color: #e3e3e3;" id="material{{$vl->id}}" data-id="{{$vl->id}}" class=" materialpvc card">
                                                         <!-- <center><img src="{{getimage($vl->img)}}" alt=""></center> -->
                                                         <center><p style="font-weight: bold;">{{$vl->name_leather}}</p></center>
                                                     </div>
