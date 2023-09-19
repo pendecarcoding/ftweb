@@ -16,7 +16,7 @@
                             <a href="{{ url('product_project') }}" style="float:right" class="btn btn-danger"><i
                                     class="fa fa-times"></i></a>
                             <center>
-                                <h5 style="color: black;font-weight: bold;">Stitching</h5>
+                                <h2>Stitching</h2>
                             </center>
                             <br>
                             <div class="row">

@@ -18,7 +18,7 @@
                                         class="fa fa-times"></i></a>
 
                                 <center>
-                                    <h5 style="color: black;font-weight: bold;">Two Tone Color</h5>
+                                    <h2>Two Tone Color</h2>
                                 </center>
                                 <br>
                                 <div class="row" style="height: 600px;">
