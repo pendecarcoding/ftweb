@@ -30,7 +30,7 @@
                                                         </div>
                                                         <div class="carousel-inner">
                                                                 <div class="carousel-item  active ">
-                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide1.jpg">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslideone.jpg">
                                                                     <div class="col-md-6">
                                                                     </div>
                                                                 </div>
@@ -78,7 +78,7 @@
                                                         </div>
                                                         <div class="carousel-inner">
                                                             <div class="carousel-item  active ">
-                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide1.jpg">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslideone.jpg">
                                                                 <div class="col-md-6">
                                                                 </div>
                                                             </div>
@@ -126,7 +126,7 @@
                                                         </div>
                                                         <div class="carousel-inner">
                                                             <div class="carousel-item  active ">
-                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide1.jpg">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslideone.jpg">
                                                                 <div class="col-md-6">
                                                                 </div>
                                                             </div>
