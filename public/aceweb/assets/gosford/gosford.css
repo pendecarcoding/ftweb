@@ -109,7 +109,7 @@ footer {
 
 
 .h5-milestone {
-    font-size: 10px;
+    font-size: 14px;
 }
 
 h1 .number {
@@ -133,6 +133,12 @@ h1 .number {
     position: relative;
     white-space: nowrap;
 }
+
+.list-leather p{
+    font-size: 12px;
+    color: gray;
+}
+
 
 .list-leather img {
     height: 64px;

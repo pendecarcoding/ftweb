@@ -30,10 +30,10 @@
                                             </div>
 
                                             <div class="dlab-post-text" style="max-height: 100px; position: relative;">
-                                                @if (file_exists('public/background/go_' . $i . '.png'))
+                                                <!-- @if (file_exists('public/background/go_' . $i . '.png'))
                                                     <img style="width:100%;max-height: 100px;object-fit: contain;"
                                                         src="/public/background/go_{{ $i }}.png" alt="">
-                                                @endif
+                                                @endif -->
                                             </div>
                                         </div>
                                     </div>

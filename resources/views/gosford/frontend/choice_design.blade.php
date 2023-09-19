@@ -54,16 +54,22 @@
                                             <div class="carousel-indicators">
                                                 <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
                                                 <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="2" class="btn-slide " aria-label="Slide 2"></button>
 
                                             </div>
                                             <div class="carousel-inner">
                                                     <div class="carousel-item  active ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide.png">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide1.jpg">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
                                                     <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide.png">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide2.webp">
+                                                        <div class="col-md-6">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item ">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide3.webp">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
@@ -80,11 +86,12 @@
                                         </div>
                                     </div>
 
-                                    <div id="grainleather">
+                                    <div id="grainleather" style="display: none;">
                                         <div id="carouselExampleIndicatorsdg" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-indicators">
                                                 <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
                                                 <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="2" class="btn-slide " aria-label="Slide 2"></button>
 
                                             </div>
                                             <div class="carousel-inner">
@@ -94,7 +101,13 @@
                                                         </div>
                                                     </div>
                                                     <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/slide.png">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/slide2.jpg">
+                                                        <div class="col-md-6">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="carousel-item ">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/slide3.jpg">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
@@ -112,11 +125,12 @@
                                     </div>
 
 
-                                    <div id="pvcleather">
+                                    <div id="pvcleather" style="display: none;">
                                         <div id="carouselExampleIndicatorsp" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-indicators">
                                                 <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
                                                 <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="2" class="btn-slide " aria-label="Slide 2"></button>
 
                                             </div>
                                             <div class="carousel-inner">
@@ -126,7 +140,12 @@
                                                         </div>
                                                     </div>
                                                     <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/pvc.png">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/pvc2.webp">
+                                                        <div class="col-md-6">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item ">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/pvc3.avif">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
@@ -150,11 +169,19 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <div style="padding:20px;">
-                                <select class="btn btn-danger" id="leathertype" style="text-align: left;">
-                                    <option value="normalleather"><h5 style="color: black;font-weight: bold;">Normal Leather</h5></option>
-                                    <option value="grainleather"><h5 style="color: black;font-weight: bold;">Grain Leather</h5></option>
-                                    <option value="pvcleather"><h5 style="color: black;font-weight: bold;">PVC</h5></option>
-                                </select>
+                                <div style="display: flex;justify-content: space-between;    gap: 20px">
+                                    <div>
+                                        <h5 style="color:gray">Select your preferred leather material</h5>
+                                    </div>
+                                    <div>
+                                        <select class="btn btn-danger" id="leathertype" style="text-align: left;">
+                                            <option value="normalleather"><h5 style="color: black;font-weight: bold;">Catania Leather</h5></option>
+                                            <option value="grainleather"><h5 style="color: black;font-weight: bold;">Nappa Leather</h5></option>
+                                            <option value="pvcleather"><h5 style="color: black;font-weight: bold;">PVC</h5></option>
+                                        </select>
+                                    </div>
+                                </div>
+
 
 
 
@@ -164,9 +191,7 @@
                                         <div style="display: flex;flex-direction: column;">
                                             <hr class="hr-product-detail">
                                             <input type="hidden" name="id" id="id_leathernormal" required>
-                                            <p>Material: </p>
-                                            <p>Select the type of leather you want below</p>
-                                            <span style="color: #BF1D2C;" id="name-materialnormal"></span>
+                                            <h6 style="color: grey;">Select the seat cover leather option bellow</h6>
 
                                             <div class="list-leather" style="gap: 15px;
                                             display: flex;
@@ -176,27 +201,23 @@
                                                 @foreach($normal as $i => $vl)
                                                 <div id="materialnormal{{$vl->id}}" data-id="{{$vl->id}}" class=" materialnormal">
                                                     <center><img src="{{getimage($vl->img)}}" alt=""></center>
-                                                    <center>{{$vl->name_leather}}</center>
+                                                    <center><p>{{$vl->name_leather}}</p></center>
                                                 </div>
                                                 @endforeach
                                             </div>
                                             <div class="car-seat-leather-des">
-                                                <div style="display: flex;gap:20px">
-                                                    <h4 style="font-weight: bold;"></h4>
-                                                    <h4 id="totalnormal" style="color:#BF1D2C;font-weight:bold;">
-                                                        </h4>
+                                                <div style="display: flex;gap: 12px;">
+                                                    <h4 id="totalnormal" style="color:#BF1D2C;font-weight:bold;"></h4>
+                                                    <h4 style="color: #BF1D2C;" id="name-materialnormal"></h4>
                                                 </div>
                                                 <br>
                                                 <div style="    text-align: justify;">
-                                                    <p>We are delighted to present our latest masterpiece to you high quality
+                                                    <p style="color:gray">We are delighted to present our latest masterpiece to you high quality
                                                         automotive leather. This copy will showcase the true charm of this exquisite
                                                         creation.</p>
+                                                        <p style="color:#BF1D2C;">Displayed price above are base on selection made, without customization option avaliable and are subject to change without prior notice. Feel free to call or book for an appointment with our office for further advice.</p>
                                                 </div>
-                                                <br>
-                                                <div  style="    text-align: justify;" >
-                                                    <p style="color:#BF1D2C;">Prices display are subject to change without prior
-                                                        notice, price display are without customisation.</p>
-                                                </div>
+
                                                 <div style="display: flex;gap:20px">
                                                     <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
                                                         class="mdl-button mdl-js-button mdl-button--raised btn-back"
@@ -219,9 +240,7 @@
                                             <div style="display: flex;flex-direction: column;">
                                                 <hr class="hr-product-detail">
                                                 <input type="hidden" name="id" id="id_leathergrain" required>
-                                                <p>Material: </p>
-                                                <p>Select the type of leather you want below</p>
-                                                <span style="color: #BF1D2C;" id="name-materialgrain"></span>
+                                                <h6 style="color: grey;">Select the seat cover leather option bellow</h6>
 
                                                 <div class="list-leather" style="gap: 15px;
                                                 display: flex;
@@ -231,28 +250,23 @@
                                                     @foreach($grain as $i => $vl)
                                                     <div id="materialgrain{{$vl->id}}" data-id="{{$vl->id}}" class=" materialgrain">
                                                         <center><img src="{{getimage($vl->img)}}" alt=""></center>
-                                                        <center>{{$vl->name_leather}}</center>
+                                                        <center><p>{{$vl->name_leather}}</p></center>
                                                     </div>
                                                     @endforeach
                                                 </div>
                                                 <div class="car-seat-leather-des">
-                                                    <div style="display: flex;gap:20px">
-                                                        <h4 style="font-weight: bold;"></h4>
-                                                        <h4 id="totalgrain" style="color:#BF1D2C;font-weight:bold;">
-                                                            </h4>
+                                                    <div style="display: flex;gap: 12px;">
+                                                        <h4 id="totalgrain" style="color:#BF1D2C;font-weight:bold;"></h4>
+                                                        <h4 style="color: #BF1D2C;" id="name-materialgrain"></h4>
                                                     </div>
                                                     <br>
                                                     <div style="    text-align: justify;">
-                                                        <p>We are delighted to present our latest masterpiece to you high quality
+                                                        <p style="color:gray">We are delighted to present our latest masterpiece to you high quality
                                                             automotive leather. This copy will showcase the true charm of this exquisite
                                                             creation.</p>
+                                                            <p style="color:#BF1D2C;">Displayed price above are base on selection made, without customization option avaliable and are subject to change without prior notice. Feel free to call or book for an appointment with our office for further advice.</p>
                                                     </div>
-                                                    <br>
-                                                    <div  style="    text-align: justify;" >
-                                                        <p style="color:#BF1D2C;">Prices display are subject to change without prior
-                                                            notice, price display are without customisation.</p>
-                                                    </div>
-                                                    <div style="display: flex;gap:20px">
+                                                    <div style="display: flex;    gap: 20px;">
                                                         <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
                                                             class="mdl-button mdl-js-button mdl-button--raised btn-back"
                                                             data-upgraded=",MaterialButton">
@@ -274,10 +288,7 @@
                                             <div style="display: flex;flex-direction: column;">
                                                 <hr class="hr-product-detail">
                                                 <input type="hidden" name="id" id="id_leatherpvc" required>
-                                                <p>Material: </p>
-                                                <p>Select the type of leather you want below</p>
-                                                <span style="color: #BF1D2C;" id="name-materialpvc"></span>
-
+                                                <h6 style="color: grey;">Select the seat cover leather option bellow</h6>
                                                 <div class="list-leather" style="gap: 15px;
                                                 display: flex;
                                                 flex-wrap: wrap;
@@ -286,26 +297,21 @@
                                                     @foreach($pvc as $i => $vl)
                                                     <div id="material{{$vl->id}}" data-id="{{$vl->id}}" class=" materialpvc">
                                                         <center><img src="{{getimage($vl->img)}}" alt=""></center>
-                                                        <center>{{$vl->name_leather}}</center>
+                                                        <center><p>{{$vl->name_leather}}</p></center>
                                                     </div>
                                                     @endforeach
                                                 </div>
                                                 <div class="car-seat-leather-des">
-                                                    <div style="display: flex;gap:20px">
-                                                        <h4 style="font-weight: bold;"></h4>
-                                                        <h4 id="totalpvc" style="color:#BF1D2C;font-weight:bold;">
-                                                            </h4>
+                                                    <div style="display: flex;gap: 12px;">
+                                                        <h4 id="totalpvc" style="color:#BF1D2C;font-weight:bold;"></h4>
+                                                        <h4 style="color: #BF1D2C;" id="name-materialpvc"></h4>
                                                     </div>
                                                     <br>
                                                     <div style="    text-align: justify;">
-                                                        <p>We are delighted to present our latest masterpiece to you high quality
+                                                        <p style="color:gray">We are delighted to present our latest masterpiece to you high quality
                                                             automotive leather. This copy will showcase the true charm of this exquisite
                                                             creation.</p>
-                                                    </div>
-                                                    <br>
-                                                    <div  style="    text-align: justify;" >
-                                                        <p style="color:#BF1D2C;">Prices display are subject to change without prior
-                                                            notice, price display are without customisation.</p>
+                                                            <p style="color:#BF1D2C;">Displayed price above are base on selection made, without customization option avaliable and are subject to change without prior notice. Feel free to call or book for an appointment with our office for further advice.</p>
                                                     </div>
                                                     <div style="display: flex;gap:20px">
                                                         <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
@@ -434,9 +440,14 @@
     $(document).ready(function() {
         // Mengambil token CSRF dari meta tag
         var csrfToken = $('meta[name="csrf-token"]').attr('content');
-
+        var prevClickedElement = null;
         $('.materialnormal').click(function() {
+            if (prevClickedElement) {
+                $(prevClickedElement).css("border", "none");
+            }
             var materialId = $(this).data('id');
+            $(this).css("border", "solid 2px #bf1d2c");
+            prevClickedElement = this;
             $('#id_leathernormal').val(materialId);
             $.ajax({
                 type: 'POST', // Ganti ke metode POST
@@ -448,7 +459,7 @@
                 success: function(response) {
                     // Menampilkan data yang diterima dalam elemen dengan id 'priceContainer'
                     $('#name-materialnormal').html(response.name_leather);
-                    $('#totalnormal').html('RM '+response.price);
+                    $('#totalnormal').html('Price RM '+response.price);
                     // Anda dapat menambahkan baris ini untuk menampilkan atribut lainnya
                     // $('#priceContainer').append('Atribut Lain: ' + response.nama_atribut_lain);
                 }
@@ -463,9 +474,14 @@
     $(document).ready(function() {
         // Mengambil token CSRF dari meta tag
         var csrfToken = $('meta[name="csrf-token"]').attr('content');
-
+        var prevClickedElement = null;
         $('.materialgrain').click(function() {
+            if (prevClickedElement) {
+                $(prevClickedElement).css("border", "none");
+            }
             var materialId = $(this).data('id');
+            $(this).css("border", "solid 2px #bf1d2c");
+            prevClickedElement = this;
             $('#id_leathergrain').val(materialId);
             $.ajax({
                 type: 'POST', // Ganti ke metode POST
@@ -477,7 +493,7 @@
                 success: function(response) {
                     // Menampilkan data yang diterima dalam elemen dengan id 'priceContainer'
                     $('#name-materialgrain').html(response.name_leather);
-                    $('#totalgrain').html('RM '+response.price);
+                    $('#totalgrain').html('Price RM '+response.price);
                     // Anda dapat menambahkan baris ini untuk menampilkan atribut lainnya
                     // $('#priceContainer').append('Atribut Lain: ' + response.nama_atribut_lain);
                 }
@@ -490,9 +506,14 @@
     $(document).ready(function() {
         // Mengambil token CSRF dari meta tag
         var csrfToken = $('meta[name="csrf-token"]').attr('content');
-
+        var prevClickedElement = null;
         $('.materialpvc').click(function() {
+            if (prevClickedElement) {
+                $(prevClickedElement).css("border", "none");
+            }
             var materialId = $(this).data('id');
+            $(this).css("border", "solid 2px #bf1d2c");
+            prevClickedElement = this;
             $('#id_leatherpvc').val(materialId);
             $.ajax({
                 type: 'POST', // Ganti ke metode POST
@@ -504,7 +525,7 @@
                 success: function(response) {
                     // Menampilkan data yang diterima dalam elemen dengan id 'priceContainer'
                     $('#name-materialpvc').html(response.name_leather);
-                    $('#totalpvc').html('RM '+response.price);
+                    $('#totalpvc').html('Price RM '+response.price);
                     // Anda dapat menambahkan baris ini untuk menampilkan atribut lainnya
                     // $('#priceContainer').append('Atribut Lain: ' + response.nama_atribut_lain);
                 }
