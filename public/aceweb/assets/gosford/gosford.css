@@ -7920,6 +7920,11 @@ a:hover {
     overflow: hidden;
 }
 
+.slider-product img{
+    height: 640px;
+    object-fit: cover;
+}
+
 .wrap-carousel-indicators {
     overflow: hidden;
     padding: 58px 0px;

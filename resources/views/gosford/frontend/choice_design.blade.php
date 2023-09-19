@@ -59,17 +59,17 @@
                                             </div>
                                             <div class="carousel-inner">
                                                     <div class="carousel-item  active ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide1.jpg">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide1.jpg">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
                                                     <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide2.webp">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide2.webp">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
                                                     <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/normalslide3.webp">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide3.webp">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
@@ -96,18 +96,18 @@
                                             </div>
                                             <div class="carousel-inner">
                                                     <div class="carousel-item  active ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/slide.png">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/slide.png">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
                                                     <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/slide2.jpg">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/slide2.jpg">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
 
                                                     <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/slide3.jpg">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/slide3.jpg">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
@@ -135,17 +135,17 @@
                                             </div>
                                             <div class="carousel-inner">
                                                     <div class="carousel-item  active ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/pvc.png">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/pvc.png">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
                                                     <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/pvc2.webp">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/pvc2.webp">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
                                                     <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    height: auto;" src="/public/go_system/images/sliderproduct/pvc3.avif">
+                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/pvc3.avif">
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
