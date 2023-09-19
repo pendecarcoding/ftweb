@@ -69,14 +69,22 @@
                                                     </div>
 
                                             </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                              </button>
+                                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                              </button>
                                         </div>
                                     </div>
 
                                     <div id="grainleather">
-                                        <div id="carouselExampleIndicatorsd" class="carousel slide" data-bs-ride="carousel">
+                                        <div id="carouselExampleIndicatorsdg" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-indicators">
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
+                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
 
                                             </div>
                                             <div class="carousel-inner">
@@ -92,15 +100,23 @@
                                                     </div>
 
                                             </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                              </button>
+                                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                              </button>
                                         </div>
                                     </div>
 
 
                                     <div id="pvcleather">
-                                        <div id="carouselExampleIndicatorsd" class="carousel slide" data-bs-ride="carousel">
+                                        <div id="carouselExampleIndicatorsp" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-indicators">
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
+                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
 
                                             </div>
                                             <div class="carousel-inner">
@@ -116,6 +132,14 @@
                                                     </div>
 
                                             </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                              </button>
+                                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                              </button>
                                         </div>
                                     </div>
 
@@ -197,7 +221,7 @@
                                                 <input type="hidden" name="id" id="id_leathergrain" required>
                                                 <p>Material: </p>
                                                 <p>Select the type of leather you want below</p>
-                                                <span style="color: #BF1D2C;" id="name-materialgrain">Full leather</span>
+                                                <span style="color: #BF1D2C;" id="name-materialgrain"></span>
 
                                                 <div class="list-leather" style="gap: 15px;
                                                 display: flex;
@@ -252,7 +276,7 @@
                                                 <input type="hidden" name="id" id="id_leatherpvc" required>
                                                 <p>Material: </p>
                                                 <p>Select the type of leather you want below</p>
-                                                <span style="color: #BF1D2C;" id="name-materialpvc">Full leather</span>
+                                                <span style="color: #BF1D2C;" id="name-materialpvc"></span>
 
                                                 <div class="list-leather" style="gap: 15px;
                                                 display: flex;

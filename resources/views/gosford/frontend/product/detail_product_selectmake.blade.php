@@ -38,12 +38,20 @@
                                                                 </div>
 
                                                         </div>
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                          </button>
+                                                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                          </button>
                                                     </div>
                                                     @elseif($leather->type=='Grain Leather')
-                                                    <div id="carouselExampleIndicatorsd" class="carousel slide" data-bs-ride="carousel">
+                                                    <div id="carouselExampleIndicatorsg" class="carousel slide" data-bs-ride="carousel">
                                                         <div class="carousel-indicators">
-                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
-                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsg" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsg" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
 
                                                         </div>
                                                         <div class="carousel-inner">
@@ -59,12 +67,20 @@
                                                                 </div>
 
                                                         </div>
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsg" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                          </button>
+                                                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsg" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                          </button>
                                                     </div>
                                                     @else
-                                                    <div id="carouselExampleIndicatorsd" class="carousel slide" data-bs-ride="carousel">
+                                                    <div id="carouselExampleIndicatorsp" class="carousel slide" data-bs-ride="carousel">
                                                         <div class="carousel-indicators">
-                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
-                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
 
                                                         </div>
                                                         <div class="carousel-inner">
@@ -80,6 +96,14 @@
                                                                 </div>
 
                                                         </div>
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                          </button>
+                                                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                          </button>
                                                     </div>
                                                     @endif
 
