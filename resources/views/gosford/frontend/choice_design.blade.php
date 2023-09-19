@@ -231,7 +231,7 @@
                                             <input type="hidden" name="id" id="id_leathernormal" required>
                                             <h6 style="color: grey;">Select the seat cover leather option bellow</h6>
 
-                                            <div class="list-leather" style="gap: 15px;
+                                            <div class="list-leather" style="    gap: 9px;
                                             display: flex;
                                             flex-wrap: wrap;
                                             position: relative;
@@ -280,7 +280,7 @@
                                                 <input type="hidden" name="id" id="id_leathergrain" required>
                                                 <h6 style="color: grey;">Select the seat cover leather option bellow</h6>
 
-                                                <div class="list-leather" style="gap: 15px;
+                                                <div class="list-leather" style="gap: 9px;
                                                 display: flex;
                                                 flex-wrap: wrap;
                                                 position: relative;
@@ -327,7 +327,7 @@
                                                 <hr class="hr-product-detail">
                                                 <input type="hidden" name="id" id="id_leatherpvc" required>
                                                 <h6 style="color: grey;">Select the seat cover leather option bellow</h6>
-                                                <div class="list-leather" style="gap: 15px;
+                                                <div class="list-leather" style="gap: 9px;
                                                 display: flex;
                                                 flex-wrap: wrap;
                                                 position: relative;
