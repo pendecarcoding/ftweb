@@ -6562,6 +6562,11 @@ _:-ms-input-placeholder {
     margin: 20px 0px;
 }
 
+.towncard img{
+    object-fit: cover;
+    height: 130px;
+}
+
 .title-menu-style {
     z-index: 99;
     position: absolute;
