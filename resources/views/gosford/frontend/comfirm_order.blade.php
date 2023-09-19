@@ -21,7 +21,8 @@
                                     <img style="width: 60px;" src="/public/go_system/images/vector.png" alt="">
                                     <br>
                                     <br>
-                                    <h6>We have received your submission.
+                                    <h6 style="    font-family: 'Poppins';
+                                    color: gray;">We have received your submission.
                                         Our friendly sales representative will contact you within 1-2 business day via email
                                         or phone to confirm your order details.</h6>
 

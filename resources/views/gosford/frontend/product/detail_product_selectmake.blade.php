@@ -24,6 +24,8 @@
                                                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
                                                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
                                                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="2" class="btn-slide " aria-label="Slide 2"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="3" class="btn-slide " aria-label="Slide 3"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="4" class="btn-slide " aria-label="Slide 4"></button>
 
                                                         </div>
                                                         <div class="carousel-inner">
@@ -33,12 +35,23 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="carousel-item ">
-                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide2.webp">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide2.jpg">
                                                                     <div class="col-md-6">
                                                                     </div>
                                                                 </div>
                                                                 <div class="carousel-item ">
-                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide3.webp">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide3.jpg">
+                                                                    <div class="col-md-6">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item ">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide4.jpg">
+                                                                    <div class="col-md-6">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="carousel-item ">
+                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide5.jpg">
                                                                     <div class="col-md-6">
                                                                     </div>
                                                                 </div>
@@ -59,27 +72,39 @@
                                                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
                                                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
                                                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="2" class="btn-slide " aria-label="Slide 2"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="3" class="btn-slide " aria-label="Slide 3"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="4" class="btn-slide " aria-label="Slide 4"></button>
 
                                                         </div>
                                                         <div class="carousel-inner">
-                                                                <div class="carousel-item  active ">
-                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/slide.png">
-                                                                    <div class="col-md-6">
-                                                                    </div>
+                                                            <div class="carousel-item  active ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide1.jpg">
+                                                                <div class="col-md-6">
                                                                 </div>
-                                                                <div class="carousel-item ">
-                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/slide2.jpg">
-                                                                    <div class="col-md-6">
-                                                                    </div>
+                                                            </div>
+                                                            <div class="carousel-item ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide2.jpg">
+                                                                <div class="col-md-6">
                                                                 </div>
+                                                            </div>
+                                                            <div class="carousel-item ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide3.jpg">
+                                                                <div class="col-md-6">
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide4.jpg">
+                                                                <div class="col-md-6">
+                                                                </div>
+                                                            </div>
 
-                                                                <div class="carousel-item ">
-                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/slide3.jpg">
-                                                                    <div class="col-md-6">
-                                                                    </div>
+                                                            <div class="carousel-item ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide5.jpg">
+                                                                <div class="col-md-6">
                                                                 </div>
+                                                            </div>
 
-                                                        </div>
+                                                    </div>
                                                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide="prev">
                                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                             <span class="visually-hidden">Previous</span>
@@ -95,26 +120,39 @@
                                                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
                                                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
                                                             <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="2" class="btn-slide " aria-label="Slide 2"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="3" class="btn-slide " aria-label="Slide 3"></button>
+                                                            <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="4" class="btn-slide " aria-label="Slide 4"></button>
 
                                                         </div>
                                                         <div class="carousel-inner">
-                                                                <div class="carousel-item  active ">
-                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/pvc.png">
-                                                                    <div class="col-md-6">
-                                                                    </div>
+                                                            <div class="carousel-item  active ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide1.jpg">
+                                                                <div class="col-md-6">
                                                                 </div>
-                                                                <div class="carousel-item ">
-                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/pvc2.webp">
-                                                                    <div class="col-md-6">
-                                                                    </div>
+                                                            </div>
+                                                            <div class="carousel-item ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide2.jpg">
+                                                                <div class="col-md-6">
                                                                 </div>
-                                                                <div class="carousel-item ">
-                                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/pvc3.avif">
-                                                                    <div class="col-md-6">
-                                                                    </div>
+                                                            </div>
+                                                            <div class="carousel-item ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide3.jpg">
+                                                                <div class="col-md-6">
                                                                 </div>
+                                                            </div>
+                                                            <div class="carousel-item ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide4.jpg">
+                                                                <div class="col-md-6">
+                                                                </div>
+                                                            </div>
 
-                                                        </div>
+                                                            <div class="carousel-item ">
+                                                                <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide5.jpg">
+                                                                <div class="col-md-6">
+                                                                </div>
+                                                            </div>
+
+                                                    </div>
                                                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide="prev">
                                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                             <span class="visually-hidden">Previous</span>
