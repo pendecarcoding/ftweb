@@ -396,6 +396,9 @@
                     <a href="/public/go_system/images/menu/colors2.jpg">
 
                     </a>
+                    <a href="/public/go_system/images/menu/colors3.jpeg">
+
+                    </a>
                 </div>
                 <div class="col-sm-6 col-md-3  d-flex ">
 
