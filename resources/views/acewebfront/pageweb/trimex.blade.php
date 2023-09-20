@@ -75,9 +75,9 @@
             <div class="row">
                 <div data-aos="fade-right" data-aos-delay="100" class="col-lg-6 m-b30 p-r50">
                     <div class="section-head text-left space-text-video">
-                        <h2 class="text-capitalize"
-                            style="color: rgb(255, 255, 255);font-family: 'Poppins';font-weight: bold;">PARTNER</h2>
-                        <h4 style="color: rgb(255, 255, 255);font-family: 'Poppins';">About our Prodictivity</h4>
+                        <!-- <h2 class="text-capitalize"
+                            style="color: rgb(255, 255, 255);font-family: 'Poppins';font-weight: bold;">PARTNER</h2> -->
+                        <h4 style="color: rgb(255, 255, 255);font-family: 'Poppins';">Manufacture Automotive Seat</h4>
                         <p class="font-patner">
                             Leather car seats are a crucial element in modern automobiles for enhancing the driving
                             experience and productivity. These seats provide outstanding comfort and support, allowing
