@@ -73,7 +73,7 @@
                       src="{{ getimage(env('ABOUT_IMG')) }}"
                     />
                     <p style="padding-top: 5%;" class="p-about-font" data-aos="fade-up" data-aos-delay="400">
-                      {{ env('ABOUT_DESCRIPTION') }}
+                      {!! env('ABOUT_DESCRIPTION') !!}
                     </p>
                   </div>
                 </div>
