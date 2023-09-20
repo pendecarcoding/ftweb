@@ -11314,7 +11314,7 @@ form.form--basic .mdl-textfield__label {
     .description-service {
         text-align: justify;
         margin: 10px 1px;
-        height: 200px;
+        height: auto;
         overflow: auto;
     }
 
