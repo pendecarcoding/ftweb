@@ -35,8 +35,19 @@
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Fully Assemble Automotive Seats</h2>
+                    <h2 class="text-capitalize">Automotive Seats</h2>
 
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="description-service" style="color:#999999;text-align: center;">Car seats are a crucial element in modern automobiles for
+                            enhancing the driving experience. Our automotive seats provide
+                            outstanding comfort and support, allowing drivers to stay focused
+                            for longer periods and reducing fatigue.
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
             <div class="section-content ">
@@ -77,7 +88,7 @@
                     <div class="section-head text-left space-text-video">
                         <!-- <h2 class="text-capitalize"
                             style="color: rgb(255, 255, 255);font-family: 'Poppins';font-weight: bold;">PARTNER</h2> -->
-                        <h4 style="color: rgb(255, 255, 255);font-family: 'Poppins';">Manufacture Automotive Seat</h4>
+                        <h4 style="color: rgb(255, 255, 255);font-family: 'Poppins';">Automotive Seat Manufacturing Plant</h4>
                         <p class="font-patner">
                             Leather car seats are a crucial element in modern automobiles for enhancing the driving
                             experience and productivity. These seats provide outstanding comfort and support, allowing

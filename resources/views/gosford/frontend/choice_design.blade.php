@@ -13,26 +13,12 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="description-service" style="color:#999999">We are delighted to present our latest
-                            masterpiece to you – high-quality automotive leather. This copy will showcase the true charm of
-                            this exquisite creation.
-                            Designed exclusively for car owners, our top-tier leather embodies our unwavering commitment to
-                            perfection. Each piece of leather material undergoes rigorous selection, ensuring that only the
-                            finest, handpicked leather finds its way into our car interiors. Your distinguished status
-                            deserves nothing less than the most elegant indulgence.
-                            The high-quality leather boasts an astonishingly soft touch, providing a luxurious sensation
-                            that soothes both body and mind. Selected from the finest raw materials, the leather's
-                            durability surpasses ordinary standards, maintaining its shine and color as if new for a
-                            prolonged period. Whether your journey is long or short, this elegance and refinement will
-                            accompany you all the way.
-                            Our leather represents more than just beauty; it exemplifies practicality and functionality.
-                            Robust leather fibers and impeccable craftsmanship ensure outstanding abrasion resistance,
-                            making it capable of withstanding daily wear while retaining a fresh appearance.
-                            Excellence in quality goes hand in hand with our commitment to protecting the Earth. We are
-                            dedicated to promoting environmental consciousness by adopting sustainable production methods,
-                            ensuring that the leather manufacturing process is as eco-friendly as possible, without
-                            unnecessary resource wastage. By choosing our leather, you are also contributing to a greener
-                            future for our planet.
+                        <div class="description-service" style="color:#999999;text-align: center;">We are delighted to present our high-quality automotive
+                            leather cover masterpiece. Designed exclusively for car
+                            owners, our top-tier leather embodies our unwavering
+                            commitment to perfection. Each piece of original leather
+                            material undergoes rigorous selection, ensuring that only the
+                            finest, handpicked leather finds its way into your car interiors.
                         </div>
 
 
@@ -250,10 +236,14 @@
                                                 </div>
                                                 <br>
                                                 <div style="    text-align: justify;">
-                                                    <p style="color:gray">We are delighted to present our latest masterpiece to you high quality
-                                                        automotive leather. This copy will showcase the true charm of this exquisite
-                                                        creation.</p>
-                                                        <p style="color:#BF1D2C;font-style: italic">Displayed price above are base on selection made, without customization option avaliable and are subject to change without prior notice. Feel free to call or book for an appointment with our office for further advice.</p>
+                                                    <p style="color:gray"><b>Catania Leather</b> is a high-quality and durable leather material known for its unique and
+                                                        attractive texture of a pebbled leather surface texture, which resembles small, smooth, and
+                                                        rounded bumps or pebbles evenly distributed across the leather&#39;s surface. These pebbles are
+                                                        the result of a specific tanning and finishing process that sets pebbled leather apart from other
+                                                        types of leather for leather seat upholstery industry.</p>
+                                                        <p style="color:#BF1D2C;font-style: italic">Displayed price includes seat cover, center console cover, door trims cover and
+                                                            installation. For further customization please click on below SUBMIT button to book
+                                                            for an appointment.</p>
                                                 </div>
 
                                                 <div style="display: flex;gap:20px">
@@ -299,10 +289,14 @@
                                                     </div>
                                                     <br>
                                                     <div style="    text-align: justify;">
-                                                        <p style="color:gray">We are delighted to present our latest masterpiece to you high quality
-                                                            automotive leather. This copy will showcase the true charm of this exquisite
-                                                            creation.</p>
-                                                            <p style="color:#BF1D2C;font-style: italic">Displayed price above are base on selection made, without customization option avaliable and are subject to change without prior notice. Feel free to call or book for an appointment with our office for further advice.</p>
+                                                        <p style="color:gray"><b>Nappa leather</b>, often referred to simply as &quot;Nappa,&quot; is a premium quality, soft, and luxurious
+                                                            type of leather known for its exceptional smoothness and fine grain. It is highly regarded in the
+                                                            automotive industry for its superior comfort, elegance, and durability. Its characteristic make it a
+                                                            preferred choice for crafting high-end leather products that demand a touch of sophistication
+                                                            and elegance.</p>
+                                                            <p style="color:#BF1D2C;font-style: italic">Displayed price includes seat cover, center console cover, door trims cover and
+                                                                installation. For further customization please click on below SUBMIT button to book
+                                                                for an appointment.</p>
                                                     </div>
                                                     <div style="display: flex;    gap: 20px;">
                                                         <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
@@ -349,7 +343,9 @@
                                                         <p style="color:gray">We are delighted to present our latest masterpiece to you high quality
                                                             automotive leather. This copy will showcase the true charm of this exquisite
                                                             creation.</p>
-                                                            <p style="color:#BF1D2C;font-style: italic">Displayed price above are base on selection made, without customization option avaliable and are subject to change without prior notice. Feel free to call or book for an appointment with our office for further advice.</p>
+                                                            <p style="color:#BF1D2C;font-style: italic">Displayed price includes seat cover, center console cover, door trims cover and
+                                                                installation. For further customization please click on below SUBMIT button to book
+                                                                for an appointment.</p>
                                                     </div>
                                                     <div style="display: flex;gap:20px">
                                                         <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
@@ -454,7 +450,7 @@
                     <div class="row">
                         <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
                             <div class="section-head text-left space-text-video">
-                                <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">MISSION</h2>
+                                <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">Automotive Covers Manufacturing Plant</h2>
                                 <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p>
                             </div>
 

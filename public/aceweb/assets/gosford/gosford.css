@@ -14165,7 +14165,7 @@ form.form--basic .mdl-textfield__label {
     .font-patner {
         font-size: 17px;
         line-height: 40px;
-        text-align: justify;
+        text-align: left;
         color: rgb(255, 255, 255);
         font-family: 'Poppins', sans-serif;
     }
