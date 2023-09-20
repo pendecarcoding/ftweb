@@ -378,7 +378,7 @@ class gosfordController extends Controller
 
    //Two TownColor
    function twotowncolor(Request $r){
-        $data = Twotown::orderby('name_town','asc')->get();
+        $data = Twotown::orderby('name_town','asc')->paginate(12);
         return view('gosford.frontend.twotowncolor.index',compact('data'));
    }
 
@@ -399,7 +399,7 @@ class gosfordController extends Controller
    }
 
    function piping(Request $r){
-    $data = Piping::where('published','Y')->orderby('name_piping','asc')->get();
+    $data = Piping::where('published','Y')->orderby('name_piping','asc')->paginate(12);
     return view('gosford.frontend.piping.index',compact('data'));
    }
 
@@ -410,7 +410,7 @@ class gosfordController extends Controller
 
    //Pattern Design
    function patterndesign(Request $r){
-    $data = Patterndesign::where('published','Y')->orderby('name_pattern','asc')->get();
+    $data = Patterndesign::where('published','Y')->orderby('name_pattern','asc')->paginate(12);
     return view('gosford.frontend.pattern.index',compact('data'));
    }
 

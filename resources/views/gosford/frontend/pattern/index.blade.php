@@ -23,17 +23,17 @@
                                     <div class="col-md-2">
                                         <div class="card towncard">
                                             <!-- <a href="{{ route('gosford.patterndesign.detail', base64_encode($v->id)) }}" -->
-                                                <a href="#"
+                                                <div
                                                 class="card-body">
                                                 <!-- Card content goes here -->
                                                 <img style="width:100%" src="{{ getimage($v->img) }}" alt="">
                                                 <p class="card-text center" style="margin-top:2px;color:black">
                                                     {{ $v->name_pattern }}</p>
-                                            </a>
+                                                </div>
                                         </div>
                                     </div>
                                 @endforeach
-
+                                <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
 
                             </div>
 

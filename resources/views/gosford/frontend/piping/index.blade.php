@@ -32,7 +32,7 @@
                                                     <p class="name-product">{{ $v->name_piping }}</p>
                                                     <!-- <h6 class="price-product">RM {{ $v->price }}</h6> -->
                                                 </div>
-                                                <a href="#">
+                                                <a style="cursor: none;" href="#">
                                                     <!-- <a href="{{ route('gosford.piping.detail', base64_encode($v->id)) }}"> -->
                                                     <!-- <div class="choice-design"> -->
                                                         <!-- <center>Choose this design</center> -->
@@ -42,6 +42,8 @@
                                         </div>
                                     </div>
                                 @endforeach
+
+                                <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
 
                             </div>
 
