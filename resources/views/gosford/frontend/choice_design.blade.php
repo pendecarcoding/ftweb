@@ -454,7 +454,7 @@
                         <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
                             <div class="section-head text-left space-text-video">
                                 <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">Automotive Covers Manufacturing Plant</h2>
-                                <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p>
+                                <!-- <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p> -->
                             </div>
 
                         </div>
