@@ -410,7 +410,7 @@ class gosfordController extends Controller
 
    //Pattern Design
    function patterndesign(Request $r){
-    $data = Patterndesign::where('published','Y')->orderby('name_pattern','asc')->paginate(12);
+    $data = Patterndesign::where('published','Y')->orderByRaw('CAST(SUBSTRING(name_pattern, 8) AS UNSIGNED)')->paginate(12);
     return view('gosford.frontend.pattern.index',compact('data'));
    }
 
