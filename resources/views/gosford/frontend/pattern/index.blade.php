@@ -22,7 +22,8 @@
                                 @foreach ($data as $i => $v)
                                     <div class="col-md-2">
                                         <div class="card towncard">
-                                            <a href="{{ route('gosford.patterndesign.detail', base64_encode($v->id)) }}"
+                                            <!-- <a href="{{ route('gosford.patterndesign.detail', base64_encode($v->id)) }}" -->
+                                                <a href="#"
                                                 class="card-body">
                                                 <!-- Card content goes here -->
                                                 <img style="width:100%" src="{{ getimage($v->img) }}" alt="">

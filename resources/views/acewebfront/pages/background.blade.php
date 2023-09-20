@@ -15,7 +15,7 @@
                 <div class="section-content ">
                     <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
                         @for ($i = 0; $i < 16; $i++)
-                            @if ($i == 9 || $i == 11)
+                            @if ($i == 9 || $i == 11 || $i == 6)
                             @else
                                 <div class="item" style="margin-right: 5px;margin-left:5px ;">
 

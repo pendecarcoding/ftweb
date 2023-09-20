@@ -734,7 +734,12 @@ function name_companyofbg(){
         Project<br>
 </h5>',
 '<h5 class="h5-milestone">
-GLI and Trimex move to PJ Office</h5>',
+GLI and Trimex move to PJ Office <br>
+1<span class="angka"></span><sup>ST</sup> Mazda PDI
+        Project<br>
+</h5>
+
+',
 '<h5 class="h5-milestone">
 1<span class="angka"></span><sup>ST</sup> Mazda OEM
     Project<br>
