@@ -5,7 +5,9 @@
         <form class="" id="sort_downloads" action="" method="GET">
             <div class="card-header row gutters-5">
                 <div class="col text-center text-md-left">
+                    @can('add_research')
                     <a href="{{route('research.create')}}" style="float:right;color:white" class="btn btn-primary btn-sm">Add Content</a>
+                    @endcan
                     <h5 class="mb-md-0 h6">{{ translate('Research & Development') }}</h5>
                 </div>
 

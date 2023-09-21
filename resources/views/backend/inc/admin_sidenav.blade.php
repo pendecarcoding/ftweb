@@ -1037,7 +1037,7 @@
                     </li>
                 @endcanany
 
-                @can('admin_announcement')
+                @can('view_technical')
                     <li class="aiz-side-nav-item">
                         <a href="{{ route('research.index') }}"
                             class="aiz-side-nav-link {{ areActiveRoutes(['research.edit', 'research.create']) }}">
@@ -1046,7 +1046,7 @@
                         </a>
                     </li>
                 @endcan
-                @can('admin_contact')
+                @can('view_contact')
                     <li class="aiz-side-nav-item">
                         <a href="{{ route('contact.index') }}"
                             class="aiz-side-nav-link {{ areActiveRoutes(['contact.edit', 'contact.create']) }}">
