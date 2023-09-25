@@ -3,6 +3,13 @@ footer {
     bottom: 0;
     width: 100%;
 
+
+}
+
+#audithref {
+    object-fit: contain;
+    height: 100px;
+    margin:20px;
 }
 
 .buttontab{
