@@ -37,10 +37,10 @@ class PatterndesignController extends Controller
      */
     public function store(Request $request){
        try {
-            $color_1 = implode(',',$request->color1);
+            // $color_1 = implode(',',$request->color1);
             $d = new Patterndesign;
             $d->name_pattern= $request->name;
-            $d->colors     = $color_1;
+            // $d->colors     = $color_1;
             $d->price = $request->price;
             $d->img = $request->img;
             $d->base_img = $request->base_img;
@@ -73,10 +73,10 @@ class PatterndesignController extends Controller
 
     public function update(Request $request,$id){
         try {
-            $color_1 = implode(',',$request->color1);
+            // $color_1 = implode(',',$request->color1);
             $d = Patterndesign::find($id);
             $d->name_pattern= $request->name;
-            $d->colors     = $color_1;
+            // $d->colors     = $color_1;
             $d->price = $request->price;
             $d->img = $request->img;
             $d->base_img = $request->base_img;

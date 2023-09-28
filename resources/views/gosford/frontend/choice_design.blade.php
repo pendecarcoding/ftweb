@@ -29,9 +29,17 @@
         <section class="pt-5 pb-5">
 
             <div class="wrap-content">
-
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <h2 style="color:#555555">High-quality Automotive Leather Cover</h2>
+                    </div>
+                </div>
                 <div class="card">
+
                     <div class="row">
+
+
+
                         <div class="col-md-6 col-sm-12">
                             <div class="slider-product">
                                 <div style="display: flex;flex-direction: column;">
@@ -191,18 +199,153 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="col-md-6 col-sm-12">
-                            <div style="padding:20px;">
-                                <div style="display: flex;justify-content: space-between;    gap: 20px">
+
+                            <div style="padding: 20px 33px;">
+                                <div style="display: flex;flex-direction: column;  justify-content: space-between;    gap: 20px">
                                     <div>
-                                        <h5 style="color:gray">Select your preferred leather material</h5>
+                                        <div>
+                                            <h6 style="color:gray">Car Type :</h6>
+                                        </div>
                                     </div>
                                     <div>
-                                        <select class="btn btn-danger" id="leathertype" style="text-align: left;">
-                                            <option value="normalleather"><h5 style="color: black;font-weight: bold;">Catania Leather</h5></option>
-                                            <option value="grainleather"><h5 style="color: black;font-weight: bold;">Nappa Leather</h5></option>
-                                            <option value="pvcleather"><h5 style="color: black;font-weight: bold;">PVC</h5></option>
+                                        <select class="postform bs-select-hidden" id="cartype" name="cartype">
+                                            <option value="">Please Select</option>
+                                            @foreach($sizetype as $i => $v)
+                                             <option value="{{$v->id}}">{{$v->size}}</option>
+                                            @endforeach
+
                                         </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div style="display: flex;flex-direction: column;  justify-content: space-between;    gap: 20px">
+                                    <div>
+                                        <div>
+                                            <h6 style="color:gray">Interior Parts :</h6>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="list-leather" style="
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        position: relative;
+                                        white-space: nowrap;">
+
+                                          <div class="form-check">
+                                            <input checked class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              Seat Cover
+                                            </label>
+                                          </div>
+
+                                          @foreach($interior as $i => $vinterior)
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="{{$vinterior->value}}" id="checkbox{{$i}}" onclick="interiorSelected(this)">
+                                            <label class="form-check-label" for="checkbox{{$i}}">
+                                                {{$vinterior->name_interior}}
+                                            </label>
+                                        </div>
+
+                                          @endforeach
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div style="display: flex;flex-direction: column;  justify-content: space-between;">
+                                    <div>
+                                        <div>
+                                            <h6 style="color:gray">Material :</h6>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="list-leather" style="    gap: 9px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        position: relative;
+                                        white-space: nowrap;">
+                                            @foreach($leather as $i => $vl)
+                                            <div id="materialselected" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="" class="card-material-type custom-tooltip" onclick="MaterialSelected(this,{{$vl->id}})">
+                                                <center><p style="font-weight: bold;">{{$vl->leather}}</p></center>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div style="display: flex;flex-direction: column;  justify-content: space-between;">
+                                    <div>
+                                        <div>
+                                            <h6 style="color:gray">Leather Coverage:</h6>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="list-leather" style="    gap: 9px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        position: relative;
+                                        white-space: nowrap;">
+                                            @foreach($coverage as $i => $vl)
+                                            <div id="coverageselected" class="card-leather-types" onclick="CoverageSelected(this,{{$vl->id}})">
+                                                <center><p style="font-weight: bold;">{{$vl->name_leather}}</p></center>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div style="display: flex;flex-direction: column;  justify-content: space-between;    gap: 10px;">
+                                    <div>
+                                        <div>
+                                            <h6 style="color:gray">Color:</h6>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="list-leather" style="    gap: 9px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        position: relative;
+                                        white-space: nowrap;">
+
+                                            <div class="card-leather-type" id="toggleColor">
+
+                                                <center><p style="font-weight: bold;">Pick Color</p></center>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div id="selectedColors" class="list-selected-color"></div>
+                                </div>
+
+                                <br>
+                                <div style="display: flex;flex-direction: column;  justify-content: space-between;">
+                                    <div>
+                                        <div>
+                                            <h6 style="color:gray">Pattern:</h6>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="list-leather" style="    gap: 9px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        position: relative;
+                                        white-space: nowrap;">
+
+                                            <div  class="card-leather-type" id="toggleDesign">
+
+                                                <center><p style="font-weight: bold;">Pick Design</p></center>
+                                            </div>
+
+                                        </div>
+                                        <div id="selectedDesign" style="display: flex;
+                                                    flex-direction: column;
+                                                    gap: 10px;"></div>
                                     </div>
                                 </div>
 
@@ -210,159 +353,6 @@
 
 
 
-                                    <div id="normalleatherdes">
-                                    <form action="{{ route('gosford.detail.selectmake') }}" method="post">@csrf
-                                        <div style="display: flex;flex-direction: column;">
-                                            <hr class="hr-product-detail">
-                                            <input type="hidden" name="id" id="id_leathernormal" required>
-                                            <h6 style="color: grey;">Select the seat cover leather option bellow</h6>
-
-                                            <div class="list-leather" style="    gap: 9px;
-                                            display: flex;
-                                            flex-wrap: wrap;
-                                            position: relative;
-                                            white-space: nowrap;">
-                                                @foreach($normal as $i => $vl)
-                                                <div style="padding: 18px;    height: 60px;    background-color: #e3e3e3;" id="materialnormal{{$vl->id}}" data-id="{{$vl->id}}" class=" materialnormal card">
-                                                    <!-- <center><img src="{{getimage($vl->img)}}" alt=""></center> -->
-                                                    <center><p style="font-weight: bold;">{{$vl->name_leather}}</p></center>
-                                                </div>
-                                                @endforeach
-                                            </div>
-                                            <div class="car-seat-leather-des">
-                                                <div style="display: flex;gap: 12px;">
-                                                    <h4 id="totalnormal" style="color:#BF1D2C;font-weight:bold;"></h4>
-                                                    <h4 style="color: #BF1D2C;" id="name-materialnormal"></h4>
-                                                </div>
-                                                <br>
-                                                <div style="    text-align: justify;">
-                                                    <p style="color:gray"><b>Catania Leather</b> is a high-quality and durable leather material known for its unique and
-                                                        attractive texture of a pebbled leather surface texture, which resembles small, smooth, and
-                                                        rounded bumps or pebbles evenly distributed across the leather&#39;s surface. These pebbles are
-                                                        the result of a specific tanning and finishing process that sets pebbled leather apart from other
-                                                        types of leather for leather seat upholstery industry.</p>
-                                                        <p style="color:#BF1D2C;font-style: italic">Displayed price includes seat cover, center console cover, door trims cover and
-                                                            installation. For further customization please click on below SUBMIT button to book
-                                                            for an appointment.</p>
-                                                </div>
-
-                                                <div style="display: flex;gap:20px">
-                                                    <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
-                                                        class="mdl-button mdl-js-button mdl-button--raised btn-back"
-                                                        data-upgraded=",MaterialButton">
-                                                        Back
-                                                    </a>
-                                                    <button type="submit" style="padding: 0px 30px;" type="submit"
-                                                        class="mdl-button mdl-js-button mdl-button--raised color--gray"
-                                                        data-upgraded=",MaterialButton">
-                                                        Submit
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    </div>
-
-                                    <div id="grainleatherdes" style="display: none;">
-                                        <form action="{{ route('gosford.detail.selectmake') }}" method="post">@csrf
-                                            <div style="display: flex;flex-direction: column;">
-                                                <hr class="hr-product-detail">
-                                                <input type="hidden" name="id" id="id_leathergrain" required>
-                                                <h6 style="color: grey;">Select the seat cover leather option bellow</h6>
-
-                                                <div class="list-leather" style="gap: 9px;
-                                                display: flex;
-                                                flex-wrap: wrap;
-                                                position: relative;
-                                                white-space: nowrap;">
-                                                    @foreach($grain as $i => $vl)
-                                                    <div style="padding: 18px;    height: 60px;     background-color: #e3e3e3;" id="materialgrain{{$vl->id}}" data-id="{{$vl->id}}" class=" materialgrain card">
-                                                        <!-- <center><img src="{{getimage($vl->img)}}" alt=""></center> -->
-                                                        <center><p style="font-weight: bold;">{{$vl->name_leather}}</p></center>
-                                                    </div>
-                                                    @endforeach
-                                                </div>
-                                                <div class="car-seat-leather-des">
-                                                    <div style="display: flex;gap: 12px;">
-                                                        <h4 id="totalgrain" style="color:#BF1D2C;font-weight:bold;"></h4>
-                                                        <h4 style="color: #BF1D2C;" id="name-materialgrain"></h4>
-                                                    </div>
-                                                    <br>
-                                                    <div style="    text-align: justify;">
-                                                        <p style="color:gray"><b>Nappa leather</b>, often referred to simply as &quot;Nappa,&quot; is a premium quality, soft, and luxurious
-                                                            type of leather known for its exceptional smoothness and fine grain. It is highly regarded in the
-                                                            automotive industry for its superior comfort, elegance, and durability. Its characteristic make it a
-                                                            preferred choice for crafting high-end leather products that demand a touch of sophistication
-                                                            and elegance.</p>
-                                                            <p style="color:#BF1D2C;font-style: italic">Displayed price includes seat cover, center console cover, door trims cover and
-                                                                installation. For further customization please click on below SUBMIT button to book
-                                                                for an appointment.</p>
-                                                    </div>
-                                                    <div style="display: flex;    gap: 20px;">
-                                                        <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
-                                                            class="mdl-button mdl-js-button mdl-button--raised btn-back"
-                                                            data-upgraded=",MaterialButton">
-                                                            Back
-                                                        </a>
-                                                        <button type="submit" style="padding: 0px 30px;" type="submit"
-                                                            class="mdl-button mdl-js-button mdl-button--raised color--gray"
-                                                            data-upgraded=",MaterialButton">
-                                                            Submit
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                    <div id="pvcleatherdes" style="display: none;">
-                                        <form action="{{ route('gosford.detail.selectmake') }}" method="post">@csrf
-                                            <div style="display: flex;flex-direction: column;">
-                                                <hr class="hr-product-detail">
-                                                <input type="hidden" name="id" id="id_leatherpvc" required>
-                                                <h6 style="color: grey;">Select the seat cover leather option bellow</h6>
-                                                <div class="list-leather" style="gap: 9px;
-                                                display: flex;
-                                                flex-wrap: wrap;
-                                                position: relative;
-                                                white-space: nowrap;">
-                                                    @foreach($pvc as $i => $vl)
-                                                    <div style="padding: 18px;    height: 60px;  background-color: #e3e3e3;" id="material{{$vl->id}}" data-id="{{$vl->id}}" class=" materialpvc card">
-                                                        <!-- <center><img src="{{getimage($vl->img)}}" alt=""></center> -->
-                                                        <center><p style="font-weight: bold;">{{$vl->name_leather}}</p></center>
-                                                    </div>
-                                                    @endforeach
-                                                </div>
-                                                <div class="car-seat-leather-des">
-                                                    <div style="display: flex;gap: 12px;">
-                                                        <h4 id="totalpvc" style="color:#BF1D2C;font-weight:bold;"></h4>
-                                                        <h4 style="color: #BF1D2C;" id="name-materialpvc"></h4>
-                                                    </div>
-                                                    <br>
-                                                    <div style="    text-align: justify;">
-                                                        <p style="color:gray">We are delighted to present our latest masterpiece to you high quality
-                                                            automotive leather. This copy will showcase the true charm of this exquisite
-                                                            creation.</p>
-                                                            <p style="color:#BF1D2C;font-style: italic">Displayed price includes seat cover, center console cover, door trims cover and
-                                                                installation. For further customization please click on below SUBMIT button to book
-                                                                for an appointment.</p>
-                                                    </div>
-                                                    <div style="display: flex;gap:20px">
-                                                        <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
-                                                            class="mdl-button mdl-js-button mdl-button--raised btn-back"
-                                                            data-upgraded=",MaterialButton">
-                                                            Back
-                                                        </a>
-                                                        <button type="submit" style="padding: 0px 30px;" type="submit"
-                                                            class="mdl-button mdl-js-button mdl-button--raised color--gray"
-                                                            data-upgraded=",MaterialButton">
-                                                            Submit
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
 
 
 
@@ -374,6 +364,135 @@
 
 
                         </div>
+
+                        <div id="pick-color" class="card card-order" style="display: none;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        border-radius: 0px;
+                    ">
+                            <div style="border-radius: 0px;" class="card-header card-order-header">
+                                <a id="closeIcon" style="float:right" href="#"><i class="fa fa-times"></i></a>
+                                <center><h4>Color</h4></center>
+
+                            </div>
+                            <div class="card-body">
+                                <div style="display: flex;gap:20px">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked onclick="updateSelectionMode()">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          Single Color
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  onclick="updateSelectionMode()">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          Two Tone Color
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="color-list-container">
+                                @foreach($colors as $i =>$vcolor)
+                                    <div class="color-column-list" onclick="selectColor(this, '{{$vcolor->name}}', '{{getimage($vcolor->image)}}', {{$vcolor->extraprice}})">
+                                        <img id="imgcolor" class="img-color-option" src="{{getimage($vcolor->image)}}" alt="">
+                                        <div id="namecolor" style="font-weight: bold;color: #555555;">{{$vcolor->name}}</div>
+                                        <div style="font-size: smaller;">{{$vcolor->code}}</div>
+                                        <div class="extra-price-color">@if($vcolor->extraprice > 0) +RM{{$vcolor->extraprice}} @endif</div>
+                                    </div>
+
+
+                                @endforeach
+                                </div>
+
+
+
+                            </div>
+                            <div class="card-footer">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Subtotal : <span id="selectedPrice" style="font-size: x-large;font-weight: bold;color: brown;"></span></div>
+                                    <button id="donebuttoncolor" class="btn btn-secondary" style="background-color: #555555; border-radius: 50px;    padding: 8px 45px;">Done</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div id="pick-design" class="card card-order" style="display: none;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        border-radius: 0px;
+                    ">
+                            <div style="border-radius: 0px;" class="card-header card-order-header">
+                                <a id="closeIcondesign" style="float:right" href="#"><i class="fa fa-times"></i></a>
+                                <center><h4>Pattern</h4></center>
+
+                            </div>
+                            <div class="card-body">
+
+                                <div class="color-list-container">
+                                    @foreach($pattern as $i => $vpattern)
+                                    <div class="color-column-list" onclick="selectPattern(this, '{{$vpattern->name_pattern}}', '{{getimage($vpattern->img)}}', {{$vpattern->price}})">
+                                        <img id="imgpattern{{$i}}" class="img-pattern-option" src="{{getimage($vpattern->img)}}" alt="">
+                                        <div id="namepattern{{$i}}" style="font-weight: bold;color: #555555;">{{$vpattern->name_pattern}}</div>
+                                        <div class="extra-price-color">@if($vpattern->price > 0) +RM{{$vpattern->price}} @endif</div>
+                                    </div>
+                                    @endforeach
+                                </div>
+
+
+
+                            </div>
+                            <div class="card-footer">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Subtotal : <span id="selectedPriceDesign" style="font-size: x-large;font-weight: bold;color: brown;"></span></div>
+                                    <button id="donebuttondesign" class="btn btn-secondary" style="background-color: #555555; border-radius: 50px;    padding: 8px 45px;">Done</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="wrap-selection">
+                            <div class="section-content">
+                                <div class="col-lg-12 col-md-12 m-b30">
+                                    <div class="dlab-accordion" id="accordion1">
+                                        <div class="panel">
+                                            <div style="    border: none;    border-radius: 10px;
+                                            background-color: #8080801f;" class="acod-head">
+                                                <h5 class="acod-title"> <a style="border: none;    text-align: right;" class="collapsed" aria-expanded="false">Total <span id="totalall" style="color:red">RM 0.00</span></a> </h5>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="panel">
+                                        <div style="float:right">
+                                            <div style="display: flex;gap:20px">
+                                                <button id="clear"
+                                                    onclick="clearall()"
+                                                    style="padding: 0px 30px;" type="submit"
+                                                    class="mdl-button mdl-js-button mdl-button--raised btn-back"
+                                                    data-upgraded=",MaterialButton">
+                                                    Clear All
+                                            </button>
+                                                <button id="submit"
+                                                onclick="submitOrder()"
+                                                disabled
+                                                    style="padding: 0px 30px;" type="submit"
+                                                    class="mdl-button mdl-js-button mdl-button--raised color--green"
+                                                    data-upgraded=",MaterialButton">
+                                                    Submit
+                                            </button>
+                                            </div>
+                                        </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -471,143 +590,6 @@
 
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-<script>
-    $(document).ready(function() {
-        // Mengambil token CSRF dari meta tag
-        var csrfToken = $('meta[name="csrf-token"]').attr('content');
-        var prevClickedElement = null;
-        $('.materialnormal').click(function() {
-            if (prevClickedElement) {
-                $(prevClickedElement).css("border", "none");
-            }
-            var materialId = $(this).data('id');
-           // $(this).css("border", "solid 2px #bf1d2c");
-            prevClickedElement = this;
-            $('#id_leathernormal').val(materialId);
-            $.ajax({
-                type: 'POST', // Ganti ke metode POST
-                url: "{{url('fetch_price/sys/price')}}", // Ganti dengan URL yang sesuai di dalam Laravel
-                data: {
-                    _token: csrfToken, // Menggunakan token CSRF
-                    id: materialId
-                },
-                success: function(response) {
-                    // Menampilkan data yang diterima dalam elemen dengan id 'priceContainer'
-                    $('#name-materialnormal').html(response.name_leather);
-                    $('#totalnormal').html('Price RM '+response.price);
-                    // Anda dapat menambahkan baris ini untuk menampilkan atribut lainnya
-                    // $('#priceContainer').append('Atribut Lain: ' + response.nama_atribut_lain);
-                }
-            });
-        });
-    });
-</script>
-
-
-
-<script>
-    $(document).ready(function() {
-        // Mengambil token CSRF dari meta tag
-        var csrfToken = $('meta[name="csrf-token"]').attr('content');
-        var prevClickedElement = null;
-        $('.materialgrain').click(function() {
-            if (prevClickedElement) {
-                $(prevClickedElement).css("border", "none");
-            }
-            var materialId = $(this).data('id');
-           // $(this).css("border", "solid 2px #bf1d2c");
-            prevClickedElement = this;
-            $('#id_leathergrain').val(materialId);
-            $.ajax({
-                type: 'POST', // Ganti ke metode POST
-                url: "{{url('fetch_price/sys/price')}}", // Ganti dengan URL yang sesuai di dalam Laravel
-                data: {
-                    _token: csrfToken, // Menggunakan token CSRF
-                    id: materialId
-                },
-                success: function(response) {
-                    // Menampilkan data yang diterima dalam elemen dengan id 'priceContainer'
-                    $('#name-materialgrain').html(response.name_leather);
-                    $('#totalgrain').html('Price RM '+response.price);
-                    // Anda dapat menambahkan baris ini untuk menampilkan atribut lainnya
-                    // $('#priceContainer').append('Atribut Lain: ' + response.nama_atribut_lain);
-                }
-            });
-        });
-    });
-</script>
-
-<script>
-    $(document).ready(function() {
-        // Mengambil token CSRF dari meta tag
-        var csrfToken = $('meta[name="csrf-token"]').attr('content');
-        var prevClickedElement = null;
-        $('.materialpvc').click(function() {
-            if (prevClickedElement) {
-                $(prevClickedElement).css("border", "none");
-            }
-            var materialId = $(this).data('id');
-           // $(this).css("border", "solid 2px #bf1d2c");
-            prevClickedElement = this;
-            $('#id_leatherpvc').val(materialId);
-            $.ajax({
-                type: 'POST', // Ganti ke metode POST
-                url: "{{url('fetch_price/sys/price')}}", // Ganti dengan URL yang sesuai di dalam Laravel
-                data: {
-                    _token: csrfToken, // Menggunakan token CSRF
-                    id: materialId
-                },
-                success: function(response) {
-                    // Menampilkan data yang diterima dalam elemen dengan id 'priceContainer'
-                    $('#name-materialpvc').html(response.name_leather);
-                    $('#totalpvc').html('Price RM '+response.price);
-                    // Anda dapat menambahkan baris ini untuk menampilkan atribut lainnya
-                    // $('#priceContainer').append('Atribut Lain: ' + response.nama_atribut_lain);
-                }
-            });
-        });
-    });
-</script>
-
-    <script>
-    // Initialize LightGallery
-    lightGallery(document.getElementById('gallery'), {
-    thumbnail: true,
-    download:false
-});
-
-</script>
-
-
-<script>
-    function updateLeatherDisplay() {
-        const selectedValue = leathertypeSelect.value;
-
-        // Hide all leather types
-        const leatherTypes = ['normalleather', 'grainleather', 'pvcleather'];
-        leatherTypes.forEach(type => {
-            document.getElementById(type+'des').style.display = 'none';
-            document.getElementById(type).style.display = 'none';
-        });
-
-        // Show the selected leather type
-        if (selectedValue) {
-            document.getElementById(selectedValue).style.display = 'block';
-            document.getElementById(selectedValue+'des').style.display = 'block';
-        }
-    }
-
-    const leathertypeSelect = document.getElementById('leathertype');
-
-    // Initial call to set default display
-    window.onload = updateLeatherDisplay;
-
-    // Update display on selection change
-    leathertypeSelect.addEventListener('change', updateLeatherDisplay);
-</script>
-
-
+    <script src="/public/go_system/js/getprice.js"></script>
 
 @endsection

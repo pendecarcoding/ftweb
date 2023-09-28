@@ -21,9 +21,23 @@
             <form class="p-4" action="{{ route('colors.update', $color->id) }}" method="POST">
                 <input name="_method" type="hidden" value="POST">
                 @csrf
+                <div class="form-group mb-3">
+                    <label  for="name">{{ translate('Picture') }}
+                        <small>({{ translate('120x80') }})</small></label>
+                    <div class="input-group" data-toggle="aizuploader" data-type="image">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text bg-soft-secondary font-weight-medium">
+                                {{ translate('Browse') }}</div>
+                        </div>
+                        <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                        <input type="hidden" name="image" value="{{ $color->image }}" class="selected-files">
+                    </div>
+                    <div class="file-preview box sm">
+                    </div>
+                </div>
                 <div class="form-group row">
                     <label class="col-sm-3 col-from-label" for="name">
-                        {{ translate('Name')}} 
+                        {{ translate('Name')}}
                     </label>
                     <div class="col-sm-9">
                         <input type="text" placeholder="{{ translate('Name')}}" id="name" name="name" class="form-control" required value="{{ $color->name }}">
@@ -31,11 +45,17 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-3 col-from-label" for="code">
-                        {{ translate('Color Code')}} 
+                        {{ translate('Color Code')}}
                     </label>
                     <div class="col-sm-9">
                         <input type="text" placeholder="{{ translate('Color Code')}}" id="code" name="code" class="form-control" required value="{{ $color->code }}">
                     </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="name">{{ translate('Extra Price') }}</label>
+                    <input type="number" value="{{$color->extraprice}}" placeholder="{{ translate('Extra Price') }}" id="extraprice" name="extraprice"
+                        class="form-control" value="{{ old('extraprice') }}" required>
                 </div>
                 <div class="form-group mb-0 text-right">
                     <button type="submit" class="btn btn-primary">{{translate('Save')}}</button>

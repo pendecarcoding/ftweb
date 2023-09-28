@@ -23,13 +23,15 @@
                         </div>
                     </div>
                 </form>
-                
+
                 <div class="card-body">
                     <table class="table aiz-table mb-0">
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Picture</th>
                                 <th>{{ translate('Name') }}</th>
+                                <th>{{ translate('Code') }}</th>
                                 <th class="text-right">{{ translate('Options') }}</th>
                             </tr>
                         </thead>
@@ -37,7 +39,9 @@
                             @foreach ($colors as $key => $color)
                                 <tr>
                                     <td>{{ ($key+1) + ($colors->currentPage() - 1)*$colors->perPage() }}</td>
+                                    <td><img src="{{ getimage($color->image)}}" alt="" style="width:100px;height: 100px;"></td>
                                     <td>{{ $color->name }}</td>
+                                    <td>{{ $color->code }}</td>
                                     <td class="text-right">
                                         @can('edit_color')
                                             <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
@@ -83,6 +87,20 @@
                         <form action="{{ route('colors.store') }}" method="POST">
                             @csrf
                             <div class="form-group mb-3">
+                                <label for="name">{{ translate('Picture') }}
+                                    <small>({{ translate('120x80') }})</small></label>
+                                <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-soft-secondary font-weight-medium">
+                                            {{ translate('Browse') }}</div>
+                                    </div>
+                                    <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                                    <input type="hidden" name="image" class="selected-files">
+                                </div>
+                                <div class="file-preview box sm">
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
                                 <label for="name">{{ translate('Name') }}</label>
                                 <input type="text" placeholder="{{ translate('Name') }}" id="name" name="name"
                                     class="form-control" value="{{ old('name') }}" required>
@@ -92,13 +110,18 @@
                                 <input type="text" placeholder="{{ translate('Color Code') }}" id="code" name="code"
                                     class="form-control" value="{{ old('code') }}" required>
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="name">{{ translate('Extra Price') }}</label>
+                                <input type="number" placeholder="{{ translate('Extra Price') }}" id="extraprice" name="extraprice"
+                                    class="form-control" value="{{ old('extraprice') }}" required>
+                            </div>
                             <div class="form-group mb-3 text-right">
                                 <button type="submit" class="btn btn-primary">{{ translate('Save') }}</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-header">
                         <h3 class="mb-0 h6">{{translate('Color filter activation')}}</h3>
                     </div>
@@ -108,7 +131,7 @@
                             <span class="slider round"></span>
                         </label>
                     </div>
-                </div>
+                </div> -->
             </div>
         @endcan
     </div>
@@ -129,7 +152,7 @@
             else{
                 var value = 0;
             }
-            
+
             $.post('{{ route('business_settings.update.activation') }}', {_token:'{{ csrf_token() }}', type:type, value:value}, function(data){
                 if(data == '1'){
                     AIZ.plugins.notify('success', '{{ translate('Settings updated successfully') }}');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\ace;
 use App\Http\Controllers\Controller;
+use App\Models\LeatherType;
 use App\Models\TypeCar;
 use App\Models\TypeLeather;
 use Auth;
@@ -41,6 +42,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Auth\Events\PasswordReset;
 use App\Mail\SecondEmailVerifyMailManager;
+use App\Models\Color;
 use App\Models\Company;
 use Session;
 use Faker\Provider\Uuid;
@@ -48,8 +50,10 @@ use PDF;
 use DB;
 use App\Models\Currency;
 use App\Models\GenericLeather;
+use App\Models\InteriorPart;
 use App\Models\Language;
 use App\Models\Leadership;
+use App\Models\Patterndesign;
 use App\Models\Policy;
 use Config;
 
@@ -162,10 +166,13 @@ class AceController extends Controller
             return view('gosford.frontend.choice_design',compact('slider'));
             break;
             case 'product_project':
-                $normal     =  GenericLeather::where('type','Normal Leather')->orderby('shortby','asc')->get();
-                $grain      =  GenericLeather::where('type','Grain Leather')->orderby('shortby','asc')->get();
-                $pvc        =  GenericLeather::where('type','PVC')->orderby('shortby','asc')->get();
-                return view('gosford.frontend.choice_design',compact('normal','grain','pvc'));
+                $coverage   =  DB::table('leather_coverage')->get();
+                $sizetype   =  DB::table('size_seat')->get();
+                $leather    =  DB::table('leather_type')->get();
+                $interior   =  InteriorPart::all();
+                $colors     = Color::all();
+                $pattern    = Patterndesign::where('published','Y')->orderByRaw('CAST(SUBSTRING(name_pattern, 8) AS UNSIGNED)')->get();
+                return view('gosford.frontend.choice_design',compact('coverage','sizetype','leather','colors','interior','pattern'));
                 // if(Session::get('id_account') == null){
                 //     $brand   = Brand::all();
                 //     return view('gosford.frontend.search',compact('brand'));

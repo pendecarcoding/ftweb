@@ -1080,6 +1080,7 @@
     </script>
     <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
     <script src="{{ static_asset('car') }}/js/rev.slider.js"></script>
+    <script src="{{ static_asset('car') }}/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
     <script>
         jQuery(document).ready(function() {
             'use strict';
@@ -1106,6 +1107,13 @@ function requestLandscapeOrientation() {
 }
 
         </script>
+
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    </script>
 
 </body>
 

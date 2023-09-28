@@ -58,6 +58,10 @@ Route::prefix('product_project')->group(function (){
         Route::any('/gosford/f/finish', 'finishdesign')->name('gosford.finish.design');
 
         Route::post('/gosford/f/fetchpriceseat', 'fetchpriceseat')->name('gosford.fetch.price');
+        Route::post('/gosford/f/submitorder', 'submitorder')->name('gosford.order.submitorder');
+        Route::get('/gosford/f/inquiryorder/{id}', 'inquiryorder')->name('gosford.order.inquiry');
+        Route::patch('/gosford/f/inquiryorder/update/{id}', 'updateinquiryorder')->name('gosford.order.updateinquiry');
+
     });
 });
 

@@ -802,7 +802,7 @@ function gettypeleather($id){
 
 function getaplicationleather($id){
     try {
-        $data = DB::table('type_leather')->where('id',$id)->first();
+        $data = DB::table('leather_coverage')->where('id',$id)->first();
         return $data;
     } catch (\Throwable $th) {
         //throw $th;

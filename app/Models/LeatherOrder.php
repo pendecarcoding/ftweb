@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TypeLeather extends Model
+class LeatherOrder extends Model
 {
-    protected $table = 'leather_type';
-
+    protected $table = 'leather_order';
 }

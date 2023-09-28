@@ -19,7 +19,7 @@
                         </div>
 
 
-
+<!--
                         <div class="form-group">
                         <label for="">Colors</label>
                             <select name="color1[]" class="select2 form-control aiz-selectpicker"  data-toggle="select2" data-placeholder="Choose ..."data-live-search="true" multiple>
@@ -29,7 +29,7 @@
                                 @endforeach
                             </select>
                             <p>choose any color for the upper consumer color choice</p>
-                        </div>
+                        </div> -->
 
                     </div>
                     <div class="col-md-6">

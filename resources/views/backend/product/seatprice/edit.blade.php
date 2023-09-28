@@ -17,7 +17,6 @@
                                 <th>{{ translate('Type Leather') }}</th>
                                 <th>{{ translate('Product') }}</th>
                                 <th>{{ translate('Type') }}</th>
-                                <th>{{ translate('Row') }}</th>
                                 <th colspan="2">{{ translate('Price') }}</th>
 
                                 <th>{{ translate('Options') }}</th>
@@ -30,7 +29,6 @@
                                     <td>{{ gettypeleather($v->leather_type)->leather }}</td>
                                     <td>{{ getaplicationleather($v->application)->name_leather }}</d>
                                     <td>{{ getvehicle($v->vehicle_type)->size }}</td>
-                                    <td>{{ $v->row }}</td>
                                     <td colspan="2">RM {{ $v->price }}</td>
                                     <td class="text-right">
                                         @can('edit_seatprice')
@@ -62,7 +60,8 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0 h6">{{ translate('Add New Leather') }}</h5>
+                        <h5 class="mb-0 h6">{{ translate('Edit New Leather') }}</h5>
+                        <a href="{{url('admin/seatprice')}}" class="btn btn-danger">x</a>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('seatprice.update',$edit->id) }}" method="POST">
@@ -95,17 +94,6 @@
                                 </select>
                             </div>
 
-                            <div class="form-group mb-3">
-                                <label for="name">{{ translate('Row') }}</label>
-                                <select name="row" id="" class="form-control" required>
-
-                                    <option value="1" @if($edit->row=='1') selected @endif>1</option>
-                                    <option value="2" @if($edit->row=='2') selected @endif>2</option>
-                                    <option value="3" @if($edit->row=='3') selected @endif>3</option>
-                                    <option value="4" @if($edit->row=='4') selected @endif>4</option>
-
-                                </select>
-                            </div>
 
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Price') }}</label>

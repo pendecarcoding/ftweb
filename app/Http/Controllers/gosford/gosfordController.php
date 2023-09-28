@@ -25,6 +25,7 @@ use Faker\Provider\Uuid;
 use DB;
 use  App\Models\GsystemAccount;
 use App\Models\GsystemOrder;
+use App\Models\LeatherOrder;
 use App\Models\Twotown;
 use App\Models\TypeCar;
 use App\Models\Piping;
@@ -453,17 +454,84 @@ class gosfordController extends Controller
     return view('gosford.frontend.product.detail_product');
    }
 
+
+
+   function updateinquiryorder(Request $r, $id){
+    try {
+        $data = [
+            'name'=>$r->name,
+            'contact_number'=>$r->contact_number,
+            'email'=>$r->email,
+            'info'=>$r->info,
+        ];
+        $act = LeatherOrder::where('id',$id)->update($data);
+
+            //send to email
+            return view('gosford.frontend.finishdesign');
+
+
+
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+   }
+
+   function submitorder(Request $r){
+    try {
+        $id = uniqid();
+        $data = [
+            'id'=>$id,
+            'type_car'=>$r->type_car,
+            'id_leather'=>$r->id_leather,
+            'id_coverage'=>$r->id_coverage,
+            'design'=>json_encode($r->design),
+            'color'=>json_encode($r->color),
+            'priceseat'=>$r->priceseat,
+            'totalprice'=>$r->totalprice,
+        ];
+        $act = LeatherOrder::insert($data);
+        if($act){
+            return response()->json([
+                'status'=>'success',
+                'url'=>route('gosford.order.inquiry',$id)
+            ]);
+        }else{
+            return response()->json([
+                'status'=>'failed',
+                'url'=>''
+            ]);
+        }
+    } catch (\Throwable $th) {
+        return response()->json([
+            'status'=>$th->getMessage(),
+            'url'=>''
+        ]);
+    }
+   }
+
+
+   function inquiryorder($id){
+    $data = LeatherOrder::where('id',$id)->first();
+    if($data != null){
+        $color = json_decode($data->color,true);
+        $design = json_decode($data->design,true);
+        return view('gosford.frontend.inquiryorder',compact('data','color','design','id'));
+    }else{
+        return back();
+    }
+
+   }
+
    function fetchpriceseat(Request $request){
-    $vehicleType = $request->input('vehicle_type');
-    $application = $request->input('application');
-    $leatherType = $request->input('leather_type');
+    $vehicleType = $request->input('type_car');
+    $application = $request->input('id_coverage');
+    $leatherType = $request->input('id_leather');
     $row = $request->input('row');
 
     // Lakukan query ke database untuk mendapatkan harga
     $price = DB::table('price_seat')->where('vehicle_type', $vehicleType)
         ->where('application', $application)
         ->where('leather_type', $leatherType)
-        ->where('row', $row)
         ->value('price'); // Mengambil nilai harga
 
     // Kirimkan harga sebagai respons

@@ -14,10 +14,9 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>{{ translate('Image') }}</th>
+
                                 <th>{{ translate('Name') }}</th>
-                                <th>{{ translate('Price') }}</th>
-                                <th>{{ translate('Parent') }}</th>
+
                                 <th class="text-right">{{ translate('Options') }}</th>
                             </tr>
                         </thead>
@@ -25,11 +24,9 @@
                             @foreach ($data as $i => $v)
                                 <tr>
                                     <td>{{ $i + 1 }}</td>
-                                    <td><img width="100%" height="64px" src="{{ getimage($v->img) }}" alt=""></td>
-                                    <td>{{ $v->name_leather }}</td>
-                                    <td>RM {{ $v->price }}</td>
-                                    <td>{{ empty($v->parentid) ? 'none' : getleatherbyid($v->parentid)->name_leather }}
-                                    </td>
+
+                                    <td>{{ $v->leather }}</td>
+
                                     <td class="text-right">
                                         @can('edit_leather')
                                             <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
@@ -61,7 +58,8 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0 h6">{{ translate('Add New Leather') }}</h5>
+                        <h5 class="mb-0 h6">{{ translate('Update Leather') }}</h5>
+                        <a href="{{url('admin/leather')}}" class="btn btn-danger">x</a>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('leather.update',$edit->id) }}" method="POST">
@@ -69,10 +67,10 @@
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Name') }}</label>
-                                <input value="{{$edit->name_leather}}" type="text" placeholder="{{ translate('Name') }}" name="name" class="form-control"
+                                <input value="{{$edit->leather}}" type="text" placeholder="{{ translate('Name') }}" name="name" class="form-control"
                                     required>
                             </div>
-                            <div class="form-group mb-3">
+                            <!-- <div class="form-group mb-3">
                                 <label for="name">{{ translate('Image') }}
                                     <small>({{ translate('141x64') }})</small></label>
                                 <div class="input-group" data-toggle="aizuploader" data-type="image">
@@ -85,8 +83,8 @@
                                 </div>
                                 <div class="file-preview box sm">
                                 </div>
-                            </div>
-                            <div class="form-group mb-3">
+                            </div> -->
+                            <!-- <div class="form-group mb-3">
                                 <label for="name">{{ translate('Price') }}</label>
                                 <input value="{{$edit->price}}" class="form-control" id="overrides" oninput="validateoverride(this)" type="number"
                                     id="doubleInput" name="price" step="0.01" min="0" />
@@ -99,7 +97,7 @@
                                         <option value="{{ $v->id }}" @if($v->id==$edit->parentid) selected @endif>{{ $v->name_leather }}</option>
                                     @endforeach
                                 </select>
-                            </div>
+                            </div> -->
                             <div class="form-group mb-3 text-right">
                                 <button type="submit" class="btn btn-primary">{{ translate('Save') }}</button>
                             </div>
