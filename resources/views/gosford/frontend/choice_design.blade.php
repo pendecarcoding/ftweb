@@ -427,7 +427,10 @@
                                 <center><h4>Pattern</h4></center>
 
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" style="
+                            position: relative;
+                            overflow: scroll;
+                        ">
 
                                 <div class="color-list-container">
                                     @foreach($pattern as $i => $vpattern)
