@@ -465,9 +465,15 @@ class gosfordController extends Controller
             'info'=>$r->info,
         ];
         $act = LeatherOrder::where('id',$id)->update($data);
-
-            //send to email
-            return view('gosford.frontend.finishdesign');
+        if($act){
+            $array['subject'] = translate('Info Order');
+            $array['from'] = env('MAIL_FROM_ADDRESS');
+            $array['content']="Thank you for your order, our sales will contact you soon. To see the status of your order, you can click the link below";
+            $array['link'] = route('gosford.order.infoorder',base64_encode($id));
+            Mail::to($r->email)->queue(new SecondEmailVerifyMailManager($array));
+        }
+        //send to email
+        return view('gosford.frontend.finishdesign');
 
 
 
@@ -516,6 +522,18 @@ class gosfordController extends Controller
         $color = json_decode($data->color,true);
         $design = json_decode($data->design,true);
         return view('gosford.frontend.inquiryorder',compact('data','color','design','id'));
+    }else{
+        return back();
+    }
+
+   }
+
+   function infoorder($id){
+    $data = LeatherOrder::where('id',base64_decode($id))->first();
+    if($data != null){
+        $color = json_decode($data->color,true);
+        $design = json_decode($data->design,true);
+        return view('gosford.frontend.infoorder',compact('data','color','design','id'));
     }else{
         return back();
     }
