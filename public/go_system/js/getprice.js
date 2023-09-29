@@ -127,7 +127,9 @@ $(document).on('change', 'input[type="checkbox"]', function() {
 
     if (!$(this).is(':checked')) {
         // Remove the corresponding interior from the list
+        Priceinterior=0;
         $('#interior-list').find('div[data-id="' + interiorId + '"]').remove();
+
     }
 
     // Update the displayed price
@@ -148,6 +150,7 @@ function updateTotalPrice() {
         // Collect interior data
         var interiorData = {
             id: interiorId,
+
         };
 
         // Add interior data to the updatedSelectedInteriors array

@@ -68,7 +68,7 @@
                                  <br>
                                  <input type="text" class="form-control" name="contact_number" placeholder="Contact Number*">
                                  <br>
-                                 <input type="text" class="form-control" name="email" placeholder="Email Address*">
+                                 <input type="email" class="form-control" name="email" placeholder="Email Address*">
                                 <br>
                                  <textarea class="form-control" name="info" style="height: 100px;"></textarea>
 
