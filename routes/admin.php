@@ -75,6 +75,7 @@ use App\Http\Controllers\towncolor\TwotowncolorController;
 use App\Http\Controllers\patterndesign\PatterndesignController;
 use App\Http\Controllers\piping\PipingController;
 use App\Http\Controllers\VehicleseatController;
+use App\Http\Controllers\InteriorpartController;
 
 
 
@@ -216,6 +217,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/vehicleseat/edit/{id}', 'edit')->name('vehicleseat.edit');
         Route::get('/vehicleseat/destroy/{id}', 'destroy')->name('vehicleseat.destroy');
     });
+
+    //interior part
+     //Vehicle Seat
+     Route::resource('interiorpart', InteriorpartController::class);
+     Route::controller(InteriorpartController::class)->group(function () {
+         Route::get('/interiorpart/edit/{id}', 'edit')->name('interiorpart.edit');
+         Route::get('/interiorpart/destroy/{id}', 'destroy')->name('interiorpart.destroy');
+     });
 
     //generic leather
 

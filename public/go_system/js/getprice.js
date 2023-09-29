@@ -10,7 +10,9 @@
     var DesignJsonArray;
     var Total = 0;
     var Priceseat = 0;
+    var Priceinterior = 0;
     var colorJsonArray;
+    var selectedInteriors = [];
 
     function editcolor() {
             $('#pick-color').toggle();
@@ -71,7 +73,88 @@
 
   });
   function interiorSelected(checkbox) {
-    checkbox.classList.toggle('selected');
+    var selectedInteriorIds = [];
+    $('input[type="checkbox"]:checked').each(function() {
+        selectedInteriorIds.push($(this).val());
+    });
+
+    // Get the CSRF token value
+    var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+    $.ajax({
+        type: "POST",
+        url: '/product_project/gosford/f/interiorselected',
+        data: {
+            _token: csrfToken,
+            interiorIds: selectedInteriorIds
+        },
+        success: function(response) {
+            // Reset Priceinterior
+            Priceinterior = 0;
+
+            // Handle the response and format the data as needed
+            var interiorList = '';
+            $.each(response, function(index, interior) {
+                Priceinterior += parseFloat(interior.price);
+
+                interiorList += `<div class="list-color-detail" data-id="${interior.id_interior}" style="width: 100%;">
+                    <div style="display:flex; gap:13px">
+                        <img src="${interior.urlimage}" alt="${interior.name_interior}">
+                        <div class="name-color-list">${interior.name_interior}</div>
+                    </div>
+                    <div style="display:flex;gap:13px">
+                        <div class="name-color-list">RM${interior.price}</div>
+                    </div>
+                </div>`;
+            });
+
+            // Update the displayed interior list
+            $('#interior-list').html(interiorList);
+
+            // Update the displayed price
+            updateSubmitButtonState();
+        }
+    });
+}
+var interiorPrices = {};  // Object to store interior prices
+
+$(document).on('change', 'input[type="checkbox"]', function() {
+    var interiorId = $(this).val();
+    var interiorPrice = parseFloat($('#price-' + interiorId).text().replace('RM', ''));
+
+    // Store the interior price
+    interiorPrices[interiorId] = interiorPrice;
+
+    if (!$(this).is(':checked')) {
+        // Remove the corresponding interior from the list
+        $('#interior-list').find('div[data-id="' + interiorId + '"]').remove();
+    }
+
+    // Update the displayed price
+    updateTotalPrice();
+});
+
+
+function updateTotalPrice() {
+    var totalPrice = 0;
+    var updatedSelectedInteriors = [];
+
+    $('input[type="checkbox"]:checked').each(function() {
+        var interiorId = $(this).val();
+        var interiorPrice = parseFloat($('#price-' + interiorId).text().replace('RM', ''));
+
+        totalPrice += interiorPrice;
+
+        // Collect interior data
+        var interiorData = {
+            id: interiorId,
+        };
+
+        // Add interior data to the updatedSelectedInteriors array
+        updatedSelectedInteriors.push(interiorData);
+    });
+
+    selectedInteriors = updatedSelectedInteriors;
     updateSubmitButtonState();
 }
 
@@ -216,33 +299,38 @@ function CoverageSelected(elemento,idcoverage){
 
 }
 
-function clearall(){
+function clearall() {
     $('#toggleDesign').show();
     $('#toggleColor').show();
     document.getElementById('selectedColors').innerHTML = '';
     document.getElementById('selectedDesign').innerHTML = '';
     document.querySelectorAll('.color-column-list').forEach(item => {
         item.classList.remove('selected');
-      });
+    });
     document.querySelectorAll('.card-leather-types').forEach(item => {
         item.classList.remove('selected');
-      });
-      document.querySelectorAll('.card-leather-type').forEach(item => {
+    });
+    document.querySelectorAll('.card-leather-type').forEach(item => {
         item.classList.remove('selected');
-      });
-      document.querySelectorAll('.card-material-type').forEach(item => {
+    });
+    document.querySelectorAll('.card-material-type').forEach(item => {
         item.classList.remove('selected');
-      });
-   id_leather = null;
-   id_coverage = null;
-   selectedColors = [];
-   selectedpattern = [];
-   colorPrice = 0;
-   designprice = 0;
-   Total= 0.00;
-   document.getElementById('totalall').innerText = 'RM' + Total.toFixed(2);
-   updateSubmitButtonState();
+    });
+    id_leather = null;
+    id_coverage = null;
+    selectedColors = [];
+    selectedpattern = [];
+    colorPrice = 0;
+    designprice = 0;
+    Total = 0.00;
+    document.getElementById('totalall').innerText = 'RM' + Total.toFixed(2);
+    updateSubmitButtonState();
+
+    // Uncheck all checkboxes for interiors
+    $('input[type="checkbox"]').prop('checked', false);
+    $('#interior-list').empty();
 }
+
 
 
 function updateSubmitButtonState() {
@@ -266,6 +354,8 @@ function updateSubmitButtonState() {
    })
    console.log('Design JSON:', JSON.stringify(DesignJsonArray, null, 2));
    console.log('Design Price : '+designprice);
+   var selectedInteriorsJSON = JSON.stringify(selectedInteriors, null, 2);
+   console.log('Selected interior:'+selectedInteriorsJSON);
 
    let allChecked = true;
 
@@ -292,9 +382,10 @@ function updateSubmitButtonState() {
                 success: function(response) {
                     // Handle the successful response here
                     // console.log('Data fetched successfully:', response);
-                    Total = response.price+designprice+colorPrice;
+                    Total = response.price+designprice+colorPrice+Priceinterior;
                     Priceseat = response.price;
                     console.log('Total Price :'+Total);
+
                     document.getElementById('totalall').innerText = 'RM' + Total.toFixed(2);
 
                 },
@@ -338,6 +429,7 @@ function submitOrder() {
         id_coverage: id_coverage,
         design: designJsonArray,
         color: colorJsonArray,
+        interior:selectedInteriors,
         totalprice: Total,
         priceseat:Priceseat
     };

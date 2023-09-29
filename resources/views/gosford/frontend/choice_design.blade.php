@@ -243,7 +243,7 @@
 
                                           @foreach($interior as $i => $vinterior)
                                           <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="{{$vinterior->value}}" id="checkbox{{$i}}" onclick="interiorSelected(this)">
+                                            <input class="form-check-input" type="checkbox" value="{{$vinterior->id_interior}}" id="checkbox{{$i}}" onclick="interiorSelected(this)">
                                             <label class="form-check-label" for="checkbox{{$i}}">
                                                 {{$vinterior->name_interior}}
                                             </label>
@@ -353,8 +353,24 @@
 
 
 
+<br>
+                                <div style="display: flex;flex-direction: column;  justify-content: space-between;">
+                                    <div>
+                                        <div>
+                                            <h6 style="color:gray">Interior Parts Selection:</h6>
+                                        </div>
+                                    </div>
+                                    <div>
 
+<div style="    gap: 9px;
+display: flex;
+flex-wrap: wrap;
+position: relative;
+white-space: nowrap;" id="interior-list">
+    <!-- Selected interior data will be displayed here -->
+</div>
 
+                                </div>
 
 
 
@@ -445,6 +461,7 @@
 
 
                             </div>
+
                             <div class="card-footer">
                                 <div style="display: flex;justify-content: space-between;">
                                     <div>Subtotal : <span id="selectedPriceDesign" style="font-size: x-large;font-weight: bold;color: brown;"></span></div>
@@ -453,6 +470,8 @@
 
                             </div>
                         </div>
+
+
 
 
 

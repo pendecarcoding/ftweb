@@ -25,6 +25,7 @@ use Faker\Provider\Uuid;
 use DB;
 use  App\Models\GsystemAccount;
 use App\Models\GsystemOrder;
+use App\Models\InteriorPart;
 use App\Models\LeatherOrder;
 use App\Models\Twotown;
 use App\Models\TypeCar;
@@ -482,9 +483,37 @@ class gosfordController extends Controller
     }
    }
 
+   function interiorselected(Request $r){
+    $interiorIds = $r->input('interiorIds');
+    $interiorData = InteriorPart::whereIn('id_interior', $interiorIds)->get();
+
+    // Format the data as an array with id_interior, name_interior, and price
+    $formattedData = $interiorData->map(function($interior) {
+        return [
+            'id_interior' => $interior->id_interior,
+            'name_interior' => $interior->name_interior,
+            'urlimage' => getimage($interior->img),
+            'price' => $interior->price,
+        ];
+    });
+
+    return response()->json($formattedData);
+   }
+
    function submitorder(Request $r){
     try {
         $id = uniqid();
+        $array = array();
+        foreach ($r->interior as $idata) {
+            $datainterior = InteriorPart::where('id_interior',$idata['id'])->first();
+            $datacollect = [
+                'id'=>$datainterior->id_interior,
+                'name_interior'=>$datainterior->name_interior,
+                'imgurl'=>getimage($datainterior->img),
+                'price'=>$datainterior->price,
+            ];
+            array_push($array, $datacollect);
+        }
         $data = [
             'id'=>$id,
             'type_car'=>$r->type_car,
@@ -492,6 +521,7 @@ class gosfordController extends Controller
             'id_coverage'=>$r->id_coverage,
             'design'=>json_encode($r->design),
             'color'=>json_encode($r->color),
+            'interior'=>json_encode($array),
             'priceseat'=>$r->priceseat,
             'totalprice'=>$r->totalprice,
         ];
@@ -519,9 +549,10 @@ class gosfordController extends Controller
    function inquiryorder($id){
     $data = LeatherOrder::where('id',$id)->first();
     if($data != null){
-        $color = json_decode($data->color,true);
-        $design = json_decode($data->design,true);
-        return view('gosford.frontend.inquiryorder',compact('data','color','design','id'));
+        $color    = json_decode($data->color,true);
+        $design   = json_decode($data->design,true);
+        $interior = json_decode($data->interior,true);
+        return view('gosford.frontend.inquiryorder',compact('data','color','design','id','interior'));
     }else{
         return back();
     }
@@ -533,7 +564,8 @@ class gosfordController extends Controller
     if($data != null){
         $color = json_decode($data->color,true);
         $design = json_decode($data->design,true);
-        return view('gosford.frontend.infoorder',compact('data','color','design','id'));
+        $interior = json_decode($data->interior,true);
+        return view('gosford.frontend.infoorder',compact('data','color','design','id','interior'));
     }else{
         return back();
     }

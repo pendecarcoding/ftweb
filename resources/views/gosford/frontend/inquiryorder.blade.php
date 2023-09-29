@@ -34,6 +34,16 @@
                              <div style="float:right">RM{{$vdesign['price']}}</div>
                             </div>
                             @endforeach
+                            @if(count($interior) > 0)
+                            <hr>
+                            <li>Interior Part :</li>
+                            @foreach($interior as $vinterior)
+                            <div style="display: flex;justify-content: space-between;">
+                             <li>{{$vinterior['name_interior']}}</li>
+                             <div style="float:right">RM{{$vinterior['price']}}</div>
+                            </div>
+                            @endforeach
+                            @endif
 
                             <div class="dlab-divider bg-gray-dark text-gray-dark"></div>
                         </div>
