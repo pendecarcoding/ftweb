@@ -34,7 +34,7 @@
                         <h2 style="color:#555555">High-quality Automotive Leather Cover</h2>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" style="padding-bottom: 25px;">
 
                     <div class="row">
 
