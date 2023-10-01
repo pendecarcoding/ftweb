@@ -6,6 +6,11 @@ footer {
 
 }
 
+#alert-message-popup{
+    font-size: 12px;
+    display: none;
+}
+
 
 .select-container {
     position: relative;

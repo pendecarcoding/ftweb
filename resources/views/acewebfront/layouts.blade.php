@@ -163,6 +163,9 @@
 
                 </div>
                 <div class="card-footer">
+                    <div id="alert-message-popup">
+                        <div class="alert alert-success"> <a href="#" class="close" data-bs-dismiss="alert" aria-label="close">×</a> <strong>Success!</strong> your message has been sent. </div>
+                    </div>
                     <button type="submit" style="width:100%;background-color: #F80814;color:white" class="btn">
                         <span id="btn-text">Submit</span>
                         <img id="loading-gif" src="/public/assets/img/loading.gif"
@@ -1013,6 +1016,7 @@
                         console.log(response);
                         if (response == "success") {
                             $("#contact-form-popup")[0].reset();
+                            $("#alert-message-popup").show();
                         }
                         // You can display a success message or perform other actions
 
