@@ -36,6 +36,11 @@ Route::prefix('g_system')->group(function (){
 });
 
 
+Route::get('/redirect-to-previous', function () {
+    return redirect()->back();
+})->name('redirect.to.previous');
+
+
 Route::prefix('product_project')->group(function (){
     Route::controller(gosfordController::class)->group(function () {
         //Two Town Color

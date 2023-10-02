@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\AffiliateController;
+use App\Models\LeatherOrder;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Cart;
@@ -88,13 +89,13 @@ class OrderController extends Controller
     // All Orders
     public function all_orders(Request $request)
     {
-        CoreComponentRepository::instantiateShopRepository();
+        // CoreComponentRepository::instantiateShopRepository();
 
         $date = $request->date;
         $sort_search = null;
         $delivery_status = null;
         $payment_status = '';
-        $orders = GsystemOrder::orderBy('id','desc');
+        $orders = DB::table('leather_order')->orderby('created_at','desc')->paginate(15);
         // $orders = Order::orderBy('id', 'desc');
         // $admin_user_id = User::where('user_type', 'admin')->first()->id;
         // if(Route::currentRouteName() == 'inhouse_orders.index') {
@@ -132,21 +133,25 @@ class OrderController extends Controller
         //     $orders = $orders->where('created_at', '>=', date('Y-m-d', strtotime(explode(" to ", $date)[0])).'  00:00:00')
         //     ->where('created_at', '<=', date('Y-m-d', strtotime(explode(" to ", $date)[1])).'  23:59:59');
         // }
-        $orders = $orders->paginate(15);
+        // $orders = $orders->paginate(15);
         return view('backend.sales.index', compact('orders', 'sort_search', 'payment_status', 'delivery_status', 'date'));
     }
 
     public function show($id)
     {
-        $order = GsystemOrder::findOrFail(decrypt($id));
-        $order_shipping_address = json_decode($order->shipping_address);
-        // $delivery_boys = User::where('city', $order_shipping_address->city)
-        //     ->where('user_type', 'delivery_boy')
-        //     ->get();
+        $decryptedId = decrypt($id);
 
+        // Find the record by the decrypted ID
+        $order = LeatherOrder::where('id', $decryptedId)->firstOrFail();
+        // $order_shipping_address = json_decode($order->shipping_address);
         $order->viewed = 1;
         $order->save();
-        return view('backend.sales.show', compact('order'));
+        $data = $order;
+        $color    = json_decode($data->color,true);
+        $design   = json_decode($data->design,true);
+        $interior = json_decode($data->interior,true);
+
+        return view('backend.sales.show',compact('data','color','design','id','interior'));
     }
 
     /**
@@ -543,60 +548,69 @@ class OrderController extends Controller
 
     public function update_payment_status(Request $request)
     {
-        $order = Order::findOrFail($request->order_id);
-        $order->payment_status_viewed = '0';
-        $order->save();
-
-        if (Auth::user()->user_type == 'seller') {
-            foreach ($order->orderDetails->where('seller_id', Auth::user()->id) as $key => $orderDetail) {
-                $orderDetail->payment_status = $request->status;
-                $orderDetail->save();
-            }
-        } else {
-            foreach ($order->orderDetails as $key => $orderDetail) {
-                $orderDetail->payment_status = $request->status;
-                $orderDetail->save();
-            }
-        }
-
-        $status = 'paid';
-        foreach ($order->orderDetails as $key => $orderDetail) {
-            if ($orderDetail->payment_status != 'paid') {
-                $status = 'unpaid';
-            }
-        }
-        $order->payment_status = $status;
-        $order->save();
-
-
-        if ($order->payment_status == 'paid' && $order->commission_calculated == 0) {
-            calculateCommissionAffilationClubPoint($order);
-        }
-
-        //sends Notifications to user
-        NotificationUtility::sendNotification($order, $request->status);
-        if (get_setting('google_firebase') == 1 && $order->user->device_token != null) {
-            $request->device_token = $order->user->device_token;
-            $request->title = "Order updated !";
-            $status = str_replace("_", "", $order->payment_status);
-            $request->text = " Your order {$order->code} has been {$status}";
-
-            $request->type = "order";
-            $request->id = $order->id;
-            $request->user_id = $order->user->id;
-
-            NotificationUtility::sendFirebaseNotification($request);
+        try {
+            $order = LeatherOrder::where('id', $request->order_id)->firstOrFail();
+            $order->payment_status = $request->status;
+            $order->save();
+            flash(translate('Payment update successfully'))->success();
+            return back();
+        } catch (\Throwable $th) {
+            flash(translate($th->getMessage()))->success();
+            return back();
         }
 
 
-        if (addon_is_activated('otp_system') && SmsTemplate::where('identifier', 'payment_status_change')->first()->status == 1) {
-            try {
-                SmsUtility::payment_status_change(json_decode($order->shipping_address)->phone, $order);
-            } catch (\Exception $e) {
+        // if (Auth::user()->user_type == 'seller') {
+        //     foreach ($order->orderDetails->where('seller_id', Auth::user()->id) as $key => $orderDetail) {
+        //         $orderDetail->payment_status = $request->status;
+        //         $orderDetail->save();
+        //     }
+        // } else {
+        //     foreach ($order->orderDetails as $key => $orderDetail) {
+        //         $orderDetail->payment_status = $request->status;
+        //         $orderDetail->save();
+        //     }
+        // }
 
-            }
-        }
-        return 1;
+        // $status = 'paid';
+        // foreach ($order->orderDetails as $key => $orderDetail) {
+        //     if ($orderDetail->payment_status != 'paid') {
+        //         $status = 'unpaid';
+        //     }
+        // }
+        // $order->payment_status = $status;
+        // $order->save();
+
+
+        // if ($order->payment_status == 'paid' && $order->commission_calculated == 0) {
+        //     calculateCommissionAffilationClubPoint($order);
+        // }
+
+        // //sends Notifications to user
+        // NotificationUtility::sendNotification($order, $request->status);
+        // if (get_setting('google_firebase') == 1 && $order->user->device_token != null) {
+        //     $request->device_token = $order->user->device_token;
+        //     $request->title = "Order updated !";
+        //     $status = str_replace("_", "", $order->payment_status);
+        //     $request->text = " Your order {$order->code} has been {$status}";
+
+        //     $request->type = "order";
+        //     $request->id = $order->id;
+        //     $request->user_id = $order->user->id;
+
+        //     NotificationUtility::sendFirebaseNotification($request);
+        // }
+
+
+        // if (addon_is_activated('otp_system') && SmsTemplate::where('identifier', 'payment_status_change')->first()->status == 1) {
+        //     try {
+        //         SmsUtility::payment_status_change(json_decode($order->shipping_address)->phone, $order);
+        //     } catch (\Exception $e) {
+
+        //     }
+        // }
+
+
     }
 
     public function assign_delivery_boy(Request $request)

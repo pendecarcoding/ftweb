@@ -77,7 +77,7 @@
                                 <div class="m-b10">
                                     <div style="float:right">
                                         <div style="display: flex;gap:20px">
-                                            <a
+                                            <a href="{{url('product_project')}}"
 
                                                 style="padding: 0px 30px;"
                                                 class="mdl-button mdl-js-button mdl-button--raised btn-back"

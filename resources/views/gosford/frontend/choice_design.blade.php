@@ -35,11 +35,7 @@
                     </div>
                 </div>
                 <div class="card" style="padding-bottom: 25px;">
-
                     <div class="row">
-
-
-
                         <div class="col-md-6 col-sm-12">
                             <div class="slider-product">
                                 <div style="display: flex;flex-direction: column;">

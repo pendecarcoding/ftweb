@@ -479,7 +479,7 @@ class gosfordController extends Controller
 
 
     } catch (\Throwable $th) {
-        //throw $th;
+        print $th->getMessage();
     }
    }
 
@@ -501,6 +501,9 @@ class gosfordController extends Controller
    }
 
    function submitorder(Request $r){
+    $datePart = now()->format('ymd');
+    $randomPart = rand(1000, 9999); // Generate a random 4-digit number
+    $invoice = $datePart . $randomPart;
     try {
         $id = uniqid();
         $array = array();
@@ -516,6 +519,7 @@ class gosfordController extends Controller
         }
         $data = [
             'id'=>$id,
+            'invoice'=>$invoice,
             'type_car'=>$r->type_car,
             'id_leather'=>$r->id_leather,
             'id_coverage'=>$r->id_coverage,
@@ -523,6 +527,8 @@ class gosfordController extends Controller
             'color'=>json_encode($r->color),
             'interior'=>json_encode($array),
             'priceseat'=>$r->priceseat,
+            'created_at'=>now(),
+            'updated_at'=>now(),
             'totalprice'=>$r->totalprice,
         ];
         $act = LeatherOrder::insert($data);
@@ -544,6 +550,7 @@ class gosfordController extends Controller
         ]);
     }
    }
+
 
 
    function inquiryorder($id){
