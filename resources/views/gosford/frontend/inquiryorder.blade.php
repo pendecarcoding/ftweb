@@ -7,7 +7,7 @@
         <section class="pt-5 pb-5" style="margin:50px 0px">
 
             <div class="wrap-content">
-                <div class="p-a30 bg-white m-b40" style="padding: 65px;">
+                <div class="p-a30 bg-white m-b40" style="    padding-bottom: 48px;">
                     <div class="section-content">
                         <h2 class="text-uppercase">Inquiry Details</h2>
                         <div class="m-b10">

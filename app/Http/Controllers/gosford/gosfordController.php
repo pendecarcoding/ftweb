@@ -533,7 +533,7 @@ class gosfordController extends Controller
         if($act){
             return response()->json([
                 'status'=>'success',
-                'url'=>route('gosford.order.inquiry',$id)
+                'url'=>route('gosford.order.inquiry',$invoice)
             ]);
         }else{
             return response()->json([
@@ -552,7 +552,7 @@ class gosfordController extends Controller
 
 
    function inquiryorder($id){
-    $data = LeatherOrder::where('id',$id)->first();
+    $data = LeatherOrder::where('invoice',$id)->first();
     if($data != null){
         $color    = json_decode($data->color,true);
         $design   = json_decode($data->design,true);
