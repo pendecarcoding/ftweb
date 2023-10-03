@@ -11681,6 +11681,15 @@ form.form--basic .mdl-textfield__label {
         width: 40px;
     }
 
+    .card-order {
+        z-index: 999;
+        width: 100%;
+    }
+
+    .slider-product img {
+        height: 463px;
+    }
+
     .rounded-circle {
         height: 40px;
         width: 40px;
