@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Http\Controllers\AffiliateController;
 use App\Models\LeatherOrder;
 use Illuminate\Http\Request;
