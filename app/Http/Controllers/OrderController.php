@@ -548,9 +548,10 @@ class OrderController extends Controller
     public function update_payment_status(Request $request)
     {
         try {
-            $order = LeatherOrder::where('id', $request->order_id)->firstOrFail();
-            $order->payment_status = $request->status;
-            $order->save();
+            $data = [
+                'payment_status' => $request->status
+            ];
+            $order = LeatherOrder::where('id',$request->order_id)->update($data);
             flash(translate('Payment update successfully'))->success();
             return back();
         } catch (\Throwable $th) {

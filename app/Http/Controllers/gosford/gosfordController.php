@@ -505,7 +505,6 @@ class gosfordController extends Controller
     $randomPart = rand(1000, 9999); // Generate a random 4-digit number
     $invoice = $datePart . $randomPart;
     try {
-        $id = uniqid();
         $array = array();
         foreach ($r->interior as $idata) {
             $datainterior = InteriorPart::where('id_interior',$idata['id'])->first();
@@ -518,7 +517,6 @@ class gosfordController extends Controller
             array_push($array, $datacollect);
         }
         $data = [
-            'id'=>$id,
             'invoice'=>$invoice,
             'type_car'=>$r->type_car,
             'id_leather'=>$r->id_leather,
