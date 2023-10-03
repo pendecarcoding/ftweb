@@ -7,7 +7,7 @@
         <section class="pt-5 pb-5" style="margin:50px 0px">
 
             <div class="wrap-content">
-                <div class="p-a30 bg-white m-b40" style="    padding-bottom: 48px;">
+                <div class="p-a30 bg-white m-b40" style="padding-bottom: 48px;">
                     <div class="section-content">
                         <h2 class="text-uppercase">Inquiry Details</h2>
                         <div class="m-b10">
@@ -64,13 +64,13 @@
                                 <h5 class="text-uppercase">Contact Details</h5>
                                 <p style="font-size:x-small;">Please share your contact details for our next steps.</p>
                                   <input type="hidden" name="id" value="{{$data->id}}">
-                                 <input type="text" class="form-control" name="name" placeholder="Name*">
+                                 <input type="text" class="form-control" name="name" placeholder="Name*" required>
                                  <br>
-                                 <input type="text" class="form-control" name="contact_number" placeholder="Contact Number*">
+                                 <input type="text" class="form-control" name="contact_number" placeholder="Contact Number*" required>
                                  <br>
-                                 <input type="email" class="form-control" name="email" placeholder="Email Address*">
+                                 <input type="email" class="form-control" name="email" placeholder="Email Address*" required>
                                 <br>
-                                 <textarea class="form-control" name="info" style="height: 100px;"></textarea>
+                                 <textarea class="form-control" name="info" style="height: 100px;" required></textarea>
 
 
                                 <br>
