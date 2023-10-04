@@ -565,7 +565,7 @@ class gosfordController extends Controller
    }
 
    function infoorder($id){
-    $data = LeatherOrder::where('id',base64_decode($id))->first();
+    $data = LeatherOrder::where('invoice',base64_decode($id))->first();
     if($data != null){
         $color = json_decode($data->color,true);
         $design = json_decode($data->design,true);
