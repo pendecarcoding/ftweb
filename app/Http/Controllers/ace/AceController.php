@@ -167,7 +167,7 @@ class AceController extends Controller
             break;
             case 'product_project':
                 $coverage   =  DB::table('leather_coverage')->get();
-                $sizetype   =  DB::table('size_seat')->get();
+                $sizetype   =  DB::table('size_seat')->orderBy('shortby','asc')->get();
                 $leather    =  DB::table('leather_type')->get();
                 $interior   =  InteriorPart::all();
                 $colors     = Color::all();
