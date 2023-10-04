@@ -286,8 +286,8 @@ function CoverageSelected(elemento,idcoverage){
     if (selectedImage) {
         toggleDesign.classList.add('selected');
         $('#toggleDesign').hide();
-        $('#normalleather').hide();
-        $('#changecolor').show();
+        $('#normalleather').show();
+        // $('#changecolor').show();
 
         document.getElementById('baseimage').src = baseimage;
         document.getElementById('colorimage').src = colorimage;
