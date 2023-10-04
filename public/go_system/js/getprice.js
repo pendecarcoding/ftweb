@@ -191,12 +191,13 @@ function CoverageSelected(elemento,idcoverage){
     updateSelectedDetails();
   }
 
-  function selectColor(element, name, img, price) {
+  function selectColor(element, name, img, price,hexColor) {
     const singleColorMode = document.getElementById('flexRadioDefault1').checked;
 
     if (singleColorMode) {
       // Single color mode, allow only one selection
       selectedColors = [{ name, img, price }];
+      document.getElementById('colorimage').style.backgroundColor = hexColor;
       colorPrice = price;
     } else {
       // Two-tone color mode, allow up to two selections
@@ -259,7 +260,7 @@ function CoverageSelected(elemento,idcoverage){
   }
 
 
-  function selectPattern(element, patternName, imageUrl, price) {
+  function selectPattern(element, patternName, imageUrl,baseimage,colorimage, price) {
     // Remove border from all images
     const images = document.querySelectorAll('.img-pattern-option');
     images.forEach(img => img.style.border = 'none');
@@ -285,6 +286,12 @@ function CoverageSelected(elemento,idcoverage){
     if (selectedImage) {
         toggleDesign.classList.add('selected');
         $('#toggleDesign').hide();
+        $('#normalleather').hide();
+        $('#changecolor').show();
+
+        document.getElementById('baseimage').src = baseimage;
+        document.getElementById('colorimage').src = colorimage;
+
         document.getElementById('selectedDesign').innerHTML = selectedDesignInfo;
     } else {
         $('#toggleDesign').show();

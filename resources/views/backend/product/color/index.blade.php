@@ -32,6 +32,7 @@
                                 <th>Picture</th>
                                 <th>{{ translate('Name') }}</th>
                                 <th>{{ translate('Code') }}</th>
+                                <th>{{ translate('Hex Color') }}</th>
                                 <th class="text-right">{{ translate('Options') }}</th>
                             </tr>
                         </thead>
@@ -42,6 +43,7 @@
                                     <td><img src="{{ getimage($color->image)}}" alt="" style="width:100px;height: 100px;"></td>
                                     <td>{{ $color->name }}</td>
                                     <td>{{ $color->code }}</td>
+                                    <td>{{ $color->hex_color }}</td>
                                     <td class="text-right">
                                         @can('edit_color')
                                             <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
@@ -109,6 +111,11 @@
                                 <label for="name">{{ translate('Color Code') }}</label>
                                 <input type="text" placeholder="{{ translate('Color Code') }}" id="code" name="code"
                                     class="form-control" value="{{ old('code') }}" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="name">{{ translate('Hex Color') }}</label>
+                                <input style="width:100px;height:100px" type="color" placeholder="{{ translate('Hex Code') }}" id="code" name="hex_color"
+                                    class="form-control" value="{{ old('hex_color') }}" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Extra Price') }}</label>

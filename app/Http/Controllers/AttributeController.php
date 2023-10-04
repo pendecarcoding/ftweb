@@ -198,11 +198,13 @@ class AttributeController extends Controller
         $request->validate([
             'name' => 'required',
             'code' => 'required|unique:colors|max:255',
+            'hex_color' => 'required|unique:colors|max:255',
             'extraprice' => 'required|numeric',
         ]);
         $color = new Color;
         $color->name = $request->name;
         $color->code = $request->code;
+        $color->hex_color = $request->hex_color;
         $color->image = $request->image;
         $color->extraprice = ($request->has('extraprice'))? $request->extraprice:0;
 
@@ -231,10 +233,13 @@ class AttributeController extends Controller
 
         $request->validate([
             'code' => 'required|unique:colors,code,'.$color->id,
+
+
         ]);
 
         $color->name = $request->name;
         $color->code = $request->code;
+        $color->hex_color = $request->hex_color;
         $color->image = $request->image;
         $color->extraprice = ($request->has('extraprice'))? $request->extraprice:0;
 

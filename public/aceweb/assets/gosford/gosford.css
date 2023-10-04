@@ -6,6 +6,10 @@ footer {
 
 }
 
+#changecolor{
+    padding: 133px 0px;
+}
+
 #alert-message-popup{
     font-size: 12px;
     display: none;

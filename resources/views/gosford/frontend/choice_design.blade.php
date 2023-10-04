@@ -89,106 +89,17 @@
                                         </div>
                                     </div>
 
-                                    <div id="grainleather" style="display: none;">
-                                        <div id="carouselExampleIndicatorsdg" class="carousel slide" data-bs-ride="carousel">
-                                            <div class="carousel-indicators">
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="2" class="btn-slide " aria-label="Slide 2"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="3" class="btn-slide " aria-label="Slide 3"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide-to="4" class="btn-slide " aria-label="Slide 4"></button>
-
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item  active ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslideone.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide2.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide3.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide4.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-
-                                                <div class="carousel-item ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide5.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-
-                                        </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
-                                              </button>
-                                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsdg" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Next</span>
-                                              </button>
+                                    <div id="changecolor" style="display: none;">
+                                        <div class="img-wraping">
+                                            <img style="object-fit: contain;" id="baseimage"
+                                                alt="">
+                                            <img style="object-fit: contain;" class="leather-pattern"
+                                                id="colorimage"
+                                                alt="">
                                         </div>
                                     </div>
 
 
-                                    <div id="pvcleather" style="display: none;">
-                                        <div id="carouselExampleIndicatorsp" class="carousel slide" data-bs-ride="carousel">
-                                            <div class="carousel-indicators">
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="2" class="btn-slide " aria-label="Slide 2"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="3" class="btn-slide " aria-label="Slide 3"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide-to="4" class="btn-slide " aria-label="Slide 4"></button>
-
-                                            </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item  active ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslideone.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide2.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide3.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide4.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-
-                                                <div class="carousel-item ">
-                                                    <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide5.jpg">
-                                                    <div class="col-md-6">
-                                                    </div>
-                                                </div>
-
-                                        </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
-                                              </button>
-                                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsp" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Next</span>
-                                              </button>
-                                        </div>
-                                    </div>
 
 
 
@@ -404,7 +315,7 @@ white-space: nowrap;" id="interior-list">
                                 </div>
                                 <div class="color-list-container">
                                 @foreach($colors as $i =>$vcolor)
-                                    <div class="color-column-list" onclick="selectColor(this, '{{$vcolor->name}}', '{{getimage($vcolor->image)}}', {{$vcolor->extraprice}})">
+                                    <div class="color-column-list" onclick="selectColor(this, '{{$vcolor->name}}', '{{getimage($vcolor->image)}}', {{$vcolor->extraprice}},'{{$vcolor->hex_color}}')">
                                         <img id="imgcolor" class="img-color-option" src="{{getimage($vcolor->image)}}" alt="">
                                         <div id="namecolor" style="font-weight: bold;color: #555555;">{{$vcolor->name}}</div>
                                         <div style="font-size: smaller;">{{$vcolor->code}}</div>
@@ -446,7 +357,7 @@ white-space: nowrap;" id="interior-list">
 
                                 <div class="color-list-container">
                                     @foreach($pattern as $i => $vpattern)
-                                    <div class="color-column-list" onclick="selectPattern(this, '{{$vpattern->name_pattern}}', '{{getimage($vpattern->img)}}', {{$vpattern->price}})">
+                                    <div class="color-column-list" onclick="selectPattern(this, '{{$vpattern->name_pattern}}', '{{getimage($vpattern->img)}}','{{getimage($vpattern->base_img)}}','{{getimage($vpattern->color_img)}}', {{$vpattern->price}})">
                                         <img id="imgpattern{{$i}}" class="img-pattern-option" src="{{getimage($vpattern->img)}}" alt="">
                                         <div id="namepattern{{$i}}" style="font-weight: bold;color: #555555;">{{$vpattern->name_pattern}}</div>
                                         <div class="extra-price-color">@if($vpattern->price > 0) +RM{{$vpattern->price}} @endif</div>

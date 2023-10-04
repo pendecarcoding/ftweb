@@ -52,6 +52,15 @@
                     </div>
                 </div>
 
+                <div class="form-group row">
+                    <label class="col-sm-3 col-from-label" for="code">
+                        {{ translate('Hex Color')}}
+                    </label>
+                    <div class="col-sm-9">
+                        <input style="width:100px;height:100px" type="color" placeholder="{{ translate('Hex Color')}}" id="code" name="hex_color" class="form-control" required value="{{ $color->hex_color }}">
+                    </div>
+                </div>
+
                 <div class="form-group mb-3">
                     <label for="name">{{ translate('Extra Price') }}</label>
                     <input type="number" value="{{$color->extraprice}}" placeholder="{{ translate('Extra Price') }}" id="extraprice" name="extraprice"
