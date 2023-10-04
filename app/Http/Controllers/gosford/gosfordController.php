@@ -465,7 +465,7 @@ class gosfordController extends Controller
             'email'=>$r->email,
             'info'=>$r->info,
         ];
-        $act = LeatherOrder::where('id',$id)->update($data);
+        $act = LeatherOrder::where('invoice',$id)->update($data);
         if($act){
             $array['subject'] = translate('Info Order');
             $array['from'] = env('MAIL_FROM_ADDRESS');
