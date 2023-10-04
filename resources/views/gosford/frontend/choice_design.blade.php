@@ -89,7 +89,7 @@
                                         </div>
                                     </div>
 
-                                    <div id="changecolor" style="display: none;">
+                                    <div id="changecolor" style="display: none;padding: 133px 0px;">
                                         <div class="img-wraping">
                                             <img style="object-fit: contain;" id="baseimage"
                                                 alt="">
