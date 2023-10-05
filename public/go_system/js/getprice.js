@@ -191,35 +191,35 @@ function CoverageSelected(elemento,idcoverage){
     updateSelectedDetails();
   }
 
-  function selectColor(element, name, img, price,hexColor) {
+  function selectColor(element, name, img, price,hexColor,code) {
     const singleColorMode = document.getElementById('flexRadioDefault1').checked;
 
     if (singleColorMode) {
       // Single color mode, allow only one selection
-      selectedColors = [{ name, img, price }];
+      selectedColors = [{ name, img, price,code }];
       document.getElementById('colorimage').style.backgroundColor = hexColor;
       colorPrice = price;
+      updateSelectedDetails();
     } else {
       // Two-tone color mode, allow up to two selections
-      if (selectedColors.find(item => item.name === name)) {
+      if (selectedColors.find(item => item.code === code)) {
         // Deselect if already selected
-        selectedColors = selectedColors.filter(item => item.name !== name);
+        selectedColors = selectedColors.filter(item => item.code !== code);
         colorPrice -= price;
       } else {
         // Select if not already selected and there are less than 2 selected
         if (selectedColors.length < 2) {
-          selectedColors.push({ name, img, price });
+          selectedColors.push({ name, img, price,code });
           colorPrice += price;
         }
       }
+      updateSelectedDetails();
     }
 
-    updateSelectedDetails();
+
   }
 
   function updateSelectedDetails() {
-
-
     // Remove the border from all elements
     document.querySelectorAll('.color-column-list').forEach(item => {
       item.classList.remove('selected');
@@ -227,7 +227,7 @@ function CoverageSelected(elemento,idcoverage){
 
     // Add border to the selected elements
     selectedColors.forEach(item => {
-      item.img = item.img || ''; // Handle cases where img is undefined
+      item.code = item.code || ''; // Handle cases where img is undefined
       const element = document.querySelector(`[src='${item.img}']`);
       if (element) {
         element.parentElement.classList.add('selected');
@@ -286,8 +286,8 @@ function CoverageSelected(elemento,idcoverage){
     if (selectedImage) {
         toggleDesign.classList.add('selected');
         $('#toggleDesign').hide();
-        $('#normalleather').show();
-        // $('#changecolor').show();
+        $('#normalleather').hide();
+        $('#changecolor').show();
 
         document.getElementById('baseimage').src = baseimage;
         document.getElementById('colorimage').src = colorimage;

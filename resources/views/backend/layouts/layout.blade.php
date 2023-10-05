@@ -14,8 +14,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Favicon -->
-	<link rel="icon" href="{{ uploaded_asset(get_setting('site_icon')) }}">
-	<title>{{ get_setting('website_name').' | '.get_setting('site_motto') }}</title>
+	<link rel="icon" href="{{ uploaded_asset(get_setting('system_logo_white')) }}">
+	<title>{{ get_setting('site_name').' | '.get_setting('site_motto') }}</title>
 
 	<!-- google font -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">

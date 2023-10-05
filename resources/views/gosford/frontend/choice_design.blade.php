@@ -93,7 +93,7 @@
                                         <div class="img-wraping">
                                             <img style="object-fit: contain;" id="baseimage"
                                                 alt="">
-                                            <img style="object-fit: contain;" class="leather-pattern"
+                                            <img style="object-fit: contain;display: none;" class="leather-pattern"
                                                 id="colorimage"
                                                 alt="">
                                         </div>
@@ -315,7 +315,7 @@ white-space: nowrap;" id="interior-list">
                                 </div>
                                 <div class="color-list-container">
                                 @foreach($colors as $i =>$vcolor)
-                                    <div class="color-column-list" onclick="selectColor(this, '{{$vcolor->name}}', '{{getimage($vcolor->image)}}', {{$vcolor->extraprice}},'{{$vcolor->hex_color}}')">
+                                    <div class="color-column-list" onclick="selectColor(this, '{{$vcolor->name}}', '{{getimage($vcolor->image)}}', {{$vcolor->extraprice}},'{{$vcolor->hex_color}}','{{$vcolor->code}}')">
                                         <img id="imgcolor" class="img-color-option" src="{{getimage($vcolor->image)}}" alt="">
                                         <div id="namecolor" style="font-weight: bold;color: #555555;">{{$vcolor->name}}</div>
                                         <div style="font-size: smaller;">{{$vcolor->code}}</div>
