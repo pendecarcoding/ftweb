@@ -296,7 +296,7 @@
                   </div>
                 </div>
               </div>
-              <div style="margin-top: 50px">
+              <!-- <div style="margin-top: 50px">
                 <div class="row">
                   <div data-aos="fade-up" class="col-md-4 aos-init aos-animate">
                     <div class="discover">
@@ -317,7 +317,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div style="margin-top: 50px">
                 <div class="row">
                   <div data-aos="fade-up" class="col-md-4 aos-init aos-animate">
