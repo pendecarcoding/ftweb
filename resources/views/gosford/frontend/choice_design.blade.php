@@ -386,14 +386,14 @@
             <div class="row d-flex" style="justify-content: center;">
                 <div class="col-sm-6 col-md-3  d-flex " id="gallery">
                     <!-- <div class="col-sm-6 col-md-3  d-flex "> -->
-                    <a href="/public/go_system/images/menu/colors.jpg" class="card card-body border-light justify-content-between text-white shadow">
+                    <a href="/public/go_system/images/menu/Catania SEMI & PVC.png" class="card card-body border-light justify-content-between text-white shadow">
                         <!-- <a href="#" class="card card-body border-light justify-content-between text-white shadow"> -->
                         <div class="dlab-media dlab-img-overlay1">
                             <img style="height: 100%;border-radius: 10px;" src="/public/go_system/images/menu/menu-new.jpg" alt="">
                         </div>
                         <div class="title-menu-style">Color</div>
                     </a>
-                    <a href="/public/go_system/images/menu/colors2.jpg">
+                    <a href="/public/go_system/images/menu/Catania FULL LEather ONLY.png">
 
                     </a>
                     <a href="/public/go_system/images/menu/colors3.jpeg">

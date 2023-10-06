@@ -3240,14 +3240,14 @@ blockquote:before {
 }
 [class*="bg-"] .header-nav .nav > li.active > a,
 [class*="bg-"] .header-nav .nav > li.current-menu-item > a {
-    border-bottom-style: solid;
+    /* border-bottom-style: solid; */
     border-bottom-color: #fff;
     border-bottom-width: 2px;
     /* color: white; */
 }
 [class*="bg-"] .header-nav .nav > li > a:hover,
 [class*="bg-"] .header-nav .nav > li:hover > a {
-    border-bottom-style: solid;
+    /* border-bottom-style: solid; */
     border-bottom-color: #fff;
     border-bottom-width: 2px;
     /* color: white; */
