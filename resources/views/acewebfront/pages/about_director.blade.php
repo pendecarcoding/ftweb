@@ -12,7 +12,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="title-ace">
-                                    ABOUT > BOARD OF DIRECTORS
+                                    BOARD OF DIRECTORS
                                     <span class="h-dash" style="font-weight: bold">—</span>
                                 </div>
                                 <div class="col-md-12 col-sm-12 aos-init aos-animate">
