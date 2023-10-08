@@ -152,9 +152,9 @@
                             <!-- <a href="{{ url('investor_relations/message_from_ceo') }}" class="btn gsf-button">Read More</a> -->
                           </div>
                           <div class="col-md-4 col-sm-12">
-                            <div class="card">
-                              <img style="float:right;width:100%;border-radius: 20px;" class="img-responsive" src="{{getimage($ceo->image)}}" alt="">
-                            </div>
+
+                              <img  class="img-responsive img-ceo" src="{{getimage($ceo->image)}}" alt="">
+
                           </div>
                         </div>
                     </div>
@@ -244,7 +244,7 @@
                   <div data-aos="fade-up" class="title-ace aos-init aos-animate"> STRENGTHS <span class="h-dash" style="font-weight: bold">—</span>
                   </div>
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <!-- <div class="col-md-6 col-sm-12">
                   <h1 data-aos="fade-up" class="aos-init aos-animate">Quality Commitment</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
@@ -253,7 +253,7 @@
                     European, US, Japanese and Korean OEM customers into our quality management system.
                     Our Quality Policies are Fulfilling requirements from customers, standards, and systems; Excellent
                     services provide to customer; and Continuous Improvement on products, processes and services.</p>
-                </div>
+                </div> -->
               </div>
               <div style="margin-top: 50px">
                 <div class="row">
@@ -360,10 +360,11 @@
                   <h1 data-aos="fade-up" class="aos-init aos-animate">2022 Key Performance Stats</h1>
                 </div>
                 <div style="padding-top:10px" data-aos="fade-up" class="col-md-6 aos-init aos-animate">
-                  <p class="strength-font">The Group’s revenue increased by RM41.7 million or 49.0% from RM85.2 million in FYE 2021 to
-                    RM126.9 million in FYE 2022. The Group’s PBT increased by RM11.3 million or 44.1% from RM25.7
-                    million in FYE 2021 to RM37.0 million in FYE 2022, which was mainly due to the increase in the Group’s
-                    GP for the FYE 2022.</p>
+                  <p class="strength-font">The Group’s revenue increased by RM41.7 million or 49% from
+                    RM85.2 million in FYE 2021 to RM126.9 million in FYE 2022. The
+                    Group’s PBT increased by RM11.3 million or 44% from RM25.7
+                    million in FYE 2021 to RM37.0 million in FYE 2022, which was
+                    mainly due to the increase in the Group’s GP for the FYE 2022.</p>
                 </div>
               </div>
               <div style="margin: 100px 0px;">
@@ -381,14 +382,14 @@
                           <div class="col-md-4 col-sm-12">
                             <div class="number-ace-center">
                               <h1>
-                                <span class="decimal">38.3</span>
+                                <span class="decimal">41.16</span>
                               </h1>
                               <p>MILLION  (myR) 2022 - Adjusted EBITDA</p>
                             </div>
                           </div>
                           <div class="col-md-4 col-sm-12">
                             <div class="number-ace-center">
-                              <h1><span class="decimal">28.68</span></h1>
+                              <h1><span class="decimal">27.7</span></h1>
                               <p>MILLION  (myR) 2022 - Net Profit</p>
                             </div>
                           </div>

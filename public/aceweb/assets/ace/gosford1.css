@@ -3900,8 +3900,8 @@ footer img {
 
     .wrap-content {
         position: relative;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 
     .topnav a {
@@ -4797,7 +4797,7 @@ footer img {
     }
 
     #imggpt1 {
-        width: 100%;
+        width: 68%;
     }
 
     .gtp-solution .ace-isi {
@@ -4967,9 +4967,9 @@ footer img {
     .gtp-po-button {
         position: absolute;
         right: 0;
-        bottom: 2%;
+        bottom: -13%;
         left: 0;
-        margin-top: 2px;
+        /* top: 8px; */
     }
 
     .title-banner-personal {
@@ -5590,7 +5590,7 @@ footer img {
     }
 
     #imggpt1 {
-        width: 100%;
+        width: 64%;
     }
     .directors_list{
         padding: 13px;
@@ -6004,7 +6004,14 @@ footer img {
     }
 
     #imggpt1 {
-        width: 100%;
+        width: 68%;
+    }
+    .gtp-po-button {
+        position: absolute;
+        right: 0;
+        bottom: -14%;
+        left: 0;
+        margin-top: 2px;
     }
 
     .gtp-solution .ace-isi {
@@ -6360,9 +6367,10 @@ footer img {
 
     /* STRUCTURE */
     .vl {
-        padding-left: 2px;
+        padding-left: 0px;
         text-align: left;
     }
+
 
     .img-structure-mobile {
         display: block;
@@ -8086,7 +8094,7 @@ footer img {
         height: 40vh;
     }
     .ace-sliders {
-        height: 500px;
+        height: 100vh;
 
     }
 
