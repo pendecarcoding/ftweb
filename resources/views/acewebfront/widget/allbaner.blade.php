@@ -37,7 +37,7 @@
 </section>
 @else
 
-<section style="position: relative;height: 40px;    background-color: white;">
+<section class="no-banner">
 
 </section>
 

@@ -7,15 +7,14 @@
                 <div class="wrap-content">
                     <div style="padding-top: 0px" class="ace-isi about">
                         <div class="row">
-                            <div data-aos="fade-up" class="col-md-12">
+                            <div  class="col-md-12">
                                 <div class="title-ace">
-                                    ABOUT -> Corporate Governance
+                                     Corporate Governance
                                     <span class="h-dash" style="font-weight: bold">—</span>
                                 </div>
                                 <div data-aos="fade-up" data-aos-delay="200"
                                     class="col-md-12 col-sm-12 aos-init aos-animate">
-                                    <h1>Corporate Governance
-                                    </h1>
+
                                 </div>
                             </div>
                         </div>

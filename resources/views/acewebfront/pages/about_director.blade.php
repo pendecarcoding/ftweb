@@ -79,7 +79,7 @@
                                                                 <!-- Item text -->
                                                                 <div class="itemFullText">
                                                                     <h2>{{ $v->name }}</h2>
-                                                                    <p>{{ $v->position }}</p>
+                                                                    <p class="itemfull-position">{{ $v->position }}</p>
                                                                     {!! $v->content !!}
                                                                 </div>
                                                             </div>
@@ -144,7 +144,7 @@
                                                                     <!-- Item text -->
                                                                     <div class="itemFullText">
                                                                         <h2>{{ $v->name }}</h2>
-                                                                        <p>{{ $v->position }}</p>
+                                                                        <p class="itemfull-position">{{ $v->position }}</p>
                                                                         {!! $v->content !!}
                                                                     </div>
                                                                 </div>
@@ -212,7 +212,7 @@
                                                                 <!-- Item text -->
                                                                 <div class="itemFullText">
                                                                     <h2>{{ $v->name }}</h2>
-                                                                    <p>{{ $v->position }}</p>
+                                                                    <p class="itemfull-position">{{ $v->position }}</p>
                                                                     {!! $v->content !!}
                                                                 </div>
                                                             </div>
@@ -278,7 +278,7 @@
                                                                     <!-- Item text -->
                                                                     <div class="itemFullText">
                                                                         <h2>{{ $v->name }}</h2>
-                                                                        <p>{{ $v->position }}</p>
+                                                                        <p class="itemfull-position">{{ $v->position }}</p>
                                                                         {!! $v->content !!}
                                                                     </div>
                                                                 </div>

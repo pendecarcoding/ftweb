@@ -6,6 +6,64 @@ footer {
 
 }
 
+.img-ceo{
+
+    float: right;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.no-banner{
+
+
+        position: relative;
+        height: 40px;
+        background-color: white;
+
+}
+
+.company-image{
+    width: 100%;
+    height: 350px;
+}
+
+.itemFullText .itemfull-position {
+    font-size: 18px;
+    color: #212020;
+}
+.itemFullText {
+    height: 401px;
+    overflow-y: scroll;
+    position: relative;
+    padding: 0px 10px;
+}
+
+.itemFullText span{
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+.itemFullText p{
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+footer img {
+    width: 13%;
+    height: 42%;
+}
+
+.carousel-indicators {
+    z-index: 998;
+}
+
+.list-bod{
+    padding: 5px;
+}
+
+.section-slider-home {
+    height: 100vh;
+}
+
 #audithref {
     object-fit: contain;
     height: 100px;
@@ -10984,7 +11042,81 @@ form.form--basic .mdl-textfield__label {
     padding: 0px 28%;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:299px) {
+    .ace-sliders h1 {
+        overflow: hidden;
+        font-size: 1.5rem;
+        text-shadow: 4px 4px 4px #3e3e3e;
+    }
+    .h5-milestone {
+        font-size: 9px;
+    }
+    footer img {
+        width: 33%;
+        height: 42%;
+    }
+    .about h1 {
+        overflow-wrap: break-word;
+        /* font-weight: bold; */
+        font-size: 5rem;
+        -webkit-text-stroke: 0px;
+    }
+    .carousel-indicators .btn-slide {
+        width: 0.6%;
+        height: 3px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .about h1 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .ace-button-black {
+        width: 100%;
+    }
+    .section-slider {
+        height: 199px;
+    }
+    .h5-milestone {
+        font-size: 9px;
+    }
+    footer img {
+        width: 33%;
+        height: 42%;
+    }
+    .card-bod {
+        height: 382px;
+        position: relative;
+        overflow: hidden;
+    }
+    .slider-testimonials {
+        display: inline;
+        flex-wrap: wrap;
+        border: none;
+        flex-direction: column-reverse;
+        width: 100%;
+        background-color: white;
+    }
+    .yt-embed-height {
+        height: 268px;
+        /* width: 304px; */
+        border-radius: 10px;
+    }
+    .title-ace {
+        text-align: center;
+    }
+    #to-progress{
+        font-size: 20px;
+    }
+    #title-progress {
+        font-family: 'Poppins';
+        font-size: 18px;
+    }
+    .ace-sliders .carousel-caption {
+        top: 26%;
+    }
     .mo-left .header-nav .logo-header {
         display: block;
         float: none;
@@ -10998,6 +11130,69 @@ form.form--basic .mdl-textfield__label {
         padding: 2px;
         padding: 5px 20px 5px 20px;
         text-align: left;
+    }
+
+    .header-curve .logo-header:before,
+    .header-curve .logo-header:after {
+        height: 44px;
+    }
+
+    .logo-header img,
+    .logo-footer img {
+        position: absolute;
+        max-width: 100%;
+        width: 97px;
+        top: 4px;
+        left: 3px;
+        height: 46px;
+        height: auto;
+    }
+
+    .navicon {
+        top: -14px;
+        position: absolute;
+        right: 20px;
+        z-index: 99;
+    }
+
+    .clearfix {
+        height: 43px;
+        clear: both;
+    }
+
+    .slider-product {
+        height: 474px;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:500px) {
+    .list-bod {
+        margin: 10px 13px;
+        padding: 0px;
+    }
+    .content_company {
+        padding: 23px 17px;
+    }
+    .mo-left .header-nav .logo-header {
+        display: block;
+        float: none;
+        height: 65px;
+        max-width: 100%;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    footer img {
+        width: 33%;
+        height: 42%;
+    }
+    #title-news {
+        text-align: left;
+        padding: 2px;
+        padding: 5px 20px 5px 20px;
+        text-align: left;
+    }
+    .h5-milestone {
+        font-size: 9px;
     }
 
     .header-curve .logo-header:before,
@@ -11033,9 +11228,8 @@ form.form--basic .mdl-textfield__label {
     }
 
     .ace-sliders .carousel-caption {
-        top: 29%;
+        top: 16%;
     }
-
     .img-bg-mil-wrap {
         height: auto;
     }
@@ -11359,7 +11553,7 @@ form.form--basic .mdl-textfield__label {
     }
 
     .slider-testimonials {
-        display: flex;
+        display: inline;
         flex-wrap: wrap;
         flex-direction: column-reverse;
         border: none;
@@ -11578,19 +11772,125 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:500px) and (max-width: 600px) {
-    .ace-sliders .carousel-caption {
-        top: 29%;
+    .list-bod{
+        text-align: center;
     }
-
-    .font-patner {
-        font-size: 19px;
-        line-height: 31px;
+    .content_company {
+        padding: 20px 10px;
+    }
+    .caption_leadership {
+        font-family: 'Poppins';
+        position: absolute;
+        bottom: 7px;
+        width: 100%;
+        text-align: center;
+        padding: 27px 57px;
+    }
+    .mo-left .header-nav .logo-header {
+        display: block;
+        float: none;
+        height: 65px;
+        max-width: 100%;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    footer img {
+        width: 33%;
+        height: 42%;
     }
     #title-news {
         text-align: left;
         padding: 2px;
         padding: 5px 20px 5px 20px;
         text-align: left;
+    }
+
+    .header-curve .logo-header:before,
+    .header-curve .logo-header:after {
+        height: 44px;
+    }
+
+    .logo-header img,
+    .logo-footer img {
+        position: absolute;
+        max-width: 100%;
+        width: 137px;
+        top: 4px;
+        left: 3px;
+        height: 46px;
+        height: auto;
+    }
+
+    .navicon {
+        top: -14px;
+        position: absolute;
+        right: 20px;
+        z-index: 99;
+    }
+
+    .clearfix {
+        height: 43px;
+        clear: both;
+    }
+
+    .slider-product {
+        height: 474px;
+    }
+
+    .ace-sliders .carousel-caption {
+        top: 16%;
+    }
+    .img-bg-mil-wrap {
+        height: auto;
+    }
+
+    .section-trimex-up-card {
+        position: relative;
+        height: 535px;
+    }
+
+    .wwd-text {
+        color: #343F52;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .img-trimex-up {
+        width: 200px;
+        height: 101px;
+    }
+
+    .img-what-we-do {
+        width: 100%;
+        height: 270px;
+        object-fit: fill;
+    }
+
+    .section-bg-trimex-color {
+        background-image: url(/public/page/trimex/trimax-bg-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .trimex-top-card {
+        padding: 11px 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        right: 3%;
+        height: 346px;
+        box-shadow: 0px -40px 50px 0px #0A04161A;
+    }
+
+    .trimex-top-card h2 {
+        font-size: 23px;
+    }
+
+    .font-patner {
+        font-size: 19px;
+        line-height: 31px;
     }
 
     .section-bg-gosford {
@@ -11601,20 +11901,72 @@ form.form--basic .mdl-textfield__label {
         margin-top: 64px;
     }
 
-    .wa-floating-button {
-        bottom: 63px;
+    .section-head h2 {
+        color: #666666;
+        font-size: 22px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+
+    .section-head h5 {
+        font-size: 0.9rem;
+    }
+
+    .h5-milestone {
+        font-size: 10px;
+    }
+
+    .h5-milestone li {
+        list-style-type: none;
     }
 
     .section-slider {
         height: 246px;
     }
 
+    sub,
+    sup {
+        position: relative;
+        font-size: 6px;
+        line-height: 0;
+        vertical-align: baseline;
+    }
+
+    .logo-header img,
     .logo-header img,
     .logo-footer img {
         max-width: 100%;
-        width: 113px;
+        width: 98px;
         height: 46px;
         height: auto;
+    }
+
+    [class*="bg-"] .header-nav .nav>li.current-menu-item>a {
+        border-bottom-style: solid;
+        border-bottom-color: #fff;
+        border-bottom-width: 2px;
+        color: #555555;
+    }
+
+    .wa-floating-button {
+        bottom: 63px;
+    }
+
+    .body-chat {
+        right: 6%;
+    }
+
+    .wa-floating-button {
+        right: 15px;
+    }
+
+    #navbarToggle {
+        right: 0px;
+    }
+
+    header {
+        right: 0px;
     }
 
     .i-icon-login {
@@ -11671,8 +12023,8 @@ form.form--basic .mdl-textfield__label {
 
     .wrap-content {
         position: relative;
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .mdl-menu__container {
@@ -11773,7 +12125,7 @@ form.form--basic .mdl-textfield__label {
     .description-service {
         text-align: justify;
         margin: 10px 1px;
-        height: 200px;
+        height: auto;
         overflow: auto;
     }
 
@@ -11811,14 +12163,13 @@ form.form--basic .mdl-textfield__label {
     }
 
     .slider-testimonials {
-        display: flex;
+        display: inline;
         flex-wrap: wrap;
         flex-direction: column-reverse;
         border: none;
         width: 100%;
         background-color: white;
     }
-
     .ace-conected {
         padding: 29px 0px;
         height: auto;
@@ -11827,7 +12178,7 @@ form.form--basic .mdl-textfield__label {
     }
 
     .gtp-solution {
-        padding: 29px 0px;
+        padding: 31px 0px 106px;
         background-color: #306390;
     }
 
@@ -12029,13 +12380,122 @@ form.form--basic .mdl-textfield__label {
     }
 }
 
-@media screen and (min-width:600px) and (max-width: 767px) {
-    .font-patner {
-        font-size: 19px;
+@media screen and (min-width:600px) and (max-width: 700px) {
+    .list-bod{
+        text-align: center;
+    }
+    .content_company {
+        padding: 20px 10px;
+    }
+    .caption_leadership {
+        font-family: 'Poppins';
+        position: absolute;
+        bottom: 7px;
+        width: 100%;
+        text-align: center;
+        padding: 27px 57px;
+    }
+    .mo-left .header-nav .logo-header {
+        display: block;
+        float: none;
+        height: 65px;
+        max-width: 100%;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    #title-news {
+        text-align: left;
+        padding: 2px;
+        padding: 5px 20px 5px 20px;
+        text-align: left;
+    }
+
+    .header-curve .logo-header:before,
+    .header-curve .logo-header:after {
+        height: 44px;
+    }
+
+    .logo-header img,
+    .logo-footer img {
+        position: absolute;
+        max-width: 100%;
+        width: 137px;
+        top: 4px;
+        left: 3px;
+        height: 46px;
+        height: auto;
+    }
+
+    .navicon {
+        top: -14px;
+        position: absolute;
+        right: 20px;
+        z-index: 99;
+    }
+
+    .clearfix {
+        height: 43px;
+        clear: both;
+    }
+
+    .slider-product {
+        height: 474px;
     }
 
     .ace-sliders .carousel-caption {
-        top: 29%;
+        top: 16%;
+    }
+    .img-bg-mil-wrap {
+        height: auto;
+    }
+
+    .section-trimex-up-card {
+        position: relative;
+        height: 535px;
+    }
+
+    .wwd-text {
+        color: #343F52;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .img-trimex-up {
+        width: 200px;
+        height: 101px;
+    }
+
+    .img-what-we-do {
+        width: 100%;
+        height: 270px;
+        object-fit: fill;
+    }
+
+    .section-bg-trimex-color {
+        background-image: url(/public/page/trimex/trimax-bg-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .trimex-top-card {
+        padding: 11px 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        right: 3%;
+        height: 346px;
+        box-shadow: 0px -40px 50px 0px #0A04161A;
+    }
+
+    .trimex-top-card h2 {
+        font-size: 23px;
+    }
+
+    .font-patner {
+        font-size: 19px;
+        line-height: 31px;
     }
 
     .section-bg-gosford {
@@ -12045,449 +12505,85 @@ form.form--basic .mdl-textfield__label {
         height: 200px;
         margin-top: 64px;
     }
-    #title-news {
-        text-align: left;
-        padding: 2px;
-        padding: 5px 20px 5px 20px;
-        text-align: left;
+
+    .section-head h2 {
+        color: #666666;
+        font-size: 22px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
     }
-    .i-icon-login {
-        font-size: 25px;
+
+    .section-head h5 {
+        font-size: 0.9rem;
+    }
+
+    .h5-milestone {
+        font-size: 10px;
+    }
+
+    .h5-milestone li {
+        list-style-type: none;
     }
 
     .section-slider {
         height: 246px;
     }
 
-    .content-timeline li {
-        list-style-type: none;
-    }
-
-    .clip-down {
-        width: 121px;
-    }
-
-    .clip-top {
+    sub,
+    sup {
         position: relative;
-        width: 29px;
-        height: 180px;
-        overflow: hidden;
-        padding: 22px;
+        font-size: 6px;
+        line-height: 0;
+        vertical-align: baseline;
     }
 
-    .clip-content {
-        position: relative;
-        width: 29px;
-        overflow: hidden;
-        padding: 22px;
-    }
-
-    .row-time-line {
-        gap: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .content-timeline h5 {
-        font-weight: bold;
-        -webkit-text-stroke: 0px;
-        font-size: 11px;
-    }
-
-    .content-timeline img {
-        width: 100%;
-    }
-
-    #register-user {
-        padding: 0px 0%;
-    }
-
-    #gosford-forgot {
-        margin-top: 15%;
-    }
-
-    .wrap-content {
-        position: relative;
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-
-    .mdl-menu__container {
-        right: -14px;
-        top: 39px;
-        width: 325px;
-        height: 257.6px;
-    }
-
-    .padding-research {
-        padding: 4%;
-    }
-
-    .banner-video {
-        height: 270px;
-        position: relative;
-        width: 100%;
-    }
-
-    .banner-video-div {
-        height: 270px;
-        position: relative;
-        width: 100%;
-    }
-
-    .video-style-banner {
-        height: 270px;
-        background-color: #333333;
-    }
-
-    .mdl-layout__header .mdl-layout__drawer-button-login {
-        position: absolute;
-        color: #ffffff;
-        display: block;
-        line-height: 56px;
-        background-color: inherit;
-    }
-
-    .title-step-order p {
-        color: #0000005e;
-        font-weight: 600;
-        font-size: 11px;
-        text-align: center;
-    }
-
-    .navbar-mobile {
-        background-color: #bf1e2d;
-        display: none;
-    }
-
-    .navbar-mobile ul {
-        list-style-type: none;
-        padding-left: 0;
-
-    }
-
-    .navbar-mobile li a {
-        display: block;
-        padding: 8px 16px;
-        text-decoration: none;
-    }
-
-    .navbar-mobile li a.active {
-        background-color: #04AA6D;
-        color: white;
-    }
-
-    .navbar-mobile li a:hover:not(.active) {
-        background-color: #555;
-        color: white;
-    }
-
-    /* Hide the mobile menu by default */
-
-    /* Apply animation when showing/hiding */
-    .navbar-mobile.active {
-        display: block;
-        animation: slideAnimation 0.3s ease-in-out;
-    }
-
-    @keyframes slideAnimation {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-
-    .btn-nav-login {
-        display: none;
-    }
-
-    .description-service {
-        text-align: justify;
-        margin: 10px 1px;
-        height: 200px;
-        overflow: auto;
-    }
-
-    .banner-car {
-        height: 200px;
-    }
-
-    .banner-car img {
-        height: 200px;
-    }
-
-    .ace-investor {
-        height: 200px;
-    }
-
-    .banner-static {
-        height: 200px;
-        position: relative;
-    }
-
-    .img-responsive-banner {
-        height: 200px;
-    }
-
-    .about-company {
-        padding: 24px 0px;
-    }
-
-    #title-progress {
-        font-size: 19px;
-    }
-
-    #to-progress {
-        font-size: 19px;
-    }
-
-    .slider-testimonials {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-        border: none;
-        width: 100%;
-        background-color: white;
-    }
-
-    .ace-conected {
-        padding: 29px 0px;
+    .logo-header img,
+    .logo-header img,
+    .logo-footer img {
+        max-width: 100%;
+        width: 98px;
+        height: 46px;
         height: auto;
-        position: relative;
-        background-color: #f6fdff;
     }
 
-    .gtp-solution {
-        padding: 29px 0px;
-        background-color: #306390;
+    [class*="bg-"] .header-nav .nav>li.current-menu-item>a {
+        border-bottom-style: solid;
+        border-bottom-color: #fff;
+        border-bottom-width: 2px;
+        color: #555555;
     }
 
-    #ace-testimonials-mobile {
-        /* padding: 20px 0px; */
-        display: block;
-        padding: 29px 0px;
+    .wa-floating-button {
+        bottom: 63px;
     }
 
-    .ace-achievements {
-        display: block;
+    .body-chat {
+        right: 6%;
+    }
+
+    .wa-floating-button {
+        right: 15px;
+    }
+
+    #navbarToggle {
+        right: 0px;
     }
 
     header {
-        position: fixed;
+        right: 0px;
     }
 
-    .notifications-dropdown.mdl-list {
-        width: 100%;
-    }
-
-    .mdl-menu {
-        min-width: 0;
-    }
-
-    .mdl-list__item {
-        padding: 0px;
-    }
-
-    #desktop-counter h1 {
-        font-weight: bold;
-        font-size: 2.5rem;
-    }
-
-    .about-ace {
-        padding: 29px 0px;
-        position: relative;
-        background-color: white;
-    }
-
-    .ace-sliders .carousel {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        margin-bottom: 0rem;
-    }
-
-    section.ace-sliders img {
-        height: 350px;
-    }
-
-    .company-ace {
-        padding: 29px 0px;
-        height: auto;
-    }
-
-    .about-provider {
-        padding: 29px 0px;
-        position: relative;
-        height: auto;
-    }
-
-    .circle-row {
-        display: none;
-    }
-
-    #row-desktop-structure img {
-        width: 100%;
-    }
-
-    #row-desktop-structure {
-        padding: 13px 0px;
-    }
-
-    .about h1 {
-        text-align: center;
-    }
-
-    .title-ace {
-        text-align: center;
-    }
-
-    #hello {
-        display: none;
-    }
-
-    #loginweb {
-        display: none;
-    }
-
-    .mdl-layout__drawer-button {
-        display: block;
-        top: -6px;
-        left: 0;
-        height: 40px;
-
-    }
-
-    .mdl-layout__drawer-button-login {
-        display: block;
-        top: -6px;
-        right: 0;
-        height: 40px;
-
-    }
-
-    .mdl-layout__header .mdl-layout__drawer-button {
-        margin: 0px 10px;
-        width: 40px;
-    }
-
-    .mdl-layout__header .mdl-layout__drawer-button-login {
-        margin: 0px 10px;
-        width: 40px;
-    }
-
-    .rounded-circle {
-        height: 40px;
-        width: 40px;
-    }
-
-    .acetopbar {
-        background: white;
-        left: 59px;
-        top: 6px;
-        z-index: 998;
-        position: absolute;
-        width: 76px;
-        height: 25px;
-    }
-
-    .class_menu_black {
-        height: 40px;
-    }
-
-    .mdl-layout__header-row .classurl {
-        display: none;
-        font-size: 12px;
-        margin: 0px 10px;
-    }
-
-    .about h1 {
-        font-weight: bold;
-        font-size: 1.5rem;
-    }
-
-    .form-group {
-        margin: 20px 0px;
-    }
-
-    .ace-button-black {
-        width: 100%;
-    }
-
-    .ace-sliders {
-        max-height: 350px;
-    }
-
-    .mdl-layout__header-row {
-        height: 40px;
-        background: #333333;
-    }
-
-    .container-go {
-        padding: 0px;
-    }
-
-    .container-co {
-        padding: 0px;
-    }
-
-    .go-right-order {
-        margin-top: 20px;
-    }
-
-    .step-order {
-        margin: 0px auto;
-        width: 100%;
-        position: relative;
-    }
-
-    .btn-step {
-        width: 109px;
-    }
-
-    .body-order {
-        margin: 20px 3%;
-    }
-
-    .title-order {
-        margin: 19px 20px;
-    }
-
-    .mdl-layout__header-row .avatar-dropdown {
-        cursor: pointer;
-        margin: 0 0px;
-        padding: 0 0px;
-        line-height: 29px;
-    }
-}
-
-@media screen and (min-width:767px) and (max-width: 768px) {
     .i-icon-login {
         font-size: 25px;
     }
 
-    .ace-sliders .carousel-caption {
-        top: 29%;
-    }
-
     .content-timeline li {
         list-style-type: none;
     }
 
     .clip-down {
         width: 121px;
-    }
-    #title-news {
-        text-align: left;
-        padding: 2px;
-        padding: 5px 20px 5px 20px;
-        text-align: left;
     }
 
     .clip-top {
@@ -12532,8 +12628,8 @@ form.form--basic .mdl-textfield__label {
 
     .wrap-content {
         position: relative;
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .mdl-menu__container {
@@ -12634,7 +12730,7 @@ form.form--basic .mdl-textfield__label {
     .description-service {
         text-align: justify;
         margin: 10px 1px;
-        height: 200px;
+        height: auto;
         overflow: auto;
     }
 
@@ -12672,14 +12768,13 @@ form.form--basic .mdl-textfield__label {
     }
 
     .slider-testimonials {
-        display: flex;
+        display: inline;
         flex-wrap: wrap;
         flex-direction: column-reverse;
         border: none;
         width: 100%;
         background-color: white;
     }
-
     .ace-conected {
         padding: 29px 0px;
         height: auto;
@@ -12688,7 +12783,7 @@ form.form--basic .mdl-textfield__label {
     }
 
     .gtp-solution {
-        padding: 29px 0px;
+        padding: 31px 0px 106px;
         background-color: #306390;
     }
 
@@ -12737,7 +12832,7 @@ form.form--basic .mdl-textfield__label {
     }
 
     section.ace-sliders img {
-        height: 350px;
+        height: 305px;
     }
 
     .company-ace {
@@ -12844,7 +12939,7 @@ form.form--basic .mdl-textfield__label {
     }
 
     .ace-sliders {
-        max-height: 350px;
+        max-height: 270px;
     }
 
     .mdl-layout__header-row {
@@ -12890,89 +12985,258 @@ form.form--basic .mdl-textfield__label {
     }
 }
 
-@media screen and (min-width:900px) {
-    .navicon {
-        top: -24px;
+@media screen and (min-width:700px) and (max-width: 800px) {
+    #imggpt1 {
+        width: 56%;
+    }
+
+    .about p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #999999;
+        font-size: 15px;
+    }
+    .ace-testimonials-mobile .slider-testimonials p {
+        font-size: 15px;
+    }
+    .sticky-content {
+        position: sticky;
+        top: 20px;
+        z-index: 1;
+        background-repeat: no-repeat, repeat;
+        background-blend-mode: soft-light;
+        /* padding: 3rem 20px; */
+        padding-top: 0rem;
+    }
+    .progress-container-personal {
+        background-color: rgba(211, 211, 211, 1);
+        height: 22vh;
+        width: 5px;
+    }
+    #ace-testimonials-desktop {
+        display: none;
+    }
+    #content-progress {
+        font-size: 12px;
+    }
+    .gtp-po-button {
         position: absolute;
-        right: 20px;
-        z-index: 99;
+        right: 0;
+        bottom: -14%;
+        left: 0;
+        margin-top: 2px;
     }
-    #title-news {
-        text-align: left;
-        padding: 2px;
-        padding: 5px 20px 5px 20px;
-        text-align: left;
+    .container, .container-sm {
+        max-width: 702px;
     }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    #title-news {
-        text-align: left;
-        padding: 2px;
-        padding: 5px 20px 5px 20px;
-        text-align: left;
+    .list-bod{
+        text-align: center;
     }
-    .sticky-header {
+    .caption_leadership {
+        font-family: 'Poppins';
+        position: absolute;
+        bottom: 7px;
         width: 100%;
-        height: 47px;
-        position: fixed;
-        background-color: transparent;
+        text-align: center;
+        padding: 13px 7px;
     }
-
-    .h5-milestone {
-        font-size: 0.6rem;
+    .vl {
+        height: auto;
+        padding-top: 20px;
+        padding-left: 0px;
+        text-align: justify;
+        font-size: 1vw;
     }
-
-    .clearfix {
-        height: 46px;
-        clear: both;
+    .caption_leadership .leadership_name {
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+    }
+    .caption_leadership .leadership_position {
+        font-size: 8px;
+        color: white;
+    }
+    .mo-left .header-nav .logo-header {
+        display: block;
+        float: none;
+        height: 65px;
+        max-width: 100%;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    #title-news {
+        text-align: left;
+        padding: 2px;
+        padding: 5px 20px 5px 20px;
+        text-align: left;
     }
 
     .header-curve .logo-header:before,
     .header-curve .logo-header:after {
-        /* background-color: #22252A; */
-        content: "";
-        position: absolute;
-        top: 0;
-        height: 47px;
-        z-index: -1;
-    }
-
-    .logo-header,
-    .is-fixed .logo-header,
-    .is-fixed.header-curve .logo-header {
-        width: 146px;
+        height: 44px;
     }
 
     .logo-header img,
     .logo-footer img {
         position: absolute;
         max-width: 100%;
-        width: 99px;
-        top: 10px;
-        left: -4px;
+        width: 137px;
+        top: 4px;
+        left: 3px;
         height: 46px;
         height: auto;
     }
 
-    .header-nav .nav.nav-style>li,
-    .is-fixed .header-nav .nav.nav-style>li {
-        padding: 7px 3px;
+    .navicon {
+        top: -24px;
+        position: absolute;
+        right: 20px;
+        z-index: 99;
     }
 
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm {
-        max-width: 975px;
+    .clearfix {
+        height: 43px;
+        clear: both;
     }
 
+    .slider-product {
+        height: 474px;
+    }
+
+    .ace-sliders .carousel-caption {
+        top: 16%;
+    }
     .img-bg-mil-wrap {
-        height: 260px;
+        height: auto;
     }
 
-    .img-bg-mil-wrap img {
-        height: 260px;
+    .section-trimex-up-card {
+        position: relative;
+        height: 535px;
+    }
+
+    .wwd-text {
+        color: #343F52;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .img-trimex-up {
+        width: 200px;
+        height: 101px;
+    }
+
+    .img-what-we-do {
+        width: 100%;
+        height: 270px;
+        object-fit: fill;
+    }
+
+    .section-bg-trimex-color {
+        background-image: url(/public/page/trimex/trimax-bg-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .trimex-top-card {
+        padding: 11px 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        right: 3%;
+        height: 346px;
+        box-shadow: 0px -40px 50px 0px #0A04161A;
+    }
+
+    .trimex-top-card h2 {
+        font-size: 23px;
+    }
+
+    .font-patner {
+        font-size: 19px;
+        line-height: 31px;
+    }
+
+    .section-bg-gosford {
+        background-image: url(/public/page/gosford/Section.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height: 200px;
+        margin-top: 64px;
+    }
+
+    .section-head h2 {
+        color: #666666;
+        font-size: 22px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+
+    .section-head h5 {
+        font-size: 0.9rem;
+    }
+
+    .h5-milestone {
+        font-size: 10px;
+    }
+
+    .h5-milestone li {
+        list-style-type: none;
+    }
+
+    .section-slider {
+        height: 246px;
+    }
+
+    sub,
+    sup {
+        position: relative;
+        font-size: 6px;
+        line-height: 0;
+        vertical-align: baseline;
+    }
+
+    .logo-header img,
+    .logo-header img,
+    .logo-footer img {
+        max-width: 100%;
+        width: 98px;
+        height: 46px;
+        height: auto;
+    }
+
+    [class*="bg-"] .header-nav .nav>li.current-menu-item>a {
+        border-bottom-style: solid;
+        border-bottom-color: #fff;
+        border-bottom-width: 2px;
+        color: #555555;
+    }
+
+    .wa-floating-button {
+        bottom: 63px;
+    }
+
+    .body-chat {
+        right: 6%;
+    }
+
+    .wa-floating-button {
+        right: 15px;
+    }
+
+    #navbarToggle {
+        right: 0px;
+    }
+
+    header {
+        right: 0px;
+    }
+
+    .i-icon-login {
+        font-size: 25px;
     }
 
     .content-timeline li {
@@ -13022,11 +13286,13 @@ form.form--basic .mdl-textfield__label {
     #gosford-forgot {
         margin-top: 15%;
     }
-
+    .content_company {
+        padding: 20px 10px;
+    }
     .wrap-content {
         position: relative;
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .mdl-menu__container {
@@ -13127,7 +13393,7 @@ form.form--basic .mdl-textfield__label {
     .description-service {
         text-align: justify;
         margin: 10px 1px;
-        height: 200px;
+        height: auto;
         overflow: auto;
     }
 
@@ -13164,19 +13430,25 @@ form.form--basic .mdl-textfield__label {
         font-size: 19px;
     }
 
-    .gtp-po-button {
-        position: relative;
-    }
-
     .slider-testimonials {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
+        /* flex-direction: column-reverse; */
         border: none;
         width: 100%;
         background-color: white;
     }
+    .yt-embed-height {
+        height: 227px;
+        border-radius: 10px;
+    }
+    .embed-responsive{
+        padding: 22px 0px;
+    }
 
+    .slider-testimonials h5 {
+        font-size: 21px;
+    }
     .ace-conected {
         padding: 29px 0px;
         height: auto;
@@ -13185,13 +13457,13 @@ form.form--basic .mdl-textfield__label {
     }
 
     .gtp-solution {
-        padding: 29px 0px;
+        padding: 31px 0px 106px;
         background-color: #306390;
     }
 
     #ace-testimonials-mobile {
         /* padding: 20px 0px; */
-        display: none;
+        display: block;
         padding: 29px 0px;
     }
 
@@ -13216,6 +13488,7 @@ form.form--basic .mdl-textfield__label {
     }
 
     #desktop-counter h1 {
+        text-align: center;
         font-weight: bold;
         font-size: 2.5rem;
     }
@@ -13229,36 +13502,11 @@ form.form--basic .mdl-textfield__label {
     .ace-sliders .carousel {
         position: absolute;
         width: 100%;
-        height: auto;
+        height: 442px;
         margin-bottom: 0rem;
     }
-
     section.ace-sliders img {
-        height: 650px;
-    }
-
-    .img-structure-mobile {
-        display: none;
-    }
-
-    .line-structure {
-        display: block;
-    }
-
-    .circle-img-ace {
-        width: 100%;
-    }
-
-    .about h1 {
-        overflow-wrap: break-word;
-        font-weight: bold;
-        font-size: 5rem;
-        -webkit-text-stroke: 0px;
-    }
-
-    footer img {
-        width: 150px;
-        height: auto;
+        height: 448px;
     }
 
     .company-ace {
@@ -13273,11 +13521,11 @@ form.form--basic .mdl-textfield__label {
     }
 
     .circle-row {
-        /* display: block; */
+        display: none;
     }
 
     #row-desktop-structure img {
-        width: 89%;
+        width: 100%;
     }
 
     #row-desktop-structure {
@@ -13285,11 +13533,23 @@ form.form--basic .mdl-textfield__label {
     }
 
     .about h1 {
-        text-align: center;
+        text-align: left;
+    }
+    .about h1 {
+        overflow-wrap: break-word;
+        /* font-weight: bold; */
+        font-size: 5rem;
+        -webkit-text-stroke: 0px;
+    }
+    .img-ace-about {
+        width: 100%;
+        object-fit: cover;
+        height: 187px;
     }
 
     .title-ace {
-        text-align: center;
+        font-size: 14px;
+        text-align: left;
     }
 
     #hello {
@@ -13310,7 +13570,7 @@ form.form--basic .mdl-textfield__label {
 
     .mdl-layout__drawer-button-login {
         display: block;
-        top: 6px;
+        top: -6px;
         right: 0;
         height: 40px;
 
@@ -13334,15 +13594,11 @@ form.form--basic .mdl-textfield__label {
     .acetopbar {
         background: white;
         left: 59px;
-        top: 14px;
+        top: 6px;
         z-index: 998;
         position: absolute;
-        width: 89px;
-        height: 31px;
-    }
-
-    .i-icon-login {
-        font-size: 34px;
+        width: 76px;
+        height: 25px;
     }
 
     .class_menu_black {
@@ -13357,7 +13613,30 @@ form.form--basic .mdl-textfield__label {
 
     .about h1 {
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 2.4rem;
+    }
+    .form-group input {
+        width: 100%;
+        height: 31px;
+    }
+
+    .ace-button-black {
+
+        padding: 5px;
+
+    }
+    footer img {
+        width: 142px;
+        height: 47px;
+    }
+    .h6-footer {
+        -webkit-text-stroke: 0.1px;
+        padding: 4px;
+        font-size: 13px;
+    }
+    footer p, footer li {
+        font-size: 13px;
+        line-height: 20px;
     }
 
     .form-group {
@@ -13369,22 +13648,12 @@ form.form--basic .mdl-textfield__label {
     }
 
     .ace-sliders {
-        max-height: 650px;
+        max-height: 450px;
     }
 
     .mdl-layout__header-row {
-        height: 60px;
+        height: 40px;
         background: #333333;
-    }
-
-    .mdl-layout__header .mdl-layout__drawer-button {
-        margin: 0px 10px;
-        width: 45px;
-    }
-
-    .mdl-layout__drawer-button {
-        display: block;
-        top: 2px;
     }
 
     .container-go {
@@ -13424,6 +13693,2143 @@ form.form--basic .mdl-textfield__label {
         line-height: 29px;
     }
 }
+
+@media screen and (min-width:800px) and (max-width: 900px) {
+    #imggpt1 {
+        width: 56%;
+    }
+    .about p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #999999;
+        font-size: 12px;
+    }
+    .ace-testimonials-mobile .slider-testimonials p {
+        font-size: 12px;
+    }
+    .sticky-content {
+        position: sticky;
+        top: 20px;
+        z-index: 1;
+        background-repeat: no-repeat, repeat;
+        background-blend-mode: soft-light;
+        /* padding: 3rem 20px; */
+        padding-top: 0rem;
+    }
+    .progress-container-personal {
+        background-color: rgba(211, 211, 211, 1);
+        height: 22vh;
+        width: 5px;
+    }
+    #ace-testimonials-desktop {
+        display: block;
+    }
+    #ace-testimonials-mobile {
+        display: none;
+    }
+    #content-progress {
+        font-size: 12px;
+    }
+    .gtp-po-button {
+        position: absolute;
+        right: 0;
+        bottom: -14%;
+        left: 0;
+        margin-top: 2px;
+    }
+    .container, .container-sm {
+        max-width: 702px;
+    }
+    .list-bod{
+        text-align: center;
+    }
+    .caption_leadership {
+        font-family: 'Poppins';
+        position: absolute;
+        bottom: 7px;
+        width: 100%;
+        text-align: center;
+        padding: 13px 7px;
+    }
+    .vl {
+        height: auto;
+        padding-top: 20px;
+        padding-left: 0px;
+        text-align: justify;
+        font-size: 1vw;
+    }
+    .caption_leadership .leadership_name {
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+    }
+    .caption_leadership .leadership_position {
+        font-size: 8px;
+        color: white;
+    }
+    .mo-left .header-nav .logo-header {
+        display: block;
+        float: none;
+        height: 65px;
+        max-width: 100%;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    #title-news {
+        text-align: left;
+        padding: 2px;
+        padding: 5px 20px 5px 20px;
+        text-align: left;
+    }
+
+    .header-curve .logo-header:before,
+    .header-curve .logo-header:after {
+        height: 44px;
+    }
+
+    .logo-header img,
+    .logo-footer img {
+        position: absolute;
+        max-width: 100%;
+        width: 137px;
+        top: 4px;
+        left: 3px;
+        height: 46px;
+        height: auto;
+    }
+
+    .navicon {
+        top: -24px;
+        position: absolute;
+        right: 20px;
+        z-index: 99;
+    }
+
+    .clearfix {
+        height: 43px;
+        clear: both;
+    }
+
+    .slider-product {
+        height: 474px;
+    }
+
+    .ace-sliders .carousel-caption {
+        top: 16%;
+    }
+    .img-bg-mil-wrap {
+        height: auto;
+    }
+
+    .section-trimex-up-card {
+        position: relative;
+        height: 535px;
+    }
+
+    .wwd-text {
+        color: #343F52;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .img-trimex-up {
+        width: 200px;
+        height: 101px;
+    }
+
+    .img-what-we-do {
+        width: 100%;
+        height: 270px;
+        object-fit: fill;
+    }
+
+    .section-bg-trimex-color {
+        background-image: url(/public/page/trimex/trimax-bg-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .trimex-top-card {
+        padding: 11px 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        right: 3%;
+        height: 346px;
+        box-shadow: 0px -40px 50px 0px #0A04161A;
+    }
+
+    .trimex-top-card h2 {
+        font-size: 23px;
+    }
+
+    .font-patner {
+        font-size: 19px;
+        line-height: 31px;
+    }
+
+    .section-bg-gosford {
+        background-image: url(/public/page/gosford/Section.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height: 200px;
+        margin-top: 64px;
+    }
+
+    .section-head h2 {
+        color: #666666;
+        font-size: 22px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+
+    .section-head h5 {
+        font-size: 0.9rem;
+    }
+
+    .h5-milestone {
+        font-size: 10px;
+    }
+
+    .h5-milestone li {
+        list-style-type: none;
+    }
+
+    .section-slider {
+        height: 246px;
+    }
+
+    sub,
+    sup {
+        position: relative;
+        font-size: 6px;
+        line-height: 0;
+        vertical-align: baseline;
+    }
+
+    .logo-header img,
+    .logo-header img,
+    .logo-footer img {
+        max-width: 100%;
+        width: 98px;
+        height: 46px;
+        height: auto;
+    }
+
+    [class*="bg-"] .header-nav .nav>li.current-menu-item>a {
+        border-bottom-style: solid;
+        border-bottom-color: #fff;
+        border-bottom-width: 2px;
+        color: #555555;
+    }
+
+    .wa-floating-button {
+        bottom: 63px;
+    }
+
+    .body-chat {
+        right: 6%;
+    }
+
+    .wa-floating-button {
+        right: 15px;
+    }
+
+    #navbarToggle {
+        right: 0px;
+    }
+
+    header {
+        right: 0px;
+    }
+
+    .i-icon-login {
+        font-size: 25px;
+    }
+
+    .content-timeline li {
+        list-style-type: none;
+    }
+
+    .clip-down {
+        width: 121px;
+    }
+
+    .clip-top {
+        position: relative;
+        width: 29px;
+        height: 180px;
+        overflow: hidden;
+        padding: 22px;
+    }
+
+    .clip-content {
+        position: relative;
+        width: 29px;
+        overflow: hidden;
+        padding: 22px;
+    }
+
+    .row-time-line {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content-timeline h5 {
+        font-weight: bold;
+        -webkit-text-stroke: 0px;
+        font-size: 11px;
+    }
+
+    .content-timeline img {
+        width: 100%;
+    }
+
+    #register-user {
+        padding: 0px 0%;
+    }
+
+    #gosford-forgot {
+        margin-top: 15%;
+    }
+
+    .wrap-content {
+        position: relative;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .mdl-menu__container {
+        right: -14px;
+        top: 39px;
+        width: 325px;
+        height: 257.6px;
+    }
+
+    .padding-research {
+        padding: 4%;
+    }
+
+    .banner-video {
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+
+    .banner-video-div {
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+
+    .video-style-banner {
+        height: 270px;
+        background-color: #333333;
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        position: absolute;
+        color: #ffffff;
+        display: block;
+        line-height: 56px;
+        background-color: inherit;
+    }
+
+    .title-step-order p {
+        color: #0000005e;
+        font-weight: 600;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .navbar-mobile {
+        background-color: #bf1e2d;
+        display: none;
+    }
+
+    .navbar-mobile ul {
+        list-style-type: none;
+        padding-left: 0;
+
+    }
+
+    .navbar-mobile li a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .navbar-mobile li a.active {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    .navbar-mobile li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+
+    /* Hide the mobile menu by default */
+
+    /* Apply animation when showing/hiding */
+    .navbar-mobile.active {
+        display: block;
+        animation: slideAnimation 0.3s ease-in-out;
+    }
+
+    @keyframes slideAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .btn-nav-login {
+        display: none;
+    }
+
+    .description-service {
+        text-align: justify;
+        margin: 10px 1px;
+        height: auto;
+        overflow: auto;
+    }
+
+    .banner-car {
+        height: 200px;
+    }
+
+    .banner-car img {
+        height: 200px;
+    }
+
+    .ace-investor {
+        height: 200px;
+    }
+
+    .banner-static {
+        height: 200px;
+        position: relative;
+    }
+
+    .img-responsive-banner {
+        height: 200px;
+    }
+
+    .about-company {
+        padding: 24px 0px;
+    }
+
+    #title-progress {
+        font-size: 19px;
+    }
+
+    #to-progress {
+        font-size: 19px;
+    }
+
+    .slider-testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column-reverse; */
+        border: none;
+        width: 100%;
+        background-color: white;
+    }
+    .yt-embed-height {
+        height: 227px;
+        border-radius: 10px;
+    }
+    .embed-responsive{
+        padding: 22px 0px;
+    }
+
+    .slider-testimonials h5 {
+        font-size: 21px;
+    }
+    .ace-conected {
+        padding: 29px 0px;
+        height: auto;
+        position: relative;
+        background-color: #f6fdff;
+    }
+
+    .gtp-solution {
+        padding: 31px 0px 106px;
+        background-color: #306390;
+    }
+
+
+
+    .ace-achievements {
+        display: block;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .notifications-dropdown.mdl-list {
+        width: 100%;
+    }
+
+    .mdl-menu {
+        min-width: 0;
+    }
+
+    .mdl-list__item {
+        padding: 0px;
+    }
+
+    #desktop-counter h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    .about-ace {
+        padding: 29px 0px;
+        position: relative;
+        background-color: white;
+    }
+
+    .ace-sliders .carousel {
+        position: absolute;
+        width: 100%;
+        height: 442px;
+        margin-bottom: 0rem;
+    }
+    section.ace-sliders img {
+        height: 448px;
+    }
+
+    .company-ace {
+        padding: 29px 0px;
+        height: auto;
+    }
+
+    .about-provider {
+        padding: 29px 0px;
+        position: relative;
+        height: auto;
+    }
+
+    .circle-row {
+        display: none;
+    }
+
+    #row-desktop-structure img {
+        width: 100%;
+    }
+
+    #row-desktop-structure {
+        padding: 13px 0px;
+    }
+
+    .about h1 {
+        text-align: left;
+    }
+    .about h1 {
+        overflow-wrap: break-word;
+        /* font-weight: bold; */
+        font-size: 5rem;
+        -webkit-text-stroke: 0px;
+    }
+    .img-ace-about {
+        width: 100%;
+        object-fit: cover;
+        height: 187px;
+    }
+
+    .title-ace {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    #hello {
+        display: none;
+    }
+
+    #loginweb {
+        display: none;
+    }
+
+    .mdl-layout__drawer-button {
+        display: block;
+        top: -6px;
+        left: 0;
+        height: 40px;
+
+    }
+
+    .mdl-layout__drawer-button-login {
+        display: block;
+        top: -6px;
+        right: 0;
+        height: 40px;
+
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .rounded-circle {
+        height: 40px;
+        width: 40px;
+    }
+
+    .acetopbar {
+        background: white;
+        left: 59px;
+        top: 6px;
+        z-index: 998;
+        position: absolute;
+        width: 76px;
+        height: 25px;
+    }
+
+    .class_menu_black {
+        height: 40px;
+    }
+
+    .mdl-layout__header-row .classurl {
+        display: none;
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+
+    .about h1 {
+        font-weight: bold;
+        font-size: 2.4rem;
+    }
+    .form-group input {
+        width: 100%;
+        height: 31px;
+    }
+
+    .ace-button-black {
+
+        padding: 5px;
+
+    }
+    footer img {
+        width: 142px;
+        height: 47px;
+    }
+    .h6-footer {
+        -webkit-text-stroke: 0.1px;
+        padding: 4px;
+        font-size: 13px;
+    }
+    footer p, footer li {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .form-group {
+        margin: 20px 0px;
+    }
+
+    .ace-button-black {
+        width: 100%;
+    }
+
+    .ace-sliders {
+        max-height: 450px;
+    }
+
+    .mdl-layout__header-row {
+        height: 40px;
+        background: #333333;
+    }
+
+    .container-go {
+        padding: 0px;
+    }
+
+    .container-co {
+        padding: 0px;
+    }
+
+    .go-right-order {
+        margin-top: 20px;
+    }
+
+    .step-order {
+        margin: 0px auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .btn-step {
+        width: 109px;
+    }
+
+    .body-order {
+        margin: 20px 3%;
+    }
+
+    .title-order {
+        margin: 19px 20px;
+    }
+
+    .mdl-layout__header-row .avatar-dropdown {
+        cursor: pointer;
+        margin: 0 0px;
+        padding: 0 0px;
+        line-height: 29px;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width: 1000px) {
+    #imggpt1 {
+        width: 56%;
+    }
+    .header-nav .nav.nav-style > li > a {
+        padding: 9px 2px 9px;
+    }
+    .about p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #999999;
+        font-size: 12px;
+    }
+    .ace-testimonials-mobile .slider-testimonials p {
+        font-size: 12px;
+    }
+    .sticky-content {
+        position: sticky;
+        top: 20px;
+        z-index: 1;
+        background-repeat: no-repeat, repeat;
+        background-blend-mode: soft-light;
+        /* padding: 3rem 20px; */
+        padding-top: 0rem;
+    }
+    .progress-container-personal {
+        background-color: rgba(211, 211, 211, 1);
+        height: 22vh;
+        width: 5px;
+    }
+    #ace-testimonials-desktop {
+        display: block;
+    }
+    #ace-testimonials-mobile {
+        display: none;
+    }
+    #content-progress {
+        font-size: 12px;
+    }
+    .gtp-po-button {
+        position: absolute;
+        right: 0;
+        bottom: -14%;
+        left: 0;
+        margin-top: 2px;
+    }
+    .container, .container-sm {
+        max-width: 702px;
+    }
+    .list-bod{
+        text-align: center;
+    }
+    .caption_leadership {
+        font-family: 'Poppins';
+        position: absolute;
+        bottom: 7px;
+        width: 100%;
+        text-align: center;
+        padding: 13px 7px;
+    }
+    .vl {
+        height: auto;
+        padding-top: 20px;
+        padding-left: 0px;
+        text-align: justify;
+        font-size: 1vw;
+    }
+    .caption_leadership .leadership_name {
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+    }
+    .caption_leadership .leadership_position {
+        font-size: 8px;
+        color: white;
+    }
+    .mo-left .header-nav .logo-header {
+        display: block;
+        float: none;
+        height: 65px;
+        max-width: 100%;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    #title-news {
+        text-align: left;
+        padding: 2px;
+        padding: 5px 20px 5px 20px;
+        text-align: left;
+    }
+
+    .header-curve .logo-header:before,
+    .header-curve .logo-header:after {
+        height: 44px;
+    }
+
+    .logo-header img,
+    .logo-footer img {
+        position: absolute;
+        max-width: 100%;
+        width: 137px;
+        top: 4px;
+        left: 3px;
+        height: 46px;
+        height: auto;
+    }
+
+    .navicon {
+        top: -24px;
+        position: absolute;
+        right: 20px;
+        z-index: 99;
+    }
+
+    .clearfix {
+        height: 43px;
+        clear: both;
+    }
+
+    .slider-product {
+        height: 474px;
+    }
+
+    .ace-sliders .carousel-caption {
+        top: 16%;
+    }
+    .img-bg-mil-wrap {
+        height: auto;
+    }
+
+    .section-trimex-up-card {
+        position: relative;
+        height: 535px;
+    }
+
+    .wwd-text {
+        color: #343F52;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .img-trimex-up {
+        width: 200px;
+        height: 101px;
+    }
+
+    .img-what-we-do {
+        width: 100%;
+        height: 270px;
+        object-fit: fill;
+    }
+
+    .section-bg-trimex-color {
+        background-image: url(/public/page/trimex/trimax-bg-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .trimex-top-card {
+        padding: 11px 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        right: 3%;
+        height: 346px;
+        box-shadow: 0px -40px 50px 0px #0A04161A;
+    }
+
+    .trimex-top-card h2 {
+        font-size: 23px;
+    }
+
+    .font-patner {
+        font-size: 19px;
+        line-height: 31px;
+    }
+
+    .section-bg-gosford {
+        background-image: url(/public/page/gosford/Section.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height: 200px;
+        margin-top: 64px;
+    }
+
+    .section-head h2 {
+        color: #666666;
+        font-size: 22px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+
+    .section-head h5 {
+        font-size: 0.9rem;
+    }
+
+    .h5-milestone {
+        font-size: 10px;
+    }
+
+    .h5-milestone li {
+        list-style-type: none;
+    }
+
+    .section-slider {
+        height: 246px;
+    }
+
+    sub,
+    sup {
+        position: relative;
+        font-size: 6px;
+        line-height: 0;
+        vertical-align: baseline;
+    }
+
+    .logo-header img,
+    .logo-header img,
+    .logo-footer img {
+        max-width: 100%;
+        width: 98px;
+        height: 46px;
+        height: auto;
+    }
+
+    [class*="bg-"] .header-nav .nav>li.current-menu-item>a {
+        border-bottom-style: solid;
+        border-bottom-color: #fff;
+        border-bottom-width: 2px;
+        color: #555555;
+    }
+
+    .wa-floating-button {
+        bottom: 63px;
+    }
+
+    .body-chat {
+        right: 6%;
+    }
+
+    .wa-floating-button {
+        right: 15px;
+    }
+
+    #navbarToggle {
+        right: 0px;
+    }
+
+    header {
+        right: 0px;
+    }
+
+    .i-icon-login {
+        font-size: 25px;
+    }
+
+    .content-timeline li {
+        list-style-type: none;
+    }
+
+    .clip-down {
+        width: 121px;
+    }
+
+    .clip-top {
+        position: relative;
+        width: 29px;
+        height: 180px;
+        overflow: hidden;
+        padding: 22px;
+    }
+
+    .clip-content {
+        position: relative;
+        width: 29px;
+        overflow: hidden;
+        padding: 22px;
+    }
+
+    .row-time-line {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content-timeline h5 {
+        font-weight: bold;
+        -webkit-text-stroke: 0px;
+        font-size: 11px;
+    }
+
+    .content-timeline img {
+        width: 100%;
+    }
+
+    #register-user {
+        padding: 0px 0%;
+    }
+
+    #gosford-forgot {
+        margin-top: 15%;
+    }
+
+    .wrap-content {
+        position: relative;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .mdl-menu__container {
+        right: -14px;
+        top: 39px;
+        width: 325px;
+        height: 257.6px;
+    }
+
+    .padding-research {
+        padding: 4%;
+    }
+
+    .banner-video {
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+
+    .banner-video-div {
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+
+    .video-style-banner {
+        height: 270px;
+        background-color: #333333;
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        position: absolute;
+        color: #ffffff;
+        display: block;
+        line-height: 56px;
+        background-color: inherit;
+    }
+
+    .title-step-order p {
+        color: #0000005e;
+        font-weight: 600;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .navbar-mobile {
+        background-color: #bf1e2d;
+        display: none;
+    }
+
+    .navbar-mobile ul {
+        list-style-type: none;
+        padding-left: 0;
+
+    }
+
+    .navbar-mobile li a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .navbar-mobile li a.active {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    .navbar-mobile li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+
+    /* Hide the mobile menu by default */
+
+    /* Apply animation when showing/hiding */
+    .navbar-mobile.active {
+        display: block;
+        animation: slideAnimation 0.3s ease-in-out;
+    }
+
+    @keyframes slideAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .btn-nav-login {
+        display: none;
+    }
+
+    .description-service {
+        text-align: justify;
+        margin: 10px 1px;
+        height: auto;
+        overflow: auto;
+    }
+
+    .banner-car {
+        height: 200px;
+    }
+
+    .banner-car img {
+        height: 200px;
+    }
+
+    .ace-investor {
+        height: 200px;
+    }
+
+    .banner-static {
+        height: 200px;
+        position: relative;
+    }
+
+    .img-responsive-banner {
+        height: 200px;
+    }
+
+    .about-company {
+        padding: 24px 0px;
+    }
+
+    #title-progress {
+        font-size: 19px;
+    }
+
+    #to-progress {
+        font-size: 19px;
+    }
+
+    .slider-testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column-reverse; */
+        border: none;
+        width: 100%;
+        background-color: white;
+    }
+    .yt-embed-height {
+        height: 227px;
+        border-radius: 10px;
+    }
+    .embed-responsive{
+        padding: 22px 0px;
+    }
+
+    .slider-testimonials h5 {
+        font-size: 21px;
+    }
+    .ace-conected {
+        padding: 29px 0px;
+        height: auto;
+        position: relative;
+        background-color: #f6fdff;
+    }
+
+    .gtp-solution {
+        padding: 31px 0px 106px;
+        background-color: #306390;
+    }
+
+
+
+    .ace-achievements {
+        display: block;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .notifications-dropdown.mdl-list {
+        width: 100%;
+    }
+
+    .mdl-menu {
+        min-width: 0;
+    }
+
+    .mdl-list__item {
+        padding: 0px;
+    }
+
+    #desktop-counter h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    .about-ace {
+        padding: 29px 0px;
+        position: relative;
+        background-color: white;
+    }
+
+    .ace-sliders .carousel {
+        position: absolute;
+        width: 100%;
+        height: 442px;
+        margin-bottom: 0rem;
+    }
+    section.ace-sliders img {
+        height: 448px;
+    }
+
+    .company-ace {
+        padding: 29px 0px;
+        height: auto;
+    }
+
+    .about-provider {
+        padding: 29px 0px;
+        position: relative;
+        height: auto;
+    }
+
+    .circle-row {
+        display: none;
+    }
+
+    #row-desktop-structure img {
+        width: 100%;
+    }
+
+    #row-desktop-structure {
+        padding: 13px 0px;
+    }
+
+    .about h1 {
+        text-align: left;
+    }
+    .about h1 {
+        overflow-wrap: break-word;
+        /* font-weight: bold; */
+        font-size: 5rem;
+        -webkit-text-stroke: 0px;
+    }
+    .img-ace-about {
+        width: 100%;
+        object-fit: cover;
+        height: 187px;
+    }
+
+    .title-ace {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    #hello {
+        display: none;
+    }
+
+    #loginweb {
+        display: none;
+    }
+
+    .mdl-layout__drawer-button {
+        display: block;
+        top: -6px;
+        left: 0;
+        height: 40px;
+
+    }
+
+    .mdl-layout__drawer-button-login {
+        display: block;
+        top: -6px;
+        right: 0;
+        height: 40px;
+
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .rounded-circle {
+        height: 40px;
+        width: 40px;
+    }
+
+    .acetopbar {
+        background: white;
+        left: 59px;
+        top: 6px;
+        z-index: 998;
+        position: absolute;
+        width: 76px;
+        height: 25px;
+    }
+
+    .class_menu_black {
+        height: 40px;
+    }
+
+    .mdl-layout__header-row .classurl {
+        display: none;
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+
+    .about h1 {
+        font-weight: bold;
+        font-size: 2.4rem;
+    }
+    .form-group input {
+        width: 100%;
+        height: 31px;
+    }
+
+    .ace-button-black {
+
+        padding: 5px;
+
+    }
+    footer img {
+        width: 142px;
+        height: 47px;
+    }
+    .h6-footer {
+        -webkit-text-stroke: 0.1px;
+        padding: 4px;
+        font-size: 13px;
+    }
+    footer p, footer li {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .form-group {
+        margin: 20px 0px;
+    }
+
+    .ace-button-black {
+        width: 100%;
+    }
+
+    .ace-sliders {
+        max-height: 450px;
+    }
+
+    .mdl-layout__header-row {
+        height: 40px;
+        background: #333333;
+    }
+
+    .container-go {
+        padding: 0px;
+    }
+
+    .container-co {
+        padding: 0px;
+    }
+
+    .go-right-order {
+        margin-top: 20px;
+    }
+
+    .step-order {
+        margin: 0px auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .btn-step {
+        width: 109px;
+    }
+
+    .body-order {
+        margin: 20px 3%;
+    }
+
+    .title-order {
+        margin: 19px 20px;
+    }
+
+    .mdl-layout__header-row .avatar-dropdown {
+        cursor: pointer;
+        margin: 0 0px;
+        padding: 0 0px;
+        line-height: 29px;
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width: 1024px) {
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1024px;
+    }
+    .logo-header {
+        height: 44px;
+    }
+    .logo-header, .is-fixed .logo-header, .is-fixed.header-curve .logo-header {
+        width: 138px;
+    }
+    .header-nav .nav.nav-style > li, .is-fixed .header-nav .nav.nav-style > li {
+        padding: 9px 1px;
+    }
+    .header-curve .logo-header img {
+        margin-top: 0px;
+    }
+    #imggpt1 {
+        width: 56%;
+    }
+    .about p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #999999;
+        font-size: 12px;
+    }
+    .ace-testimonials-mobile .slider-testimonials p {
+        font-size: 12px;
+    }
+    .sticky-content {
+        position: sticky;
+        top: 20px;
+        z-index: 1;
+        background-repeat: no-repeat, repeat;
+        background-blend-mode: soft-light;
+        /* padding: 3rem 20px; */
+        padding-top: 0rem;
+    }
+    .progress-container-personal {
+        background-color: rgba(211, 211, 211, 1);
+        height: 22vh;
+        width: 5px;
+    }
+    #ace-testimonials-desktop {
+        display: block;
+    }
+    #ace-testimonials-mobile {
+        display: none;
+    }
+    #content-progress {
+        font-size: 12px;
+    }
+    .gtp-po-button {
+        position: absolute;
+        right: 0;
+        bottom: -14%;
+        left: 0;
+        margin-top: 2px;
+    }
+    .container, .container-sm {
+        max-width: 702px;
+    }
+    .list-bod{
+        text-align: center;
+    }
+    .caption_leadership {
+        font-family: 'Poppins';
+        position: absolute;
+        bottom: 7px;
+        width: 100%;
+        text-align: center;
+        padding: 13px 7px;
+    }
+    .vl {
+        height: auto;
+        padding-top: 20px;
+        padding-left: 0px;
+        text-align: justify;
+        font-size: 1vw;
+    }
+    .caption_leadership .leadership_name {
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+    }
+    .caption_leadership .leadership_position {
+        font-size: 8px;
+        color: white;
+    }
+    .mo-left .header-nav .logo-header {
+        display: block;
+        float: none;
+        height: 65px;
+        max-width: 100%;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    #title-news {
+        text-align: left;
+        padding: 2px;
+        padding: 5px 20px 5px 20px;
+        text-align: left;
+    }
+
+    .header-curve .logo-header:before,
+    .header-curve .logo-header:after {
+        height: 44px;
+    }
+
+    .logo-header img,
+    .logo-footer img {
+        position: absolute;
+        max-width: 100%;
+        width: 137px;
+        top: 4px;
+        left: 3px;
+        height: 46px;
+        height: auto;
+    }
+
+    .navicon {
+        top: -24px;
+        position: absolute;
+        right: 20px;
+        z-index: 99;
+    }
+
+    .clearfix {
+        height: 43px;
+        clear: both;
+    }
+
+    .slider-product {
+        height: 639px;
+    }
+
+    .ace-sliders .carousel-caption {
+        top: 16%;
+    }
+    .img-bg-mil-wrap {
+        height: auto;
+    }
+
+    .section-trimex-up-card {
+        position: relative;
+        height: 535px;
+    }
+
+    .wwd-text {
+        color: #343F52;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .img-trimex-up {
+        width: 200px;
+        height: 101px;
+    }
+
+    .img-what-we-do {
+        width: 100%;
+        height: 270px;
+        object-fit: fill;
+    }
+
+    .section-bg-trimex-color {
+        background-image: url(/public/page/trimex/trimax-bg-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .trimex-top-card {
+        padding: 11px 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        right: 3%;
+        height: 346px;
+        box-shadow: 0px -40px 50px 0px #0A04161A;
+    }
+
+    .trimex-top-card h2 {
+        font-size: 23px;
+    }
+
+    .font-patner {
+        font-size: 19px;
+        line-height: 31px;
+    }
+
+    .section-bg-gosford {
+        background-image: url(/public/page/gosford/Section.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height: 200px;
+        margin-top: 64px;
+    }
+
+    .section-head h2 {
+        color: #666666;
+        font-size: 22px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+
+    .section-head h5 {
+        font-size: 0.9rem;
+    }
+
+    .h5-milestone {
+        font-size: 10px;
+    }
+
+    .h5-milestone li {
+        list-style-type: none;
+    }
+
+    .section-slider {
+        height: 246px;
+    }
+
+    sub,
+    sup {
+        position: relative;
+        font-size: 6px;
+        line-height: 0;
+        vertical-align: baseline;
+    }
+
+    .logo-header img,
+    .logo-header img,
+    .logo-footer img {
+        max-width: 100%;
+        width: 98px;
+        height: 46px;
+        height: auto;
+    }
+
+    [class*="bg-"] .header-nav .nav>li.current-menu-item>a {
+        border-bottom-style: solid;
+        border-bottom-color: #fff;
+        border-bottom-width: 2px;
+        color: #555555;
+    }
+
+    .wa-floating-button {
+        bottom: 63px;
+    }
+
+    .body-chat {
+        right: 6%;
+    }
+
+    .wa-floating-button {
+        right: 15px;
+    }
+
+    #navbarToggle {
+        right: 0px;
+    }
+
+    header {
+        right: 0px;
+    }
+
+    .i-icon-login {
+        font-size: 25px;
+    }
+
+    .content-timeline li {
+        list-style-type: none;
+    }
+
+    .clip-down {
+        width: 121px;
+    }
+
+    .clip-top {
+        position: relative;
+        width: 29px;
+        height: 180px;
+        overflow: hidden;
+        padding: 22px;
+    }
+
+    .clip-content {
+        position: relative;
+        width: 29px;
+        overflow: hidden;
+        padding: 22px;
+    }
+
+    .row-time-line {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content-timeline h5 {
+        font-weight: bold;
+        -webkit-text-stroke: 0px;
+        font-size: 11px;
+    }
+
+    .content-timeline img {
+        width: 100%;
+    }
+
+    #register-user {
+        padding: 0px 0%;
+    }
+
+    #gosford-forgot {
+        margin-top: 15%;
+    }
+
+    .wrap-content {
+        position: relative;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .mdl-menu__container {
+        right: -14px;
+        top: 39px;
+        width: 325px;
+        height: 257.6px;
+    }
+
+    .padding-research {
+        padding: 4%;
+    }
+
+    .banner-video {
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+
+    .banner-video-div {
+        height: 270px;
+        position: relative;
+        width: 100%;
+    }
+
+    .video-style-banner {
+        height: 270px;
+        background-color: #333333;
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        position: absolute;
+        color: #ffffff;
+        display: block;
+        line-height: 56px;
+        background-color: inherit;
+    }
+
+    .title-step-order p {
+        color: #0000005e;
+        font-weight: 600;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .navbar-mobile {
+        background-color: #bf1e2d;
+        display: none;
+    }
+
+    .navbar-mobile ul {
+        list-style-type: none;
+        padding-left: 0;
+
+    }
+
+    .navbar-mobile li a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .navbar-mobile li a.active {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    .navbar-mobile li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+
+    /* Hide the mobile menu by default */
+
+    /* Apply animation when showing/hiding */
+    .navbar-mobile.active {
+        display: block;
+        animation: slideAnimation 0.3s ease-in-out;
+    }
+
+    @keyframes slideAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .btn-nav-login {
+        display: none;
+    }
+
+    .description-service {
+        text-align: justify;
+        margin: 10px 1px;
+        height: auto;
+        overflow: auto;
+    }
+
+    .banner-car {
+        height: 200px;
+    }
+
+    .banner-car img {
+        height: 200px;
+    }
+
+    .ace-investor {
+        height: 200px;
+    }
+
+    .banner-static {
+        height: 200px;
+        position: relative;
+    }
+
+    .img-responsive-banner {
+        height: 200px;
+    }
+
+    .about-company {
+        padding: 24px 0px;
+    }
+
+    #title-progress {
+        font-size: 19px;
+    }
+
+    #to-progress {
+        font-size: 19px;
+    }
+
+    .slider-testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column-reverse; */
+        border: none;
+        width: 100%;
+        background-color: white;
+    }
+    .yt-embed-height {
+        height: 227px;
+        border-radius: 10px;
+    }
+    .embed-responsive{
+        padding: 22px 0px;
+    }
+
+    .slider-testimonials h5 {
+        font-size: 21px;
+    }
+    .ace-conected {
+        padding: 29px 0px;
+        height: auto;
+        position: relative;
+        background-color: #f6fdff;
+    }
+
+    .gtp-solution {
+        padding: 31px 0px 106px;
+        background-color: #306390;
+    }
+
+
+
+    .ace-achievements {
+        display: block;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .notifications-dropdown.mdl-list {
+        width: 100%;
+    }
+
+    .mdl-menu {
+        min-width: 0;
+    }
+
+    .mdl-list__item {
+        padding: 0px;
+    }
+
+    #desktop-counter h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    .about-ace {
+        padding: 29px 0px;
+        position: relative;
+        background-color: white;
+    }
+
+    .ace-sliders .carousel {
+        position: absolute;
+        width: 100%;
+        height: 442px;
+        margin-bottom: 0rem;
+    }
+    section.ace-sliders img {
+        height: 448px;
+    }
+
+    .company-ace {
+        padding: 29px 0px;
+        height: auto;
+    }
+
+    .about-provider {
+        padding: 29px 0px;
+        position: relative;
+        height: auto;
+    }
+
+    .circle-row {
+        display: none;
+    }
+
+    #row-desktop-structure img {
+        width: 100%;
+    }
+
+    #row-desktop-structure {
+        padding: 13px 0px;
+    }
+
+    .about h1 {
+        text-align: left;
+    }
+    .about h1 {
+        overflow-wrap: break-word;
+        /* font-weight: bold; */
+        font-size: 5rem;
+        -webkit-text-stroke: 0px;
+    }
+    .img-ace-about {
+        width: 100%;
+        object-fit: cover;
+        height: 187px;
+    }
+
+    .title-ace {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    #hello {
+        display: none;
+    }
+
+    #loginweb {
+        display: none;
+    }
+
+    .mdl-layout__drawer-button {
+        display: block;
+        top: -6px;
+        left: 0;
+        height: 40px;
+
+    }
+
+    .mdl-layout__drawer-button-login {
+        display: block;
+        top: -6px;
+        right: 0;
+        height: 40px;
+
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .mdl-layout__header .mdl-layout__drawer-button-login {
+        margin: 0px 10px;
+        width: 40px;
+    }
+
+    .rounded-circle {
+        height: 40px;
+        width: 40px;
+    }
+
+    .acetopbar {
+        background: white;
+        left: 59px;
+        top: 6px;
+        z-index: 998;
+        position: absolute;
+        width: 76px;
+        height: 25px;
+    }
+
+    .class_menu_black {
+        height: 40px;
+    }
+
+    .mdl-layout__header-row .classurl {
+        display: none;
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+
+    .about h1 {
+        font-weight: bold;
+        font-size: 2.4rem;
+    }
+    .form-group input {
+        width: 100%;
+        height: 31px;
+    }
+
+    .ace-button-black {
+
+        padding: 5px;
+
+    }
+    footer img {
+        width: 142px;
+        height: 47px;
+    }
+    .h6-footer {
+        -webkit-text-stroke: 0.1px;
+        padding: 4px;
+        font-size: 13px;
+    }
+    footer p, footer li {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .form-group {
+        margin: 20px 0px;
+    }
+
+    .ace-button-black {
+        width: 100%;
+    }
+
+    .ace-sliders {
+        max-height: 450px;
+    }
+
+    .mdl-layout__header-row {
+        height: 40px;
+        background: #333333;
+    }
+
+    .container-go {
+        padding: 0px;
+    }
+
+    .container-co {
+        padding: 0px;
+    }
+
+    .go-right-order {
+        margin-top: 20px;
+    }
+
+    .step-order {
+        margin: 0px auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .btn-step {
+        width: 109px;
+    }
+
+    .body-order {
+        margin: 20px 3%;
+    }
+
+    .title-order {
+        margin: 19px 20px;
+    }
+
+    .mdl-layout__header-row .avatar-dropdown {
+        cursor: pointer;
+        margin: 0 0px;
+        padding: 0 0px;
+        line-height: 29px;
+    }
+}
+
+
+
+
 
 @media screen and (min-width:1024px) and (max-width:1200px) {
     .about p {
@@ -13432,6 +15838,11 @@ form.form--basic .mdl-textfield__label {
         line-height: 1.5;
     }
 
+    .header-nav .nav.nav-style > li > a {
+        padding: 1px 2px 1px;
+        font-size: 14px;
+        font-family: 'Poppins';
+    }
     .card-bod {
         height: 378px;
         position: relative;
@@ -13843,7 +16254,7 @@ form.form--basic .mdl-textfield__label {
     }
 
     section.ace-sliders img {
-        height: 650px;
+        height: 100vh;
     }
 
     .img-structure-mobile {
@@ -14043,6 +16454,9 @@ form.form--basic .mdl-textfield__label {
 
 
 @media screen and (min-width:1200px) {
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1024px;
+    }
     .ace-sliders {
         height: 100vh;
         position: relative;
@@ -14078,7 +16492,7 @@ form.form--basic .mdl-textfield__label {
         font-size: 7.31vw;
     }
     .header-nav .nav.nav-style>li>a {
-        padding: 12px 10px 12px;
+        padding: 7px 4px 12px;
         font-size: 15px;
     }
     .container,
@@ -14157,6 +16571,9 @@ form.form--basic .mdl-textfield__label {
 
 
 @media screen and (min-width:1366px) {
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1024px;
+    }
     .section-bg-gosford {
         height: 622px;
     }
@@ -14205,6 +16622,7 @@ form.form--basic .mdl-textfield__label {
     }
     .title-menu-style {
         z-index: 99;
+        width: 100%;
         position: absolute;
         bottom: 23px;
         left: 50%;
@@ -14220,13 +16638,39 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1366px) {
-
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1024px;
+    }
     .container,
     .container-lg,
     .container-md,
     .container-sm,
     .container-xl {
         max-width: 1220px;
+    }
+
+    /*TEXT FOR BOD*/
+    .itemFullText {
+        height: 401px;
+        overflow-y: scroll;
+        position: relative;
+        padding: 0px 10px;
+    }
+    .itemFullText span{
+        font-family: 'Poppins';
+        font-size: 14px;
+    }
+    .itemFullText p{
+        font-family: 'Poppins';
+        font-size: 14px;
+    }
+
+    /* END TEXT FOR BOD*/
+    .img-bod-modal {
+        object-fit: cover;
+        height: 396px;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .header-nav .nav.nav-style>li>a {
@@ -14251,7 +16695,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1440px) {
-
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1024px;
+    }
     .container,
     .container-lg,
     .container-md,
@@ -14294,8 +16740,11 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1536px) {
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1024px;
+    }
     .header-nav .nav.nav-style>li>a {
-        padding: 12px 10px 12px;
+        padding: 12px 9px 12px;
         font-size: 19.2px;
     }
 
@@ -14315,11 +16764,17 @@ form.form--basic .mdl-textfield__label {
     .mdl-layout__header-row .classurl {
         margin: 0px 20px;
     }
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1024px;
+    }
 }
 
 @media screen and (min-width:1680px) {
     .mdl-layout__header-row .classurl {
         margin: 0px 21px;
+    }
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1024px;
     }
 
     .circle-row {
@@ -14351,6 +16806,10 @@ form.form--basic .mdl-textfield__label {
         text-transform: capitalize;
     }
 
+    .modal-lg, .modal-xl {
+        --bs-modal-width: 1310px;
+    }
+
     .img-wrap-contact img{
             height: 100%;
             width: 718px;
@@ -14362,7 +16821,11 @@ form.form--basic .mdl-textfield__label {
 }
 
 .about span {
-    font-size: 14px;
+    font-size: 18px;
+}
+.itemFullText span {
+    font-family: 'Poppins';
+    font-size: 15px;
 }
 .card-bod {
     height: 476px;
@@ -14593,13 +17056,84 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:2560px) {
+    .img-ceo{
 
+            float: right;
+            width: 85%;
+            border-radius: 20px;
+
+    }
     /* .img-bg-mil-wrap {
         height: 697px;
     } */
     .header-curve .logo-header:before,
     .header-curve .logo-header:after {
         height: 129px;
+    }
+
+    #audithref {
+        object-fit: contain;
+        height: 200px;
+        width: 200px;
+        margin: 20px;
+    }
+
+    .itemFullText h2 {
+        font-size: 50px;
+    }
+
+    .itemFullText .itemfull-position {
+        font-size: 38px;
+        color: #212020;
+    }
+
+    footer p, footer li {
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    footer p {
+        line-height: 39px;
+        margin-bottom: 10px;
+    }
+
+    .itemFullText span {
+        font-size: 28px;
+    }
+    .caption_leadership .leadership_name {
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+    .caption_leadership {
+        font-family: 'Poppins';
+        position: absolute;
+        bottom: 7px;
+        width: 100%;
+        text-align: center;
+        padding: 33px 10px;
+    }
+    .caption_leadership .leadership_position {
+        font-size: 22px;
+        color: white;
+    }
+    #to-progress {
+        color: rgba(0, 153, 255, 1);
+        font-size: 2.8rem;
+    }
+    #title-progress {
+        font-size: 2.4rem;
+    }
+    .itemFullText p {
+        font-size: 28px;
+    }
+
+    #content-progress {
+        font-size: 30px;
+    }
+    .company-image{
+            width: 100%;
+            height: 551px;
     }
 
     .logo-header img,
@@ -14624,7 +17158,7 @@ form.form--basic .mdl-textfield__label {
         clear: both;
     }
     .card-bod {
-        height: 576px;
+        height: 620px;
         position: relative;
         overflow: hidden;
     }
@@ -14635,13 +17169,20 @@ form.form--basic .mdl-textfield__label {
         overflow: hidden;
     }
     .h5, h5 {
-        font-size: 1.55rem;
+        font-size: 30px;
     }
     .small, small {
-        font-size: 0.999em;
+        font-size: 1.5em;
     }
     .modal-lg, .modal-xl {
-        --bs-modal-width: 1500px;
+        --bs-modal-width: 1680px;
+    }
+    .no-banner{
+
+            position: relative;
+            height: 161px;
+            background-color: white;
+
     }
     .itemFullText{
 
@@ -14796,7 +17337,25 @@ form.form--basic .mdl-textfield__label {
         text-align: center;
         padding: 92px;
         margin: 10px;
-        height: 330px;
+        height: 490px;
+    }
+    .gov-card h4 {
+        color: #000;
+        font-size: 1.7rem;
+    }
+
+    .slider-product {
+        height: 820px;
+        position: relative;
+        overflow: hidden;
+    }
+    .slider-product img {
+        height: 824px;
+        object-fit: cover;
+    }
+    .yt-embed-height {
+        height: 537px;
+        border-radius: 10px;
     }
 
     .ace-button-blue {
@@ -14876,11 +17435,15 @@ form.form--basic .mdl-textfield__label {
     }
 
     .ace-sliders {
-        height: 100vh;
+        height: 70vh;
     }
 
     .slider-banner {
-        height: 100vh;
+        height: 70vh;
+    }
+    .ace-sliders h1 {
+        -webkit-text-stroke: 4px;
+        font-size: 5.61vw;
     }
 
     .mdl-layout__header-row .classurl {

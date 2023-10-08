@@ -35,7 +35,7 @@
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Automotive Seats</h2>
+                    <h2 class="text-capitalize">Manufacturing of Automotive Seats</h2>
 
                 </div>
                 <div class="row">
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-sm-12 col-lg-6 m-b30">
                     <div class="video-box">
-                        <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/ujKY5IC6GsQ"
+                        <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/WEQDCxT6RFY"
                             title="Feytech, Kulim" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
