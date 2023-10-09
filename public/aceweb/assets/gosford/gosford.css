@@ -14,13 +14,10 @@ footer {
 
 }
 
-.no-banner{
-
-
-        position: relative;
-        height: 40px;
-        background-color: white;
-
+.no-banner {
+    position: relative;
+    height: 90px;
+    background-color: white;
 }
 
 .company-image{
