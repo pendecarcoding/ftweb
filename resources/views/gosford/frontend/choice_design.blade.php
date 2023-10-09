@@ -8,7 +8,7 @@
         <section class="pt-5 pb-5">
             <div class="container">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Automotive Covers</h2>
+                    <h2 class="text-capitalize">Manufacturing of Automotive Covers</h2>
 
                 </div>
                 <div class="row">
@@ -45,8 +45,8 @@
                                                 <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="0" class="btn-slide  active " aria-current="true" aria-label="Slide 0"></button>
                                                 <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="1" class="btn-slide " aria-label="Slide 1"></button>
                                                 <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="2" class="btn-slide " aria-label="Slide 2"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="3" class="btn-slide " aria-label="Slide 3"></button>
-                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="4" class="btn-slide " aria-label="Slide 4"></button>
+                                                <!-- <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="3" class="btn-slide " aria-label="Slide 3"></button>
+                                                <button id="btn-slider" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide-to="4" class="btn-slide " aria-label="Slide 4"></button> -->
 
                                             </div>
                                             <div class="carousel-inner">
@@ -65,17 +65,7 @@
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
-                                                    <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide4.jpg">
-                                                        <div class="col-md-6">
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide5.jpg">
-                                                        <div class="col-md-6">
-                                                        </div>
-                                                    </div>
 
                                             </div>
                                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide="prev">
@@ -434,14 +424,14 @@ white-space: nowrap;" id="interior-list">
             <div class="row d-flex" style="justify-content: center;">
                 <div class="col-sm-6 col-md-3  d-flex " id="gallery">
                     <!-- <div class="col-sm-6 col-md-3  d-flex "> -->
-                    <a href="/public/go_system/images/menu/colors.jpg" class="card card-body border-light justify-content-between text-white shadow">
+                    <a href="/public/go_system/images/menu/Catania SEMI & PVC.png" class="card card-body border-light justify-content-between text-white shadow">
                         <!-- <a href="#" class="card card-body border-light justify-content-between text-white shadow"> -->
                         <div class="dlab-media dlab-img-overlay1">
                             <img style="height: 100%;border-radius: 10px;" src="/public/go_system/images/menu/menu-new.jpg" alt="">
                         </div>
                         <div class="title-menu-style">Color</div>
                     </a>
-                    <a href="/public/go_system/images/menu/colors2.jpg">
+                    <a href="/public/go_system/images/menu/Catania FULL LEather ONLY.png">
 
                     </a>
                     <a href="/public/go_system/images/menu/colors3.jpeg">
@@ -480,7 +470,7 @@ white-space: nowrap;" id="interior-list">
                         <div class="dlab-media dlab-img-overlay1">
                             <img src="/public/go_system/images/menu/menu_4.png" alt="">
                         </div>
-                        <div class="title-menu-style">Stitching</div>
+                        <div class="title-menu-style">Stitching & Piping</div>
                     </a>
                 </div>
                 <!-- <div class="col-sm-6 col-md-2  d-flex ">
@@ -501,14 +491,15 @@ white-space: nowrap;" id="interior-list">
                     <div class="row">
                         <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
                             <div class="section-head text-left space-text-video">
-                                <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">Automotive Covers Manufacturing Plant</h2>
+                                <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">Installation and Sales of Automotive
+                                    Covers</h2>
                                 <!-- <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p> -->
                             </div>
 
                         </div>
                         <div class="col-sm-12 col-lg-6 m-b30">
                             <div class="video-box" style="padding: 50px 0px;">
-                                <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/WEQDCxT6RFY" title="Gosford, Johor Bahru" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/ujKY5IC6GsQ" title="Gosford, Johor Bahru" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                             </div>
                         </div>

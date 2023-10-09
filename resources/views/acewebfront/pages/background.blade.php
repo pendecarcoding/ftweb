@@ -7,10 +7,11 @@
         @include('acewebfront.widget.allbaner')
         <div class="section-full bg-white content-inner">
             <div>
-                <div class="section-head text-center about ">
-                    <h1>Companies Background</h1>
+                <div class="section-head text-left about wrap-content ">
 
-                    <h5 class="title-ace">GROUP MILESTONE 2002-2022</h5>
+
+                    <h5 class="title-ace">GROUP MILESTONE 2002-2022 <span class="h-dash" style="font-weight: bold">—</span></h5>
+
                 </div>
                 <div class="section-content ">
                     <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
@@ -59,7 +60,7 @@
 
                 $(".owl-carousel").owlCarousel({
                     items: itemsToShow,
-                    loop: true,
+                    loop: false,
                     autoplay: true,
                     autoplayTimeout: 30000,
                     animateOut: 'fadeOut',

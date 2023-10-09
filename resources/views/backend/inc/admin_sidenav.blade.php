@@ -193,6 +193,8 @@
                                 </a>
                             </li>
                             @endcan
+
+
                             <!-- @can('view_all_piping')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('pipingsys.index') }}"
@@ -287,6 +289,26 @@
                     </li>
                 @endcanany
 
+                @canany(['view_img_automotive_seats', 'edit_img_automotive_seats', 'create_img_automotive_seats'])
+                <li class="aiz-side-nav-item">
+                    <a href="#" class="aiz-side-nav-link">
+                        <i class="las la-shopping-cart aiz-side-nav-icon"></i>
+                        <span class="aiz-side-nav-text">{{ translate('Products & Project Page') }}</span>
+                        <span class="aiz-side-nav-arrow"></span>
+                    </a>
+                    <!--Submenu-->
+                    <ul class="aiz-side-nav-list level-2">
+                @can('view_img_automotive_seats')
+                <li class="aiz-side-nav-item">
+                    <a href="{{ route('automotiveseats.index') }}"
+                        class="aiz-side-nav-link {{ areActiveRoutes(['automotiveseats.index', 'automotiveseats.create', 'automotiveseats.edit']) }}">
+                        <span class="aiz-side-nav-text">{{ translate('Image Automotive Seats') }}</span>
+                    </a>
+                </li>
+                @endcan
+                </ul>
+                </li>
+                @endcanany
                 <!-- Auction Product -->
                 @if (addon_is_activated('auction'))
                     @canany(['add_auction_product', 'view_all_auction_products', 'view_inhouse_auction_products',

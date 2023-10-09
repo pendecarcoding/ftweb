@@ -12,14 +12,14 @@
                         <div class="row">
                             <div data-aos="fade-up" class="col-md-12">
                                 <div class="title-ace">
-                                    ABOUT -> Vision-Mission
+                                    Vision & Mission
                                     <span class="h-dash" style="font-weight: bold">—</span>
                                 </div>
                                 <!-- <div style="text-align: center;" data-aos="fade-up" data-aos-delay="200"
-                                                class="col-md-12 col-sm-12 aos-init aos-animate">
-                                                <h1>Vision & Mission
-                                                </h1>
-                                            </div> -->
+                                                        class="col-md-12 col-sm-12 aos-init aos-animate">
+                                                        <h1>Vision & Mission
+                                                        </h1>
+                                                    </div> -->
                             </div>
                         </div>
                         <div data-aos="fade-up" class="card-vmm" style="margin-top: 20px;">
