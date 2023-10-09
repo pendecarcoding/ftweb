@@ -10,11 +10,12 @@
             <!-- Grid row -->
             <div class="row mt-4">
                 <!-- Grid column -->
+                <div> <h6 class="text-uppercase fw-bold mb-4">
+                    <img src="{{ uploaded_asset(get_setting('system_logo_white')) }}" alt="">
+                </h6></div>
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                     <!-- Content -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <img src="{{ uploaded_asset(get_setting('system_logo_white')) }}" alt="">
-                    </h6>
+
                     <p>
                         <b style="font-weight:bold;color:black">Address</b><br>
                         No. 1, Jalan Bayu 2/6, Kawasan Perindustrian Tampoi Jaya 81200 Johor Bahru, Johor Darul Ta’zim MALAYSIA

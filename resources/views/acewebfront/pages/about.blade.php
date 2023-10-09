@@ -11,7 +11,7 @@
                     <div class="row">
                         <div data-aos="fade-up" class="col-md-12">
                             <div class="title-ace">
-                                FEYTECH HOLDINGS BERHAD - ABOUT -> COMPANIES
+                                COMPANIES
                                 <span class="h-dash" style="font-weight: bold">—</span>
                             </div>
                             <div data-aos="fade-up" data-aos-delay="200" class="col-md-12 col-sm-12 aos-init aos-animate">
@@ -27,8 +27,8 @@
                         @foreach ($data as $i => $v)
                             <div data-aos="fade-up" class="row about-company">
                                 <div class="col-md-6">
-                                    <div style="position: relative;"> <img style="width: 100%;height: 350px;"
-                                            class="img-responsive" src="{{ getimage($v->foto) }}" alt="">
+                                    <div style="position: relative;"> <img
+                                            class="img-responsive company-image" src="{{ getimage($v->foto) }}" alt="">
                                         @if ($v->yt_link != null)
                                             <div class="video-play-icon">
                                                 <a data-bs-toggle="modal" data-bs-target="#ytvd{{ $v->id }}"

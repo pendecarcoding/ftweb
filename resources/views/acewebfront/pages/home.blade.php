@@ -8,6 +8,8 @@
  <main>
 
       <section  class="ace-sliders">
+        <div class="section-slider-home" style="width:100%;position: relative;overflow: hidden;display: flex;
+        flex-direction: column;">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             @php
@@ -47,6 +49,7 @@
             </div>
             @endforeach
 
+        </div>
         </div>
         </div>
       </section>
@@ -314,7 +317,7 @@
               </div>
               <div class="row" style="padding: 50px 0px;">
                 @foreach($leadership as $i => $v)
-                <div style="padding: 5px;" data-aos="fade-up" data-aos-delay="{{$i+1}}00"  class="col-md-3">
+                <div data-aos="fade-up" data-aos-delay="{{$i+1}}00"  class="col-md-3 list-bod">
                     <img style="border-radius: 10px;" class="img-director img-responsive" src="{{getimage($v->foto)}}" alt="">
                     <div class="caption_leadership">
                         <div class="leadership_name">{{$v->name}}</div>
@@ -344,11 +347,11 @@
                 </div>
               </div>
               <div class="row">
-                <div data-aos="fade-up" data-aos-delay="200" class="col-md-6 col-sm-6">
+                <div data-aos="fade-up" data-aos-delay="200" class="col-md-6 col-sm-12">
                   <h1>GSAP System
                     The All-in-One Platform</h1>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="300" class="col-md-6 col-sm-6">
+                <div data-aos="fade-up" data-aos-delay="300" class="col-md-6 col-sm-12">
                     <p class="img-director" style="color:white;text-align: justify;">Our seat covers are made of top-notch materials, and our leather is
                         imported from Southern America and Europe for the best leather quality.
                         Leather type such as Catania Leather, Barracuda Leather and Nappa
@@ -362,8 +365,8 @@
               <div class="sticky-content">
                 <div id="gpt0"></div>
                 <div class="row" id="content_scroll">
-                  <div class="col-md-6 col-sm-6"></div>
-                  <div  class="col-md-6 col-sm-6 text-content-gtp">
+                  <div class="col-md-6 col-sm-12"></div>
+                  <div  class="col-md-6 col-sm-12 text-content-gtp">
                     <div class="vl" style="color: rgba(0, 153, 255, 1)">
                       <table>
                         <th valign="top">
@@ -388,19 +391,22 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12">
-                  <center>
-                     <div  id="myDIV" class="img-wrap-gpt">
-                     <!----<div class="alert">-->
-                        <!--<figure class="swing">-->
-                          <img id="imggpt1" />
+                <div class="col-md-12" style="display: flex;flex-direction: column;">
+                    <div>
+                        <center>
+                            <div  id="myDIV" class="img-wrap-gpt">
+                            <!----<div class="alert">-->
+                               <!--<figure class="swing">-->
+                                <center><img id="imggpt1" /></center>
 
-                        <!--</figure>-->
-                       <div></div>
-                      <!--</div>-->
+                               <!--</figure>-->
+                              <div></div>
+                             <!--</div>-->
 
-                   </div>
-                 </center>
+                          </div>
+                        </center>
+                    </div>
+
                  <div class="gtp-po-button">
                   <center>
                       <a style="padding: 10px;" href="#" class="ace-button">Find Out More</a>
@@ -687,8 +693,8 @@ industry reputation.
 
       </section>
       <section id="ace-testimonials-mobile" class="ace-testimonials-mobile">
-        <div class="content-ace about">
-          <div class="wrap-content">
+        <div class="container">
+          <div class="">
             <div class="ace-isi about">
                <div class="row">
             <div>
@@ -717,6 +723,11 @@ industry reputation.
                       <div class="carousel-item @if($i==0) active @endif">
                         <div class="row slider-testimonials">
                         @if($v->video != null)
+                        <div class="col-md-5 col-sm-12">
+
+                            {!! $v->video !!}
+
+                      </div>
                         <div class="col-md-7 col-sm-12">
                             <p style="margin-top:20px">
                               {!! $v->content !!}
@@ -731,11 +742,7 @@ industry reputation.
                             <h5>{{ $v->person }}</h5>
                             <p>{{ $v->position }}</p>
                           </div>
-                          <div class="col-md-5 col-sm-12">
-                            <div class="card">
-                                {!! $v->video !!}
-                            </div>
-                          </div>
+
 
 
 

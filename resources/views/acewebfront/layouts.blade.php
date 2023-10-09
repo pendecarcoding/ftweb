@@ -429,6 +429,27 @@
     </script>
 
     <script type="text/javascript">
+//       let allowScroll = true;
+// let allowKeyboard = true;
+
+// document.addEventListener("keydown", function (e) {
+//   if (allowKeyboard && e.ctrlKey && (e.keyCode == "61" || e.keyCode == "107" || e.keyCode == "173" || e.keyCode == "109" || e.keyCode == "187" || e.keyCode == "189")) {
+//     e.preventDefault();
+//   }
+// });
+
+// document.addEventListener("wheel", function (e) {
+//   if (allowScroll && e.ctrlKey) {
+//     e.preventDefault();
+//   }
+// }, { passive: false });
+
+
+
+        </script>
+
+
+    <script type="text/javascript">
         var scrollnum = 300;
 
         // Get the button
