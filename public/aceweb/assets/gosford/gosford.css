@@ -5,6 +5,51 @@ footer {
 
 
 }
+.color-list-container {
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.list-color-detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 13px;
+}
+
+.list-color-detail img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.img-pattern-option {
+    border: 1px solid transparent;
+    width: 70px;
+    object-fit: cover;
+    height: 70px;
+}
+
+.card-order-header{
+
+        background-color: #333333;
+        border-radius: 0px;
+        color: white;
+
+}
+
+.name-color-list {
+    margin: 2px;
+}
+
+.card-order {
+    z-index: 999;
+    width: 580px;
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+}
 
 .img-ceo{
 
