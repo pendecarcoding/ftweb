@@ -378,7 +378,7 @@ class gosfordController extends Controller
 
    //Two TownColor
    function twotowncolor(Request $r){
-        $data = Twotown::orderby('name_town','asc')->paginate(12);
+        $data = Twotown::orderByRaw('CAST(SUBSTRING(name_town, 8) AS UNSIGNED)')->paginate(12);
         return view('gosford.frontend.twotowncolor.index',compact('data'));
    }
 
@@ -399,7 +399,7 @@ class gosfordController extends Controller
    }
 
    function piping(Request $r){
-    $data = Piping::where('published','Y')->orderby('name_piping','asc')->paginate(12);
+    $data = Piping::where('published','Y')->orderByRaw('CAST(SUBSTRING(name_piping, 8) AS UNSIGNED)')->paginate(12);
     return view('gosford.frontend.piping.index',compact('data'));
    }
 

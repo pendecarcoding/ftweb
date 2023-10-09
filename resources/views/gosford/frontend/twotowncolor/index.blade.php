@@ -39,7 +39,7 @@
                                 <div style="display: flex;flex-direction: row;justify-content: space-between;gap:10px">
 
                                     <div class="card" style="padding: 10px;width:100%"><a
-                                            href="{{ route('gosford.piping') }}" class="menu-href">Stitching</a></div>
+                                            href="{{ route('gosford.piping') }}" class="menu-href">Stitching & Piping</a></div>
                                     <!-- <div class="card" style="padding: 10px;width:100%"><a
                                                 href="{{ route('gosford.emblem') }}" class="menu-href">Logo/Emblem</a></div> -->
                                     <div class="card" style="padding: 10px;width:100%"><a
