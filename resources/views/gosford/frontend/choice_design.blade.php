@@ -61,17 +61,7 @@
                                                         <div class="col-md-6">
                                                         </div>
                                                     </div>
-                                                    <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide4.jpg">
-                                                        <div class="col-md-6">
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="carousel-item ">
-                                                        <img class="section-slider" style="width: 100%;object-fit: cover;    " src="/public/go_system/images/sliderproduct/normalslide5.jpg">
-                                                        <div class="col-md-6">
-                                                        </div>
-                                                    </div>
 
                                             </div>
                                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsd" data-bs-slide="prev">
