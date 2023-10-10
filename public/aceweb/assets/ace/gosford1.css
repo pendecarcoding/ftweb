@@ -2343,9 +2343,8 @@ footer img {
 .ace-achievements .readmore-gtp {
     bottom: 4%;
 }
-
 .ace-testimonials {
-    padding: 60px 0px;
+    padding: 50px 0px;
     background-color: white;
     height: auto;
     position: relative;
@@ -2832,7 +2831,7 @@ footer img {
 }
 
 .about-provider {
-    padding: 60px 0px;
+    padding: 50px 0px;
     height: max-content;
 }
 
