@@ -409,7 +409,7 @@
                     <a href="{{ route('gosford.patterndesign') }}"
                         class="card  card-body border-light  justify-content-between  text-white shadow">
                         <div class="dlab-media dlab-img-overlay1">
-                            <img src="/public/go_system/images/menu/menu_3.png" alt="">
+                            <img style="    border-radius: 10px;" src="/public/go_system/images/menu/menu_3.png" alt="">
                         </div>
                         <div class="title-menu-style">Pattern Design</div>
                     </a>
