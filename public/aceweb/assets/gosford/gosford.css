@@ -15955,6 +15955,24 @@ form.form--basic .mdl-textfield__label {
         line-height: 1.5;
     }
 
+    .header-nav .nav > li .sub-menu {
+        background-color: #ffffff;
+        border: 0px solid #f4f4f4;
+        display: block;
+        left: 5px;
+        top: 42px;
+        list-style: none;
+        margin: 20px 0 0;
+        opacity: 0;
+        padding: 0px;
+        position: absolute;
+        visibility: hidden;
+        width: 161px;
+        z-index: 10;
+        box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
     .header-nav .nav.nav-style > li > a {
         padding: 1px 2px 1px;
         font-size: 14px;
@@ -16582,6 +16600,10 @@ form.form--basic .mdl-textfield__label {
     .space-text-video {
         margin: 24% 45px;
     }
+    .header-nav .nav > li .sub-menu {
+        left: 10px;
+        width: 170px;
+    }
     .font-patner {
         font-size: 16px;
         line-height: 40px;
@@ -16682,6 +16704,23 @@ form.form--basic .mdl-textfield__label {
     ol, ul {
         font-size: 14px;
         line-height: 23px;
+    }
+    .header-nav .nav > li .sub-menu {
+        background-color: #ffffff;
+        border: 0px solid #f4f4f4;
+        display: block;
+        left: 5px;
+        top: 42px;
+        list-style: none;
+        margin: 20px 0 0;
+        opacity: 0;
+        padding: 0px;
+        position: absolute;
+        visibility: hidden;
+        width: 161px;
+        z-index: 10;
+        box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
     }
 }
 
@@ -16809,6 +16848,10 @@ form.form--basic .mdl-textfield__label {
         height: 46px;
         height: auto;
     }
+    .header-nav .nav > li .sub-menu {
+        left: 15px;
+        width: 200px;
+    }
 }
 
 @media screen and (min-width:1440px) {
@@ -16821,6 +16864,24 @@ form.form--basic .mdl-textfield__label {
     .container-sm,
     .container-xl {
         max-width: 1270px;
+    }
+
+    .header-nav .nav > li .sub-menu {
+        background-color: #ffffff;
+        border: 0px solid #f4f4f4;
+        display: block;
+        left: 14px;
+        top: 48px;
+        list-style: none;
+        margin: 20px 0 0;
+        opacity: 0;
+        padding: 0px;
+        position: absolute;
+        visibility: hidden;
+        width: 170px;
+        z-index: 10;
+        box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
     }
 
     .logo-header img,
@@ -16923,6 +16984,7 @@ form.form--basic .mdl-textfield__label {
         text-transform: capitalize;
     }
 
+
     .modal-lg, .modal-xl {
         --bs-modal-width: 1310px;
     }
@@ -16978,14 +17040,15 @@ form.form--basic .mdl-textfield__label {
         background-color: #ffffff;
         border: 0px solid #f4f4f4;
         display: block;
-        left: 0;
+        left: 15px;
+        top: 70px;
         list-style: none;
         margin: 20px 0 0;
         opacity: 0;
         padding: 0px;
         position: absolute;
         visibility: hidden;
-        width: 284px;
+        width: 274px;
         z-index: 10;
         box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1);
         padding: 10px 0;
@@ -17411,6 +17474,12 @@ form.form--basic .mdl-textfield__label {
     }
     .padding-research span {
         font-size: 30px;
+    }
+
+    .header-nav .nav>li .sub-menu {
+        left: 23px;
+        top: 80px;
+        width: 328px;
     }
 }
 
