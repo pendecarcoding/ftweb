@@ -6,6 +6,9 @@ footer {
 
 }
 
+.capital-text {
+    text-transform: uppercase;
+  }
 .img-ceo{
 
     float: right;
