@@ -488,7 +488,7 @@
                 <div class="col-md-12">
                   <div
                     data-aos="fade-up"
-                    class="title-ace aos-init aos-animate"
+                    class="title-ace aos-init aos-animate capital-text"
                   >
                   Company History
                     <span class="h-dash" style="font-weight: bold">—</span>
