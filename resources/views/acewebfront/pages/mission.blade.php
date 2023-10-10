@@ -11,7 +11,7 @@
                     <div style="padding-top: 0px" class="ace-isi about">
                         <div class="row">
                             <div data-aos="fade-up" class="col-md-12">
-                                <div class="title-ace">
+                                <div class="title-ace capital-text">
                                     Vision & Mission
                                     <span class="h-dash" style="font-weight: bold">—</span>
                                 </div>
