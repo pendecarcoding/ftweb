@@ -16878,7 +16878,7 @@ form.form--basic .mdl-textfield__label {
         padding: 0px;
         position: absolute;
         visibility: hidden;
-        width: 170px;
+        width: 200px;
         z-index: 10;
         box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1);
         padding: 10px 0;
@@ -16930,7 +16930,7 @@ form.form--basic .mdl-textfield__label {
         transition: all 0.15s linear;
         color: #777777;
         display: block;
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 400;
         padding: 10px 20px;
         line-height: 20px;
