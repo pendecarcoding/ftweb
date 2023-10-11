@@ -2120,7 +2120,7 @@ footer img {
 
 
 .gtp-solution {
-    padding: 60px 0px;
+    padding: 50px 0px;
     background-image: url("/public/aceweb/assets/img/bg_gos.jpg");
     background-position: center bottom;
     background-size: cover;
@@ -2281,7 +2281,7 @@ footer img {
 }
 
 .gtp-patner {
-    padding: 60px 0px;
+    padding: 50px 0px;
     background-color: #badbff3d;
     height: auto;
     display: inline-table;
@@ -2294,7 +2294,7 @@ footer img {
 .ace-achievements {
     background-color: rgba(67, 70, 75, 1);
     height: max-content;
-    padding: 60px 0px;
+    padding: 50px 0px;
 }
 
 .btn-achievements {
@@ -2528,7 +2528,7 @@ footer img {
 }
 
 .ace-conected {
-    padding: 60px 0px;
+    padding: 50px 0px;
     height: auto;
     position: relative;
     background-color: #f6fdff;
