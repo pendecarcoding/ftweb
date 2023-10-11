@@ -10,7 +10,7 @@
                 <div class="section-head text-left about wrap-content ">
 
 
-                    <h5 class="title-ace">GROUP MILESTONE 2002-2022 <span class="h-dash" style="font-weight: bold">—</span></h5>
+                    <h5 class="title-ace">GROUP MILESTONE<span class="h-dash" style="font-weight: bold">—</span></h5>
 
                 </div>
                 <div class="section-content ">
@@ -32,9 +32,9 @@
 
                                             <div class="dlab-post-text" style="max-height: 100px; position: relative;">
                                                 <!-- @if (file_exists('public/background/go_' . $i . '.png'))
-                                                    <img style="width:100%;max-height: 100px;object-fit: contain;"
-                                                        src="/public/background/go_{{ $i }}.png" alt="">
-                                                @endif -->
+    <img style="width:100%;max-height: 100px;object-fit: contain;"
+                                                            src="/public/background/go_{{ $i }}.png" alt="">
+    @endif -->
                                             </div>
                                         </div>
                                     </div>
