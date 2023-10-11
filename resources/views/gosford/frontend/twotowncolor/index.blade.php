@@ -17,15 +17,16 @@
                             </center>
 
                             <br>
-                            <div class="row">
+                            <div class="row" id="gallery">
                                 @foreach ($data as $i => $v)
-                                    <div class="col-md-2">
+                                    <div class="col-md-2" href="{{ getimage($v->img) }}">
                                         <div class="card towncard">
                                             <!-- <a href="{{ route('gosford.twotowncolor.detail', base64_encode($v->id)) }}" -->
+
                                             <div
                                                 class="card-body">
                                                 <!-- Card content goes here -->
-                                                <img style="width:100%" src="{{ getimage($v->img) }}" alt="">
+                                                <img href="{{ getimage($v->img) }}" style="width:100%" src="{{ getimage($v->img) }}" alt="">
                                                 <p class="card-text center" style="margin-top:10px">{{ $v->name_town }}</p>
                                             </div>
                                         </div>
@@ -53,4 +54,14 @@
             </div>
         </section>
     </main>
+    <script>
+        // Initialize LightGallery
+        lightGallery(document.getElementById('gallery'), {
+        thumbnail: true,
+        download:false
+    });
+
+    </script>
+
 @endsection
+

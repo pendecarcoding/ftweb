@@ -45,7 +45,7 @@
                                 </div>-->
                             </div>
                         </div>
-                        <div data-aos="fade-up" style="margin-top: 40px" class="row aos-init aos-animate">
+                        <div  style="margin-top: 40px" class="row aos-init aos-animate">
                             <!-- @foreach ($data as $i => $v)
                                 <div class="col-md-4">
                                     <a href="{{ url('newsroom/' . $v->slug) }}">
@@ -70,10 +70,10 @@
                             $hasil_kalimat = implode(" ", $duabelas_kata);
                             @endphp
 
-                            <div class="col-md-4 aos-init aos-animate" style="position: relative;margin-top: 10px;">
+                            <div  class="col-md-4 col-sm-12 aos-init aos-animate" style="position: relative;margin-top: 10px;">
 
-                                <div style="position: relative;
-overflow: hidden;" class="card text-center board-director">
+                                <div data-aos="fade-up" style="position: relative;border-radius: 5px;
+overflow: hidden;" class="card  card-news">
 
 <div class="wrap-image-news">
     <img style="height: 100%;width:100%;object-fit: cover;"  @if($v->photos != null) id="dynamic-gallery-demo{{$v->id}}" @endif  src="{{getimage($v->banner)}}">
@@ -81,15 +81,17 @@ overflow: hidden;" class="card text-center board-director">
 
                                     <a href="{{ url('newsroom/' . $v->slug) }}">
                                 <div style="display: flex;flex-direction: column;">
-                                    <p id="title-news">{{ $v->title }} </p>
-                                    <p style="color:#909090;    padding: 5px 20px 5px 20px;text-align: left;font-family: 'Poppins';">{!! $hasil_kalimat !!}</p>
+                                    <p id="title-news" class="capital-title-news">{{ $v->title }} </p>
+                                    <p id="content-news" style="color:#909090;    padding: 5px 20px 5px 20px;text-align: left;font-family: 'Poppins';">{!! $hasil_kalimat !!} ...</p>
 
                                 </div>
-
-                                <div style="display: flex;flex-direction: row;justify-content: space-between; text-align: left;    padding: 10px 20px;font-size: 13px;color: #7f7f7f;margin-bottom: 10px;">
+                            <div class="wrap-date-news">
+                                <div class="date-news">
                                     <div><i class="fa fa-calendar"></i> {{namedate($v->date)}}</div>
                                     <div style="color: #a39e9e;font-weight: bold;"> Read more ></div>
                                 </div>
+                            </div>
+
                             </a>
                                 </div>
 
