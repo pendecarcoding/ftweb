@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\InteriorPart;
 use DB;
-
+//
 class AutomotiveSeatController extends Controller
 {
 
