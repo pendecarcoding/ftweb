@@ -60,6 +60,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="section-content ">
                 <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
                     @foreach($image as $i => $vg)
