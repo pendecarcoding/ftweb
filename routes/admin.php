@@ -80,7 +80,6 @@ use App\Http\Controllers\AutomotiveSeatController;
 
 
 
-
 /*
   |--------------------------------------------------------------------------
   | Admin Routes
@@ -180,14 +179,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
 
 
     });
-
     Route::resource('automotiveseats', AutomotiveSeatController::class);
     Route::controller(AutomotiveSeatController::class)->group(function () {
         Route::get('/automotiveseats/edit/{id}', 'edit')->name('automotiveseats.edit');
         Route::get('/automotiveseats/destroy/{id}', 'destroy')->name('automotiveseats.destroy');
         Route::post('/automotiveseats/published', 'change_status')->name('automotiveseats.published');
     });
-
 
 
     //Two Town Color
