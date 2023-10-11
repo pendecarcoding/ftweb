@@ -64,7 +64,7 @@ footer {
 
 .no-banner {
     position: relative;
-    height: 90px;
+    height: 71px;
     background-color: white;
 }
 
@@ -16983,6 +16983,47 @@ form.form--basic .mdl-textfield__label {
         line-height: 34px;
         text-transform: capitalize;
     }
+    .no-banner {
+        position: relative;
+        height: 98px;
+        background-color: white;
+    }
+    .about-ace {
+        padding: 70px 0px;
+
+    }
+    .about-provider {
+        padding: 70px 0px;
+
+    }
+    .gtp-solution {
+        padding: 70px 0px;
+    }
+    .ace-achievements {
+        padding: 70px 0px;
+    }
+    .ace-testimonials {
+        padding: 70px 0px;
+    }
+    .ace-conected {
+        padding: 70px 0px;
+    }
+    .about-company {
+        padding: 70px 0px;
+    }
+    .gtp-anouncements {
+        padding: 70px 0px;
+    }
+    .content-inner {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .gtp-patner {
+        padding: 70px 0px;
+    }
+    .gtp-download {
+        padding: 70px 0px;
+    }
 
 
     .modal-lg, .modal-xl {
@@ -17004,7 +17045,7 @@ form.form--basic .mdl-textfield__label {
 }
 .itemFullText span {
     font-family: 'Poppins';
-    font-size: 15px;
+    font-size: 18px;
 }
 .card-bod {
     height: 476px;
@@ -17236,6 +17277,51 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:2560px) {
+    .no-banner {
+        position: relative;
+        height: 98px;
+        background-color: white;
+    }
+    .title-ace {
+        font-size: 2em;
+    }
+    .about-ace {
+        padding: 100px 0px;
+
+    }
+    .about-provider {
+        padding: 100px 0px;
+
+    }
+    .gtp-solution {
+        padding: 100px 0px;
+    }
+    .ace-achievements {
+        padding: 100px 0px;
+    }
+    .ace-testimonials {
+        padding: 100px 0px;
+    }
+    .ace-conected {
+        padding: 100px 0px;
+    }
+    .about-company {
+        padding: 100px 0px;
+    }
+    .gtp-anouncements {
+        padding: 100px 0px;
+    }
+    .content-inner {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .gtp-patner {
+        padding: 100px 0px;
+    }
+    .gtp-download {
+        padding: 100px 0px;
+    }
+
     .img-ceo{
 
             float: right;
@@ -17357,12 +17443,10 @@ form.form--basic .mdl-textfield__label {
     .modal-lg, .modal-xl {
         --bs-modal-width: 1680px;
     }
-    .no-banner{
-
-            position: relative;
-            height: 161px;
-            background-color: white;
-
+    .no-banner {
+        position: relative;
+        height: 130px;
+        background-color: white;
     }
     .itemFullText{
 
