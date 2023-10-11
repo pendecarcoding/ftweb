@@ -725,7 +725,8 @@ class AceController extends Controller
                 if($slug=='gosford'){
                     return view('acewebfront.pageweb.gosford');
                 }elseif($slug=='trimex'){
-                    return view('acewebfront.pageweb.trimex');
+                    $image = DB::table('img_automotive_seats')->orderby('shortby','asc')->get();
+                    return view('acewebfront.pageweb.trimex',compact('image'));
                 }
 
 

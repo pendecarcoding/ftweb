@@ -2,7 +2,6 @@
 @section('content')
     <div class="page-content bg-white">
         @include('acewebfront.widget.allbaner')
-
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
@@ -11,7 +10,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="description-service" style="color:#999999;text-align: center;"><!--Ayat-->
+                        <div class="description-service" style="color:#999999;text-align: center;"><!--ayat-->
                         </div>
 
 
@@ -20,30 +19,29 @@
             </div>
             <div class="section-content ">
                 <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
-                    @for ($i = 0; $i < 15; $i++)
-                        @if ($i == 3)
-                        @else
+                    @foreach($image as $i => $vg)
                             <div class="item" style="padding: 20px;">
                                 <div class="dlab-box">
                                     <div class="dlab-media" style="border-radius: 5px;"> <a href="#"><img
                                                 class="img-what-we-do"
-                                                src="/public/page/trimex/assembly/{{ $i }}.png"
+                                                src="{{getimage($vg->img)}}"
                                                 alt=""></a>
                                     </div>
                                     <div class="dlab-info p-a20 text-center bg-gray">
 
                                         <p style="text-transform: capitalize;" class="m-b0"
-                                            class="wwd-text text-capitalize">{{ assemblyimg()[$i] }}</p>
+                                            class="wwd-text text-capitalize">{{$vg->title}}</p>
                                     </div>
                                 </div>
                             </div>
-                        @endif
-                    @endfor
+
+                    @endforeach
 
 
                 </div>
             </div>
         </div>
+
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
