@@ -511,5 +511,13 @@ white-space: nowrap;" id="interior-list">
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/public/go_system/js/getprice.js"></script>
+    <script>
+        // Initialize LightGallery
+        lightGallery(document.getElementById('gallery'), {
+        thumbnail: true,
+        download:false
+        });
+
+        </script>
 
 @endsection
