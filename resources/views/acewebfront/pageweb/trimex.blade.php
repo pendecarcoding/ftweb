@@ -60,6 +60,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="section-content ">
                 <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
                     @for ($i = 0; $i < 15; $i++)
