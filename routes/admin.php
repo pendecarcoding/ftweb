@@ -74,9 +74,10 @@ use App\Http\Controllers\SeatpriceController;
 use App\Http\Controllers\towncolor\TwotowncolorController;
 use App\Http\Controllers\patterndesign\PatterndesignController;
 use App\Http\Controllers\piping\PipingController;
-
-
+use App\Http\Controllers\VehicleseatController;
+use App\Http\Controllers\InteriorpartController;
 use App\Http\Controllers\AutomotiveSeatController;
+
 
 
 
@@ -180,15 +181,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
 
     });
 
-
-
-
     Route::resource('automotiveseats', AutomotiveSeatController::class);
     Route::controller(AutomotiveSeatController::class)->group(function () {
         Route::get('/automotiveseats/edit/{id}', 'edit')->name('automotiveseats.edit');
         Route::get('/automotiveseats/destroy/{id}', 'destroy')->name('automotiveseats.destroy');
         Route::post('/automotiveseats/published', 'change_status')->name('automotiveseats.published');
     });
+
+
 
     //Two Town Color
     Route::resource('twotowncolor', TwotowncolorController::class);
@@ -220,6 +220,21 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/leathergeneric/edit/{id}', 'edit')->name('leathergeneric.edit');
         Route::get('/leathergeneric/destroy/{id}', 'destroy')->name('leathergeneric.destroy');
     });
+
+    //Vehicle Seat
+    Route::resource('vehicleseat', VehicleseatController::class);
+    Route::controller(VehicleseatController::class)->group(function () {
+        Route::get('/vehicleseat/edit/{id}', 'edit')->name('vehicleseat.edit');
+        Route::get('/vehicleseat/destroy/{id}', 'destroy')->name('vehicleseat.destroy');
+    });
+
+    //interior part
+     //Vehicle Seat
+     Route::resource('interiorpart', InteriorpartController::class);
+     Route::controller(InteriorpartController::class)->group(function () {
+         Route::get('/interiorpart/edit/{id}', 'edit')->name('interiorpart.edit');
+         Route::get('/interiorpart/destroy/{id}', 'destroy')->name('interiorpart.destroy');
+     });
 
     //generic leather
 
