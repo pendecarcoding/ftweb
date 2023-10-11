@@ -560,13 +560,15 @@
             });
         });
     });
+
+
 </script>
 
-    <script>
-    // Initialize LightGallery
-    lightGallery(document.getElementById('gallery'), {
-    thumbnail: true,
-    download:false
+<script>
+// Initialize LightGallery
+lightGallery(document.getElementById('gallery'), {
+thumbnail: true,
+download:false
 });
 
 </script>
