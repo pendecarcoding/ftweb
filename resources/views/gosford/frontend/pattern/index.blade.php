@@ -33,9 +33,10 @@
                                         </div>
                                     </div>
                                 @endforeach
-                                <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
+
 
                             </div>
+                            <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
 
                             <div style="text-align: center;padding: 20px 0px;">
                                 <h2>Other Product Option</h2>
