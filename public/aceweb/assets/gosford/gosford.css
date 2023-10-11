@@ -6669,6 +6669,7 @@ _:-ms-input-placeholder {
 }
 
 .towncard {
+    cursor: pointer;
     margin: 20px 0px;
 }
 
