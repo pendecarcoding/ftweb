@@ -28,7 +28,7 @@
                                                 class="card-body">
                                                 <!-- Card content goes here -->
                                                 <img style="width:100%" src="{{ getimage($v->img) }}" alt="">
-                                                <p class="card-text center" style="margin-top:10px">{{ $v->name_town }}</p>
+                                                <p class="card-text center" style="margin-top: 11px;">{{ $v->name_town }}</p>
                                             </div>
                                         </div>
                                     </div>

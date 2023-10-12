@@ -118,40 +118,6 @@
                                     </div>
                                 </div>
                                 <br>
-                                <div style="display: flex;flex-direction: column;  justify-content: space-between;    gap: 20px">
-                                    <div>
-                                        <div>
-                                            <h6 style="color:gray">Interior Parts :</h6>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="list-leather" style="
-                                        display: flex;
-                                        flex-wrap: wrap;
-                                        position: relative;
-                                        white-space: nowrap;">
-
-                                          <!-- <div class="form-check">
-                                            <input checked class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                              Seat Cover
-                                            </label>
-                                          </div> -->
-
-                                          @foreach($interior as $i => $vinterior)
-                                          <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="{{$vinterior->id_interior}}" id="checkbox{{$i}}" onclick="interiorSelected(this)">
-                                            <label class="form-check-label" for="checkbox{{$i}}">
-                                                {{$vinterior->name_interior}}
-                                            </label>
-                                        </div>
-
-                                          @endforeach
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
                                 <div style="display: flex;flex-direction: column;  justify-content: space-between;">
                                     <div>
                                         <div>
@@ -249,6 +215,40 @@
 
 
 
+                                <br>
+                                <div style="display: flex;flex-direction: column;  justify-content: space-between;    gap: 20px">
+                                    <div>
+                                        <div>
+                                            <h6 style="color:gray">Interior Parts :</h6>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="list-leather" style="
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        position: relative;
+                                        white-space: nowrap;">
+
+                                          <!-- <div class="form-check">
+                                            <input checked class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              Seat Cover
+                                            </label>
+                                          </div> -->
+
+                                          @foreach($interior as $i => $vinterior)
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="{{$vinterior->id_interior}}" id="checkbox{{$i}}" onclick="interiorSelected(this)">
+                                            <label class="form-check-label" for="checkbox{{$i}}">
+                                                {{$vinterior->name_interior}}
+                                            </label>
+                                        </div>
+
+                                          @endforeach
+
+                                        </div>
+                                    </div>
+                                </div>
 
 <br>
                                 <div style="display: flex;flex-direction: column;  justify-content: space-between;">

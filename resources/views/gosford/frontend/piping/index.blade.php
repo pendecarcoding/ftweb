@@ -27,7 +27,7 @@
                                             <div class="card-body">
                                                 <!-- Card content goes here -->
                                                 <img style="width:100%" src="{{ getimage($v->img) }}" alt="">
-                                                <p class="card-text center" style="margin-top:2px;color:black">
+                                                <p class="card-text center" style="margin-top: 11px;color:black">
                                                     {{ $v->name_piping }}</p>
                                                 </div>
                                         </div>
