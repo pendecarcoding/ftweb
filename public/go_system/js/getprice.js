@@ -188,10 +188,19 @@ function CoverageSelected(elemento,idcoverage){
   function updateSelectionMode() {
     const singleColorMode = document.getElementById('flexRadioDefault1').checked;
     selectedColors = singleColorMode ? [] : selectedColors.slice(0, 2);
-    updateSelectedDetails();
+    $('#toggleColor').show();
+    document.getElementById('selectedColors').innerHTML = '';
+    document.querySelectorAll('.color-column-list').forEach(item => {
+        item.classList.remove('selected');
+    });
+    selectedColors = [];
+    colorPrice = 0;
+    document.getElementById('selectedPrice').innerText = 'RM 0.00';
+    updateSubmitButtonState();
+    // updateSelectedDetails();
   }
 
-  function selectColor(element, name, img, price,hexColor) {
+  function selectColor(element, name, img, price, hexColor) {
     const singleColorMode = document.getElementById('flexRadioDefault1').checked;
 
     if (singleColorMode) {
@@ -210,27 +219,42 @@ function CoverageSelected(elemento,idcoverage){
         if (selectedColors.length < 2) {
           selectedColors.push({ name, img, price });
           colorPrice += price;
+        }else{
+            alert("You have exceeded the maximum color selection limit. To choose another color, click on one of the selected colors to delete it, then you can choose another color");
         }
       }
-    }
 
+    }
     updateSelectedDetails();
   }
 
   function updateSelectedDetails() {
+    // Only remove the border if it's in single color mode
+    const singleColorMode = document.getElementById('flexRadioDefault1').checked;
 
+    if (singleColorMode) {
+      document.querySelectorAll('.color-column-list').forEach(item => {
+        item.classList.remove('selected');
+      });
+    }
 
-    // Remove the border from all elements
-    document.querySelectorAll('.color-column-list').forEach(item => {
-      item.classList.remove('selected');
-    });
-
-    // Add border to the selected elements
+    // Loop through the selectedColors and set the selected class and handle deselection
     selectedColors.forEach(item => {
       item.img = item.img || ''; // Handle cases where img is undefined
       const element = document.querySelector(`[src='${item.img}']`);
       if (element) {
-        element.parentElement.classList.add('selected');
+        // Check if this color is already selected
+        const isColorSelected = element.parentElement.classList.contains('selected');
+
+        if (isColorSelected) {
+          // If color is already selected, deselect it and remove from selectedColors
+          element.parentElement.classList.remove('selected');
+          selectedColors = selectedColors.filter(color => color.img !== item.img);
+          colorPrice -= item.price;
+        } else {
+          // If color is not selected, add the selected class
+          element.parentElement.classList.add('selected');
+        }
       }
     });
 
@@ -238,16 +262,18 @@ function CoverageSelected(elemento,idcoverage){
     const selectedColorsInfo = selectedColors.map(colorItem => {
       return `
         <div class='list-color-detail'>
-        <div style='display:flex;gap:13px'><img src="${colorItem.img}" alt="${colorItem.name}">
-        <div class='name-color-list'>${colorItem.name}</div></div>
-        <div style='display:flex;gap:13px'>
-          <div id="editcolor" onclick='editcolor()' style='cursor:pointer' class='name-color-list'><i class='fa fa-pencil'></i> <u>Edit</u></div>
-          <div class='name-color-list'>+RM${colorItem.price}
-        </div>
-        </div>
+          <div style='display:flex;gap:13px'>
+            <img src="${colorItem.img}" alt="${colorItem.name}">
+            <div class='name-color-list'>${colorItem.name}</div>
+          </div>
+          <div style='display:flex;gap:13px'>
+            <div id="editcolor" onclick='editcolor()' style='cursor:pointer' class='name-color-list'><i class='fa fa-pencil'></i> <u>Edit</u></div>
+            <div class='name-color-list'>+RM${colorItem.price}</div>
+          </div>
         </div>
       `;
     });
+
     if (selectedColors.length > 0) {
       $('#toggleColor').hide();
       document.getElementById('selectedColors').innerHTML = selectedColorsInfo.join(' ');

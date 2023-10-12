@@ -5,6 +5,21 @@ footer {
 
 
 }
+
+.color-column-list.selected img{
+ border: solid brown;
+}
+.form-check-label {
+    color: gray;
+    font-size: 13.5px;
+}
+
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 0.2em;
+    margin-bottom: 0.125rem;
+}
 .color-list-container {
     margin: 20px 0px;
     display: flex;

@@ -310,10 +310,13 @@ white-space: nowrap;" id="interior-list">
                                         <div id="namecolor" style="font-weight: bold;color: #555555;">{{$vcolor->name}}</div>
                                         <div style="font-size: smaller;">{{$vcolor->code}}</div>
                                         <div class="extra-price-color">@if($vcolor->extraprice > 0) +RM{{$vcolor->extraprice}} @endif</div>
+
                                     </div>
 
 
                                 @endforeach
+
+
                                 </div>
 
 
