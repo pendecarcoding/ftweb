@@ -10,7 +10,7 @@
 .lg-outer .lg-object {
     display: inline-block;
     vertical-align: middle;
-    max-width: 95%;
+    max-width: 100%;
     max-height: 100%;
     width: 900px;
     object-fit: cover;
@@ -21,7 +21,7 @@
     .lg-outer .lg-object {
     display: inline-block;
     vertical-align: middle;
-    max-width: 95%;
+    max-width: 100%;
     max-height: 100%;
     width: 1230px;
     object-fit: cover;
