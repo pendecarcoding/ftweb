@@ -200,24 +200,26 @@ function CoverageSelected(elemento,idcoverage){
     // updateSelectedDetails();
   }
 
-  function selectColor(element, name, img, price, hexColor) {
+
+  function selectColor(element, name, img, price,hexColor,code) {
     const singleColorMode = document.getElementById('flexRadioDefault1').checked;
 
     if (singleColorMode) {
       // Single color mode, allow only one selection
-      selectedColors = [{ name, img, price }];
+      selectedColors = [{ name, img, price,code }];
       document.getElementById('colorimage').style.backgroundColor = hexColor;
       colorPrice = price;
+      updateSelectedDetails();
     } else {
       // Two-tone color mode, allow up to two selections
-      if (selectedColors.find(item => item.name === name)) {
+      if (selectedColors.find(item => item.code === code)) {
         // Deselect if already selected
-        selectedColors = selectedColors.filter(item => item.name !== name);
+        selectedColors = selectedColors.filter(item => item.code !== code);
         colorPrice -= price;
       } else {
         // Select if not already selected and there are less than 2 selected
         if (selectedColors.length < 2) {
-          selectedColors.push({ name, img, price });
+          selectedColors.push({ name, img, price,code });
           colorPrice += price;
         }else{
             alert("You have exceeded the maximum color selection limit. To choose another color, click on one of the selected colors to delete it, then you can choose another color");
@@ -239,8 +241,9 @@ function CoverageSelected(elemento,idcoverage){
     }
 
     // Loop through the selectedColors and set the selected class and handle deselection
+
     selectedColors.forEach(item => {
-      item.img = item.img || ''; // Handle cases where img is undefined
+      item.code = item.code || ''; // Handle cases where img is undefined
       const element = document.querySelector(`[src='${item.img}']`);
       if (element) {
         // Check if this color is already selected
