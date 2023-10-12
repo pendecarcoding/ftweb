@@ -141,6 +141,22 @@
     <div id="chat" class="wa-floating-button" onclick="toggleChat()">
         <span class="whatsapp-icon"><img id="chat-icon" src="/public/assets/img/chat.png"></span>
     </div>
+    <!-- <div id="chat" class="wa-floating-button" >
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6527a5f0eb150b3fb9a0a452/1hche0dq4';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+            </script>
+    </div> -->
+    <!--Start of Tawk.to Script-->
+
+    <!--End of Tawk.to Script-->
     <div id="pop-up-chat" class="body-chat" style="display: none;">
 
         <div class="card">
@@ -163,7 +179,7 @@
 
                 </div>
                 <div class="card-footer">
-                    <div id="alert-message-popup">
+                    <div style="display:none" id="alert-message-popup">
                         <div class="alert alert-success"> <a href="#" class="close" data-bs-dismiss="alert" aria-label="close">×</a> <strong>Success!</strong> your message has been sent. </div>
                     </div>
                     <button type="submit" style="width:100%;background-color: #F80814;color:white" class="btn">

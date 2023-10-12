@@ -19,6 +19,7 @@
                             <br>
                             <div class="row" id="gallery">
                                 @foreach ($data as $i => $v)
+
                                     <div class="col-md-2" href="{{ getimage($v->img) }}">
                                         <div class="card towncard">
                                             <!-- <a href="{{ route('gosford.twotowncolor.detail', base64_encode($v->id)) }}" -->
@@ -26,14 +27,15 @@
                                             <div
                                                 class="card-body">
                                                 <!-- Card content goes here -->
-                                                <img href="{{ getimage($v->img) }}" style="width:100%" src="{{ getimage($v->img) }}" alt="">
+                                                <img style="width:100%" src="{{ getimage($v->img) }}" alt="">
                                                 <p class="card-text center" style="margin-top:10px">{{ $v->name_town }}</p>
                                             </div>
                                         </div>
                                     </div>
                                 @endforeach
-                                <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
+
                             </div>
+                            <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
                             <div style="text-align: center;padding: 20px 0px;">
                                 <h2>Other Product Option</h2>
                                 <br>
