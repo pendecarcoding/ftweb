@@ -19,33 +19,25 @@
                                 <h2>Stitching & Piping</h2>
                             </center>
                             <br>
-                            <div class="row">
+                            <div class="row" id="gallery">
 
                                 @foreach ($data as $i => $v)
-                                    <div class="col-md-3">
+                                    <div class="col-md-2" href="{{ getimage($v->img) }}">
                                         <div class="card towncard">
                                             <div class="card-body">
                                                 <!-- Card content goes here -->
                                                 <img style="width:100%" src="{{ getimage($v->img) }}" alt="">
-                                                <div class="card-body d-flex flex-column">
-                                                    <!-- <p class="category-product">ALL CAR</p> -->
-                                                    <p class="name-product">{{ $v->name_piping }}</p>
-                                                    <!-- <h6 class="price-product">RM {{ $v->price }}</h6> -->
+                                                <p class="card-text center" style="margin-top:2px;color:black">
+                                                    {{ $v->name_piping }}</p>
                                                 </div>
-                                                <a style="cursor: none;" href="#">
-                                                    <!-- <a href="{{ route('gosford.piping.detail', base64_encode($v->id)) }}"> -->
-                                                    <!-- <div class="choice-design"> -->
-                                                        <!-- <center>Choose this design</center> -->
-                                                    <!-- </div> -->
-                                                </a>
-                                            </div>
                                         </div>
                                     </div>
                                 @endforeach
 
-                                <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
+
 
                             </div>
+                            <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
 
                             <div style="text-align: center;padding: 20px 0px;">
                                 <h2>Other Product Option</h2>
@@ -76,4 +68,12 @@
                                     </div> -->
 
     </main>
+    <script>
+        // Initialize LightGallery
+        lightGallery(document.getElementById('gallery'), {
+        thumbnail: true,
+        download:false
+    });
+
+    </script>
 @endsection
