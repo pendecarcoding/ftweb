@@ -5,13 +5,7 @@ footer {
 
 
 }
-.lg-img-wrap{
-    padding:50px;
-}
-.lg-img-wrap img{
-    width: 100%;
-    height: 100vh;
-}
+
 
 .color-column-list.selected img{
  border: solid brown;

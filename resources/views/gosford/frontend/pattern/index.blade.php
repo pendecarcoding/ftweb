@@ -3,6 +3,34 @@
     <meta property="og:image" content="{{ uploaded_asset(get_setting('site_icon')) }}" />
 @endsection
 @section('content')
+<style>
+    .lg-img-wrap{
+    padding:50px;
+}
+.lg-outer .lg-object {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 95%;
+    max-height: 100%;
+    width: 900px;
+    object-fit: cover;
+    height: auto;
+    position: relative;
+}
+@media screen and (min-width:1920px) {
+    .lg-outer .lg-object {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 95%;
+    max-height: 100%;
+    width: 1230px;
+    object-fit: cover;
+    height: auto;
+    position: relative;
+}
+
+}
+</style>
     <main>
         @include('acewebfront.widget.allbaner')
 
