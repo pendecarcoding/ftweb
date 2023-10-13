@@ -428,6 +428,10 @@
 
                         $("#alertpatner").show();
                         $("#requestpatnerform")[0].reset();
+                        console.log(response);
+                    }
+                    else{
+                        console.log(response);
                     }
                 },
                 complete: function() {

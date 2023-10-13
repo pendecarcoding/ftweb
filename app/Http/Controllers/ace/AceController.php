@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\ace;
 use App\Http\Controllers\Controller;
+use App\Mail\ForCustomerMailManager;
 use App\Models\LeatherType;
 use App\Models\TypeCar;
 use App\Models\TypeLeather;
@@ -868,10 +869,22 @@ class AceController extends Controller
         ];
         try {
             Patnerrequest::insert($data);
-            $msg = "success";
-            return $msg;
+            $encodedEmail = htmlentities($r->email);
+            $array['subject'] = $r->subject;
+            $array['from']    = env('MAIL_FROM_ADDRESS');
+            $array['dear']    = "Dear Customer Support";
+            $array['opening'] = "There is someone who is interested in becoming a partner with your company, here are the details below:";
+            $array['content'] = 'Name : '.$r->name.' <br> Email : '.$encodedEmail.'<br> Message : '.$r->message;
+            $array['email']   = $r->email;
+            // Define the BCC recipients
+            $bccRecipients = getccemail();
+            //email to Customer Support
+            Mail::bcc($bccRecipients)  // Add BCC recipients
+                ->queue(new ForCustomerMailManager($array));
+                $msg = "success";
+                return $msg;
         } catch (\Throwable $th) {
-            return $th->getmessage;
+            return $th->getmessage();
         }
     }
 

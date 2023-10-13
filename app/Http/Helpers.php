@@ -403,6 +403,11 @@ function getpdf($id){
 
 }
 
+function getccemail(){
+   $data = DB::table('cc_email')->select('email')->get();
+   return $data;
+}
+
 function getContactByDevision($id){
     try {
         $data = DB::table('contacts')->where('devision',$id)->get();

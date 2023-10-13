@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\gosford;
 use App\Http\Controllers\Controller;
+use App\Mail\ForCustomerMailManager;
 use App\Models\Patterndesign;
 use Auth;
 use Hash;
@@ -454,6 +455,8 @@ class gosfordController extends Controller
    function detailproduct(Request $r){
     return view('gosford.frontend.product.detail_product');
    }
+
+
 
 
 
