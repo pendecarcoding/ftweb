@@ -977,8 +977,9 @@ industry reputation.
                           name="message"
                           class="form-control"
                           required
+                          placeholder="Message *"
                         >
-Message *</textarea
+</textarea
                         >
                       </div>
                       <div class="form-group">
