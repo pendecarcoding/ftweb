@@ -69,6 +69,8 @@ Route::prefix('product_project')->group(function (){
         Route::get('/gosford/f/infoorder/{id}', 'infoorder')->name('gosford.order.infoorder');
         Route::patch('/gosford/f/inquiryorder/update/{id}', 'updateinquiryorder')->name('gosford.order.updateinquiry');
 
+
+
     });
 });
 
