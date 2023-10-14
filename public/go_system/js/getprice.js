@@ -11,6 +11,7 @@
     var Total = 0;
     var Priceseat = 0;
     var Priceinterior = 0;
+    var itemcode = 0;
     var colorJsonArray;
     var selectedInteriors = [];
 
@@ -205,24 +206,28 @@ function CoverageSelected(elemento,idcoverage){
     const singleColorMode = document.getElementById('flexRadioDefault1').checked;
 
     if (singleColorMode) {
+        element.classList.add('selected');
       // Single color mode, allow only one selection
       selectedColors = [{ name, img, price,code }];
       document.getElementById('colorimage').style.backgroundColor = hexColor;
       colorPrice = price;
-      updateSelectedDetails();
+      if (selectedColors.find(item => item.code === code)) {
+      }
     } else {
       // Two-tone color mode, allow up to two selections
       if (selectedColors.find(item => item.code === code)) {
         // Deselect if already selected
+
         selectedColors = selectedColors.filter(item => item.code !== code);
         colorPrice -= price;
+        element.classList.toggle('selected');
       } else {
         // Select if not already selected and there are less than 2 selected
         if (selectedColors.length < 2) {
           selectedColors.push({ name, img, price,code });
           colorPrice += price;
         }else{
-            alert("You have exceeded the maximum color selection limit. To choose another color, click on one of the selected colors to delete it, then you can choose another color");
+            maximumselcted();
         }
       }
 
@@ -230,14 +235,66 @@ function CoverageSelected(elemento,idcoverage){
     updateSelectedDetails();
   }
 
+  function  maximumselcted() {
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-danger',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+    })
+
+    swalWithBootstrapButtons.fire({
+        title: 'Attention',
+        text: "You have exceeded the maximum color selection limit. To choose another color, click on one of the selected colors to delete it, then you can choose another color",
+        icon: 'warning',
+        showCancelButton: false,
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+            result.dismiss === Swal.DismissReason.cancel
+        } else if (
+            /* Read more about handling dismissals below */
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            // swalWithBootstrapButtons.fire(
+            //     'Cancelled',
+            //     'Your imaginary file is safe :)',
+            //     'error'
+            // )
+        }
+    })
+
+}
+
   function updateSelectedDetails() {
     // Only remove the border if it's in single color mode
     const singleColorMode = document.getElementById('flexRadioDefault1').checked;
-
     if (singleColorMode) {
-      document.querySelectorAll('.color-column-list').forEach(item => {
-        item.classList.remove('selected');
-      });
+
+        selectedColors.forEach(item => {
+            if (itemcode === 0) {
+                selectedColors.forEach(item => {
+                    itemcode = item.code;
+                     document.querySelectorAll('.color-column-list').forEach(item => {
+                            item.classList.remove('selected');
+                        });
+                });
+            }else if(itemcode === item.code){
+
+            }
+            else {
+                document.querySelectorAll('.color-column-list').forEach(item => {
+                    item.classList.remove('selected');
+                });
+                itemcode = item.code;
+            }
+
+        });
+
     }
 
     // Loop through the selectedColors and set the selected class and handle deselection
@@ -315,8 +372,8 @@ function CoverageSelected(elemento,idcoverage){
     if (selectedImage) {
         toggleDesign.classList.add('selected');
         $('#toggleDesign').hide();
-        $('#normalleather').hide();
-        $('#changecolor').show();
+        $('#normalleather').show();
+        $('#changecolor').hide();
 
         document.getElementById('baseimage').src = baseimage;
         document.getElementById('colorimage').src = colorimage;
