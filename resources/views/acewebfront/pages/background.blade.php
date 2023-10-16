@@ -27,10 +27,10 @@
                         $maxWords = 4; // Maximum 4 words for preview
                     @endphp
                     @if ($words > $maxWords)
-                        <div id="content-{{ $i }}">
+                        <div class="h5-milestone" id="content-{{ $i }}">
                             {!! implode(' ', array_slice(str_word_count($v->content, 1), 0, $maxWords)) !!}... <span onclick="toggleReadMore({{ $i }})">Read more</span>
                         </div>
-                        <div id="full-content-{{ $i }}" style="display: none;">
+                        <div class="h5-milestone" id="full-content-{{ $i }}" style="display: none;">
                             {!! $v->content !!}
                             <span onclick="toggleReadLess({{ $i }})">Read less</span>
                         </div>
