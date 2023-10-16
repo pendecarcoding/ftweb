@@ -24,15 +24,15 @@
                     @php
                         // Count the number of words
                         $words = str_word_count(strip_tags($v->content));
-                        $maxWords = 4; // Maximum 4 words for preview
+                        $maxWords = 11; // Maximum 4 words for preview
                     @endphp
                     @if ($words > $maxWords)
                         <div class="h5-milestone" id="content-{{ $i }}">
-                            {!! implode(' ', array_slice(str_word_count($v->content, 1), 0, $maxWords)) !!}... <span onclick="toggleReadMore({{ $i }})">Read more</span>
+                            {!! implode(' ', array_slice(str_word_count($v->content, 1), 0, $maxWords)) !!}... <span style="cursor: pointer;" onclick="toggleReadMore({{ $i }})">Read more</span>
                         </div>
                         <div class="h5-milestone" id="full-content-{{ $i }}" style="display: none;">
                             {!! $v->content !!}
-                            <span onclick="toggleReadLess({{ $i }})">Read less</span>
+                            <span style="cursor: pointer;" onclick="toggleReadLess({{ $i }})">Read less</span>
                         </div>
                     @else
                         {!! $v->content !!}
@@ -78,10 +78,10 @@
                     var words = content.textContent.trim().split(/\s+/).filter(function(word) {
                         return word.trim() !== '';
                     });
-                    var maxWords = 4;
+                    var maxWords = 11;
                     if (words.length > maxWords) {
-                        content.innerHTML = words.slice(0, maxWords).join(' ') + '... <span onclick="toggleReadMore({{ $i }})">Read more</span>';
-                        fullContent.innerHTML += ' <span onclick="toggleReadLess({{ $i }})"></span>';
+                        content.innerHTML = words.slice(0, maxWords).join(' ') + '... <span style="cursor: pointer;" onclick="toggleReadMore({{ $i }})">Read more</span>';
+                        fullContent.innerHTML += ' <span style="cursor: pointer;" onclick="toggleReadLess({{ $i }})"></span>';
                     }
                 }
             @endforeach
