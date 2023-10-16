@@ -48,43 +48,45 @@
     </div>
 @endforeach
 
-<script>
-    // Function to toggle "Read more"
-    function toggleReadMore(index) {
-        document.getElementById('content-' + index).style.display = 'none';
-        document.getElementById('full-content-' + index).style.display = 'block';
-    }
 
-    // Function to toggle "Read less"
-    function toggleReadLess(index) {
-        document.getElementById('content-' + index).style.display = 'block';
-        document.getElementById('full-content-' + index).style.display = 'none';
-    }
-
-    // Automatically apply "Read more" for content exceeding 4 words
-    window.onload = function() {
-        @foreach($data as $i => $v)
-            var content = document.getElementById('content-{{ $i }}');
-            var fullContent = document.getElementById('full-content-{{ $i }}');
-            if (content && fullContent) {
-                var words = content.textContent.trim().split(/\s+/).filter(function(word) {
-                    return word.trim() !== '';
-                });
-                var maxWords = 4;
-                if (words.length > maxWords) {
-                    content.innerHTML = words.slice(0, maxWords).join(' ') + '... <span onclick="toggleReadMore({{ $i }})">Read more</span>';
-                    fullContent.innerHTML += ' <span onclick="toggleReadLess({{ $i }})"></span>';
-                }
-            }
-        @endforeach
-    };
-</script>
 
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <script>
+        // Function to toggle "Read more"
+        function toggleReadMore(index) {
+            document.getElementById('content-' + index).style.display = 'none';
+            document.getElementById('full-content-' + index).style.display = 'block';
+        }
+
+        // Function to toggle "Read less"
+        function toggleReadLess(index) {
+            document.getElementById('content-' + index).style.display = 'block';
+            document.getElementById('full-content-' + index).style.display = 'none';
+        }
+
+        // Automatically apply "Read more" for content exceeding 4 words
+        window.onload = function() {
+            @foreach($data as $i => $v)
+                var content = document.getElementById('content-{{ $i }}');
+                var fullContent = document.getElementById('full-content-{{ $i }}');
+                if (content && fullContent) {
+                    var words = content.textContent.trim().split(/\s+/).filter(function(word) {
+                        return word.trim() !== '';
+                    });
+                    var maxWords = 4;
+                    if (words.length > maxWords) {
+                        content.innerHTML = words.slice(0, maxWords).join(' ') + '... <span onclick="toggleReadMore({{ $i }})">Read more</span>';
+                        fullContent.innerHTML += ' <span onclick="toggleReadLess({{ $i }})"></span>';
+                    }
+                }
+            @endforeach
+        };
+    </script>
 
     <script>
         $(document).ready(function() {
