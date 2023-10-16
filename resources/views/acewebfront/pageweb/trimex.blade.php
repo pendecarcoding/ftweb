@@ -88,7 +88,7 @@
                     <div class="section-head text-left space-text-video">
                         <!-- <h2 class="text-capitalize"
                             style="color: rgb(255, 255, 255);font-family: 'Poppins';font-weight: bold;">PARTNER</h2> -->
-                        <h2 style="color: rgb(255, 255, 255);font-family: 'Poppins';">Automotive Covers Manufacturing Plant</h2>
+                        <h2 style="color: rgb(255, 255, 255);font-family: 'Poppins';">Automotive Seat Manufacturing Plant</h2>
                         <!-- <p class="font-patner">
                             Leather car seats are a crucial element in modern automobiles for enhancing the driving
                             experience and productivity. These seats provide outstanding comfort and support, allowing
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-sm-12 col-lg-6 m-b30">
                     <div class="video-box">
-                        <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/WEQDCxT6RFY"
+                        <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/ujKY5IC6GsQ"
                             title="Feytech, Kulim" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>

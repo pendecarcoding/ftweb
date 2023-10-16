@@ -8,7 +8,7 @@
         <section class="pt-5 pb-5">
             <div class="container">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Manufacturing of Automotive Covers</h2>
+                    <h2 class="text-capitalize">Manufacturing Of Automotive Covers</h2>
 
                 </div>
                 <div class="row">
@@ -446,7 +446,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-6 m-b30">
                             <div class="video-box" style="padding: 50px 0px;">
-                                <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/ujKY5IC6GsQ" title="Gosford, Johor Bahru" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/WEQDCxT6RFY" title="Gosford, Johor Bahru" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                             </div>
                         </div>
