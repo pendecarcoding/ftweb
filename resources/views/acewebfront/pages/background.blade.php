@@ -20,7 +20,7 @@
         <div class="blog-post latest-blog-1 date-style-3 skew-date" style="display: flex; flex-direction: column;">
             <div class="dlab-post-media img-bg-mil-wrap"><img style="border-radius: 12px;" src="{{ getimage($v->img) }}" alt=""></div>
             <div class="dlab-post-info p-t20" style="padding: 20px;">
-                <div>
+                <div class="h5-milestone">
                     @php
                         // Count the number of words
                         $words = str_word_count(strip_tags($v->content));
