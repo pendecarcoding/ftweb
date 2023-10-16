@@ -25,13 +25,13 @@
                         <div data-aos="fade-up" class="card-vmm" style="margin-top: 20px;">
                             <div>
                                 <h1>Vision</h1>
-                                <p>To become a world class automotive parts and service provider.</p>
+                                <p>To become a world class automotive cover and seat manufacturer</p>
                             </div>
                             <br>
                             <br>
                             <div>
                                 <h1>Mission</h1>
-                                <p>By leverage our capabilities create value added solution to customers.</p>
+                                <p>Leveraging on our capabilities to provide quality products that meet our customer needs</p>
                             </div>
                         </div>
 
