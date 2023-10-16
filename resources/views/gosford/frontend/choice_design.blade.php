@@ -8,7 +8,7 @@
         <section class="pt-5 pb-5">
             <div class="container">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Manufacturing of Automotive Covers</h2>
+                    <h2 class="text-capitalize">Manufacturing Of Automotive Covers</h2>
 
                 </div>
                 <div class="row">
