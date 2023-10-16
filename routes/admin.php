@@ -7,6 +7,7 @@ use App\Http\Controllers\AttributeController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PolicyController;
+use App\Http\Controllers\MilestoneController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\BusinessSettingsController;
 use App\Http\Controllers\CarrierController;
@@ -625,6 +626,17 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
           Route::get('/data-policy/destroy/{id}', 'destroy')->name('data-policy.destroy');
           Route::get('/data-policy/edit/{id}', 'edit')->name('data-policy.edit');
           Route::patch('/data-policy/update/{id}', 'update')->name('data-policy.update');
+     });
+
+     Route::resource('milestone',MilestoneController::class);
+      Route::controller(MilestoneController::class)->group(function () {
+          Route::get('/data-milestone', 'index')->name('milestone.index');
+          Route::post('/data-milestone/published', 'change_status')->name('milestone.published');
+          Route::get('/data-milestone/create', 'create')->name('milestone.create');
+          Route::post('/data-milestone/store', 'store')->name('milestone.store');
+          Route::get('/data-milestone/destroy/{id}', 'destroy')->name('milestone.destroy');
+          Route::get('/data-milestone/edit/{id}', 'edit')->name('milestone.edit');
+          Route::patch('/data-milestone/update/{id}', 'update')->name('milestone.update');
      });
 
 
