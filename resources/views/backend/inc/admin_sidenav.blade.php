@@ -837,7 +837,14 @@
                         </a>
                         <ul class="aiz-side-nav-list level-2">
 
-
+                            @can('view_policy')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('milestone.index') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['milestone.create', 'milestone.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Milestone') }}</span>
+                                </a>
+                            </li>
+                            @endcan
                             @can('view_policy')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('data-policy.index') }}"
