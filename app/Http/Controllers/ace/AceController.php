@@ -150,7 +150,8 @@ class AceController extends Controller
             case 'vision_mission':
                 return view('acewebfront.pages.mission');
             case 'company_milestone':
-                return view('acewebfront.pages.background');
+                $data = DB::table('milestones')->orderby('year','asc')->get();
+                return view('acewebfront.pages.background',compact('data'));
             break;
             case 'Technical & Development':
             $data        = Research::all();
