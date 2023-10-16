@@ -24,7 +24,7 @@
                     @php
                         // Count the number of words
                         $words = str_word_count(strip_tags($v->content));
-                        $maxWords = 10; // Maximum 4 words for preview
+                        $maxWords = 11; // Maximum 4 words for preview
                     @endphp
                     @if ($words > $maxWords)
                         <div class="h5-milestone" id="content-{{ $i }}">
@@ -78,7 +78,7 @@
                     var words = content.textContent.trim().split(/\s+/).filter(function(word) {
                         return word.trim() !== '';
                     });
-                    var maxWords = 10;
+                    var maxWords = 11;
                     if (words.length > maxWords) {
                         content.innerHTML = words.slice(0, maxWords).join(' ') + '... <span style="cursor: pointer;" onclick="toggleReadMore({{ $i }})">Read more</span>';
                         fullContent.innerHTML += ' <span style="cursor: pointer;" onclick="toggleReadLess({{ $i }})"></span>';
