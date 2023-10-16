@@ -6,6 +6,67 @@ footer {
 
 }
 
+
+.color-column-list.selected img{
+ border: solid brown;
+}
+.form-check-label {
+    color: gray;
+    font-size: 13.5px;
+}
+
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 0.2em;
+    margin-bottom: 0.125rem;
+}
+.color-list-container {
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.list-color-detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 13px;
+}
+
+.list-color-detail img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.img-pattern-option {
+    border: 1px solid transparent;
+    width: 70px;
+    object-fit: cover;
+    height: 70px;
+}
+
+.card-order-header{
+
+        background-color: #333333;
+        border-radius: 0px;
+        color: white;
+
+}
+
+.name-color-list {
+    margin: 2px;
+}
+
+.card-order {
+    z-index: 999;
+    width: 580px;
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+}
+
 .card-news {
     cursor: pointer;
     height: 388px;
@@ -106,6 +167,69 @@ footer img {
     object-fit: contain;
     height: 100px;
     margin:20px;
+}
+
+.list-selected-color{
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+    gap: 10px
+}
+
+.card-material-type{
+    border: 1px solid #e7ecf1;
+    background-color: #fff !important;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: grey;
+    padding: 9px 15px;
+}
+.card-material-type.selected{
+    border: brown solid;
+}
+
+.card-leather-types{
+    border: 1px solid #e7ecf1;
+    background-color: #fff !important;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: grey;
+    padding: 9px 15px;
+}
+.card-leather-types.selected{
+    border: brown solid;
+}
+
+.form-check-input:checked {
+    background-color: #bf1e2d;
+    border-color: #bf1e2d;
+}
+
+input[type=checkbox]:checked + label:before {
+    border-width: 7px;
+    border-color: #bf1e2d;
+    color: #bf1e2d;
+}
+
+
+.card-leather-type{
+    border: 1px solid #e7ecf1;
+    background-color: #fff !important;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: grey;
+    padding: 9px 15px;
+}
+
+.card-leather-type.selected{
+    border: brown solid;
+}
+
+.wrap-selection{
+    padding: 23px 39px;
 }
 
 .buttontab{
@@ -6669,6 +6793,7 @@ _:-ms-input-placeholder {
 }
 
 .towncard {
+    cursor: pointer;
     margin: 20px 0px;
 }
 
@@ -11817,6 +11942,15 @@ form.form--basic .mdl-textfield__label {
     .mdl-layout__header .mdl-layout__drawer-button-login {
         margin: 0px 10px;
         width: 40px;
+    }
+
+    .card-order {
+        z-index: 999;
+        width: 100%;
+    }
+
+    .slider-product img {
+        height: 463px;
     }
 
     .rounded-circle {
