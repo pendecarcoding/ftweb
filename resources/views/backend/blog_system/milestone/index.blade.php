@@ -22,9 +22,10 @@
                 <table id="example" class="table   dataTable no-footer">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th data-breakpoints="md">{{ translate('Year') }}</th>
-                            <th data-breakpoints="lg">{{ translate('Image') }}</th>
+                            <th width="50px">#</th>
+                            <th width="150px">{{ translate('Image') }}</th>
+                            <th width="50px">{{ translate('Year') }}</th>
+                            <th>{{ translate('Content') }}</th>
                             <th class="text-right">{{ translate('Options') }}</th>
                         </tr>
                     </thead>
@@ -32,11 +33,12 @@
                         @foreach($policy as $i =>$v)
                             <tr>
                                 <td>{{$i+1}}</td>
-                                <td data-breakpoints="lg">
+                                <td><img style="height: 200px;object-fit: contain;" src="{{getimage($v->img)}}"></td>
+                                <td>
                                      {{$v->year}}
                                 </td>
-                                <td data-breakpoints="lg"><img style="width:100%;height: 50px;" src="{{getimage($v->img)}}"></td>
-                                <td> @can('edit_policy')
+                                <td>{!! $v->content !!}</td>
+                                <td class="text-right"> @can('edit_policy')
                                     <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
                                         href="{{ route('milestone.edit', base64_encode($v->id)) }}" title="{{ translate('Edit') }}">
                                         <i class="las la-pen"></i>

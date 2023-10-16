@@ -20,19 +20,19 @@
         <div class="blog-post latest-blog-1 date-style-3 skew-date" style="display: flex; flex-direction: column;">
             <div class="dlab-post-media img-bg-mil-wrap"><img style="border-radius: 12px;" src="{{ getimage($v->img) }}" alt=""></div>
             <div class="dlab-post-info p-t20" style="padding: 20px;">
-                <div>
+                <div class="h5-milestone">
                     @php
                         // Count the number of words
                         $words = str_word_count(strip_tags($v->content));
-                        $maxWords = 4; // Maximum 4 words for preview
+                        $maxWords = 10; // Maximum 4 words for preview
                     @endphp
                     @if ($words > $maxWords)
-                        <div id="content-{{ $i }}">
-                            {!! implode(' ', array_slice(str_word_count($v->content, 1), 0, $maxWords)) !!}... <span onclick="toggleReadMore({{ $i }})">Read more</span>
+                        <div class="h5-milestone" id="content-{{ $i }}">
+                            {!! implode(' ', array_slice(str_word_count($v->content, 1), 0, $maxWords)) !!}... <span style="cursor: pointer;" onclick="toggleReadMore({{ $i }})">Read more</span>
                         </div>
-                        <div id="full-content-{{ $i }}" style="display: none;">
+                        <div class="h5-milestone" id="full-content-{{ $i }}" style="display: none;">
                             {!! $v->content !!}
-                            <span onclick="toggleReadLess({{ $i }})">Read less</span>
+                            <span style="cursor: pointer;" onclick="toggleReadLess({{ $i }})">Read less</span>
                         </div>
                     @else
                         {!! $v->content !!}
@@ -78,10 +78,10 @@
                     var words = content.textContent.trim().split(/\s+/).filter(function(word) {
                         return word.trim() !== '';
                     });
-                    var maxWords = 4;
+                    var maxWords = 10;
                     if (words.length > maxWords) {
-                        content.innerHTML = words.slice(0, maxWords).join(' ') + '... <span onclick="toggleReadMore({{ $i }})">Read more</span>';
-                        fullContent.innerHTML += ' <span onclick="toggleReadLess({{ $i }})"></span>';
+                        content.innerHTML = words.slice(0, maxWords).join(' ') + '... <span style="cursor: pointer;" onclick="toggleReadMore({{ $i }})">Read more</span>';
+                        fullContent.innerHTML += ' <span style="cursor: pointer;" onclick="toggleReadLess({{ $i }})"></span>';
                     }
                 }
             @endforeach
