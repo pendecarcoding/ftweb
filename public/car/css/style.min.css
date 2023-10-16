@@ -1795,8 +1795,8 @@ label {
     background-color: #fff !important;
     height: 40px;
     font-size: 13px;
-    color: #999;
-	padding: 9px 15px;
+    color: grey;
+    padding: 9px 15px;
 }
 .bootstrap-select .dropdown-toggle:after {
     display: none;
@@ -6848,6 +6848,7 @@ a,
 }
 .dlab-accordion .panel {
     border: none;
+    margin: 10px 0px;
     border-radius: 0;
     margin-bottom: -1px;
 }
@@ -6863,13 +6864,14 @@ a,
 }
 .acod-head a {
     display: block;
+    border-radius: 10px;
     padding: 12px 40px 12px 15px;
     border: 1px solid #ddd;
 }
 .acod-head a,
 .acod-head a:hover,
 .acod-head a.collapsed:hover {
-    color: var(--primary);
+        /* color: var(--primary);*/
 }
 .acod-head a.collapsed,
 .acod-head a.collapsed:after {
@@ -6877,7 +6879,7 @@ a,
 }
 .acod-head a:after {
     font-family: 'Font Awesome 5 Free';
-    content: "\f068";
+    /* content: "\f068"; */
 	font-weight:600;
     float: right;
     color: var(--primary);
@@ -6887,7 +6889,7 @@ a,
     top: 12px;
 }
 .acod-head a.collapsed:after {
-    content: "\f067";
+    /* content: "\f067"; */
 	font-family: 'Font Awesome 5 Free';
 	font-weight:600;
 }

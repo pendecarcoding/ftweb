@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="description" content="" />
@@ -141,6 +141,22 @@
     <div id="chat" class="wa-floating-button" onclick="toggleChat()">
         <span class="whatsapp-icon"><img id="chat-icon" src="/public/assets/img/chat.png"></span>
     </div>
+    <!-- <div id="chat" class="wa-floating-button" >
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6527a5f0eb150b3fb9a0a452/1hche0dq4';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+            </script>
+    </div> -->
+    <!--Start of Tawk.to Script-->
+
+    <!--End of Tawk.to Script-->
     <div id="pop-up-chat" class="body-chat" style="display: none;">
 
         <div class="card">
@@ -163,6 +179,9 @@
 
                 </div>
                 <div class="card-footer">
+                    <div style="display:none" id="alert-message-popup">
+                        <div class="alert alert-success"> <a href="#" class="close" data-bs-dismiss="alert" aria-label="close">×</a> <strong>Success!</strong> your message has been sent. </div>
+                    </div>
                     <button type="submit" style="width:100%;background-color: #F80814;color:white" class="btn">
                         <span id="btn-text">Submit</span>
                         <img id="loading-gif" src="/public/assets/img/loading.gif"
@@ -329,7 +348,13 @@
 
     @include('acewebfront.fotter')
     <!--</div>-->
-
+    <script>
+        window.addEventListener('wheel', (event) => {
+          if (event.ctrlKey) {
+            event.preventDefault();
+          }
+        });
+      </script>
     @if (Session::has('wrongpassword'))
         <script>
             // Define a function to be executed when the page finishes loading
@@ -403,6 +428,10 @@
 
                         $("#alertpatner").show();
                         $("#requestpatnerform")[0].reset();
+                        console.log(response);
+                    }
+                    else{
+                        console.log(response);
                     }
                 },
                 complete: function() {
@@ -1034,6 +1063,7 @@
                         console.log(response);
                         if (response == "success") {
                             $("#contact-form-popup")[0].reset();
+                            $("#alert-message-popup").show();
                         }
                         // You can display a success message or perform other actions
 
@@ -1101,6 +1131,7 @@
     </script>
     <script src="{{ static_asset('car') }}/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
     <script src="{{ static_asset('car') }}/js/rev.slider.js"></script>
+    <script src="{{ static_asset('car') }}/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
     <script>
         jQuery(document).ready(function() {
             'use strict';
@@ -1127,6 +1158,13 @@ function requestLandscapeOrientation() {
 }
 
         </script>
+
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    </script>
 
 </body>
 

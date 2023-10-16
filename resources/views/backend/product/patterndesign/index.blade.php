@@ -20,7 +20,6 @@
                                 <th>#</th>
                                 <th>Image</th>
                                 <th>Name</th>
-                                <th>Colors</th>
                                 <th>Price</th>
                                 <th>Published</th>
                                 <th>action</th>
@@ -30,19 +29,9 @@
                             @foreach ($data as $i => $v)
                                 <tr>
                                     <td>{{ $i + 1 }}</td>
-                                    <td><img src="{{ getimage($v->img) }}" style="width:100%;height:100px;object-fit: cover;" ></td>
+                                    <td><img src="{{ getimage($v->img) }}"
+                                            style="width:100%;height:100px;object-fit: cover;"></td>
                                     <td>{{ $v->name_pattern }}</td>
-
-                                    <td>
-                                    <div style="display: flex; flex-wrap: wrap;">
-                                    @foreach(explode(',',$v->colors) as $c1)
-                                        <div
-                                            style="background-color: {{$c1}};width: 50px;height: 50px;">
-                                        </div>
-                                    @endforeach
-                                    </div>
-
-                                    </td>
                                     <td>RM {{ $v->price }}</td>
                                     <td> <label class="aiz-switch aiz-switch-success mb-0">
                                             <input onchange="update_published(this)" value="{{ $v->id }}"

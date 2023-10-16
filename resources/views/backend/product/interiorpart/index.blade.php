@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header row gutters-5">
                     <div class="col text-center text-md-left">
-                        <h5 class="mb-md-0 h6">{{ translate('Leather') }}</h5>
+                        <h5 class="mb-md-0 h6">{{ translate('Interior Part') }}</h5>
                     </div>
                 </div>
                 <div class="card-body">
@@ -14,7 +14,9 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Image</th>
                                 <th>{{ translate('Name') }}</th>
+                                <th>{{ translate('Price') }}</th>
                                 <th class="text-right">{{ translate('Options') }}</th>
                             </tr>
                         </thead>
@@ -22,19 +24,24 @@
                             @foreach($data as $i => $v)
                             <tr>
                                 <td>{{$i+1}}</td>
-                                <td>{{$v->leather}}</td>
+                                <td>
+                                  <img style="width:100px;height: 50px;object-fit: cover;" src="{{getimage($v->img)}}" alt="">
+
+                                </td>
+                                <td>{{$v->name_interior}}</td>
+                                <td>RM{{$v->price}}</td>
                                 <td class="text-right">
-                                    @can('edit_leather')
+                                    @can('edit_interiorpart')
                                         <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
-                                            href="{{ route('leather.edit',base64_encode($v->id)) }}"
+                                            href="{{ route('interiorpart.edit',base64_encode($v->id_interior)) }}"
                                             title="{{ translate('Edit') }}">
                                             <i class="las la-edit"></i>
                                         </a>
                                     @endcan
-                                    @can('delete_leather')
+                                    @can('delete_interiorpart')
                                         <a href="#"
                                             class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
-                                            data-href="{{ route('leather.destroy', $v->id) }}"
+                                            data-href="{{ route('interiorpart.destroy', $v->id_interior) }}"
                                             title="{{ translate('Delete') }}">
                                             <i class="las la-trash"></i>
                                         </a>
@@ -54,14 +61,33 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0 h6">{{ translate('Add New Leather') }}</h5>
+                        <h5 class="mb-0 h6">{{ translate('Add New Interior Part') }}</h5>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('leather.store') }}" method="POST">
+                        <form action="{{ route('interiorpart.store') }}" method="POST">
                             @csrf
+                            <div class="form-group mb-3">
+                                <label for="name">{{ translate('Picture') }}
+                                <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-soft-secondary font-weight-medium">
+                                            {{ translate('Browse') }}</div>
+                                    </div>
+                                    <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                                    <input type="hidden" name="image" class="selected-files">
+                                </div>
+                                <div class="file-preview box sm">
+                                </div>
+                            </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Name') }}</label>
                                 <input type="text" placeholder="{{ translate('Name') }}" name="name" class="form-control"
+                                    required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="name">{{ translate('Price') }}</label>
+                                <input type="number" placeholder="{{ translate('Price') }}" name="price" class="form-control"
                                     required>
                             </div>
                             <!-- <div class="form-group mb-3">

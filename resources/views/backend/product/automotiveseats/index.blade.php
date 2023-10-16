@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header row gutters-5">
                     <div class="col text-center text-md-left">
-                        <h5 class="mb-md-0 h6">{{ translate('Leather') }}</h5>
+                        <h5 class="mb-md-0 h6">{{ translate('Image Automotive Seats') }}</h5>
                     </div>
                 </div>
                 <div class="card-body">
@@ -14,7 +14,9 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>{{ translate('Name') }}</th>
+                                <th>Image</th>
+                                <th>{{ translate('Title') }}</th>
+                                <th>{{ translate('short') }}</th>
                                 <th class="text-right">{{ translate('Options') }}</th>
                             </tr>
                         </thead>
@@ -22,19 +24,24 @@
                             @foreach($data as $i => $v)
                             <tr>
                                 <td>{{$i+1}}</td>
-                                <td>{{$v->leather}}</td>
+                                <td>
+                                  <img style="width:100px;height: 50px;object-fit: cover;" src="{{getimage($v->img)}}" alt="">
+
+                                </td>
+                                <td>{{$v->title}}</td>
+                                <td>{{$v->shortby}}</td>
                                 <td class="text-right">
-                                    @can('edit_leather')
+                                    @can('edit_automotiveseats')
                                         <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
-                                            href="{{ route('leather.edit',base64_encode($v->id)) }}"
+                                            href="{{ route('automotiveseats.edit',base64_encode($v->id)) }}"
                                             title="{{ translate('Edit') }}">
                                             <i class="las la-edit"></i>
                                         </a>
                                     @endcan
-                                    @can('delete_leather')
+                                    @can('delete_automotiveseats')
                                         <a href="#"
                                             class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
-                                            data-href="{{ route('leather.destroy', $v->id) }}"
+                                            data-href="{{ route('automotiveseats.destroy', $v->id) }}"
                                             title="{{ translate('Delete') }}">
                                             <i class="las la-trash"></i>
                                         </a>
@@ -54,43 +61,36 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0 h6">{{ translate('Add New Leather') }}</h5>
+                        <h5 class="mb-0 h6">{{ translate('Add New Image Automotive Seats') }}</h5>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('leather.store') }}" method="POST">
+                        <form action="{{ route('automotiveseats.store') }}" method="POST">
                             @csrf
                             <div class="form-group mb-3">
-                                <label for="name">{{ translate('Name') }}</label>
-                                <input type="text" placeholder="{{ translate('Name') }}" name="name" class="form-control"
-                                    required>
-                            </div>
-                            <!-- <div class="form-group mb-3">
-                                <label for="name">{{ translate('Image') }}
-                                    <small>({{ translate('141x64') }})</small></label>
+                                <label for="name">{{ translate('Picture') }}
                                 <div class="input-group" data-toggle="aizuploader" data-type="image">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text bg-soft-secondary font-weight-medium">
                                             {{ translate('Browse') }}</div>
                                     </div>
                                     <div class="form-control file-amount">{{ translate('Choose File') }}</div>
-                                    <input type="hidden" name="img" class="selected-files">
+                                    <input type="hidden" name="image" class="selected-files">
                                 </div>
                                 <div class="file-preview box sm">
                                 </div>
-                            </div> -->
-                            <!-- <div class="form-group mb-3">
-                                <label for="name">{{ translate('Price') }}</label>
-                                <input class="form-control" id="overrides" oninput="validateoverride(this)" type="number" id="doubleInput" name="price" step="0.01" min="0" />
                             </div>
                             <div class="form-group mb-3">
-                                <label for="name">{{ translate('Parent Type') }}</label>
-                                <select class="form-control" name="parent" id="">
-                                    <option value="">none</option>
-                                    @foreach($data as $i =>$v)
-                                      <option value="{{$v->id}}">{{$v->name_leather}}</option>
-                                    @endforeach
-                                </select>
-                            </div> -->
+                                <label for="name">{{ translate('Title') }}</label>
+                                <input type="text" placeholder="{{ translate('Name') }}" name="title" class="form-control"
+                                    required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="name">{{ translate('Shortby') }}</label>
+                                <input type="number" placeholder="{{ translate('Shortby') }}" name="shortby" class="form-control"
+                                    required>
+                            </div>
+
                             <div class="form-group mb-3 text-right">
                                 <button type="submit" class="btn btn-primary">{{ translate('Save') }}</button>
                             </div>

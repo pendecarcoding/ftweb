@@ -45,10 +45,10 @@ class LeatherController extends Controller
     {
         try {
                 $d = new TypeLeather;
-                $d->img = $request->img;
-                $d->name_leather = $request->name;
-                $d->price = $request->price;
-                $d->parentid = $request->parent;
+                // $d->img = $request->img;
+                $d->leather = $request->name;
+                // $d->price = $request->price;
+                // $d->parentid = $request->parent;
                 $d->save();
                 flash(translate('Data has been inserted successfully'))->success();
                 return redirect('admin/leather');
@@ -64,10 +64,10 @@ class LeatherController extends Controller
     public function update(Request $request, $id)
     {
         $d = TypeLeather::find($id);
-        $d->img = $request->img;
-        $d->name_leather = $request->name;
-        $d->price = $request->price;
-        $d->parentid = $request->parent;
+        // $d->img = $request->img;
+        $d->leather = $request->name;
+        // $d->price = $request->price;
+        // $d->parentid = $request->parent;
         $d->save();
 
         flash(translate('Data has been updated successfully'))->success();

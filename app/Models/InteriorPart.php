@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TypeLeather extends Model
+class InteriorPart extends Model
 {
-    protected $table = 'leather_type';
+
 
 }

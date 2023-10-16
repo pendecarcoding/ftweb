@@ -97,6 +97,20 @@
                         </a>
                         <!--Submenu-->
                         <ul class="aiz-side-nav-list level-2">
+                            @can('view_interior_parts')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('interiorpart.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['interiorpart', 'interiorpart.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Interior Design') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+                            @can('view_vhicle_seat')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('vehicleseat.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['vehicleseat', 'vehicleseat.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Vehicle Seat') }}</span>
+                                </a>
+                            </li>
+                            @endcan
                             @can('view_colors')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('colors') }}" class="aiz-side-nav-link {{ areActiveRoutes(['colors', 'colors.edit']) }}">
@@ -112,7 +126,7 @@
                                     </a>
                                 </li>
                             @endcan -->
-                            @can('view_all_brands')
+                            <!-- @can('view_all_brands')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('brands.index') }}"
                                         class="aiz-side-nav-link {{ areActiveRoutes(['brands.index', 'brands.create', 'brands.edit']) }}">
@@ -135,22 +149,39 @@
                                     <span class="aiz-side-nav-text">{{ translate('Cars') }}</span>
                                 </a>
                             </li>
-                            @endcan
+                            @endcan -->
 
-                            @can('view_all_leather_generic')
+                            <!-- @can('view_all_leather_generic')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('leathergeneric.index') }}"
                                     class="aiz-side-nav-link {{ areActiveRoutes(['leathergeneric.index', 'leathergeneric.create', 'leathergeneric.edit']) }}">
                                     <span class="aiz-side-nav-text">{{ translate('Generic Leather') }}</span>
                                 </a>
                             </li>
-                            @endcan
+                            @endcan -->
 
                             @can('view_all_leather')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('leather.index') }}"
                                     class="aiz-side-nav-link {{ areActiveRoutes(['leather.index', 'leather.create', 'leather.edit']) }}">
                                     <span class="aiz-side-nav-text">{{ translate('Leather') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+
+                            <!-- @can('view_all_twotowncolor')
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{ route('twotowncolor.index') }}"
+                                        class="aiz-side-nav-link {{ areActiveRoutes(['twotowncolor.index', 'twotowncolor.create', 'twotowncolor.edit']) }}">
+                                        <span class="aiz-side-nav-text">{{ translate('Two Town Color') }}</span>
+                                    </a>
+                                </li>
+                            @endcan -->
+                            @can('view_all_patterndesign')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('patterndesignsys.index') }}"
+                                    class="aiz-side-nav-link {{ areActiveRoutes(['patterndesignsys.index', 'patterndesignsys.create', 'patterndesignsys.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Pattern Design') }}</span>
                                 </a>
                             </li>
                             @endcan
@@ -162,30 +193,16 @@
                                 </a>
                             </li>
                             @endcan
-                            @can('view_all_twotowncolor')
-                                <li class="aiz-side-nav-item">
-                                    <a href="{{ route('twotowncolor.index') }}"
-                                        class="aiz-side-nav-link {{ areActiveRoutes(['twotowncolor.index', 'twotowncolor.create', 'twotowncolor.edit']) }}">
-                                        <span class="aiz-side-nav-text">{{ translate('Two Town Color') }}</span>
-                                    </a>
-                                </li>
-                            @endcan
-                            @can('view_all_patterndesign')
-                            <li class="aiz-side-nav-item">
-                                <a href="{{ route('patterndesignsys.index') }}"
-                                    class="aiz-side-nav-link {{ areActiveRoutes(['patterndesignsys.index', 'patterndesignsys.create', 'patterndesignsys.edit']) }}">
-                                    <span class="aiz-side-nav-text">{{ translate('Pattern Design') }}</span>
-                                </a>
-                            </li>
-                            @endcan
-                            @can('view_all_piping')
+
+
+                            <!-- @can('view_all_piping')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('pipingsys.index') }}"
                                     class="aiz-side-nav-link {{ areActiveRoutes(['pipingsys.index', 'pipingsys.create', 'pipingsys.edit']) }}">
                                     <span class="aiz-side-nav-text">{{ translate('Piping') }}</span>
                                 </a>
                             </li>
-                            @endcan
+                            @endcan -->
 
 
 
@@ -272,6 +289,26 @@
                     </li>
                 @endcanany
 
+                @canany(['view_img_automotive_seats', 'edit_img_automotive_seats', 'create_img_automotive_seats'])
+                <li class="aiz-side-nav-item">
+                    <a href="#" class="aiz-side-nav-link">
+                        <i class="las la-shopping-cart aiz-side-nav-icon"></i>
+                        <span class="aiz-side-nav-text">{{ translate('Products & Project Page') }}</span>
+                        <span class="aiz-side-nav-arrow"></span>
+                    </a>
+                    <!--Submenu-->
+                    <ul class="aiz-side-nav-list level-2">
+                @can('view_img_automotive_seats')
+                <li class="aiz-side-nav-item">
+                    <a href="{{ route('automotiveseats.index') }}"
+                        class="aiz-side-nav-link {{ areActiveRoutes(['automotiveseats.index', 'automotiveseats.create', 'automotiveseats.edit']) }}">
+                        <span class="aiz-side-nav-text">{{ translate('Image Automotive Seats') }}</span>
+                    </a>
+                </li>
+                @endcan
+                </ul>
+                </li>
+                @endcanany
                 <!-- Auction Product -->
                 @if (addon_is_activated('auction'))
                     @canany(['add_auction_product', 'view_all_auction_products', 'view_inhouse_auction_products',

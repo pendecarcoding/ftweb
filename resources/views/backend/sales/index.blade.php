@@ -115,24 +115,17 @@
                                     {{ $order->created_at }}
                                 </td>
                                 <td>
-                                    {{ $order->order_code }}@if ($order->viewed == 0)
+                                    {{ $order->invoice }}@if ($order->viewed == 0)
                                         <span class="badge badge-inline badge-info">{{ translate('New') }}</span>
                                     @endif
                                 </td>
                                 <td>
-                                    {{getuseraccount($order->user_id)->email}}
+                                    {{$order->email}}
                                 </td>
 
 
-                                <!-- <td>
-                                    @if ($order->shop)
-    {{ $order->shop->name }}
-@else
-    {{ translate('ACE') }}
-    @endif
-                                </td> -->
                                 <td>
-                                    {{ single_price($order->total) }}
+                                    {{ single_price($order->totalprice) }}
                                 </td>
 
 
@@ -144,6 +137,7 @@
                                     @endif
                                 </td>
 
+
                                 <!-- @if (addon_is_activated('refund_request'))
                                     <td>
                                         @if (count($order->refund_requests) > 0)
@@ -153,7 +147,7 @@
                                         @endif
                                     </td>
                                 @endif -->
-                                <td>{{$order->order_status}}</td>
+                                <td>{{$order->delivery_status}}</td>
                                 <td class="text-right">
 
                                     @can('view_order_details')

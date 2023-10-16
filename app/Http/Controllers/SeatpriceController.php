@@ -26,7 +26,7 @@ class SeatpriceController extends Controller
     {
         $data = DB::table('price_seat')->get();
         $typeleather = DB::table('leather_type')->orderBy('id','asc')->get();
-        $leather = TypeLeather::orderby('id','asc')->get();
+        $leather = DB::table('leather_coverage')->orderby('id','asc')->get();
         $size = DB::table('size_seat')->orderBy('id','asc')->get();
         return view('backend.product.seatprice.index', compact('data','typeleather','leather','size'));
     }
@@ -36,7 +36,7 @@ class SeatpriceController extends Controller
     {
         $data = DB::table('price_seat')->orderby('id','desc')->get();
         $typeleather = DB::table('leather_type')->orderBy('id','asc')->get();
-        $leather = TypeLeather::orderby('id','asc')->get();
+        $leather = DB::table('leather_coverage')->orderby('id','asc')->get();
         $size = DB::table('size_seat')->orderBy('id','asc')->get();
         $edit = DB::table('price_seat')->where('id',base64_decode($d))->first();
         return view('backend.product.seatprice.edit', compact('data','edit','typeleather','leather','size'));
@@ -54,7 +54,6 @@ class SeatpriceController extends Controller
                 $d = new SeatPrice;
                 $d->vehicle_type = $request->vehicle;
                 $d->application = $request->application;
-                $d->row = $request->row;
                 $d->price = $request->price;
                 $d->leather_type = $request->typeleather;
                 $d->save();
@@ -74,7 +73,6 @@ class SeatpriceController extends Controller
         $d = SeatPrice::find($id);
         $d->vehicle_type = $request->vehicle;
         $d->application = $request->application;
-        $d->row = $request->row;
         $d->price = $request->price;
         $d->leather_type = $request->typeleather;
         $d->save();

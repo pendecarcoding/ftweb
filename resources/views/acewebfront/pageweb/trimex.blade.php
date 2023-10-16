@@ -2,40 +2,50 @@
 @section('content')
     <div class="page-content bg-white">
         @include('acewebfront.widget.allbaner')
-        <!-- Slider -->
-        <!-- <div class="section-trimex-up-card">
-                    <div class="dlab-bnr-inr overlay-black-middle" style="background-image:url(/public/page/trimex/section.png);">
-                        <div class="container">
+        <div class="section-full bg-white content-inner">
+            <div class="wrap-content">
+                <div class="section-head text-center ">
+                    <h2 class="text-capitalize">Manufacturing of Automotive Covers</h2>
 
-                            <div class="trimex-top-card dlab-post-info p-lr20 p-b10 p-t20 bg-white">
-                                <div class="dlab-post-title " style="font-size: 40px;font-weight: bold;position: relative;height: 133px;">
-                                  <div class="clearfix">
-                                    <h2>YOUR TRUSTED
-                                        LEATHER SEAT PARTNER</h2>
-                                    <img class="img-trimex-up" src="/public/page/trimex/image 416.png">
-                                  </div>
-                                </div>
-
-                                <div class="dlab-post-text">
-                                    <p style="text-align: justify;">TRIMEX is a company that manufactures OEM-styled leather-trimmed interiors and patented technology designed to enhance comfort and safety for the next generation of automobiles. Providing the highest quality products on the market, and maintaining stringent safety standards, TRIMEX is built upon the foundations of honesty, trust, faith, and respect. We still build pride into every product and appreciate your business.</p>
-                                </div>
-                                <div class="dlab-post-readmore">
-                                    <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fas fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="description-service" style="color:#999999;text-align: center;"><!--ayat-->
                         </div>
 
 
                     </div>
-                </div> -->
+                </div>
+            </div>
+            <div class="section-content ">
+                <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
+                    @foreach($image as $i => $vg)
+                            <div class="item" style="padding: 20px;">
+                                <div class="dlab-box">
+                                    <div class="dlab-media" style="border-radius: 5px;"> <a href="#"><img
+                                                class="img-what-we-do"
+                                                src="{{getimage($vg->img)}}"
+                                                alt=""></a>
+                                    </div>
+                                    <div class="dlab-info p-a20 text-center bg-gray">
+
+                                        <p style="text-transform: capitalize;" class="m-b0"
+                                            class="wwd-text text-capitalize">{{$vg->title}}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                    @endforeach
 
 
-        <!-- Slider END -->
+                </div>
+            </div>
+        </div>
 
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Manufacturing of Automotive Seats</h2>
+                    <h2 class="text-capitalize">Manufacturing of Automotive Seats Covers</h2>
 
                 </div>
                 <div class="row">
@@ -50,7 +60,9 @@
                     </div>
                 </div>
             </div>
-            <div class="section-content ">
+
+
+        <div class="section-content ">
                 <div class="portfolio-carousel-nogap owl-carousel lightgallery gallery owl-btn-center-lr">
                     @for ($i = 0; $i < 15; $i++)
                         @if ($i == 3)

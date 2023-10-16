@@ -3,6 +3,34 @@
     <meta property="og:image" content="{{ uploaded_asset(get_setting('site_icon')) }}" />
 @endsection
 @section('content')
+<style>
+    .lg-img-wrap{
+    padding:50px;
+}
+.lg-outer .lg-object {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    width: 900px;
+    object-fit: cover;
+    height: auto;
+    position: relative;
+}
+@media screen and (min-width:1920px) {
+    .lg-outer .lg-object {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    width: 1230px;
+    object-fit: cover;
+    height: auto;
+    position: relative;
+}
+
+}
+</style>
     <main>
         @include('acewebfront.widget.allbaner')
 
@@ -17,25 +45,26 @@
                                 <h2>Pattern Design</h2>
                             </center>
                             <br>
-                            <div class="row">
+                            <div class="row" id="gallery">
 
                                 @foreach ($data as $i => $v)
-                                    <div class="col-md-2">
+                                    <div class="col-md-2" href="{{ getimage($v->img) }}">
                                         <div class="card towncard">
                                             <!-- <a href="{{ route('gosford.patterndesign.detail', base64_encode($v->id)) }}" -->
                                                 <div
                                                 class="card-body">
                                                 <!-- Card content goes here -->
                                                 <img style="width:100%" src="{{ getimage($v->img) }}" alt="">
-                                                <p class="card-text center" style="margin-top:2px;color:black">
+                                                <p class="card-text center" style="margin-top: 11px;color:black">
                                                     {{ $v->name_pattern }}</p>
                                                 </div>
                                         </div>
                                     </div>
                                 @endforeach
-                                <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
+
 
                             </div>
+                            <div style="display: flex;justify-content: center;">{{ $data->links() }}</div>
 
                             <div style="text-align: center;padding: 20px 0px;">
                                 <h2>Other Product Option</h2>
@@ -46,7 +75,8 @@
                                             Color</a>
                                     </div>
                                     <div class="card" style="padding: 10px;width:100%"><a
-                                            href="{{ route('gosford.piping') }}" class="menu-href">Stitching & Piping</a></div>
+                                            href="{{ route('gosford.piping') }}" class="menu-href">Stitching & Piping
+                                            </a></div>
                                     <!-- <div class="card" style="padding: 10px;width:100%"><a
                                             href="{{ route('gosford.emblem') }}" class="menu-href">Logo/Emblem</a>
                                     </div> -->
@@ -67,6 +97,14 @@
                                         </div> -->
 
     </main>
+    <script>
+        // Initialize LightGallery
+        lightGallery(document.getElementById('gallery'), {
+        thumbnail: true,
+        download:false
+    });
+
+    </script>
 
     <script>
         function updateCarModels() {
