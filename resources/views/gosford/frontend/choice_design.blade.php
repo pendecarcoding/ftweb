@@ -13,12 +13,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="description-service" style="color:#999999;text-align: center;">We are delighted to present our high-quality automotive
-                            leather cover masterpiece. Designed exclusively for car
-                            owners, our top-tier leather embodies our unwavering
-                            commitment to perfection. Each piece of original leather
-                            material undergoes rigorous selection, ensuring that only the
-                            finest, handpicked leather finds its way into your car interiors.
+                        <div class="description-service" style="color:#999999;text-align: center;">
+                            We are delighted to present our automotive covers that are designed exclusively to meet the needs of our customers. Each piece of leather and synthetic leather material undergoes a rigorous selection process, ensuring that only the finest finds its way to your car interiors.
                         </div>
 
 
@@ -494,8 +490,7 @@ white-space: nowrap;" id="interior-list">
                     <div class="row">
                         <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
                             <div class="section-head text-left space-text-video">
-                                <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">Installation and Sales of Automotive
-                                    Covers</h2>
+                                <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">Manufacturing of automotive covers</h2>
                                 <!-- <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p> -->
                             </div>
 

@@ -11206,6 +11206,25 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:299px) {
+    .section-head h2 {
+        color: #666666;
+        font-size: 21px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+    .description-service {
+        text-align: justify;
+        margin: 10px 12px;
+    }
+    .padding-research {
+        height: 350px;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        color: #999999;
+        font-size: 16px;
+    }
     .ace-sliders h1 {
         overflow: hidden;
         font-size: 1.5rem;
@@ -11236,6 +11255,25 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:400px) {
+    .section-head h2 {
+        color: #666666;
+        font-size: 21px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+    .description-service {
+        text-align: justify;
+        margin: 10px 12px;
+    }
+    .padding-research {
+        height: 350px;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        color: #999999;
+        font-size: 16px;
+    }
     #title-news {
         font-size: 14.5px;
         margin-bottom: 2px;
@@ -11366,6 +11404,25 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:400px) and (max-width:500px) {
+    .section-head h2 {
+        color: #666666;
+        font-size: 21px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+    .description-service {
+        text-align: justify;
+        margin: 10px 12px;
+    }
+    .padding-research {
+        height: 350px;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        color: #999999;
+        font-size: 16px;
+    }
     .list-bod {
         margin: 10px 13px;
         padding: 0px;
@@ -11982,6 +12039,25 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:500px) and (max-width: 600px) {
+    .section-head h2 {
+        color: #666666;
+        font-size: 21px;
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+    .description-service {
+        text-align: justify;
+        margin: 10px 12px;
+    }
+    .padding-research {
+        height: 350px;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        color: #999999;
+        font-size: 16px;
+    }
     .list-bod{
         text-align: center;
     }
