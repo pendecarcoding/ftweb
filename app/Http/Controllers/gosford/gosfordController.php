@@ -509,16 +509,21 @@ class gosfordController extends Controller
     $invoice = $datePart . $randomPart;
     try {
         $array = array();
-        foreach ($r->interior as $idata) {
-            $datainterior = InteriorPart::where('id_interior',$idata['id'])->first();
-            $datacollect = [
-                'id'=>$datainterior->id_interior,
-                'name_interior'=>$datainterior->name_interior,
-                'imgurl'=>getimage($datainterior->img),
-                'price'=>$datainterior->price,
-            ];
-            array_push($array, $datacollect);
+        if($r->has('interior')){
+            foreach ($r->interior as $idata) {
+                $datainterior = InteriorPart::where('id_interior',$idata['id'])->first();
+                $datacollect = [
+                    'id'=>$datainterior->id_interior,
+                    'name_interior'=>$datainterior->name_interior,
+                    'imgurl'=>getimage($datainterior->img),
+                    'price'=>$datainterior->price,
+                ];
+                array_push($array, $datacollect);
+            }
+        }else{
+            $array = [];
         }
+
         $data = [
             'invoice'=>$invoice,
             'type_car'=>$r->type_car,
