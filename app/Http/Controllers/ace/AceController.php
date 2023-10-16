@@ -174,7 +174,10 @@ class AceController extends Controller
                 $interior   =  InteriorPart::all();
                 $colors     = Color::all();
                 $pattern    = Patterndesign::where('published','Y')->orderByRaw('CAST(SUBSTRING(name_pattern, 8) AS UNSIGNED)')->get();
-                return view('gosford.frontend.choice_design',compact('coverage','sizetype','leather','colors','interior','pattern'));
+                $normal     =  GenericLeather::where('type','Normal Leather')->orderby('shortby','asc')->get();
+                $grain      =  GenericLeather::where('type','Grain Leather')->orderby('shortby','asc')->get();
+                $pvc        =  GenericLeather::where('type','PVC')->orderby('shortby','asc')->get();
+                return view('gosford.frontend.choice_design',compact('coverage','sizetype','leather','colors','interior','pattern','normal','grain','pvc'));
                 // if(Session::get('id_account') == null){
                 //     $brand   = Brand::all();
                 //     return view('gosford.frontend.search',compact('brand'));
