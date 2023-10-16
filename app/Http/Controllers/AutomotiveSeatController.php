@@ -31,8 +31,8 @@ class AutomotiveSeatController extends Controller
 
     public function edit($d)
     {
-        $data = InteriorPart::orderby('id_interior','desc')->get();
-        $edit = InteriorPart::where('id_interior',base64_decode($d))->first();
+        $data = DB::table('img_automotive_seats')->orderby('shortby','desc')->get();
+        $edit = DB::table('img_automotive_seats')->where('id',base64_decode($d))->first();
         return view('backend.product.automotiveseats.edit', compact('data','edit'));
     }
 
@@ -64,12 +64,12 @@ class AutomotiveSeatController extends Controller
 
     public function update(Request $request, $id)
     {
-        $data=[
-            'name_interior'=>$request->name,
-            'price'=>$request->price,
+        $data = [
             'img'=>$request->image,
+            'title'=>$request->title,
+            'shortby'=>$request->shortby,
         ];
-        InteriorPart::where('id_interior',$id)->update($data);
+        DB::table('img_automotive_seats')->where('id',$id)->update($data);
         flash(translate('Data has been updated successfully'))->success();
         return redirect()->route('automotiveseats.index');
     }
@@ -83,7 +83,7 @@ class AutomotiveSeatController extends Controller
     public function destroy($id)
     {
 
-        $act = InteriorPart::where('id_interior',$id)->delete();
+        $act = DB::table('img_automotive_seats')->where('id',$id)->delete();
 
         if($act){
             //unlink($slider->photo);
