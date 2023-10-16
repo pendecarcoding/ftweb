@@ -70,7 +70,7 @@
                                  <br>
                                  <input type="email" class="form-control" name="email" placeholder="Email Address*" required>
                                 <br>
-                                 <textarea class="form-control" name="info" style="height: 100px;" required></textarea>
+                                 <textarea class="form-control" name="info" style="height: 100px;"  placeholder="Message to seller"></textarea>
 
 
                                 <br>
