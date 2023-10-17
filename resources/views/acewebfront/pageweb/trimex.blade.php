@@ -2,7 +2,7 @@
 @section('content')
     <div class="page-content bg-white">
         @include('acewebfront.widget.allbaner')
-        <div class="section-full bg-white content-inner">
+        <!-- <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
                     <h2 class="text-capitalize">Manufacturing of Automotive Seat</h2>
@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="description-service" style="color:#999999;text-align: center;"><!--ayat-->
-                        </div>
+                        <!-- </div>
 
 
                     </div>
@@ -40,12 +40,12 @@
 
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Manufacturing of Automotive Seats</h2>
+                    <h2 class="text-capitalize">Manufacturing of Automotive Seat</h2>
 
                 </div>
                 <div class="row">
