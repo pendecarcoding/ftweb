@@ -2,7 +2,7 @@
 @section('content')
     <div class="page-content bg-white">
         @include('acewebfront.widget.allbaner')
-        <div class="section-full bg-white content-inner">
+        {{-- <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
                     <h2 class="text-capitalize">Manufacturing of Automotive Covers</h2>
@@ -40,7 +40,7 @@
 
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
