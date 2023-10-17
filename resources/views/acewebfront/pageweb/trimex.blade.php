@@ -5,7 +5,7 @@
         {{-- <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Manufacturing of Automotive Covers</h2>
+                    <h2 class="text-capitalize">Manufacturing of Automotive Seat</h2>
 
                 </div>
                 <div class="row">
@@ -45,7 +45,7 @@
         <div class="section-full bg-white content-inner">
             <div class="wrap-content">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Manufacturing of Automotive Seats Covers</h2>
+                    <h2 class="text-capitalize">Manufacturing of Automotive Seats</h2>
 
                 </div>
                 <div class="row">
@@ -100,7 +100,7 @@
                     <div class="section-head text-left space-text-video">
                         <!-- <h2 class="text-capitalize"
                             style="color: rgb(255, 255, 255);font-family: 'Poppins';font-weight: bold;">PARTNER</h2> -->
-                        <h2 style="color: rgb(255, 255, 255);font-family: 'Poppins';">Automotive Seat Manufacturing Plant</h2>
+                        <h2 style="color: rgb(255, 255, 255);font-family: 'Poppins';">Manufacturing of Automotive Seat</h2>
                         <!-- <p class="font-patner">
                             Leather car seats are a crucial element in modern automobiles for enhancing the driving
                             experience and productivity. These seats provide outstanding comfort and support, allowing
