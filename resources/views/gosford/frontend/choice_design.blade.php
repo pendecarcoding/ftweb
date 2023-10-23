@@ -20,6 +20,12 @@
     color: white;
     padding: 9px 23px;
 }
+.bootstrap-select .dropdown-toggle:active, .bootstrap-select .dropdown-toggle:focus, .bootstrap-select .dropdown-toggle:hover {
+    background-color: #dc3545 !important;
+    border: #dc3545 !important;
+    box-shadow: none !important;
+    outline: 0px !important;
+}
 </style>
     <main>
         @include('acewebfront.widget.allbaner')
