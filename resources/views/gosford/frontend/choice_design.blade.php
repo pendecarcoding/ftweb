@@ -3,6 +3,24 @@
     <meta property="og:image" content="{{ uploaded_asset(get_setting('site_icon')) }}" />
 @endsection
 @section('content')
+<style>
+    .bootstrap-select .dropdown-toggle {
+    border: 1px solid #dc3545 !important;
+    background-color: #dc3545 !important;
+    height: 34px;
+    font-size: 13px;
+    color: white;
+    padding: 9px 23px;
+}
+.bootstrap-select .dropdown-toggle:hover {
+    border: 1px solid #dc3545 !important;
+    background-color: #dc3545 !important;
+    height: 34px;
+    font-size: 13px;
+    color: white;
+    padding: 9px 23px;
+}
+</style>
     <main>
         @include('acewebfront.widget.allbaner')
         <section class="pt-5 pb-5">
@@ -447,6 +465,27 @@
                         <div class="col-sm-12 col-lg-6 m-b30">
                             <div class="video-box" style="padding: 50px 0px;">
                                 <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/WEQDCxT6RFY" title="Gosford, Johor Bahru" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-full about-box content-inner section-bg-trimex-color">
+                <div class="container">
+                    <div class="row">
+                        <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
+                            <div class="section-head text-left space-text-video">
+                                <h2 class="text-capitalize" style="color: rgb(255, 255, 255);font-family: 'Poppins';font-weight: bold;">Installation and Sales of Automotive Covers</h2>
+                                <!-- <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p> -->
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12 col-lg-6 m-b30">
+                            <div class="video-box" style="padding: 50px 0px;">
+                                <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/5SGxcVhGA6Q" title="Gosford, Johor Bahru" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                             </div>
                         </div>
