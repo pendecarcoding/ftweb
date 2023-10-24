@@ -46,7 +46,7 @@
     <link href="{{ static_asset('aceweb') }}/assets/slick/slick.css" rel="stylesheet" />
     <link href="{{ static_asset('aceweb') }}/assets/slick/slick-theme.css" rel="stylesheet" />
     <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />-->
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <!--TEST-->
     <!--TEST-->
