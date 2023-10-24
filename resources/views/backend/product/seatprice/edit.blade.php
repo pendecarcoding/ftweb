@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        @can('add_brand')
+        @can('add_seatprice')
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
