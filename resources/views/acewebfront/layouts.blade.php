@@ -116,7 +116,7 @@
   gtag('config', 'G-801CJXHWZ0');
 </script>
     @endif
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.umd.min.js"></script>
+    <script src="{{ static_asset('aceweb') }}/assets/js/lightgallery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/video/lg-video.umd.js"></script>
