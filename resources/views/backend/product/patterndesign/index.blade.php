@@ -41,14 +41,14 @@
                                             <span class="slider round"></span>
                                         </label></td>
                                     <td>
-                                        @can('edit_twotowncolor')
+                                        @can('edit_patterndesign')
                                             <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
                                                 href="{{ route('patterndesignsys.edit', base64_encode($v->id)) }}"
                                                 title="{{ translate('Edit') }}">
                                                 <i class="las la-pen"></i>
                                             </a>
                                         @endcan
-                                        @can('delete_twotowncolor')
+                                        @can('delete_patterndesign')
                                             <a href="#"
                                                 class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
                                                 data-href="{{ route('patterndesignsys.destroy', base64_encode($v->id)) }}"
