@@ -15,6 +15,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>{{ translate('Name') }}</th>
+                                <th>{{ translate('Description') }}</th>
                                 <th class="text-right">{{ translate('Options') }}</th>
                             </tr>
                         </thead>
@@ -23,6 +24,7 @@
                             <tr>
                                 <td>{{$i+1}}</td>
                                 <td>{{$v->leather}}</td>
+                                <td>{!! $v->text !!}</td>
                                 <td class="text-right">
                                     @can('edit_leather')
                                         <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
@@ -63,6 +65,11 @@
                                 <label for="name">{{ translate('Name') }}</label>
                                 <input type="text" placeholder="{{ translate('Name') }}" name="name" class="form-control"
                                     required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="text">{{ translate('Description') }}</label>
+                                <textarea name="text" required style="width:100%;height:100px"></textarea>
                             </div>
                             <!-- <div class="form-group mb-3">
                                 <label for="name">{{ translate('Image') }}

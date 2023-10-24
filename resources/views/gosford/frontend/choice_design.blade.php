@@ -3,6 +3,18 @@
     <meta property="og:image" content="{{ uploaded_asset(get_setting('site_icon')) }}" />
 @endsection
 @section('content')
+<style>
+    .tooltip {
+    max-width: 500px; /* Set the width to 500px */
+  }
+
+.tooltip-inner{
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+    width:900px
+}
+</style>
     <main>
         @include('acewebfront.widget.allbaner')
         <section class="pt-5 pb-5">
@@ -127,9 +139,10 @@
                                         position: relative;
                                         white-space: nowrap;">
                                             @foreach($leather as $i => $vl)
-                                            <div id="materialselected" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="" class="card-material-type custom-tooltip" onclick="MaterialSelected(this,{{$vl->id}})">
+                                            <div data-html="true" id="materialselected" @if($vl->text != '' OR $vl->text != null) data-title="{!! $vl->text !!}" @endif class="card-material-type" onclick="MaterialSelected(this,{{$vl->id}})">
                                                 <center><p style="font-weight: bold;">{{$vl->leather}}</p></center>
                                             </div>
+
                                             @endforeach
                                         </div>
                                     </div>
@@ -537,6 +550,9 @@ white-space: nowrap;" id="interior-list">
         thumbnail: true,
         download:false
         });
+
+        </script>
+        <script>
 
         </script>
 
