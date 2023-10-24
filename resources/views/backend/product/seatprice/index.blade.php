@@ -28,7 +28,11 @@
                                     <td>{{ $i + 1 }}</td>
                                     <td>{{ gettypeleather($v->leather_type)->leather }}</td>
                                     <td>{{ getaplicationleather($v->application)->name_leather }}</d>
-                                    <td>@if(getvehicle($v->vehicle_type) != null) {{ getvehicle($v->vehicle_type)->size }} @endif</td>
+                                    <td>
+                                        @if (getvehicle($v->vehicle_type) != null)
+                                            {{ getvehicle($v->vehicle_type)->size }}
+                                        @endif
+                                    </td>
                                     <td colspan="2">RM {{ $v->price }}</td>
                                     <td class="text-right">
                                         @can('edit_seatprice')
@@ -56,7 +60,7 @@
                 </div>
             </div>
         </div>
-        @can('add_brand')
+        @can('add_seatprice')
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
