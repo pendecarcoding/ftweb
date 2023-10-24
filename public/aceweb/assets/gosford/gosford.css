@@ -5,6 +5,11 @@ footer {
 
 
 }
+#imgcolor{
+    width: 74px;
+    border-radius: 10px;
+    height: 74px;
+}
 [data-title] {
 	font-size: 18px;
 	position: relative;
