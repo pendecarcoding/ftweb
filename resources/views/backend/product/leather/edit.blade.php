@@ -70,6 +70,10 @@
                                 <input value="{{$edit->leather}}" type="text" placeholder="{{ translate('Name') }}" name="name" class="form-control"
                                     required>
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="text">{{ translate('Description') }}</label>
+                                <textarea name="text" style="width:100%;height:100px">{!! $edit->text !!}</textarea>
+                            </div>
                             <!-- <div class="form-group mb-3">
                                 <label for="name">{{ translate('Image') }}
                                     <small>({{ translate('141x64') }})</small></label>

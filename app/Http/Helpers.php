@@ -819,7 +819,7 @@ function getvehicle($id){
         $data = DB::table('size_seat')->where('id',$id)->first();
         return $data;
     } catch (\Throwable $th) {
-        //throw $th;
+       return null;
     }
 }
 

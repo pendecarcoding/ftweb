@@ -47,6 +47,7 @@ class LeatherController extends Controller
                 $d = new TypeLeather;
                 // $d->img = $request->img;
                 $d->leather = $request->name;
+                $d->text = $request->text;
                 // $d->price = $request->price;
                 // $d->parentid = $request->parent;
                 $d->save();
@@ -66,6 +67,7 @@ class LeatherController extends Controller
         $d = TypeLeather::find($id);
         // $d->img = $request->img;
         $d->leather = $request->name;
+        $d->text = $request->text;
         // $d->price = $request->price;
         // $d->parentid = $request->parent;
         $d->save();
