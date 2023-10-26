@@ -793,7 +793,7 @@
                         </a>
                         <ul class="aiz-side-nav-list level-2">
 
-                            @can('view_policy')
+                            @can('view_milestone')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('milestone.index') }}"
                                     class="aiz-side-nav-link {{ areActiveRoutes(['milestone.create', 'milestone.edit']) }}">
