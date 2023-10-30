@@ -17,8 +17,7 @@
                                 <th>{{ translate('Type Leather') }}</th>
                                 <th>{{ translate('Product') }}</th>
                                 <th>{{ translate('Type') }}</th>
-                                <th colspan="2">{{ translate('Price') }}</th>
-
+                                <th>{{ translate('Price') }}</th>
                                 <th>{{ translate('Options') }}</th>
                             </tr>
                         </thead>
@@ -29,7 +28,7 @@
                                     <td>{{ gettypeleather($v->leather_type)->leather }}</td>
                                     <td>{{ getaplicationleather($v->application)->name_leather }}</d>
                                     <td>{{ getvehicle($v->vehicle_type)->size }}</td>
-                                    <td colspan="2">RM {{ $v->price }}</td>
+                                    <td>RM {{ $v->price }}</td>
                                     <td class="text-right">
                                         @can('edit_seatprice')
                                             <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
@@ -47,7 +46,7 @@
                                             </a>
                                         @endcan
                                     </td>
-                                    <td></td>
+
                                 </tr>
                             @endforeach
                         </tbody>
