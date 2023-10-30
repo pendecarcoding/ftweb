@@ -6,7 +6,9 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="mb-0 h6">{{ translate('Milestone Information') }}</h5>
+                    <a href="{{ route('milestone.index') }}" class="btn btn-danger btn-sm">x</a>
                 </div>
+
                 <div class="card-body">
                     <form id="add_form" class="form-horizontal" action="{{ route('milestone.store') }}" method="POST">
                         @csrf

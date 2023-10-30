@@ -6,9 +6,11 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="mb-0 h6">{{ translate('Milestone Information') }}</h5>
+                    <a href="{{ route('milestone.index') }}" class="btn btn-danger btn-sm">x</a>
                 </div>
                 <div class="card-body">
-                    <form id="add_form" class="form-horizontal" action="{{ route('milestone.update',$data->id) }}" method="POST">
+                    <form id="add_form" class="form-horizontal" action="{{ route('milestone.update', $data->id) }}"
+                        method="POST">
                         @csrf
                         @method('PATCH')
                         <div class="form-group row">
@@ -17,7 +19,8 @@
                                 <small></small>
                             </label>
                             <div class="col-md-9">
-                                <input type="number" value="{{$data->year}}" class="form-control" name="year" required>
+                                <input type="number" value="{{ $data->year }}" class="form-control" name="year"
+                                    required>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -33,7 +36,7 @@
                                         </div>
                                     </div>
                                     <div class="form-control file-amount">{{ translate('Choose File') }}</div>
-                                    <input type="hidden" name="img" value="{{$data->img}}" class="selected-files">
+                                    <input type="hidden" name="img" value="{{ $data->img }}" class="selected-files">
                                 </div>
                                 <div class="file-preview box sm">
                                 </div>
@@ -47,7 +50,7 @@
                             <div class="col-md-9">
                                 <div class="input-group">
 
-                                    <textarea style="width:100%" name="content" class="form-control" required>{{$data->content}}</textarea>
+                                    <textarea style="width:100%" name="content" class="form-control" required>{{ $data->content }}</textarea>
 
                                     <div class="file-preview box sm">
                                     </div>
