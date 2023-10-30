@@ -41,7 +41,7 @@
                                         @can('delete_seatprice')
                                             <a href="#"
                                                 class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
-                                                data-href="{{ route('seatprice.destroy',base64_encode($v->id)) }}"
+                                                data-href="{{ route('seatprice.destroy', base64_encode($v->id)) }}"
                                                 title="{{ translate('Delete') }}">
                                                 <i class="las la-trash"></i>
                                             </a>
@@ -56,22 +56,23 @@
                 </div>
             </div>
         </div>
-        @can('add_brand')
+        @can('edit_seatprice')
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
                         <h5 class="mb-0 h6">{{ translate('Edit New Leather') }}</h5>
-                        <a href="{{url('admin/seatprice')}}" class="btn btn-danger">x</a>
+                        <a href="{{ url('admin/seatprice') }}" class="btn btn-danger">x</a>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('seatprice.update',$edit->id) }}" method="POST">
+                        <form action="{{ route('seatprice.update', $edit->id) }}" method="POST">
                             @csrf
                             <input name="_method" type="hidden" value="PATCH">
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Type Leather') }}</label>
                                 <select name="typeleather" id="" class="form-control" required>
                                     @foreach ($typeleather as $i => $v)
-                                        <option value="{{ $v->id }}" @if($edit->leather_type==$v->id) selected @endif>{{ $v->leather }}</option>
+                                        <option value="{{ $v->id }}" @if ($edit->leather_type == $v->id) selected @endif>
+                                            {{ $v->leather }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -80,7 +81,8 @@
                                 <label for="name">{{ translate('Vehicle Type') }}</label>
                                 <select name="vehicle" id="" class="form-control" required>
                                     @foreach ($size as $i => $v)
-                                        <option value="{{ $v->id }}" @if($edit->vehicle_type==$v->id) selected @endif>{{ $v->size }}</option>
+                                        <option value="{{ $v->id }}" @if ($edit->vehicle_type == $v->id) selected @endif>
+                                            {{ $v->size }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -89,7 +91,8 @@
                                 <label for="name">{{ translate('Application') }}</label>
                                 <select name="application" id="" class="form-control" required>
                                     @foreach ($leather as $i => $v)
-                                        <option value="{{ $v->id }}"@if($edit->application==$v->id) selected @endif>{{ $v->name_leather }}</option>
+                                        <option value="{{ $v->id }}"@if ($edit->application == $v->id) selected @endif>
+                                            {{ $v->name_leather }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -97,8 +100,9 @@
 
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Price') }}</label>
-                                <input value="{{$edit->price}}" class="form-control" id="overrides" oninput="validateoverride(this)" type="number"
-                                    id="doubleInput" name="price" step="0.01" min="0" required />
+                                <input value="{{ $edit->price }}" class="form-control" id="overrides"
+                                    oninput="validateoverride(this)" type="number" id="doubleInput" name="price"
+                                    step="0.01" min="0" required />
                             </div>
 
                             <div class="form-group mb-3 text-right">
