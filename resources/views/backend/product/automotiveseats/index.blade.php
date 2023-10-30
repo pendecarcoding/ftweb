@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table aiz-table mb-0">
+                    <table id="example" class="table table-striped table-bordered">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -107,10 +107,4 @@
     @include('modals.delete_modal')
 @endsection
 
-@section('script')
-    <script type="text/javascript">
-        function sort_brands(el) {
-            $('#sort_brands').submit();
-        }
-    </script>
-@endsection
+
