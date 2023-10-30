@@ -195,94 +195,17 @@
                             @endcan
 
 
-                            <!-- @can('view_all_piping')
+                            @can('view_all_piping')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('pipingsys.index') }}"
                                     class="aiz-side-nav-link {{ areActiveRoutes(['pipingsys.index', 'pipingsys.create', 'pipingsys.edit']) }}">
                                     <span class="aiz-side-nav-text">{{ translate('Piping') }}</span>
                                 </a>
                             </li>
-                            @endcan -->
+                            @endcan
 
 
-
-
-                            {{-- @can('add_new_product')
-                                <li class="aiz-side-nav-item">
-                                    <a class="aiz-side-nav-link" href="{{route('products.create')}}">
-                                        <span class="aiz-side-nav-text">{{translate('Add New product')}}</span>
-                                    </a>
-                                </li>
-                            @endcan --}}
-
-                            <!-- @can('show_all_products')
-                                <li class="aiz-side-nav-item">
-                                    <a href="{{ route('products.all') }}"
-                                        class="aiz-side-nav-link {{ areActiveRoutes(['products.admin', 'products.create', 'products.admin.edit']) }}">
-                                        <span class="aiz-side-nav-text">{{ translate('All Products') }}</span>
-                                    </a>
-                                </li>
-                            @endcan -->
-
-
-                            <!--@can('show_in_house_products')
-                                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                                            <a href="{{ route('products.admin') }}" class="aiz-side-nav-link {{ areActiveRoutes(['products.admin', 'products.create', 'products.admin.edit']) }}" >
-                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('In House Products') }}</span>
-                                                                                                                                                            </a>
-                                                                                                                                                        </li>
-                                                                                        @endcan
-                                                                                        @if (get_setting('vendor_system_activation') == 1)
-                                                                                            @can('show_seller_products')
-                                                                                                                                                            <li class="aiz-side-nav-item">
-                                                                                                                                                                <a href="{{ route('products.seller') }}" class="aiz-side-nav-link {{ areActiveRoutes(['products.seller', 'products.seller.edit']) }}">
-                                                                                                                                                                    <span class="aiz-side-nav-text">{{ translate('Seller Products') }}</span>
-                                                                                                                                                                </a>
-                                                                                                                                                            </li>
-                                                                                            @endcan
-                                                                                        @endif
-                                                                                        @can('show_digital_products')
-                                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                                            <a href="{{ route('digitalproducts.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['digitalproducts.index', 'digitalproducts.create', 'digitalproducts.edit']) }}">
-                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Digital Products') }}</span>
-                                                                                                                                                            </a>
-                                                                                                                                                        </li>
-                                                                                        @endcan
-                                                                                        @can('product_bulk_import')
-                                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                                            <a href="{{ route('product_bulk_upload.index') }}" class="aiz-side-nav-link" >
-                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Bulk Import') }}</span>
-                                                                                                                                                            </a>
-                                                                                                                                                        </li>
-                                                                                        @endcan
-                                                                                        @can('product_bulk_export')
-                                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                                            <a href="{{ route('product_bulk_export.index') }}" class="aiz-side-nav-link">
-                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Bulk Export') }}</span>
-                                                                                                                                                            </a>
-                                                                                                                                                        </li>
-                                                                                        @endcan
-
-                                                                                        @can('view_all_brands')
-                                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                                            <a href="{{ route('brands.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['brands.index', 'brands.create', 'brands.edit']) }}" >
-                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Brand') }}</span>
-                                                                                                                                                            </a>
-                                                                                                                                                        </li>
-                                                                                        @endcan
-                                                                                        @can('view_product_attributes')
-                                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                                            <a href="{{ route('attributes.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['attributes.index', 'attributes.create', 'attributes.edit', 'attributes.show', 'edit-attribute-value' . '']) }}">
-                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Attribute') }}</span>
-                                                                                                                                                            </a>
-                                                                                                                                                        </li>
-                                                                                        @endcan
-
-                                                                                        @can('view_product_reviews')
-                                                                                                                                                        <li class="aiz-side-nav-item">
-                                                                                                                                                            <a href="{{ url('admin/reviews') }}" class="aiz-side-nav-link">
-                                                                                                                                                                <span class="aiz-side-nav-text">{{ translate('Product Reviews') }}</span>
-                                                                                                                                                            </a>
+                        </a>
                                                                                                                                                         </li>-->
                             @endcan
                         </ul>
