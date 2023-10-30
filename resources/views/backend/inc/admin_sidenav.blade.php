@@ -97,14 +97,14 @@
                         </a>
                         <!--Submenu-->
                         <ul class="aiz-side-nav-list level-2">
-                            @can('view_interior_parts')
+                            @can('view_interiorpart')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('interiorpart.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['interiorpart', 'interiorpart.edit']) }}">
                                     <span class="aiz-side-nav-text">{{ translate('Interior Design') }}</span>
                                 </a>
                             </li>
                             @endcan
-                            @can('view_vhicle_seat')
+                            @can('view_vehicleseat')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('vehicleseat.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['vehicleseat', 'vehicleseat.edit']) }}">
                                     <span class="aiz-side-nav-text">{{ translate('Vehicle Seat') }}</span>
