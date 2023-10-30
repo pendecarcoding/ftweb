@@ -221,7 +221,7 @@
                     </a>
                     <!--Submenu-->
                     <ul class="aiz-side-nav-list level-2">
-                @can('view_img_automotive_seats')
+                @can('view_automotiveseats')
                 <li class="aiz-side-nav-item">
                     <a href="{{ route('automotiveseats.index') }}"
                         class="aiz-side-nav-link {{ areActiveRoutes(['automotiveseats.index', 'automotiveseats.create', 'automotiveseats.edit']) }}">

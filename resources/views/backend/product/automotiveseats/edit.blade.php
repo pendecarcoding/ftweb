@@ -65,7 +65,7 @@
                         <h5 class="mb-0 h6">{{ translate('Add New Image Automotive Seats') }}</h5>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('automotiveseats.update',$edit->id) }}" method="POST">
+                        <form action="{{ route('automotiveseats.update', $edit->id) }}" method="POST">
                             @csrf
                             <input name="_method" type="hidden" value="PATCH">
                             <div class="form-group mb-3">
@@ -76,21 +76,22 @@
                                                 {{ translate('Browse') }}</div>
                                         </div>
                                         <div class="form-control file-amount">{{ translate('Choose File') }}</div>
-                                        <input type="hidden" value="{{$edit->img}}" name="image" class="selected-files">
+                                        <input type="hidden" value="{{ $edit->img }}" name="image"
+                                            class="selected-files">
                                     </div>
                                     <div class="file-preview box sm">
                                     </div>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Title') }}</label>
-                                <input type="text" placeholder="{{ translate('Name') }}" value="{{$edit->title}}" name="title" class="form-control"
-                                    required>
+                                <input type="text" placeholder="{{ translate('Name') }}" value="{{ $edit->title }}"
+                                    name="title" class="form-control" required>
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Shortby') }}</label>
-                                <input type="number" placeholder="{{ translate('Shortby') }}" value="{{$edit->shortby}}" name="shortby"
-                                    class="form-control" required>
+                                <input type="number" placeholder="{{ translate('Shortby') }}" value="{{ $edit->shortby }}"
+                                    name="shortby" class="form-control" required>
                             </div>
 
                             <div class="form-group mb-3 text-right">

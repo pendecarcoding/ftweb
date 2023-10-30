@@ -21,33 +21,34 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($data as $i => $v)
-                            <tr>
-                                <td>{{$i+1}}</td>
-                                <td>
-                                  <img style="width:100px;height: 50px;object-fit: cover;" src="{{getimage($v->img)}}" alt="">
+                            @foreach ($data as $i => $v)
+                                <tr>
+                                    <td>{{ $i + 1 }}</td>
+                                    <td>
+                                        <img style="width:100px;height: 50px;object-fit: cover;"
+                                            src="{{ getimage($v->img) }}" alt="">
 
-                                </td>
-                                <td>{{$v->title}}</td>
-                                <td>{{$v->shortby}}</td>
-                                <td class="text-right">
-                                    @can('edit_automotiveseats')
-                                        <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
-                                            href="{{ route('automotiveseats.edit',base64_encode($v->id)) }}"
-                                            title="{{ translate('Edit') }}">
-                                            <i class="las la-edit"></i>
-                                        </a>
-                                    @endcan
-                                    @can('delete_automotiveseats')
-                                        <a href="#"
-                                            class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
-                                            data-href="{{ route('automotiveseats.destroy', $v->id) }}"
-                                            title="{{ translate('Delete') }}">
-                                            <i class="las la-trash"></i>
-                                        </a>
-                                    @endcan
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td>{{ $v->title }}</td>
+                                    <td>{{ $v->shortby }}</td>
+                                    <td class="text-right">
+                                        @can('edit_automotiveseats')
+                                            <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
+                                                href="{{ route('automotiveseats.edit', base64_encode($v->id)) }}"
+                                                title="{{ translate('Edit') }}">
+                                                <i class="las la-edit"></i>
+                                            </a>
+                                        @endcan
+                                        @can('delete_automotiveseats')
+                                            <a href="#"
+                                                class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
+                                                data-href="{{ route('automotiveseats.destroy', $v->id) }}"
+                                                title="{{ translate('Delete') }}">
+                                                <i class="las la-trash"></i>
+                                            </a>
+                                        @endcan
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>
@@ -57,7 +58,7 @@
                 </div>
             </div>
         </div>
-        @can('add_brand')
+        @can('add_automotiveseats')
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
@@ -68,16 +69,16 @@
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Picture') }}
-                                <div class="input-group" data-toggle="aizuploader" data-type="image">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text bg-soft-secondary font-weight-medium">
-                                            {{ translate('Browse') }}</div>
+                                    <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-soft-secondary font-weight-medium">
+                                                {{ translate('Browse') }}</div>
+                                        </div>
+                                        <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                                        <input type="hidden" name="image" class="selected-files">
                                     </div>
-                                    <div class="form-control file-amount">{{ translate('Choose File') }}</div>
-                                    <input type="hidden" name="image" class="selected-files">
-                                </div>
-                                <div class="file-preview box sm">
-                                </div>
+                                    <div class="file-preview box sm">
+                                    </div>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Title') }}</label>
@@ -87,8 +88,8 @@
 
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Shortby') }}</label>
-                                <input type="number" placeholder="{{ translate('Shortby') }}" name="shortby" class="form-control"
-                                    required>
+                                <input type="number" placeholder="{{ translate('Shortby') }}" name="shortby"
+                                    class="form-control" required>
                             </div>
 
                             <div class="form-group mb-3 text-right">
