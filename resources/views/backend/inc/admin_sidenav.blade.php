@@ -212,7 +212,7 @@
                     </li>
                 @endcanany
 
-                @canany(['view_img_automotive_seats', 'edit_img_automotive_seats', 'create_img_automotive_seats'])
+                @canany(['view_automotiveseats', 'edit_automotiveseats', 'add_automotiveseats'])
                 <li class="aiz-side-nav-item">
                     <a href="#" class="aiz-side-nav-link">
                         <i class="las la-shopping-cart aiz-side-nav-icon"></i>
