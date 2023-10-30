@@ -160,7 +160,7 @@
                             </li>
                             @endcan -->
 
-                            @can('view_all_leather')
+                            @can('view_leather')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('leather.index') }}"
                                     class="aiz-side-nav-link {{ areActiveRoutes(['leather.index', 'leather.create', 'leather.edit']) }}">
