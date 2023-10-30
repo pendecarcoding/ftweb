@@ -8,6 +8,7 @@
                     <div class="col text-center text-md-left">
                         <h5 class="mb-md-0 h6">{{ translate('Vehicle Seat') }}</h5>
                     </div>
+
                 </div>
                 <div class="card-body">
                     <table id="example" class="table table-striped table-bordered">
@@ -63,7 +64,10 @@
                 <div class="card">
                     <div class="card-header">
                         <h5 class="mb-0 h6">{{ translate('Update Image Automotive Seats') }}</h5>
+                        <a href="{{ route('automotiveseats.index') }}" class="btn btn-danger">x</a>
+
                     </div>
+
                     <div class="card-body">
                         <form action="{{ route('automotiveseats.update', $edit->id) }}" method="POST">
                             @csrf
