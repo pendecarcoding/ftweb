@@ -60,7 +60,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0 h6">{{ translate('Edit New Leather') }}</h5>
+                        <h5 class="mb-0 h6">{{ translate('Edit Seat Price') }}</h5>
                         <a href="{{ url('admin/seatprice') }}" class="btn btn-danger">x</a>
                     </div>
                     <div class="card-body">
