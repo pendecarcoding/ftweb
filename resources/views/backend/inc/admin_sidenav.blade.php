@@ -177,7 +177,7 @@
                                     </a>
                                 </li>
                             @endcan -->
-                            @can('view_all_patterndesign')
+                            @can('view_patterndesign')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('patterndesignsys.index') }}"
                                     class="aiz-side-nav-link {{ areActiveRoutes(['patterndesignsys.index', 'patterndesignsys.create', 'patterndesignsys.edit']) }}">
