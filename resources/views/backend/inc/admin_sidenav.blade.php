@@ -185,7 +185,7 @@
                                 </a>
                             </li>
                             @endcan
-                            @can('view_all_seatprice')
+                            @can('view_seatprice')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('seatprice.index') }}"
                                     class="aiz-side-nav-link {{ areActiveRoutes(['seatprice.index', 'seatprice.create', 'seatprice.edit']) }}">
