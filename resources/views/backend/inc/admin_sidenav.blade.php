@@ -207,7 +207,7 @@
 
                         </a>
                                                                                                                                                         </li>-->
-                            @endcan
+
                         </ul>
                     </li>
                 @endcanany
