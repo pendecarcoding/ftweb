@@ -59,7 +59,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0 h6">{{ translate('Add New Leather') }}</h5>
+                        <h5 class="mb-0 h6">{{ translate('Add New Seat Price') }}</h5>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('seatprice.store') }}" method="POST">

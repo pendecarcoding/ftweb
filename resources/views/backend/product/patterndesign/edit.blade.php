@@ -7,6 +7,7 @@
                 <div class="col text-center text-md-left">
                     <h5 class="mb-md-0 h6">{{ translate('Pattern Design') }}</h5>
                 </div>
+                <a href="{{ route('patterndesignsys.index') }}" class="btn btn-danger btn-sm" style="color:white">x</a>
             </div>
         <form action="{{route('patterndesignsys.update',$data->id)}}" method="post">@csrf
             <input name="_method" type="hidden" value="PATCH">

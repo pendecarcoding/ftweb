@@ -62,7 +62,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0 h6">{{ translate('Add New Image Automotive Seats') }}</h5>
+                        <h5 class="mb-0 h6">{{ translate('Update Image Automotive Seats') }}</h5>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('automotiveseats.update', $edit->id) }}" method="POST">
