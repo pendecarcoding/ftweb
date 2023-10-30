@@ -38,13 +38,14 @@
                                      {{$v->year}}
                                 </td>
                                 <td>{!! $v->content !!}</td>
-                                <td class="text-right"> @can('edit_policy')
+                                <td class="text-right">
+                                @can('edit_milestone')
                                     <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
                                         href="{{ route('milestone.edit', base64_encode($v->id)) }}" title="{{ translate('Edit') }}">
                                         <i class="las la-pen"></i>
                                     </a>
                                 @endcan
-                                @can('delete_policy')
+                                @can('delete_milestone')
                                     <a href="#" class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
                                         data-href="{{ route('milestone.destroy', base64_encode($v->id)) }}" title="{{ translate('Delete') }}">
                                         <i class="las la-trash"></i>
