@@ -20,7 +20,7 @@
         <section class="pt-5 pb-5">
             <div class="container">
                 <div class="section-head text-center ">
-                    <h2 class="text-capitalize">Manufacturing Of Automotive Covers</h2>
+                    <h2 class="text-capitalize">Installation and Sales of Automotive Covers</h2>
 
                 </div>
                 <div class="row">
@@ -497,17 +497,17 @@ white-space: nowrap;" id="interior-list">
             </div>
             </div>
         </section>
-        <section>
+        <!-- <section>
             <div class="section-full about-box content-inner section-bg-gosford-color">
                 <div class="container">
                     <div class="row">
                         <div data-aos="fade-right" data-aos-delay="100" class="col-sm-12 col-lg-6 m-b30 p-r50">
                             <div class="section-head text-left space-text-video">
                                 <h2 class="text-capitalize" style="color: black;font-family: 'Poppins';font-weight: bold;">Manufacturing of automotive covers</h2>
-                                <!-- <p class="font-patner" style="color:black">Combining people innovation with most cutting edge manufacturing solution and provide best design with highest quality product to customers.</p> -->
-                            </div>
 
-                        </div>
+                            </div> -->
+
+                        <!-- </div>
                         <div class="col-sm-12 col-lg-6 m-b30">
                             <div class="video-box" style="padding: 50px 0px;">
                                 <iframe width="100%" class="yt-embed-height" src="https://www.youtube.com/embed/WEQDCxT6RFY" title="Gosford, Johor Bahru" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -517,7 +517,7 @@ white-space: nowrap;" id="interior-list">
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section>
             <div class="section-full about-box content-inner section-bg-trimex-color">
