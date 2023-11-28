@@ -20,8 +20,10 @@
                                 <th>#</th>
                                 <th>Image</th>
                                 <th>Name</th>
-                                <th>Price</th>
+                                <th>Catania Price</th>
+                                <th>Nappa Price</th>
                                 <th>Published</th>
+                                <th>{{ translate('Show On') }}</th>
                                 <th>action</th>
                             </tr>
                         </thead>
@@ -32,7 +34,8 @@
                                     <td><img src="{{ getimage($v->img) }}"
                                             style="width:100%;height:100px;object-fit: cover;"></td>
                                     <td>{{ $v->name_pattern }}</td>
-                                    <td>RM {{ $v->price }}</td>
+                                    <td>RM {{ $v->catania_price }}</td>
+                                    <td>RM {{ $v->nappa_price }}</td>
                                     <td> <label class="aiz-switch aiz-switch-success mb-0">
                                             <input onchange="update_published(this)" value="{{ $v->id }}"
                                                 type="checkbox" <?php if ($v->published == 'Y') {
@@ -40,6 +43,11 @@
                                                 } ?>>
                                             <span class="slider round"></span>
                                         </label></td>
+                                        <td>
+                                            @php
+                                                getDataLeather($v->showon);
+                                            @endphp
+                                        </td>
                                     <td>
                                         @can('edit_patterndesign')
                                             <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
