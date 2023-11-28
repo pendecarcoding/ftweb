@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="@if(auth()->user()->can('add_color')) col-lg-8 @else col-lg-12 @endif">
+        <div class="@if (auth()->user()->can('add_color')) col-lg-9 @else col-lg-12 @endif">
             <div class="card">
                 <form class="" id="sort_colors" action="" method="GET">
                     <div class="card-header">
@@ -16,6 +16,23 @@
                         </div>
                     </div>
                 </form>
+                <div id="infomodal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Special Price</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <p>If this feature is activated, the related item will set a special price that has been set. To set it, you can refer to this link: <a href="{{route('specialprice.index')}}"> Link </a></p>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
 
                 <div class="card-body">
                     <table class="table aiz-table mb-0">
@@ -28,6 +45,9 @@
                                 <th>{{ translate('Hex Color') }}</th>
                                 <th>{{ translate('Catania Price') }}</th>
                                 <th>{{ translate('Nappa Price') }}</th>
+                                <th>Use Special Price ? <span data-toggle="modal" data-target="#infomodal"
+                                        class="badge badge-inline badge-secondary"><i
+                                            class="las la-info aiz-side-nav-icon"></i></span></th>
                                 <th>{{ translate('Show On') }}</th>
                                 <th class="text-center">{{ translate('Options') }}</th>
                             </tr>
@@ -35,13 +55,21 @@
                         <tbody>
                             @foreach ($colors as $key => $color)
                                 <tr>
-                                    <td>{{ ($key+1) + ($colors->currentPage() - 1)*$colors->perPage() }}</td>
-                                    <td><img src="{{ getimage($color->image)}}" alt="" style="width:100px;height: 100px;"></td>
+                                    <td>{{ $key + 1 + ($colors->currentPage() - 1) * $colors->perPage() }}</td>
+                                    <td><img src="{{ getimage($color->image) }}" alt=""
+                                            style="width:100px;height: 100px;"></td>
                                     <td>{{ $color->name }}</td>
                                     <td>{{ $color->code }}</td>
                                     <td>{{ $color->hex_color }}</td>
                                     <td>{{ $color->catania_price }}</td>
                                     <td>{{ $color->nappa_price }}</td>
+                                    <td> <label class="aiz-switch aiz-switch-success mb-0">
+                                        <input onchange="update_sepcialprice(this)" value="{{ $color->id }}"
+                                            type="checkbox" <?php if ($color->specialprice == 'Y') {
+                                                echo 'checked';
+                                            } ?>>
+                                        <span class="slider round"></span>
+                                    </label></td>
                                     <td>
                                         @php
                                             getDataLeather($color->showon);
@@ -56,7 +84,8 @@
                                             </a>
                                         @endcan
                                         @can('delete_color')
-                                            <a href="#" class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
+                                            <a href="#"
+                                                class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
                                                 data-href="{{ route('colors.destroy', $color->id) }}"
                                                 title="{{ translate('Delete') }}">
                                                 <i class="las la-trash"></i>
@@ -74,7 +103,7 @@
             </div>
         </div>
         @can('add_color')
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card">
                     <div class="card-header">
                         <h5 class="mb-0 h6">{{ translate('Add New Color') }}</h5>
@@ -117,25 +146,27 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Hex Color') }}</label>
-                                <input style="width:100px;height:100px" type="color" placeholder="{{ translate('Hex Code') }}" id="code" name="hex_color"
+                                <input style="width:100px;height:100px" type="color"
+                                    placeholder="{{ translate('Hex Code') }}" id="code" name="hex_color"
                                     class="form-control" value="{{ old('hex_color') }}" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Catania Price') }}</label>
-                                <input type="number" placeholder="{{ translate('Catania Price') }}" id="extraprice" name="catania_price"
-                                    class="form-control" value="{{ old('catania_price') }}" required>
+                                <input type="number" placeholder="{{ translate('Catania Price') }}" id="extraprice"
+                                    name="catania_price" class="form-control" value="{{ old('catania_price') }}" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Nappa Price') }}</label>
-                                <input type="number" placeholder="{{ translate('Nappa Price') }}" id="extraprice" name="nappa_price"
-                                    class="form-control" value="{{ old('nappa_price') }}" required>
+                                <input type="number" placeholder="{{ translate('Nappa Price') }}" id="extraprice"
+                                    name="nappa_price" class="form-control" value="{{ old('nappa_price') }}" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Show On</label>
-                                <select required name="showon[]" class="select2 form-control aiz-selectpicker"  data-toggle="select2" data-placeholder="Choose ..."data-live-search="true" multiple>
+                                <select required name="showon[]" class="select2 form-control aiz-selectpicker"
+                                    data-toggle="select2" data-placeholder="Choose ..."data-live-search="true" multiple>
                                     <option value="">--Select section--</option>
-                                    @foreach($leather as $i => $vleather)
-                                      <option value="{{$vleather->id}}">{{$vleather->leather}}</option>
+                                    @foreach ($leather as $i => $vleather)
+                                        <option value="{{ $vleather->id }}">{{ $vleather->leather }}</option>
                                     @endforeach
 
                                 </select>
@@ -147,16 +178,18 @@
                     </div>
                 </div>
                 <!-- <div class="card">
-                    <div class="card-header">
-                        <h3 class="mb-0 h6">{{translate('Color filter activation')}}</h3>
-                    </div>
-                    <div class="card-body text-center">
-                        <label class="aiz-switch aiz-switch-success mb-0">
-                            <input type="checkbox" onchange="updateSettings(this, 'color_filter_activation')" <?php if(get_setting('color_filter_activation') == 1) echo "checked";?>>
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                </div> -->
+                                    <div class="card-header">
+                                        <h3 class="mb-0 h6">{{ translate('Color filter activation') }}</h3>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <label class="aiz-switch aiz-switch-success mb-0">
+                                            <input type="checkbox" onchange="updateSettings(this, 'color_filter_activation')" <?php if (get_setting('color_filter_activation') == 1) {
+                                                echo 'checked';
+                                            } ?>>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div> -->
             </div>
         @endcan
     </div>
@@ -170,20 +203,40 @@
 
 @section('script')
     <script type="text/javascript">
-        function updateSettings(el, type){
-            if($(el).is(':checked')){
+        function updateSettings(el, type) {
+            if ($(el).is(':checked')) {
                 var value = 1;
-            }
-            else{
+            } else {
                 var value = 0;
             }
 
-            $.post('{{ route('business_settings.update.activation') }}', {_token:'{{ csrf_token() }}', type:type, value:value}, function(data){
-                if(data == '1'){
+            $.post('{{ route('business_settings.update.activation') }}', {
+                _token: '{{ csrf_token() }}',
+                type: type,
+                value: value
+            }, function(data) {
+                if (data == '1') {
                     AIZ.plugins.notify('success', '{{ translate('Settings updated successfully') }}');
-                }
-                else{
+                } else {
                     AIZ.plugins.notify('danger', 'Something went wrong');
+                }
+            });
+        }
+        function update_sepcialprice(el) {
+            if (el.checked) {
+                var status = 'Y';
+            } else {
+                var status = 'N';
+            }
+            $.post('{{ route('colors.usespecialprice') }}', {
+                _token: '{{ csrf_token() }}',
+                id: el.value,
+                status: status
+            }, function(data) {
+                if (data == 1) {
+                    AIZ.plugins.notify('success', '{{ translate('updated Successfully') }}');
+                } else {
+                    AIZ.plugins.notify('danger', '{{ translate('Something went wrong') }}');
                 }
             });
         }

@@ -193,13 +193,20 @@
                                 </a>
                             </li>
                             @endcan
-
-
                             @can('view_all_piping')
                             <li class="aiz-side-nav-item">
                                 <a href="{{ route('pipingsys.index') }}"
                                     class="aiz-side-nav-link {{ areActiveRoutes(['pipingsys.index', 'pipingsys.create', 'pipingsys.edit']) }}">
                                     <span class="aiz-side-nav-text">{{ translate('Piping') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+
+                            @can('view_all_specialprice')
+                            <li class="aiz-side-nav-item">
+                                <a href="{{ route('specialprice.index') }}"
+                                class="aiz-side-nav-link {{ areActiveRoutes(['specialprice.index', 'specialprice.create', 'specialprice.edit']) }}">
+                                    <span class="aiz-side-nav-text">{{ translate('Special Price') }}</span>
                                 </a>
                             </li>
                             @endcan

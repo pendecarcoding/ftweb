@@ -69,6 +69,19 @@ class PatterndesignController extends Controller
 
     }
 
+    function update_specialprice(request $request){
+        $data = Patterndesign::where('id',$request->id)->first();
+        try {
+            Patterndesign::where('id',$request->id)->update(['specialprice'=>$request->status]);
+            return 1;
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
+
+    }
+
+
+
     public function edit($id){
         $data    = Patterndesign::where('id',base64_decode($id))->first();
         $color   = Color::all();

@@ -43,6 +43,7 @@ use App\Utility\SmsUtility;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Patner;
+use App\Models\Color;
 
 
 
@@ -833,24 +834,101 @@ function getvehicle($id){
     }
 }
 
-function getColor($leatherId){
+function getSpecialPrice($row){
+    $data = [];
     try {
+        $data = DB::table('special_price')->where('type_row',$row)->first();
+        if($data != null){
+            $data = [
+                'price_catania_pattern'=>$data->price_catania_pattern,
+                'price_nappa_pattern'=>$data->price_nappa_pattern,
+                'price_catania_color'=>$data->price_catania_color,
+                'price_nappa_color'=>$data->price_nappa_color,
+                'id_special'=>$data->id_special,
+            ];
+        }else{
+            $data = [
+                'price_catania_pattern'=>0,
+                'price_nappa_pattern'=>0,
+                'price_catania_color'=>0,
+                'price_nappa_color'=>0,
+                'id_special'=>null,
+            ];
+        }
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+    return $data;
+}
+
+function getColor($leatherId,$row){
+    try {
+        $arrayData = array();
         $dataColor = DB::table('colors')
         ->whereRaw("FIND_IN_SET(?, showon)", [$leatherId])
         ->get();
-        return $dataColor;
+        foreach ($dataColor as $key => $v) {
+            $checkSpecialPrice = Color::where('id',$v->id)->where('specialprice','Y')->first();
+            $cataniaPrice = ($checkSpecialPrice != null) ? getSpecialPricePattern($row)->price_catania_color:$v->catania_price;
+            $nappaPrice   = ($checkSpecialPrice != null) ? getSpecialPricePattern($row)->price_nappa_color:$v->nappa_price;
+            $data = [
+                "id"=> $v->id,
+                "name"=> $v->name,
+                "code"=> $v->code,
+                "hex_color"=> $v->hex_color,
+                "catania_price"=> $cataniaPrice,
+                "nappa_price"=> $nappaPrice,
+                "showon"=> $v->showon,
+                "specialprice"=> $v->specialprice,
+                "image"=> $v->image,
+                "created_at"=> $v->created_at,
+                "updated_at"=> $v->updated_at
+            ];
+            array_push($arrayData,$data);
+        }
+        return $arrayData;
     } catch (\Throwable $th) {
         //throw $th;
     }
 }
-function getPattern($leatherId){
+function getPattern($leatherId,$row){
     try {
+        $arrayData = array();
         $dataPattern = Patterndesign::where('published','Y')->whereRaw("FIND_IN_SET(?, showon)", [$leatherId])->orderByRaw('CAST(SUBSTRING(name_pattern, 8) AS UNSIGNED)')->get();
-        return $dataPattern;
+        foreach ($dataPattern as $i => $v) {
+            $checkSpecialPrice = Patterndesign::where('id',$v->id)->where('specialprice','Y')->first();
+            $cataniaPrice = ($checkSpecialPrice != null) ? getSpecialPricePattern($row)->price_catania_pattern:$v->catania_price;
+            $nappaPrice   = ($checkSpecialPrice != null) ? getSpecialPricePattern($row)->price_nappa_pattern:$v->nappa_price;
+            $data = [
+                "id"=> 6,
+                "name_pattern"=> "Pattern 1",
+                "catania_price"=> $cataniaPrice,
+                "nappa_price"=> $nappaPrice,
+                "showon"=> $v->showon,
+                "img"=> $v->img,
+                "base_img"=> $v->base_img,
+                "color_img"=> $v->color_img,
+                "published"=> $v->published,
+                "specialprice"=> $v->specialprice,
+                "created_at"=> $v->created_at,
+                "updated_at"=> $v->updated_at
+            ];
+            array_push($arrayData,$data);
+        }
+        return $arrayData;
     } catch (\Throwable $th) {
         //throw $th;
     }
 }
+function getSpecialPricePattern($row){
+  try {
+    $data = DB::table('special_price')->where('type_row',$row)->first();
+    return $data;
+  } catch (\Throwable $th) {
+    //throw $th;
+  }
+}
+
 function getInterior($leatherId){
     try {
         $dataInterior = InteriorPart::whereRaw("FIND_IN_SET(?, showon)", [$leatherId])->get();
