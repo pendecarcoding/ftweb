@@ -7,7 +7,7 @@ use App\Models\Color;
 use App\Models\Patterndesign;
 use Illuminate\Http\Request;
 use App\Models\TypeLeather;
-
+use DB;
 class PatterndesignController extends Controller
 {
 
@@ -21,13 +21,15 @@ class PatterndesignController extends Controller
 
 
     public function index(){
+        $leather =  DB::table('leather_type')->get();
         $data = Patterndesign::orderby('id','desc')->get();
-        return view('backend.product.patterndesign.index',compact('data'));
+        return view('backend.product.patterndesign.index',compact('data','leather'));
     }
 
     public function create(){
+        $leather =  DB::table('leather_type')->get();
         $color   = Color::all();
-        return view('backend.product.patterndesign.create',compact('color'));
+        return view('backend.product.patterndesign.create',compact('color','leather'));
     }
   /**
      * Store a newly created resource in storage.
@@ -41,10 +43,12 @@ class PatterndesignController extends Controller
             $d = new Patterndesign;
             $d->name_pattern= $request->name;
             // $d->colors     = $color_1;
-            $d->price = $request->price;
+            $d->catania_price = $request->catania_price;
+            $d->nappa_price = $request->nappa_price;
             $d->img = $request->img;
             $d->base_img = $request->base_img;
             $d->color_img = $request->color_img1;
+            $d->showon = implode(',',$request->showon);
             $d->save();
             flash(translate('Product has been inserted successfully'))->success();
             return redirect()->route('patterndesignsys.index');
@@ -68,7 +72,8 @@ class PatterndesignController extends Controller
     public function edit($id){
         $data    = Patterndesign::where('id',base64_decode($id))->first();
         $color   = Color::all();
-        return view('backend.product.patterndesign.edit',compact('color','data'));
+        $leather =  DB::table('leather_type')->get();
+        return view('backend.product.patterndesign.edit',compact('color','data','leather'));
     }
 
     public function update(Request $request,$id){
@@ -77,10 +82,12 @@ class PatterndesignController extends Controller
             $d = Patterndesign::find($id);
             $d->name_pattern= $request->name;
             // $d->colors     = $color_1;
-            $d->price = $request->price;
+            $d->catania_price = $request->catania_price;
+            $d->nappa_price = $request->nappa_price;
             $d->img = $request->img;
             $d->base_img = $request->base_img;
             $d->color_img = $request->color_img1;
+            $d->showon = implode(',',$request->showon);
             $d->save();
             flash(translate('Product has been inserted successfully'))->success();
             return redirect()->route('patterndesignsys.index');

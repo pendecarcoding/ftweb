@@ -52,6 +52,9 @@ footer {
 .color-column-list.selected img{
  border: solid brown;
 }
+.pattern-column-list.selected img{
+    border: solid brown;
+}
 .form-check-label {
     color: gray;
     font-size: 13.5px;
@@ -64,6 +67,12 @@ footer {
     margin-bottom: 0.125rem;
 }
 .color-list-container {
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.pattern-list-container {
     margin: 20px 0px;
     display: flex;
     flex-wrap: wrap;

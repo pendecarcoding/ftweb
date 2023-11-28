@@ -1,15 +1,8 @@
 @extends('backend.layouts.app')
 
 @section('content')
-
-    <div class="aiz-titlebar text-left mt-2 mb-3">
-        <div class="align-items-center">
-            <h1 class="h3">{{ translate('All Colors') }}</h1>
-        </div>
-    </div>
-
     <div class="row">
-        <div class="@if(auth()->user()->can('add_color')) col-lg-7 @else col-lg-12 @endif">
+        <div class="@if(auth()->user()->can('add_color')) col-lg-8 @else col-lg-12 @endif">
             <div class="card">
                 <form class="" id="sort_colors" action="" method="GET">
                     <div class="card-header">
@@ -33,7 +26,10 @@
                                 <th>{{ translate('Name') }}</th>
                                 <th>{{ translate('Code') }}</th>
                                 <th>{{ translate('Hex Color') }}</th>
-                                <th class="text-right">{{ translate('Options') }}</th>
+                                <th>{{ translate('Catania Price') }}</th>
+                                <th>{{ translate('Nappa Price') }}</th>
+                                <th>{{ translate('Show On') }}</th>
+                                <th class="text-center">{{ translate('Options') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,6 +40,13 @@
                                     <td>{{ $color->name }}</td>
                                     <td>{{ $color->code }}</td>
                                     <td>{{ $color->hex_color }}</td>
+                                    <td>{{ $color->catania_price }}</td>
+                                    <td>{{ $color->nappa_price }}</td>
+                                    <td>
+                                        @php
+                                            getDataLeather($color->showon);
+                                        @endphp
+                                    </td>
                                     <td class="text-right">
                                         @can('edit_color')
                                             <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
@@ -71,7 +74,7 @@
             </div>
         </div>
         @can('add_color')
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
                         <h5 class="mb-0 h6">{{ translate('Add New Color') }}</h5>
@@ -118,9 +121,24 @@
                                     class="form-control" value="{{ old('hex_color') }}" required>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="name">{{ translate('Extra Price') }}</label>
-                                <input type="number" placeholder="{{ translate('Extra Price') }}" id="extraprice" name="extraprice"
-                                    class="form-control" value="{{ old('extraprice') }}" required>
+                                <label for="name">{{ translate('Catania Price') }}</label>
+                                <input type="number" placeholder="{{ translate('Catania Price') }}" id="extraprice" name="catania_price"
+                                    class="form-control" value="{{ old('catania_price') }}" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="name">{{ translate('Nappa Price') }}</label>
+                                <input type="number" placeholder="{{ translate('Nappa Price') }}" id="extraprice" name="nappa_price"
+                                    class="form-control" value="{{ old('nappa_price') }}" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="">Show On</label>
+                                <select required name="showon[]" class="select2 form-control aiz-selectpicker"  data-toggle="select2" data-placeholder="Choose ..."data-live-search="true" multiple>
+                                    <option value="">--Select section--</option>
+                                    @foreach($leather as $i => $vleather)
+                                      <option value="{{$vleather->id}}">{{$vleather->leather}}</option>
+                                    @endforeach
+
+                                </select>
                             </div>
                             <div class="form-group mb-3 text-right">
                                 <button type="submit" class="btn btn-primary">{{ translate('Save') }}</button>

@@ -339,7 +339,7 @@
                 @endif
 
                 <!-- Sale -->
-                @canany(['view_all_orders', 'view_all_ccemail', 'view_inhouse_orders', 'view_seller_orders',
+                @canany(['view_all_orders', 'view_inhouse_orders', 'view_seller_orders',
                     'view_pickup_point_orders'])
                     <li class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link">
@@ -357,14 +357,7 @@
                                     </a>
                                 </li>
                             @endcan
-                            @can('view_all_ccemail')
-                                <li class="aiz-side-nav-item">
-                                    <a href="{{ route('all_ccemail.index') }}"
-                                        class="aiz-side-nav-link {{ areActiveRoutes(['all_ccemail.index']) }}">
-                                        <span class="aiz-side-nav-text">{{ translate('CC Email') }}</span>
-                                    </a>
-                                </li>
-                            @endcan
+
                             {{-- @can('view_inhouse_orders')
                                 <li class="aiz-side-nav-item">
                                     <a href="{{ route('inhouse_orders.index') }}" class="aiz-side-nav-link {{ areActiveRoutes(['inhouse_orders.index', 'inhouse_orders.show'])}}" >
@@ -681,7 +674,7 @@
                 @endcanany
 
                 Website Setup
-                @canany(['view_banner','view_slider','menu_setup','header_setup', 'footer_setup', 'view_all_website_pages', 'website_appearance'])
+                @canany(['view_banner','view_all_ccemail','view_slider','menu_setup','header_setup', 'footer_setup', 'view_all_website_pages', 'website_appearance'])
                     <li class="aiz-side-nav-item">
                         <a href="#"
                             class="aiz-side-nav-link {{ areActiveRoutes(['website.footer', 'website.header']) }}">
@@ -744,6 +737,14 @@
                                     <span class="aiz-side-nav-text">{{ translate('Appearance') }}</span>
                                  </a>
                             </li>
+                            @endcan
+                            @can('view_all_ccemail')
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{ route('all_ccemail.index') }}"
+                                        class="aiz-side-nav-link {{ areActiveRoutes(['all_ccemail.index']) }}">
+                                        <span class="aiz-side-nav-text">{{ translate('CC Email') }}</span>
+                                    </a>
+                                </li>
                             @endcan
                         </ul>
                     </li>

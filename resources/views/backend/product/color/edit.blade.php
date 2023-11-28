@@ -62,9 +62,26 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="name">{{ translate('Extra Price') }}</label>
-                    <input type="number" value="{{$color->extraprice}}" placeholder="{{ translate('Extra Price') }}" id="extraprice" name="extraprice"
-                        class="form-control" value="{{ old('extraprice') }}" required>
+                    <label for="name">{{ translate('Catania Price') }}</label>
+                    <input type="number" placeholder="{{ translate('Catania Price') }}" id="extraprice" name="catania_price"
+                        class="form-control" value="{{ $color->catania_price }}" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="name">{{ translate('Nappa Price') }}</label>
+                    <input type="number" placeholder="{{ translate('Nappa Price') }}" id="extraprice" name="nappa_price"
+                        class="form-control" value="{{ $color->nappa_price }}" required>
+                </div>
+                @php
+                $show = explode(',',$color->showon);
+                @endphp
+                <div class="form-group mb-3">
+                    <label for="">Show On</label>
+                    <select required name="showon[]" class="select2 form-control aiz-selectpicker"  data-toggle="select2" data-placeholder="Choose ..."data-live-search="true" multiple>
+                        <option value="">--Select section--</option>
+                        @foreach($leather as $i => $vleather)
+                          <option value="{{$vleather->id}}" @if(in_array($vleather->id, $show)) selected @endif>{{$vleather->leather}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group mb-0 text-right">
                     <button type="submit" class="btn btn-primary">{{translate('Save')}}</button>

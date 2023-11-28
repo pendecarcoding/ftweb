@@ -232,29 +232,11 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="list-leather" style="
+                                        <div id="interiorContainer" class="list-leather" style="
                                         display: flex;
                                         flex-wrap: wrap;
                                         position: relative;
                                         white-space: nowrap;">
-
-                                          <!-- <div class="form-check">
-                                            <input checked class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                              Seat Cover
-                                            </label>
-                                          </div> -->
-
-                                          @foreach($interior as $i => $vinterior)
-                                          <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="{{$vinterior->id_interior}}" id="checkbox{{$i}}" onclick="interiorSelected(this)">
-                                            <label class="form-check-label" for="checkbox{{$i}}">
-                                                {{$vinterior->name_interior}}
-                                            </label>
-                                        </div>
-
-                                          @endforeach
-
                                         </div>
                                     </div>
                                 </div>
@@ -268,13 +250,13 @@
                                     </div>
                                     <div>
 
-<div style="    gap: 9px;
-display: flex;
-flex-wrap: wrap;
-position: relative;
-white-space: nowrap;" id="interior-list">
-    <!-- Selected interior data will be displayed here -->
-</div>
+                                    <div style="    gap: 9px;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    position: relative;
+                                    white-space: nowrap;" id="interior-list">
+                                        <!-- Selected interior data will be displayed here -->
+                                    </div>
 
                                 </div>
 
@@ -313,23 +295,15 @@ white-space: nowrap;" id="interior-list">
                                       </div>
                                 </div>
                                 <div class="color-list-container">
-                                @foreach($colors as $i =>$vcolor)
-                                    <div class="color-column-list" onclick="selectColor(this, '{{$vcolor->name}}', '{{getimage($vcolor->image)}}', {{$vcolor->extraprice}},'{{$vcolor->hex_color}}','{{$vcolor->code}}')">
-                                        <img id="imgcolor" class="img-color-option" src="{{getimage($vcolor->image)}}" alt="">
-                                        <div id="namecolor" style="font-weight: bold;color: #555555;">{{$vcolor->name}}</div>
-                                        <div style="font-size: smaller;">{{$vcolor->code}}</div>
-                                        <div class="extra-price-color">@if($vcolor->extraprice > 0) +RM{{$vcolor->extraprice}} @endif</div>
-
-                                    </div>
-
-
-                                @endforeach
-
-
+                                    @foreach($colors as $i =>$vcolor)
+                                        <div class="color-column-list" onclick="selectColor(this, '{{$vcolor->name}}', '{{getimage($vcolor->image)}}', {{$vcolor->extraprice}},'{{$vcolor->hex_color}}','{{$vcolor->code}}')">
+                                            <img id="imgcolor" class="img-color-option" src="{{getimage($vcolor->image)}}" alt="">
+                                            <div id="namecolor" style="font-weight: bold;color: #555555;">{{$vcolor->name}}</div>
+                                            <div style="font-size: smaller;">{{$vcolor->code}}</div>
+                                            <div class="extra-price-color">@if($vcolor->extraprice > 0) +RM{{$vcolor->extraprice}} @endif</div>
+                                        </div>
+                                    @endforeach
                                 </div>
-
-
-
                             </div>
                             <div class="card-footer">
                                 <div style="display: flex;justify-content: space-between;">
@@ -357,12 +331,12 @@ white-space: nowrap;" id="interior-list">
                             overflow: scroll;
                         ">
 
-                                <div class="color-list-container">
+                                <div class="pattern-list-container">
                                     @foreach($pattern as $i => $vpattern)
                                     <div class="color-column-list" onclick="selectPattern(this, '{{$vpattern->name_pattern}}', '{{getimage($vpattern->img)}}','{{getimage($vpattern->base_img)}}','{{getimage($vpattern->color_img)}}', {{$vpattern->price}})">
                                         <img id="imgpattern{{$i}}" class="img-pattern-option" src="{{getimage($vpattern->img)}}" alt="">
                                         <div id="namepattern{{$i}}" style="font-weight: bold;color: #555555;">{{$vpattern->name_pattern}}</div>
-                                        <div class="extra-price-color">@if($vpattern->price > 0) +RM{{$vpattern->price}} @endif</div>
+                                        <div class="extra-price-pattern">@if($vpattern->price > 0) +RM{{$vpattern->price}} @endif</div>
                                     </div>
                                     @endforeach
                                 </div>

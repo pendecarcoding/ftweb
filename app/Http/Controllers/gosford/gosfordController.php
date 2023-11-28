@@ -496,7 +496,8 @@ class gosfordController extends Controller
             'id_interior' => $interior->id_interior,
             'name_interior' => $interior->name_interior,
             'urlimage' => getimage($interior->img),
-            'price' => $interior->price,
+            'catania_price' => $interior->catania_price,
+            'nappa_price' => $interior->nappa_price,
         ];
     });
 
@@ -511,12 +512,13 @@ class gosfordController extends Controller
         $array = array();
         if($r->has('interior')){
             foreach ($r->interior as $idata) {
-                $datainterior = InteriorPart::where('id_interior',$idata['id'])->first();
+                $datainterior = InteriorPart::where('id_interior',$idata['id'])->whereRaw("FIND_IN_SET(?, showon)", [$r->id_leather])->first();
+                $price = ($r->id_leather == 1) ? $datainterior->catania_price:$datainterior->nappa_price;
                 $datacollect = [
                     'id'=>$datainterior->id_interior,
                     'name_interior'=>$datainterior->name_interior,
                     'imgurl'=>getimage($datainterior->img),
-                    'price'=>$datainterior->price,
+                    'price'=>$price,
                 ];
                 array_push($array, $datacollect);
             }

@@ -8,81 +8,106 @@
                     <h5 class="mb-md-0 h6">{{ translate('Pattern Design') }}</h5>
                 </div>
             </div>
-        <form action="{{route('patterndesignsys.update',$data->id)}}" method="post">@csrf
-            <input name="_method" type="hidden" value="PATCH">
-            <div class="card-body">
-                <div style="display: flex;gap:15px;flex-direction: row;">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Name Product</label>
-                            <input type="text" class="form-control" value="{{$data->name_pattern}}" name="name" required placeholder="Example : A012-Nappa Leather">
-                            <p>it's like name of product for Pattern Design</p>
+            <form action="{{ route('patterndesignsys.update', $data->id) }}" method="post">@csrf
+                <input name="_method" type="hidden" value="PATCH">
+                <div class="card-body">
+                    <div style="display: flex;gap:15px;flex-direction: row;">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Name Product</label>
+                                <input type="text" class="form-control" value="{{ $data->name_pattern }}" name="name"
+                                    required placeholder="Example : A012-Nappa Leather">
+                                <p>it's like name of product for Pattern Design</p>
+                            </div>
+
+
                         </div>
+                        <div class="col-md-6">
 
-
-                    </div>
-                    <div class="col-md-6">
-
-                        <div class="form-group">
-                            <label for="">Image Product</label>
-                            <div class="input-group" data-toggle="aizuploader" data-type="image">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text bg-soft-secondary font-weight-medium">
-                                        {{ translate('Browse') }}
+                            <div class="form-group">
+                                <label for="">Image Product</label>
+                                <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-soft-secondary font-weight-medium">
+                                            {{ translate('Browse') }}
+                                        </div>
                                     </div>
+                                    <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                                    <input type="hidden" name="img" value="{{ $data->img }}" class="selected-files">
                                 </div>
-                                <div class="form-control file-amount">{{ translate('Choose File') }}</div>
-                                <input type="hidden" name="img" value="{{$data->img}}" class="selected-files">
+                                <div class="file-preview box sm">
+                                </div>
                             </div>
-                            <div class="file-preview box sm">
-                            </div>
-                        </div>
 
-                        <hr>
-                        <div class="form-group">
-                            <label for="">Basic Color image</label>
-                            <p>For maximum results, use a white base color</p>
-                            <div class="input-group" data-toggle="aizuploader" data-type="image">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text bg-soft-secondary font-weight-medium">
-                                        {{ translate('Browse') }}
+                            <hr>
+                            <div class="form-group">
+                                <label for="">Basic Color image</label>
+                                <p>For maximum results, use a white base color</p>
+                                <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-soft-secondary font-weight-medium">
+                                            {{ translate('Browse') }}
+                                        </div>
                                     </div>
+                                    <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                                    <input type="hidden" name="base_img" value="{{ $data->base_img }}"
+                                        class="selected-files">
                                 </div>
-                                <div class="form-control file-amount">{{ translate('Choose File') }}</div>
-                                <input type="hidden" name="base_img" value="{{$data->base_img}}" class="selected-files">
+                                <div class="file-preview box sm">
+                                </div>
                             </div>
-                            <div class="file-preview box sm">
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="">dynamic color image</label>
-                            <p>Dynamic color images must be images that have been edited for the object whose color will be changed in PNG format</p>
-                            <div class="input-group" data-toggle="aizuploader" data-type="image">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text bg-soft-secondary font-weight-medium">
-                                        {{ translate('Browse') }}
+                            <div class="form-group">
+                                <label for="">dynamic color image</label>
+                                <p>Dynamic color images must be images that have been edited for the object whose color will
+                                    be changed in PNG format</p>
+                                <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-soft-secondary font-weight-medium">
+                                            {{ translate('Browse') }}
+                                        </div>
                                     </div>
+                                    <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                                    <input type="hidden" name="color_img1" value="{{ $data->color_img }}"
+                                        class="selected-files">
                                 </div>
-                                <div class="form-control file-amount">{{ translate('Choose File') }}</div>
-                                <input type="hidden" name="color_img1" value="{{$data->color_img}}" class="selected-files">
+                                <div class="file-preview box sm">
+                                </div>
                             </div>
-                            <div class="file-preview box sm">
-                            </div>
-                        </div>
 
 
-                        <div class="form-group">
-                            <label for="">Price</label>
-                            <input type="number" value="{{$data->price}}" class="form-control" name="price">
+                            <div class="form-group">
+                                <label for="">Catania Price</label>
+                                <input type="number" value="{{ $data->catania_price }}" class="form-control"
+                                    name="catania_price">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Nappa Price</label>
+                                <input type="number" value="{{ $data->nappa_price }}" class="form-control"
+                                    name="nappa_price">
+                            </div>
+                            @php
+                                $show = explode(',', $data->showon);
+                            @endphp
+                            <div class="form-group">
+                                <label for="">Show On</label>
+                                <select required name="showon[]" class="select2 form-control aiz-selectpicker"
+                                    data-toggle="select2" data-placeholder="Choose ..."data-live-search="true" multiple>
+                                    <option value="">--Select section--</option>
+                                    @foreach ($leather as $i => $vleather)
+                                        <option value="{{ $vleather->id }}"
+                                            @if (in_array($vleather->id, $show)) selected @endif>{{ $vleather->leather }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
 
     </div>
