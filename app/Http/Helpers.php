@@ -900,7 +900,7 @@ function getPattern($leatherId,$row){
             $cataniaPrice = ($checkSpecialPrice != null) ? getSpecialPricePattern($row)->price_catania_pattern:$v->catania_price;
             $nappaPrice   = ($checkSpecialPrice != null) ? getSpecialPricePattern($row)->price_nappa_pattern:$v->nappa_price;
             $data = [
-                "id"=> 6,
+                "id"=> $v->id,
                 "name_pattern"=> $v->name_pattern,
                 "catania_price"=> $cataniaPrice,
                 "nappa_price"=> $nappaPrice,
