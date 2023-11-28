@@ -18,6 +18,7 @@
                                 <th>{{ translate('Name') }}</th>
                                 <th>{{ translate('Catania Price') }}</th>
                                 <th>{{ translate('Nappa Price') }}</th>
+                                <th>{{ translate('Show On') }}</th>
                                 <th class="text-right">{{ translate('Options') }}</th>
                             </tr>
                         </thead>
@@ -32,6 +33,11 @@
                                 <td>{{$v->name_interior}}</td>
                                 <td>RM{{$v->catania_price}}</td>
                                 <td>RM{{$v->nappa_price}}</td>
+                                <td>
+                                    @php
+                                        getDataLeather($v->showon);
+                                    @endphp
+                                </td>
                                 <td class="text-right">
                                     @can('edit_interiorpart')
                                         <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
