@@ -17,6 +17,7 @@ class PatterndesignController extends Controller
         $this->middleware(['permission:add_patterndesign'])->only('create');
         $this->middleware(['permission:edit_patterndesign'])->only('edit');
         $this->middleware(['permission:delete_patterndesign'])->only('destroy');
+        $this->middleware(['permission:update_specialprice'])->only('update_specialprice');
     }
 
 

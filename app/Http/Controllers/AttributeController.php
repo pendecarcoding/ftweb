@@ -26,6 +26,8 @@ class AttributeController extends Controller
         $this->middleware(['permission:view_colors'])->only('colors');
         $this->middleware(['permission:edit_color'])->only('edit_color');
         $this->middleware(['permission:delete_color'])->only('destroy_color');
+        $this->middleware(['permission:update_specialprice'])->only('usespecialprice');
+
     }
 
     /**
