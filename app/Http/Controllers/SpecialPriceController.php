@@ -12,7 +12,7 @@ class SpecialPriceController extends Controller
 
     public function __construct() {
         // Staff Permission Check
-        $this->middleware(['permission:view_specialprice'])->only('index');
+        $this->middleware(['permission:view_all_specialprice'])->only('index');
     }
     /**
      * Display a listing of the resource.
