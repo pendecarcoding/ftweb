@@ -56,6 +56,7 @@ use App\Models\Language;
 use App\Models\Leadership;
 use App\Models\Patterndesign;
 use App\Models\Policy;
+use App\Models\Upload;
 use Config;
 
 
@@ -726,6 +727,37 @@ class AceController extends Controller
                 }else{
                     print $slug;
                     return redirect('/');
+                }
+            break;
+
+            case 'api':
+                if($slug=='getColorData'){
+                    if(isset($_GET['leatherCode'])){
+                        $data = getColor($_GET['leatherCode']);
+                        return $data;
+                    }
+                }
+                if($slug=='getPatternData'){
+                    if(isset($_GET['leatherCode'])){
+                        $data = getPattern($_GET['leatherCode']);
+                        return $data;
+                    }
+                }
+                if($slug=='getInteriorData'){
+                    if(isset($_GET['leatherCode'])){
+                        $data = getInterior($_GET['leatherCode']);
+                        return $data;
+                    }
+                }
+                if($slug=='getImage'){
+                    if(isset($_GET['srcImage'])){
+                        try {
+                            $data = Upload::findOrFail($_GET['srcImage']);
+                            return response()->json(['imagePath' => '/public/' . $data->file_name]);
+                        } catch (\Throwable $th) {
+                            return response()->json(['imagePath' => '/public/assets/img/placeholder.jpg']);
+                        }
+                    }
                 }
             break;
 

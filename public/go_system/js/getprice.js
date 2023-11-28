@@ -14,6 +14,7 @@
     var itemcode = 0;
     var colorJsonArray;
     var selectedInteriors = [];
+    var csrfToken = $('meta[name="csrf-token"]').attr('content');
 
     function editcolor() {
             $('#pick-color').toggle();
@@ -25,7 +26,10 @@
     $(document).ready(function() {
       // Toggle pick-color when clicking on "Pick Color"
       $('#toggleColor').click(function() {
-        $('#pick-color').toggle();
+        if(id_leather != null){
+            $('#pick-color').toggle();
+        }
+
       });
 
       $('#editcolor').click(function() {
@@ -51,11 +55,16 @@
 
     //Toggle Design
     $('#toggleDesign').click(function() {
-        $('#pick-design').toggle();
+        if(id_leather != null){
+            $('#pick-design').toggle();
+        }
+
       });
 
       $('#editdesign').click(function() {
-        $('#pick-design').toggle();
+        if(id_leather != null){
+            $('#pick-design').toggle();
+        }
       });
 
       $('#closeIcondesign').click(function(event) {
@@ -74,13 +83,13 @@
 
   });
   function interiorSelected(checkbox) {
-    var selectedInteriorIds = [];
-    $('input[type="checkbox"]:checked').each(function() {
-        selectedInteriorIds.push($(this).val());
-    });
+    if(id_leather != null){
+        var selectedInteriorIds = [];
+        $('input[type="checkbox"]:checked').each(function() {
+            selectedInteriorIds.push($(this).val());
+        });
+          // Get the CSRF token value
 
-    // Get the CSRF token value
-    var csrfToken = $('meta[name="csrf-token"]').attr('content');
 
     $.ajax({
         type: "POST",
@@ -96,7 +105,10 @@
             // Handle the response and format the data as needed
             var interiorList = '';
             $.each(response, function(index, interior) {
-                Priceinterior += parseFloat(interior.price);
+                const cataniaPrice = interior.catania_price;
+                const nappaPrice   = interior.nappa_price;
+                const interiorPrice  = id_leather == 1 ? cataniaPrice : nappaPrice;
+                Priceinterior += parseFloat(interiorPrice);
 
                 interiorList += `<div class="list-color-detail" data-id="${interior.id_interior}" style="width: 100%;">
                     <div style="display:flex; gap:13px">
@@ -104,7 +116,7 @@
                         <div class="name-color-list">${interior.name_interior}</div>
                     </div>
                     <div style="display:flex;gap:13px">
-                        <div class="name-color-list">RM${interior.price}</div>
+                        <div class="name-color-list">RM${interiorPrice}</div>
                     </div>
                 </div>`;
             });
@@ -116,6 +128,12 @@
             updateSubmitButtonState();
         }
     });
+    }else{
+        alert("choose the material first");
+    }
+
+
+
 }
 var interiorPrices = {};  // Object to store interior prices
 
@@ -151,7 +169,6 @@ function updateTotalPrice() {
         // Collect interior data
         var interiorData = {
             id: interiorId,
-
         };
 
         // Add interior data to the updatedSelectedInteriors array
@@ -170,8 +187,194 @@ function updateTotalPrice() {
     // Add the 'selected' class to the clicked element
     element.classList.add('selected');
     id_leather = idleather;
+    if(idleather != null){
+        $('#interior-list').empty();
+    }
+    fetchColorData(id_leather);
+    fetchPatternDesign(id_leather);
+    fetchInteriorDesign(id_leather);
     updateSubmitButtonState();
+
 }
+
+function fetchInteriorDesign(idLeather){
+    $.ajax({
+        type: "GET",
+        url: '/api/getInteriorData',
+        data: {
+            leatherCode: idLeather,
+            _token: csrfToken,
+        },
+        success: function(response) {
+            updateInteriorUI(response,idLeather);
+        },
+        error: function(xhr, status, error) {
+            console.error('Failed to fetch color data:', error);
+        }
+    });
+}
+
+function updateInteriorUI(response, idLeather) {
+    $('#interiorContainer').empty();
+    $.each(response, function(i, vinterior) {
+        var checkboxHtml = `
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="${vinterior.id_interior}" id="checkbox_${idLeather}_${i}" onclick="interiorSelected(this)">
+                <label class="form-check-label" for="checkbox_${idLeather}_${i}">
+                    ${vinterior.name_interior}
+                </label>
+            </div>
+        `;
+        $('#interiorContainer').append(checkboxHtml);
+    });
+}
+
+
+
+function fetchPatternDesign(idLeather){
+    $.ajax({
+        type: "GET",
+        url: '/api/getPatternData',
+        data: {
+            leatherCode: idLeather,
+            _token: csrfToken,
+        },
+        success: function(response) {
+            updatePatternUI(response,idLeather);
+        },
+        error: function(xhr, status, error) {
+            console.error('Failed to fetch color data:', error);
+        }
+    });
+}
+async function updatePatternUI(patternData,idLeather){
+    const patternContainer = document.querySelector('.pattern-list-container');
+    patternContainer.innerHTML = '';
+
+    // Iterate over the patterns and update the UI
+    patternData.forEach(async (pattern, index) => {
+        const imageUrl = await getimage(pattern.img);
+        const cataniaPrice = pattern.catania_price;
+        const nappaPrice   = pattern.nappa_price;
+        const patternPrice  = idLeather == 1 ? cataniaPrice : nappaPrice;
+        const patternElement = document.createElement('div');
+        patternElement.classList.add('color-column-list');
+        patternElement.dataset.patternName = pattern.name_pattern;
+        patternElement.dataset.img = imageUrl;
+        patternElement.dataset.baseImg = getimage(pattern.base_img);
+        patternElement.dataset.colorImg = getimage(pattern.color_img);
+        patternElement.dataset.price = patternPrice;
+
+        patternElement.innerHTML = `
+            <img class="img-pattern-option" src="${imageUrl}" alt="">
+            <div style="font-weight: bold; color: #555555;">${pattern.name_pattern}</div>
+            <div class="extra-price-pattern">${patternPrice > 0 ? `+RM${patternPrice}` : ''}</div>
+        `;
+
+        // Add a click event listener to each pattern element
+        patternElement.addEventListener('click', function () {
+            selectPattern(this, pattern.name_pattern, imageUrl, getimage(pattern.base_img), getimage(pattern.color_img), patternPrice);
+        });
+
+        // Append the pattern element to the container
+        patternContainer.appendChild(patternElement);
+    });
+}
+
+function fetchColorData(idLeather) {
+    $.ajax({
+        type: "GET",
+        url: '/api/getColorData',
+        data: {
+            leatherCode: idLeather,
+            _token: csrfToken,
+        },
+        success: function(response) {
+            updateColorUI(response,idLeather);
+        },
+        error: function(xhr, status, error) {
+            console.error('Failed to fetch color data:', error);
+        }
+    });
+}
+
+
+
+function getimage(id) {
+    return new Promise(function(resolve, reject) {
+      $.ajax({
+        type: "GET",
+        url: '/api/getImage',
+        data: {
+          srcImage: id,
+          _token: csrfToken,
+        },
+        success: function(response) {
+          var image = response.imagePath;
+          resolve(image);
+        },
+        error: function(xhr, status, error) {
+          console.error('Failed to fetch color data:', error);
+          reject(error);
+        }
+      });
+    });
+  }
+
+
+
+  async function updateColorUI(colorData,idLeather) {
+    const colorContainer = document.querySelector('.color-list-container');
+    colorContainer.innerHTML = ''; // Clear existing content
+
+    for (const color of colorData) {
+      const colorColumn = document.createElement('div');
+      colorColumn.classList.add('color-column-list');
+
+      try {
+        const imageUrl = await getimage(color.image);
+        const cataniaPrice = color.catania_price;
+        const nappaPrice   = color.nappa_price;
+        const colorsPrice  = idLeather == 1 ? cataniaPrice : nappaPrice;
+        console.log("IMAGE : " + imageUrl);
+        colorColumn.onclick = () => selectColor(colorColumn, color.name, imageUrl, colorsPrice, color.hex_color, color.code);
+
+        const imgColor = document.createElement('img');
+        imgColor.classList.add('img-color-option');
+        imgColor.src = imageUrl;
+        imgColor.alt = '';
+        imgColor.id = 'imgcolor';
+
+        const nameColor = document.createElement('div');
+        nameColor.style.fontWeight = 'bold';
+        nameColor.style.color = '#555555';
+        nameColor.textContent = color.name;
+        nameColor.id = 'namecolor';
+
+        const codeColor = document.createElement('div');
+        codeColor.style.fontSize = 'smaller';
+        codeColor.textContent = color.code;
+
+        const extraPriceColor = document.createElement('div');
+        extraPriceColor.classList.add('extra-price-color');
+        if (colorsPrice > 0) {
+            extraPriceColor.textContent = `+RM${colorsPrice}`;
+        }
+
+        colorColumn.appendChild(imgColor);
+        colorColumn.appendChild(nameColor);
+        colorColumn.appendChild(codeColor);
+        colorColumn.appendChild(extraPriceColor);
+
+        colorContainer.appendChild(colorColumn);
+      } catch (error) {
+        console.error('Error fetching image data:', error);
+        // Handle the error if needed
+      }
+    }
+  }
+
+
 
 function CoverageSelected(elemento,idcoverage){
      // Remove the 'selected' class from all elements
@@ -183,6 +386,7 @@ function CoverageSelected(elemento,idcoverage){
      id_coverage = idcoverage;
      updateSubmitButtonState();
 }
+
 
 
 
@@ -233,6 +437,7 @@ function CoverageSelected(elemento,idcoverage){
 
     }
     updateSelectedDetails();
+
   }
 
   function  maximumselcted() {

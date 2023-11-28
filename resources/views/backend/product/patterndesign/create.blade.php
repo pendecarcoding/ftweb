@@ -84,8 +84,21 @@
 
 
                         <div class="form-group">
-                            <label for="">Price</label>
-                            <input type="number" class="form-control" name="price">
+                            <label for="">Catania Price</label>
+                            <input type="number" required class="form-control" name="catania_price">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nappa Price</label>
+                            <input type="number" required class="form-control" name="nappa_price">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Show On</label>
+                            <select required name="showon[]" class="select2 form-control aiz-selectpicker"  data-toggle="select2" data-placeholder="Choose ..."data-live-search="true" multiple>
+                                <option value="">--Select section--</option>
+                                @foreach($leather as $i => $vleather)
+                                     <option value="{{$vleather->id}}">{{$vleather->leather}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                 </div>

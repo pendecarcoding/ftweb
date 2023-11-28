@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\InteriorPart;
+use DB;
 
 class InteriorpartController extends Controller
 {
@@ -23,8 +24,9 @@ class InteriorpartController extends Controller
      */
     public function index()
     {
+        $leather =  DB::table('leather_type')->get();
         $data = InteriorPart::orderby('id_interior','desc')->get();
-        return view('backend.product.interiorpart.index', compact('data'));
+        return view('backend.product.interiorpart.index', compact('data','leather'));
     }
 
 
@@ -32,7 +34,8 @@ class InteriorpartController extends Controller
     {
         $data = InteriorPart::orderby('id_interior','desc')->get();
         $edit = InteriorPart::where('id_interior',base64_decode($d))->first();
-        return view('backend.product.interiorpart.edit', compact('data','edit'));
+        $leather =  DB::table('leather_type')->get();
+        return view('backend.product.interiorpart.edit', compact('data','edit','leather'));
     }
 
     /**
@@ -46,7 +49,9 @@ class InteriorpartController extends Controller
         try {
                 $d = new InteriorPart;
                 $d->name_interior = $request->name;
-                $d->price = $request->price;
+                $d->catania_price = $request->catania_price;
+                $d->nappa_price = $request->nappa_price;
+                $d->showon = implode(',',$request->showon);
                 $d->img = $request->image;
                 $d->save();
                 flash(translate('Data has been inserted successfully'))->success();
@@ -64,8 +69,11 @@ class InteriorpartController extends Controller
     {
         $data=[
             'name_interior'=>$request->name,
-            'price'=>$request->price,
+            'catania_price'=>$request->catania_price,
+            'nappa_price'=>$request->nappa_price,
+            'showon'=>implode(',',$request->showon),
             'img'=>$request->image,
+
         ];
         InteriorPart::where('id_interior',$id)->update($data);
         flash(translate('Data has been updated successfully'))->success();

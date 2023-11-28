@@ -33,6 +33,8 @@ use App\Http\Controllers\AffiliateController;
 use App\Http\Controllers\ClubPointController;
 use App\Http\Controllers\CommissionController;
 use App\Models\Order;
+use App\Models\Patterndesign;
+use App\Models\InteriorPart;
 // use Mail;
 use App\Mail\InvoiceEmailManager;
 use App\Models\Car;
@@ -43,6 +45,14 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Patner;
 
 
+
+function getDataLeather($array){
+    $array= explode(',',$array);
+    $data = DB::table('leather_type')->whereIn('id',$array)->get();
+    foreach($data as $i => $v){
+        echo '<span class="badge badge-inline badge-secondary">'.$v->leather.'</span><br><br>';
+    }
+}
 
 function getcar($id){
     $data = Car::where('id',$id)->first();
@@ -820,6 +830,33 @@ function getvehicle($id){
         return $data;
     } catch (\Throwable $th) {
        return null;
+    }
+}
+
+function getColor($leatherId){
+    try {
+        $dataColor = DB::table('colors')
+        ->whereRaw("FIND_IN_SET(?, showon)", [$leatherId])
+        ->get();
+        return $dataColor;
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+}
+function getPattern($leatherId){
+    try {
+        $dataPattern = Patterndesign::where('published','Y')->whereRaw("FIND_IN_SET(?, showon)", [$leatherId])->orderByRaw('CAST(SUBSTRING(name_pattern, 8) AS UNSIGNED)')->get();
+        return $dataPattern;
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+}
+function getInterior($leatherId){
+    try {
+        $dataInterior = InteriorPart::whereRaw("FIND_IN_SET(?, showon)", [$leatherId])->get();
+        return $dataInterior;
+    } catch (\Throwable $th) {
+        //throw $th;
     }
 }
 

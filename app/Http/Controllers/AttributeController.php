@@ -9,6 +9,7 @@ use App\Models\AttributeTranslation;
 use App\Models\AttributeValue;
 use CoreComponentRepository;
 use Str;
+use DB;
 
 class AttributeController extends Controller
 {
@@ -183,7 +184,8 @@ class AttributeController extends Controller
 
     public function colors(Request $request) {
         $sort_search = null;
-        $colors = Color::orderBy('created_at', 'desc');
+        $colors  = Color::orderBy('created_at', 'desc');
+        $leather =  DB::table('leather_type')->get();
 
         if ($request->search != null){
             $colors = $colors->where('name', 'like', '%'.$request->search.'%');
@@ -191,33 +193,43 @@ class AttributeController extends Controller
         }
         $colors = $colors->paginate(10);
 
-        return view('backend.product.color.index', compact('colors', 'sort_search'));
+        return view('backend.product.color.index', compact('colors', 'sort_search','leather'));
     }
 
     public function store_color(Request $request) {
-        $request->validate([
-            'name' => 'required',
-            'code' => 'required|unique:colors|max:255',
-            'hex_color' => 'required|unique:colors|max:255',
-            'extraprice' => 'required|numeric',
-        ]);
-        $color = new Color;
-        $color->name = $request->name;
-        $color->code = $request->code;
-        $color->hex_color = $request->hex_color;
-        $color->image = $request->image;
-        $color->extraprice = ($request->has('extraprice'))? $request->extraprice:0;
+        try {
+            $request->validate([
+                'name' => 'required',
+                'code' => 'required|unique:colors|max:255',
+                'hex_color' => 'required|unique:colors|max:255',
+                'catania_price' => 'numeric',
+                'nappa_price' => 'numeric',
+                'showon' => 'required',
+            ]);
+            $color = new Color;
+            $color->name = $request->name;
+            $color->code = $request->code;
+            $color->hex_color = $request->hex_color;
+            $color->image = $request->image;
+            $color->catania_price = ($request->has('catania_price'))? $request->catania_price:0;
+            $color->nappa_price = ($request->has('nappa_price'))? $request->nappa_price:0;
+            $color->showon = implode(',',$request->showon);
 
-        $color->save();
+            $color->save();
 
-        flash(translate('Color has been inserted successfully'))->success();
-        return redirect()->route('colors');
+            flash(translate('Color has been inserted successfully'))->success();
+            return redirect()->route('colors');
+        } catch (\Throwable $th) {
+            print $th->getMessage();
+        }
+
     }
 
     public function edit_color(Request $request, $id)
     {
         $color = Color::findOrFail($id);
-        return view('backend.product.color.edit', compact('color'));
+        $leather =  DB::table('leather_type')->get();
+        return view('backend.product.color.edit', compact('color','leather'));
     }
 
     /**
@@ -241,7 +253,9 @@ class AttributeController extends Controller
         $color->code = $request->code;
         $color->hex_color = $request->hex_color;
         $color->image = $request->image;
-        $color->extraprice = ($request->has('extraprice'))? $request->extraprice:0;
+        $color->catania_price = ($request->has('catania_price'))? $request->catania_price:0;
+        $color->nappa_price = ($request->has('nappa_price'))? $request->nappa_price:0;
+        $color->showon = implode(',',$request->showon);
 
         $color->save();
 

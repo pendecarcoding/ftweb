@@ -16,7 +16,8 @@
                                 <th>#</th>
                                 <th>Image</th>
                                 <th>{{ translate('Name') }}</th>
-                                <th>{{ translate('Price') }}</th>
+                                <th>{{ translate('Catania Price') }}</th>
+                                <th>{{ translate('Nappa Price') }}</th>
                                 <th class="text-right">{{ translate('Options') }}</th>
                             </tr>
                         </thead>
@@ -29,7 +30,8 @@
 
                                 </td>
                                 <td>{{$v->name_interior}}</td>
-                                <td>RM{{$v->price}}</td>
+                                <td>RM{{$v->catania_price}}</td>
+                                <td>RM{{$v->nappa_price}}</td>
                                 <td class="text-right">
                                     @can('edit_interiorpart')
                                         <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
@@ -86,9 +88,22 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="name">{{ translate('Price') }}</label>
-                                <input type="number" placeholder="{{ translate('Price') }}" name="price" class="form-control"
+                                <label for="name">{{ translate('Catania Price') }}</label>
+                                <input type="number" placeholder="{{ translate('Catania Price') }}" name="catania_price" class="form-control"
                                     required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="name">{{ translate('Nappa Price') }}</label>
+                                <input type="number" placeholder="{{ translate('Nappa Price') }}" name="nappa_price" class="form-control"
+                                    required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="">Show On</label>
+                                <select required name="showon[]" class="select2 form-control aiz-selectpicker"  data-toggle="select2" data-placeholder="Choose ..."data-live-search="true" multiple>
+                                    @foreach($leather as $i => $vleather)
+                                     <option value="{{$vleather->id}}">{{$vleather->leather}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <!-- <div class="form-group mb-3">
                                 <label for="name">{{ translate('Image') }}
