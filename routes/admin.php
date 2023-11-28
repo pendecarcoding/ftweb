@@ -78,6 +78,7 @@ use App\Http\Controllers\piping\PipingController;
 use App\Http\Controllers\VehicleseatController;
 use App\Http\Controllers\InteriorpartController;
 use App\Http\Controllers\AutomotiveSeatController;
+use App\Http\Controllers\SpecialPriceController;
 
 
 
@@ -205,6 +206,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/patterndesignsys/edit/{id}', 'edit')->name('patterndesignsys.edit');
         Route::get('/patterndesignsys/destroy/{id}', 'destroy')->name('patterndesignsys.destroy');
         Route::post('/patterndesignsys/published', 'change_status')->name('patterndesignsys.published');
+        Route::post('/patterndesignsys/specialprice', 'update_specialprice')->name('patterndesignsys.specialprice');
     });
 
 
@@ -249,6 +251,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
     Route::controller(SeatpriceController::class)->group(function () {
         Route::get('/seatprice/edit/{id}', 'edit')->name('seatprice.edit');
         Route::get('/seatprice/destroy/{id}', 'destroy')->name('seatprice.destroy');
+    });
+
+    Route::resource('specialprice', SpecialPriceController::class);
+    Route::controller(SpecialPriceController::class)->group(function () {
+
     });
 
 
@@ -749,6 +756,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::get('/colors/edit/{id}', 'edit_color')->name('colors.edit');
         Route::post('/colors/update/{id}', 'update_color')->name('colors.update');
         Route::get('/colors/destroy/{id}', 'destroy_color')->name('colors.destroy');
+        Route::post('/colors/usespecialprice', 'usespecialprice')->name('colors.usespecialprice');
     });
 
     // Addon

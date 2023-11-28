@@ -272,4 +272,15 @@ class AttributeController extends Controller
 
     }
 
+    public function usespecialprice(request $request){
+        $data = Color::where('id',$request->id)->first();
+        try {
+            Color::where('id',$request->id)->update(['specialprice'=>$request->status]);
+            return 1;
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
+
+    }
+
 }

@@ -732,14 +732,14 @@ class AceController extends Controller
 
             case 'api':
                 if($slug=='getColorData'){
-                    if(isset($_GET['leatherCode'])){
-                        $data = getColor($_GET['leatherCode']);
+                    if(isset($_GET['leatherCode']) && isset($_GET['row'])){
+                        $data = getColor($_GET['leatherCode'],$_GET['row']);
                         return $data;
                     }
                 }
                 if($slug=='getPatternData'){
-                    if(isset($_GET['leatherCode'])){
-                        $data = getPattern($_GET['leatherCode']);
+                    if(isset($_GET['leatherCode']) && isset($_GET['row'])){
+                        $data = getPattern($_GET['leatherCode'],$_GET['row']);
                         return $data;
                     }
                 }

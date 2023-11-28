@@ -44,6 +44,7 @@
 
     $('#cartype').change(function() {
         type_car    = $('#cartype').val();
+        fetchPatternDesign(id_leather);
         updateSubmitButtonState();
     })
 
@@ -237,6 +238,7 @@ function fetchPatternDesign(idLeather){
         url: '/api/getPatternData',
         data: {
             leatherCode: idLeather,
+            row: type_car,
             _token: csrfToken,
         },
         success: function(response) {
@@ -252,7 +254,7 @@ async function updatePatternUI(patternData,idLeather){
     patternContainer.innerHTML = '';
 
     // Iterate over the patterns and update the UI
-    patternData.forEach(async (pattern, index) => {
+        patternData.forEach(async (pattern, index) => {
         const imageUrl = await getimage(pattern.img);
         const cataniaPrice = pattern.catania_price;
         const nappaPrice   = pattern.nappa_price;
@@ -287,6 +289,7 @@ function fetchColorData(idLeather) {
         url: '/api/getColorData',
         data: {
             leatherCode: idLeather,
+            row: type_car,
             _token: csrfToken,
         },
         success: function(response) {
