@@ -894,7 +894,7 @@ function getColor($leatherId,$row){
 function getPattern($leatherId,$row){
     try {
         $arrayData = array();
-        $dataPattern = Patterndesign::where('published','Y')->whereRaw("FIND_IN_SET(?, showon)", [$leatherId])->orderByRaw('CAST(SUBSTRING(name_pattern, 8) AS UNSIGNED)')->get();
+        $dataPattern = Patterndesign::whereRaw("FIND_IN_SET(?, showon)", [$leatherId])->where('published','Y')->orderByRaw('CAST(SUBSTRING(name_pattern, 8) AS UNSIGNED)')->get();
         foreach ($dataPattern as $i => $v) {
             $checkSpecialPrice = Patterndesign::where('id',$v->id)->where('specialprice','Y')->first();
             $cataniaPrice = ($checkSpecialPrice != null) ? getSpecialPricePattern($row)->price_catania_pattern:$v->catania_price;
