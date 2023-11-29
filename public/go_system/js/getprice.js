@@ -44,7 +44,29 @@
 
     $('#cartype').change(function() {
         type_car    = $('#cartype').val();
+        if(type_car != null){
+
+        }
         fetchPatternDesign(id_leather);
+        fetchColorData(id_leather);
+
+        document.getElementById('selectedColors').innerHTML = '';
+        document.getElementById('selectedDesign').innerHTML = '';
+        document.querySelectorAll('.color-column-list').forEach(item => {
+            item.classList.remove('selected');
+        });
+        document.querySelectorAll('.card-leather-type').forEach(item => {
+            item.classList.remove('selected');
+        });
+
+        selectedColors = [];
+        selectedpattern = [];
+        colorPrice = 0;
+        designprice = 0;
+        Total = 0.00;
+        $('#toggleDesign').show();
+        $('#toggleColor').show();
+        document.getElementById('totalall').innerText = 'RM' + Total.toFixed(2);
         updateSubmitButtonState();
     })
 
@@ -249,39 +271,71 @@ function fetchPatternDesign(idLeather){
         }
     });
 }
-async function updatePatternUI(patternData,idLeather){
+
+async function updatePatternUI(patternData, idLeather) {
     const patternContainer = document.querySelector('.pattern-list-container');
     patternContainer.innerHTML = '';
 
-    // Iterate over the patterns and update the UI
-        patternData.forEach(async (pattern, index) => {
-        const imageUrl = await getimage(pattern.img);
-        const cataniaPrice = pattern.catania_price;
-        const nappaPrice   = pattern.nappa_price;
-        const patternPrice  = idLeather == 1 ? cataniaPrice : nappaPrice;
-        const patternElement = document.createElement('div');
-        patternElement.classList.add('color-column-list');
-        patternElement.dataset.patternName = pattern.name_pattern;
-        patternElement.dataset.img = imageUrl;
-        patternElement.dataset.baseImg = getimage(pattern.base_img);
-        patternElement.dataset.colorImg = getimage(pattern.color_img);
-        patternElement.dataset.price = patternPrice;
+    // Function to create a loading indicator
+    const createLoadingElement = () => {
+        const loadingElement = document.createElement('div');
+        loadingElement.classList.add('loading-indicator');
+        loadingElement.innerHTML = 'Loading...';
+        return loadingElement;
+    };
 
-        patternElement.innerHTML = `
-            <img class="img-pattern-option" src="${imageUrl}" alt="">
-            <div style="font-weight: bold; color: #555555;">${pattern.name_pattern}</div>
-            <div class="extra-price-pattern">${patternPrice > 0 ? `+RM${patternPrice}` : ''}</div>
-        `;
+    // Use Promise.all to await all image promises
+    const patternElements = await Promise.all(patternData.map(async (pattern) => {
+        const loadingElement = createLoadingElement();
+        patternContainer.appendChild(loadingElement);
 
-        // Add a click event listener to each pattern element
-        patternElement.addEventListener('click', function () {
-            selectPattern(this, pattern.name_pattern, imageUrl, getimage(pattern.base_img), getimage(pattern.color_img), patternPrice);
+        try {
+            const imageUrl = await getimage(pattern.img);
+            const cataniaPrice = pattern.catania_price;
+            const nappaPrice = pattern.nappa_price;
+            const patternPrice = idLeather == 1 ? cataniaPrice : nappaPrice;
+
+            const patternElement = document.createElement('div');
+            patternElement.classList.add('color-column-list');
+            patternElement.dataset.patternName = pattern.name_pattern;
+            patternElement.dataset.img = imageUrl;
+            patternElement.dataset.baseImg = await getimage(pattern.base_img);
+            patternElement.dataset.colorImg = await getimage(pattern.color_img);
+            patternElement.dataset.price = patternPrice;
+
+            patternElement.innerHTML = `
+                <img class="img-pattern-option" src="${imageUrl}" alt="">
+                <div style="font-weight: bold; color: #555555;">${pattern.name_pattern}</div>
+                <div class="extra-price-pattern">${patternPrice > 0 ? `+RM${patternPrice}` : ''}</div>
+            `;
+
+            // Add a click event listener to each pattern element
+            patternElement.addEventListener('click', function () {
+                selectPattern(this, pattern.name_pattern, imageUrl, patternElement.dataset.baseImg, patternElement.dataset.colorImg, patternPrice);
+            });
+
+            // Remove the loading indicator
+            patternContainer.removeChild(loadingElement);
+
+            return patternElement;
+        } catch (error) {
+            console.error('Error fetching image:', error);
+            loadingElement.innerHTML = 'Error loading pattern';
+            // Remove the loading indicator
+            patternContainer.removeChild(loadingElement);
+            return null;
+        }
+    }));
+
+    // Append the pattern elements to the container
+    patternElements
+        .filter((patternElement) => patternElement !== null)
+        .forEach((patternElement) => {
+            patternContainer.appendChild(patternElement);
         });
-
-        // Append the pattern element to the container
-        patternContainer.appendChild(patternElement);
-    });
 }
+
+
 
 function fetchColorData(idLeather) {
     $.ajax({
@@ -326,56 +380,85 @@ function getimage(id) {
 
 
 
-  async function updateColorUI(colorData,idLeather) {
+  async function updateColorUI(colorData, idLeather) {
     const colorContainer = document.querySelector('.color-list-container');
     colorContainer.innerHTML = ''; // Clear existing content
 
-    for (const color of colorData) {
-      const colorColumn = document.createElement('div');
-      colorColumn.classList.add('color-column-list');
+    // Function to create a loading indicator
+    const createLoadingElement = () => {
+        const loadingElement = document.createElement('div');
+        loadingElement.classList.add('loading-indicator');
+        loadingElement.innerHTML = 'Loading...';
+        return loadingElement;
+    };
 
-      try {
-        const imageUrl = await getimage(color.image);
-        const cataniaPrice = color.catania_price;
-        const nappaPrice   = color.nappa_price;
-        const colorsPrice  = idLeather == 1 ? cataniaPrice : nappaPrice;
-        console.log("IMAGE : " + imageUrl);
-        colorColumn.onclick = () => selectColor(colorColumn, color.name, imageUrl, colorsPrice, color.hex_color, color.code);
+    // Use Promise.all to await all image promises for color elements
+    const colorElements = await Promise.all(colorData.map(async (color) => {
+        const loadingElement = createLoadingElement();
+        colorContainer.appendChild(loadingElement);
 
-        const imgColor = document.createElement('img');
-        imgColor.classList.add('img-color-option');
-        imgColor.src = imageUrl;
-        imgColor.alt = '';
-        imgColor.id = 'imgcolor';
+        try {
+            const imageUrl = await getimage(color.image);
+            const cataniaPrice = color.catania_price;
+            const nappaPrice = color.nappa_price;
+            const colorsPrice = idLeather == 1 ? cataniaPrice : nappaPrice;
 
-        const nameColor = document.createElement('div');
-        nameColor.style.fontWeight = 'bold';
-        nameColor.style.color = '#555555';
-        nameColor.textContent = color.name;
-        nameColor.id = 'namecolor';
+            const colorColumn = document.createElement('div');
+            colorColumn.classList.add('color-column-list');
 
-        const codeColor = document.createElement('div');
-        codeColor.style.fontSize = 'smaller';
-        codeColor.textContent = color.code;
+            colorColumn.onclick = () => selectColor(colorColumn, color.name, imageUrl, colorsPrice, color.hex_color, color.code);
 
-        const extraPriceColor = document.createElement('div');
-        extraPriceColor.classList.add('extra-price-color');
-        if (colorsPrice > 0) {
-            extraPriceColor.textContent = `+RM${colorsPrice}`;
+            const imgColor = document.createElement('img');
+            imgColor.classList.add('img-color-option');
+            imgColor.src = imageUrl;
+            imgColor.alt = '';
+            imgColor.id = 'imgcolor';
+
+            const nameColor = document.createElement('div');
+            nameColor.style.fontWeight = 'bold';
+            nameColor.style.color = '#555555';
+            nameColor.textContent = color.name;
+            nameColor.id = 'namecolor';
+
+            const codeColor = document.createElement('div');
+            codeColor.style.fontSize = 'smaller';
+            codeColor.textContent = color.code;
+
+            const extraPriceColor = document.createElement('div');
+            extraPriceColor.classList.add('extra-price-color');
+            if (colorsPrice > 0) {
+                extraPriceColor.textContent = `+RM${colorsPrice}`;
+            }
+
+            colorColumn.appendChild(imgColor);
+            colorColumn.appendChild(nameColor);
+            colorColumn.appendChild(codeColor);
+            colorColumn.appendChild(extraPriceColor);
+
+            // Remove the loading indicator
+            colorContainer.removeChild(loadingElement);
+
+            colorContainer.appendChild(colorColumn);
+
+            return colorColumn;
+        } catch (error) {
+            console.error('Error fetching image data:', error);
+            loadingElement.innerHTML = 'Error loading color';
+            // Remove the loading indicator
+            colorContainer.removeChild(loadingElement);
+            // Handle the error if needed
+            return null;
         }
+    }));
 
-        colorColumn.appendChild(imgColor);
-        colorColumn.appendChild(nameColor);
-        colorColumn.appendChild(codeColor);
-        colorColumn.appendChild(extraPriceColor);
+    // Append the color elements to the container
+    colorElements
+        .filter((colorElement) => colorElement !== null)
+        .forEach((colorElement) => {
+            colorContainer.appendChild(colorElement);
+        });
+}
 
-        colorContainer.appendChild(colorColumn);
-      } catch (error) {
-        console.error('Error fetching image data:', error);
-        // Handle the error if needed
-      }
-    }
-  }
 
 
 
