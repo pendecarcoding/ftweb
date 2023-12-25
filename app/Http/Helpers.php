@@ -861,7 +861,7 @@ function getSpecialPrice($row){
     return $data;
 }
 
-function getColor($leatherId,$row){
+function getColor($leatherId,$row,$mode){
     try {
         $arrayData = array();
         $dataColor = DB::table('colors')
@@ -871,6 +871,10 @@ function getColor($leatherId,$row){
             $checkSpecialPrice = Color::where('id',$v->id)->where('specialprice','Y')->first();
             $cataniaPrice = ($checkSpecialPrice != null) ? getSpecialPricePattern($row)->price_catania_color:$v->catania_price;
             $nappaPrice   = ($checkSpecialPrice != null) ? getSpecialPricePattern($row)->price_nappa_color:$v->nappa_price;
+            if($mode == 0){
+                $cataniaPrice = $v->tt_price;
+                $nappaPrice = $v->tt_price;
+            }
             $data = [
                 "id"=> $v->id,
                 "name"=> $v->name,

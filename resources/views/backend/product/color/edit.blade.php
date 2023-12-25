@@ -71,6 +71,11 @@
                     <input type="number" placeholder="{{ translate('Nappa Price') }}" id="extraprice" name="nappa_price"
                         class="form-control" value="{{ $color->nappa_price }}" required>
                 </div>
+                <div class="form-group mb-3">
+                    <label for="name">{{ translate('Two Tone Price') }}</label>
+                    <input type="number" placeholder="{{ translate('Two Tone Price') }}" id="extraprice"
+                        name="tt_price" class="form-control" value="{{ $color->tt_price }}" required>
+                </div>
                 @php
                 $show = explode(',',$color->showon);
                 @endphp
