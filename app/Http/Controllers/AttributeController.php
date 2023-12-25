@@ -205,6 +205,7 @@ class AttributeController extends Controller
                 'code' => 'required|unique:colors|max:255',
                 'hex_color' => 'required|unique:colors|max:255',
                 'catania_price' => 'numeric',
+                'tt_price' => 'required',
                 'nappa_price' => 'numeric',
                 'showon' => 'required',
             ]);
@@ -213,6 +214,7 @@ class AttributeController extends Controller
             $color->code = $request->code;
             $color->hex_color = $request->hex_color;
             $color->image = $request->image;
+            $color->tt_price = $request->tt_price;
             $color->catania_price = ($request->has('catania_price'))? $request->catania_price:0;
             $color->nappa_price = ($request->has('nappa_price'))? $request->nappa_price:0;
             $color->showon = implode(',',$request->showon);
@@ -244,17 +246,21 @@ class AttributeController extends Controller
     public function update_color(Request $request, $id)
     {
         $color = Color::findOrFail($id);
-
         $request->validate([
             'code' => 'required|unique:colors,code,'.$color->id,
-
-
+            'name' => 'required',
+            'hex_color' => 'required',
+            'catania_price' => 'numeric',
+            'tt_price' => 'required',
+            'nappa_price' => 'numeric',
+            'showon' => 'required',
         ]);
 
         $color->name = $request->name;
         $color->code = $request->code;
         $color->hex_color = $request->hex_color;
         $color->image = $request->image;
+        $color->tt_price = $request->tt_price;
         $color->catania_price = ($request->has('catania_price'))? $request->catania_price:0;
         $color->nappa_price = ($request->has('nappa_price'))? $request->nappa_price:0;
         $color->showon = implode(',',$request->showon);

@@ -45,9 +45,14 @@
                                 <th>{{ translate('Hex Color') }}</th>
                                 <th>{{ translate('Catania Price') }}</th>
                                 <th>{{ translate('Nappa Price') }}</th>
-                                <th>Use Special Price ? <span data-toggle="modal" data-target="#infomodal"
+                                <th>Use Special Price ?
+                                    <span data-toggle="modal" data-target="#infomodal"
                                         class="badge badge-inline badge-secondary"><i
-                                            class="las la-info aiz-side-nav-icon"></i></span></th>
+                                            class="las la-info aiz-side-nav-icon"></i>
+                                        </span>
+                                </th>
+                                <th>{{ translate('Two Tone Price') }}</th>
+
                                 <th>{{ translate('Show On') }}</th>
                                 <th class="text-center">{{ translate('Options') }}</th>
                             </tr>
@@ -69,7 +74,9 @@
                                                 echo 'checked';
                                             } ?>>
                                         <span class="slider round"></span>
-                                    </label></td>
+                                    </label>
+                                    </td>
+                                    <td>{{ $color->tt_price }}</td>
                                     <td>
                                         @php
                                             getDataLeather($color->showon);
@@ -159,6 +166,11 @@
                                 <label for="name">{{ translate('Nappa Price') }}</label>
                                 <input type="number" placeholder="{{ translate('Nappa Price') }}" id="extraprice"
                                     name="nappa_price" class="form-control" value="{{ old('nappa_price') }}" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="name">{{ translate('Two Tone Price') }}</label>
+                                <input type="number" placeholder="{{ translate('Two Tone Price') }}" id="extraprice"
+                                    name="tt_price" class="form-control" value="{{ old('tt_price') }}" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Show On</label>

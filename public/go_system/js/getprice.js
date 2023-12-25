@@ -11,6 +11,7 @@
     var Total = 0;
     var Priceseat = 0;
     var Priceinterior = 0;
+    var ModeColor = 1;
     var itemcode = 0;
     var colorJsonArray;
     var selectedInteriors = [];
@@ -67,6 +68,8 @@
         $('#toggleDesign').show();
         $('#toggleColor').show();
         document.getElementById('totalall').innerText = 'RM' + Total.toFixed(2);
+        document.getElementById('selectedPriceDesign').innerText = 'RM' + Total.toFixed(2);
+        document.getElementById('selectedPrice').innerText = 'RM' + Total.toFixed(2);
         updateSubmitButtonState();
     })
 
@@ -345,6 +348,7 @@ function fetchColorData(idLeather) {
             leatherCode: idLeather,
             row: type_car,
             _token: csrfToken,
+            mode:ModeColor,
         },
         success: function(response) {
             updateColorUI(response,idLeather);
@@ -478,6 +482,13 @@ function CoverageSelected(elemento,idcoverage){
 
   function updateSelectionMode() {
     const singleColorMode = document.getElementById('flexRadioDefault1').checked;
+    if(singleColorMode){
+        ModeColor = 1;
+        fetchColorData(id_leather);
+    }else{
+        ModeColor = 0;
+        fetchColorData(id_leather);
+    }
     selectedColors = singleColorMode ? [] : selectedColors.slice(0, 2);
     $('#toggleColor').show();
     document.getElementById('selectedColors').innerHTML = '';
