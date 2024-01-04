@@ -108,12 +108,12 @@ footer {
 .capital-text {
     text-transform: uppercase;
   }
-.img-ceo{
-
+  .img-ceo {
     float: right;
     width: 100%;
+    height: 78%;
+    object-fit: contain;
     border-radius: 20px;
-
 }
 
 .no-banner {
@@ -17708,9 +17708,12 @@ form.form--basic .mdl-textfield__label {
 
             float: right;
             width: 85%;
+            height: 78%;
+            object-fit: contain;
             border-radius: 20px;
 
     }
+
     /* .img-bg-mil-wrap {
         height: 697px;
     } */
