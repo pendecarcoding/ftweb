@@ -10,23 +10,27 @@
                             <td>
                                 <table class="row-content stack" align="center" border="0" cellpadding="0"
                                     cellspacing="0" role="presentation"
-                                    style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000; width: 600px; margin: 0 auto;"
+
+                                    style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px; margin: 0 auto;"
+
                                     width="600">
                                     <tbody>
                                         <tr>
                                             <td class="column column-1" width="100%"
-                                                style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
+
+                                                style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
+
                                                 <table class="heading_block block-1" width="100%" border="0"
                                                     cellpadding="10" cellspacing="0" role="presentation"
                                                     style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                     <tbody>
                                                         <tr>
                                                             <td class="pad">
-                                                                <h1
-                                                                    style="margin: 0; color: #7747FF; direction: ltr; font-family: Arial, Helvetica, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: normal; line-height: 120%; text-align: left; margin-top: 0; margin-bottom: 0;">
+                                                                <p
+                                                                    style="margin: 0; direction: ltr; font-family: Arial, Helvetica, sans-serif; font-size: 17px; letter-spacing: normal; line-height: 120%; text-align: left; margin-top: 0; margin-bottom: 0;">
                                                                     <span class="tinyMce-placeholder"><span
-                                                                            style="color: #000000;">{{ $array['dear'] }}</span></span>
-                                                                </h1>
+                                                                            style="">{{ $array['dear'] }}</span></span>
+                                                                    </p>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -63,7 +67,9 @@
                                                                         style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2;">
                                                                         <p
                                                                             style="margin: 0; font-size: 16px; text-align: left; mso-line-height-alt: 19.2px;">
-                                                                            <span style="color:#000000;"><strong>{{ $array['opening'] }}</strong></span>
+
+                                                                            <span style="color:#000000;">{{ $array['opening'] }}</span>
+
                                                                         </p>
                                                                     </div>
                                                                 </div>
