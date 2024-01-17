@@ -7,6 +7,7 @@
                 <div class="col text-center text-md-left">
                     <h5 class="mb-md-0 h6">{{ translate('Pattern Design') }}</h5>
                 </div>
+                <a href="{{ route('patterndesignsys.index') }}" class="btn btn-danger btn-sm" style="color:white">x</a>
             </div>
         <form action="{{route('patterndesignsys.update',$data->id)}}" method="post">@csrf
             <input name="_method" type="hidden" value="PATCH">
@@ -18,16 +19,7 @@
                             <input type="text" class="form-control" value="{{$data->name_pattern}}" name="name" required placeholder="Example : A012-Nappa Leather">
                             <p>it's like name of product for Pattern Design</p>
                         </div>
-                        <div class="form-group">
-                        <label for="">Colors</label>
-                            <select name="color1[]" class="select2 form-control aiz-selectpicker"  data-toggle="select2" data-placeholder="Choose ..."data-live-search="true" multiple>
-                                <option value="">--Select Color--</option>
-                                @foreach($color as $i => $vc)
-                                  <option value="{{$vc->code}}" @if(in_array($vc->code, explode(',',$data->colors))) selected @endif>{{$vc->name}}</option>
-                                @endforeach
-                            </select>
-                            <p>choose any color for the upper consumer color choice</p>
-                        </div>
+
 
                     </div>
                     <div class="col-md-6">

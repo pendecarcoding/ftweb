@@ -403,6 +403,11 @@ function getpdf($id){
 
 }
 
+function getccemail(){
+   $data = DB::table('cc_email')->select('email')->get();
+   return $data;
+}
+
 function getContactByDevision($id){
     try {
         $data = DB::table('contacts')->where('devision',$id)->get();
@@ -802,7 +807,7 @@ function gettypeleather($id){
 
 function getaplicationleather($id){
     try {
-        $data = DB::table('type_leather')->where('id',$id)->first();
+        $data = DB::table('leather_coverage')->where('id',$id)->first();
         return $data;
     } catch (\Throwable $th) {
         //throw $th;

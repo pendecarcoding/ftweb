@@ -34,7 +34,7 @@
                             <td>{{ $v->created_at }}</td>
                             <td>
                                 <center>
-                                    <a href="{{ url('/admin/requestpatner/viewmessage/' . base64_encode($v->id)) }}"
+                                    <a href="mailto:{{$v->email}}"
                                         class="btn btn-soft-danger btn-icon btn-circle btn-sm" href=""
                                         title="Reply use Email">
                                         <i class="las la-paper-plane"></i>

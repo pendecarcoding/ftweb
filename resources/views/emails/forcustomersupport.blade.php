@@ -10,12 +10,16 @@
                             <td>
                                 <table class="row-content stack" align="center" border="0" cellpadding="0"
                                     cellspacing="0" role="presentation"
+
                                     style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px; margin: 0 auto;"
+
                                     width="600">
                                     <tbody>
                                         <tr>
                                             <td class="column column-1" width="100%"
+
                                                 style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
+
                                                 <table class="heading_block block-1" width="100%" border="0"
                                                     cellpadding="10" cellspacing="0" role="presentation"
                                                     style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
@@ -63,7 +67,9 @@
                                                                         style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2;">
                                                                         <p
                                                                             style="margin: 0; font-size: 16px; text-align: left; mso-line-height-alt: 19.2px;">
+
                                                                             <span style="color:#000000;">{{ $array['opening'] }}</span>
+
                                                                         </p>
                                                                     </div>
                                                                 </div>

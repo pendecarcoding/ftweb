@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\ace;
 use App\Http\Controllers\Controller;
+use App\Mail\ForCustomerMailManager;
+use App\Models\LeatherType;
 use App\Models\TypeCar;
 use App\Models\TypeLeather;
 use Auth;
@@ -41,6 +43,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Auth\Events\PasswordReset;
 use App\Mail\SecondEmailVerifyMailManager;
+use App\Models\Color;
 use App\Models\Company;
 use Session;
 use Faker\Provider\Uuid;
@@ -48,8 +51,10 @@ use PDF;
 use DB;
 use App\Models\Currency;
 use App\Models\GenericLeather;
+use App\Models\InteriorPart;
 use App\Models\Language;
 use App\Models\Leadership;
+use App\Models\Patterndesign;
 use App\Models\Policy;
 use Config;
 
@@ -150,7 +155,8 @@ class AceController extends Controller
             case 'vision_mission':
                 return view('acewebfront.pages.mission');
             case 'company_milestone':
-                return view('acewebfront.pages.background');
+                $data = DB::table('milestones')->orderby('year','asc')->get();
+                return view('acewebfront.pages.background',compact('data'));
             break;
             case 'Technical & Development':
             $data        = Research::all();
@@ -162,10 +168,16 @@ class AceController extends Controller
             return view('gosford.frontend.choice_design',compact('slider'));
             break;
             case 'product_project':
+                $coverage   =  DB::table('leather_coverage')->get();
+                $sizetype   =  DB::table('size_seat')->orderBy('shortby','asc')->get();
+                $leather    =  DB::table('leather_type')->get();
+                $interior   =  InteriorPart::all();
+                $colors     = Color::all();
+                $pattern    = Patterndesign::where('published','Y')->orderByRaw('CAST(SUBSTRING(name_pattern, 8) AS UNSIGNED)')->get();
                 $normal     =  GenericLeather::where('type','Normal Leather')->orderby('shortby','asc')->get();
                 $grain      =  GenericLeather::where('type','Grain Leather')->orderby('shortby','asc')->get();
                 $pvc        =  GenericLeather::where('type','PVC')->orderby('shortby','asc')->get();
-                return view('gosford.frontend.choice_design',compact('normal','grain','pvc'));
+                return view('gosford.frontend.choice_design',compact('coverage','sizetype','leather','colors','interior','pattern','normal','grain','pvc'));
                 // if(Session::get('id_account') == null){
                 //     $brand   = Brand::all();
                 //     return view('gosford.frontend.search',compact('brand'));
@@ -861,10 +873,22 @@ class AceController extends Controller
         ];
         try {
             Patnerrequest::insert($data);
-            $msg = "success";
-            return $msg;
+            $encodedEmail = htmlentities($r->email);
+            $array['subject'] = $r->subject;
+            $array['from']    = env('MAIL_FROM_ADDRESS');
+            $array['dear']    = "Dear Customer Support";
+            $array['opening'] = "There is someone who is interested in becoming a partner with your company, here are the details below:";
+            $array['content'] = 'Name : '.$r->name.'<br>Contact Number : '.$r->numbercontact.' <br> Email : '.$encodedEmail.'<br> Message : '.$r->message;
+            $array['email']   = $r->email;
+            // Define the BCC recipients
+            $bccRecipients = getccemail();
+            //email to Customer Support
+            Mail::bcc($bccRecipients)  // Add BCC recipients
+                ->queue(new ForCustomerMailManager($array));
+                $msg = "success";
+                return $msg;
         } catch (\Throwable $th) {
-            return $th->getmessage;
+            return $th->getmessage();
         }
     }
 
@@ -879,8 +903,20 @@ class AceController extends Controller
             ];
             try {
                 DB::table('message_user')->insert($data);
-                $msg = "success";
-                return $msg;
+                $encodedEmail = htmlentities($r->email);
+                $array['subject'] = $r->type;
+                $array['from']    = env('MAIL_FROM_ADDRESS');
+                $array['dear']    = "Dear Customer Support";
+                $array['opening'] = "There's a ".$r->type." from a customer bellow which requires your attention.";
+                $array['content'] = 'Name : '.$r->name.'<br>Contact Number : '.$r->phone.' <br> Email : '.$encodedEmail.'<br> Message : '.$r->comment;
+                $array['email']   = $r->email;
+                // Define the BCC recipients
+                $bccRecipients = getccemail();
+                //email to Customer Support
+                Mail::bcc($bccRecipients)  // Add BCC recipients
+                    ->queue(new ForCustomerMailManager($array));
+                    $msg = "success";
+                    return $msg;
             } catch (\Throwable $th) {
                 return $th->getmessage;
             }
@@ -902,8 +938,21 @@ class AceController extends Controller
             ];
             try {
                 DB::table('message_user')->insert($data);
-                $msg = "success";
-                return $msg;
+                $encodedEmail = htmlentities($r->email);
+                $array['subject'] = 'Customer Enquiry / Feedback';
+                $array['from']    = env('MAIL_FROM_ADDRESS');
+                $array['contact'] = $r->phone;
+                $array['dear']    = "Dear Customer Support";
+                $array['opening'] = "There's a enquiry / feedback from a customer bellow which requires your attention.";
+                $array['content'] = 'Name : '.$r->name.'<br>Contact Number : '.$r->phone.' <br> Email : '.$encodedEmail.'<br> Message : '.$r->comment;
+                $array['email']   = $r->email;
+                // Define the BCC recipients
+                $bccRecipients = getccemail();
+                //email to Customer Support
+                Mail::bcc($bccRecipients)  // Add BCC recipients
+                    ->queue(new ForCustomerMailManager($array));
+                    $msg = "success";
+                    return $msg;
             } catch (\Throwable $th) {
                 return $th->getmessage;
             }

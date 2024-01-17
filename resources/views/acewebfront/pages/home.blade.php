@@ -65,7 +65,7 @@
                   </div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200" class="col-md-6 col-sm-12">
-                  <h1>Leading the way in innovative mobility solutions
+                  <h1>Leading manufacturer of automotive covers
                   </h1>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -310,7 +310,7 @@
                     class="content-about"
                   >
                     <p style="text-align: justify;" class="p-about-font">
-                        We are the Malaysia’s number one manufacturer and installer of automotive leather and has been trusted by the automotive industry for over 20 years and are the official leather provider & fitter OEM, PDI, REM Market. We pride ourselves in our extensive high quality products produced through our outstanding teamwork, creative passion, detailed hand craftsmanship and build pride into every product and appreciate our customers.
+                        <!-- We are the Malaysia’s number one manufacturer and installer of automotive leather and has been trusted by the automotive industry for over 20 years and are the official leather provider & fitter OEM, PDI, REM Market. We pride ourselves in our extensive high quality products produced through our outstanding teamwork, creative passion, detailed hand craftsmanship and build pride into every product and appreciate our customers. -->
                     </p>
                   </div>
                 </div>
@@ -336,7 +336,7 @@
           </div>
         </div>
       </section>
-      <section id="nonmansory2" class="gtp-solution">
+      <!-- <section id="nonmansory2" class="gtp-solution">
         <div class="content-ace">
           <div class="wrap-content">
             <div class="ace-isi about">
@@ -397,13 +397,13 @@
                             <div  id="myDIV" class="img-wrap-gpt">
                             <!----<div class="alert">-->
                                <!--<figure class="swing">-->
-                                <center><img id="imggpt1" /></center>
+                                <!-- <center><img id="imggpt1" /></center> -->
 
                                <!--</figure>-->
-                              <div></div>
+                              <!-- <div></div> -->
                              <!--</div>-->
 
-                          </div>
+                          <!-- </div>
                         </center>
                     </div>
 
@@ -432,7 +432,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section data-aos="fade-up" id="gtp-patner-focused" class="gtp-patner" style="padding: 0px 0px;display: none;">
         <div class="content-ace" >
           <div class="wrap-content">
@@ -502,78 +502,29 @@
                 </div>
                 <div data-aos="fade-up" class="col-md-12 col-sm-12" style="height: 60vh;position: relative;overflow: auto;">
                   <p class="p-about-font" style="text-align: justify;color:white">
-                    We started with Gosford Malaysia manufactured and sold automotive covers to the REM market segment, where
-automotive covers are replaced and/or repaired for used automotive vehicles for car owners, used car dealers,
-importers, automotive dealers, car accessory retailers and automotive cover installers. It operated out of a
-manufacturing facility located at Jalan Tun Abdul Razak, Johor Bahru, Johor, Malaysia which had an annual
-manufacturing capacity of approximately 11,500 meters of automotive cover material. Its manufacturing facility
-then had 11 sewing machines and its material cutting process was carried out manually.
-In 2003, Gosford Malaysia began to secure orders for automotive covers from the REM market segment in
-international markets such as the United Kingdom and New Zealand. In 2004, Gosford Malaysia set up another sales
-and installation hub in Kuala Lumpur to cater for its customers in Kuala Lumpur and Selangor.
-Gosford Malaysia began to secure orders for automotive covers from the REM market segment customers in
-Australia in 2006. Meanwhile, sales from customers in Malaysia continued to grow and its revenues grew from
-RM1.4 million in the FYE 2003 to RM9.0 million in the FYE 2006. In order to facilitate further expansion of its
-operations, Gosford Malaysia relocated its manufacturing facility from Jalan Tun Abdul Razak, Johor Bahru, Johor
-to the Masai Plant in 2006 and acquired 29 new sewing machines. Accordingly, its annual manufacturing capacity
-increased to approximately 41,800 meters of automotive cover material.
-Recognising the potential to sell its automotive covers to the REM market segment in Singapore, I set up Gosford
-Singapore in 2007 to market and sell automotive covers to the REM market segment in Singapore. Gosford
-Singapore set up a sales and installation hub in Singapore in the same year, which allowed Gosford Singapore to
-market, sell and install automotive covers manufactured by Gosford Malaysia at the Masai Plant for customers based
-in Singapore.
-<br>
-<br>
-Meanwhile, the late Go Yoong Fei also set up Trimex Australia in 2008, to facilitate the marketing and sale of
-automotive covers to the REM market segment in Australia.
-Gosford Malaysia began to automate the cutting process when it acquired its first automated cutting machinery in
-2007. Gosford Malaysia later acquired another automated cutting machinery in the following year. The automated
-cutting machineries enabled it to enhance its operational efficiency and with the automatic nesting software
-integrated with the machineries, Gosford Malaysia was able to optimise the utilisation of its materials. By then, its
-manufacturing facility had increased to 58 sewing machines. With the acquisition of the new automated cutting
-machineries, the annual manufacturing capacity of its manufacturing facility increased from approximately 41,800
-meters to approximately 263,100 meters of automotive cover material.
-<br>
-<br>
-In 2009, the late Go Yoong Fei and Ng Yew Chung, who is a relative of the late Go Yoong Fei, set up Trimex
-Malaysia to grow sales of automotive covers from customers in Kuala Lumpur and Selangor.
-Subsequently, the sales and installation hub in Kuala Lumpur was relocated to PJ Hub in 2010.
-Gosford Malaysia secured its first order from the OEM market segment, when it first began to manufacture and
-supply automotive covers to APM, a Tier 1 automotive seat and/or interior part manufacturer in 2012. The order
-entailed manufacturing automotive covers for Mazda 3 car models. Gosford Malaysia’s first order from the OEM
-market segment paved the way for Gosford Malaysia to fulfil other orders from the OEM market segment. Gosford
-Malaysia subsequently manufactured and supplied automotive covers for Proton Perdana R 2.0 car models in 2015.
-In 2015, Gosford Malaysia secured its first order from the PDI market segment when it secured an order from
-Perodua Sales Sdn Bhd, an automotive distributor. Later in the year, Trimex Malaysia secured an order from the PDI
-market segment from Ilusi Mantap Sdn Bhd, a car accessory retailer. The orders from the PDI market segment
-entails replacing and restyling automotive covers for automotive vehicles prior to the automotive vehicles being
-registered, and the customers of this segment include automotive distributors and car accessory retailers.
-<br>
-<br>
-In 2018, the late Go Yoong Fei transferred all his shares in Trimex Australia to his spouse, Tan Sun Sun. In 2019, I
-was appointed by the late Go Yoong Fei acting Chief Executive Officer after being identified as the successor to the
-late Go Yoong Fei.
-Despite the above changes, the Group’s business continued to grow. Gosford Malaysia acquired additional new
-automated cutting machineries and sewing machines and by 2020, it had 8 automated cutting machineries and 150
-sewing machines, which expanded its annual manufacturing capacity from approximately 263,100 meters to 1.1
-million meters of automotive cover material. Gosford Malaysia relocated to the Tampoi Plant in 2020 upon the
-expiry of the tenancy for the Masai Plant and to cater for its business expansion.
-In 2021, the Group expanded downstream and ventured into the manufacturing of automotive seats and Feytech SB
-was incorporated to facilitate this expansion. Feytech SB secured its first contract from Kia Malaysia to manufacture
-automotive seats for the Kia Carnival car models in the same year. Following the contract, the Group set up Kulim
-Plant 1 in line with the manufacturing requirements for the said project. Feytech SB later secured another
-automotive seat contract from Mazda Malaysia for the manufacturing of automotive seats for the Mazda CX-30 car
-model in 2022.
-<br>
-<br>
-In order to facilitate the Proposed Listing, the Company was established in 2023 with the intention to acquire
-Gosford Malaysia, Trimex Malaysia, Gosford Singapore, Trimex Australia and Feytech SB.
-Over the years, the Group has established its reputation as an automotive cover manufacturer that can also
-manufacture automotive seats. Gosford Malaysia has been recognised by Perodua Sales Sdn Bhd for delivering its
-products promptly in 2018. Further, Gosford Singapore has also been awarded with the SME Excellence Business
-Award Achievers 2022/2023 by Vision Media Group. These recognitions are testament to the Group’s established
-industry reputation.
-                  </p>
+                    Our Group’s history can be traced back to the incorporation of Gosford Malaysia by our late co-founder and Director, Go Yoong Fei. At that time, Gosford Malaysia manufactured and sold automotive covers to the REM market segment, where automotive covers are replaced and/or repaired for used automotive vehicles for car owners, used car dealers, importers, automotive dealers, car accessory retailers and automotive cover installers. In 2003, it began to secure orders for automotive covers from the REM market segment in international markets such as the United Kingdom and New Zealand.
+                    <br>
+                    <br>
+                    Recognising the potential to sell its automotive covers to the REM market segment in Singapore, the present Chief Executive Officer, Connie Go, who is also the sister of the late Go Yoong Fei, set up Gosford Singapore in 2007 to market and sell automotive covers to the REM market segment in Singapore. Meanwhile, the late Go Yoong Fei also set up Trimex Australia in 2008, to facilitate the marketing and sale of automotive covers to the REM market segment in Australia.
+                    <br>
+                    <br>
+                    Gosford Malaysia began to automate the cutting process when it acquired its first automated cutting machinery in 2007. The automated cutting machineries enabled it to enhance its operational efficiency and with the automatic nesting software integrated with the machineries, Gosford Malaysia was able to optimise the utilisation of its materials.
+                    <br>
+                    <br>
+                    Gosford Malaysia secured its first order from the OEM market segment, when it first began to manufacture and supply automotive covers for an automotive seat manufacturer. In 2015, Gosford Malaysia secured its first order from the PDI market segment, which entails replacing and restyling automotive covers for automotive vehicles prior to the automotive vehicle being registered with the Road Transport Department Malaysia.
+                    <br>
+                    <br>
+                    Upon passing of the late Go Yoong Fei in 2019, the equity shareholding held by the late Go Yoong Fei in Gosford Malaysia was transmitted to his spouse, Tan Sun Sun; brother, Go Yoong Chang; and sister, Connie Go. Thereafter, Connie Go was appointed as a Director in Gosford Malaysia, Trimex Malaysia, Feytech SB and Trimex Australia in 2022.
+                    <br>
+                    <br>
+                    Since then, our Group continued to achieve new milestones. By 2020, we had 8 automated cutting machineries and 150 sewing machines, which expanded our annual manufacturing capacity to 1.1 million meters of automotive cover material. In 2021, our Group expanded downstream and ventured into the manufacturing of automotive seats and Feytech SB was incorporated to facilitate this expansion.
+                    <br>
+                    <br>
+                    Over the years, our Group has established our reputation as an automotive cover manufacturer that can also manufacture automotive seats. According to PROVIDENCE, we are the third largest automotive cover manufacturer in Malaysia in 2022, based on our Group’s revenues from our automotive cover division. To-date, our clientele from the OEM market segments includes established national and international automotive vehicle brands.
+                    <br>
+                    <br>
+                    Gosford Malaysia has also obtained the IATF 16949 – First Edition certification for the manufacturing of leather automotive seat covers.
+                </p>
 
                   <!--END MANSORY-->
                 </div>
@@ -692,7 +643,7 @@ industry reputation.
           </div>
 
       </section>
-      <section id="ace-testimonials-mobile" class="ace-testimonials-mobile">
+      <!-- <section id="ace-testimonials-mobile" class="ace-testimonials-mobile">
         <div class="container">
           <div class="">
             <div class="ace-isi about">
@@ -781,14 +732,14 @@ industry reputation.
 
                 </div>
 
-                    <!-- <button class="acecarousel-control-prev" type="button" data-bs-target="#myCarouseltesti" data-bs-slide="prev">
+                    <button class="acecarousel-control-prev" type="button" data-bs-target="#myCarouseltesti" data-bs-slide="prev">
                         <span style="color:#1D5189;font-size: 250%;margin-left:20px;font-weight:bold;" aria-hidden="true"><i class="fa fa-angle-left"></i></span>
                         <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="acecarousel-control-next" type="button" data-bs-target="#myCarouseltesti" data-bs-slide="next">
                         <span style="color:#1D5189;font-size: 250%;margin-right:20px;font-weight:bold;" aria-hidden="true"><i class="fa fa-angle-right"></i></span>
                         <span class="visually-hidden">Next</span>
-                        </button>-->
+                        </button>
 
                   </div>
                 </div>
@@ -902,7 +853,7 @@ industry reputation.
           </div>
         </div>
         </div>
-      </section>
+      </section> -->
       <section class="ace-conected">
 
         <div class="content-ace">
@@ -919,9 +870,9 @@ industry reputation.
                   </div>
                 </div>
                 <div data-aos="fade-up" class="col-md-6 col-sm-12">
-                  <h1>Partner with us and let's get started!</h1>
+                  <h1>Contact us and let’s get started!</h1>
                   <p class="p-about-font">
-                    We take pride in helping our partners to achieve their goals by offering support and guidance. Be our partner today to gain a life-changing experience.
+                    We take pride in working closely with our customers to achieve their goals Contact us today!
                   </p>
                   <div id="alertpatner" class="alert alert-warning alert-dismissible fade show" role="alert">
 
@@ -977,8 +928,9 @@ industry reputation.
                           name="message"
                           class="form-control"
                           required
+                          placeholder="Message *"
                         >
-Message *</textarea
+</textarea
                         >
                       </div>
                       <div class="form-group">

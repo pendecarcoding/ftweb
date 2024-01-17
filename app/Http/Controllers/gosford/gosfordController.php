@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\gosford;
 use App\Http\Controllers\Controller;
+use App\Mail\ForCustomerMailManager;
 use App\Models\Patterndesign;
 use Auth;
 use Hash;
@@ -25,6 +26,8 @@ use Faker\Provider\Uuid;
 use DB;
 use  App\Models\GsystemAccount;
 use App\Models\GsystemOrder;
+use App\Models\InteriorPart;
+use App\Models\LeatherOrder;
 use App\Models\Twotown;
 use App\Models\TypeCar;
 use App\Models\Piping;
@@ -453,17 +456,145 @@ class gosfordController extends Controller
     return view('gosford.frontend.product.detail_product');
    }
 
+
+
+
+
+   function updateinquiryorder(Request $r, $id){
+    try {
+        $data = [
+            'name'=>$r->name,
+            'contact_number'=>$r->contact_number,
+            'email'=>$r->email,
+            'info'=>$r->info,
+        ];
+        $act = LeatherOrder::where('invoice',$id)->update($data);
+        if($act){
+            $array['subject'] = translate('Info Order');
+            $array['from'] = env('MAIL_FROM_ADDRESS');
+            $array['content']="Thank you for your order, our sales will contact you soon. To see the status of your order, you can click the link below";
+            $array['link'] = route('gosford.order.infoorder',base64_encode($id));
+            Mail::to($r->email)->queue(new SecondEmailVerifyMailManager($array));
+        }
+        //send to email
+        return view('gosford.frontend.finishdesign');
+
+
+
+    } catch (\Throwable $th) {
+        print $th->getMessage();
+    }
+   }
+
+   function interiorselected(Request $r){
+    $interiorIds = $r->input('interiorIds');
+    $interiorData = InteriorPart::whereIn('id_interior', $interiorIds)->get();
+
+    // Format the data as an array with id_interior, name_interior, and price
+    $formattedData = $interiorData->map(function($interior) {
+        return [
+            'id_interior' => $interior->id_interior,
+            'name_interior' => $interior->name_interior,
+            'urlimage' => getimage($interior->img),
+            'price' => $interior->price,
+        ];
+    });
+
+    return response()->json($formattedData);
+   }
+
+   function submitorder(Request $r){
+    $datePart = now()->format('ymd');
+    $randomPart = rand(1000, 9999); // Generate a random 4-digit number
+    $invoice = $datePart . $randomPart;
+    try {
+        $array = array();
+        if($r->has('interior')){
+            foreach ($r->interior as $idata) {
+                $datainterior = InteriorPart::where('id_interior',$idata['id'])->first();
+                $datacollect = [
+                    'id'=>$datainterior->id_interior,
+                    'name_interior'=>$datainterior->name_interior,
+                    'imgurl'=>getimage($datainterior->img),
+                    'price'=>$datainterior->price,
+                ];
+                array_push($array, $datacollect);
+            }
+        }else{
+            $array = [];
+        }
+
+        $data = [
+            'invoice'=>$invoice,
+            'type_car'=>$r->type_car,
+            'id_leather'=>$r->id_leather,
+            'id_coverage'=>$r->id_coverage,
+            'design'=>json_encode($r->design),
+            'color'=>json_encode($r->color),
+            'interior'=>json_encode($array),
+            'priceseat'=>$r->priceseat,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+            'totalprice'=>$r->totalprice,
+        ];
+        $act = LeatherOrder::insert($data);
+        if($act){
+            return response()->json([
+                'status'=>'success',
+                'url'=>route('gosford.order.inquiry',$invoice)
+            ]);
+        }else{
+            return response()->json([
+                'status'=>'failed',
+                'url'=>''
+            ]);
+        }
+    } catch (\Throwable $th) {
+        return response()->json([
+            'status'=>$th->getMessage(),
+            'url'=>''
+        ]);
+    }
+   }
+
+
+
+   function inquiryorder($id){
+    $data = LeatherOrder::where('invoice',$id)->first();
+    if($data != null){
+        $color    = json_decode($data->color,true);
+        $design   = json_decode($data->design,true);
+        $interior = json_decode($data->interior,true);
+        return view('gosford.frontend.inquiryorder',compact('data','color','design','id','interior'));
+    }else{
+        return back();
+    }
+
+   }
+
+   function infoorder($id){
+    $data = LeatherOrder::where('invoice',base64_decode($id))->first();
+    if($data != null){
+        $color = json_decode($data->color,true);
+        $design = json_decode($data->design,true);
+        $interior = json_decode($data->interior,true);
+        return view('gosford.frontend.infoorder',compact('data','color','design','id','interior'));
+    }else{
+        return back();
+    }
+
+   }
+
    function fetchpriceseat(Request $request){
-    $vehicleType = $request->input('vehicle_type');
-    $application = $request->input('application');
-    $leatherType = $request->input('leather_type');
+    $vehicleType = $request->input('type_car');
+    $application = $request->input('id_coverage');
+    $leatherType = $request->input('id_leather');
     $row = $request->input('row');
 
     // Lakukan query ke database untuk mendapatkan harga
     $price = DB::table('price_seat')->where('vehicle_type', $vehicleType)
         ->where('application', $application)
         ->where('leather_type', $leatherType)
-        ->where('row', $row)
         ->value('price'); // Mengambil nilai harga
 
     // Kirimkan harga sebagai respons

@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header row gutters-5">
                     <div class="col text-center text-md-left">
-                        <h5 class="mb-md-0 h6">{{ translate('Leather') }}</h5>
+                        <h5 class="mb-md-0 h6">{{ translate('Vehicle Seat') }}</h5>
                     </div>
                 </div>
                 <div class="card-body">
@@ -25,20 +25,20 @@
                                 <tr>
                                     <td>{{ $i + 1 }}</td>
 
-                                    <td>{{ $v->leather }}</td>
+                                    <td>{{ $v->size }}</td>
 
                                     <td class="text-right">
-                                        @can('edit_leather')
+                                        @can('edit_vehicleseat')
                                             <a class="btn btn-soft-primary btn-icon btn-circle btn-sm"
-                                                href="{{ route('leather.edit', base64_encode($v->id)) }}"
+                                                href="{{ route('vehicleseat.edit', base64_encode($v->id)) }}"
                                                 title="{{ translate('Edit') }}">
                                                 <i class="las la-edit"></i>
                                             </a>
                                         @endcan
-                                        @can('delete_leather')
+                                        @can('delete_vehicleseat')
                                             <a href="#"
                                                 class="btn btn-soft-danger btn-icon btn-circle btn-sm confirm-delete"
-                                                data-href="{{ route('leather.destroy', $v->id) }}"
+                                                data-href="{{ route('vehicleseat.destroy', $v->id) }}"
                                                 title="{{ translate('Delete') }}">
                                                 <i class="las la-trash"></i>
                                             </a>
@@ -54,20 +54,20 @@
                 </div>
             </div>
         </div>
-        @can('edit_leather')
+        @can('edit_vehicleseat')
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0 h6">{{ translate('Update Leather') }}</h5>
-                        <a href="{{ url('admin/leather') }}" class="btn btn-danger">x</a>
+                        <h5 class="mb-0 h6">{{ translate('Update Vehicle Seat') }}</h5>
+                        <a href="{{ url('admin/vehicleseat') }}" class="btn btn-danger">x</a>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('leather.update', $edit->id) }}" method="POST">
+                        <form action="{{ route('vehicleseat.update', $edit->id) }}" method="POST">
                             <input name="_method" type="hidden" value="PATCH">
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="name">{{ translate('Name') }}</label>
-                                <input value="{{ $edit->leather }}" type="text" placeholder="{{ translate('Name') }}"
+                                <input value="{{ $edit->size }}" type="text" placeholder="{{ translate('Name') }}"
                                     name="name" class="form-control" required>
                             </div>
                             <!-- <div class="form-group mb-3">

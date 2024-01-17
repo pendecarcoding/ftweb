@@ -36,6 +36,11 @@ Route::prefix('g_system')->group(function (){
 });
 
 
+Route::get('/redirect-to-previous', function () {
+    return redirect()->back();
+})->name('redirect.to.previous');
+
+
 Route::prefix('product_project')->group(function (){
     Route::controller(gosfordController::class)->group(function () {
         //Two Town Color
@@ -58,6 +63,14 @@ Route::prefix('product_project')->group(function (){
         Route::any('/gosford/f/finish', 'finishdesign')->name('gosford.finish.design');
 
         Route::post('/gosford/f/fetchpriceseat', 'fetchpriceseat')->name('gosford.fetch.price');
+        Route::post('/gosford/f/interiorselected', 'interiorselected')->name('gosford.fetch.interiorselected');
+        Route::post('/gosford/f/submitorder', 'submitorder')->name('gosford.order.submitorder');
+        Route::get('/gosford/f/inquiryorder/{id}', 'inquiryorder')->name('gosford.order.inquiry');
+        Route::get('/gosford/f/infoorder/{id}', 'infoorder')->name('gosford.order.infoorder');
+        Route::patch('/gosford/f/inquiryorder/update/{id}', 'updateinquiryorder')->name('gosford.order.updateinquiry');
+
+
+
     });
 });
 
