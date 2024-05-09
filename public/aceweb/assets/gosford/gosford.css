@@ -6,6 +6,76 @@ footer {
 
 }
 
+.img-ceo-mobile{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.content-msg-ceo {
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.content-msg-ceo h5{
+
+        bottom: 0;
+        font-weight: bold;
+        text-align: left;
+        color: #022c59;
+        font-size: 32px;
+
+}
+
+.ceo-section {
+    /* border-style: dashed;
+    border-color: red; */
+    margin: 35px 0px;
+    display: flex;
+    height: 400px;
+}
+.ceo-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.img-ceo-mobile{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.content-msg-ceo {
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.content-msg-ceo h5{
+
+        bottom: 0;
+        font-weight: bold;
+        text-align: left;
+        color: #022c59;
+        font-size: 32px;
+
+}
+
+.ceo-section {
+    /* border-style: dashed;
+    border-color: red; */
+    margin: 35px 0px;
+    display: flex;
+    height: 400px;
+}
+.ceo-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
 #imgcolor{
     width: 74px;
     border-radius: 10px;
@@ -49,7 +119,6 @@ footer {
 .tooltip.bs-tooltip-right .arrow:before {
     border-right-color: purple;
 }
-
 .color-column-list.selected img{
  border: solid brown;
 }
@@ -163,9 +232,9 @@ footer {
   .img-ceo {
     float: right;
     width: 100%;
-    height: 78%;
-    object-fit: contain;
-    border-radius: 20px;
+    height: 394px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .no-banner {
@@ -14066,6 +14135,13 @@ form.form--basic .mdl-textfield__label {
         text-align: left;
         font-size: 18px;
     }
+    .img-ceo-mobile {
+        width: 100%;
+        height: 49vh;
+        max-width: 100%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
 }
 
 @media screen and (min-width:800px) and (max-width: 900px) {
@@ -14799,6 +14875,38 @@ form.form--basic .mdl-textfield__label {
         padding: 0 0px;
         line-height: 29px;
     }
+    #ace-testimonials-desktop {
+        display: block;
+        position: relative;
+        height: auto;
+    }
+    .img-ceo {
+        float: right;
+        width: 100%;
+        height: 362px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .ceo-section {
+        /* border-style: dashed;
+        border-color: red; */
+        margin: 35px 0px;
+        display: flex;
+        height: 362px;
+    }
+    .content-msg-ceo {
+        width: 250%;
+        padding-right: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    .content-msg-ceo h5 {
+        bottom: 0;
+        font-weight: bold;
+        text-align: left;
+        color: #022c59;
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width:900px) and (max-width: 1000px) {
@@ -14861,6 +14969,29 @@ form.form--basic .mdl-textfield__label {
     }
     #ace-testimonials-desktop {
         display: block;
+        position: relative;
+        height: auto;
+    }
+    .img-ceo {
+        float: right;
+        width: 100%;
+        height: 315px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .ceo-section {
+        /* border-style: dashed;
+        border-color: red; */
+        margin: 35px 0px;
+        display: flex;
+        height: 315px;
+    }
+    .content-msg-ceo h5 {
+        bottom: 0;
+        font-weight: bold;
+        text-align: left;
+        color: #022c59;
+        font-size: 25px;
     }
     #ace-testimonials-mobile {
         display: none;
@@ -15609,6 +15740,29 @@ form.form--basic .mdl-textfield__label {
     }
     #ace-testimonials-desktop {
         display: block;
+        position: relative;
+        height: auto;
+    }
+    .img-ceo {
+        float: right;
+        width: 100%;
+        height: 325px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .ceo-section {
+        /* border-style: dashed;
+        border-color: red; */
+        margin: 35px 0px;
+        display: flex;
+        height: 329px;
+    }
+    .content-msg-ceo h5 {
+        bottom: 0;
+        font-weight: bold;
+        text-align: left;
+        color: #022c59;
+        font-size: 25px;
     }
     #ace-testimonials-mobile {
         display: none;
@@ -16958,6 +17112,26 @@ form.form--basic .mdl-textfield__label {
 
 
 @media screen and (min-width:1200px) {
+    .ceo-section {
+        /* border-style: dashed;
+        border-color: red; */
+        margin: 35px 0px;
+        display: flex;
+        height: 421px;
+    }
+    .img-ceo {
+        float: right;
+        width: 100%;
+        height: 421px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .content-msg-ceo {
+        padding-right: 20px;
+        width: 302%;
+        position: relative;
+        overflow: hidden;
+    }
     #title-news {
         font-size: 14.5px;
         margin-bottom: 2px;
@@ -17366,6 +17540,20 @@ form.form--basic .mdl-textfield__label {
     #imggpt1 {
         width: 49%;
     }
+    .ceo-section {
+        /* border-style: dashed;
+        border-color: red; */
+        margin: 35px 0px;
+        display: flex;
+        height: 470px;
+    }
+    .img-ceo {
+        float: right;
+        width: 100%;
+        height: 470px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 }
 
 @media screen and (min-width:1920px) {
@@ -17657,9 +17845,7 @@ form.form--basic .mdl-textfield__label {
         letter-spacing: 0;
     }
     .about p {
-
-            font-size: 18px;
-
+        font-size: 20px;
     }
     .description-service {
         font-size: 20px;
@@ -17756,14 +17942,12 @@ form.form--basic .mdl-textfield__label {
         padding: 100px 0px;
     }
 
-    .img-ceo{
-
-            float: right;
-            width: 85%;
-            height: 78%;
-            object-fit: contain;
-            border-radius: 20px;
-
+    .img-ceo {
+        float: right;
+        width: 100%;
+        height: 330px;
+        object-fit: contain;
+        border-radius: 10px;
     }
 
     /* .img-bg-mil-wrap {

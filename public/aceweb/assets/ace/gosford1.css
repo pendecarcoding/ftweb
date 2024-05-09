@@ -3688,7 +3688,7 @@ footer img {
 
     .ace-testimonials .img-responsive {
         object-fit: cover;
-        max-width: 20%;
+        max-width: 100%;
         height: auto;
         vertical-align: middle;
     }
@@ -4556,7 +4556,7 @@ footer img {
 
     .ace-testimonials .img-responsive {
         object-fit: cover;
-        max-width: 25%;
+        max-width: 100%;
         height: auto;
         vertical-align: middle;
     }
