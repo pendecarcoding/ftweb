@@ -14883,19 +14883,17 @@ form.form--basic .mdl-textfield__label {
     .img-ceo {
         float: right;
         width: 100%;
-        height: 362px;
+        height: 294px;
         object-fit: cover;
         border-radius: 10px;
     }
     .ceo-section {
-        /* border-style: dashed;
-        border-color: red; */
         margin: 35px 0px;
         display: flex;
-        height: 362px;
+        height: 260px;
     }
     .content-msg-ceo {
-        width: 250%;
+        /* width: 250%; */
         padding-right: 20px;
         position: relative;
         overflow: hidden;
