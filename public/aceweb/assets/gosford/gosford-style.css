@@ -18,7 +18,7 @@ footer {
     position: relative;
     overflow: hidden;
 }
-.content-msg-ceo h5{
+.content-msg-name h5{
 
         bottom: 0;
         font-weight: bold;
@@ -53,7 +53,7 @@ footer {
     position: relative;
     overflow: hidden;
 }
-.content-msg-ceo h5{
+.content-msg-name h5{
 
         bottom: 0;
         font-weight: bold;
@@ -14900,7 +14900,7 @@ form.form--basic .mdl-textfield__label {
         position: relative;
         overflow: hidden;
     }
-    .content-msg-ceo h5 {
+    .content-msg-name h5 {
         bottom: 0;
         font-weight: bold;
         text-align: left;
@@ -14986,7 +14986,7 @@ form.form--basic .mdl-textfield__label {
         display: flex;
         height: 315px;
     }
-    .content-msg-ceo h5 {
+    .content-msg-name h5 {
         bottom: 0;
         font-weight: bold;
         text-align: left;
@@ -15746,7 +15746,7 @@ form.form--basic .mdl-textfield__label {
     .img-ceo {
         float: right;
         width: 100%;
-        height: 325px;
+        height: 208px;
         object-fit: cover;
         border-radius: 10px;
     }
@@ -15755,9 +15755,9 @@ form.form--basic .mdl-textfield__label {
         border-color: red; */
         margin: 35px 0px;
         display: flex;
-        height: 329px;
+        height: 208px;
     }
-    .content-msg-ceo h5 {
+    .content-msg-name h5 {
         bottom: 0;
         font-weight: bold;
         text-align: left;
@@ -17117,19 +17117,20 @@ form.form--basic .mdl-textfield__label {
         border-color: red; */
         margin: 35px 0px;
         display: flex;
-        height: 421px;
+        height: 310px;
     }
     .img-ceo {
         float: right;
         width: 100%;
-        height: 421px;
+        height: 310px;
         object-fit: cover;
         border-radius: 10px;
     }
     .content-msg-ceo {
         padding-right: 20px;
-        width: 302%;
+        width: 100%;
         position: relative;
+        height: 310px;
         overflow: hidden;
     }
     #title-news {
@@ -17394,7 +17395,7 @@ form.form--basic .mdl-textfield__label {
     /* END TEXT FOR BOD*/
     .img-bod-modal {
         object-fit: cover;
-        height: 396px;
+        height: 300px;
         width: 100%;
         margin-bottom: 20px;
     }
@@ -17540,19 +17541,27 @@ form.form--basic .mdl-textfield__label {
     #imggpt1 {
         width: 49%;
     }
+
     .ceo-section {
         /* border-style: dashed;
         border-color: red; */
         margin: 35px 0px;
         display: flex;
-        height: 470px;
+        height: 330px;
     }
     .img-ceo {
         float: right;
         width: 100%;
-        height: 470px;
+        height: 330px;
         object-fit: cover;
         border-radius: 10px;
+    }
+    .content-msg-ceo {
+        padding-right: 20px;
+        width: 100%;
+        position: relative;
+        height: 330px;
+        overflow: hidden;
     }
 }
 
