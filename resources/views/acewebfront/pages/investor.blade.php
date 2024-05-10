@@ -133,21 +133,46 @@
             </div>
 
                 <div  class="col-md-12">
+
                     <div class="ceo-section">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-9">
+                                <!-- Item text -->
+                                <div class="content-msg-ceo">
+                                    <p>{!! $trimmed_text !!}</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <!-- Item Image -->
+                                <div class="ceo-image">
+                                    <img  class="img-responsive img-ceo" src="{{ getimage($ceo->image) }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr style="width: 334px;height: 3px;background: #006eb2;">
+
+                    <div class="content-msg-name"><h5>{{ $ceo->name }}</h5></div>
+                    <p>{{ $ceo->position }}</p>
+                    <br>
+                    <br>
+                    <!-- <div class="ceo-section">
                         <div class="content-msg-ceo">
                             <p>{!! $trimmed_text !!}</p>
-                          <br>
-                            <hr style="width: 334px;height: 3px;background: #006eb2;">
-
-                            <h5>{{ $ceo->name }}</h5>
-                            <p>{{ $ceo->position }}</p>
-                            <br>
-                            <br>
                         </div>
                         <div class="ceo-image">
                             <img  class="img-responsive img-ceo" src="{{ getimage($ceo->image) }}" alt="">
                         </div>
                     </div>
+                    <br>
+                            <hr style="width: 334px;height: 3px;background: #006eb2;">
+
+                            <h5>{{ $ceo->name }}</h5>
+                            <p>{{ $ceo->position }}</p>
+                            <br>
+                            <br> -->
                 </div>
 
             </div>
