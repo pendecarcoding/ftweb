@@ -122,6 +122,9 @@ footer {
 .color-column-list.selected img{
  border: solid brown;
 }
+.pattern-column-list.selected img{
+    border: solid brown;
+}
 .form-check-label {
     color: gray;
     font-size: 13.5px;
@@ -134,6 +137,12 @@ footer {
     margin-bottom: 0.125rem;
 }
 .color-list-container {
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.pattern-list-container {
     margin: 20px 0px;
     display: flex;
     flex-wrap: wrap;
@@ -8223,7 +8232,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label {
 }
 
 main {
-    background: url(../images/bg.png) center top no-repeat;
+    /* background: url(../images/bg.png) center top no-repeat; */
     background-size: cover
 }
 
@@ -14874,17 +14883,19 @@ form.form--basic .mdl-textfield__label {
     .img-ceo {
         float: right;
         width: 100%;
-        height: 294px;
+        height: 362px;
         object-fit: cover;
         border-radius: 10px;
     }
     .ceo-section {
+        /* border-style: dashed;
+        border-color: red; */
         margin: 35px 0px;
         display: flex;
-        height: 260px;
+        height: 362px;
     }
     .content-msg-ceo {
-        /* width: 250%; */
+        width: 250%;
         padding-right: 20px;
         position: relative;
         overflow: hidden;

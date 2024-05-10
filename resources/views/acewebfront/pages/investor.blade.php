@@ -115,9 +115,9 @@
         </div>
       </section> -->
 
-      <section id="ace-testimonials-desktop" class="ace-testimonials">
-        <div class="content-ace about">
-            <div class="wrap-content">
+                <section id="ace-testimonials-desktop" class="gtp-patner" style="background-color: white">
+                    <div class="content-ace">
+                      <div class="wrap-content">
             <div class="ace-isi about">
               <div class="row">
             <div>
@@ -133,40 +133,46 @@
             </div>
 
                 <div  class="col-md-12">
-                  <div style="position:relative;margin-top:50px" id="myCarouseltesti" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div style="margin-left:10%;margin-right:15%">
-                    <div class="carousel-item active">
-                        <div class="row slider-testimonials">
-                          <div class="col-md-8 col-sm-12">
+
+                    <div class="ceo-section">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-9">
+                                <!-- Item text -->
+                                <div class="content-msg-ceo">
+                                    <p>{!! $trimmed_text !!}</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <!-- Item Image -->
+                                <div class="ceo-image">
+                                    <img  class="img-responsive img-ceo" src="{{ getimage($ceo->image) }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr style="width: 334px;height: 3px;background: #006eb2;">
+
+                    <div class="content-msg-name"><h5>{{ $ceo->name }}</h5></div>
+                    <p>{{ $ceo->position }}</p>
+                    <br>
+                    <br>
+                    <!-- <div class="ceo-section">
+                        <div class="content-msg-ceo">
                             <p>{!! $trimmed_text !!}</p>
-                            <hr style="
-                                width: 334px;
-                                height: 3px;
-                                background: #006eb2;
-                              ">
-                            <h5>{{$ceo->name}}</h5>
-                            <p>{{$ceo->position}}</p>
-                            <br>
-                            <br>
-                            <!-- <a href="{{ url('investor_relations/message_from_ceo') }}" class="btn gsf-button">Read More</a> -->
-                          </div>
-                          <div class="col-md-4 col-sm-12">
-
-                              <img  class="img-responsive img-ceo" src="{{getimage($ceo->image)}}" alt="">
-
-                          </div>
+                        </div>
+                        <div class="ceo-image">
+                            <img  class="img-responsive img-ceo" src="{{ getimage($ceo->image) }}" alt="">
                         </div>
                     </div>
+                    <br>
+                            <hr style="width: 334px;height: 3px;background: #006eb2;">
 
-                </div>
-
-
-
-                </div>
-
-
-                  </div>
+                            <h5>{{ $ceo->name }}</h5>
+                            <p>{{ $ceo->position }}</p>
+                            <br>
+                            <br> -->
                 </div>
 
             </div>
@@ -214,7 +220,7 @@
                           </div>
                           <div class="col-md-4 col-sm-12">
                             <div>
-                              <img style="width: 100%;max-width: 100%;margin-bottom: 20px;border-radius: 10px;" class="img-responsive" src="{{getimage($ceo->image)}}" alt="">
+                              <img class="img-responsive img-ceo-mobile" src="{{getimage($ceo->image)}}" alt="">
                             </div>
                           </div>
                         </div>
