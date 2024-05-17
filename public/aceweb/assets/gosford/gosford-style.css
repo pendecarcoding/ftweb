@@ -6,6 +6,10 @@ footer {
 
 }
 
+.iframe-investor{
+    min-height:2569px;
+}
+
 .img-ceo-mobile{
     width: 100%;
     max-width: 100%;
@@ -122,9 +126,6 @@ footer {
 .color-column-list.selected img{
  border: solid brown;
 }
-.pattern-column-list.selected img{
-    border: solid brown;
-}
 .form-check-label {
     color: gray;
     font-size: 13.5px;
@@ -137,12 +138,6 @@ footer {
     margin-bottom: 0.125rem;
 }
 .color-list-container {
-    margin: 20px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.pattern-list-container {
     margin: 20px 0px;
     display: flex;
     flex-wrap: wrap;
@@ -8232,7 +8227,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label {
 }
 
 main {
-    /* background: url(../images/bg.png) center top no-repeat; */
+    background: url(../images/bg.png) center top no-repeat;
     background-size: cover
 }
 
@@ -14883,19 +14878,17 @@ form.form--basic .mdl-textfield__label {
     .img-ceo {
         float: right;
         width: 100%;
-        height: 362px;
+        height: 294px;
         object-fit: cover;
         border-radius: 10px;
     }
     .ceo-section {
-        /* border-style: dashed;
-        border-color: red; */
         margin: 35px 0px;
         display: flex;
-        height: 362px;
+        height: 260px;
     }
     .content-msg-ceo {
-        width: 250%;
+        /* width: 250%; */
         padding-right: 20px;
         position: relative;
         overflow: hidden;
@@ -17395,7 +17388,7 @@ form.form--basic .mdl-textfield__label {
     /* END TEXT FOR BOD*/
     .img-bod-modal {
         object-fit: cover;
-        height: 300px;
+        height: 396px;
         width: 100%;
         margin-bottom: 20px;
     }
@@ -18043,12 +18036,12 @@ form.form--basic .mdl-textfield__label {
         height: auto;
     }
     .img-bod-modal{
-            object-fit: cover;
-            height: 596px;
-            width: 100%;
-            margin-bottom: 20px;
+        object-fit: cover;
+        height: 596px;
+        width: 100%;
+        margin-bottom: 20px;
 
-    }
+}
     .clearfix {
         height: 128px;
         clear: both;
