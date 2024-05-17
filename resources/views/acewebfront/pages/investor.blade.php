@@ -4,6 +4,6 @@
 @endsection
 @section('content')
     <main>
-        <iframe style="width:100%;height:100vh" src="https://feytech.listedcompany.com/home.html" frameborder="0"></iframe>
+        <iframe class="iframe-investor" id="myIframe" src="https://feytech.listedcompany.com/home.html"  width="100%"></iframe>
     </main>
 @endsection
