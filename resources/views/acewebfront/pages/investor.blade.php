@@ -4,16 +4,8 @@
 @endsection
 @section('content')
     <main>
-        <iframe id="myIframe"  src="https://feytech.listedcompany.com/home.html" width="100%"></iframe>
+        <iframe id="myIframe" src="https://feytech.listedcompany.com/home.html" style="min-height:2000px;"  width="100%"></iframe>
     </main>
 
-    <script>
-        // Selecting the iframe element
-        var iframe = document.getElementById("myIframe");
 
-        // Adjusting the iframe height onload event
-        iframe.onload = function(){
-            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-        }
-        </script>
 @endsection
