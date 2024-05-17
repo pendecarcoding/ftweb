@@ -16575,6 +16575,9 @@ form.form--basic .mdl-textfield__label {
         position: fixed;
         background-color: transparent;
     }
+    .iframe-investor {
+        min-height: 2375px;
+    }
 
     .h5-milestone {
         font-size: 0.6rem;
@@ -17358,6 +17361,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1366px) {
+    .iframe-investor {
+        min-height: 2523px;
+    }
     .modal-lg, .modal-xl {
         --bs-modal-width: 1024px;
     }
@@ -17419,6 +17425,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1440px) {
+    .iframe-investor {
+        min-height: 2541px;
+    }
     .modal-lg, .modal-xl {
         --bs-modal-width: 1024px;
     }
@@ -17482,6 +17491,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1536px) {
+    .iframe-investor {
+        min-height: 2582px;
+    }
     .modal-lg, .modal-xl {
         --bs-modal-width: 1024px;
     }
@@ -17503,6 +17515,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1600px) {
+    .iframe-investor {
+        min-height: 2582px;
+    }
     .mdl-layout__header-row .classurl {
         margin: 0px 20px;
     }
@@ -17512,6 +17527,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1680px) {
+    .iframe-investor {
+        min-height: 2602px;
+    }
     .mdl-layout__header-row .classurl {
         margin: 0px 21px;
     }
@@ -17559,6 +17577,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:1920px) {
+    .iframe-investor {
+        min-height: 2664px;
+    }
     .card-news {
         cursor: pointer;
         height: 552px;
