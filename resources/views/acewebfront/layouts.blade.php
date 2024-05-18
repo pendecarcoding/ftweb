@@ -8,7 +8,6 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="description" content="" />
     <meta name="theme-color" content="#333333" />
-    <meta name="robots" content="noindex">
 
     <meta name="generator" content="Hugo 0.104.2" />
     <link rel="icon" href="{{ uploaded_asset(get_setting('system_logo_white')) }}">
@@ -46,7 +45,7 @@
     <link href="{{ static_asset('aceweb') }}/assets/slick/slick.css" rel="stylesheet" />
     <link href="{{ static_asset('aceweb') }}/assets/slick/slick-theme.css" rel="stylesheet" />
     <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />-->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <!--TEST-->
     <!--TEST-->
@@ -116,7 +115,7 @@
   gtag('config', 'G-801CJXHWZ0');
 </script>
     @endif
-    <script src="{{ static_asset('aceweb') }}/assets/js/lightgallery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/video/lg-video.umd.js"></script>
@@ -192,7 +191,7 @@
             </form>
         </div>
     </div>
-    <!-- <div class="modal fade" id="staffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="staffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
@@ -266,7 +265,7 @@
 
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-md">
@@ -555,7 +554,7 @@
 
         window.onscroll = function() {
 
-            // progressBarScroll();
+            progressBarScroll();
 
 
         };
@@ -585,7 +584,7 @@
 
 
         }
-        @if(REQUEST::is('/'))
+
         $(window).on("scroll", function() {
 
             //document.getElementById("progressBar").style.height =  window.innerHeight;
@@ -632,189 +631,188 @@
                 localStorage.removeItem("visited");
             }
         });
-        @endif
 
 
         $(document).ready(function() {
 
-            // $(window).on("scroll", function() {
+            $(window).on("scroll", function() {
 
-            //     if (
-            //         $(window).scrollTop() >=
-            //         $(".company-ace").offset().top +
-            //         $(".company-ace").outerHeight() -
-            //         window.innerHeight
-            //     ) {
-            //         document.getElementById("gtp").style.display = "block";
-            //         document.getElementById("gpt1").style.height = "600px";
-            //         document.getElementById("gpt2").style.height = "600px";
-            //         document.getElementById("gpt3").style.height = "600px";
-            //         document.getElementById("gpt4").style.height = "600px";
-            //         document.getElementById("gpt5").style.height = "600px";
-
-
-            //     }
+                if (
+                    $(window).scrollTop() >=
+                    $(".company-ace").offset().top +
+                    $(".company-ace").outerHeight() -
+                    window.innerHeight
+                ) {
+                    document.getElementById("gtp").style.display = "block";
+                    document.getElementById("gpt1").style.height = "600px";
+                    document.getElementById("gpt2").style.height = "600px";
+                    document.getElementById("gpt3").style.height = "600px";
+                    document.getElementById("gpt4").style.height = "600px";
+                    document.getElementById("gpt5").style.height = "600px";
 
 
-
-
-
-            //     if (
-            //         $(window).scrollTop() >=
-            //         $("#mansory").offset().top +
-            //         $("#mansory").outerHeight() -
-            //         window.innerHeight
-            //     ) {
-
-            //         $(".grid-item").each(function(i) {
-            //             setTimeout(function() {
-            //                 $(".grid-item").eq(i).addClass("is-visible");
-            //             }, 200 * i);
-            //         });
-
-
-            //     }
-
-            //     if (
-            //         $(window).scrollTop() >=
-            //         $("#nonmansory").offset().top +
-            //         $("#nonmansory").outerHeight() -
-            //         window.innerHeight
-            //     ) {
-
-            //         $(".grid-item").each(function(i) {
-            //             setTimeout(function() {
-            //                 $(".grid-item").eq(i).removeClass("is-visible");
-            //             }, 200 * i);
-            //         });
-
-
-            //     }
-            //     if (
-            //         $(window).scrollTop() >=
-            //         $("#gpt0").offset().top +
-            //         $("#gpt0").outerHeight() -
-            //         window.innerHeight
-            //     ) {
-            //         var to = document.getElementById("to-progress");
-            //         var img = document.getElementById("imggpt1");
-            //         var titleprogress = document.getElementById("title-progress");
-            //         var contentprogress = document.getElementById("content-progress");
-            //         //$("#imggpt1").fadeIn(30);
-            //         //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp1.png");
+                }
 
 
 
 
-            //         to.innerHTML = "1/5";
-            //         titleprogress.innerHTML = "Online ordering system";
-            //         contentprogress.innerHTML =
-            //             "Through our GSAP system which provides a comprehensive options for our business partners when placing orders with us.";
 
-            //         $(".gptimg-responsive").addClass("is-visible");
+                if (
+                    $(window).scrollTop() >=
+                    $("#mansory").offset().top +
+                    $("#mansory").outerHeight() -
+                    window.innerHeight
+                ) {
 
-            //     }
-            //     if (
-            //         $(window).scrollTop() >=
-            //         $("#gpt1").offset().top +
-            //         $("#gpt1").outerHeight() -
-            //         window.innerHeight
-            //     ) {
-            //         var to = document.getElementById("to-progress");
-            //         var titleprogress = document.getElementById("title-progress");
-            //         var contentprogress = document.getElementById("content-progress");
-            //         //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp2.png");
-            //         //$("#imggpt1").fadeIn(3000);
-            //         //document.getElementById("imggpt1").src="{{ static_asset('aceweb') }}/assets/img/gtp2.png";
-            //         $(".gptimg-responsive").addClass("is-visible");
-            //         to.innerHTML = "2/5";
-            //         titleprogress.innerHTML = "Wide range of vehicle models";
-            //         contentprogress.innerHTML =
-            //             "A broad range of vehicle model make, model & year model to choose from which enable our business partners to serve their end customers better.";
+                    $(".grid-item").each(function(i) {
+                        setTimeout(function() {
+                            $(".grid-item").eq(i).addClass("is-visible");
+                        }, 200 * i);
+                    });
 
 
-            //     }
-            //     if (
-            //         $(window).scrollTop() >=
-            //         $("#gpt2").offset().top +
-            //         $("#gpt2").outerHeight() -
-            //         window.innerHeight
-            //     ) {
-            //         var to = document.getElementById("to-progress");
-            //         var titleprogress = document.getElementById("title-progress");
-            //         var contentprogress = document.getElementById("content-progress");
-            //         //$("#imggpt1").fadeIn(3000);
-            //         //document.getElementById("imggpt1").src="{{ static_asset('aceweb') }}/assets/img/gtp3.png";
-            //         //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp3.png");
-            //         $(".gptimg-responsive").addClass("is-visible");
-            //         to.innerHTML = "3/5";
-            //         titleprogress.innerHTML =
-            //             "No room of failure.";
-            //         contentprogress.innerHTML =
-            //             "With the comprehensive options available supported with a schematic diagram that goes almost instantly to our production line to meet short delivery period.";
+                }
 
-            //     }
-            //     if (
-            //         $(window).scrollTop() >=
-            //         $("#gpt3").offset().top +
-            //         $("#gpt3").outerHeight() -
-            //         window.innerHeight
-            //     ) {
+                if (
+                    $(window).scrollTop() >=
+                    $("#nonmansory").offset().top +
+                    $("#nonmansory").outerHeight() -
+                    window.innerHeight
+                ) {
 
-            //         var to = document.getElementById("to-progress");
-            //         var titleprogress = document.getElementById("title-progress");
-            //         var contentprogress = document.getElementById("content-progress");
-            //         //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp4.png");
-            //         //$("#imggpt1").fadeIn(3000);
-            //         // document.getElementById("imggpt1").src="{{ static_asset('aceweb') }}/assets/img/gtp4.png";
-            //         $(".gptimg-responsive").addClass("is-visible");
-            //         to.innerHTML = "4/5";
-            //         titleprogress.innerHTML =
-            //             "Seamless integration";
-            //         contentprogress.innerHTML =
-            //             "Design pattern selected are being connected to our design pattern high tech equipment with less human intervention.";
+                    $(".grid-item").each(function(i) {
+                        setTimeout(function() {
+                            $(".grid-item").eq(i).removeClass("is-visible");
+                        }, 200 * i);
+                    });
 
-            //     }
-            //     if (
-            //         $(window).scrollTop() >=
-            //         $("#gpt4").offset().top +
-            //         $("#gpt4").outerHeight() -
-            //         window.innerHeight
-            //     ) {
 
-            //         var to = document.getElementById("to-progress");
-            //         var titleprogress = document.getElementById("title-progress");
-            //         var contentprogress = document.getElementById("content-progress");
-            //         //$("#imggpt1").fadeIn(3000);
-            //         //document.getElementById("imggpt1").src =
-            //         //   "{{ static_asset('aceweb') }}/assets/img/gtp4.png";
-            //         //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp4.png");
-            //         var height = $("#gpt4").outerHeight() - window.innerHeight + "vh";
-            //         to.innerHTML = "5/5";
-            //         titleprogress.innerHTML =
-            //             "Order fulfillment";
-            //         contentprogress.innerHTML =
-            //             "Orders received are fully monitored and tracked of its status ensuring delivery dates requested by our business partners vis vis to end client are met.";
+                }
+                if (
+                    $(window).scrollTop() >=
+                    $("#gpt0").offset().top +
+                    $("#gpt0").outerHeight() -
+                    window.innerHeight
+                ) {
+                    var to = document.getElementById("to-progress");
+                    var img = document.getElementById("imggpt1");
+                    var titleprogress = document.getElementById("title-progress");
+                    var contentprogress = document.getElementById("content-progress");
+                    //$("#imggpt1").fadeIn(30);
+                    //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp1.png");
 
-            //     }
-            //     if ($(window).scrollTop() >=
-            //         $("#gpt5").offset().top +
-            //         $("#gpt5").outerHeight() -
-            //         window.innerHeight) {
 
-            //         const myDiv = document.getElementById("gtp-patner-focused");
-            //         // myDiv.scrollIntoView();
 
-            //     }
-            //     if ($(window).scrollTop() >=
-            //         $("#gpt6").offset().top +
-            //         $("#gpt6").outerHeight() -
-            //         window.innerHeight) {
-            //         // document.getElementById("gtp").style.display = "none";
 
-            //     }
+                    to.innerHTML = "1/5";
+                    titleprogress.innerHTML = "Online ordering system";
+                    contentprogress.innerHTML =
+                        "Through our GSAP system which provides a comprehensive options for our business partners when placing orders with us.";
 
-            // });
+                    $(".gptimg-responsive").addClass("is-visible");
+
+                }
+                if (
+                    $(window).scrollTop() >=
+                    $("#gpt1").offset().top +
+                    $("#gpt1").outerHeight() -
+                    window.innerHeight
+                ) {
+                    var to = document.getElementById("to-progress");
+                    var titleprogress = document.getElementById("title-progress");
+                    var contentprogress = document.getElementById("content-progress");
+                    //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp2.png");
+                    //$("#imggpt1").fadeIn(3000);
+                    //document.getElementById("imggpt1").src="{{ static_asset('aceweb') }}/assets/img/gtp2.png";
+                    $(".gptimg-responsive").addClass("is-visible");
+                    to.innerHTML = "2/5";
+                    titleprogress.innerHTML = "Wide range of vehicle models";
+                    contentprogress.innerHTML =
+                        "A broad range of vehicle model make, model & year model to choose from which enable our business partners to serve their end customers better.";
+
+
+                }
+                if (
+                    $(window).scrollTop() >=
+                    $("#gpt2").offset().top +
+                    $("#gpt2").outerHeight() -
+                    window.innerHeight
+                ) {
+                    var to = document.getElementById("to-progress");
+                    var titleprogress = document.getElementById("title-progress");
+                    var contentprogress = document.getElementById("content-progress");
+                    //$("#imggpt1").fadeIn(3000);
+                    //document.getElementById("imggpt1").src="{{ static_asset('aceweb') }}/assets/img/gtp3.png";
+                    //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp3.png");
+                    $(".gptimg-responsive").addClass("is-visible");
+                    to.innerHTML = "3/5";
+                    titleprogress.innerHTML =
+                        "No room of failure.";
+                    contentprogress.innerHTML =
+                        "With the comprehensive options available supported with a schematic diagram that goes almost instantly to our production line to meet short delivery period.";
+
+                }
+                if (
+                    $(window).scrollTop() >=
+                    $("#gpt3").offset().top +
+                    $("#gpt3").outerHeight() -
+                    window.innerHeight
+                ) {
+
+                    var to = document.getElementById("to-progress");
+                    var titleprogress = document.getElementById("title-progress");
+                    var contentprogress = document.getElementById("content-progress");
+                    //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp4.png");
+                    //$("#imggpt1").fadeIn(3000);
+                    // document.getElementById("imggpt1").src="{{ static_asset('aceweb') }}/assets/img/gtp4.png";
+                    $(".gptimg-responsive").addClass("is-visible");
+                    to.innerHTML = "4/5";
+                    titleprogress.innerHTML =
+                        "Seamless integration";
+                    contentprogress.innerHTML =
+                        "Design pattern selected are being connected to our design pattern high tech equipment with less human intervention.";
+
+                }
+                if (
+                    $(window).scrollTop() >=
+                    $("#gpt4").offset().top +
+                    $("#gpt4").outerHeight() -
+                    window.innerHeight
+                ) {
+
+                    var to = document.getElementById("to-progress");
+                    var titleprogress = document.getElementById("title-progress");
+                    var contentprogress = document.getElementById("content-progress");
+                    //$("#imggpt1").fadeIn(3000);
+                    //document.getElementById("imggpt1").src =
+                    //   "{{ static_asset('aceweb') }}/assets/img/gtp4.png";
+                    //changeimage("{{ static_asset('aceweb') }}/assets/img/gtp4.png");
+                    var height = $("#gpt4").outerHeight() - window.innerHeight + "vh";
+                    to.innerHTML = "5/5";
+                    titleprogress.innerHTML =
+                        "Order fulfillment";
+                    contentprogress.innerHTML =
+                        "Orders received are fully monitored and tracked of its status ensuring delivery dates requested by our business partners vis vis to end client are met.";
+
+                }
+                if ($(window).scrollTop() >=
+                    $("#gpt5").offset().top +
+                    $("#gpt5").outerHeight() -
+                    window.innerHeight) {
+
+                    const myDiv = document.getElementById("gtp-patner-focused");
+                    // myDiv.scrollIntoView();
+
+                }
+                if ($(window).scrollTop() >=
+                    $("#gpt6").offset().top +
+                    $("#gpt6").outerHeight() -
+                    window.innerHeight) {
+                    // document.getElementById("gtp").style.display = "none";
+
+                }
+
+            });
         });
     </script>
 
@@ -875,11 +873,9 @@
         clone3.appendTo(".col3 ul");
     </script>
     <!--END MAnsory-->
-    @if(REQUEST::is(''))
-    <!-- <script src="{{ static_asset('aceweb') }}/assets/ace/gtpscroll.js" type="text/javascript"></script> -->
-    @endif
+    <script src="{{ static_asset('aceweb') }}/assets/ace/gtpscroll.js" type="text/javascript"></script>
     <script src="{{ static_asset('aceweb') }}/assets/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="{{ static_asset('aceweb') }}/assets/dist/js/light-galery-all.js"></script> -->
+    <script src="{{ static_asset('aceweb') }}/assets/dist/js/light-galery-all.js"></script>
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script>
@@ -907,7 +903,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         $(function() {
             // Masonry Grid
             $(".grid").masonry({
@@ -933,7 +929,7 @@
                 }
             });
         });
-    </script> -->
+    </script>
 
 
 
@@ -1169,7 +1165,22 @@ function requestLandscapeOrientation() {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
     </script>
-
+ <script>
+    function requestHeight() {
+        console.log('SEND test height:');
+        const iframe = document.getElementById('iframes');
+        const iframeSrc = new URL(iframe.src);
+        iframe.contentWindow.postMessage('getHeight', iframeSrc.origin);
+    }
+    window.addEventListener('message', (event) => {
+      console.log('data from origin:', event.data);
+      const iframe = document.getElementById('iframes');
+      iframe.style.height = event.data.height + 'px';
+    });
+    window.onload = function() {
+        requestHeight();
+    };
+</script>
 </body>
 
 </html>
