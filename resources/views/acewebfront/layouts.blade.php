@@ -1165,7 +1165,22 @@ function requestLandscapeOrientation() {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
     </script>
-
+ <script>
+    function requestHeight() {
+        console.log('SEND test height:');
+        const iframe = document.getElementById('iframes');
+        const iframeSrc = new URL(iframe.src);
+        iframe.contentWindow.postMessage('getHeight', iframeSrc.origin);
+    }
+    window.addEventListener('message', (event) => {
+      console.log('data from origin:', event.data);
+      const iframe = document.getElementById('iframes');
+      iframe.style.height = event.data.height + 'px';
+    });
+    window.onload = function() {
+        requestHeight();
+    };
+</script>
 </body>
 
 </html>
