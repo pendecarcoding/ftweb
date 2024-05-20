@@ -1190,10 +1190,13 @@
 
         window.onload = function() {
             const iframe = document.getElementById('iframes');
-            if (isMobile()) {
-                iframe.setAttribute('scrolling', 'yes');
+            // if (isMobile()) {
+            //     iframe.setAttribute('scrolling', 'yes');
+            // }
+            if (!isMobile()) {
+                iframe.setAttribute('scrolling', 'no');
+                requestHeight();
             }
-            requestHeight();
         };
     </script>
 </body>
