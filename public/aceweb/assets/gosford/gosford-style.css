@@ -11529,6 +11529,15 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:400px) and (max-width:500px) {
+    .ir-financial{
+        height: 3606px;
+    }
+    .ir-bursa{
+        height: 2218px;
+    }
+    .ir-corporate{
+        height: 1844px;
+    }
     .section-head h2 {
         color: #666666;
         font-size: 21px;
@@ -12164,6 +12173,15 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (min-width:500px) and (max-width: 600px) {
+    .ir-financial{
+        height: 3606px;
+    }
+    .ir-bursa{
+        height: 2218px;
+    }
+    .ir-corporate{
+        height: 1844px;
+    }
     .section-head h2 {
         color: #666666;
         font-size: 21px;
