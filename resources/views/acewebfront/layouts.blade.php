@@ -20,6 +20,7 @@
         @endif
     </title>
     @yield('meta')
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://feytech.listedcompany.com;">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/" />
 
     <link rel="stylesheet" type="text/css" href="{{ static_asset('car') }}/css/style.min.css">
