@@ -11383,6 +11383,9 @@ form.form--basic .mdl-textfield__label {
     .ir-media{
         height: 9606px;
     }
+    .iframe-investor {
+        min-height: 4477px;
+    }
     .section-head h2 {
         color: #666666;
         font-size: 21px;
@@ -11543,6 +11546,9 @@ form.form--basic .mdl-textfield__label {
     }
     .ir-media{
         height: 9606px;
+    }
+    .iframe-investor {
+        min-height: 4477px;
     }
     .section-head h2 {
         color: #666666;
@@ -12190,6 +12196,9 @@ form.form--basic .mdl-textfield__label {
     }
     .ir-media{
         height: 9606px;
+    }
+    .iframe-investor {
+        min-height: 4477px;
     }
     .section-head h2 {
         color: #666666;
