@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <iframe style="height:100vh"  id="iframes" src="https://developboy.my.id/"
+        <iframe scrolling="no" class="iframe-investor"  id="iframes" src="https://feytech.listedcompany.com/home.html"
             width="100%"></iframe>
     </main>
 @endsection
