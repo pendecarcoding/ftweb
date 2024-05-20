@@ -16,7 +16,7 @@
         @if (!empty($page))
             {{ get_setting('site_name') }} |{{ strtoupper($page) }}
         @else
-        {{ get_setting('site_name') }}
+            {{ get_setting('site_name') }}
         @endif
     </title>
     @yield('meta')
@@ -95,9 +95,11 @@
         .bg-primary {
             background-color: #212529;
         }
+
         .theme-btn.bt-support-now {
             display: none;
         }
+
         .theme-btn.bt-buy-now {
             display: none;
         }
@@ -105,15 +107,18 @@
 
     <!-- Google tag (gtag.js) -->
     @if (get_setting('google_analytics') == 1)
-       <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-801CJXHWZ0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-801CJXHWZ0"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-801CJXHWZ0');
-</script>
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-801CJXHWZ0');
+        </script>
     @endif
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
@@ -143,16 +148,18 @@
     </div>
     <!-- <div id="chat" class="wa-floating-button" >
         <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/6527a5f0eb150b3fb9a0a452/1hche0dq4';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
+            var Tawk_API = Tawk_API || {},
+                Tawk_LoadStart = new Date();
+            (function() {
+                var s1 = document.createElement("script"),
+                    s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/6527a5f0eb150b3fb9a0a452/1hche0dq4';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
             })();
-            </script>
+        </script>
     </div> -->
     <!--Start of Tawk.to Script-->
 
@@ -180,7 +187,8 @@
                 </div>
                 <div class="card-footer">
                     <div style="display:none" id="alert-message-popup">
-                        <div class="alert alert-success"> <a href="#" class="close" data-bs-dismiss="alert" aria-label="close">×</a> <strong>Success!</strong> your message has been sent. </div>
+                        <div class="alert alert-success"> <a href="#" class="close" data-bs-dismiss="alert"
+                                aria-label="close">×</a> <strong>Success!</strong> your message has been sent. </div>
                     </div>
                     <button type="submit" style="width:100%;background-color: #F80814;color:white" class="btn">
                         <span id="btn-text">Submit</span>
@@ -202,8 +210,8 @@
                     padding: 50px;
                 ">
                         <div class="mb-5 text-center">
-                            <img style="width: 127px;" src="{{ uploaded_asset(get_setting('system_logo_white')) }}" class="mw-100 mb-4"
-                                height="50">
+                            <img style="width: 127px;" src="{{ uploaded_asset(get_setting('system_logo_white')) }}"
+                                class="mw-100 mb-4" height="50">
                             <h1 style="color: #6d6d6d;font-size: 20px;" class="h3  mb-0">Staff Login</h1>
 
                         </div>
@@ -350,11 +358,11 @@
     <!--</div>-->
     <script>
         window.addEventListener('wheel', (event) => {
-          if (event.ctrlKey) {
-            event.preventDefault();
-          }
+            if (event.ctrlKey) {
+                event.preventDefault();
+            }
         });
-      </script>
+    </script>
     @if (Session::has('wrongpassword'))
         <script>
             // Define a function to be executed when the page finishes loading
@@ -429,8 +437,7 @@
                         $("#alertpatner").show();
                         $("#requestpatnerform")[0].reset();
                         console.log(response);
-                    }
-                    else{
+                    } else {
                         console.log(response);
                     }
                 },
@@ -455,24 +462,21 @@
     </script>
 
     <script type="text/javascript">
-//       let allowScroll = true;
-// let allowKeyboard = true;
+        //       let allowScroll = true;
+        // let allowKeyboard = true;
 
-// document.addEventListener("keydown", function (e) {
-//   if (allowKeyboard && e.ctrlKey && (e.keyCode == "61" || e.keyCode == "107" || e.keyCode == "173" || e.keyCode == "109" || e.keyCode == "187" || e.keyCode == "189")) {
-//     e.preventDefault();
-//   }
-// });
+        // document.addEventListener("keydown", function (e) {
+        //   if (allowKeyboard && e.ctrlKey && (e.keyCode == "61" || e.keyCode == "107" || e.keyCode == "173" || e.keyCode == "109" || e.keyCode == "187" || e.keyCode == "189")) {
+        //     e.preventDefault();
+        //   }
+        // });
 
-// document.addEventListener("wheel", function (e) {
-//   if (allowScroll && e.ctrlKey) {
-//     e.preventDefault();
-//   }
-// }, { passive: false });
-
-
-
-        </script>
+        // document.addEventListener("wheel", function (e) {
+        //   if (allowScroll && e.ctrlKey) {
+        //     e.preventDefault();
+        //   }
+        // }, { passive: false });
+    </script>
 
 
     <script type="text/javascript">
@@ -961,42 +965,42 @@
     </script>
 
 
-<script>
-    function logoutFunction() {
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-                confirmButton: 'btn btn-success',
-                cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false
-        })
+    <script>
+        function logoutFunction() {
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+            })
 
-        swalWithBootstrapButtons.fire({
-            title: 'Are you sure?',
-            text: "you want to leave this page?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Yes',
-            cancelButtonText: 'No, cancel!',
-            reverseButtons: true
-        }).then((result) => {
-            if (result.isConfirmed) {
+            swalWithBootstrapButtons.fire({
+                title: 'Are you sure?',
+                text: "you want to leave this page?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'No, cancel!',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
 
-                window.location.href = "{{url('/staff/back/logoutstuff')}}";
-            } else if (
-                /* Read more about handling dismissals below */
-                result.dismiss === Swal.DismissReason.cancel
-            ) {
-                // swalWithBootstrapButtons.fire(
-                //     'Cancelled',
-                //     'Your imaginary file is safe :)',
-                //     'error'
-                // )
-            }
-        })
+                    window.location.href = "{{ url('/staff/back/logoutstuff') }}";
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    // swalWithBootstrapButtons.fire(
+                    //     'Cancelled',
+                    //     'Your imaginary file is safe :)',
+                    //     'error'
+                    // )
+                }
+            })
 
-    }
-</script>
+        }
+    </script>
 
 
     <script></script>
@@ -1140,32 +1144,62 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-  // Check if it's a tablet in portrait mode
-  if (isTabletPortrait()) {
-    // Request landscape orientation
-    requestLandscapeOrientation();
-  }
-});
+            // Check if it's a tablet in portrait mode
+            if (isTabletPortrait()) {
+                // Request landscape orientation
+                requestLandscapeOrientation();
+            }
+        });
 
-function isTabletPortrait() {
-  return window.matchMedia("(orientation: portrait) and (max-width: 768px)").matches;
-}
+        function isTabletPortrait() {
+            return window.matchMedia("(orientation: portrait) and (max-width: 768px)").matches;
+        }
 
-function requestLandscapeOrientation() {
-  if (screen.orientation && screen.orientation.lock) {
-    screen.orientation.lock('landscape');
-  }
-}
-
-        </script>
-
-<script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
+        function requestLandscapeOrientation() {
+            if (screen.orientation && screen.orientation.lock) {
+                screen.orientation.lock('landscape');
+            }
+        }
     </script>
 
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <script>
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        function requestHeight() {
+            console.log('SEND test height:');
+            const iframe = document.getElementById('iframes');
+            const iframeSrc = new URL(iframe.src);
+            iframe.contentWindow.postMessage('getHeight', iframeSrc.origin);
+        }
+
+        window.addEventListener('message', (event) => {
+            console.log('data from origin:', event.data);
+            const iframe = document.getElementById('iframes');
+            if (!isMobile()) {
+                iframe.style.height = event.data.height + 'px';
+            }
+        });
+
+        window.onload = function() {
+            const iframe = document.getElementById('iframes');
+            // if (isMobile()) {
+            //     iframe.setAttribute('scrolling', 'yes');
+            // }
+            if (!isMobile()) {
+                iframe.setAttribute('scrolling', 'no');
+                iframe.style.height = '100vh';
+                requestHeight();
+            }
+        };
+    </script>
 </body>
 
 </html>
