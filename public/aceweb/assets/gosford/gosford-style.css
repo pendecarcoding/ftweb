@@ -11371,6 +11371,9 @@ form.form--basic .mdl-textfield__label {
 }
 
 @media screen and (max-width:400px) {
+    .ir-financial{
+        height: 3606px;
+    }
     .section-head h2 {
         color: #666666;
         font-size: 21px;
