@@ -11374,6 +11374,12 @@ form.form--basic .mdl-textfield__label {
     .ir-financial{
         height: 3606px;
     }
+    .ir-bursa{
+        height: 2218px;
+    }
+    .ir-corporate{
+        height: 1844px;
+    }
     .section-head h2 {
         color: #666666;
         font-size: 21px;
