@@ -1195,6 +1195,7 @@
             // }
             if (!isMobile()) {
                 iframe.setAttribute('scrolling', 'no');
+                iframe.style.height = '100vh';
                 requestHeight();
             }
         };
