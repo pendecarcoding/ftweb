@@ -11380,6 +11380,9 @@ form.form--basic .mdl-textfield__label {
     .ir-corporate{
         height: 1844px;
     }
+    .ir-media{
+        height: 9606px;
+    }
     .section-head h2 {
         color: #666666;
         font-size: 21px;
@@ -11537,6 +11540,9 @@ form.form--basic .mdl-textfield__label {
     }
     .ir-corporate{
         height: 1844px;
+    }
+    .ir-media{
+        height: 9606px;
     }
     .section-head h2 {
         color: #666666;
@@ -12181,6 +12187,9 @@ form.form--basic .mdl-textfield__label {
     }
     .ir-corporate{
         height: 1844px;
+    }
+    .ir-media{
+        height: 9606px;
     }
     .section-head h2 {
         color: #666666;
