@@ -1175,7 +1175,7 @@ function requestLandscapeOrientation() {
     window.addEventListener('message', (event) => {
       console.log('data from origin:', event.data);
       const iframe = document.getElementById('iframes');
-      iframe.style.height = event.data.height + 'px';
+      iframe.style.height = (event.data.height + 300) + 'px';
     });
     window.onload = function() {
         requestHeight();
