@@ -1166,18 +1166,28 @@ function requestLandscapeOrientation() {
     })
     </script>
  <script>
+    function isMobile() {
+        return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
     function requestHeight() {
         console.log('SEND test height:');
         const iframe = document.getElementById('iframes');
         const iframeSrc = new URL(iframe.src);
         iframe.contentWindow.postMessage('getHeight', iframeSrc.origin);
     }
+
     window.addEventListener('message', (event) => {
-      console.log('data from origin:', event.data);
-      const iframe = document.getElementById('iframes');
-      iframe.style.height = event.data.height + 'px';
+        console.log('data from origin:', event.data);
+        const iframe = document.getElementById('iframes');
+        iframe.style.height = event.data.height + 'px';
     });
+
     window.onload = function() {
+        const iframe = document.getElementById('iframes');
+        if (isMobile()) {
+            iframe.setAttribute('scrolling', 'yes');
+        }
         requestHeight();
     };
 </script>
