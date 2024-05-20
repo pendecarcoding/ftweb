@@ -1175,11 +1175,17 @@ function requestLandscapeOrientation() {
     window.addEventListener('message', (event) => {
       console.log('data from origin:', event.data);
       const iframe = document.getElementById('iframes');
-      iframe.style.height = (event.data.height + 300) + 'px';
+      iframe.style.height = event.data.height + 'px';
     });
     window.onload = function() {
-        requestHeight();
+        if (!isMobile()) {
+            requestHeight();
+        }
     };
+
+    function isMobile() {
+        return /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth <= 800;
+    }
 </script>
 </body>
 
