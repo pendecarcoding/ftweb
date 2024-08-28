@@ -1246,7 +1246,6 @@ main {
 
 .contact-wrap {
     flex-wrap: wrap;
-    display: flex;
     padding: 20px;
 }
 
