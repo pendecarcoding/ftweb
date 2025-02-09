@@ -892,101 +892,156 @@ class AceController extends Controller
     }
 
 
-    public function addrequest(Request $r){
-        $data = [
-            'name'=>$r->name,
-            'contact'=>$r->numbercontact,
-            'email'=>$r->email,
-            'subject'=>$r->subject,
-            'message'=>$r->message,
-        ];
+    public function addrequest(Request $r) {
+        // Validate input
+        $validatedData = $r->validate([
+            'name'         => 'required|string|max:255|regex:/^[a-zA-Z\s]+$/',
+            'numbercontact'=> 'required|string|max:20|regex:/^[0-9+\-\s]+$/',
+            'email'        => 'required|email|max:255',
+            'subject'      => 'required|string|max:255',
+            'message' => [
+            'required',
+            'string',
+            'max:1000',
+            'not_regex:/\b(select|insert|update|delete|drop|union|waitfor|sleep|waitfor delay|benchmark)\b/i',  // Blocks SQL keywords
+            'not_regex:/(--|#|\*|;|\')/',  // Blocks SQL injection characters
+            ],
+         ]);
+
+        // Sanitize inputs
+        $validatedData['email'] = filter_var($validatedData['email'], FILTER_SANITIZE_EMAIL);
+        $validatedData['message'] = htmlspecialchars($validatedData['message'], ENT_QUOTES, 'UTF-8');
+
         try {
-            Patnerrequest::insert($data);
-            $encodedEmail = htmlentities($r->email);
-            $array['subject'] = $r->subject;
-            $array['from']    = env('MAIL_FROM_ADDRESS');
-            $array['dear']    = "Dear Customer Support";
-            $array['opening'] = "There is someone who is interested in becoming a partner with your company, here are the details below:";
-            $array['content'] = 'Name : '.$r->name.'<br>Contact Number : '.$r->numbercontact.' <br> Email : '.$encodedEmail.'<br> Message : '.$r->message;
-            $array['email']   = $r->email;
-            // Define the BCC recipients
+            // Insert data using Eloquent (safe from SQL injection)
+            Patnerrequest::create([
+                'name'    => $validatedData['name'],
+                'contact' => $validatedData['numbercontact'],
+                'email'   => $validatedData['email'],
+                'subject' => $validatedData['subject'],
+                'message' => $validatedData['message'],
+            ]);
+
+            // Prepare email content
+            $array = [
+                'subject' => $validatedData['subject'],
+                'from'    => env('MAIL_FROM_ADDRESS'),
+                'dear'    => "Dear Customer Support",
+                'opening' => "There is someone who is interested in becoming a partner with your company, here are the details below:",
+                'content' => "Name : " . $validatedData['name'] .
+                             "<br>Contact Number : " . $validatedData['numbercontact'] .
+                             "<br>Email : " . htmlentities($validatedData['email']) .
+                             "<br>Message : " . $validatedData['message'],
+                'email'   => $validatedData['email'],
+            ];
+
+            // Send email with BCC recipients
             $bccRecipients = getccemail();
-            //email to Customer Support
-            Mail::bcc($bccRecipients)  // Add BCC recipients
-                ->queue(new ForCustomerMailManager($array));
-                $msg = "success";
-                return $msg;
+            Mail::bcc($bccRecipients)->queue(new ForCustomerMailManager($array));
+
+            return "success";
         } catch (\Throwable $th) {
-            return $th->getmessage();
+            return $th->getMessage();
         }
     }
 
-    public function messageusers(Request $r){
-        if(checkrechapta($r->input('g-recaptcha-response'))){
-            $data = [
-                'name'=>$r->name,
-                'phone'=>$r->phone,
-                'type'=>$r->type,
-                'email'=>$r->email,
-                'comment'=>$r->comment,
-            ];
+
+    public function messageusers(Request $r) {
+        // Validate the input
+        $validatedData = $r->validate([
+            'name'    => 'required|string|max:255|regex:/^[a-zA-Z\s]+$/',
+            'phone'   => 'required|string|max:20|regex:/^[0-9+\-\s]+$/',
+            'type'    => 'required|string|max:255',
+            'email'   => 'required|email|max:255',
+            'comment' => 'required|string|max:1000',
+        ]);
+
+        if (checkrechapta($r->input('g-recaptcha-response'))) {
+            // Sanitize inputs to prevent XSS
+            $validatedData['email'] = filter_var($validatedData['email'], FILTER_SANITIZE_EMAIL);
+            $validatedData['comment'] = htmlspecialchars($validatedData['comment'], ENT_QUOTES, 'UTF-8');
+
             try {
-                DB::table('message_user')->insert($data);
-                $encodedEmail = htmlentities($r->email);
-                $array['subject'] = $r->type;
-                $array['from']    = env('MAIL_FROM_ADDRESS');
-                $array['dear']    = "Dear Customer Support";
-                $array['opening'] = "There's a ".$r->type." from a customer bellow which requires your attention.";
-                $array['content'] = 'Name : '.$r->name.'<br>Contact Number : '.$r->phone.' <br> Email : '.$encodedEmail.'<br> Message : '.$r->comment;
-                $array['email']   = $r->email;
-                // Define the BCC recipients
+                // Insert data using Query Builder (safe with parameterized queries)
+                DB::table('message_user')->insert([
+                    'name'    => $validatedData['name'],
+                    'phone'   => $validatedData['phone'],
+                    'type'    => $validatedData['type'],
+                    'email'   => $validatedData['email'],
+                    'comment' => $validatedData['comment'],
+                ]);
+
+                // Prepare email content
+                $array = [
+                    'subject' => $validatedData['type'],
+                    'from'    => env('MAIL_FROM_ADDRESS'),
+                    'dear'    => "Dear Customer Support",
+                    'opening' => "There's a " . $validatedData['type'] . " from a customer below which requires your attention.",
+                    'content' => "Name : " . $validatedData['name'] . "<br>Contact Number : " . $validatedData['phone'] . "<br>Email : " . htmlentities($validatedData['email']) . "<br>Message : " . $validatedData['comment'],
+                    'email'   => $validatedData['email'],
+                ];
+
+                // Send email with BCC recipients
                 $bccRecipients = getccemail();
-                //email to Customer Support
-                Mail::bcc($bccRecipients)  // Add BCC recipients
-                    ->queue(new ForCustomerMailManager($array));
-                    $msg = "success";
-                    return $msg;
+                Mail::bcc($bccRecipients)->queue(new ForCustomerMailManager($array));
+
+                return "success";
             } catch (\Throwable $th) {
-                return $th->getmessage;
+                return $th->getMessage();
             }
-        }else{
-            $msg = "chapta_no_match";
-            return $msg;
+        } else {
+            return "chapta_no_match";
         }
-
     }
 
-    public function messageuserspopup(Request $r){
 
-            $data = [
-                'name'=>$r->name,
-                'phone'=>$r->phone,
-                'type'=>'general',
-                'email'=>$r->email,
-                'comment'=>$r->comment,
+    public function messageuserspopup(Request $r) {
+        // Validate the input
+        $validatedData = $r->validate([
+            'name'    => 'required|string|max:255|regex:/^[a-zA-Z\s]+$/',
+            'phone'   => 'required|string|max:20|regex:/^[0-9+\-\s]+$/',
+            'email'   => 'required|email|max:255',
+            'comment' => 'required|string|max:1000',
+        ]);
+
+        // Sanitize inputs
+        $validatedData['email'] = filter_var($validatedData['email'], FILTER_SANITIZE_EMAIL);
+        $validatedData['comment'] = htmlspecialchars($validatedData['comment'], ENT_QUOTES, 'UTF-8');
+
+        try {
+            // Insert data using Query Builder (safe with parameterized queries)
+            DB::table('message_user')->insert([
+                'name'    => $validatedData['name'],
+                'phone'   => $validatedData['phone'],
+                'type'    => 'general',
+                'email'   => $validatedData['email'],
+                'comment' => $validatedData['comment'],
+            ]);
+
+            // Prepare email content
+            $array = [
+                'subject' => 'Customer Enquiry / Feedback',
+                'from'    => env('MAIL_FROM_ADDRESS'),
+                'contact' => $validatedData['phone'],
+                'dear'    => "Dear Customer Support",
+                'opening' => "There's an enquiry / feedback from a customer below which requires your attention.",
+                'content' => "Name : " . $validatedData['name'] .
+                             "<br>Contact Number : " . $validatedData['phone'] .
+                             "<br>Email : " . htmlentities($validatedData['email']) .
+                             "<br>Message : " . $validatedData['comment'],
+                'email'   => $validatedData['email'],
             ];
-            try {
-                DB::table('message_user')->insert($data);
-                $encodedEmail = htmlentities($r->email);
-                $array['subject'] = 'Customer Enquiry / Feedback';
-                $array['from']    = env('MAIL_FROM_ADDRESS');
-                $array['contact'] = $r->phone;
-                $array['dear']    = "Dear Customer Support";
-                $array['opening'] = "There's a enquiry / feedback from a customer bellow which requires your attention.";
-                $array['content'] = 'Name : '.$r->name.'<br>Contact Number : '.$r->phone.' <br> Email : '.$encodedEmail.'<br> Message : '.$r->comment;
-                $array['email']   = $r->email;
-                // Define the BCC recipients
-                $bccRecipients = getccemail();
-                //email to Customer Support
-                Mail::bcc($bccRecipients)  // Add BCC recipients
-                    ->queue(new ForCustomerMailManager($array));
-                    $msg = "success";
-                    return $msg;
-            } catch (\Throwable $th) {
-                return $th->getmessage;
-            }
 
+            // Send email with BCC recipients
+            $bccRecipients = getccemail();
+            Mail::bcc($bccRecipients)->queue(new ForCustomerMailManager($array));
+
+            return "success";
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
     }
+
 
 
         public function Product($request, $slug)
