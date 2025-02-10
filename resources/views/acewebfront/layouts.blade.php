@@ -143,9 +143,9 @@
     <div class="page-wraper">
         @yield('content')
     </div>
-    <div id="chat" class="wa-floating-button" onclick="toggleChat()">
+    <!-- <div id="chat" class="wa-floating-button" onclick="toggleChat()">
         <span class="whatsapp-icon"><img id="chat-icon" src="/public/assets/img/chat.png"></span>
-    </div>
+    </div> -->
     <!-- <div id="chat" class="wa-floating-button" >
         <script type="text/javascript">
             var Tawk_API = Tawk_API || {},

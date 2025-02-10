@@ -854,7 +854,7 @@
         </div>
         </div>
       </section> -->
-      <section class="ace-conected">
+      <!-- <section class="ace-conected">
 
         <div class="content-ace">
             <div id="loading">
@@ -943,7 +943,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <!--END CONTENT-->
 
