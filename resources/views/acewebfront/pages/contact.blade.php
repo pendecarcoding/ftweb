@@ -95,7 +95,7 @@
                  </div>
              </div>
          </section>
-         <section class="ace-conected" style="position: relative;overflow: hidden;">
+         <!-- <section class="ace-conected" style="position: relative;overflow: hidden;">
              <div id="loading">
                  <img src="{{ static_asset('aceweb') }}/assets/img/loading-gif.gif" alt="Loading">
              </div>
@@ -192,7 +192,7 @@
                      </div>
 
                  </div>
-         </section>
+         </section> -->
      </main>
      <script>
          $(document).ready(function() {
