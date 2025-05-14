@@ -26,7 +26,7 @@
         </div>
         <div class="card-body">
             <div class="row gutters-10">
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="card shadow-none bg-light">
                         <div class="card-header">
                             <h6 class="mb-0">{{ translate('About Widget') }}</h6>
@@ -76,8 +76,8 @@
                             </form>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
+                </div> -->
+                <div class="col-lg-12">
                     <div class="card shadow-none bg-light">
                         <div class="card-header">
                             <h6 class="mb-0">{{ translate('Contact Info Widget') }}</h6>
@@ -92,11 +92,17 @@
                                     <input type="text" class="form-control" placeholder="{{ translate('Address') }}"
                                         name="contact_address" value="{{ get_setting('contact_address', null, $lang) }}">
                                 </div>
+
+
                                 <div class="form-group">
                                     <label>{{ translate('Contact phone') }}</label>
                                     <input type="hidden" name="types[]" value="contact_phone">
-                                    <input type="text" class="form-control" placeholder="{{ translate('Phone') }}"
-                                        name="contact_phone" value="{{ get_setting('contact_phone') }}">
+                                    <textarea name="contact_phone" id="editor">
+                                   {{ get_setting('contact_phone') }}
+                                    </textarea>
+
+
+
                                 </div>
                                 <div class="form-group">
                                     <label>{{ translate('Contact email') }}</label>
@@ -111,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12">
+                <!-- <div class="col-lg-12">
                     <div class="card shadow-none bg-light">
                         <div class="card-header">
                             <h6 class="mb-0">{{ translate('Link Widget One') }}</h6>
@@ -189,12 +195,12 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 
-    <div class="card">
+    <!-- <div class="card">
         <div class="card-header">
             <h6 class="fw-600 mb-0">{{ translate('Footer Bottom') }}</h6>
         </div>
@@ -306,5 +312,5 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div> -->
 @endsection
