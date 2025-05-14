@@ -1,5 +1,6 @@
 <!-- Footer -->
 
+
 <footer class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->
 
@@ -18,15 +19,13 @@
 
                     <p>
                         <b style="font-weight:bold;color:black">Address</b><br>
-                        No. 1, Jalan Bayu 2/6, Kawasan Perindustrian Tampoi Jaya 81200 Johor Bahru, Johor Darul Ta’zim MALAYSIA
+                        {{ get_setting('contact_address', null, 'en') }}
 
                         <br><b style="font-weight:bold;color:black">Tel</b><br>
-                        Office Tel 1 : +607-217 9067<br>
-                        Office Tel 2 : +607-217 9068<br>
-                        Fax : +607-217 9069
+                        {!! get_setting('contact_phone') !!}
 
                         <br><b style="font-weight:bold;color:black">Email</b><br>
-                        enquiry@feytech.com.my
+                        {{ get_setting('contact_email') }}
 
                     </p>
                 </div>
