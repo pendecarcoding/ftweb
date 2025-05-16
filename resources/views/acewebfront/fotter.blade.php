@@ -106,13 +106,13 @@
             <!-- Grid row -->
         </div>
         <div class="footer-bottom footer-line">
-            <div class="container">
+
                 <div class="row">
 					<div class="col-lg-12 col-md-12 text-center" style="color:black">
 						<span>© Copyright <span class="current-year">{{date('Y')}}</span> <b style="color: black;">Feytech Holdings Berhad Registration No 202301013791 (1507713-V)</b>. All Rights Reserved.</span>
 					</div>
                 </div>
-            </div>
+
         </div>
     </section>
     <!-- Section: Links  -->
