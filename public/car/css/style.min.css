@@ -8626,13 +8626,13 @@ footer .widget_getintuch i {
     top: 0;
     height: 5px;
     width: 100%;
-    background-color: var(--primary);
-    background-image: url(../images/line.png);
+    /* background-color: var(--primary); */
+    /* background-image: url(../images/line.png); */
     background-position: top;
     background-repeat: repeat-x;
 }
 .footer-bottom {
-    background-color: #14191C;
+    background-color: rgba(255,255,255,1);
     padding: 30px 0;
     font-size: 16px;
 }
