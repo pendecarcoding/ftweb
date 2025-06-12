@@ -256,7 +256,7 @@
                                                             for an appointment.</p>
                                                 </div>
 
-                                                <div style="display: flex;gap:20px">
+                                                <!-- <div style="display: flex;gap:20px">
                                                     <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
                                                         class="mdl-button mdl-js-button mdl-button--raised btn-back"
                                                         data-upgraded=",MaterialButton">
@@ -267,7 +267,7 @@
                                                         data-upgraded=",MaterialButton">
                                                         Submit
                                                     </button>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </form>
@@ -308,7 +308,7 @@
                                                                 installation. For further customization please click on below SUBMIT button to book
                                                                 for an appointment.</p>
                                                     </div>
-                                                    <div style="display: flex;    gap: 20px;">
+                                                    <!-- <div style="display: flex;    gap: 20px;">
                                                         <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
                                                             class="mdl-button mdl-js-button mdl-button--raised btn-back"
                                                             data-upgraded=",MaterialButton">
@@ -319,7 +319,7 @@
                                                             data-upgraded=",MaterialButton">
                                                             Submit
                                                         </button>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </form>
@@ -357,7 +357,7 @@
                                                                 installation. For further customization please click on below SUBMIT button to book
                                                                 for an appointment.</p>
                                                     </div>
-                                                    <div style="display: flex;gap:20px">
+                                                    <!-- <div style="display: flex;gap:20px">
                                                         <a href="{{ url('product_project') }}" style="padding: 0px 30px;"
                                                             class="mdl-button mdl-js-button mdl-button--raised btn-back"
                                                             data-upgraded=",MaterialButton">
@@ -368,7 +368,7 @@
                                                             data-upgraded=",MaterialButton">
                                                             Submit
                                                         </button>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </form>
