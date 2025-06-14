@@ -25,7 +25,7 @@
                         {!! get_setting('contact_phone') !!}
 
                         <br><b style="font-weight:bold;color:black">Email</b><br>
-                        {{ get_setting('contact_email') }}
+                        <a style="color:#b0b0b0" href="mailto:{{ get_setting('contact_email') }}">{{ get_setting('contact_email') }}</a>
 
                     </p>
                 </div>
