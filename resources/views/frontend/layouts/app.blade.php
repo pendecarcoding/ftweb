@@ -15,6 +15,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+
     <meta name="description" content="@yield('meta_description', get_setting('meta_description') )" />
     <meta name="keywords" content="@yield('meta_keywords', get_setting('meta_keywords') )">
 
@@ -203,7 +205,7 @@
     @endif
 
     @include('frontend.partials.modal')
-    
+
     @include('frontend.partials.account_delete_modal')
 
     <div class="modal fade" id="addToCart">
@@ -489,7 +491,7 @@
                 AIZ.plugins.notify('warning', "{{ translate('Please Login as a customer to add products to the Cart.') }}");
                 return false;
             @endif
-            
+
             if(checkAddToCartValidity()) {
                 $('#addToCart-modal-body').html(null);
                 $('#addToCart').modal();
