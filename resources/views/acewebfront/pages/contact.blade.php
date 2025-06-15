@@ -1,101 +1,109 @@
- @extends('acewebfront.layouts')
- @section('meta')
-     <meta property="og:image" content="{{ uploaded_asset(get_setting('site_icon')) }}" />
- @endsection
- @section('content')
-     <main>
-         @include('acewebfront.widget.allbaner')
-         <section class="gtp-anouncements">
-             <div class="content-ace">
-                 <div class="wrap-content">
-                     <div style="padding-top: 0px" class="ace-isi about">
-                         <div class="col-md-12">
-                             <div data-aos="fade-up" class="title-ace">
-                                 STAY CONNECTED
-                                 <span class="h-dash" style="font-weight: bold">—</span>
-                             </div>
-                         </div>
-                         <div data-aos="fade-up" class="col-md-12 col-sm-12">
-                             <h1>We’d love to hear from you</h1>
-                         </div>
+@extends('acewebfront.layouts')
+@section('meta')
+    <meta property="og:image" content="{{ uploaded_asset(get_setting('site_icon')) }}" />
+@endsection
+@section('content')
+    <main>
+        @include('acewebfront.widget.allbaner')
+        <section class="gtp-anouncements">
+            <div class="content-ace">
+                <div class="wrap-content">
+                    <div style="padding-top: 0px" class="ace-isi about">
+                        <div class="col-md-12">
+                            <div data-aos="fade-up" class="title-ace">
+                                STAY CONNECTED
+                                <span class="h-dash" style="font-weight: bold">—</span>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" class="col-md-12 col-sm-12">
+                            <h1>We'd love to hear from you</h1>
+                        </div>
 
-
-                         @foreach ($devision as $i => $v)
-                             @if ($v->short == '1')
-                                 @foreach (getContactByDevision($v->id) as $ic => $vc)
-                                     <div class="row">
-                                         <div data-aos="fade-up" class="col-md-12">
-                                             <div class="contact-wrap">
-                                                 <h2 class="contact_h2">{{ $v->name }}</h2>
-                                             </div>
-                                         </div>
-                                         <div data-aos="fade-up" class="col-md-6">
-                                             <div class="contact-wrap">
-
-                                                 <img class="img-responsive" src="{{ getimage($vc->img) }}"
-                                                     alt="{{ $vc->title }}" />
-                                             </div>
-                                         </div>
-                                         <div data-aos="fade-up" class="col-md-6">
-                                             <div class="contact-wrap">
-                                                 <div class="list-contact">
-                                                     <h5 class="title-corporate">{{ $vc->title }}</h5>
-                                                     <br>
-                                                     {!! $vc->content !!}
-                                                 </div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 @endforeach
-                             @else
-                                 <div class="row">
-                                     <div data-aos="fade-up" class="col-md-12">
-                                         <div class="contact-wrap">
-                                             <h2 class="contact_h2">{{ $v->name }}</h2>
-                                         </div>
-                                     </div>
-                                     @foreach (getContactByDevision($v->id) as $ic => $vc)
-                                         @if ($vc->title == 'TRIMEX AUTOMATIVE (AUS) PTY LTD')
-                                             <div data-aos="fade-up" class="col-md-6">
-                                                 <div class="contact-wrap">
-
-                                                     <img class="img-responsive" src="{{ getimage($vc->img) }}"
-                                                         alt="{{ $vc->title }}" />
-                                                 </div>
-                                             </div>
-                                             <div data-aos="fade-up" class="col-md-6">
-                                                 <div class="contact-wrap">
-                                                     <div class="list-contact">
-                                                         <h5 class="title-corporate">{{ $vc->title }}</h5>
-                                                         <br>
-                                                         {!! $vc->content !!}
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                         @else
-                                             <div data-aos="fade-up" class="col-md-6">
-                                                 <div class="contact-wrap">
-                                                     <div class="img-wrap-contact">
-                                                         <img style="height: 100%;" class="img-responsive"
-                                                             src="{{ getimage($vc->img) }}" alt="{{ $vc->title }}" />
-                                                     </div>
-                                                     <div class="list-contact">
-                                                         <h5 class="title-corporate">{{ $vc->title }}</h5>
-                                                         <br>
-                                                         {!! $vc->content !!}
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                         @endif
-                                     @endforeach
-                                 </div>
-                             @endif
-                         @endforeach
-                     </div>
-                 </div>
-             </div>
-         </section>
-         <!-- <section class="ace-conected" style="position: relative;overflow: hidden;">
+                        <div class="accordion" id="contactAccordion">
+                            @foreach ($devision as $i => $v)
+                                @if ($v->short == '1')
+                                    @foreach (getContactByDevision($v->id) as $ic => $vc)
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="heading{{ $v->id }}_{{ $ic }}">
+                                                <button class="accordion-button {{ $ic > 0 ? 'collapsed' : '' }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $v->id }}_{{ $ic }}" aria-expanded="{{ $ic == 0 ? 'true' : 'false' }}" aria-controls="collapse{{ $v->id }}_{{ $ic }}">
+                                                    <h2 class="contact_h2">{{ $v->name }}</h2>
+                                                </button>
+                                            </h2>
+                                            <div id="collapse{{ $v->id }}_{{ $ic }}" class="accordion-collapse collapse {{ $ic == 0 ? 'show' : '' }}" aria-labelledby="heading{{ $v->id }}_{{ $ic }}" data-bs-parent="#contactAccordion">
+                                                <div class="accordion-body">
+                                                    <div class="row">
+                                                        <div data-aos="fade-up" class="col-md-6">
+                                                            <div class="contact-wrap">
+                                                                <img class="img-responsive" src="{{ getimage($vc->img) }}" alt="{{ $vc->title }}" />
+                                                            </div>
+                                                        </div>
+                                                        <div data-aos="fade-up" class="col-md-6">
+                                                            <div class="contact-wrap">
+                                                                <div class="list-contact">
+                                                                    <h5 class="title-corporate">{{ $vc->title }}</h5>
+                                                                    <br>
+                                                                    {!! $vc->content !!}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{ $v->id }}">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $v->id }}" aria-expanded="false" aria-controls="collapse{{ $v->id }}">
+                                            <h2 class="contact_h2">{{ $v->name }}</h2>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse{{ $v->id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ $v->id }}" data-bs-parent="#contactAccordion">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    @foreach (getContactByDevision($v->id) as $ic => $vc)
+                                                        @if ($vc->title == 'TRIMEX AUTOMATIVE (AUS) PTY LTD')
+                                                            <div data-aos="fade-up" class="col-md-6">
+                                                                <div class="contact-wrap">
+                                                                    <img class="img-responsive" src="{{ getimage($vc->img) }}" alt="{{ $vc->title }}" />
+                                                                </div>
+                                                            </div>
+                                                            <div data-aos="fade-up" class="col-md-6">
+                                                                <div class="contact-wrap">
+                                                                    <div class="list-contact">
+                                                                        <h5 class="title-corporate">{{ $vc->title }}</h5>
+                                                                        <br>
+                                                                        {!! $vc->content !!}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @else
+                                                            <div data-aos="fade-up" class="col-md-6">
+                                                                <div class="contact-wrap">
+                                                                    <div class="img-wrap-contact">
+                                                                        <img style="height: 100%;" class="img-responsive" src="{{ getimage($vc->img) }}" alt="{{ $vc->title }}" />
+                                                                    </div>
+                                                                    <div class="list-contact">
+                                                                        <h5 class="title-corporate">{{ $vc->title }}</h5>
+                                                                        <br>
+                                                                        {!! $vc->content !!}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endif
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="ace-conected" style="position: relative;overflow: hidden;">
              <div id="loading">
                  <img src="{{ static_asset('aceweb') }}/assets/img/loading-gif.gif" alt="Loading">
              </div>
@@ -193,41 +201,41 @@
 
                  </div>
          </section> -->
-     </main>
-     <script>
-         $(document).ready(function() {
-             $('#contact-form').submit(function(event) {
-                 event.preventDefault(); // Prevent the default form submission
-                 $('#loading').show();
-                 // Get the form data
-                 var formData = $(this).serialize();
+    </main>
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                $('#loading').show();
+                // Get the form data
+                var formData = $(this).serialize();
 
-                 // Make the AJAX request
-                 $.ajax({
-                     url: '{{ route('message.users') }}', // Change this to your Laravel route
-                     method: 'POST',
-                     data: formData,
-                     success: function(response) {
-                         if (response == "success") {
-                             $("#alertpatner").show();
-                             $("#message_back").html(
-                                 "Thank you for your message, we will reply soon");
-                             $("#contact-form")[0].reset();
-                         } else if (response == "chapta_no_match") {
-                             $("#alertpatner").show();
-                             $("#message_back").html("Captcha verification is required");
-                         }
-                     },
-                     error: function(error) {
-                         // Handle the error response (if needed)
-                         console.error('Error submitting form:', error);
-                     },
-                     complete: function() {
-                         // Hide the loading spinner when the request is complete
-                         $('#loading').hide();
-                     }
-                 });
-             });
-         });
-     </script>
- @endsection
+                // Make the AJAX request
+                $.ajax({
+                    url: '{{ route('message.users') }}', // Change this to your Laravel route
+                    method: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        if (response == "success") {
+                            $("#alertpatner").show();
+                            $("#message_back").html(
+                                "Thank you for your message, we will reply soon");
+                            $("#contact-form")[0].reset();
+                        } else if (response == "chapta_no_match") {
+                            $("#alertpatner").show();
+                            $("#message_back").html("Captcha verification is required");
+                        }
+                    },
+                    error: function(error) {
+                        // Handle the error response (if needed)
+                        console.error('Error submitting form:', error);
+                    },
+                    complete: function() {
+                        // Hide the loading spinner when the request is complete
+                        $('#loading').hide();
+                    }
+                });
+            });
+        });
+    </script>
+@endsection
