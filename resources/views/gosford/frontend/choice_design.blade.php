@@ -331,7 +331,7 @@
                             overflow: scroll;
                         ">
 
-                                <div class="pattern-list-container">
+                                <div class="pattern-list-container" style="display: flex;flex-wrap: wrap;gap: 10px;">
                                     @foreach($pattern as $i => $vpattern)
                                     <div class="color-column-list" onclick="selectPattern(this, '{{$vpattern->name_pattern}}', '{{getimage($vpattern->img)}}','{{getimage($vpattern->base_img)}}','{{getimage($vpattern->color_img)}}', {{$vpattern->price}})">
                                         <img id="imgpattern{{$i}}" class="img-pattern-option" src="{{getimage($vpattern->img)}}" alt="">
