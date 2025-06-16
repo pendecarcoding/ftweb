@@ -16,7 +16,7 @@
                 </h6></div>
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                     <!-- Content -->
-
+                    <h2 style="color:#b0b0b0">Feytech Holdings Berhad</h2>
                     <p>
                         <b style="font-weight:bold;color:black">Address</b><br>
                         {{ get_setting('contact_address', null, 'en') }}
