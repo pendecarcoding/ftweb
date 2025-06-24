@@ -1,6 +1,6 @@
 @extends('acewebfront.layouts')
 @section('meta')
-    <meta property="og:image" content="{{ uploaded_asset(get_setting('site_icon')) }}" />
+    <meta property="og:image" content="{{ uploaded_asset(get_setting('site_logo')) }}" />
 @endsection
 @section('content')
     <main>
